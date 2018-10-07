@@ -8,6 +8,19 @@ module.exports = function(eleventyConfig) {
     });
   });
 
+  eleventyConfig.addCollection("events", function(collection) {
+    return collection.getAllSorted().filter(function(item) {
+      return item.inputPath.match(/^\.\/events\//) !== null;
+    });
+  });
+
+  eleventyConfig.addCollection("talks", function(collection) {
+    return collection.getAllSorted().filter(function(item) {
+      return item.inputPath.match(/^\.\/talks\//) !== null;
+    });
+  });
+
+
   eleventyConfig.addPassthroughCopy("static/img/uploads");
   eleventyConfig.addPassthroughCopy("admin");
 

@@ -1,0 +1,16 @@
+{% for ev in collections.events %}
+  {% if event == ev.data.title %}
+    <p>
+      <span class="visually-hidden">at</span><br />
+
+      <a href="{{ ev.data.url }}" rel="noopener">
+        <img src="{{ ev.data.logo }}" width="80" alt="">
+        {{ ev.data.title }}
+
+      <span class="visually-hidden">in</span>
+
+      {% include "icons/" + gig.data.country + ".svg" %}
+      </a>
+    </p>
+  {% endif %}
+{% endfor %}

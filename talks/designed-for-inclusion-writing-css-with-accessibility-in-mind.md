@@ -1,7 +1,6 @@
 ---
 title: 'Designed for Inclusion: Writing CSS with Accessibility in Mind'
-slides: >-
-  https://noti.st/matuzo/k2433b/designed-for-inclusion-writing-css-with-accessibility-in-mind
+slides: 'https://noti.st/matuzo/k2433b/designed-for-inclusion-writing-css-with-accessibility-in-mind'
 video: 'https://www.youtube.com/watch?v=EOiC2M47GBY'
 ---
 Web accessibility has so many facets, that learning about it and implementing it correctly may seem daunting to some of us. Just imagine excluding a whole group of users by simply declaring * { outline: none; }.

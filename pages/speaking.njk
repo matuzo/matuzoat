@@ -1,0 +1,42 @@
+---
+layout: layouts/base.njk
+title: Speaking
+tags:
+  - nav
+navtitle: Speaking
+permalink: /speaking/index.html
+---
+
+<h2>Upcoming talks</h2>
+
+{% for gig in collections.speaking %}
+  {% for talk in collections.talks %}
+    {% if gig.data.talk == talk.data.title %}
+      {% set talk = talk.data %}
+      <h3>{{ talk.title }}</h3>
+    {% endif %}
+  {% endfor %}
+
+  <time datetime="{{ gig.data.date|machineDate }}">{{ gig.data.date|readableDate }}</time>
+
+  {% set event = gig.data.event %}
+  {% include "components/event.njk" %}
+
+  <details>
+    <summary>
+      More
+    </summary>
+
+    {% for talk in collections.talks %}
+      {% if gig.data.talk == talk.data.title %}
+        <h4>Description</h4>
+        {{ talk.templateContent | safe }}
+
+        <ul>
+          {% if talk.data.slides %}<li><a href="{{ talk.data.slides }}">Slides</a></li>{% endif %}
+          {% if talk.data.video %}<li><a href="{{ talk.data.video }}">Video</a></li>{% endif %}
+        </ul>
+      {% endif %}
+    {% endfor %}
+  </details>
+{% endfor %} 
