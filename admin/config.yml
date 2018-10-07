@@ -16,7 +16,7 @@ collections:
       - { label: 'Body', name: 'body', widget: 'markdown' }
       - { label: 'Link to slides', name: 'slides', widget: 'string', required: false }
       - { label: 'Link to video', name: 'video', widget: 'string', required: false }
-g  - name: 'events' # Used in routes, e.g., /admin/collections/blog
+  - name: 'events' # Used in routes, e.g., /admin/collections/blog
     label: 'Events' # Used in the UI
     folder: 'events' # The path to the folder where the documents are stored
     create: true # Allow users to create new documents in this collection
