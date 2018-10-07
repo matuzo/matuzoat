@@ -39,19 +39,19 @@ collections:
         name: 'city'
         widget: 'select'
         options:
-          - { label: "Berlin", value: "ber" }
-          - { label: "Budapest", value: "bud" }
-          - { label: "Cologne", value: "col" }
-          - { label: "Erlangen", value: "erl" }
-          - { label: "Graz", value: "gra" }
-          - { label: "Linz", value: "lin" }
-          - { label: "Minsk", value: "min" }
-          - { label: "Moscow", value: "mos" }
-          - { label: "Salzburg", value: "sal" }
-          - { label: "St. Petersburg", value: "stp" }
-          - { label: "Toronto", value: "tor" }
-          - { label: "Vienna", value: "vie" }
-          - { label: "Warsaw", value: "war" }
+          - { label: "Berlin", value: "Berlin" }
+          - { label: "Budapest", value: "Budapest" }
+          - { label: "Cologne", value: "Cologne" }
+          - { label: "Erlangen", value: "Erlangen" }
+          - { label: "Graz", value: "Graz" }
+          - { label: "Linz", value: "Linz" }
+          - { label: "Minsk", value: "Minsk" }
+          - { label: "Moscow", value: "Moscow" }
+          - { label: "Salzburg", value: "Salzburg" }
+          - { label: "St. Petersburg", value: "St. Petersburg" }
+          - { label: "Toronto", value: "Toronto" }
+          - { label: "Vienna", value: "Vienna" }
+          - { label: "Warsaw", value: "Warsaw" }
       - label: 'Country'
         name: 'country'
         widget: 'select'
