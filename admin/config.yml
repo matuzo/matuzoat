@@ -29,7 +29,7 @@ collections:
     label: 'Speaking' # Used in the UI
     folder: 'speaking' # The path to the folder where the documents are stored
     create: true # Allow users to create new documents in this collection
-    slug: '{{slug}}' # Filename template, e.g., YYYY-MM-DD-title.md
+    slug: '{{day}}-{{month}}-{{hour}}-{{minute}}-{{slug}}' # Filename template, e.g., YYYY-MM-DD-title.md
     fields: # The fields for each document, usually in front matter
       - { label: 'Title', name: 'title', widget: 'string' }
       - { label: 'Date', name: 'date', widget: 'date' }
