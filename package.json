@@ -18,5 +18,8 @@
   "homepage": "https://github.com/matuzo/matuzoat#readme",
   "devDependencies": {
     "@11ty/eleventy": "^0.5.4"
+  },
+  "dependencies": {
+    "luxon": "^1.4.3"
   }
 }

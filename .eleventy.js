@@ -1,7 +1,25 @@
+const { DateTime } = require("luxon");
+
 module.exports = function(eleventyConfig) {
+
+  eleventyConfig.addCollection("speaking", function(collection) {
+    return collection.getAllSorted().filter(function(item) {
+      return item.inputPath.match(/^\.\/speaking\//) !== null;
+    });
+  });
 
   eleventyConfig.addPassthroughCopy("static/img/uploads");
   eleventyConfig.addPassthroughCopy("admin");
+
+  // Date formatting (human readable)
+  eleventyConfig.addFilter("readableDate", dateObj => {
+    return DateTime.fromJSDate(dateObj).toFormat("dd.LL.yyyy");
+  });
+
+  // Date formatting (machine readable)
+  eleventyConfig.addFilter("machineDate", dateObj => {
+    return DateTime.fromJSDate(dateObj).toFormat("yyyy-MM-dd");
+  });
 
   return {
     templateFormats: [
