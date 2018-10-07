@@ -1,0 +1,9 @@
+---
+layout: layouts/base.njk
+---
+<h1>{{ title }}</h1>
+
+{{ layoutContent | safe }}
+
+{% set postslist = collections.posts %}
+{# {% include "components/postslist.njk" %} #}
