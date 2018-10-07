@@ -14,8 +14,8 @@ collections:
     fields: # The fields for each document, usually in front matter
       - { label: 'Talk title', name: 'title', widget: 'string' }
       - { label: 'Body', name: 'body', widget: 'markdown' }
-      - { label: 'Link to slides', name: 'slides', widget: 'string' }
-      - { label: 'Link to video', name: 'video', widget: 'string' }
+      - { label: 'Link to slides', name: 'slides', widget: 'string', required: false }
+      - { label: 'Link to video', name: 'video', widget: 'string', required: false }
       - label: 'Slides variation'
         name: 'slides_variation'
         widget: 'select'
