@@ -1,5 +1,5 @@
 ---
-title: The Dark Side of the Grid Deutsch Lang
+title: The Dark Side of the Grid WKE
 slides: 'https://noti.st/matuzo/KlSsWY/the-dark-side-of-the-grid'
 video: 'https://www.video.uni-erlangen.de/clip/id/9485'
 ---
