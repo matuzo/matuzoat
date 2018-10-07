@@ -36,19 +36,30 @@ collections:
       - { label: 'Event', name: 'event', widget: 'relation',  collection: "events",  searchFields: ["title"], valueField: "title" }
       - { label: 'Talk', name: 'talk', widget: 'relation',  collection: "talks",  searchFields: ["title"], valueField: "title" }
       - label: 'City'
+        name: 'city'
+        widget: 'select'
+        options:
+          - { label: "Berlin", value: "ber" }
+          - { label: "Budapest", value: "bud" }
+          - { label: "Cologne", value: "col" }
+          - { label: "Erlangen", value: "erl" }
+          - { label: "Graz", value: "gra" }
+          - { label: "Linz", value: "lin" }
+          - { label: "Minsk", value: "min" }
+          - { label: "Moscow", value: "mos" }
+          - { label: "Salzburg", value: "sal" }
+          - { label: "St. Petersburg", value: "stp" }
+          - { label: "Toronto", value: "tor" }
+          - { label: "Vienna", value: "vie" }
+          - { label: "Warsaw", value: "war" }
+      - label: 'Country'
         name: 'country'
         widget: 'select'
         options:
-          - { label: "Berlin", value: "DE" }
-          - { label: "Budapest", value: "HU" }
-          - { label: "Cologne", value: "DE" }
-          - { label: "Erlangen", value: "DE" }
-          - { label: "Graz", value: "AT" }
-          - { label: "Linz", value: "AT" }
-          - { label: "Minsk", value: "BY" }
-          - { label: "Moscow", value: "RU" }
-          - { label: "Salzburg", value: "AT" }
-          - { label: "St. Petersburg", value: "RU" }
-          - { label: "Toronto", value: "CA" }
-          - { label: "Vienna", value: "AT" }
-          - { label: "Warsaw", value: "PL" }
+          - { label: "Austria", value: "AT" }
+          - { label: "Germany", value: "DE" }
+          - { label: "Hungary", value: "HU" }
+          - { label: "Belarus", value: "BY" }
+          - { label: "Russia", value: "RU" }
+          - { label: "Canada", value: "CA" }
+          - { label: "Poland", value: "PL" }
