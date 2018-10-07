@@ -9,8 +9,8 @@ permalink: /speaking/index.html
 
 ## Upcoming talks
 
-{% for talk in collections.speaking %}
-  <h3>{{ talk.data.title }}</h3>
-  <time datetime="{{ talk.data.date|machineDate }}">{{ talk.data.date|readableDate }}</time>
-  {{ talk.data.summary }}
+{% for gig in collections.speaking %}
+  <h3>{{ gig.data.title }}</h3>
+  <time datetime="{{ gig.data.date|machineDate }}">{{ gig.data.date|readableDate }}</time>
+  {{ gig.data.event }}
 {% endfor %}

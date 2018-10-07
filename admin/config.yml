@@ -32,13 +32,23 @@ collections:
     slug: '{{slug}}' # Filename template, e.g., YYYY-MM-DD-title.md
     fields: # The fields for each document, usually in front matter
       - { label: 'Title', name: 'title', widget: 'string' }
-      - { label: 'Date', name: 'date', widget: 'date',  format: "DD MM YY" }
+      - { label: 'Date', name: 'date', widget: 'date' }
       - { label: 'Event', name: 'event', widget: 'relation',  collection: "events",  searchFields: ["title"], valueField: "title" }
       - { label: 'Talk', name: 'talk', widget: 'relation',  collection: "talks",  searchFields: ["title"], valueField: "title" }
       - label: 'City'
         name: 'country'
         widget: 'select'
         options:
-          - { label: "Graz", value: "AT" }
-          - { label: "Vienna", value: "AT" }
+          - { label: "Berlin", value: "DE" }
           - { label: "Budapest", value: "HU" }
+          - { label: "Cologne", value: "DE" }
+          - { label: "Erlangen", value: "DE" }
+          - { label: "Graz", value: "AT" }
+          - { label: "Linz", value: "AT" }
+          - { label: "Minsk", value: "BY" }
+          - { label: "Moscow", value: "RU" }
+          - { label: "Salzburg", value: "AT" }
+          - { label: "St. Petersburg", value: "RU" }
+          - { label: "Toronto", value: "CA" }
+          - { label: "Vienna", value: "AT" }
+          - { label: "Warsaw", value: "PL" }
