@@ -6,15 +6,39 @@ publish_mode: editorial_workflow
 media_folder: 'static/img/uploads'
 
 collections:
+  - name: 'talks' # Used in routes, e.g., /admin/collections/blog
+    label: 'Talks' # Used in the UI
+    folder: 'talks' # The path to the folder where the documents are stored
+    create: true # Allow users to create new documents in this collection
+    slug: '{{slug}}' # Filename template, e.g., YYYY-MM-DD-title.md
+    fields: # The fields for each document, usually in front matter
+      - { label: 'Talk title', name: 'title', widget: 'string' }
+      - { label: 'Body', name: 'body', widget: 'markdown' }
+      - { label: 'Link to slides', name: 'slides', widget: 'string' }
+      - { label: 'Link to video', name: 'video', widget: 'string' }
+  - name: 'events' # Used in routes, e.g., /admin/collections/blog
+    label: 'Events' # Used in the UI
+    folder: 'events' # The path to the folder where the documents are stored
+    create: true # Allow users to create new documents in this collection
+    slug: '{{slug}}' # Filename template, e.g., YYYY-MM-DD-title.md
+    fields: # The fields for each document, usually in front matter
+      - { label: 'Name of the event', name: 'title', widget: 'string' }
+      - { label: 'Url', name: 'url', widget: 'string' }
+      - { label: 'Logo', name: 'logo', widget: 'image' }
   - name: 'speaking' # Used in routes, e.g., /admin/collections/blog
     label: 'Speaking' # Used in the UI
     folder: 'speaking' # The path to the folder where the documents are stored
     create: true # Allow users to create new documents in this collection
     slug: '{{slug}}' # Filename template, e.g., YYYY-MM-DD-title.md
     fields: # The fields for each document, usually in front matter
-      - { label: 'Talk title', name: 'title', widget: 'string' }
-      - { label: 'Date', name: 'date', widget: 'datetime' }
-      - { label: 'Summary', name: 'summary', widget: 'text' }
-      - { label: 'Body', name: 'body', widget: 'markdown' }
-      - { label: 'Link to slides', name: 'slides', widget: 'string' }
-      - { label: 'Link to video', name: 'video', widget: 'string' }
+      - { label: 'Title', name: 'title', widget: 'string' }
+      - { label: 'Date', name: 'date', widget: 'date',  format: "DD MM YY" }
+      - { label: 'Event', name: 'event', widget: 'relation',  collection: "events",  searchFields: ["title"], valueField: "title" }
+      - { label: 'Talk', name: 'talk', widget: 'relation',  collection: "talks",  searchFields: ["title"], valueField: "title" }
+      - label: 'City'
+        name: 'country'
+        widget: 'select'
+        options:
+          - { label: "Graz", value: "AT" }
+          - { label: "Vienna", value: "AT" }
+          - { label: "Budapest", value: "HU" }
