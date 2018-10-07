@@ -1,3 +1,14 @@
-_site/
+# Logs
+logs
+*.log
+npm-debug.log*
+
+# Dependencies
 node_modules/
 package-lock.json
+
+# Eleventy
+_site/
+
+# Misc
+.DS_Store
