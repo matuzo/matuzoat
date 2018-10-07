@@ -1,0 +1,22 @@
+{
+  "name": "matuzoat",
+  "version": "1.0.0",
+  "description": "* <http://blog.klipse.tech/javascript/2016/06/20/blog-javascript.html> * <http://nickersoft.github.io/push.js/>",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/matuzo/matuzoat.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/matuzo/matuzoat/issues"
+  },
+  "homepage": "https://github.com/matuzo/matuzoat#readme",
+  "devDependencies": {
+    "@11ty/eleventy": "^0.5.4"
+  }
+}
