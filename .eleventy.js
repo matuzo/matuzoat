@@ -2,9 +2,15 @@ const { DateTime } = require("luxon");
 
 module.exports = function(eleventyConfig) {
 
-  eleventyConfig.addCollection("speaking", function(collection) {
+  eleventyConfig.addCollection("speaking_future", function(collection) {
     return collection.getAllSorted().filter(function(item) {
-      return item.inputPath.match(/^\.\/speaking\//) !== null;
+      return item.inputPath.match(/^\.\/speaking\//) !== null && item.date >= DateTime.local();
+    });
+  });
+
+  eleventyConfig.addCollection("speaking_past", function(collection) {
+    return collection.getAllSorted().filter(function(item) {
+      return item.inputPath.match(/^\.\/speaking\//) !== null && item.date < DateTime.local();
     });
   });
 
