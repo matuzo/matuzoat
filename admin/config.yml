@@ -63,3 +63,12 @@ collections:
           - { label: "Russia", value: "RU" }
           - { label: "Canada", value: "CA" }
           - { label: "Poland", value: "PL" }
+  - name: 'reading' # Used in routes, e.g., /admin/collections/blog
+    label: 'Reading list' # Used in the UI
+    folder: 'reading' # The path to the folder where the documents are stored
+    create: true # Allow users to create new documents in this collection
+    slug: '{{slug}}' # Filename template, e.g., YYYY-MM-DD-title.md
+    fields: # The fields for each document, usually in front matter
+      - { label: 'Title', name: 'title', widget: 'string' }
+      - { label: 'Link', name: 'slides', widget: 'string' }
+      - { label: 'Date', name: 'date', widget: 'date' }
