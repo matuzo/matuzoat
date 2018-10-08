@@ -1,5 +1,6 @@
-<svg xmlns="http://www.w3.org/2000/svg" id="flag-icon-css-ru" viewBox="0 0 640 480">
-  <g fill-rule="evenodd" stroke-width="1pt">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 480" width="26" role="img" aria-labelledby="ru_title">
+  <title id="ru_title">Russia</title>
+  <g fill-rule="evenodd" stroke-width="1pt" role="presentation">
     <path fill="#fff" d="M0 0h640v480H0z"/>
     <path fill="#0039a6" d="M0 160h640v320H0z"/>
     <path fill="#d52b1e" d="M0 320h640v160H0z"/>
