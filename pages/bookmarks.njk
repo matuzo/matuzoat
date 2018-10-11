@@ -7,12 +7,12 @@ navtitle: Bookmarks
 permalink: /bookmarks/index.html
 ---
 <p>Articles and videos I've enjoyed reading or watching.</p>
-{% for day, ressources in collections.reading | groupby("date") %}
-  <h3>{{ day|readableDate }}</h3>
+{% for day, ressources in collections.bookmarks | reverse | groupby("date") %}
+  <h2>{{ day|readableDate }}</h2>
   
   {% for res in ressources %}
-    <h4>
+    <h3>
       <a href="{{ res.data.link }}">{{ res.data.title }}</a>
-    </h4>
+    </h3>
   {% endfor %}
 {% endfor %}

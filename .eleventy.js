@@ -28,9 +28,9 @@ module.exports = function(eleventyConfig) {
     });
   });
 
-  eleventyConfig.addCollection("reading", function(collection) {
+  eleventyConfig.addCollection("bookmarks", function(collection) {
     return collection.getAllSorted().filter(function(item) {
-      return item.inputPath.match(/^\.\/reading\//) !== null;
+      return item.inputPath.match(/^\.\/bookmarks\//) !== null;
     });
   });
 
@@ -44,7 +44,7 @@ module.exports = function(eleventyConfig) {
     if (typeof dateObj === 'string') {
       date = DateTime.fromFormat(dateObj.split(" GMT")[0], "ccc LLL dd y hh:mm:ss");
     }
-    return date.toFormat("dd.LL.yyyy");
+    return date.toFormat("d. LLLL yyyy");
   });
 
   // Date formatting (machine readable)
