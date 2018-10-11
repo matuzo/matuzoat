@@ -10,6 +10,16 @@
   <body>
     {% include 'header.njk' %}
 
-    {{ content | safe }}
+    <main>
+      <h1>
+        <a href="/">
+        {{ title or metadata.title }}
+        </a>
+      </h1>
+
+      {{ content | safe }}
+    </main>
+
+    {% include 'footer.njk' %}
   </body>
 </html>
