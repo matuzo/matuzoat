@@ -1,0 +1,18 @@
+---
+layout: layouts/base.njk
+title: Bookmarks
+tags:
+  - nav
+navtitle: Bookmarks
+permalink: /bookmarks/index.html
+---
+<p>Articles and videos I've enjoyed reading or watching.</p>
+{% for day, ressources in collections.reading | groupby("date") %}
+  <h3>{{ day|readableDate }}</h3>
+  
+  {% for res in ressources %}
+    <h4>
+      <a href="{{ res.data.link }}">{{ res.data.title }}</a>
+    </h4>
+  {% endfor %}
+{% endfor %}

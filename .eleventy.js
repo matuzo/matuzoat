@@ -2,6 +2,8 @@ const { DateTime } = require("luxon");
 
 module.exports = function(eleventyConfig) {
 
+  eleventyConfig.addCollection("tagList", require("./_11ty/getTagList"));
+
   eleventyConfig.addCollection("speaking_future", function(collection) {
     return collection.getAllSorted().filter(function(item) {
       return item.inputPath.match(/^\.\/speaking\//) !== null && item.date >= DateTime.local();
@@ -26,13 +28,23 @@ module.exports = function(eleventyConfig) {
     });
   });
 
+  eleventyConfig.addCollection("reading", function(collection) {
+    return collection.getAllSorted().filter(function(item) {
+      return item.inputPath.match(/^\.\/reading\//) !== null;
+    });
+  });
 
   eleventyConfig.addPassthroughCopy("static/img/uploads");
   eleventyConfig.addPassthroughCopy("admin");
 
   // Date formatting (human readable)
   eleventyConfig.addFilter("readableDate", dateObj => {
-    return DateTime.fromJSDate(dateObj).toFormat("dd.LL.yyyy");
+    let date = DateTime.fromJSDate(dateObj);
+
+    if (typeof dateObj === 'string') {
+      date = DateTime.fromFormat(dateObj.split(" GMT")[0], "ccc LLL dd y hh:mm:ss");
+    }
+    return date.toFormat("dd.LL.yyyy");
   });
 
   // Date formatting (machine readable)
