@@ -1,16 +1,9 @@
-<h1>
-  <a href="/">
-    {{ title or metadata.title }}
-  </a>
-</h1>
-
-<nav>
-  <ul>
-    <li>
-      <a href="/blog">Blog</a>
-    </li>
-    <li>
-      <a href="/speaking">Speaking</a>
-    </li>
-  </ul>
-</nav>
+<header>
+  <nav>
+    <ul>
+      {%- for nav in collections.nav | reverse -%}
+        <li class="nav-item{% if nav.url == page.url %} nav-item---active{% endif %}"><a href="{{ nav.url | url }}">{{ nav.data.navtitle }}</a></li>
+      {%- endfor -%}
+    </ul>
+  </nav>
+</header>
