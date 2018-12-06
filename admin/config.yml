@@ -94,6 +94,6 @@ collections:
       - { label: 'Teaser', name: 'teaser', widget: 'markdown', required: false }
       - { label: 'Text', name: 'text', widget: 'markdown', required: false }
       - { label: 'Tags', name: 'tags', widget: 'list', default: ['css'] }
-      - { label: 'Publication', name: 'publications', widget: 'relation',  collection: "publications",  searchFields: ["title"], valueField: "title", required: false }
+      - { label: 'Publication', name: 'publication', widget: 'relation',  collection: "publications",  searchFields: ["title"], valueField: "title", required: false }
       - { label: 'External link', name: 'url', widget: 'string', required: false }
       - { label: "Archive", name: "archive", widget: "boolean", default: false }
