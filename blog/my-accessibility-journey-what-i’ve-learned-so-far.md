@@ -6,6 +6,11 @@ teaser: >-
   Last year I gave a talk about CSS and accessibility at the stahlstadt.js
   meetup in Linz, Austria. Afterward, an attendee asked why I was interested in
   accessibility: Did I or someone in my life have a disability?
+
+
+  I’m used to answering this question—to which the answer is no—because I get it
+  all the time. A lot of people seem to assume that a personal connection is the
+  only reason someone would care about accessibility.
 tags:
   - css
   - a11y
