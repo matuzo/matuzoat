@@ -14,7 +14,7 @@ teaser: >-
 tags:
   - css
   - a11y
-publication: ''
+publication: A List Apart
 url: >-
   https://alistapart.com/article/my-accessibility-journey-what-ive-learned-so-far
 archive: false
