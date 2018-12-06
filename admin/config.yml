@@ -79,9 +79,8 @@ collections:
     slug: '{{slug}}' # Filename template, e.g., YYYY-MM-DD-title.md
     fields: # The fields for each document, usually in front matter
       - { label: 'Title', name: 'title', widget: 'string' }
-      - { label: 'Logo', name: 'logo', widget: 'image' }
-      - { label: 'Url', name: 'url', widget: 'string' }
-      - { label: 'Color', name: 'color', widget: 'string' }
+      - { label: 'Logo', name: 'logo', widget: 'image', required: false }
+      - { label: 'Url', name: 'url', widget: 'string', required: false }
   - name: 'Blog' # Used in routes, e.g., /admin/collections/blog
     label: 'Blog post' # Used in the UI
     folder: 'blog' # The path to the folder where the documents are stored
