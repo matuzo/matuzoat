@@ -1,8 +1,11 @@
-<header>
-  <nav>
-    <ul>
+<header class="site__header">
+
+  <a href="/" class="logo">{% include 'components/logo.svg' %}</a>
+
+  <nav class="nav-main">
+    <ul class="nav-main__list">
       {%- for nav in collections.nav | reverse -%}
-        <li class="nav-item{% if nav.url == page.url %} nav-item---active{% endif %}"><a href="{{ nav.url | url }}">{{ nav.data.navtitle }}</a></li>
+        <li class="nav-main__item{% if nav.url == page.url %} nav-main__---active{% endif %}"><a class="nav-main__link" href="{{ nav.url | url }}">{{ nav.data.navtitle }}</a></li>
       {%- endfor -%}
     </ul>
   </nav>

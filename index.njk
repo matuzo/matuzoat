@@ -1,0 +1,25 @@
+---
+layout: 'layouts/base.njk'
+renderData: 
+  title: 'Manuel Matuzovic'
+---
+
+<div class="intro-block">
+  <p>I'm a frontend developer from Vienna. I'm specialized in HTML, CSS, accessibility, and performance. If you want to get in touch, write me an email or find me on <a href="https://twitter.com/mmatuzo">Twitter</a>, CodePen or Medium.</p>
+</div>
+
+<div class="block">
+  <h2 class="block__heading"><span>Recent blog posts</span></h2>
+
+  <ul class="list-reset" style="display: flex;">
+  {% for post in collections.blog %}
+    <li>
+      <h3 class="heading">{{ post.data.title }}</h3>
+      <time class="date">
+      {{ post.data.date|readableDay }}
+      </time>
+      {# {{ post.data.teaser }} #}
+    </li>
+  {% endfor %}
+  </ul>
+</div>

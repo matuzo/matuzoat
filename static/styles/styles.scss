@@ -1,0 +1,79 @@
+@import 'vars';
+@import 'mixins';
+@import 'abstracts/helpers';
+
+@import 'base';
+
+@import 'layout';
+@import 'nav-main';
+@import 'components/site';
+@import 'components/page';
+@import 'components/logo';
+@import 'components/date';
+@import 'components/bookmarks';
+
+.block {
+  // display: flex;üa
+
+  &__heading {
+    width: min-content;
+    line-height: 1.4;
+    position: relative;
+    left: -4rem;
+    margin-bottom: 4rem;
+    
+    span {
+      padding: 1rem 2rem;
+      // padding-left: 4rem;
+    }
+  }
+}
+
+
+.intro-block {
+  font-size: 3rem;
+  margin-bottom: 6rem;
+}
+
+.heading {
+  background: #4f3e8a;
+  width: 30rem;
+  height: 30rem;
+  // border-radius: 50%;
+  display: flex;
+  color: #fff;
+  font-weight: bold;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  // transform: rotate(6deg);
+  font-size: 2.8rem;
+  padding: 2rem;
+}
+
+.date {
+  background: #7fc3c7;
+
+  width: 8rem;
+  height: 8rem;
+  // border-radius: 50%;
+  display: flex;
+  color: #fff;
+  font-weight: bold;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  // transform: rotate(6deg);
+  position: absolute;
+  left: 0;
+  top: 0;  
+  display: none;
+}
+
+:first-child > h3 {
+  background-color: #d33a2c;
+}
+
+li {
+  position: relative;
+}

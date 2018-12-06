@@ -1,0 +1,37 @@
+.nav-main {
+  font-size: 2.2rem;
+
+  &::after {
+    width: 4rem;
+    height: 12rem;
+    background: rgba(#333, 0.9);
+    position: relative;
+    right: -4rem;
+    content: "";
+    display: block;
+    right: -4rem;
+    content: "";
+    display: block;
+    margin-left: auto;
+    margin-top: 4rem;
+  }
+
+  &__list {
+    @include list-reset;
+    font-size: 2.6rem;
+
+    font-weight: bold;
+  }
+
+  &__item {
+    margin-bottom: 0.4rem;
+  }
+
+  &__link {
+    &:link,
+    &:visited {
+      color: $c-highlight;
+      text-decoration: none;
+    }
+  }
+}

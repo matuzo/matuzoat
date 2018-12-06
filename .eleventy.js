@@ -34,18 +34,46 @@ module.exports = function(eleventyConfig) {
     });
   });
 
-  eleventyConfig.addPassthroughCopy("static/img/uploads");
+  eleventyConfig.addCollection("blog", function(collection) {
+    return collection.getAllSorted().filter(function(item) {
+      return item.inputPath.match(/^\.\/blog\//) !== null;
+    });
+  });
+
+  eleventyConfig.addPassthroughCopy("static/img");
   eleventyConfig.addPassthroughCopy("admin");
 
-  // Date formatting (human readable)
-  eleventyConfig.addFilter("readableDate", dateObj => {
+  function getreadbaleDate(dateObj) {
     let date = DateTime.fromJSDate(dateObj);
 
     if (typeof dateObj === 'string') {
       date = DateTime.fromFormat(dateObj.split(" GMT")[0], "ccc LLL dd y hh:mm:ss");
     }
-    return date.toFormat("d. LLLL yyyy");
+
+    return date;
+  }
+
+  // Date formatting (human readable)
+  eleventyConfig.addFilter("readableDate", dateObj => {
+    return getreadbaleDate(dateObj).toFormat("d. LLLL yyyy");
   });
+
+  // Date formatting (human readable)
+  eleventyConfig.addFilter("readableDay", dateObj => {
+    return getreadbaleDate(dateObj).toFormat("d.");
+  });
+  
+  // Date formatting (human readable)
+  eleventyConfig.addFilter("readableMonth", dateObj => {
+    return getreadbaleDate(dateObj).toFormat("LLLL");
+  });
+  
+  
+  // Date formatting (human readable)
+  eleventyConfig.addFilter("readableYear", dateObj => {
+    return getreadbaleDate(dateObj).toFormat("yyyy");
+  });
+  
 
   // Date formatting (machine readable)
   eleventyConfig.addFilter("machineDate", dateObj => {

@@ -1,0 +1,31 @@
+.logo {
+  display: block;
+  margin-bottom: 3rem;
+  text-align: center;
+
+  @for $i from 1 through 16 {
+    &__letter:nth-child(#{$i}) {
+      transition-delay: $i * 40ms;
+    }
+  }
+
+ &:hover &__letter {
+  fill: $c-highlight;
+ }
+
+  &__letter {
+    transition-duration: 120ms;
+  }
+
+  &__letter2:hover {
+    fill: blue;
+  }
+
+  &__letter3:hover {
+    fill: green;
+  }
+
+  &__letter4:hover {
+    fill: fuchsia;
+  }
+}
