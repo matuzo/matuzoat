@@ -8,6 +8,7 @@ teaser: >-
   app.
 tags:
   - css
+publication: Medium
 url: >-
   https://medium.com/@matuzo/writing-javascript-with-accessibility-in-mind-a1f6a5f467b9
 archive: false
