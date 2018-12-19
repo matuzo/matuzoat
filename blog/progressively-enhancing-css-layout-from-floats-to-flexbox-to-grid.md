@@ -1,6 +1,7 @@
 ---
 title: 'Progressively Enhancing CSS Layout: From Floats To Flexbox To Grid'
-date: 2018-07-24T05:03:17.010Z
+date: 2017-07-24T05:03:17.010Z
+image: /static/img/uploads/holy-grid-pptwcu-c-scale-w-1574.png
 teaser: >-
   When can I start using CSS grid layout?” “Too bad that it’ll take some more
   years before we can use grid in production.” “Do I need Modernizr in order to
@@ -11,6 +12,8 @@ teaser: >-
   our projects.
 tags:
   - css
+  - grid
+  - progressive enhancement
 publication: Smashing Magazine
 url: >-
   https://www.smashingmagazine.com/2017/07/enhancing-css-layout-floats-flexbox-grid/
