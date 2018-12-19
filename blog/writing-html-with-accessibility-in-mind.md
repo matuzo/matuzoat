@@ -9,6 +9,7 @@ teaser: >-
 tags:
   - html
   - a11y
+publication: Medium
 url: >-
   An introduction to web accessibility. Tips on how to improve your markup and
   provide users with more and betters ways to navigate and interact with your
