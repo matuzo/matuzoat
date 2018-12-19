@@ -1,29 +1,35 @@
 <!DOCTYPE html>
-<html lang="en">
+<html class="site no-js" lang="en">
   <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
     <title>{{ title or metadata.title }}</title>
 
-    <link rel="stylesheet" href="/static/styles/style.css" />
+    <link rel="stylesheet" href="/static/min/main.css" />
   </head>
 
-  <body class="site">
+  <body class="site__body">
+    <canvas class="site__square site__square--tl square-canvas js-sq-tl" hidden aria-hidden></canvas>
+    <canvas class="site__square site__square--tr square-canvas js-sq-tr" hidden aria-hidden></canvas>
+    <canvas class="site__square site__square--br square-canvas js-sq-br" hidden aria-hidden></canvas>
+    <canvas class="site__square site__square--bl square-canvas js-sq-bl" hidden aria-hidden></canvas>
+
     {% include 'header.njk' %}
 
-    <div class="page">
-    <main  class="page__content">
-      <h1 class="page__title">
-        <a href="/" class="page__title__link">
-        {{ title or metadata.title }}
-        </a>
+    <main class="site__content page">
+      <h1 class="page__title page-title {{ renderData.title_classes }}">
+        <span class="page-title__text">
+          {{ title or metadata.title }}
+        </span>
       </h1>
 
       {{ content | safe }}
     </main>
 
     {% include 'footer.njk' %}
-    </div>
+
+    <script src="/static/min/main.js"></script>
   </body>
 </html>

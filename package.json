@@ -4,7 +4,8 @@
   "description": "* <http://blog.klipse.tech/javascript/2016/06/20/blog-javascript.html> * <http://nickersoft.github.io/push.js/>",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "eleventy --serve | webpack --config webpack.dev.js --watch",
+    "build": "webpack --config webpack.prod.js"
   },
   "repository": {
     "type": "git",
@@ -17,7 +18,19 @@
   },
   "homepage": "https://github.com/matuzo/matuzoat#readme",
   "devDependencies": {
-    "@11ty/eleventy": "^0.5.4"
+    "@11ty/eleventy": "^0.5.4",
+    "@babel/core": "^7.2.0",
+    "@babel/preset-env": "^7.2.0",
+    "babel-loader": "^8.0.4",
+    "css-loader": "^1.0.1",
+    "extract-text-webpack-plugin": "^4.0.0-beta.0",
+    "node-sass": "^4.10.0",
+    "sass-loader": "^7.1.0",
+    "style-loader": "^0.23.1",
+    "webpack": "^4.27.1",
+    "webpack-cleanup-plugin": "^0.5.1",
+    "webpack-cli": "^3.1.2",
+    "webpack-merge": "^4.1.4"
   },
   "dependencies": {
     "luxon": "^1.4.3"

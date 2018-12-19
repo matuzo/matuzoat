@@ -1,0 +1,27 @@
+// Colors
+
+$c-primary: #1d4e6d;
+$c-light: #efefef;
+$c-highlight: #F23C50;
+$c-highlight2: #9f3a42;
+$c-highlight3: #4f3e8a;
+
+// Sizes
+
+$base-line: 1.6;
+$spacing: $base-line * 2.5rem;
+$site-corner: 1rem;
+
+// Z-indices
+
+$z-site: 1000;
+
+// Breakpoints
+
+$mq-breakpoints: (
+    xs: 320px,
+    s: 410px,
+    m: 768px,
+    wide: 1300px
+);
+

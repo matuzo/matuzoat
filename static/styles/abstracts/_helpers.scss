@@ -1,9 +1,7 @@
 .visually-hidden {
-  @include hideVisually;
+  @include hide-visually;
 }
 
 .list-reset {
-  margin: 0;
-  padding: 0;
-  list-style: none;
+  @include list-reset;
 }

@@ -1,0 +1,27 @@
+* {
+  box-sizing: border-box;
+}
+
+p {
+  margin-top: 0;
+  max-width: 60ch;
+}
+
+a {
+  font-weight: bold;
+  
+  &:link, &:visited {
+    color: $c-highlight;
+  }
+
+  &:hover {
+    color: #333;
+  }
+}
+
+
+
+// h3 {
+//   margin: 0;
+// }
+

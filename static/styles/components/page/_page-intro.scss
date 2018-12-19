@@ -1,0 +1,24 @@
+.page-intro {
+  --canvas-margin: 0 auto 0;
+  --intro-font-size: 1.7rem;
+
+  @include mq(s) {
+    --intro-font-size: 2.1rem;
+    --canvas-margin: 0.5rem 1.4rem auto 0;
+    --canvas-float: left;
+  }
+
+  // TODO: Brekapount
+  font-size: 1.9rem;
+  font-size: var(--intro-font-size);
+  // margin-bottom: $spacing * 2;
+  // font-size: 2.4rem;
+
+  &__canvas {
+    display: block;
+    margin: 0 auto 2rem;
+
+    margin:  var(--canvas-margin);
+    float: var(--canvas-float);
+  }
+}

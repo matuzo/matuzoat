@@ -1,6 +1,6 @@
 <header class="site__header">
 
-  <a href="/" class="logo">{% include 'components/logo.svg' %}</a>
+  <a href="/" class="site__logo logo">{% include 'components/logo.svg' %}</a>
 
   <nav class="nav-main">
     <ul class="nav-main__list">
@@ -9,4 +9,7 @@
       {%- endfor -%}
     </ul>
   </nav>
+
+  <canvas class="js-sq-site-header" hidden aria-hidden style="margin-top: auto;"></canvas>
 </header>
+

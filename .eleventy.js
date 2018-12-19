@@ -34,6 +34,12 @@ module.exports = function(eleventyConfig) {
     });
   });
 
+  eleventyConfig.addCollection("publications", function(collection) {
+    return collection.getAllSorted().filter(function(item) {
+      return item.inputPath.match(/^\.\/publications\//) !== null;
+    });
+  });
+
   eleventyConfig.addCollection("blog", function(collection) {
     return collection.getAllSorted().filter(function(item) {
       return item.inputPath.match(/^\.\/blog\//) !== null;
@@ -41,6 +47,7 @@ module.exports = function(eleventyConfig) {
   });
 
   eleventyConfig.addPassthroughCopy("static/img");
+  eleventyConfig.addPassthroughCopy("static/min");
   eleventyConfig.addPassthroughCopy("admin");
 
   function getreadbaleDate(dateObj) {
@@ -79,6 +86,11 @@ module.exports = function(eleventyConfig) {
   eleventyConfig.addFilter("machineDate", dateObj => {
     return DateTime.fromJSDate(dateObj).toFormat("yyyy-MM-dd");
   });
+
+    // Date formatting (human readable)
+    eleventyConfig.addFilter("stringify", dateObj => {
+      return dateObj + "";
+    });
 
   return {
     templateFormats: [

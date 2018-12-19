@@ -1,0 +1,55 @@
+.nav-main {
+  --item-spacing: 0rem 0 1.2rem;
+  --fz: 2rem;
+
+  @include mq(s) {
+    --item-spacing: 0.2rem 0 2.2rem;
+    --fz: 2.2rem;
+  }
+
+  font-size: var(--fz);
+  // text-align: right;
+
+  // &::after {
+  //   width: 2.6rem;
+  //   height: 12rem;
+  //   background: rgba(#333, 0.9);
+  //   position: relative;
+  //   right: -4rem;
+  //   content: "";
+  //   display: block;
+  //   right: -4rem;
+  //   content: "";
+  //   display: block;
+  //   margin-left: auto;
+  //   margin-top: 4rem;
+  // }
+
+  &__list {
+    @include list-reset;
+    // font-size: 2.6rem;
+
+    font-weight: bold;
+  }
+
+  &__item {
+    margin: var(--item-spacing);
+
+    line-height: 1;
+
+    &:nth-child(2) {
+      margin-bottom: 4.7rem;
+    }
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  &__link {
+    @include link {
+      color: $c-primary;
+      text-decoration: none;
+    }
+  }
+}

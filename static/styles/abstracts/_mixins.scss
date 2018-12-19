@@ -2,17 +2,9 @@
   list-style: none;
   margin: 0;
   padding: 0;
-
-  li {
-    padding-left: 0;
-    &::before {
-      display: none;
-    }
-  }
 }
 
-
-@mixin hideVisually {
+@mixin hide-visually {
   white-space: nowrap;
   width: 1px;
   height: 1px;
@@ -25,4 +17,11 @@
   position: absolute;
   left: 0;
   top: 0;
+}
+
+@mixin link {
+  &:link,
+  &:visited {
+    @content;
+  }
 }
