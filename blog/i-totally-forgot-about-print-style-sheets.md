@@ -7,6 +7,7 @@ teaser: >-
   style sheets are still a thing.
 tags:
   - css
+publication: Medium
 url: 'https://uxdesign.cc/i-totally-forgot-about-print-style-sheets-f1e6604cfd6'
 archive: false
 ---
