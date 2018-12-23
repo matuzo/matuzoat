@@ -1,5 +1,5 @@
 ---
-title: Dark side of the Grid Frontend Con
+title: I threw away Frontend Con
 slides: 'https://noti.st/matuzo/KUy0gd/i-threw-away-my-mouse'
 ---
 Inspired by a talk by Laura Carvajal, Manuel Matuzović performed an experiment and didn't use a mouse or trackpad for two weeks. He wanted to improve his understanding of how it is to use a computer and especially the web only with the keyboard.
