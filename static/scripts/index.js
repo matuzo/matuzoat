@@ -5,7 +5,7 @@ const home_tl = new Squares({
   num_x: 1,
   num_y: 1,
   pattern: '1',
-  color: '#36B1BF',
+  color: '#36B1BF'
 });
 
 const home_tr = new Squares({
@@ -13,7 +13,7 @@ const home_tr = new Squares({
   num_x: 2,
   num_y: 1,
   pattern: '1,1',
-  color: '#36B1BF',
+  color: '#36B1BF'
 });
 
 const home_br = new Squares({
@@ -21,7 +21,7 @@ const home_br = new Squares({
   num_x: 1,
   num_y: 2,
   pattern: '1,1',
-  color: '#F23C50',
+  color: '#F23C50'
 });
 
 const home_bl = new Squares({
@@ -29,7 +29,7 @@ const home_bl = new Squares({
   num_x: 2,
   num_y: 2,
   pattern: '1,0,1,1',
-  color: '#F23C50',
+  color: '#F23C50'
 });
 
 const home_intro = new Squares({
@@ -38,12 +38,11 @@ const home_intro = new Squares({
   num_y: 5,
   color: '#568b8e',
   size: 10,
-  pattern: 
-   `0,0,1,1,0,1,
+  pattern: `0,0,1,1,0,1,
     0,1,1,0,0,1,
     1,1,0,0,0,1,
     0,1,1,0,0,0,
-    0,0,1,1,0,1`,
+    0,0,1,1,0,1`
 });
 
 const site_header = new Squares({
@@ -52,5 +51,20 @@ const site_header = new Squares({
   num_y: 1,
   size: 5,
   color: '#1d4e6d',
-  fill: 'even',
+  fill: 'even'
 });
+
+/**
+ * Random emoji
+ */
+
+function getRandomEmoji() {
+  const emojis = ['🤤', '🐳', '🍻', '👊🏻', '🍳'];
+
+  const emoji = emojis[Math.round(Math.random() * (emojis.length - 1))];
+  return emoji;
+}
+
+if (document.querySelector('.js-random-emoji')) {
+  document.querySelector('.js-random-emoji').textContent = getRandomEmoji();
+}
