@@ -32,12 +32,6 @@ class Squares {
         this.squares.push({ x: this.size * (2 * i), y: 0 });
       }
 
-      console.log(this.squares)
-
-
-      console.log('fill it');
-      console.log();
-
       this.draw_squares();
     }
   }
@@ -100,8 +94,6 @@ class Squares {
   }
 
   parse_pattern() {
-    console.log('parse')
-
     const pattern = this.options.pattern.split(',');
 
     for (let i = 0; i < pattern.length; i++) {
@@ -117,20 +109,16 @@ class Squares {
       if (box) {
         this.squares.push({ x: this.size * col, y: this.size * row });
       }
-
-      console.log(this.squares)
     }
 
     this.draw_squares();
   }
 
   draw_squares() {
-    console.log('draw')
     this.context.fillStyle = this.prop_set(this.options.color, 'rgba(51, 51, 51, 0.9)');
 
     for(var i = 0; i < this.squares.length; i++) {
       const square = this.squares[i];
-      console.log(square)
       this.context.fillRect(square.x, square.y, this.size, this.size);
     }
   }

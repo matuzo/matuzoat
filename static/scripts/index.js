@@ -1,4 +1,5 @@
 import Squares from './squares';
+import prefetchNav from './prefetch-nav';
 
 const home_tl = new Squares({
   canvas: '.js-sq-tl',
@@ -69,6 +70,10 @@ if (document.querySelector('.js-random-emoji')) {
   document.querySelector('.js-random-emoji').textContent = getRandomEmoji();
 }
 
+/**
+ * Smoothly scroll to top
+ */
+
 if (document.querySelector('.js-scroll-top')) {
   document.querySelector('.js-scroll-top').addEventListener('click', e => {
     e.preventDefault();
@@ -78,3 +83,9 @@ if (document.querySelector('.js-scroll-top')) {
     });
   });
 }
+
+/**
+ * Prefetch links in nav for better perceived performance
+ */
+
+prefetchNav();
