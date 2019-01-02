@@ -68,3 +68,13 @@ function getRandomEmoji() {
 if (document.querySelector('.js-random-emoji')) {
   document.querySelector('.js-random-emoji').textContent = getRandomEmoji();
 }
+
+if (document.querySelector('.js-scroll-top')) {
+  document.querySelector('.js-scroll-top').addEventListener('click', e => {
+    e.preventDefault();
+    document.getElementById('top').scrollIntoView({
+      behavior: 'smooth',
+      block: 'center'
+    });
+  });
+}
