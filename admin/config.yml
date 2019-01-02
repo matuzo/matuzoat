@@ -1,8 +1,6 @@
 backend:
   name: git-gateway
 
-publish_mode: editorial_workflow
-
 media_folder: 'static/img/uploads'
 
 collections:
@@ -96,3 +94,12 @@ collections:
       - { label: 'Publication', name: 'publication', widget: 'relation',  collection: "Publications",  searchFields: ["title"], valueField: "title", required: false }
       - { label: 'External link', name: 'url', widget: 'string', required: false }
       - { label: "Archive", name: "archive", widget: "boolean", default: false }
+  - name: 'til' # Used in routes, e.g., /admin/collections/blog
+    label: 'TIL' # Used in the UI
+    folder: 'til' # The path to the folder where the documents are stored
+    create: true # Allow users to create new documents in this collection
+    slug: '{{slug}}' # Filename template, e.g., YYYY-MM-DD-title.md
+    fields: # The fields for each document, usually in front matter
+      - { label: 'Title', name: 'title', widget: 'string' }
+      - { label: 'Link', name: 'link', widget: 'string', required: false }
+      - { label: 'Image', name: 'image', widget: 'image', required: false }
