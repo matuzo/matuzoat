@@ -1,7 +1,7 @@
-n---
-title: Heading structures are tables of contents
+---
+title: ' Gradient Borders in CSS '
 link: >-
-  https://hiddedevries.nl/en/blog/2018-09-01-heading-structures-are-tables-of-contents 
-date: '2018-10-08'
+  https://css-tricks.com/gradient-borders-in-css/?utm_campaign=CSS%2BLayout%2BNews
+date: '2019-01-02'
 ---
 
