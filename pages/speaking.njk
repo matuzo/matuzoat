@@ -1,20 +1,24 @@
 ---
 layout: layouts/base.njk
 title: Speaking
-tags:
-  - nav
 navtitle: Speaking
 permalink: /speaking/index.html
 date: 1987-01-02
+renderData: 
+  title_classes: 'page-grid__heading'
+  content_classes: 'page-grid'
 ---
 
-<h2>Upcoming talks</h2>
-
 {% set collection = collections.speaking_future %}
-{% include "components/speaking.njk" %}
 
-
-<h2>Past talks</h2>
+{% if collection|length %}
+  <h2 class="page-heading page-grid__subheading">Upcoming talks</h2>
+  {% include "components/speaking.njk" %}
+{% endif %}
 
 {% set collection = collections.speaking_past %}
-{% include "components/speaking.njk" %}
+
+{% if collection|length %}
+  <h2 class="page-heading page-grid__subheading">Past talks</h2>
+  {% include "components/speaking.njk" %}
+{% endif %}

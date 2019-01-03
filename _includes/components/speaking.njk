@@ -1,30 +1,32 @@
-{% for gig in collection %}
-  {% for talk in collections.talks %}
-    {% if gig.data.talk == talk.data.title %}
-      <h3>{{ gig.data.title }}</h3>
-    {% endif %}
-  {% endfor %}
-
-  <time datetime="{{ gig.data.date|machineDate }}">{{ gig.data.date|readableDate }}</time>
-
-  {% set event = gig.data.event %}
-  {% include "components/event.njk" %}
-
-  <details>
-    <summary>
-      More
-    </summary>
-
+{% for gig in collection | reverse %}
+  <div class="page-grid__item gig gig--{{ gig.data.talk|slug }}">
+    {% set event = gig.data.event %}
+    {% include "components/event.njk" %}
+  
     {% for talk in collections.talks %}
       {% if gig.data.talk == talk.data.title %}
-        <h4>Description</h4>
-        {{ talk.templateContent | safe }}
-
-        <ul>
-          {% if talk.data.slides %}<li><a href="{{ talk.data.slides }}">Slides</a></li>{% endif %}
-          {% if talk.data.video %}<li><a href="{{ talk.data.video }}">Video</a></li>{% endif %}
-        </ul>
+        <p>{{ gig.data.title }}</p>
       {% endif %}
     {% endfor %}
-  </details>
+
+    {% for talk in collections.talks %}
+      {% if gig.data.talk == talk.data.title and talk.templateContent %}
+        
+        <details class="gig__description">
+          <summary>
+            Talk description
+          </summary>
+
+          {{ talk.templateContent | safe }}
+
+          <ul>
+            {% if talk.data.slides %}<li><a href="{{ talk.data.slides }}">Slides</a></li>{% endif %}
+            {% if talk.data.video %}<li><a href="{{ talk.data.video }}">Video</a></li>{% endif %}
+          </ul>
+        </details>
+      {% endif %}
+    {% endfor %}
+    
+    <time class="gig__date" datetime="{{ gig.data.date|machineDate }}">{{ gig.data.date|readableDate }}</time>
+  </div>
 {% endfor %} 
