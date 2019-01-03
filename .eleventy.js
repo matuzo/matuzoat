@@ -50,7 +50,7 @@ module.exports = function(eleventyConfig) {
   eleventyConfig.addPassthroughCopy("static/min");
   eleventyConfig.addPassthroughCopy("static/favicon");
   eleventyConfig.addPassthroughCopy("admin");
-  eleventyConfig.addPassthroughCopy(".htaccess");
+  eleventyConfig.addPassthroughCopy("_redirects");
 
   function getreadbaleDate(dateObj) {
     let date = DateTime.fromJSDate(dateObj);

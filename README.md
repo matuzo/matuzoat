@@ -27,6 +27,7 @@ Open <http://localhost:8080/>
 - [ ] Add TIL page
 - [ ] Add bookmarks page
 - [ ] Add speaking page
+- [ ] Add 404 page
 
 ### Low priority
 

@@ -198,7 +198,7 @@ img {
   line-height: 1;
   padding-left: 2rem; }
   .h2::before {
-    background: #1c4e6c;
+    background: #36b1bf;
     content: "";
     display: block;
     height: 1.6rem;
