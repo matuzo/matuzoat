@@ -7,18 +7,25 @@
 
 @import 'base/base';
 
+@import 'components/rich-text';
+@import 'components/site.logic';
 @import 'components/site';
+@import 'components/headings';
+@import 'components/button';
+@import 'components/footer';
+
 @import 'components/nav-main';
 @import 'components/logo';
 
+@import 'components/page/page.logic';
 @import 'components/page/page';
 @import 'components/page/page-title';
 @import 'components/page/page-block';
 @import 'components/page/page-intro';
 
 @import 'components/square-canvas';
-@import 'components/headings';
-@import 'components/box-list';
+@import 'components/post-list.logic';
+@import 'components/post-list';
 
 
 // @import 'components/date';

@@ -1,0 +1,80 @@
+.post-list {
+  @include list-reset;
+  @include box-list-theme('undefined', $c-highlight, #000000);
+  @include box-list-theme('a-list-apart', #FFFFFF, #000000);
+  @include box-list-theme('smashing-magazine ', #d33a2c, #FFFFFF);
+  @include box-list-theme('css-tricks ', rgb(16, 14, 23), rgb(255, 138, 0), rgb(218, 27, 95));
+  @include box-list-theme('medium ', rgb(41, 41, 41), #FFFFFF);
+  @include box-list-theme('24a11y ', rgb(2, 117, 216), #FFFFFF);
+
+  $image-size: 3.2rem;
+  $item-shadow: 0 0 4px -1px rgba(0,0,0,0.1);
+  $link: '';
+
+  &__item {
+
+    display: grid;
+    justify-items: start;
+    grid-gap: 0.5rem;
+    grid-template-columns: $image-size 1fr;
+    margin-bottom: $spacing / 1.5;    
+    position: relative;
+  }
+
+  &__image {
+    box-shadow: $item-shadow;
+    height: $image-size;
+    padding: 0.5rem;
+    width: $image-size;
+
+    img {
+      display: block;
+      max-height: 100%;
+    }
+  }
+
+  &__link {
+    $link: &;
+
+    box-shadow: $item-shadow;
+    display: block;
+    grid-column: 1 / -1;
+
+    &::before {
+      content: "";
+      left: 0;
+      height: 100%;
+      position: absolute;
+      top: 0;
+      width: 100%;
+    }
+
+    @include link {
+      text-decoration: none;
+    }
+  }
+
+  &__heading {
+    font-size: 2.6rem;
+    margin: 0;
+    padding: 0 1rem;
+    transform-origin: left center;
+    transition: all 0.3s;
+
+    #{$link}:hover &,
+    #{$link}:focus & {
+      position: static;
+      transform: scale(1.1);
+    }
+  }
+
+  &__date {
+    align-items: center;
+    box-shadow: $item-shadow;
+    font-size: 1.3rem;
+    font-weight: bold;
+    display: flex;
+    justify-content: center;
+    padding: 0 0.5rem;
+  }
+}

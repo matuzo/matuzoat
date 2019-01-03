@@ -1,16 +1,34 @@
 .h2 {
-  margin: 0 0 $spacing / 2;
-  font-size: 2.2rem;
-  width: min-content;
+  display: inline-block;
+  font-size: 2.6rem;
   line-height: 1.4;
+  margin: 0 0 $spacing;
+  padding: $spacing / 4 $spacing / 2;
+  position: relative;
 
-  &__inner {
-    background:$c-primary;
-    color: $c-light;
+  $size: $spacing / 3;
+
+  &::after,
+  &::before {
+    content: "";
     display: block;
-    display: inline-block;
-    padding: 0.4rem 1rem;
-    // padding: 1rem 2rem;
-    // padding-left: 4rem;
+    width: $size;
+    height: $size;
+    border-style: solid;
+    position: absolute;
+  }
+
+  &::before {
+    border-color: $c-sec;
+    border-width: 0 0 $size $size;
+    left: 0;
+    bottom: 0;
+  }
+
+  &::after {
+    border-width: $size $size 0 0;
+    border-color: $c-highlight;
+    top: 0;
+    right: 0;
   }
 }

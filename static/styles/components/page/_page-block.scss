@@ -1,9 +1,7 @@
 .page-block {
-  // display: flex;
+  padding-left: $spacing / 1.5;
 
   &__heading {
-    margin-bottom: 4rem;
-    // position: relative;
-    // left: $spacing * -1;
+    margin-left: $spacing / 1.5 * -1;
   }
 }
