@@ -1,0 +1,26 @@
+.footer {
+  padding: 0 0 0.3rem;
+
+  &, & > * {
+    font-size: 1.4rem;
+  }
+  
+  &__link {
+    @include link {
+      text-decoration: none;
+      color: $c-sec-dark;
+    }
+
+    @include link-active {
+      @include underline(4px, $c-sec);
+
+      color: $c-highlight;
+    }
+  }
+}
+
+.footer-nav {
+  &__item {
+    margin-left: 1rem;
+  }
+}

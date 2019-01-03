@@ -1,3 +1,18 @@
 <footer class="site__footer">
-  <small>&copy; 2018</small>
+  <nav class="footer horizontal">
+    <small>&copy; 2018</small>
+
+    <ul class="list-reset horizontal footer-nav">
+      <li class="footer-nav__item"><a href="/legal" class="footer__link">legal</a></li>
+      <li class="footer-nav__item"><a href="https://twitter.com" rel="noopener" class="footer__link">twitter</a></li>
+    </ul>
+  </nav>
+
+  {% set text = "Menu" %}
+  {% set size = "small" %}
+  {% set style = "highlight" %}
+  {% set link = "#top" %}
+  {% set classes = "js-scroll-top" %}
+  {% include 'components/button.njk' %}
+  
 </footer>
