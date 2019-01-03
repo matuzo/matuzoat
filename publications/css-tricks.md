@@ -1,6 +1,6 @@
 ---
 title: CSS-Tricks
-logo: /static/img/uploads/css-tricks-star.png
+logo: /static/img/uploads/csstricks.svg
 url: 'https://css-tricks.com/'
 ---
 
