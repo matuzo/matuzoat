@@ -1,0 +1,51 @@
+.btn {
+  background: $c-sec;
+  display: inline-block;
+  font-family: inherit;
+  font-weight: bold;
+  line-height: $base-line;
+  overflow: hidden;
+  padding: 1rem 4rem;
+  position: relative;
+  text-decoration: none;
+  text-shadow: 0 0 2px rgba(0,0,0,0.5);
+
+  @include link {
+    color: $c-light;
+  }
+
+  &--small {
+    padding: 0.4rem 2rem;
+  }
+
+  &::after {
+    content: "";
+    bottom: -100%;
+    display: block;
+    background: $c-highlight;
+    height: 50%;
+    left: 0;
+    position: absolute;
+    transition: all 0.3s ease-out;
+    width: 100%;
+  }
+
+  &--highlight {
+    background-color: $c-highlight;
+
+    &::after {
+      background-color: $c-sec;
+    }
+  }
+
+  @include link-active {
+    &::after {
+      bottom: 0;
+    }
+  }
+
+  &__inner {
+    position: relative;
+    z-index: 1;
+  }
+}
