@@ -17,6 +17,7 @@
 
     }
 
+    .logo:focus &,
     .logo:hover & {
       fill: $c-sec;
     }
