@@ -2,14 +2,18 @@
 
   <a href="/" class="site__logo logo">{% include 'components/logo.svg' %}</a>
 
-  <nav class="nav-main">
+  <nav class="nav-main js-nav-main">
     <ul class="nav-main__list">
       {%- for nav in collections.nav | reverse -%}
-        <li class="nav-main__item{% if nav.url == page.url %} nav-main__---active{% endif %}"><a class="nav-main__link" href="{{ nav.url | url }}">{{ nav.data.navtitle }}</a></li>
+        <li class="nav-main__item">
+          <a class="nav-main__link {% if nav.url == page.url %} nav-main__link--active{% endif %}" href="{{ nav.url | url }}">
+          {{ nav.data.navtitle }}
+            </a>
+        </li>
       {%- endfor -%}
     </ul>
   </nav>
 
-  <canvas class="js-sq-site-header" hidden aria-hidden style="margin-top: auto;"></canvas>
+  <canvas class="site__separator js-sq-site-header" hidden aria-hidden></canvas>
 </header>
 
