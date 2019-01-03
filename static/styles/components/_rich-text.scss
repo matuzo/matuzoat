@@ -21,4 +21,8 @@
       color: $c-highlight;
     }
   }
+
+  p + .h2 {
+    margin-top: 5rem;
+  }
 }

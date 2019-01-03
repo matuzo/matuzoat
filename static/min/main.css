@@ -41,6 +41,9 @@ img {
     box-shadow: 0 2px 0 0 #f23c50;
     color: #36b1bf; }
 
+.rich-text p + .h2 {
+  margin-top: 5rem; }
+
 .site {
   --site-padding: 0;
   --header-justify: space-between;
@@ -55,7 +58,7 @@ img {
   --separator-width: 100%;
   --separator-display: block;
   --content-padding: 0 3rem 4rem;
-  --font-size: 2rem;
+  --font-size: 1.8rem;
   --logo-margin: 0 4rem 0 0;
   --logo-width: 8rem; }
   @media (min-height: 590px) {
@@ -163,30 +166,44 @@ img {
     .home .site__separator {
       margin-top: var(--header-separator-margin); }
 
-.h2 {
+.h1 {
   display: inline-block;
   font-size: 2.6rem;
   line-height: 1.4;
   margin: 0 0 4rem;
   padding: 1rem 2rem;
   position: relative; }
-  .h2::after, .h2::before {
+  .h1::after, .h1::before {
     content: "";
     display: block;
     width: 1.33333rem;
     height: 1.33333rem;
     border-style: solid;
     position: absolute; }
-  .h2::before {
+  .h1::before {
     border-color: #f23c50;
     border-width: 0 0 1.33333rem 1.33333rem;
     left: 0;
     bottom: 0; }
-  .h2::after {
+  .h1::after {
     border-width: 1.33333rem 1.33333rem 0 0;
     border-color: #36b1bf;
     top: 0;
     right: 0; }
+
+.h2 {
+  align-items: flex-end;
+  display: flex;
+  font-size: 2.2rem;
+  line-height: 1;
+  padding-left: 2rem; }
+  .h2::before {
+    background: #f23c50;
+    content: "";
+    display: block;
+    height: 1.6rem;
+    margin-right: 1rem;
+    width: 1.6rem; }
 
 .btn {
   background: #f23c50;
@@ -280,6 +297,7 @@ img {
     .logo__letter:nth-child(n+7):nth-child(-n+12) {
       stroke: transparent;
       fill: #1c4e6c; }
+    .logo:focus .logo__letter,
     .logo:hover .logo__letter {
       fill: #f23c50; }
     .logo__letter:nth-child(1) {
