@@ -3,43 +3,30 @@ layout: 'layouts/base.njk'
 renderData: 
   title: 'Manuel Matuzovic'
   title_classes: 'visually-hidden'
+  page_classes: 'home'
 ---
 <div class="page__intro page-intro">
-  <div> 
-    <p>Hi! ✌🏻 I'm a frontend developer from Vienna. I'm specialized in <strong>HTML</strong>, <strong>accessibility</strong>, and <strong>CSS layout and architecture</strong>.</p>
-    <p>If you want to get in touch, write me an <a href="mailto:manuel@matuzo.at">email</a> or find me on <a href="https://twitter.com/mmatuzo">Twitter</a>.</p>
+  <div class="rich-text"> 
+    <p>Hi! <span class="js-random-emoji">✌️</span> I'm a frontend developer from Vienna. I'm specialized in <strong>HTML</strong>, <strong>accessibility</strong>, and <strong>CSS layout and architecture</strong>.</p>
+    <p>If you want to get in touch, write me an <a href="mailto:manuel@matuzo.at">email</a> or find me on <a href="https://twitter.com/mmatuzo" rel="noopener">twitter</a>.</p>
   </div>
 </div>
 
 <div class="page-block">
   <h2 class="page-block__heading h2">
-    <span class="h2__inner">Recent blog posts</span>
+    Recent blog posts
   </h2>
+  
+  {% set max = 5 %}
+  {% include 'components/blog-posts.njk' %}
 
-  <ul class="box-list">
-  {% for post in collections.blog %}
-    <li class="box-list__item box-list__item--{{ post.data.publication | stringify | slug }}">
-      <h3 class="box-list__heading">{{ post.data.title }}</h3>
-      {# <time class="date">
-        {{ post.data.date|readableDay }}
-      </time> #}
-      {# {{ post.data.teaser }} #}
-
-      {# {% for pub in collections.publications %}
-      {{ pub }}
-      {% if  == pub.data.title %}
-        <h4>{{ pub.data.title | slug }}</h4>
-        <h4>{{ pub.data.color }}</h4>
-      {% endif %}
-    {% endfor %} #}
-    </li>
-  {% endfor %}
-  </ul>
+  {% set text = "More blog posts" %}
+  {% set link = "/blog" %}
+  {% include 'components/button.njk' %}
 </div>
 
 <script>
-let vh = window.innerHeight * 0.01;
-// Then we set the value in the --vh custom property to the root of the document
-console.log(`${vh}px`)
-document.documentElement.style.setProperty('--vh', `${vh}px`);
+  let vh = window.innerHeight * 0.01;
+  // Then we set the value in the --vh custom property to the root of the document
+  document.documentElement.style.setProperty('--vh', `${vh}px`);
 </script>
