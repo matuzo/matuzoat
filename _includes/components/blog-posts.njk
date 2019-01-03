@@ -17,7 +17,7 @@
       {% endif %}
     {% endfor %} 
 
-   <time class="post-list__date post-list__date--{{ post.data.publication | stringify | slug }}">
+   <time class="post-list__date post-list__date--{{ post.data.publication | stringify | slug }}" datetime="{{ post.data.date|machineDate }}">
       {{ post.data.date|readableDate }}
     </time> 
   </li>
