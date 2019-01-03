@@ -2,11 +2,11 @@
 {% for post in collections.blog.slice(0, max) %}
   <li class="post-list__item post-list__item--{{ post.data.publication | stringify | slug }}">
     <a href="{{ post.data.url }}" class="post-list__link post-list__link--{{ post.data.publication | stringify | slug }}">
-      <h3 class="post-list__heading post-list__heading--{{ post.data.publication | stringify | slug }}">
+      <h2 class="post-list__heading post-list__heading--{{ post.data.publication | stringify | slug }}">
         <span class="post-list__heading-inner post-list__heading-inner--{{ post.data.publication | stringify | slug }}">
           {{ post.data.title }}
         </span>
-      </h3>
+      </h2>
     </a>
 
     {% for pub in collections.publications %}
