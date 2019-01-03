@@ -5,3 +5,7 @@
 .list-reset {
   @include list-reset;
 }
+
+.horizontal {
+  display: flex;
+}

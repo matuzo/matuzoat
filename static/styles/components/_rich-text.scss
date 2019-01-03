@@ -1,0 +1,24 @@
+.rich-text {
+  p {
+    margin-top: 0;
+    max-width: 60ch;
+  }
+  
+  a {
+    font-weight: bold;
+    
+    &:link, &:visited {
+      @include underline(4px, currentColor);
+
+      color: $c-sec-dark;
+      text-decoration: none;
+      transition: all 0.2s cubic-bezier(.47,0,.74,.71);
+    }
+  
+    &:hover {
+      @include underline(2px, $c-sec);
+
+      color: $c-highlight;
+    }
+  }
+}

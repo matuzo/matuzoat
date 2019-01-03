@@ -3,25 +3,22 @@
   line-height: 1;
 
   &__graphic {
+    max-width: 10rem;
     width: 100%;
   }
 
-  //   margin-bottom: 3rem;
-  //   text-align: right;
 
   &__letter {
     fill: #36B1BF;
-    // stroke-width: 4;
-    // fill: transparent;
 
     &:nth-child(n+7):nth-child(-n+12) {
       stroke: transparent;
-      fill: $c-primary;
+      fill: $c-prim;
 
     }
 
     .logo:hover & {
-      fill: $c-highlight;
+      fill: $c-sec;
     }
 
     @for $i from 1 through 16 {

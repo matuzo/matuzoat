@@ -1,0 +1,19 @@
+.page {
+  --intro-height: auto;
+  --intro-padding: #{$spacing 0};
+  --intro-alignment: center;
+
+  @media (min-height: $site-min-height) {
+    --intro-padding: 0;
+    --intro-height: calc(var(--vh, 1vh) * 50);
+  }
+
+  @include mq(m) {
+    --intro-padding: #{0.5rem 0 $spacing * 1.5};
+    --intro-height: auto;
+  }
+
+  @include mq(l) {
+    --intro-alignment: left;
+  }
+}

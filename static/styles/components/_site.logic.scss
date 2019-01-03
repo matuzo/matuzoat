@@ -1,0 +1,65 @@
+.site {
+  --site-padding: 0;
+
+  --header-justify: space-between;
+  --header-height: auto;
+  --header-separator-margin: #{$spacing};
+  --header-layout: flex;
+  --header-padding: #{($spacing + $site-corner) (($spacing / 2) + $site-corner) $spacing};
+  --header-text-align: left;
+
+  --body-layout: block;
+  --body-width: 64.4rem;
+  --body-gap: #{$spacing / 2 $spacing * 1.5};
+  
+  --separator-width: 100%;
+  --separator-display: block;
+
+  --content-padding: #{0 (($spacing / 2) + $site-corner) $spacing};
+  --font-size: 2rem;
+  
+  --logo-margin: 0 #{$spacing} 0 0;
+  --logo-width: 8rem;
+
+  @media (min-height: $site-min-height) {
+    --body-layout: flex;
+    --header-height: calc(var(--vh, 1vh) * 50);
+    --header-separator-margin: 0;
+  }
+
+  @include mq(xs) {
+    --header-justify: space-around;
+  }
+
+  @include mq(s) {
+    --logo-width: 10rem;
+    --header-separator-margin: #{$spacing};
+  }
+  
+  @include mq(m) {
+    --site-padding: #{$spacing / 3 0 0};
+    --header-height: auto;
+    --separator-display: none;
+  }
+  
+  @include mq(l) {
+    --font-size: 2.2rem;
+
+    --header-padding: #{($spacing + $site-corner) 0 $spacing ($spacing + $site-corner)};
+    --header-layout: block;
+    --header-text-align: right;  
+  
+    --body-layout: grid;
+    --body-width: 100%;
+  
+    --separator-width: 12rem;
+    --content-padding: #{$spacing ($spacing + $site-corner) $spacing 0};
+    --logo-margin: #{0 0 $spacing * 1.333 0};
+  }
+
+  @include mq(xl) {
+    --header-padding: #{($spacing * 2)  0 $spacing ($spacing * 2)};
+    --content-padding: #{($spacing * 2) - $site-corner ($spacing * 2) $spacing 0};
+    --body-gap: #{$spacing / 2 $spacing * 3};
+  }
+}

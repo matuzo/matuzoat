@@ -8,11 +8,12 @@
     --canvas-float: left;
   }
 
-  // TODO: Brekapount
+  @include mq(l) {
+    --intro-font-size: 2.3rem;
+  }
+
   font-size: 1.9rem;
   font-size: var(--intro-font-size);
-  // margin-bottom: $spacing * 2;
-  // font-size: 2.4rem;
 
   &__canvas {
     display: block;

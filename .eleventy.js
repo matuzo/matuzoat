@@ -43,7 +43,7 @@ module.exports = function(eleventyConfig) {
   eleventyConfig.addCollection("blog", function(collection) {
     return collection.getAllSorted().filter(function(item) {
       return item.inputPath.match(/^\.\/blog\//) !== null;
-    });
+    }).reverse();
   });
 
   eleventyConfig.addPassthroughCopy("static/img");

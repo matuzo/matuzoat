@@ -1,49 +1,45 @@
 .page {
-//   grid-area: content;
-//   max-height: 100%;
-//   overflow: auto;
-//   padding: 4rem 2rem 4rem 0;
-
-//   min-height: 100%;
-//   padding: 3.5rem 4rem;
   position: relative;
-
-  // &::before {
-  //   background: rgba(#333, 0.9);
-  //   content: "";
-  //   display: block;
-  //   width: 40%;
-  //   max-width: 50rem;
-  //   height: 1.8rem;
-  //   position: absolute;
-  //   right: 0;
-  //   top: 0;
-  // }
-
-  // & > * + * {
-  //   margin-top: 4rem;
-  // }
 
   &__title {
     margin: 0 0 $spacing / 2;
-    
-    // TODO: Brekapount
-    // position: relative;
-    // left: $spacing * -1;
   }
 
   &__intro {
     display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: var(--intro-padding);
+    text-align: var(--intro-alignment);
+    
+    .home & {
+      height: 50vh;
+      height: var(--intro-height);
+    }
+  }
+}
 
-flex-direction: column;
+.page-grid {
+  display: grid;
+  grid-template-columns: 1fr 40px;
+    grid-template-areas:
+    "heading heading"
+    "content subheading";
+  grid-gap: 1rem;
+  margin-right: 1rem;
 
-justify-content: center;
-text-align: center;
-padding-top: $spacing;
-padding-bottom: $spacing;
-    // margin: $spacing / 2 0 0;
-    // margin: $spacing / 2 0 $spacing * 1.5;
-    height: 50vh;
-    height: calc(var(--vh, 1vh) * 50);
+  &__heading {
+    grid-area: heading;
+    justify-self: flex-end;
+    margin: 0 !important;
+  }
+
+  &__subheading {
+    align-self: flex-start;
+    grid-area: subheading;
+  }
+
+  &__item {
+    grid-column-end: 2;
   }
 }
