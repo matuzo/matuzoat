@@ -1,2 +1,10 @@
+/android-chrome-192x192.png /static/favicon/android-chrome-192x192.png
+/android-chrome-384x384.png /static/favicon/android-chrome-384x384.png
+/apple-touch-icon.png /static/favicon/apple-touch-icon.png
+/browserconfig.xml /static/favicon/browserconfig.xml
+/favicon-16x16.png /static/favicon/favicon-16x16.png 
+/favicon-32x32.png /static/favicon/favicon-32x32.png
 /favicon.ico /static/favicon/favicon.ico
+/mstile-150x150.png /static/favicon/mstile-150x150.png 
+/safari-pinned-tab.svg /static/favicon/safari-pinned-tab.svg
 /site.webmanifest /static/favicon/site.webmanifest 
