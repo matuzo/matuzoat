@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html class="site no-js" lang="en">
+<html class="site no-js" lang="en" id="top">
   <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -10,7 +10,7 @@
     <link rel="stylesheet" href="/static/min/main.css" />
   </head>
 
-  <body class="site__body">
+  <body class="site__body {{ renderData.page_classes }}">
     <canvas class="site__square site__square--tl square-canvas js-sq-tl" hidden aria-hidden></canvas>
     <canvas class="site__square site__square--tr square-canvas js-sq-tr" hidden aria-hidden></canvas>
     <canvas class="site__square site__square--br square-canvas js-sq-br" hidden aria-hidden></canvas>
@@ -18,13 +18,7 @@
 
     {% include 'header.njk' %}
 
-    <main class="site__content page">
-      <h1 class="page__title page-title {{ renderData.title_classes }}">
-        <span class="page-title__text">
-          {{ title or metadata.title }}
-        </span>
-      </h1>
-
+    <main class="site__content page {{ renderData.content_classes }}">
       {{ content | safe }}
     </main>
 

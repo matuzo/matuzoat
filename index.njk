@@ -2,9 +2,12 @@
 layout: 'layouts/base.njk'
 renderData: 
   title: 'Manuel Matuzovic'
-  title_classes: 'visually-hidden'
   page_classes: 'home'
 ---
+<h1 class="visually-hidden">
+  {{ title or metadata.title }}
+</h1>
+
 <div class="page__intro page-intro">
   <div class="rich-text"> 
     <p>Hi! <span class="js-random-emoji">✌️</span> I'm a frontend developer from Vienna. I'm specialized in <strong>HTML</strong>, <strong>accessibility</strong>, and <strong>CSS layout and architecture</strong>.</p>
