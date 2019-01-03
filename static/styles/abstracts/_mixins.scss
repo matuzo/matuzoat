@@ -25,3 +25,14 @@
     @content;
   }
 }
+
+@mixin link-active {
+  &:hover,
+  &:focus {
+    @content;
+  }
+}
+
+@mixin underline($size, $color) {
+  box-shadow: 0 $size 0 0 $color;  
+}
