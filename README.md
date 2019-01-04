@@ -13,6 +13,7 @@ Open <http://localhost:8080/>
 
 ### High priority
 
+- [ ] Fix browser compatibility issues
 - [ ] Add focus styles  
 - [ ] Improve image file size  
 - [ ] Focus logo when click back to top link
@@ -21,6 +22,8 @@ Open <http://localhost:8080/>
 
 ### Mid priority
 
+- [ ] Add syntax highlighting
+- [ ] Improve blog post styling  
 - [ ] Social media meta tags  
 - [ ] Add lazyloading  
 - [ ] Add RSS feed  
