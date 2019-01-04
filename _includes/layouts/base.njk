@@ -16,7 +16,7 @@
     <meta name="msapplication-TileColor" content="#efefef">
     <meta name="theme-color" content="#36b1bf">
 
-    <link rel="stylesheet" href="{{ '/static/min/main.min.css' }}" />
+    <link rel="stylesheet" href="{{ '/static/min/main.min.css' | url | cacheBuster }}" />
   </head>
 
   <body class="site__body {{ renderData.page_classes }}">
@@ -33,6 +33,6 @@
 
     {% include 'footer.njk' %}
 
-    <script src="{{ '/static/min/main.min.js' }}"></script>
+    <script src="{{ '/static/min/main.min.js' | url | cacheBuster }}"></script>
   </body>
 </html>

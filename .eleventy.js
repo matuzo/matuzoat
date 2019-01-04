@@ -89,11 +89,17 @@ module.exports = function(eleventyConfig) {
     return DateTime.fromJSDate(dateObj).toFormat("yyyy-MM-dd");
   });
 
-    // Date formatting (human readable)
-    eleventyConfig.addFilter("stringify", dateObj => {
-      return dateObj + "";
-    });
+  // Date formatting (human readable)
+  eleventyConfig.addFilter("stringify", dateObj => {
+    return dateObj + "";
+  });
 
+  // Universal filters (Adds to Liquid, Nunjucks, and Handlebars)
+  eleventyConfig.addFilter("cacheBuster", function(value) {
+    let milliseconds = Date.now();
+    return value + "?rev=" + milliseconds;
+  });
+  
   return {
     templateFormats: [
       "md",
@@ -119,3 +125,4 @@ module.exports = function(eleventyConfig) {
     }
   };
 };
+
