@@ -1,6 +1,5 @@
 .site {
   padding: 2rem;
-  min-height: 100%;
 
   &__body {
     font-size: 1.8rem;
@@ -36,6 +35,10 @@
     @supports (font-size: var(--test)) {
       display: block;
     }
+  }
+
+  &__square {
+    position: absolute;
   }
 
   &__footer {
