@@ -11,8 +11,11 @@
   $item-shadow: 0 0 4px -1px rgba(0,0,0,0.1);
   $link: '';
 
-  &__item {
+  align-items: flex-start;
+  display: flex;
+  flex-direction: column;
 
+  &__item {
     display: grid;
     justify-items: start;
     grid-gap: 0.5rem;
