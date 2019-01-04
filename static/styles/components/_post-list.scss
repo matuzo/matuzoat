@@ -14,6 +14,7 @@
   align-items: flex-start;
   display: flex;
   flex-direction: column;
+  margin-bottom: $spacing;
 
   &__item {
     display: grid;
