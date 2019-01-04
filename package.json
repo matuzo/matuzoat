@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "start": "eleventy --serve | webpack --config webpack.common.js --watch",
-    "build": "webpack --config webpack.prod.js"
+    "build": "eleventy | webpack --config webpack.prod.js"
   },
   "repository": {
     "type": "git",
