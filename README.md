@@ -13,10 +13,11 @@ Open <http://localhost:8080/>
 
 ### High priority
 
-- [ ] Add favicon  
 - [ ] Add focus styles  
 - [ ] Improve image file size  
 - [ ] Focus logo when click back to top link
+- [x] Minify assets when deploying  
+- [x] Add favicon  
 
 ### Mid priority
 
