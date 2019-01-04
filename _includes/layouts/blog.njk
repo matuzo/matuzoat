@@ -2,7 +2,12 @@
 layout: layouts/base.njk
 ---
 
-{{ layoutContent | safe }}
+<div class="blog__content rich-text">
+  <h1 class="h1">{{ title }}</h1>
 
-{% set postslist = collections.posts %}
-{# {% include "components/postslist.njk" %} #}
+  <p>
+    posted on <time datetime="{{ date | machineDate }}">{{ date | readableDate }}</a>
+  </p>
+
+  {{ content | safe }}
+</div>

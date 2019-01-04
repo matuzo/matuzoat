@@ -1,6 +1,6 @@
 .post-list {
   @include list-reset;
-  @include box-list-theme('undefined', $c-highlight, #000000);
+  @include box-list-theme('matuzo', $c-highlight, $c-prim-dark);
   @include box-list-theme('a-list-apart', #FFFFFF, #000000);
   @include box-list-theme('smashing-magazine ', #d33a2c, #FFFFFF);
   @include box-list-theme('css-tricks ', rgb(16, 14, 23), rgb(255, 138, 0), rgb(218, 27, 95));
@@ -25,7 +25,9 @@
   }
 
   &__image {
+    align-items: center;
     box-shadow: $item-shadow;
+    display: flex;
     height: $image-size;
     padding: 0.5rem;
     width: $image-size;

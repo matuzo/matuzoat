@@ -72,6 +72,7 @@
 
   &__content {
     padding: var(--content-padding);
+    min-width: 0;
   }
 
   &__footer {
