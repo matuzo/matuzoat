@@ -25,7 +25,8 @@
   }
 
   &__square {
-    position: fixed;
+    --square-positioning: fixed;
+    position: var(--square-positioning);
     z-index: $z-site;
 
     &--tl {
