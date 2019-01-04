@@ -8,13 +8,17 @@
 @import 'base/base';
 
 @import 'components/rich-text';
-@import 'components/site.logic';
-@import 'components/site';
-@import 'components/headings';
+@import 'components/site/site.logic';
+@import 'components/site/site.fallback';
+@import 'components/site/site';
+@import 'components/headings/headings.fallback';
+@import 'components/headings/headings';
 @import 'components/button';
 @import 'components/footer';
 
-@import 'components/nav-main';
+@import 'components/nav-main/nav-main.logic';
+@import 'components/nav-main/nav-main.fallback';
+@import 'components/nav-main/nav-main';
 @import 'components/logo';
 
 @import 'components/page/page.logic';
@@ -24,6 +28,9 @@
 
 @import 'components/gig';
 @import 'components/square-canvas';
-@import 'components/post-list.logic';
-@import 'components/post-list';
+
+@import 'components/post-list/post-list.logic';
+@import 'components/post-list/post-list.fallback';
+@import 'components/post-list/post-list';
+
 @import 'components/blog';

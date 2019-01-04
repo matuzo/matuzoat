@@ -6,13 +6,13 @@
   &__heading-inner--#{$theme} {
     @if $color2 != '' {
       @supports (-webkit-text-fill-color: rgba(0, 0, 0, 0)) {
-        background: linear-gradient(to right,$color,$color2);
+        background: linear-gradient(to right, $color, $color2);
         -webkit-background-clip: text;
         -webkit-text-fill-color: rgba(0, 0, 0, 0);
       }
     }
   }
-  
+
   &__link--#{$theme} {
     @include link {
       color: $color;
@@ -29,4 +29,9 @@
   }
 }
 
+$post-list-image-size: 3.2rem;
+$post-list-item-shadow: 0 0 4px -1px rgba(0, 0, 0, 0.1);
 
+.post-list {
+  --scaling: scale(1.1);
+}

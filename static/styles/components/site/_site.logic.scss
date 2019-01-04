@@ -1,12 +1,14 @@
 .site {
   --site-padding: 0;
 
+  --header-align: center;
   --header-justify: space-between;
   --header-height: auto;
   --header-separator-margin: #{$spacing};
   --header-layout: flex;
   --header-padding: #{($spacing + $site-corner) (($spacing / 2) + $site-corner) $spacing};
   --header-text-align: left;
+  --header-margin: 0;
 
   --body-layout: block;
   --body-width: 64.4rem;
@@ -20,6 +22,8 @@
   
   --logo-margin: 0 #{$spacing} 0 0;
   --logo-width: 8rem;
+
+  --footer-padding: #{ 0 (($spacing / 2) + $site-corner + 1rem) 1rem (($spacing / 2) + $site-corner + 3rem) };
 
   @media (min-height: $site-min-height) {
     --body-layout: flex;

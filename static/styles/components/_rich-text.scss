@@ -1,7 +1,10 @@
 .rich-text {
   p {
     margin-top: 0;
-    max-width: 60ch;
+
+    @supports (font-size: var(--test)) {
+      max-width: 60ch;
+    }
   }
 
   * + * {

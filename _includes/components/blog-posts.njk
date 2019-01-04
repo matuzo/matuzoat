@@ -19,7 +19,7 @@
     {% for pub in collections.publications %}
       {% if post.data.publication == pub.data.title %}
         <div class="post-list__image post-list__image--{{ post.data.publication | stringify | slug }}">
-          <img src="{{ pub.data.logo }}" alt="{{ pub.data.title }}" />
+          <img src="{{ pub.data.logo }}" alt="{{ pub.data.title }}" width="32" />
         </div>
       {% endif %}
     {% endfor %} 

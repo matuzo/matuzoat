@@ -11,9 +11,8 @@
     justify-content: center;
     padding: var(--intro-padding);
     text-align: var(--intro-alignment);
-    
+
     .home & {
-      height: 50vh;
       height: var(--intro-height);
     }
   }
@@ -22,9 +21,9 @@
 .page-grid {
   display: grid;
   grid-template-columns: 1fr 40px;
-    grid-template-areas:
-    "heading heading"
-    "content subheading";
+  grid-template-areas:
+    'heading heading'
+    'content subheading';
   grid-gap: 1rem;
   margin-right: 1rem;
 

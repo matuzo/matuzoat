@@ -1,0 +1,9 @@
+.nav-main {
+  --item-spacing: 0rem 0 1.2rem;
+  --fz: 2rem;
+
+  @include mq(s) {
+    --item-spacing: 0.2rem 0 2.2rem;
+    --fz: 2.2rem;
+  }
+}

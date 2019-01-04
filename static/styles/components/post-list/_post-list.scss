@@ -1,15 +1,16 @@
 .post-list {
   @include list-reset;
   @include box-list-theme('matuzo', $c-highlight, $c-prim-dark);
-  @include box-list-theme('a-list-apart', #FFFFFF, #000000);
-  @include box-list-theme('smashing-magazine ', #d33a2c, #FFFFFF);
-  @include box-list-theme('css-tricks ', rgb(16, 14, 23), rgb(255, 138, 0), rgb(218, 27, 95));
-  @include box-list-theme('medium ', rgb(41, 41, 41), #FFFFFF);
-  @include box-list-theme('24a11y ', rgb(2, 117, 216), #FFFFFF);
-
-  $image-size: 3.2rem;
-  $item-shadow: 0 0 4px -1px rgba(0,0,0,0.1);
-  $link: '';
+  @include box-list-theme('a-list-apart', #ffffff, #000000);
+  @include box-list-theme('smashing-magazine ', #d33a2c, #ffffff);
+  @include box-list-theme(
+    'css-tricks ',
+    rgb(16, 14, 23),
+    rgb(255, 138, 0),
+    rgb(218, 27, 95)
+  );
+  @include box-list-theme('medium ', rgb(41, 41, 41), #ffffff);
+  @include box-list-theme('24a11y ', rgb(2, 117, 216), #ffffff);
 
   align-items: flex-start;
   display: flex;
@@ -20,18 +21,18 @@
     display: grid;
     justify-items: start;
     grid-gap: 0.5rem;
-    grid-template-columns: $image-size 1fr;
-    margin-bottom: $spacing / 1.5;    
+    grid-template-columns: $post-list-image-size 1fr;
+    margin-bottom: $spacing / 1.5;
     position: relative;
   }
 
   &__image {
     align-items: center;
-    box-shadow: $item-shadow;
+    box-shadow: $post-list-item-shadow;
     display: flex;
-    height: $image-size;
+    height: $post-list-image-size;
     padding: 0.5rem;
-    width: $image-size;
+    width: $post-list-image-size;
 
     img {
       display: block;
@@ -39,15 +40,17 @@
     }
   }
 
-  &__link {
-    $link: &;
+  $post-list-link: '';
 
-    box-shadow: $item-shadow;
+  &__link {
+    $post-list-link: &;
+
+    box-shadow: $post-list-item-shadow;
     display: block;
     grid-column: 1 / -1;
 
     &::before {
-      content: "";
+      content: '';
       left: 0;
       height: 100%;
       position: absolute;
@@ -67,16 +70,16 @@
     transform-origin: left center;
     transition: all 0.3s;
 
-    #{$link}:hover &,
-    #{$link}:focus & {
+    #{$post-list-link}:hover &,
+    #{$post-list-link}:focus & {
       position: static;
-      transform: scale(1.1);
+      transform: var(--scaling);
     }
   }
 
   &__date {
     align-items: center;
-    box-shadow: $item-shadow;
+    box-shadow: $post-list-item-shadow;
     font-size: 1.3rem;
     font-weight: bold;
     display: flex;

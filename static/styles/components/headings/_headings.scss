@@ -10,7 +10,7 @@
 
   &::after,
   &::before {
-    content: "";
+    content: '';
     display: block;
     width: $size;
     height: $size;
@@ -33,7 +33,6 @@
   }
 }
 
-
 .h2 {
   align-items: flex-end;
   display: flex;
@@ -43,12 +42,10 @@
 
   $colors: ($c-sec, $c-highlight, $c-prim);
 
-  @debug nth($colors, random(length($colors)));
-
   &::before {
     background: nth($colors, random(length($colors)));
-    content: "";
-    display: block; 
+    content: '';
+    display: block;
     height: $spacing / 2.5;
     margin-right: $spacing / 4;
     width: $spacing / 2.5;
