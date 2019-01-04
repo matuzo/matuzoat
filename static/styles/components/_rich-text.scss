@@ -34,4 +34,8 @@
     border: 1rem solid $c-highlight;
     max-width: 80%;
   }
+
+  pre {
+    overflow: auto;
+  }
 }
