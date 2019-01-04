@@ -1,45 +1,50 @@
 const path = require('path');
-const ExtractTextPlugin = require('extract-text-webpack-plugin');
-const WebpackCleanupPlugin = require('webpack-cleanup-plugin');
-
-const extractSass = new ExtractTextPlugin({
-  filename: '[name].css',
-  // filename: '[name].[contenthash].css',
-  allChunks: true
-});
+const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 
 module.exports = {
   entry: ['./static/scripts/index.js', './static/styles/styles.scss'],
   output: {
-    filename: '[name].js',
-    // filename: '[name].[chunkhash].js',
-    path: path.resolve(__dirname, 'static/min')
+    path: path.resolve(__dirname, 'static/min'),
+    filename: '[name].min.js',
   },
+  plugins: [
+    new MiniCssExtractPlugin({
+      filename: '[name].min.css',
+      chunkFilename: '[id].css',
+      path: path.resolve(__dirname, 'static/min'),
+    })
+  ],
+  devtool: 'inline-source-map',
   module: {
     rules: [
-      // { test: /.(svg)(\?[a-z0-9=\.]+)?$/, loader: 'file-loader' },
       {
         test: /\.js$/,
         exclude: /(node_modules)/,
         use: {
           loader: 'babel-loader',
           options: {
-            presets: ['@babel/preset-env']
+            presets: ['@babel/preset-env'],
           }
         }
       },
-    //   {
-    //     test: /\.(woff(2)?|ttf)(\?v=\d+\.\d+\.\d+)?$/,
-    //     use: [{
-    //         loader: 'file-loader',
-    //         options: {
-    //             name: '[name].[ext]',
-    //             outputPath: 'fonts/'
-    //         }
-    //     }]
-    // }
+      {
+        test: /\.(sa|sc|c)ss$/,
+        use: [
+          MiniCssExtractPlugin.loader,
+          {
+            loader: 'css-loader',
+            options: {
+              sourceMap: true
+            }
+          },
+          {
+            loader: 'sass-loader',
+            options: {
+              sourceMap: true
+            }
+          }
+        ]
+      }
     ]
-  },
-  plugins: [extractSass, new WebpackCleanupPlugin()]
-  // plugins: [new WebpackCleanupPlugin()]
+  }
 };

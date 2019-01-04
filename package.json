@@ -4,7 +4,7 @@
   "description": "* <http://blog.klipse.tech/javascript/2016/06/20/blog-javascript.html> * <http://nickersoft.github.io/push.js/>",
   "main": "index.js",
   "scripts": {
-    "start": "eleventy --serve | webpack --config webpack.dev.js --watch",
+    "start": "eleventy --serve | webpack --config webpack.common.js --watch",
     "build": "webpack --config webpack.prod.js"
   },
   "repository": {
@@ -23,12 +23,13 @@
     "@babel/preset-env": "^7.2.0",
     "babel-loader": "^8.0.4",
     "css-loader": "^1.0.1",
-    "extract-text-webpack-plugin": "^4.0.0-beta.0",
+    "mini-css-extract-plugin": "^0.5.0",
     "node-sass": "^4.10.0",
+    "optimize-css-assets-webpack-plugin": "^5.0.1",
     "sass-loader": "^7.1.0",
     "style-loader": "^0.23.1",
+    "uglifyjs-webpack-plugin": "^2.1.1",
     "webpack": "^4.27.1",
-    "webpack-cleanup-plugin": "^0.5.1",
     "webpack-cli": "^3.1.2",
     "webpack-merge": "^4.1.4"
   },
