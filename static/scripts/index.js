@@ -77,6 +77,9 @@ if (document.querySelector('.js-random-emoji')) {
 if (document.querySelector('.js-scroll-top')) {
   document.querySelector('.js-scroll-top').addEventListener('click', e => {
     e.preventDefault();
+
+    document.querySelector('.js-logo').focus({ preventScroll: true });
+    
     document.getElementById('top').scrollIntoView({
       behavior: 'smooth',
       block: 'center'
