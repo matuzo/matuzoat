@@ -30,7 +30,7 @@ function getLinks() {
 
 function prefetchNav() {
   // don't prefetch if 2g connection or data-saver enabled
-  if (navigator.connection.effectiveType.includes('2g') || navigator.connection.saveData) {
+  if (navigator.connection && navigator.connection.effectiveType.includes('2g') || navigator.connection.saveData) {
     return;
   }
 
