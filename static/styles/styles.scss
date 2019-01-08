@@ -12,6 +12,7 @@
 @import 'components/site/site.logic';
 @import 'components/site/site.fallback';
 @import 'components/site/site';
+@import 'components/headings/headings.logic';
 @import 'components/headings/headings.fallback';
 @import 'components/headings/headings';
 @import 'components/button';
@@ -29,6 +30,7 @@
 
 @import 'components/gig';
 @import 'components/square-canvas';
+@import 'components/image-list';
 
 @import 'components/post-list/post-list.logic';
 @import 'components/post-list/post-list.fallback';

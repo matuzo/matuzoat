@@ -1,0 +1,28 @@
+---
+layout: layouts/page.njk
+title: TIL (Today I learned)
+description: My personal blog. Nowadays I focus a lot on accessibility but I also write about CSS layout, architecure, and performance.
+tags:
+  - nav
+navtitle: TIL
+permalink: /TIL/index.html
+date: 1987-01-01
+---
+
+<ul class="image-list">
+{% for til in collections.til|reverse %}
+  <li class="image-list__item">
+    <h2 class="image-list__title">
+      <strong class="image-list__title-inner">TIL #{{ loop.index }}</strong><br />{{ til.data.title }}
+    </h2>
+    
+    {% if til.data.image %}
+      {% if til.data.link %}
+        <a href="{{ til.data.link }}" rel="noopener" class="image-list__link">
+          <img class="image-list__image" src="{{ til.data.image }}" alt="" />
+        </a>
+      {% endif %}
+    {% endif %}
+  </li>
+{% endfor %}
+</ul>

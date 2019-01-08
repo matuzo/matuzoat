@@ -28,6 +28,12 @@ module.exports = function(eleventyConfig) {
     });
   });
 
+  eleventyConfig.addCollection("til", function(collection) {
+    return collection.getAllSorted().filter(function(item) {
+      return item.inputPath.match(/^\.\/til\//) !== null;
+    });
+  });
+
   eleventyConfig.addCollection("bookmarks", function(collection) {
     return collection.getAllSorted().filter(function(item) {
       return item.inputPath.match(/^\.\/bookmarks\//) !== null;
@@ -49,6 +55,7 @@ module.exports = function(eleventyConfig) {
   eleventyConfig.addPassthroughCopy("static/img");
   eleventyConfig.addPassthroughCopy("static/min");
   eleventyConfig.addPassthroughCopy("static/favicon");
+  eleventyConfig.addPassthroughCopy("static/fonts");
   eleventyConfig.addPassthroughCopy("admin");
   eleventyConfig.addPassthroughCopy("_redirects");
 
