@@ -13,9 +13,10 @@ Open <http://localhost:8080/>
 
 ### High priority
 
-- [x] Fix browser compatibility issues
 - [ ] Add focus styles  
+- [ ] Add skip links  
 - [ ] Improve image file size  
+- [x] Fix browser compatibility issues
 - [x] Focus logo when click back to top link
 - [x] Minify assets when deploying  
 - [x] Add favicon  
