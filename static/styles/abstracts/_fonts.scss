@@ -1,0 +1,35 @@
+@font-face {
+  font-family: "Inria Sans";
+  src: url('../fonts/inriasans-regular-webfont.woff') format('woff'),
+       url('../fonts/inriasans-regular-webfont.woff2') format('woff2');
+  font-weight: 400;
+  font-style: normal;
+  font-display: fallback;
+}
+
+@font-face {
+  font-family: "Inria Sans";
+  src: url('../fonts/inriasans-italic-webfont.woff') format('woff'),
+       url('../fonts/inriasans-italic-webfont.woff2') format('woff2');
+  font-weight: 400;
+  font-style: italic;
+  font-display: fallback;
+}
+
+@font-face {
+  font-family: "Inria Sans";
+  src: url('../fonts/inriasans-bold-webfont.woff') format('woff'),
+       url('../fonts/inriasans-bold-webfont.woff2') format('woff2');
+  font-weight: 600;
+  font-style: normal;
+  font-display: fallback;
+}
+
+@font-face {
+  font-family: "Inria Sans";
+  src: url('../fonts/inriasans-bolditalic-webfont.woff') format('woff'),
+       url('../fonts/inriasans-bolditalic-webfont.woff2') format('woff2');
+  font-weight: 600;
+  font-style: italic;
+  font-display: fallback;
+}
