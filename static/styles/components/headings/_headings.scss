@@ -1,9 +1,9 @@
 .h1 {
   display: inline-block;
-  font-size: 2.6rem;
+  font-size: var(--font-size);
   line-height: 1.4;
   margin: 0 0 $spacing;
-  padding: $spacing / 4 $spacing / 2;
+  padding: var(--padding);
   position: relative;
 
   $size: $spacing / 3;
@@ -19,10 +19,11 @@
   }
 
   &::before {
-    border-color: $c-sec;
-    border-width: 0 0 $size $size;
     left: 0;
     bottom: 0;
+    width: $size * 2;
+    border: none;
+    background: rgb(242, 60, 80);
   }
 
   &::after {
@@ -46,6 +47,7 @@
     background: nth($colors, random(length($colors)));
     content: '';
     display: block;
+    flex-shrink: 0;
     height: $spacing / 2.5;
     margin-right: $spacing / 4;
     width: $spacing / 2.5;

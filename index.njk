@@ -16,18 +16,16 @@ renderData:
   </div>
 </div>
 
-<div class="page-block">
-  <h2 class="page-block__heading h1">
-    Recent blog posts
-  </h2>
-  
-  {% set max = 5 %}
-  {% include 'components/blog-posts.njk' %}
+<h2 class="h1">
+  Recent blog posts
+</h2>
 
-  {% set text = "More blog posts" %}
-  {% set link = "/blog" %}
-  {% include 'components/button.njk' %}
-</div>
+{% set max = 5 %}
+{% include 'components/blog-posts.njk' %}
+
+{% set text = "More blog posts" %}
+{% set link = "/blog" %}
+{% include 'components/button.njk' %}
 
 <script>
   let vh = window.innerHeight * 0.01;
