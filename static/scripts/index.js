@@ -86,3 +86,52 @@ if (document.querySelector('.js-scroll-top')) {
  */
 
 prefetchNav();
+
+history.pushState({ theme: "home"}, location.pathname, location.pathname);
+
+if (document.querySelector('.js-post-list')) {
+  document.querySelector('.js-post-list').addEventListener('click', (e) => {
+    e.preventDefault();
+
+    if (e.target.dataset.post) {
+      document.documentElement.setAttribute('data-theme', e.target.dataset.post);
+      history.pushState({ theme: e.target.dataset.post }, e.target.href, e.target.href);
+
+      loadPage(e.target.href);
+    }
+  });
+}
+
+window.onpopstate = function(e) {
+  if (e.state) {
+    document.documentElement.setAttribute('data-theme', e.state.theme);
+    loadPage(location.pathname);
+  }
+};
+
+
+function loadPage(url) {
+  const main = document.querySelector('.js-site-content');
+  main.innerHTML = '';
+  main.classList.add('site__content--hidden');
+
+  var request = new XMLHttpRequest();
+
+  request.open('GET', url, true);
+
+  request.onload = function() {
+    const container = document.createElement('div');
+
+    if (this.status === 200) {
+      container.innerHTML = this.response;
+      main.innerHTML = container.querySelector('.js-site-content').innerHTML;
+      main.classList.remove('site__content--hidden');
+    }
+  };
+
+  request.onerror = function() {
+    page_content.innerHTML = 'For some reason I couldn\'t connect to the server, please try later again.';
+  };
+
+  request.send();
+}

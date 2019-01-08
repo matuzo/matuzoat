@@ -1,4 +1,4 @@
-<ul class="post-list">
+<ul class="post-list js-post-list">
 {% for post in collections.blog.slice(0, max) %}
 
   {% set url = post.url %}
@@ -8,7 +8,7 @@
   {% endif %}
 
   <li class="post-list__item post-list__item--{{ post.data.publication | stringify | slug }}">
-    <a href="{{ url }}" class="post-list__link post-list__link--{{ post.data.publication | stringify | slug }}">
+    <a href="{{ url }}" class="post-list__link post-list__link--{{ post.data.publication | stringify | slug }}" {% if not post.data.url %}data-post="{{ post.data.title | slug }}"{% endif %}>
       <h2 class="post-list__heading post-list__heading--{{ post.data.publication | stringify | slug }}">
         <span class="post-list__heading-inner post-list__heading-inner--{{ post.data.publication | stringify | slug }}">
           {{ post.data.title }}

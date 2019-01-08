@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html class="site no-js" lang="en" id="top">
+<html class="site no-js js-site" lang="en" id="top" {% if title %}data-theme="{{ title  | slug }}"{% endif %}>
   <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -27,7 +27,7 @@
 
     {% include 'header.njk' %}
 
-    <main class="site__content page {{ renderData.content_classes }}">
+    <main class="site__content page js-site-content {{ renderData.content_classes }}">
       {{ content | safe }}
     </main>
 

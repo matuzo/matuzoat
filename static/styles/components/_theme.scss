@@ -1,0 +1,15 @@
+@mixin theme($theme) {
+  [data-theme="#{$theme}"] {
+    @content;
+  }
+}
+
+@include theme('hello-world!') {
+  body {
+    background: $c-highlight-light;
+  }
+
+  .logo__letter {
+    fill: $c-light
+  }
+}

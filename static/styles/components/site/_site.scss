@@ -76,6 +76,11 @@
   &__content {
     padding: var(--content-padding);
     min-width: 0;
+    transition: opacity 1s;
+
+    &--hidden {
+      opacity: 0;
+    }
   }
 
   &__footer {
