@@ -70,6 +70,11 @@ collections:
       - { label: 'Title', name: 'title', widget: 'string' }
       - { label: 'Link', name: 'link', widget: 'string' }
       - { label: 'Date', name: 'date', widget: 'date',  format: "YYYY-MM-DD" }
+      - { label: 'Category', 
+          name: 'link',
+          widget: 'select',
+          options: ["UX", "Accessibility", "Development", "Design", "Progressive Enhancement"]
+        }
   - name: 'Publications' # Used in routes, e.g., /admin/collections/blog
     label: 'Publications' # Used in the UI
     folder: 'publications' # The path to the folder where the documents are stored
