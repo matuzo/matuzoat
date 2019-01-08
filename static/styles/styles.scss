@@ -36,3 +36,19 @@
 @import 'components/post-list/post-list';
 
 @import 'components/blog';
+
+// Temporary
+
+.alpha {
+  background: $c-prim;
+  color: $c-light;
+  font-size: 1.7rem;
+  font-weight: bold;
+  letter-spacing: 2px;
+  padding: 0.5rem 1rem;
+  position: fixed;
+  right: 2rem;
+  top: 0rem;
+  transform: rotate(20deg);
+  z-index: 1000;
+}
