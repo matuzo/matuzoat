@@ -1,6 +1,18 @@
 import Squares from './squares';
 import prefetchNav from './prefetch-nav';
 
+if (!Element.prototype.closest) {
+  Element.prototype.closest = function(s) {
+    var el = this;
+    if (!document.documentElement.contains(el)) return null;
+    do {
+      if (el.matches(s)) return el;
+      el = el.parentElement || el.parentNode;
+    } while (el !== null && el.nodeType === 1);
+    return null;
+  };
+}
+
 const home_tl = new Squares({
   canvas: '.js-sq-tl',
   num_x: 1,
@@ -93,11 +105,13 @@ if (document.querySelector('.js-post-list')) {
   document.querySelector('.js-post-list').addEventListener('click', (e) => {
     e.preventDefault();
 
-    if (e.target.dataset.post) {
-      document.documentElement.setAttribute('data-theme', e.target.dataset.post);
-      history.pushState({ theme: e.target.dataset.post }, e.target.href, e.target.href);
+    const link = e.target.closest('a');
 
-      loadPage(e.target.href);
+    if (link.dataset.post) {
+      document.documentElement.setAttribute('data-theme', link.dataset.post);
+      history.pushState({ theme: link.dataset.post }, link.href, link.href);
+
+      loadPage(link.href);
     }
   });
 }

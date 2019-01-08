@@ -30,8 +30,10 @@ function getLinks() {
 
 function prefetchNav() {
   // don't prefetch if 2g connection or data-saver enabled
-  if (navigator.connection && navigator.connection.effectiveType.includes('2g') || navigator.connection.saveData) {
-    return;
+  if (navigator.connection) {
+    if (navigator.connection.effectiveType.includes('2g') || navigator.connection.saveData) {
+      return;
+    }
   }
 
   // start as soon as the browser isn't busy anymore
