@@ -5,10 +5,10 @@ media_folder: 'static/img/uploads'
 
 media_library:
   name: cloudinary
+  output_filename_only: true 
   config:
     cloud_name: dp3mem7or
     api_key: 343862595175546
-    output_filename_only: true 
 
 collections:
   - name: 'talks' # Used in routes, e.g., /admin/collections/blog
