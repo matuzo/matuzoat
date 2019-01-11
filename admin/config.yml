@@ -101,7 +101,7 @@ collections:
       - { label: 'Date', name: 'date', widget: 'date' }
       - { label: 'Featured image', name: 'image', widget: 'image', required: false }
       - { label: 'Teaser', name: 'teaser', widget: 'markdown', required: false }
-      - { label: 'Text', name: 'body', widget: 'markdown', required: false, media_library: { output_filename_only: false } }
+      - { label: 'Text', name: 'body', widget: 'markdown', required: false }
       - { label: 'Tags', name: 'tags', widget: 'list', default: ['css'] }
       - { label: 'Publication', name: 'publication', widget: 'relation',  collection: "Publications",  searchFields: ["title"], valueField: "title", required: false }
       - { label: 'External link', name: 'url', widget: 'string', required: false }
