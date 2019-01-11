@@ -105,7 +105,7 @@ module.exports = function(eleventyConfig) {
   eleventyConfig.addFilter("cacheBuster", function(value) {
     let milliseconds = Date.now();
     return value + "?rev=" + milliseconds;
-  });
+  }); 
   
   return {
     templateFormats: [

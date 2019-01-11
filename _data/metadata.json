@@ -6,5 +6,6 @@
     "email": "manuel@matuzo.at",
     "github": "https://github.com/matuzo",
     "twitter": "https://twitter.com/mmatuzo"
-  }
+  },
+  "cloudinary": "https://res.cloudinary.com/dp3mem7or/image/upload"
 }

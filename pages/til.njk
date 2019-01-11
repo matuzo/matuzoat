@@ -18,7 +18,7 @@ date: 1987-01-01
     {% if til.data.image %}
       {% if til.data.link %}
         <a href="{{ til.data.link }}" rel="noopener" class="image-list__link">
-          <img src="https://res.cloudinary.com/dp3mem7or/image/upload/w_440/{{til.data.image}}" alt="" class="image-list__image"/>
+          <img src="{{ metadata.cloudinary }}/w_440/{{til.data.image}}" alt="" class="image-list__image"/>
         </a>
       {% endif %}
     {% endif %}
