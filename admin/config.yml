@@ -108,11 +108,11 @@ collections:
     create: true # Allow users to create new documents in this collection
     slug: '{{slug}}' # Filename template, e.g., YYYY-MM-DD-title.md
     media_library:
-    name: cloudinary
-    config:
-      cloud_name: dp3mem7or
-      api_key: 343862595175546
-      output_filename_only: true 
+      name: cloudinary
+      config:
+        cloud_name: dp3mem7or
+        api_key: 343862595175546
+        output_filename_only: true 
     fields: # The fields for each document, usually in front matter
       - { label: 'Title', name: 'title', widget: 'string' }
       - { label: 'Link', name: 'link', widget: 'string', required: false }
