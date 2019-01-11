@@ -5,6 +5,7 @@ media_folder: 'static/img/uploads'
 
 media_library:
   name: cloudinary
+  output_filename_only: true
   config:
     cloud_name: dp3mem7or
     api_key: 343862595175546
@@ -115,3 +116,4 @@ collections:
       - { label: 'Title', name: 'title', widget: 'string' }
       - { label: 'Link', name: 'link', widget: 'string', required: false }
       - { label: 'Image', name: 'image', widget: 'image', required: false, media_library: { output_filename_only: true } }
+      - { label: 'Image2', name: 'image2', widget: 'image', required: false, media_library: { output_filename_only: false } }
