@@ -1,7 +1,6 @@
 ---
 title: A List Apart
-logo: /static/img/uploads/icon_navigation-laurel.svg
+logo: publications/alistaprt.svg
 url: 'https://alistapart.com'
-color: '#FFFFFF'
 ---
 
