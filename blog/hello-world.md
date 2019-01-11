@@ -21,13 +21,11 @@ archive: false
 
 It was online for about 2 years. After that, the only thing I did was to change the under construction graphic periodically. As it turns out, I'm really bad at getting things done.
 
-![](articles/matuzoat2014.png)
-
-![My first personal website. A all-green table-based layout.](/static/img/uploads/screen-shot-2019-01-04-at-06.59.27.png)
+![My first personal website. A all-green table-based layout.](https://res.cloudinary.com/dp3mem7or/image/upload/w_700/articles/matuzoat2022.png)
 
 Fast forward 10 years, I was at my second conference ever, at Smashing Conf Freiburg 2014. I was so inspired by the great talks I had seen, that I decided to set up a WordPress-based blog in one of the breaks to share my notes. The theme was slow and the design was boring but I had a website, which was great because I had the chance to share my knowledge.
 
-![My second personal site. A web development blog in German.](/static/img/uploads/screen-shot-2019-01-04-at-07.16.18.png)
+![My second personal site. A web development blog in German.](https://res.cloudinary.com/dp3mem7or/image/upload/w_700/articles/matuzoat2014.png)
 
 Again, I lost interest after 2 years because I didn't like the design, the site was slow and there where cooler platforms to publish your articles at. I moved to [Medium](https://medium.com/@matuzo/).
 
