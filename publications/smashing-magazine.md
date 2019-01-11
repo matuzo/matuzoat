@@ -1,6 +1,6 @@
 ---
 title: Smashing Magazine
-logo: smashing.png
+logo: publications/smashing.png
 url: 'https://www.smashingmagazine.com/'
 ---
 
