@@ -19,7 +19,9 @@ archive: false
 </font>
 ```
 
-It was online for about 2 years. After that, the only thing I did was to change the under construction graphic periodically. As it turns out, I'm really bad at getting shit done.
+It was online for about 2 years. After that, the only thing I did was to change the under construction graphic periodically. As it turns out, I'm really bad at getting things done.
+
+![](articles/matuzoat2014.png)
 
 ![My first personal website. A all-green table-based layout.](/static/img/uploads/screen-shot-2019-01-04-at-06.59.27.png)
 
