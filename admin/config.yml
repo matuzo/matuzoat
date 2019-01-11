@@ -121,6 +121,6 @@ collections:
         media_library:
           name: cloudinary
           config:
-            width: "400px"
+            w: "400px"
             cloud_name: dp3mem7or
             api_key: 343862595175546
