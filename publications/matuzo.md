@@ -1,5 +1,5 @@
 ---
 title: Matuzo
-logo: /static/img/uploads/logo_matuzo.svg
+logo: publications/logo_matuzo.svg
 ---
 
