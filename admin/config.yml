@@ -116,5 +116,6 @@ collections:
       - { label: 'Link', name: 'link', widget: 'string', required: false }
       - { label: 'Image', name: 'image', widget: 'image', required: false, media_library: { output_filename_only: true } }
       - { label: 'Image2', name: 'image2', widget: 'image', required: false, media_library: { name: cloudinary, output_filename_only: true, config: { cloud_name: dp3mem7or, api_key: 343862595175546 } } }
-      - { label: 'Image2', name: 'image3', widget: 'image', required: false, media_library: { name: cloudinary, output_filename_only: false, config: { cloud_name: dp3mem7or, api_key: 343862595175546 } } }
+      - { label: 'Image2', name: 'image3', widget: 'image', required: false }
+    media_library: { name: cloudinary, output_filename_only: false, config: { cloud_name: dp3mem7or, api_key: 343862595175546 } }  
 
