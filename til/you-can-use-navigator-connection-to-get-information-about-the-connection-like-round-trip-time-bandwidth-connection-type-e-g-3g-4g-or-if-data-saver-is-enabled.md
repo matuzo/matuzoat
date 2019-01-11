@@ -4,6 +4,6 @@ title: >-
   like round-trip time, bandwidth, connection type (e.g. 3g, 4g) or if
   Data-Saver is enabled.
 link: 'https://developer.mozilla.org/en-US/docs/Web/API/NetworkInformation'
-image: til3.png
+image: til/til3.png
 ---
 
