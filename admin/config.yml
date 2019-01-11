@@ -3,11 +3,11 @@ backend:
 
 media_folder: 'static/img/uploads'
 
-media_library:
-  name: cloudinary
-  config:
-    cloud_name: dp3mem7or
-    api_key: 343862595175546
+# media_library:
+#   name: cloudinary
+#   config:
+#     cloud_name: dp3mem7or
+#     api_key: 343862595175546
 
 collections:
   - name: 'talks' # Used in routes, e.g., /admin/collections/blog
@@ -114,4 +114,13 @@ collections:
     fields: # The fields for each document, usually in front matter
       - { label: 'Title', name: 'title', widget: 'string' }
       - { label: 'Link', name: 'link', widget: 'string', required: false }
-      - { label: 'Image', name: 'image', widget: 'image', required: false, media_library: { config: { width: 400px } } }
+      - label: 'Image'
+        name: 'image'
+        widget: 'image'
+        required: false
+        media_library:
+          name: cloudinary
+          config:
+            width: "400px"
+            cloud_name: dp3mem7or
+            api_key: 343862595175546
