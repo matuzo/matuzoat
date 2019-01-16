@@ -5,7 +5,7 @@ media_folder: 'static/img/uploads'
 
 media_library:
   name: cloudinary
-  output_filename_only: false
+  output_filename_only: true
   config:
     cloud_name: dp3mem7or
     api_key: 343862595175546
