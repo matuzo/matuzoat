@@ -103,11 +103,9 @@ history.pushState({ theme: "home"}, location.pathname, location.pathname);
 
 if (document.querySelector('.js-post-list')) {
   document.querySelector('.js-post-list').addEventListener('click', (e) => {
-    e.preventDefault();
-
     const link = e.target.closest('a');
-
     if (link.dataset.post) {
+      e.preventDefault();
       document.documentElement.setAttribute('data-theme', link.dataset.post);
       history.pushState({ theme: link.dataset.post }, link.href, link.href);
 
