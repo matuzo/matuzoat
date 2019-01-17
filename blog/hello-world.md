@@ -1,14 +1,12 @@
 ---
 title: Hello World!
 date: 2019-01-04T11:17:52.795Z
-teaser: It happened. I finally have a website.
+teaser: '**It happened. I finally have a website.**'
 tags:
   - writing
 publication: Matuzo
 archive: false
 ---
-**It happened. I finally have a website.**
-
 **Of course, it's not my first website but the first one in a long time. My very first personal site went online about 17 years ago. It was a table-based layout with no CSS at all. All styling happened by adding HTML attributes.**
 
 ```
