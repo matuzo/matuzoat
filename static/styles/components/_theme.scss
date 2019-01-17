@@ -1,15 +1,46 @@
 @mixin theme($theme) {
-  [data-theme="#{$theme}"] {
+  [data-theme*="#{$theme}"] {
     @content;
   }
 }
 
-@include theme('hello-world!') {
-  body {
-    background: $c-highlight-light;
+@include theme('matuzo') {
+  .blog__teaser {
+    background: $c-highlight;
   }
+}
 
-  .logo__letter {
-    fill: $c-light
+@include theme('24a11y') {
+  .blog__teaser {
+    background: $theme-24a11y-bg;
+    color: $theme-24a11y-color;
+  }
+}
+
+@include theme('css-tricks') {
+  .blog__teaser {
+    background: $theme-css-tricks-bg;
+    color: $theme-css-tricks-color;
+  }
+}
+
+@include theme('a-list-apart') {
+  .blog__teaser {
+    background: $theme-ala-bg;
+    color: $theme-ala-color;
+  }
+}
+
+@include theme('medium') {
+  .blog__teaser {
+    background: $theme-medium-bg;
+    color: $theme-medium-color;
+  }
+}
+
+@include theme('smashing-magazine') {
+  .blog__teaser {
+    background: $theme-smashingmag-bg;
+    color: $theme-smashingmag-color;
   }
 }

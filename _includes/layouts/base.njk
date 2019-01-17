@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html class="site no-js js-site" lang="en" id="top" {% if title %}data-theme="{{ title  | slug }}"{% endif %}>
+<html class="site no-js js-site" lang="en" id="top" {% if publication %}data-theme="{{ publication | slug }}-{{ title | slug }}"{% endif %}>
   <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">

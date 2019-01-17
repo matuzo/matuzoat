@@ -49,3 +49,14 @@
     outline-offset: $offset;
   }
 }
+
+// Misc
+
+@mixin logo-shadow($bg: $c-light, $border: $c-highlight-light) {
+  &.focus-visible {
+    box-shadow: 0 -20px 0 0 $bg,
+                0 -40px 0 0 $border,
+                0 15px 0 0 $bg, 
+                0 35px 0 0 $border;
+  }
+}

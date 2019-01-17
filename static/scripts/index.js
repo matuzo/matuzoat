@@ -100,19 +100,20 @@ if (document.querySelector('.js-scroll-top')) {
 
 prefetchNav();
 
-history.pushState({ theme: "home"}, location.pathname, location.pathname);
+history.pushState({ theme: location.pathname.replace(/\//g, '') }, location.pathname, location.pathname);
+
+function linkPostlist() {
+  event.preventDefault();
+  const link = event.target.closest('a');
+  const themeClass = `${link.dataset.publication}-${link.dataset.post}`;
+  document.documentElement.setAttribute('data-theme', themeClass);
+  history.pushState({ theme: themeClass }, link.href, link.href);
+  loadPage(link.href);
+}
+
 
 if (document.querySelector('.js-post-list')) {
-  document.querySelector('.js-post-list').addEventListener('click', (e) => {
-    const link = e.target.closest('a');
-    if (link.dataset.post) {
-      e.preventDefault();
-      document.documentElement.setAttribute('data-theme', link.dataset.post);
-      history.pushState({ theme: link.dataset.post }, link.href, link.href);
-
-      loadPage(link.href);
-    }
-  });
+  document.querySelector('.js-post-list').addEventListener('click', linkPostlist);
 }
 
 window.onpopstate = function(e) {
@@ -139,6 +140,9 @@ function loadPage(url) {
       container.innerHTML = this.response;
       main.innerHTML = container.querySelector('.js-site-content').innerHTML;
       main.classList.remove('site__content--hidden');
+      if (main.querySelector('.js-post-list')) {
+        main.querySelector('.js-post-list').addEventListener('click', linkPostlist);
+      }
     }
   };
 

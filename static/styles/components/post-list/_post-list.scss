@@ -1,16 +1,16 @@
 .post-list {
   @include list-reset;
   @include box-list-theme('matuzo', $c-highlight, $c-prim-dark);
-  @include box-list-theme('a-list-apart', #ffffff, #000000);
-  @include box-list-theme('smashing-magazine ', #d33a2c, #ffffff);
+  @include box-list-theme('a-list-apart', $theme-ala-bg , $theme-ala-color);
+  @include box-list-theme('smashing-magazine ', $theme-smashingmag-bg , $theme-smashingmag-color);
   @include box-list-theme(
     'css-tricks ',
-    rgb(16, 14, 23),
-    rgb(255, 138, 0),
-    rgb(218, 27, 95)
+    $theme-css-tricks-bg,
+    $theme-css-tricks-color,
+    $theme-css-tricks-color2
   );
-  @include box-list-theme('medium ', rgb(41, 41, 41), #ffffff);
-  @include box-list-theme('24a11y ', rgb(2, 117, 216), #ffffff);
+  @include box-list-theme('medium ', $theme-medium-bg, $theme-medium-color);
+  @include box-list-theme('24a11y ', $theme-24a11y-bg, $theme-24a11y-color);
 
   align-items: flex-start;
   display: flex;

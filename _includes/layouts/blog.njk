@@ -5,9 +5,29 @@ layout: layouts/base.njk
 <div class="blog__content rich-text">
   <h1 class="blog__heading h1">{{ title }}</h1>
 
-  <p>
+  <p class="blog__date">
     posted on <time datetime="{{ date | machineDate }}">{{ date | readableDate }}</a>
   </p>
 
-  {{ content | safe }}
+  <div class="blog__teaser">
+    {% for pub in collections.publications %}
+      {% if publication == pub.data.title %}
+        <span class="post-list__image post-list__image--{{ publication | stringify | slug }} blog__publication">
+          <img src="{{ metadata.cloudinary }}/h_32/{{ pub.data.logo }}" alt="" width="32" />
+        </span>
+      {% endif %}
+    {% endfor %} 
+
+    <strong>
+      {{ teaser | safe }}
+    </strong>
+  </div>
+
+  {% if content %}
+    {{ content | safe }}
+  {% else %}
+    <p>
+      Read the full article on <a href="{{ url }}" rel="noopener">{{ publication}}</a>.
+    </p>
+  {% endif %}
 </div>
