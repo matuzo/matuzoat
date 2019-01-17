@@ -47,6 +47,8 @@
     }
   }
 
+  @include link-focus;
+
   &__inner {
     position: relative;
     z-index: 1;

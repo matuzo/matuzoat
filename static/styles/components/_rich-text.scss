@@ -13,8 +13,8 @@
   
   a {
     font-weight: bold;
-    
-    &:link, &:visited {
+
+    @include link {
       @include underline(4px, currentColor);
 
       color: $c-sec-dark;
@@ -27,6 +27,8 @@
 
       color: $c-highlight;
     }
+
+    @include link-focus;
   }
 
   p + .h2 {

@@ -5,18 +5,18 @@
 }
 
 @mixin hide-visually {
-  white-space: nowrap;
-  width: 1px;
-  height: 1px;
-  overflow: hidden;
   border: 0;
-  padding: 0;
   clip: rect(0 0 0 0);
   clip-path: inset(50%);
-  margin: -1px;
-  position: absolute;
+  height: 1px;
   left: 0;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
   top: 0;
+  white-space: nowrap;
+  width: 1px;
 }
 
 @mixin link {
@@ -36,4 +36,16 @@
 
 @mixin underline($size, $color) {
   box-shadow: 0 $size 0 0 $color;  
+}
+
+@mixin link-focus($color: $c-sec, $offset: 0.5rem) {
+  &:focus {
+    outline: none;
+  }
+  
+  &.focus-visible {
+    box-shadow: none;
+    outline: 6px solid $color;
+    outline-offset: $offset;
+  }
 }

@@ -1,20 +1,26 @@
 .logo {
   display: block;
   line-height: 1;
+  outline: none;
+
+  &.focus-visible {
+    box-shadow: 0 -20px 0 0 $c-light,
+                0 -40px 0 0 $c-highlight-light,
+                0 15px 0 0 $c-light, 
+                0 35px 0 0 $c-highlight-light;
+  }
 
   &__graphic {
     max-width: 10rem;
     width: 100%;
   }
 
-
   &__letter {
     fill: #36B1BF;
 
     &:nth-child(n+7):nth-child(-n+12) {
-      stroke: transparent;
       fill: $c-prim;
-
+      stroke: transparent;
     }
 
     .logo:focus &,

@@ -1,5 +1,6 @@
 import Squares from './squares';
 import prefetchNav from './prefetch-nav';
+require('focus-visible');
 
 if (!Element.prototype.closest) {
   Element.prototype.closest = function(s) {

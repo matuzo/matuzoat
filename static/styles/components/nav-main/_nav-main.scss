@@ -39,5 +39,7 @@
       @include underline(4px, $c-sec);
       color: $c-sec-dark;
     }
+
+    @include link-focus;
   }
 }
