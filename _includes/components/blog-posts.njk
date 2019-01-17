@@ -3,12 +3,8 @@
 
   {% set url = post.url %}
 
-  {% if post.data.url %}
-    {% set url = post.data.url %}
-  {% endif %}
-
   <li class="post-list__item post-list__item--{{ post.data.publication | stringify | slug }}">
-    <a href="{{ url }}" class="post-list__link post-list__link--{{ post.data.publication | stringify | slug }}" {% if not post.data.url %}data-post="{{ post.data.title | slug }}"{% endif %}>
+    <a href="{{ url }}" class="post-list__link post-list__link--{{ post.data.publication | stringify | slug }}" data-post="{{ post.data.title | slug }}" data-publication="{{ post.data.publication | slug }}">
       <h2 class="post-list__heading post-list__heading--{{ post.data.publication | stringify | slug }}">
         <span class="post-list__heading-inner post-list__heading-inner--{{ post.data.publication | stringify | slug }}">
           {{ post.data.title }}
@@ -19,7 +15,7 @@
     {% for pub in collections.publications %}
       {% if post.data.publication == pub.data.title %}
         <div class="post-list__image post-list__image--{{ post.data.publication | stringify | slug }}">
-          <img src="{{ metadata.cloudinary }}/h_32/{{ pub.data.logo }}" alt="{{ pub.data.title }}" width="32" />
+          <img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-src="{{ metadata.cloudinary }}/h_32/{{ pub.data.logo }}" alt="{{ pub.data.title }}" width="32" />
         </div>
       {% endif %}
     {% endfor %} 

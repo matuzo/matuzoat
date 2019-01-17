@@ -1,7 +1,11 @@
 const { DateTime } = require("luxon");
 
-module.exports = function(eleventyConfig) {
+String.prototype.replaceAll = function(search, replacement) {
+  var target = this;
+  return target.replace(new RegExp(search, 'g'), replacement);
+};
 
+module.exports = function(eleventyConfig) {
   eleventyConfig.addCollection("tagList", require("./_11ty/getTagList"));
 
   eleventyConfig.addCollection("speaking_future", function(collection) {
@@ -50,6 +54,13 @@ module.exports = function(eleventyConfig) {
     return collection.getAllSorted().filter(function(item) {
       return item.inputPath.match(/^\.\/blog\//) !== null;
     }).reverse();
+  });
+
+  eleventyConfig.addTransform("lazyload", function(content, outputPath) {
+    if( outputPath.includes('/blog/') && !outputPath.includes('/blog/index.html') ) {
+      return content.replaceAll(new RegExp('<img src="(.*)"',"i"), '<img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-src="$1"');
+    }
+    return content;
   });
 
   eleventyConfig.addPassthroughCopy("static/img");

@@ -1,5 +1,6 @@
 import Squares from './squares';
 import prefetchNav from './prefetch-nav';
+import lazyLoad from './lazyload';
 require('focus-visible');
 
 if (!Element.prototype.closest) {
@@ -143,6 +144,8 @@ function loadPage(url) {
       if (main.querySelector('.js-post-list')) {
         main.querySelector('.js-post-list').addEventListener('click', linkPostlist);
       }
+
+      lazyLoad(main.querySelectorAll("img[data-src]"));
     }
   };
 
@@ -152,3 +155,7 @@ function loadPage(url) {
 
   request.send();
 }
+
+// Lazy load images
+
+lazyLoad(document.querySelectorAll("img[data-src]"));
