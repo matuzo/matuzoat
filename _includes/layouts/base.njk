@@ -20,6 +20,8 @@
   </head>
 
   <body class="site__body {{ renderData.page_classes }}">
+    <a href="#content" class="skip-link">Skip to Content</a>
+
     <canvas class="site__square site__square--tl square-canvas js-sq-tl" hidden aria-hidden="true"></canvas>
     <canvas class="site__square site__square--tr square-canvas js-sq-tr" hidden aria-hidden="true"></canvas>
     <canvas class="site__square site__square--br square-canvas js-sq-br" hidden aria-hidden="true"></canvas>
@@ -27,7 +29,7 @@
 
     {% include 'header.njk' %}
 
-    <main class="site__content page js-site-content {{ renderData.content_classes }}">
+    <main class="site__content page js-site-content {{ renderData.content_classes }}" id="content">
       {{ content | safe }}
     </main>
 
