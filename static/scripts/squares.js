@@ -73,7 +73,7 @@ class Squares {
   }
 
   prepare_canvas() {
-    this.canvas.removeAttribute('hidden');
+    this.canvas.classList.add('square-canvas--visible')
 
     this.canvas.width = this.num_x * this.size;
     this.canvas.height = this.num_y * this.size;
