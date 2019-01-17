@@ -1,3 +1,7 @@
+# Page redirects
+/* /page-404/index.html 404
+
+# Favicon redirects
 /android-chrome-192x192.png /static/favicon/android-chrome-192x192.png
 /android-chrome-384x384.png /static/favicon/android-chrome-384x384.png
 /apple-touch-icon.png /static/favicon/apple-touch-icon.png
