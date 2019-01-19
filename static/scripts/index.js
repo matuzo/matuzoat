@@ -157,5 +157,4 @@ function loadPage(url) {
 }
 
 // Lazy load images
-
 lazyLoad(document.querySelectorAll("img[data-src]"));
