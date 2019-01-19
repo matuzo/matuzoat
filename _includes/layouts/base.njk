@@ -35,6 +35,8 @@
 
     {% include 'footer.njk' %}
 
+    {# Polyfill for Intersection Observer#}
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=default%2CIntersectionObserver"></script>
     <script src="{{ '/static/min/main.min.js' | url | cacheBuster }}"></script>
   </body>
 </html>
