@@ -13,7 +13,7 @@ media_library:
 collections:
   - name: 'talks' # Used in routes, e.g., /admin/collections/blog
     label: 'Talks' # Used in the UI
-    folder: 'talks' # The path to the folder where the documents are stored
+    folder: 'src/talks' # The path to the folder where the documents are stored
     create: true # Allow users to create new documents in this collection
     slug: '{{day}}-{{month}}-{{hour}}-{{minute}}-{{slug}}' # Filename template, e.g., YYYY-MM-DD-title.md
     fields: # The fields for each document, usually in front matter
@@ -23,7 +23,7 @@ collections:
       - { label: 'Link to video', name: 'video', widget: 'string', required: false }
   - name: 'events' # Used in routes, e.g., /admin/collections/blog
     label: 'Events' # Used in the UI
-    folder: 'events' # The path to the folder where the documents are stored
+    folder: 'src/events' # The path to the folder where the documents are stored
     create: true # Allow users to create new documents in this collection
     slug: '{{slug}}' # Filename template, e.g., YYYY-MM-DD-title.md
     fields: # The fields for each document, usually in front matter
@@ -32,7 +32,7 @@ collections:
       - { label: 'Logo', name: 'logo', widget: 'image' }
   - name: 'speaking' # Used in routes, e.g., /admin/collections/blog
     label: 'Speaking' # Used in the UI
-    folder: 'speaking' # The path to the folder where the documents are stored
+    folder: 'src/speaking' # The path to the folder where the documents are stored
     create: true # Allow users to create new documents in this collection
     slug: '{{day}}-{{month}}-{{hour}}-{{minute}}-{{slug}}' # Filename template, e.g., YYYY-MM-DD-title.md
     fields: # The fields for each document, usually in front matter
@@ -70,7 +70,7 @@ collections:
           - { label: "Poland", value: "PL" }
   - name: 'Bookmarks' # Used in routes, e.g., /admin/collections/blog
     label: 'Bookmarks' # Used in the UI
-    folder: 'bookmarks' # The path to the folder where the documents are stored
+    folder: 'src/bookmarks' # The path to the folder where the documents are stored
     create: true # Allow users to create new documents in this collection
     slug: '{{slug}}' # Filename template, e.g., YYYY-MM-DD-title.md
     fields: # The fields for each document, usually in front matter
@@ -84,7 +84,7 @@ collections:
         }
   - name: 'Publications' # Used in routes, e.g., /admin/collections/blog
     label: 'Publications' # Used in the UI
-    folder: 'publications' # The path to the folder where the documents are stored
+    folder: 'src/publications' # The path to the folder where the documents are stored
     create: true # Allow users to create new documents in this collection
     slug: '{{slug}}' # Filename template, e.g., YYYY-MM-DD-title.md
     fields: # The fields for each document, usually in front matter
@@ -93,7 +93,7 @@ collections:
       - { label: 'Url', name: 'url', widget: 'string', required: false }
   - name: 'Blog' # Used in routes, e.g., /admin/collections/blog
     label: 'Blog post' # Used in the UI
-    folder: 'blog' # The path to the folder where the documents are stored
+    folder: 'src/blog' # The path to the folder where the documents are stored
     create: true # Allow users to create new documents in this collection
     slug: '{{slug}}' # Filename template, e.g., YYYY-MM-DD-title.md
     format: 'yaml-frontmatter'
@@ -109,7 +109,7 @@ collections:
       - { label: "Archive", name: "archive", widget: "boolean", default: false }
   - name: 'til' # Used in routes, e.g., /admin/collections/blog
     label: 'TIL' # Used in the UI
-    folder: 'til' # The path to the folder where the documents are stored
+    folder: 'src/til' # The path to the folder where the documents are stored
     create: true # Allow users to create new documents in this collection
     slug: '{{slug}}' # Filename template, e.g., YYYY-MM-DD-title.md
     fields: # The fields for each document, usually in front matter

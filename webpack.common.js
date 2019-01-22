@@ -2,16 +2,16 @@ const path = require('path');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 
 module.exports = {
-  entry: ['./static/scripts/index.js', './static/styles/styles.scss'],
+  entry: ['./src/static/scripts/index.js', './src/static/styles/styles.scss'],
   output: {
-    path: path.resolve(__dirname, 'static/min'),
+    path: path.resolve(__dirname, 'src/static/min'),
     filename: '[name].min.js',
   },
   plugins: [
     new MiniCssExtractPlugin({
       filename: '[name].min.css',
       chunkFilename: '[id].css',
-      path: path.resolve(__dirname, 'static/min'),
+      path: path.resolve(__dirname, 'src/static/min'),
     })
   ],
   devtool: 'inline-source-map',

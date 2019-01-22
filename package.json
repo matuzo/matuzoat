@@ -5,6 +5,7 @@
   "main": "index.js",
   "scripts": {
     "start": "eleventy --serve | webpack --config webpack.common.js --watch",
+    "debug": "DEBUG=Eleventy* eleventy --serve | webpack --config webpack.common.js --watch",
     "build": "webpack --config webpack.prod.js && eleventy"
   },
   "repository": {
@@ -19,6 +20,7 @@
   "homepage": "https://github.com/matuzo/matuzoat#readme",
   "devDependencies": {
     "@11ty/eleventy": "^0.5.4",
+    "@11ty/eleventy-plugin-rss": "^1.0.5",
     "@babel/core": "^7.2.0",
     "@babel/preset-env": "^7.2.0",
     "babel-loader": "^8.0.4",
