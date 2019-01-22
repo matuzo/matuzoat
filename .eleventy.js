@@ -1,10 +1,6 @@
 const filters = require('./_11ty/filters.js')
 const collections = require('./_11ty/collections.js')
-
-String.prototype.replaceAll = function(search, replacement) {
-  var target = this;
-  return target.replace(new RegExp(search, 'g'), replacement);
-};
+const transforms = require('./_11ty/transforms.js')
 
 module.exports = function(eleventyConfig) {
 
@@ -19,11 +15,10 @@ module.exports = function(eleventyConfig) {
     eleventyConfig.addCollection(collectionName, collections[collectionName])
   });
 
-  eleventyConfig.addTransform("lazyload", function(content, outputPath) {
-    if( outputPath.includes('/blog/') && !outputPath.includes('/blog/index.html') ) {
-      return content.replaceAll(new RegExp('<img src="(.*)"',"i"), '<img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-src="$1"');
-    }
-    return content;
+  // Transforms
+  Object.keys(transforms).forEach(transformName => {
+    console.log(transformName)
+    eleventyConfig.addTransform(transformName, transforms[transformName])
   });
 
   eleventyConfig.addPassthroughCopy("./src/static/img");
