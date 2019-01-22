@@ -13,7 +13,7 @@ date: 1987-01-01
 {% for til in collections.til|reverse %}
   <li class="image-list__item">
     <h2 class="image-list__title">
-      <strong class="image-list__title-inner">TIL #{{ loop.index }}</strong><br />{{ til.data.title }}
+      <strong class="image-list__title-inner">TIL #{{ loop.revindex }}</strong><br />{{ til.data.title }}
     </h2>
     {% if til.data.image %}
       {% if til.data.link %}
