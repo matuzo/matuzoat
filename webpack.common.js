@@ -51,8 +51,6 @@ module.exports = {
             loader: 'file-loader',
             options: {
               emitFile: false
-                // name: '[name].[ext]',
-                // outputPath: 'static/min'
             }
         }]
       }

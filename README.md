@@ -22,7 +22,6 @@ Open <http://localhost:8080/>
 - [ ] Add RSS feed  
 - [ ] Add bookmarks page
 - [ ] Add speaking page
-- [ ] Clean-up code
 - [ ] Automatically tweet TILs when deploying
 
 ### Low priority
@@ -50,3 +49,4 @@ Open <http://localhost:8080/>
 - [x] Add 404 page
 - [x] Add subpages for external blog posts  
 - [x] Add lazyloading  
+- [x] Clean-up code

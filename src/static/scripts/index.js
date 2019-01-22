@@ -101,7 +101,11 @@ if (document.querySelector('.js-scroll-top')) {
 
 prefetchNav();
 
-history.pushState({ theme: location.pathname.replace(/\//g, '') }, location.pathname, location.pathname);
+history.pushState(
+  { theme: location.pathname.replace(/\//g, '') },
+  location.pathname,
+  location.pathname
+);
 
 function linkPostlist() {
   event.preventDefault();
@@ -112,9 +116,10 @@ function linkPostlist() {
   loadPage(link.href);
 }
 
-
 if (document.querySelector('.js-post-list')) {
-  document.querySelector('.js-post-list').addEventListener('click', linkPostlist);
+  document
+    .querySelector('.js-post-list')
+    .addEventListener('click', linkPostlist);
 }
 
 window.onpopstate = function(e) {
@@ -123,7 +128,6 @@ window.onpopstate = function(e) {
     loadPage(location.pathname);
   }
 };
-
 
 function loadPage(url) {
   const main = document.querySelector('.js-site-content');
@@ -142,19 +146,22 @@ function loadPage(url) {
       main.innerHTML = container.querySelector('.js-site-content').innerHTML;
       main.classList.remove('site__content--hidden');
       if (main.querySelector('.js-post-list')) {
-        main.querySelector('.js-post-list').addEventListener('click', linkPostlist);
+        main
+          .querySelector('.js-post-list')
+          .addEventListener('click', linkPostlist);
       }
 
-      lazyLoad(main.querySelectorAll("img[data-src]"));
+      lazyLoad(main.querySelectorAll('img[data-src]'));
     }
   };
 
   request.onerror = function() {
-    page_content.innerHTML = 'For some reason I couldn\'t connect to the server, please try later again.';
+    page_content.innerHTML =
+      "For some reason I couldn't connect to the server, please try later again.";
   };
 
   request.send();
 }
 
 // Lazy load images
-lazyLoad(document.querySelectorAll("img[data-src]"));
+lazyLoad(document.querySelectorAll('img[data-src]'));

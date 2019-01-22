@@ -7,7 +7,7 @@ class Squares {
     if (!this.canvas) return;
 
     this.context = this.canvas.getContext('2d');
-    this.color ='red';
+    this.color = 'red';
 
     this.size = this.prop_set(options.size, 20);
 
@@ -44,28 +44,28 @@ class Squares {
   place_square(e) {
     this.context.clearRect(0, 0, this.canvas.width, this.canvas.height);
 
-      const x_raw = e.pageX - e.target.offsetLeft;
-      const y_raw = e.pageY - e.target.offsetTop;
+    const x_raw = e.pageX - e.target.offsetLeft;
+    const y_raw = e.pageY - e.target.offsetTop;
 
-      let x = x_raw - x_raw % this.size;
-      let y = y_raw - y_raw % this.size;
+    let x = x_raw - (x_raw % this.size);
+    let y = y_raw - (y_raw % this.size);
 
-      if (y === this.canvas.height) {
-        y -= this.size;
-      }
-      if (x === this.canvas.width) {
-        x -= this.size;
-      }
+    if (y === this.canvas.height) {
+      y -= this.size;
+    }
+    if (x === this.canvas.width) {
+      x -= this.size;
+    }
 
-      const index = this.squares.findIndex(pos => pos.x === x & pos.y === y);
+    const index = this.squares.findIndex(pos => (pos.x === x) & (pos.y === y));
 
-      if (index > -1) {
-        this.squares.splice(index, 1);
-      } else {
-        this.squares.push({ x: x, y: y});
-      }
+    if (index > -1) {
+      this.squares.splice(index, 1);
+    } else {
+      this.squares.push({ x: x, y: y });
+    }
 
-      this.draw_squares(this.context, this.squares);
+    this.draw_squares(this.context, this.squares);
   }
 
   prop_set(prop, value) {
@@ -73,12 +73,12 @@ class Squares {
   }
 
   prepare_canvas() {
-    this.canvas.classList.add('square-canvas--visible')
+    this.canvas.classList.add('square-canvas--visible');
 
     this.canvas.width = this.num_x * this.size;
     this.canvas.height = this.num_y * this.size;
 
-    if (this.num_x === 'infinite') {  
+    if (this.num_x === 'infinite') {
       this.canvas.width = this.get_parent_width();
     }
 
@@ -88,7 +88,9 @@ class Squares {
   get_parent_width() {
     const parent_styles = getComputedStyle(this.canvas.parentNode);
     let parent_width = this.canvas.parentNode.clientWidth;
-    parent_width -= parseFloat(parent_styles.paddingLeft) + parseFloat(parent_styles.paddingRight);
+    parent_width -=
+      parseFloat(parent_styles.paddingLeft) +
+      parseFloat(parent_styles.paddingRight);
 
     return parent_width;
   }
@@ -115,9 +117,12 @@ class Squares {
   }
 
   draw_squares() {
-    this.context.fillStyle = this.prop_set(this.options.color, 'rgba(51, 51, 51, 0.9)');
+    this.context.fillStyle = this.prop_set(
+      this.options.color,
+      'rgba(51, 51, 51, 0.9)'
+    );
 
-    for(var i = 0; i < this.squares.length; i++) {
+    for (var i = 0; i < this.squares.length; i++) {
       const square = this.squares[i];
       this.context.fillRect(square.x, square.y, this.size, this.size);
     }
@@ -125,5 +130,3 @@ class Squares {
 }
 
 export default Squares;
-
-
