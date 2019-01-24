@@ -7,5 +7,12 @@
     "github": "https://github.com/matuzo",
     "twitter": "https://twitter.com/mmatuzo"
   },
+  "feed": {
+    "subtitle": "My Blog about accessibility, performance, and CSS architecture and layout.",
+    "filename": "feed.xml",
+    "path": "feed.xml",
+    "url": "https://matuzo.at/feed.xml",
+    "id": "https://matuzo.at/"
+  },
   "cloudinary": "https://res.cloudinary.com/dp3mem7or/image/upload"
 }

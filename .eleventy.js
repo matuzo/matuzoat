@@ -1,6 +1,7 @@
 const filters = require('./_11ty/filters.js')
 const collections = require('./_11ty/collections.js')
 const transforms = require('./_11ty/transforms.js')
+const pluginRss = require("@11ty/eleventy-plugin-rss");
 
 module.exports = function(eleventyConfig) {
 
@@ -20,6 +21,9 @@ module.exports = function(eleventyConfig) {
     console.log(transformName)
     eleventyConfig.addTransform(transformName, transforms[transformName])
   });
+
+  // Plugins
+  eleventyConfig.addPlugin(pluginRss);
 
   eleventyConfig.addPassthroughCopy("./src/static/img");
   eleventyConfig.addPassthroughCopy("./src/static/min");
