@@ -28,7 +28,6 @@ module.exports = function(eleventyConfig) {
   eleventyConfig.addPassthroughCopy("./src/static/img");
   eleventyConfig.addPassthroughCopy("./src/static/min");
   eleventyConfig.addPassthroughCopy("./src/static/favicon");
-  eleventyConfig.addPassthroughCopy("./src/static/fonts");
   eleventyConfig.addPassthroughCopy("admin");
   eleventyConfig.addPassthroughCopy("_redirects");
   
