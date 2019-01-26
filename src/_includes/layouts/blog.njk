@@ -2,7 +2,7 @@
 layout: layouts/base.njk
 ---
 
-<article class="blog__content content rich-text">
+<article class="blog__content rich-text">
   <header class="blog__header">
     <h1 class="blog__heading h1">{{ title }}</h1>
 
@@ -18,7 +18,9 @@ layout: layouts/base.njk
   </div>
 
   {% if content %}
-    {{ content | safe }}
+    <div class="content">
+      {{ content | safe }}
+    </div>
   {% else %}
     <p>
       Read the full article on 
