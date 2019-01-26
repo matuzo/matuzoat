@@ -33,5 +33,9 @@ $post-list-image-size: 3.2rem;
 $post-list-item-shadow: 0 0 4px -1px rgba(0, 0, 0, 0.1);
 
 .post-list {
-  --scaling: scale(1.1);
+  --scaling: scale(1);
+
+  @include mq(xl) {
+    --scaling: scale(1.1);
+  }
 }
