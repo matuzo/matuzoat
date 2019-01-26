@@ -8,6 +8,7 @@
 
 @import 'base/base';
 
+@import 'components/square-canvas';
 @import 'components/rich-text';
 @import 'components/skip-links';
 @import 'components/site/site.logic';
@@ -29,7 +30,6 @@
 @import 'components/page/page-intro';
 
 @import 'components/gig';
-@import 'components/square-canvas';
 @import 'components/image-list';
 
 @import 'components/post-list/post-list.logic';
@@ -37,11 +37,13 @@
 @import 'components/post-list/post-list';
 
 @import 'components/blog';
+@import 'components/content';
+
 @import 'components/theme';
 
 // Temporary
 
-.alpha {
+.beta {
   background: $c-prim;
   color: $c-light;
   font-size: 1.7rem;

@@ -35,21 +35,18 @@
 }
 
 .h2 {
-  align-items: flex-end;
+  align-items: center;
   display: flex;
   font-size: 2.2rem;
   line-height: 1;
-  padding-left: 2rem;
-
-  $colors: ($c-sec, $c-highlight, $c-prim);
 
   &::before {
-    background: nth($colors, random(length($colors)));
+    background: $c-highlight-light;
     content: '';
     display: block;
     flex-shrink: 0;
-    height: $spacing / 2.5;
+    height: $spacing / 3;
     margin-right: $spacing / 4;
-    width: $spacing / 2.5;
+    width: $spacing / 2;
   }
 }

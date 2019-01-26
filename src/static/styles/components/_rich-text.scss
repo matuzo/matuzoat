@@ -3,19 +3,19 @@
     margin-top: 0;
 
     @supports (font-size: var(--test)) {
-      max-width: 60ch;
+      max-width: 55ch;
     }
   }
 
-  * + * {
-    margin-bottom: $spacing;
+  & > * + * {
+    margin-bottom: $spacing / 1.5;
   }
   
   a {
-    font-weight: bold;
+    // font-weight: bold;
 
     @include link {
-      @include underline(4px, currentColor);
+      @include underline(3px, currentColor);
 
       color: $c-sec-dark;
       text-decoration: none;
@@ -23,21 +23,21 @@
     }
   
     &:hover {
-      @include underline(2px, $c-sec);
+      @include underline(3px, $c-highlight);
 
       color: $c-highlight;
     }
 
     @include link-focus;
+
+    &.no-line {
+      box-shadow: none;
+    }
   }
 
   p + .h2 {
-    margin-top: 5rem;
-  }
-
-  img {
-    border: 1rem solid $c-highlight;
-    max-width: 80%;
+    margin-top: $spacing * 1.5;
+    margin-bottom: $spacing / 2.5;
   }
 
   pre {

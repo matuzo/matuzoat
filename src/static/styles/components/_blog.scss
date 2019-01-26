@@ -1,8 +1,29 @@
 .blog {
+  --date-padding: 1rem 0 0 0;
+  --teaser-padding: 0;
+
+  @include mq(m) {
+    --date-padding: 0 0 0 #{ $spacing / 2 }; 
+    --teaser-padding: 0 #{ $spacing / 2 };
+  }
+
+  @include mq(l) {
+    --date-padding: 0 0 0 #{ $spacing / 1.5 }; 
+    --teaser-padding: 0 #{ $spacing / 1.5 };
+  }
+
+  @include mq(xl) {
+    --date-padding: 0 0 0 #{ $spacing }; 
+    --teaser-padding: 0 #{ $spacing };
+  }
+}
+
+
+.blog {
   &__teaser {
     -moz-osx-font-smoothing: grayscale;
     -webkit-font-smoothing: antialiased;
-    padding: 2rem 3rem;
+    padding: var(--teaser-padding);
     position: relative;
   }
 
@@ -12,7 +33,7 @@
 
   &__date {
     font-size: 1.9rem;
-    padding-left: $spacing;
+    padding: var(--date-padding);
   }
 
   &__content {
@@ -22,9 +43,8 @@
   }
 
   &__publication {
-    left: -3rem;
-    position: absolute;
-    top: 0rem;
+    float: none;
+    display: inline-flex;
 
     img {
       border: none;

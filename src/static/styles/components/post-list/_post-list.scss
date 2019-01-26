@@ -1,8 +1,8 @@
 .post-list {
   @include list-reset;
   @include box-list-theme('matuzo', $c-highlight, $c-prim-dark);
-  @include box-list-theme('a-list-apart', $theme-ala-bg , $theme-ala-color);
-  @include box-list-theme('smashing-magazine ', $theme-smashingmag-bg , $theme-smashingmag-color);
+  @include box-list-theme('a-list-apart', $theme-a-list-apart-bg , $theme-a-list-apart-color);
+  @include box-list-theme('smashing-magazine ', $theme-smashing-magazine-bg , $theme-smashing-magazine-color);
   @include box-list-theme(
     'css-tricks ',
     $theme-css-tricks-bg,
@@ -24,6 +24,10 @@
     grid-template-columns: $post-list-image-size 1fr;
     margin-bottom: $spacing / 1.5;
     position: relative;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
   }
 
   &__image {

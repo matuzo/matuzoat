@@ -3,6 +3,7 @@
 
   &__body {
     font-size: 1.8rem;
+    line-height: $base-line;
     max-width: 62rem;
 
     @supports (font-size: var(--test)) {

@@ -13,13 +13,11 @@ Open <http://localhost:8080/>
 
 ### High priority
 
-- [ ] Improve blog post styling  
-- [ ] Social media meta tags  
+- [ ] Add social media meta tags  
+- [ ] Add syntax highlighting
 
 ### Mid priority
 
-- [ ] Add syntax highlighting
-- [ ] Add RSS feed  
 - [ ] Add bookmarks page
 - [ ] Add speaking page
 - [ ] Automatically tweet TILs when deploying
@@ -50,3 +48,5 @@ Open <http://localhost:8080/>
 - [x] Add subpages for external blog posts  
 - [x] Add lazyloading  
 - [x] Clean-up code
+- [x] Improve blog post styling  
+- [x] Add RSS feed  

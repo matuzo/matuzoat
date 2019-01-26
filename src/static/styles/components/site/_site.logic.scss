@@ -13,6 +13,7 @@
   --body-layout: block;
   --body-width: 64.4rem;
   --body-gap: #{$spacing / 2 $spacing * 1.5};
+  --body-line-height: #{ $base-line };
   
   --separator-width: 100%;
   --separator-display: block;
@@ -47,7 +48,7 @@
   }
   
   @include mq(l) {
-    --font-size: 2.2rem;
+    --font-size: 2.1rem;
 
     --header-padding: #{($spacing + $site-corner) 0 $spacing ($spacing + $site-corner)};
     --header-layout: block;
@@ -55,6 +56,7 @@
   
     --body-layout: grid;
     --body-width: 100%;
+    --body-line-height: 1.8;
   
     --separator-width: 12rem;
     --content-padding: #{$spacing ($spacing + $site-corner) $spacing 0};

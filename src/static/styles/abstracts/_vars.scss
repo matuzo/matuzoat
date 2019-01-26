@@ -5,7 +5,7 @@ $c-prim-dark: rgb(21, 58, 81);
 $c-light: rgb(239, 239, 239);
 $c-sec: rgb(242, 60, 80);
 $c-sec-dark: rgb(202, 48, 65);
-$c-highlight: rgb(54, 177, 191);
+$c-highlight: hsl(186, 56%, 48%);
 $c-highlight-light: rgb(128, 210, 219);
 
 // Themes
@@ -19,15 +19,15 @@ $theme-24a11y-color: #ffffff;
 $theme-medium-bg: rgb(41, 41, 41);
 $theme-medium-color: #ffffff;
 
-$theme-smashingmag-bg: #d33a2c;
-$theme-smashingmag-color: #ffffff;
+$theme-smashing-magazine-bg: #d33a2c;
+$theme-smashing-magazine-color: #ffffff;
 
-$theme-ala-bg: #ffffff;
-$theme-ala-color: #000000;
+$theme-a-list-apart-bg: #ffffff;
+$theme-a-list-apart-color: #000000;
 
 // Sizes
 
-$base-line: 1.6;
+$base-line: 1.7;
 $spacing: $base-line * 2.5rem;
 $site-corner: 1rem;
 $site-min-height: 590px;

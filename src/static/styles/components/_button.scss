@@ -5,7 +5,7 @@
   font-weight: bold;
   line-height: $base-line;
   overflow: hidden;
-  padding: 1rem 4rem;
+  padding: 1rem 3rem 0.7rem;
   position: relative;
   text-decoration: none;
 
@@ -15,6 +15,23 @@
 
   &--small {
     padding: 0.4rem 2rem;
+  }
+
+  &--lg-none {
+    @include mq(xl) {
+      @include underline(4px, $c-highlight);
+
+      background: none;
+      padding: 0;
+
+      @include link {
+        color: $c-sec-dark;
+      }
+
+      @include link-active {
+        color: $c-prim;
+      }
+    }
   }
 
   &::after {

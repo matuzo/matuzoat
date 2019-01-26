@@ -19,7 +19,7 @@
       'footer footer';
     grid-template-rows: 1fr auto;
     grid-gap: var(--body-gap);
-    line-height: $base-line;
+    line-height: var(--body-line-height);
     margin: 0 auto;
     max-width: var(--body-width);
     min-height: 100%;
