@@ -60,3 +60,44 @@
                 0 35px 0 0 $border;
   }
 }
+
+@mixin corner($padding, $size) {
+  padding: $padding;
+  position: relative;
+  
+  &::after,
+  &::before {
+    content: "";
+    display: block;
+    height: $size;
+    position: absolute;
+    width: $size;
+  }
+
+  &::after {
+    background: $c-highlight;
+    bottom: 0;
+    height: $padding;
+    right: 0;
+  }
+  
+  &::before {
+    background: $c-sec;
+    left: 0;
+    top: 0;
+  }
+
+  @include mq(xl) {
+    padding: $padding * 1.5;
+
+    &::after,
+    &::before {
+      height: $size * 1.5;
+      width: $size * 1.5;
+    }
+
+    &::after {
+      height: $padding * 1.5;
+    }
+  }
+}

@@ -1,41 +1,8 @@
 .content {
-  --image-padding: 1rem;
-  --block-size: 2rem;
-
-  @include mq(xl) {
-    --image-padding: 1.5rem;
-    --block-size: 3rem;
-  }
-}
-
-.content {
   &__image-wrapper {
-    display: block;
-
-    padding: var(--image-padding);
-    position: relative;
-
-    &::after,
-    &::before {
-      content: "";
-      display: block;
-      height: var(--block-size);
-      position: absolute;
-      width: var(--block-size);
-    }
-
-    &::after {
-      background: $c-highlight;
-      bottom: 0;
-      height: var(--image-padding);
-      right: 0;
-    }
+    @include corner(1rem, 2rem);
     
-    &::before {
-      background: $c-sec;
-      left: 0;
-      top: 0;
-    }
+    display: block;
   }
 
   &__image {
