@@ -43,8 +43,20 @@
   }
 
   &__publication {
-    float: none;
     display: inline-flex;
+    float: none;
+    padding-top: 0;
+    padding-bottom: 1rem;
+    vertical-align: middle;
+    
+    .content__image-wrapper {
+      padding: 0;
+
+      &::before,
+      &::after {
+        display: none;
+      }
+    }
 
     img {
       border: none;

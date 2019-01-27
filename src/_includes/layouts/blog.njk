@@ -28,7 +28,7 @@ layout: layouts/base.njk
         {% for pub in collections.publications %}
           {% if publication == pub.data.title %}
             <span class="post-list__image post-list__image--{{ publication | stringify | slug }} blog__publication">
-              <img src="{{ metadata.cloudinary }}/h_32/{{ pub.data.logo }}" alt="" width="32" />
+              <img src="{{ metadata.cloudinary }}/h_32/{{ pub.data.logo }}" data-no-lazy alt="" width="32" />
             </span>
           {% endif %}
         {% endfor %}
