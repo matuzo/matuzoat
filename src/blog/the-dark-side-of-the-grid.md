@@ -8,30 +8,24 @@ teaser: >-
   **CSS Grid Layout is one of the most exciting CSS specifications because of
   its flexibility, extent, and power. It makes our lives so much easier but it
   also entails new dangers regarding user experience and accessibility.**
-
-
-  It has already been 2 years since the first browsers, Chromium 57 and Firefox
-  52, shipped CSS Grid Layout unprefixed. Many developers have experimented with
-  it or are using it in production already. More will come as soon as support
-  for Internet Explorer 10 and 11 becomes less important.
-
-
-  Grid offers many ways of building layouts and it challenges us to rethink the
-  way we approach them. This flexibility is great for our development experience
-  but it may come at the cost of user experience and accessibility if we don’t
-  use its feature responsibly.
-
-
-  This series of articles will give you an overview of the dangerous features of
-  the specification, or in other words, the dark side of the grid.
 tags:
   - css
   - grid
   - a11y
 publication: Matuzo
+css: |-
+  body {
+  background: red;
+  }
 draft: true
 archive: false
 ---
+It has already been 2 years since the first browsers, Chromium 57 and Firefox 52, shipped CSS Grid Layout unprefixed. Many developers have experimented with it or are using it in production already. More will come as soon as support for Internet Explorer 10 and 11 becomes less important.
+
+Grid offers many ways of building layouts and it challenges us to rethink the way we approach them. This flexibility is great for our development experience but it may come at the cost of user experience and accessibility if we don’t use its feature responsibly.
+
+This series of articles will give you an overview of the dangerous features of the specification, or in other words, the dark side of the grid.
+
 ## Overview
 
 * [What’s CSS Grid Layout? (part 1)](whats-grid)
