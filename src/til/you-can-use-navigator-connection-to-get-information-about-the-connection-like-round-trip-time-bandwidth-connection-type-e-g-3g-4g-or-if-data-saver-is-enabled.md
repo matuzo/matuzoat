@@ -5,5 +5,6 @@ title: >-
   Data-Saver is enabled.
 link: 'https://developer.mozilla.org/en-US/docs/Web/API/NetworkInformation'
 image: til/til3.png
+date: 2019-01-26T06:35:22.829Z
 ---
 
