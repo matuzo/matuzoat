@@ -107,6 +107,7 @@ collections:
       - { label: 'Tags', name: 'tags', widget: 'list', default: ['css'] }
       - { label: 'Publication', name: 'publication', widget: 'relation',  collection: "Publications",  searchFields: ["title"], valueField: "title", required: false }
       - { label: 'External link', name: 'url', widget: 'string', required: false }
+      - { label: "Draft", name: "draft", widget: "boolean", default: false }
       - { label: "Archive", name: "archive", widget: "boolean", default: false }
   - name: 'til' # Used in routes, e.g., /admin/collections/blog
     label: 'TIL' # Used in the UI
