@@ -101,6 +101,7 @@ collections:
       - { label: 'Title', name: 'title', widget: 'string' }
       - { label: 'Date', name: 'date', widget: 'date' }
       - { label: 'Featured image', name: 'image', widget: 'image', required: false }
+      - { label: 'Intro', name: 'intro', widget: 'markdown', required: false }
       - { label: 'Teaser', name: 'teaser', widget: 'markdown', required: false }
       - { label: 'Text', name: 'body', widget: 'markdown', required: false }
       - { label: 'Tags', name: 'tags', widget: 'list', default: ['css'] }
