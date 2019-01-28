@@ -1,5 +1,5 @@
 ---
-title: The Dark Side of the Grid
+title: The Dark Side of the Grid (Part 1)
 date: 2019-01-31T04:58:47.818Z
 intro: >-
   This is part 1 of 3 in a series of articles about CSS Grid layout and
@@ -24,30 +24,6 @@ teaser: >-
 
   This series of articles will give you an overview of the dangerous features of
   the specification, or in other words, the dark side of the grid.
-
-
-  Overview
-
-
-  * [What’s CSS Grid Layout? (part 1)](whats-grid)
-
-  * [Name and theme of this article (part 1)](#name-theme)
-
-  * [Pink Floyd Fun Fact 1 (part 1)](floyd-1)
-
-  * [Compromising on Semantics (part 1)](semantics)
-
-  * Pink Floyd Fun Fact 2 (part 2)
-
-  * Changing Visual Order (part 2)
-
-  * Cross Browser Support (part 3)
-
-  * Pink Floyd Fun Fact 3 (part 3)
-
-  * Whose responsibility is it? (part 3)
-
-  * Pink Floyd Fun Fact 4 (part 3)
 tags:
   - css
   - grid
@@ -56,5 +32,19 @@ publication: Matuzo
 draft: true
 archive: false
 ---
+## Overview
+
+* [What’s CSS Grid Layout? (part 1)](whats-grid)
+* [Name and theme of this article (part 1)](#name-theme)
+* [Pink Floyd Fun Fact 1 (part 1)](floyd-1)
+* [Compromising on Semantics (part 1)](semantics)
+* Pink Floyd Fun Fact 2 (part 2)
+* Changing Visual Order (part 2)
+* Cross Browser Support (part 3)
+* Pink Floyd Fun Fact 3 (part 3)
+* Whose responsibility is it? (part 3)
+* Pink Floyd Fun Fact 4 (part 3)
+
 ## What’s CSS Grid Layout?
+
 CSS Grid Layout is a grid-based layout system designed for two-dimensional layouts. It’s the first true layout method in CSS, properties like `float`, `display: inline-block`, `position`, and `display: table` were originally not intended for building layouts.
