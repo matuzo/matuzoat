@@ -119,4 +119,6 @@ collections:
       - { label: 'Title', name: 'title', widget: 'string' }
       - { label: 'Link', name: 'link', widget: 'string', required: false }
       - { label: 'Image', name: 'image', widget: 'image', required: false, media_library: { output_filename_only: true }}
-
+      - label: "Date"
+        name: "date"
+        widget: "date"
