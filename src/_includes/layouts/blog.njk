@@ -11,10 +11,14 @@ layout: layouts/base.njk
     </p>
   </header>
 
+  {% if intro %}
+    <div class="blog__intro">
+      {{ intro | md | safe }}
+    </div>
+  {% endif %}
+
   <div class="blog__teaser">
-    <strong>
-      {{ teaser | safe }}
-    </strong>
+    {{ teaser | md | safe }}
   </div>
 
   {% if content %}

@@ -3,26 +3,28 @@
 
   {% set url = post.url %}
 
-  <li class="post-list__item post-list__item--{{ post.data.publication | stringify | slug }}">
-    <a href="{{ url }}" class="post-list__link post-list__link--{{ post.data.publication | stringify | slug }}" data-post="{{ post.data.title | slug }}" data-publication="{{ post.data.publication | slug }}">
-      <h2 class="post-list__heading post-list__heading--{{ post.data.publication | stringify | slug }}">
-        <span class="post-list__heading-inner post-list__heading-inner--{{ post.data.publication | stringify | slug }}">
-          {{ post.data.title }}
-        </span>
-      </h2>
-    </a>
+  {% if not post.data.draft %}
+    <li class="post-list__item post-list__item--{{ post.data.publication | stringify | slug }}">
+      <a href="{{ url }}" class="post-list__link post-list__link--{{ post.data.publication | stringify | slug }}" data-post="{{ post.data.title | slug }}" data-publication="{{ post.data.publication | slug }}">
+        <h2 class="post-list__heading post-list__heading--{{ post.data.publication | stringify | slug }}">
+          <span class="post-list__heading-inner post-list__heading-inner--{{ post.data.publication | stringify | slug }}">
+            {{ post.data.title }}
+          </span>
+        </h2>
+      </a>
 
-    {% for pub in collections.publications %}
-      {% if post.data.publication == pub.data.title %}
-        <div class="post-list__image post-list__image--{{ post.data.publication | stringify | slug }}">
-          <img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-src="{{ metadata.cloudinary }}/h_32/{{ pub.data.logo }}" alt="{{ pub.data.title }}" width="32" />
-        </div>
-      {% endif %}
-    {% endfor %} 
+      {% for pub in collections.publications %}
+        {% if post.data.publication == pub.data.title %}
+          <div class="post-list__image post-list__image--{{ post.data.publication | stringify | slug }}">
+            <img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-src="{{ metadata.cloudinary }}/h_32/{{ pub.data.logo }}" alt="{{ pub.data.title }}" width="32" />
+          </div>
+        {% endif %}
+      {% endfor %} 
 
-   <time class="post-list__date post-list__date--{{ post.data.publication | stringify | slug }}" datetime="{{ post.data.date|machineDate }}">
-      {{ post.data.date|readableDate }}
-    </time> 
-  </li>
+    <time class="post-list__date post-list__date--{{ post.data.publication | stringify | slug }}" datetime="{{ post.data.date|machineDate }}">
+        {{ post.data.date|readableDate }}
+      </time> 
+    </li>
+  {% endif %}
 {% endfor %}
 </ul>

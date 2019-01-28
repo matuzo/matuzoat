@@ -1,5 +1,5 @@
 const { DateTime } = require("luxon");
-
+const MarkdownIt = require('markdown-it');
 module.exports = {
   // Date formatting (machine readable)
   machineDate: dateObj => {
@@ -26,5 +26,10 @@ module.exports = {
   cacheBuster: value => {
     let milliseconds = Date.now();
     return value + "?rev=" + milliseconds;
+  },
+
+  md: value => {
+    const md = new MarkdownIt();
+    return md.render(value);
   } 
 }

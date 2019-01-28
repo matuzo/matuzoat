@@ -14,15 +14,23 @@
 
   @include mq(xl) {
     --date-padding: 0 0 0 #{ $spacing }; 
-    --teaser-padding: 0 #{ $spacing };
+    // --teaser-padding: 0 #{ $spacing };
   }
 }
 
 
 .blog {
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+
+  &__intro {
+    font-style: italic;
+    margin-bottom: $spacing / 2;
+  }
+
   &__teaser {
-    -moz-osx-font-smoothing: grayscale;
-    -webkit-font-smoothing: antialiased;
+    line-height: 1.6;
+    margin-bottom: $spacing;
     padding: var(--teaser-padding);
     position: relative;
   }

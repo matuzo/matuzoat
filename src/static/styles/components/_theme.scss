@@ -5,6 +5,7 @@
     "smashing-magazine": $theme-smashing-magazine-bg,
     "css-tricks": $theme-css-tricks-bg,
     "a-list-apart": $theme-a-list-apart-bg,
+    "dark-side-of-the-grid": #000
   );
 
   $theme-color: (
@@ -13,6 +14,7 @@
     "smashing-magazine": $theme-smashing-magazine-color,
     "css-tricks": $theme-css-tricks-color,
     "a-list-apart": $theme-a-list-apart-color,
+    "dark-side-of-the-grid": $c-light
   );
   
   
@@ -80,3 +82,14 @@
 @include theme('24a11y', $c-light, $c-light, $c-highlight, $c-highlight-light, $c-light);
 @include theme('a-list-apart', $theme-a-list-apart-color, $c-sec, $c-highlight);
 @include theme('css-tricks', $c-light, $theme-css-tricks-color2, $c-highlight, $theme-css-tricks-color2, $theme-css-tricks-color);
+@include theme('dark-side-of-the-grid', #FFF, #27d4f7, #891aa8, #ff3232, #f4812e) {
+   .blog__heading {
+     &::before {
+       background: #fff430;
+     }
+
+     &::after {
+       border-color: #2da51a;
+     }
+   }
+ }
