@@ -24,6 +24,14 @@ Grid offers many ways of building layouts and it challenges us to rethink the wa
 
 This series of articles will give you an overview of the dangerous features of the specification, or in other words, the dark side of the grid.
 
+<div class="demo js-demo"> 
+  <div class="a-title">
+    <div class="a-title-white-light"></div>
+    <div class="a-title-grid"><div class="a-title-grid-inner"></div></div>
+    <div class="a-title-rainbow"></div>
+  </div>
+</div>
+
 ## Overview
 
 * [What’s CSS Grid Layout? (part 1)](whats-grid)
