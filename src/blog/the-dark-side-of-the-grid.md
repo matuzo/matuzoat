@@ -48,3 +48,14 @@ This series of articles will give you an overview of the dangerous features of t
 ## What’s CSS Grid Layout?
 
 CSS Grid Layout is a grid-based layout system designed for two-dimensional layouts. It’s the first true layout method in CSS, properties like `float`, `display: inline-block`, `position`, and `display: table` were originally not intended for building layouts.
+
+<div class="demo js-demo"> 
+<ul class="a-layout">
+  <li class="a-layout__item"></li>
+  <li class="a-layout__item"></li>
+  <li class="a-layout__item"></li>
+  <li class="a-layout__item"></li>
+  <li class="a-layout__item"></li>
+  <li class="a-layout__item"></li>
+</ul>
+</div>
