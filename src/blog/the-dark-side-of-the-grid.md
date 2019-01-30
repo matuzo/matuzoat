@@ -59,3 +59,24 @@ CSS Grid Layout is a grid-based layout system designed for two-dimensional layou
   <li class="a-layout__item"></li>
 </ul>
 </div>
+
+Of course, there’s Flexbox but its strength lies in distributing available space and placing items *either* vertically or horizontally. Flexbox loses a lot of its flexibility as soon as you’re applying `flex-wrap` and add widths to your flex items.
+
+
+> „If you are adding widths to all your flex items, you probably need grid “
+
+Rachel Andrew | Render 2017 
+
+If you’re new to CSS Grid Layout, I suggest you checkout [gridbyexample](https://gridbyexample.com/) by Rachel Andrews or [Grid Garden](http://cssgridgarden.com) before you continue reading.
+
+
+## Name and theme of this article
+
+Before we dive into the dark side of the grid, I shortly have to address the name and theme of this article. They’re based on the LP [The Dark Side of the Moon](https://en.wikipedia.org/wiki/The_Dark_Side_of_the_Moon) by [Pink Floyd](https://de.wikipedia.org/wiki/Pink_Floyd), released in 1973. 
+Now you might think I’m a huge Pink Floyd fan. Well, I’m sorry to disappoint you, I’m not, I just like the design. However, I can’t borrow their design without telling you about them. Therefore, I present to you **Pink Floyd Fact #1**.
+
+
+## Fun fact 1
+
+The Dark Side of the Moon is, with over 45 million copies sold, the [fourth best-selling album worldwide](https://en.wikipedia.org/wiki/List_of_best-selling_albums).
+Only Back in Black by AC/DC (50 Million), Their Greatest Hits (1971–1975) by Eagles (51 Million) and, *of course*, Thriller by Michael Jackson (66 Million) have sold more often.
