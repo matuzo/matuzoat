@@ -63,8 +63,8 @@ CSS Grid Layout is a grid-based layout system designed for two-dimensional layou
 Of course, there’s Flexbox but its strength lies in distributing available space and placing items *either* vertically or horizontally. Flexbox loses a lot of its flexibility as soon as you’re applying `flex-wrap` and add widths to your flex items.
 
 
-> If you are adding widths to all your flex items, you probably need grid
-<cite>Rachel Andrew | [Render 2017](https://www.youtube.com/watch?v=tjHOLtouElA)</cite>
+> If you are adding widths to all your flex items, you probably need grid  
+> <cite>Rachel Andrew | [Render 2017](https://www.youtube.com/watch?v=tjHOLtouElA)</cite>
 
 If you’re new to CSS Grid Layout, I suggest you checkout [gridbyexample](https://gridbyexample.com/) by Rachel Andrews or [Grid Garden](http://cssgridgarden.com) before you continue reading.
 
