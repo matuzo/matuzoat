@@ -64,8 +64,7 @@ Of course, there’s Flexbox but its strength lies in distributing available spa
 
 
 > If you are adding widths to all your flex items, you probably need grid
-
-Rachel Andrew | Render 2017 
+<cite>Rachel Andrew | [Render 2017](https://www.youtube.com/watch?v=tjHOLtouElA)</cite>
 
 If you’re new to CSS Grid Layout, I suggest you checkout [gridbyexample](https://gridbyexample.com/) by Rachel Andrews or [Grid Garden](http://cssgridgarden.com) before you continue reading.
 
