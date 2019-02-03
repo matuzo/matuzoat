@@ -124,9 +124,10 @@ I’ll show you why in a simple example. Let’s say we have a `section` with a 
 
 The section forms a 3-column grid. The heading should span all columns and each li should fill one cell.
 
-<div class="codepen" data-height="400" data-theme-id="6054" data-default-tab="css,result" data-user="matuzo" data-slug-hash="QYgjZe" data-preview="true" data-editable="true" data-prefill='{"tags":[],"stylesheets":[],"scripts":[]}'>
+<div class="codepen" data-height="300" data-theme-id="6054" data-default-tab="html,result" data-user="matuzo" data-slug-hash="QYgjZe" data-preview="true" data-editable="true" data-prefill='{"tags":[],"stylesheets":[],"scripts":[]}'>
   <pre data-lang="html">&lt;section>
-  &lt;h2>Pink Floyd discography&lt;/h2>  
+  &lt;h2>Pink Floyd discography&lt;/h2>
+  
   &lt;ul>
     &lt;li>The Piper at the Gates of Dawn&lt;/li>
     &lt;li>A Saucerful of Secrets&lt;/li>
@@ -144,7 +145,6 @@ section {
   grid-template-columns: repeat(3, 1fr);
   grid-gap: 20px;
 }
-
 
 // Make the heading span all 3 columns
 h2 {
