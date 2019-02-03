@@ -125,20 +125,20 @@ I’ll show you why in a simple example. Let’s say we have a `section` with a 
 The section forms a 3-column grid. The heading should span all columns and each li should fill one cell.
 
 <div class="codepen" data-height="300" data-theme-id="6054" data-default-tab="html,result" data-user="matuzo" data-slug-hash="QYgjZe" data-preview="true" data-editable="true" data-prefill='{"tags":[],"stylesheets":[],"scripts":[]}'>
-  <pre data-lang="html">section>
-  h2>Pink Floyd discography/h2>
+  <pre data-lang="html">&lt;section>
+&lt;h2>Pink Floyd discography&lt;/h2>
   
-  ul>
-    li>The Piper at the Gates of Dawn/li>
-    li>A Saucerful of Secrets/li>
-    li>More/li>
-    li>Ummagumma/li>
-    li>Atom Heart Mother/li>
-    li>Meddle/li>
-    li>Obscured by Clouds/li>
-    li>The Dark Side of the Moon/li>
-  /ul>
-/section></pre>
+&lt;ul>
+&lt;li>The Piper at the Gates of Dawn&lt;/li>
+    &lt;li>A Saucerful of Secrets&lt;/li>
+    &lt;li>More&lt;/li>
+    &lt;li>Ummagumma&lt;/li>
+    &lt;li>Atom Heart Mother&lt;/li>
+    &lt;li>Meddle&lt;/li>
+    &lt;li>Obscured by Clouds&lt;/li>
+    &lt;li>The Dark Side of the Moon&lt;/li>
+  &lt;/ul>
+&lt;/section></pre>
   <pre data-lang="scss" >// Set display to grid, add 3 even columns and add 20px spacing
 section {
   display: grid;
