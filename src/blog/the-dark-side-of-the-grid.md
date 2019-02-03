@@ -34,16 +34,18 @@ This series of articles will give you an overview of the dangerous features of t
 
 ## Overview
 
-* [What’s CSS Grid Layout? (part 1)](whats-grid)
-* [Name and theme of this article (part 1)](#name-theme)
-* [Pink Floyd Fun Fact 1 (part 1)](floyd-1)
-* [Compromising on Semantics (part 1)](semantics)
-* Pink Floyd Fun Fact 2 (part 2)
-* Changing Visual Order (part 2)
-* Cross Browser Support (part 3)
-* Pink Floyd Fun Fact 3 (part 3)
-* Whose responsibility is it? (part 3)
-* Pink Floyd Fun Fact 4 (part 3)
+1. [What’s CSS Grid Layout? (part 1)](whats-grid)
+2. [Name and theme of this article (part 1)](#name-theme)
+3. [Pink Floyd Fun Fact 1 (part 1)](floyd-1)
+4. [Compromising on Semantics (part 1)](semantics)
+5. Pink Floyd Fun Fact 2 (part 2)
+6. Changing Visual Order (part 2)
+7. Cross Browser Support (part 3)
+8. Pink Floyd Fun Fact 3 (part 3)
+9. Whose responsibility is it? (part 3)
+10. Pink Floyd Fun Fact 4 (part 3)
+
+<hr>
 
 ## What’s CSS Grid Layout?
 
@@ -63,7 +65,7 @@ CSS Grid Layout is a grid-based layout system designed for two-dimensional layou
 Of course, there’s Flexbox but its strength lies in distributing available space and placing items *either* vertically or horizontally. Flexbox loses a lot of its flexibility as soon as you’re applying `flex-wrap` and add widths to your flex items.
 
 <figure>
-<blockquote>If you are adding widths to all your flex items, you probably need grid  
+<blockquote>If you are adding widths to all your flex items, you probably need grid.
 </blockquote>
 <footer>
 <cite>
