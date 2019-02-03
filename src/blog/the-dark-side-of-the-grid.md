@@ -192,7 +192,7 @@ Unfortunately, support for subgrid is so bad, it doesn’t even have a [caniuse 
 <figcaption>
 At the moment, subgrids aren’t a standard yet and not supported in any browser.
 </figcaption>
-</div>
+</figure>
 
 Use subgrids as soon as they’re available.
 
