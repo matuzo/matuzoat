@@ -124,7 +124,7 @@ I’ll show you why in a simple example. Let’s say we have a `section` with a 
 
 The section forms a 3-column grid. The heading should span all columns and each li should fill one cell.
 
-<div class="codepen" data-height="400" data-theme-id="6054" data-default-tab="css,result" data-user="matuzo" data-slug-hash="QYgjZe" data-prefill='{"tags":[],"stylesheets":[],"scripts":[]}'>
+<div class="codepen" data-height="400" data-theme-id="6054" data-default-tab="css,result" data-user="matuzo" data-slug-hash="QYgjZe" data-prefill='{"tags":\[],"stylesheets":\[],"scripts":\[]}'>
   <pre data-lang="html">&lt;section>
   &lt;h2>Pink Floyd discography&lt;/h2>  
   &lt;ul>
@@ -138,35 +138,33 @@ The section forms a 3-column grid. The heading should span all columns and each 
     &lt;li>The Dark Side of the Moon&lt;/li>
   &lt;/ul>
 &lt;/section></pre>
-  <pre data-lang="css" >/* Set display to grid, add 3 even columns and add 20px spacing */  
+  <pre data-lang="css" >/\* Set display to grid, add 3 even columns and add 20px spacing \*/  
 section {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   grid-gap: 20px;
-}
-
-/* Make the heading span all 3 columns */  
+}     
 h2 {
-  grid-column: 1 / -1;
+           grid-column: 1 / -1;
 }
 
 body {
-  background: #000000;
+     background: #000000;
   color: #ffffff;
   font-family: 'Inria Sans', sans-serif;
-}   
+}\
 ul {
   list-style: none;
   margin: 0;
   padding: 0;
-}  
+}\
 li {
   outline: 1px solid #ffffff;
 }
+
 </pre>
   
 </div>
-
 
 Doesn’t exactly look as expected. Only direct child items of the grid container will align with the grid. In our example, the `h2` and the `ul` but we want all the `li` to fill cells in the grid.
 Okay, let’s try to fix that.
@@ -263,6 +261,7 @@ As already mentioned, a grid item can also be a grid container. We can select th
 Nesting grids isn’t a perfect solution and sometimes it might not work but in this simple example it’s good enough.
 
 ### Recap
+
 The situation regarding sub-grids is anything but perfect. The `subgrid` value isn’t a standard yet, `display: contents` is buggy, and nesting grids will only work in specific use cases. If you see yourself compromising on semantics just to use CSS Grid Layout, don’t use it or try to workaround the problem until browsers fix the `display: contents` bug or ship subgrids.
 
 This was part 1 of the dark side of the grid. In part two I’ll show you how easy it is to confuse users unintentionally, why it’s bad and how to avoid it.
