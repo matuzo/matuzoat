@@ -81,5 +81,9 @@ Before we dive into the dark side of the grid, I shortly have to address the nam
 Now you might think I’m a huge Pink Floyd fan. Well, I’m sorry to disappoint you, I’m not, I just like the design. However, I can’t borrow their design without telling you about them. Therefore, I present to you **Pink Floyd Fact #1**.
 
 
-<div class="fact"><h2>Pink Floyd Fun Fact #1</h2>
-<p>The Dark Side of the Moon is, with over 45 million copies sold, the <a href="https://en.wikipedia.org/wiki/List_of_best-selling_albums" rel="noopener">fourth best-selling album worldwide</a>.Only Back in Black by AC/DC (50 Million), Their Greatest Hits (1971–1975) by Eagles (51 Million) and, *of course*, Thriller by Michael Jackson (66 Million) have sold more often.</p></div>
+<div class="fact">
+<div class="fact__inner">
+<h2>Pink Floyd Fun Fact #1</h2>
+<p>The Dark Side of the Moon is, with over 45 million copies sold, the <a href="https://en.wikipedia.org/wiki/List_of_best-selling_albums" rel="noopener">fourth best-selling album worldwide</a>.Only Back in Black by AC/DC (50 Million), Their Greatest Hits (1971–1975) by Eagles (51 Million) and, *of course*, Thriller by Michael Jackson (66 Million) have sold more often.</p>
+</div>
+</div>
