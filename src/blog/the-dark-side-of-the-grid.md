@@ -124,7 +124,7 @@ I’ll show you why in a simple example. Let’s say we have a `section` with a 
 
 The section forms a 3-column grid. The heading should span all columns and each li should fill one cell.
 
-<div class="codepen" data-height="300" data-theme-id="6054" data-default-tab="css,result" data-user="matuzo" data-slug-hash="QYgjZe" data-prefill='{"tags":[],"stylesheets":[],"scripts":[]}'>
+<div class="codepen" data-height="400" data-theme-id="6054" data-default-tab="css,result" data-user="matuzo" data-slug-hash="QYgjZe" data-prefill='{"tags":[],"stylesheets":[],"scripts":[]}'>
   <pre data-lang="html">&lt;section>
   &lt;h2>Pink Floyd discography&lt;/h2>
   
@@ -172,6 +172,7 @@ li {
 }</pre>
   
 </div>
+<script async src="https://static.codepen.io/assets/embed/ei.js"></script>
 
 
 Doesn’t exactly look as expected. Only direct child items of the grid container will align with the grid. In our example, the `h2` and the `ul` but we want all the `li` to fill cells in the grid.
