@@ -24,7 +24,7 @@ Grid offers many ways of building layouts and it challenges us to rethink the wa
 
 This series of articles will give you an overview of the dangerous features of the specification, or in other words, the dark side of the grid.
 
-<div class="demo js-demo"> 
+<div class="demo u-full-width js-demo"> 
   <div class="a-title">
     <div class="a-title-white-light"></div>
     <div class="a-title-grid"><div class="a-title-grid-inner"></div></div>
@@ -49,7 +49,7 @@ This series of articles will give you an overview of the dangerous features of t
 
 CSS Grid Layout is a grid-based layout system designed for two-dimensional layouts. It’s the first true layout method in CSS, properties like `float`, `display: inline-block`, `position`, and `display: table` were originally not intended for building layouts.
 
-<div class="demo js-demo"> 
+<div class="demo u-full-width js-demo"> 
 <ul class="a-layout">
   <li class="a-layout__item"></li>
   <li class="a-layout__item"></li>
@@ -81,7 +81,7 @@ Before we dive into the dark side of the grid, I shortly have to address the nam
 Now you might think I’m a huge Pink Floyd fan. Well, I’m sorry to disappoint you, I’m not, I just like the design. However, I can’t borrow their design without telling you about them. Therefore, I present to you **Pink Floyd Fact #1**.
 
 
-<div class="fact">
+<div class="fact u-full-width">
 <div class="fact__inner">
 <h2>Pink Floyd Fun Fact #1</h2>
 <p>The Dark Side of the Moon is, with over 45 million copies sold, the <a href="https://en.wikipedia.org/wiki/List_of_best-selling_albums" rel="noopener">fourth best-selling album worldwide</a>.Only Back in Black by AC/DC (50 Million), Their Greatest Hits (1971–1975) by Eagles (51 Million) and, *of course*, Thriller by Michael Jackson (66 Million) have sold more often.</p>
