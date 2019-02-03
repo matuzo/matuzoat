@@ -62,7 +62,7 @@ CSS Grid Layout is a grid-based layout system designed for two-dimensional layou
 </ul>
 </div>
 
-Of course, there’s Flexbox but its strength lies in distributing available space and placing items *either* vertically or horizontally. Flexbox loses a lot of its flexibility as soon as you’re applying `flex-wrap` and add widths to your flex items.
+Of course, there’s Flexbox but its strength lies in distributing available space and placing items _either_ vertically or horizontally. Flexbox loses a lot of its flexibility as soon as you’re applying `flex-wrap` and add widths to your flex items.
 
 <figure>
 <blockquote>If you are adding widths to all your flex items, you probably need grid.
@@ -76,12 +76,10 @@ Rachel Andrew | <a href="(https://www.youtube.com/watch?v=tjHOLtouElA" rel="noop
 
 If you’re new to CSS Grid Layout, I suggest you checkout [gridbyexample](https://gridbyexample.com/) by Rachel Andrews or [Grid Garden](http://cssgridgarden.com) before you continue reading.
 
-
 ## Name and theme of this article
 
 Before we dive into the dark side of the grid, I shortly have to address the name and theme of this article. They’re based on the LP [The Dark Side of the Moon](https://en.wikipedia.org/wiki/The_Dark_Side_of_the_Moon) by [Pink Floyd](https://de.wikipedia.org/wiki/Pink_Floyd), released in 1973. 
 Now you might think I’m a huge Pink Floyd fan. Well, I’m sorry to disappoint you, I’m not, I just like the design. However, I can’t borrow their design without telling you about them. Therefore, I present to you **Pink Floyd Fact #1**.
-
 
 <div class="fact u-full-width">
 <div class="fact__inner">
@@ -107,7 +105,7 @@ Rachel Andrew | <a href="(https://www.rachelandrew.co.uk/archives/2015/07/28/mod
 
 I’ll show you why in a simple example. Let’s say we have a `section` with a heading and a list of items.
 
-``` html
+```html
 <section>
   <h2>Pink Floyd discography</h2>
   
@@ -126,7 +124,7 @@ I’ll show you why in a simple example. Let’s say we have a `section` with a 
 
 The section forms a 3-column grid. The heading should span all columns and each li should fill one cell.
 
-``` html
+```html
 // Set display to grid, add 3 even columns and add 20px spacing
 section {
   display: grid;
@@ -143,11 +141,11 @@ h2 {
 Doesn’t exactly look as expected. Only direct child items of the grid container will align with the grid. In our example, the `h2` and the `ul` but we want all the `li` to fill cells in the grid.
 Okay, let’s try to fix that.
 
-### Solutions #1: Flattening the document structure.
+### Solution #1: Flattening the document structure.
 
 If the placement algorithm only effects direct child items, we’ll just make our `li` direct child items by removing the `ul` and transforming the `li` to `div`s to avoid invalid HTML. This is a solution, but it’s a bad solution because we’re compromising on semantics for design reasons.
 
-``` html
+```html
 <section>
   <h2>Pink Floyd discography</h2>
   
@@ -162,7 +160,7 @@ If the placement algorithm only effects direct child items, we’ll just make ou
 </section>
 ```
 
-Flattening the document structure may have bad effects on the semantics of your document which is especially bad for screen reader users. For example, when you’re using a list, screen readers usually announce the number of list items which helps with navigation and overview.
+Flattening the document structure may have bad effects on the semantics of your document which is especially bad for screen reader users. For example, when you’re using a list, [screen readers usually announce the number of list items](https://www.scottohara.me/blog/2019/01/12/lists-and-safari.html) which helps with navigation and overview.
 Also, the document might be harder to read when displayed without CSS.
 
 <div class="info">
@@ -173,3 +171,21 @@ Why would someone disable CSS?</h3>
 </div>
 
 Please don’t flatten document structures.
+
+### Solution #2: Creating a subgrid
+
+The arguably best solution would be to use [subgrids](https://www.w3.org/TR/css-grid-2/#subgrids). A grid item can itself be a grid container with its own column and row definitions. It can also be a grid container but defer the definitions of rows and columns to its parent grid container.
+
+```html
+ul {
+  display: grid;
+  grid-template-columns: subgrid;
+}
+```
+
+By setting the value of `grid-template-columns` to `subgrid` on the unordered list, the list items now align with the parent grid. This is super cool!
+
+Unfortunately, support for subgrid is so bad, it doesn’t even have a [caniuse page](https://caniuse.com/#search=subgrid). Subgrids are part of [level 2 of the CSS Grid Layout specification](https://www.w3.org/TR/css-grid-2/#subgrids) which is still a working draft.
+
+![](articles/s_B782E7B1F35388692E5B4FD985531DE5ABBF6EAD14964927E69E4CE6006AEDE1_1547011977841_Screen_Shot_2019-01-09_at_06.32.36.png)
+At the moment, subgrids aren’t a standard yet and not supported in any browser.
