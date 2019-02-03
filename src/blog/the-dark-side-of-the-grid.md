@@ -146,6 +146,7 @@ section {
 }
 
 /* Make the heading span all 3 columns */
+
 h2 {
   grid-column: 1 / -1;
 }
@@ -161,7 +162,6 @@ ul {
   margin: 0;
   padding: 0;
 }
-
 li {
   outline: 1px solid #ffffff;
 }
