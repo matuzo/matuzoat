@@ -156,7 +156,7 @@ h2 {
 body {
   background: #000000;
   color: #FFFFFF;
-  font-family: inherit;
+  font-family: "Inria Sans", 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
 }
 
 
@@ -167,7 +167,7 @@ ul {
 }
 
 li {
-  outline: 1px solid #000000;
+  outline: 1px solid #FFFFFF;
 }</pre>
   
 </div>
