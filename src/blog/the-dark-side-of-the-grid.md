@@ -124,7 +124,7 @@ I’ll show you why in a simple example. Let’s say we have a `section` with a 
 
 The section forms a 3-column grid. The heading should span all columns and each li should fill one cell.
 
-<div class="codepen" data-height="300" data-theme-id="6054" data-default-tab="html,result" data-user="matuzo" data-slug-hash="QYgjZe" data-preview="true" data-editable="true" data-prefill='{"tags":[],"stylesheets":[],"scripts":[]}'>
+<div class="codepen" data-height="300" data-theme-id="6054" data-default-tab="css,result" data-user="matuzo" data-slug-hash="QYgjZe" data-prefill='{"tags":[],"stylesheets":[],"scripts":[]}'>
   <pre data-lang="html">&lt;section>
   &lt;h2>Pink Floyd discography&lt;/h2>
   
@@ -149,9 +149,30 @@ section {
 // Make the heading span all 3 columns
 h2 {
   grid-column: 1 / -1;
+}
+
+
+
+
+body {
+  background: #000000;
+  color: #FFFFFF;
+  font-family: inherit;
+}
+
+
+ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+li {
+  outline: 1px solid #000000;
 }</pre>
   
 </div>
+
 
 Doesn’t exactly look as expected. Only direct child items of the grid container will align with the grid. In our example, the `h2` and the `ul` but we want all the `li` to fill cells in the grid.
 Okay, let’s try to fix that.
