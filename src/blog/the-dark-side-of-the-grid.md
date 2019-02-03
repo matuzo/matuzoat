@@ -208,8 +208,6 @@ An alternative to using subgrids is a different property that has a similar effe
 
 In our example this causes the list items to take part in the alignment of the `sections` grid because for them the parent `ul` doesn’t exist anymore. This is exactly what we want, and it works perfectly fine but, yeah I’m sorry, there’s a _but_, Edge doesn’t support it. The lack of support per se isn’t the issue but rather why it’s not supported. There’s a bug in Chrome, Opera, and Safari that removes an element with a `display` value of `contents` from the accessibility tree [making it inaccessible to screen reader users](http://adrianroselli.com/2018/05/display-contents-is-not-a-css-reset.html). It’s like applying `display: none`, the element just doesn’t exist anymore for assistive technology.
 
-![]()
-
 <figure class="figure figure--full">
 <img src="https://res.cloudinary.com/dp3mem7or/image/upload/v1549211279/articles/Screen_Shot_2019-02-03_at_17.26.50.png" alt="" />
 <figcaption>
@@ -234,7 +232,7 @@ As already mentioned, a grid item can also be a grid container. We can select th
 
 Nesting grids isn’t a perfect solution and sometimes it might not work but in this simple example it’s good enough.
 
-**Recap**
+### Recap
 The situation regarding sub-grids is anything but perfect. The `subgrid` value isn’t a standard yet, `display: contents` is buggy, and nesting grids will only work in specific use cases. If you see yourself compromising on semantics just to use CSS Grid Layout, don’t use it or try to workaround the problem until browsers fix the `display: contents` bug or ship subgrids.
 
 This was part 1 of the dark side of the grid. In part two I’ll show you how easy it is to confuse users unintentionally, why it’s bad and how to avoid it.
