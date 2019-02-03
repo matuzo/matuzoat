@@ -124,25 +124,34 @@ I’ll show you why in a simple example. Let’s say we have a `section` with a 
 
 The section forms a 3-column grid. The heading should span all columns and each li should fill one cell.
 
-<div 
-  class="codepen" 
-  data-prefill 
-  data-height="400" 
-  data-default-tab="html,result" 
->
-<pre data-lang="html">
-// Set display to grid, add 3 even columns and add 20px spacing
+<div class="codepen" data-height="300" data-theme-id="6054" data-default-tab="html,result" data-user="matuzo" data-slug-hash="QYgjZe" data-prefill='{"tags":[],"stylesheets":[],"scripts":[]}'>
+  <pre data-lang="html">&lt;section>
+  &lt;h2>Pink Floyd discography&lt;/h2>
+  
+  &lt;ul>
+    &lt;li>The Piper at the Gates of Dawn&lt;/li>
+    &lt;li>A Saucerful of Secrets&lt;/li>
+    &lt;li>More&lt;/li>
+    &lt;li>Ummagumma&lt;/li>
+    &lt;li>Atom Heart Mother&lt;/li>
+    &lt;li>Meddle&lt;/li>
+    &lt;li>Obscured by Clouds&lt;/li>
+    &lt;li>The Dark Side of the Moon&lt;/li>
+  &lt;/ul>
+&lt;/section></pre>
+  <pre data-lang="scss" >// Set display to grid, add 3 even columns and add 20px spacing
 section {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   grid-gap: 20px;
 }
 
+
 // Make the heading span all 3 columns
 h2 {
   grid-column: 1 / -1;
-}
-</pre>
+}</pre>
+  
 </div>
 <script async src="https://static.codepen.io/assets/embed/ei.js"></script>
 
