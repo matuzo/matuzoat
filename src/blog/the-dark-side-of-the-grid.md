@@ -106,3 +106,21 @@ Rachel Andrew | <a href="(https://www.rachelandrew.co.uk/archives/2015/07/28/mod
 </figure>
 
 I’ll show you why in a simple example. Let’s say we have a `section` with a heading and a list of items.
+
+``` html
+
+<section>
+  <h2>Pink Floyd discography</h2>
+  
+  <ul>
+    <li>The Piper at the Gates of Dawn</li>
+    <li>A Saucerful of Secrets</li>
+    <li>More</li>
+    <li>Ummagumma</li>
+    <li>Atom Heart Mother</li>
+    <li>Meddle</li>
+    <li>Obscured by Clouds</li>
+    <li>The Dark Side of the Moon</li>
+  </ul>
+</section>
+```
