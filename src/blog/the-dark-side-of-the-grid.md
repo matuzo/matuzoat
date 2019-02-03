@@ -187,6 +187,9 @@ By setting the value of `grid-template-columns` to `subgrid` on the unordered li
 
 Unfortunately, support for subgrid is so bad, it doesn’t even have a [caniuse page](https://caniuse.com/#search=subgrid). Subgrids are part of [level 2 of the CSS Grid Layout specification](https://www.w3.org/TR/css-grid-2/#subgrids) which is still a working draft.
 
-![https://res.cloudinary.com/dp3mem7or/image/upload/v1549208913/articles/s_B782E7B1F35388692E5B4FD985531DE5ABBF6EAD14964927E69E4CE6006AEDE1_1547011977841_Screen_Shot_2019-01-09_at_06.32.36.png]()
-
+<figure>
+![](https://res.cloudinary.com/dp3mem7or/image/upload/v1549208913/articles/s_B782E7B1F35388692E5B4FD985531DE5ABBF6EAD14964927E69E4CE6006AEDE1_1547011977841_Screen_Shot_2019-01-09_at_06.32.36.png)
+<footer>
 At the moment, subgrids aren’t a standard yet and not supported in any browser.
+</footer>
+</figure>
