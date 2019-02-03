@@ -138,7 +138,7 @@ The section forms a 3-column grid. The heading should span all columns and each 
     &lt;li>The Dark Side of the Moon&lt;/li>
   &lt;/ul>
 &lt;/section></pre>
-  <pre data-lang="scss" >// Set display to grid, add 3 even columns and add 20px spacing
+  <pre data-lang="css" >// Set display to grid, add 3 even columns and add 20px spacing
 section {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -153,17 +153,17 @@ h2 {
 
 
 
+
 body {
-  background: #000000;
-  color: #FFFFFF;
-  font-family: "Inria Sans", sans-serif;
+    background: #000000;
+    color: #FFFFFF;
+    font-family: "Inria Sans", sans-serif;
 }
 
-
 ul {
-  list-style: none;
-  margin: 0;
-  padding: 0;
+    list-style: none;
+    margin: 0;
+    padding: 0;
 }
 
 li {
