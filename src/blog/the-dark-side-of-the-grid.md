@@ -154,17 +154,7 @@ h2 {
 
 
 
-body {
-    background: #000000;
-    color: #FFFFFF;
-    font-family: "Inria Sans", sans-serif;
-}
-
-ul {
-    list-style: none;
-    margin: 0;
-    padding: 0;
-}
+body {  background: #000000;    color: #FFFFFF;    font-family: "Inria Sans", sans-serif;}ul {    list-style: none;    margin: 0;    padding: 0;}
 
 li {
   outline: 1px solid #FFFFFF;
