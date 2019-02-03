@@ -154,10 +154,9 @@ body {
   background: #000000;
   color: #ffffff;
   font-family: 'Inria Sans', sans-serif;
-}
-
+}   
 ul {
-             list-style: none;
+  list-style: none;
   margin: 0;
   padding: 0;
 }  
