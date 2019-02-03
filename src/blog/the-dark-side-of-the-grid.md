@@ -89,3 +89,15 @@ Now you might think I’m a huge Pink Floyd fan. Well, I’m sorry to disappoint
 <p>The Dark Side of the Moon is, with over 45 million copies sold, the <a href="https://en.wikipedia.org/wiki/List_of_best-selling_albums" rel="noopener">fourth best-selling album worldwide</a>.Only <em>Back in Black</em> by AC/DC (50 Million), <em>Their Greatest Hits</em> (1971–1975) by Eagles (51 Million) and, <em>of course</em>, <em>Thriller</em> by Michael Jackson (66 Million) have sold more often.</p>
 </div>
 </div>
+
+## Compromising on Semantics
+
+Even before grid shipped in any browser, experts like Rachel Andrew have already feared that developers will compromise on semantics and flatten out document structures to use CSS Grid. 
+
+
+> I believe there will be a strong temptation, especially with Grid, to flatten out document structure in order that all elements become a child of the element with the Grid declared.
+> Making layout simple, but at what cost?
+
+Rachel Andrew in Modern CSS Layout, power and responsibility
+
+I’ll show you why in a simple example. Let’s say we have a `section` with a heading and a list of items.
