@@ -150,15 +150,22 @@ h2 {
   grid-column: 1 / -1;
 }
 
+body {
+  background: #000000;
+  color: #ffffff;
+  font-family: 'Inria Sans', sans-serif;
+}
 
-
-
-
-body {  background: #000000;    color: #FFFFFF;    font-family: "Inria Sans", sans-serif;}ul {    list-style: none;    margin: 0;    padding: 0;}
+ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
 
 li {
-  outline: 1px solid #FFFFFF;
-}</pre>
+  outline: 1px solid #ffffff;
+}
+</pre>
   
 </div>
 
