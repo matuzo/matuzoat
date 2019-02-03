@@ -192,7 +192,7 @@ Please don’t flatten document structures.
 
 The arguably best solution would be to use [subgrids](https://www.w3.org/TR/css-grid-2/#subgrids). A grid item can itself be a grid container with its own column and row definitions. It can also be a grid container but defer the definitions of rows and columns to its parent grid container.
 
-```html
+```css
 ul {
   display: grid;
   grid-template-columns: subgrid;
@@ -216,7 +216,7 @@ Use subgrids as soon as they’re available.
 
 An alternative to using subgrids is a different property that has a similar effect. If you set the `display` value of an element to `contents`, it will act as if it got replaced by its child items.
 
-```html
+```css
   ul {
     display: contents;
   }
@@ -237,7 +237,7 @@ Edge doesn’t support display: contents because to an accessibility bug in Chro
 
 As already mentioned, a grid item can also be a grid container. We can select the unordered list, make it span the whole width, and inherit values from the parent grid.
 
-```html
+```css
   ul {
     grid-column: 1 / -1;
     display: inherit;
