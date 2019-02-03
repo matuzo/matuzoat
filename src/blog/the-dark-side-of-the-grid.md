@@ -108,7 +108,6 @@ Rachel Andrew | <a href="(https://www.rachelandrew.co.uk/archives/2015/07/28/mod
 I’ll show you why in a simple example. Let’s say we have a `section` with a heading and a list of items.
 
 ``` html
-
 <section>
   <h2>Pink Floyd discography</h2>
   
@@ -124,3 +123,53 @@ I’ll show you why in a simple example. Let’s say we have a `section` with a 
   </ul>
 </section>
 ```
+
+The section forms a 3-column grid. The heading should span all columns and each li should fill one cell.
+
+``` html
+// Set display to grid, add 3 even columns and add 20px spacing
+section {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 20px;
+}
+
+// Make the heading span all 3 columns
+h2 {
+  grid-column: 1 / -1;
+}
+```
+
+Doesn’t exactly look as expected. Only direct child items of the grid container will align with the grid. In our example, the `h2` and the `ul` but we want all the `li` to fill cells in the grid.
+Okay, let’s try to fix that.
+
+### Solutions #1: Flattening the document structure.
+
+If the placement algorithm only effects direct child items, we’ll just make our `li` direct child items by removing the `ul` and transforming the `li` to `div`s to avoid invalid HTML. This is a solution, but it’s a bad solution because we’re compromising on semantics for design reasons.
+
+``` html
+<section>
+  <h2>Pink Floyd discography</h2>
+  
+  <div>The Piper at the Gates of Dawn</div>
+  <div>A Saucerful of Secrets</div>
+  <div>More</div>
+  <div>Ummagumma</div>
+  <div>Atom Heart Mother</div>
+  <div>Meddle</div>
+  <div>Obscured by Clouds</div>
+  <div>The Dark Side of the Moon</div>
+</section>
+```
+
+Flattening the document structure may have bad effects on the semantics of your document which is especially bad for screen reader users. For example, when you’re using a list, screen readers usually announce the number of list items which helps with navigation and overview.
+Also, the document might be harder to read when displayed without CSS.
+
+<div class="info">
+<h3><span class="info__heading">Wait! What?</span>
+Why would someone disable CSS?</h3>
+
+<p>It’s unlikely that users disable CSS on purpose but sometimes an error occurs or the connection is just so slow that only the HTML displays successfully. If you’ve ever been on vacation in Italy and had to use a public WIFI, you know what I’m talking about.</p>
+</div>
+
+Please don’t flatten document structures.
