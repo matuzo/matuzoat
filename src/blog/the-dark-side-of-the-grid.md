@@ -36,16 +36,16 @@ This series of articles will give you an overview of the dangerous features of t
 
 ## Overview
 
-1. [What’s CSS Grid Layout? (part 1)](whats-grid)
-2. [Name and theme of this article (part 1)](#name-theme)
-3. [Pink Floyd Fun Fact 1 (part 1)](floyd-1)
-4. [Compromising on Semantics (part 1)](semantics)
-5. Pink Floyd Fun Fact 2 (part 2)
-6. Changing Visual Order (part 2)
-7. Cross Browser Support (part 3)
-8. Pink Floyd Fun Fact 3 (part 3)
-9. Whose responsibility is it? (part 3)
-10. Pink Floyd Fun Fact 4 (part 3)
+1. [What’s CSS Grid Layout?](whats-grid)
+2. [Name and theme of this article](#name-theme)
+3. [Pink Floyd Fun Fact 1](floyd-1)
+4. [Compromising on Semantics](semantics)
+5. Pink Floyd Fun Fact 2
+6. Changing Visual Order
+7. Cross Browser Support
+8. Pink Floyd Fun Fact 3
+9. Whose responsibility is it?
+10. Pink Floyd Fun Fact 4
 
 <hr>
 
