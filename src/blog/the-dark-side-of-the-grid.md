@@ -74,7 +74,7 @@ Rachel Andrew | <a href="https://www.youtube.com/watch?v=tjHOLtouElA" rel="noope
 </footer>
 </figure>
 
-If you’re new to CSS Grid Layout, I suggest you checkout [gridbyexample](https://gridbyexample.com/) by Rachel Andrew or [Grid Garden](http://cssgridgarden.com) before you continue reading.
+This article assumes that you have at least a basic knowledge of CSS Grid Layout. If you're new to the topic, I suggest you checkout [gridbyexample](https://gridbyexample.com/) by [Rachel Andrew](https://twitter.com/rachelandrew) or [Grid Garden](http://cssgridgarden.com) before you continue reading.
 
 ## Name and theme of this article
 
