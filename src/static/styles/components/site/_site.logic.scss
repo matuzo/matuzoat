@@ -1,3 +1,5 @@
+
+
 .site {
   --site-padding: 0;
 
@@ -6,7 +8,7 @@
   --header-height: auto;
   --header-separator-margin: #{$spacing};
   --header-layout: flex;
-  --header-padding: #{($spacing + $site-corner) (($spacing / 2) + $site-corner) $spacing};
+  --header-padding: #{($spacing + $site-corner) $content-padding $spacing};
   --header-text-align: left;
   --header-margin: 0;
 
@@ -18,7 +20,7 @@
   --separator-width: 100%;
   --separator-display: block;
 
-  --content-padding: #{0 (($spacing / 2) + $site-corner) $spacing};
+  --content-padding: #{0 $content-padding $spacing};
   --font-size: 1.8rem;
   
   --logo-margin: 0 #{$spacing} 0 0;
@@ -59,13 +61,13 @@
     --body-line-height: 1.8;
   
     --separator-width: 12rem;
-    --content-padding: #{$spacing ($spacing + $site-corner) $spacing 0};
+    --content-padding: #{$spacing $content-padding-large $spacing 0};
     --logo-margin: #{0 0 $spacing * 1.333 0};
   }
 
   @include mq(xl) {
     --header-padding: #{($spacing * 2)  0 $spacing ($spacing * 2)};
-    --content-padding: #{($spacing * 2) - $site-corner ($spacing * 2) $spacing 0};
+    --content-padding: #{($spacing * 2) - $site-corner $content-padding-xlarge $spacing 0};
     --body-gap: #{$spacing / 2 $spacing * 3};
   }
 }

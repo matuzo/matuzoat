@@ -5,3 +5,22 @@
 img {
   max-width: 100%;
 }
+
+p {
+  code {
+    background: $c-prim;
+    border-radius: 3px;
+    color: $c-light;
+    font-weight: bold;
+    font-size: 1.6rem;
+    padding: 0.2rem 0.2rem 0.1rem;
+
+    @include mq(m) {
+      font-size: 2rem;
+    }
+  }
+}
+
+ol {
+  list-style-type: decimal-leading-zero;
+}

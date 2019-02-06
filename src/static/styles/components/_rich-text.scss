@@ -1,27 +1,63 @@
 .rich-text {
+  --rich-text-margin: #{$spacing / 1.8};
+  --rich-text-margin-large: #{$spacing};
+
+  @include mq(xwide) {
+    --rich-text-margin: #{$spacing / 1.4};
+    --rich-text-margin-large: #{$spacing * 1.5};
+  }
+}
+
+.rich-text {
+  h2 {
+    @include heading-2;
+    margin: 0 0 $spacing / 2;
+
+    &:not(:first-child) {
+      margin-top: $spacing * 1.5;
+    }
+  }
+
+  h3 {
+    margin-top: $spacing;
+    margin-bottom: $spacing / 3;
+    line-height: 1.3;
+  }
+
+  h4 {
+    margin-top: $spacing;
+    margin-bottom: 0;
+  }
+
   p {
     margin-top: 0;
 
     @supports (font-size: var(--test)) {
       max-width: 60ch;
     }
+
+    &:last-child {
+      margin-bottom: 0;
+    }
   }
 
   & > * + * {
-    margin-bottom: $spacing / 1.5;
+    margin-bottom: var(--rich-text-margin);
   }
-  
-  a {
-    // font-weight: bold;
 
+  & > ul {
+    margin-bottom: var(--rich-text-margin-large);
+  }
+
+  a {
     @include link {
       @include underline(3px, currentColor);
 
       color: $c-sec-dark;
       text-decoration: none;
-      transition: all 0.2s cubic-bezier(.47,0,.74,.71);
+      transition: all 0.2s cubic-bezier(0.47, 0, 0.74, 0.71);
     }
-  
+
     &:hover {
       @include underline(3px, $c-highlight);
 

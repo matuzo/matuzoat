@@ -2,7 +2,7 @@
 layout: layouts/base.njk
 ---
 
-<article class="blog__content rich-text">
+<article class="blog__post rich-text">
   <header class="blog__header">
     <h1 class="blog__heading h1">{{ title }}</h1>
 
@@ -17,12 +17,12 @@ layout: layouts/base.njk
     </div>
   {% endif %}
 
-  <div class="blog__teaser">
+  <div class="blog__teaser {% if content %}blog__teaser--aligned{% endif %}">
     {{ teaser | md | safe }}
   </div>
 
   {% if content %}
-    <div class="content">
+    <div class="blog__content content rich-text">
       {{ content | safe }}
     </div>
   {% else %}

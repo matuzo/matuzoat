@@ -31,6 +31,10 @@ $base-line: 1.7;
 $spacing: $base-line * 2.5rem;
 $site-corner: 1rem;
 $site-min-height: 590px;
+$content-padding: (($spacing / 2) + $site-corner);
+$content-padding-large: ($spacing + $site-corner);
+$content-padding-xlarge: ($spacing * 2);
+
 
 // Z-indices
 
@@ -44,5 +48,6 @@ $mq-breakpoints: (
     m: 480px,
     l: 768px,
     xl: 1024px,
-    wide: 1300px
+    wide: 1300px,
+    xwide: 1550px
 );

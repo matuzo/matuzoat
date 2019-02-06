@@ -1,6 +1,24 @@
+@mixin heading-2 {
+  align-items: center;
+  display: flex;
+  font-size: var(--h2-font-size);
+  line-height: 1;
+
+  &::before {
+    background: $c-highlight-light;
+    content: '';
+    display: block;
+    flex-shrink: 0;
+    height: $spacing / 3;
+    margin-right: $spacing / 4;
+    width: $spacing / 2;
+  }
+}
+
+
 .h1 {
   display: inline-block;
-  font-size: var(--font-size);
+  font-size: var(--h1-font-size);
   line-height: 1.4;
   margin: 0 0 $spacing;
   padding: var(--padding);
@@ -35,18 +53,10 @@
 }
 
 .h2 {
-  align-items: center;
-  display: flex;
-  font-size: 2.2rem;
-  line-height: 1;
+  @include heading-2;
+}
 
-  &::before {
-    background: $c-highlight-light;
-    content: '';
-    display: block;
-    flex-shrink: 0;
-    height: $spacing / 3;
-    margin-right: $spacing / 4;
-    width: $spacing / 2;
-  }
+
+h3 {
+  font-size: var(--h3-font-size);
 }

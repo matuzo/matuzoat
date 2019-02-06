@@ -1,6 +1,16 @@
 .content {
+  --content-image-margin: -1rem;
+
+  @include mq(m) {
+    --content-image-margin: 0;
+  }
+}
+
+
+.content {
   &__image-wrapper {
     @include corner(1rem, 2rem);
+    margin: 0 -1rem;
     
     display: block;
   }

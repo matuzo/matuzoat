@@ -1,7 +1,9 @@
 .btn {
   background: $c-sec;
+  border: none;
   display: inline-block;
   font-family: inherit;
+  font-size: inherit;
   font-weight: bold;
   line-height: $base-line;
   overflow: hidden;
