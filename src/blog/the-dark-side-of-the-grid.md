@@ -112,7 +112,7 @@ Making layout simple, but at what cost?
 </blockquote>
 <footer>
 <cite>
-Rachel Andrew | <a href="(https://www.rachelandrew.co.uk/archives/2015/07/28/modern-css-layout-power-and-responsibility/" rel="noopener">Modern CSS Layout, power and responsibility</a>
+Rachel Andrew | <a href="https://www.rachelandrew.co.uk/archives/2015/07/28/modern-css-layout-power-and-responsibility/" rel="noopener">Modern CSS Layout, power and responsibility</a>
 </cite>
 </footer>
 </figure>
@@ -246,7 +246,7 @@ Edge doesn’t support display: contents due to an accessibility bug in Chrome, 
 The lack of support per se isn’t the issue but rather why it’s not supported. There’s a bug in Chrome, Opera, and Safari that removes an element with a `display` value of `contents` from the accessibility tree [making it inaccessible to screen reader users](http://adrianroselli.com/2018/05/display-contents-is-not-a-css-reset.html). It’s like applying `display: none`, the element just doesn’t exist anymore for assistive technology.
 
 <figure class="figure figure--full">
-<a href="https://res.cloudinary.com/dp3mem7or/image/upload/v1549444356/articles/contents_devtools.jpg" rel="noopener"><img src="https://res.cloudinary.com/dp3mem7or/image/upload/v1549444356/articles/contents_devtools.jpg" alt="The accessibility panel in Chrome DevTools." /></a>
+<a href="https://res.cloudinary.com/dp3mem7or/image/upload/v1549454338/articles/contents_devtools.jpg" rel="noopener"><img src="https://res.cloudinary.com/dp3mem7or/image/upload/v1549454338/articles/contents_devtools.jpg" alt="The accessibility panel in Chrome DevTools." /></a>
 <figcaption>
 The <code>ul</code> should have a <code>role</code> of <code>list</code> but inspecting the element shows that it's not exposed to the accessibility tree at all.
 </figcaption>
