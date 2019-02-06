@@ -1,5 +1,8 @@
 ---
 title: The Dark Side of the Grid (Part 1)
+meta-description: >-
+  CSS Grid Layout is one of the most exciting recent CSS specifications but it
+  also entails new dangers regarding user experience and accessibility.
 date: 2019-01-31T04:58:47.818Z
 image: articles/darksidesm.jpg
 intro: >-
