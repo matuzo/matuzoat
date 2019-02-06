@@ -1,95 +1,45 @@
-@mixin theme($theme, $content, $link, $linkactive, $logoletter: null, $logoletter2: null) {
-  $theme-bg: (
-    "24a11y": $theme-24a11y-bg,
-    "medium": $theme-medium-bg,
-    "smashing-magazine": $theme-smashing-magazine-bg,
-    "css-tricks": $theme-css-tricks-bg,
-    "a-list-apart": $theme-a-list-apart-bg,
-    "dark-side-of-the-grid": #000
+@include theme(
+  'smashing-magazine',
+  $c-light,
+  $c-highlight,
+  $c-light,
+  $c-highlight-light,
+  $c-light
+);
+@include theme('medium', $c-light, $c-highlight, $theme-medium-color) @include
+  theme(
+    '24a11y',
+    $c-light,
+    $c-light,
+    $c-highlight,
+    $c-highlight-light,
+    $c-light
   );
+@include theme('a-list-apart', $theme-a-list-apart-color, $c-sec, $c-highlight);
+@include theme(
+  'css-tricks',
+  $c-light,
+  $theme-css-tricks-color2,
+  $c-highlight,
+  $theme-css-tricks-color2,
+  $theme-css-tricks-color
+);
 
-  $theme-color: (
-    "24a11y": $theme-24a11y-color,
-    "medium": $theme-medium-color,
-    "smashing-magazine": $theme-smashing-magazine-color,
-    "css-tricks": $theme-css-tricks-color,
-    "a-list-apart": $theme-a-list-apart-color,
-    "dark-side-of-the-grid": $c-light
-  );
-  
-  
-  [data-theme*="#{$theme}"] {
-    body {
-      background: map-get($theme-bg, $theme);
-    }
-
-    .blog__header {
-      color: map-get($theme-color, $theme);
-    }
-  
-    .blog__content {
-      color: $content;
-    }
-  
-    .rich-text {
-      a:not(.no-line) {
-        @include link {
-          color: map-get($theme-color, $theme);
-          @include underline(4px, $link);
-        }
-  
-        @include link-active {
-          @include underline(4px, $linkactive);
-        }
-      }
-    }
-  
-    .nav-main__link {
-      & {
-        @include link {
-          color: map-get($theme-color, $theme)
-        } 
-  
-        @include link-active {
-          @include underline(4px, $link);
-        }
-      }
-  
-      &--active {
-        @include link {
-          @include underline(4px, $link);
-        }
-      }
+@include theme(
+  'dark-side-of-the-grid',
+  #fff,
+  #27d4f7,
+  #891aa8,
+  #ff3232,
+  #f4812e
+) {
+  .blog__heading {
+    &::before {
+      background: #fff430;
     }
 
-    @if ($logoletter) {
-      .logo__letter {
-        fill: $logoletter;
-    
-        &:nth-child(n+7):nth-child(-n+12) {
-          fill: $logoletter2;
-          stroke: transparent;
-        }
-      }
+    &::after {
+      border-color: #2da51a;
     }
-    
-    @content;
   }
 }
-
-@include theme('smashing-magazine', $c-light, $c-highlight, $c-light, $c-highlight-light, $c-light);
-@include theme('medium', $c-light, $c-highlight, $theme-medium-color)
-@include theme('24a11y', $c-light, $c-light, $c-highlight, $c-highlight-light, $c-light);
-@include theme('a-list-apart', $theme-a-list-apart-color, $c-sec, $c-highlight);
-@include theme('css-tricks', $c-light, $theme-css-tricks-color2, $c-highlight, $theme-css-tricks-color2, $theme-css-tricks-color);
-@include theme('dark-side-of-the-grid', #FFF, #27d4f7, #891aa8, #ff3232, #f4812e) {
-   .blog__heading {
-     &::before {
-       background: #fff430;
-     }
-
-     &::after {
-       border-color: #2da51a;
-     }
-   }
- }

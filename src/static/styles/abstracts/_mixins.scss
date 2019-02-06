@@ -101,3 +101,94 @@
     }
   }
 }
+
+// Theming
+
+@mixin theme($theme, $content, $link, $linkactive, $logoletter: null, $logoletter2: null) {
+  $theme-bg: (
+    "24a11y": $theme-24a11y-bg,
+    "medium": $theme-medium-bg,
+    "smashing-magazine": $theme-smashing-magazine-bg,
+    "css-tricks": $theme-css-tricks-bg,
+    "a-list-apart": $theme-a-list-apart-bg,
+    "dark-side-of-the-grid": #000
+  );
+
+  $theme-color: (
+    "24a11y": $theme-24a11y-color,
+    "medium": $theme-medium-color,
+    "smashing-magazine": $theme-smashing-magazine-color,
+    "css-tricks": $theme-css-tricks-color,
+    "a-list-apart": $theme-a-list-apart-color,
+    "dark-side-of-the-grid": $c-light
+  );
+  
+  
+  [data-theme*="#{$theme}"] {
+    body {
+      background: map-get($theme-bg, $theme);
+    }
+
+    .blog__header {
+      color: map-get($theme-color, $theme);
+    }
+  
+    .blog__post {
+      color: $content;
+    }
+  
+    .rich-text {
+      a:not(.no-line) {
+        @include link {
+          color: map-get($theme-color, $theme);
+          @include underline(4px, $link);
+        }
+  
+        @include link-active {
+          @include underline(4px, $linkactive);
+        }
+      }
+    }
+  
+    .nav-main__link {
+      & {
+        @include link {
+          color: map-get($theme-color, $theme)
+        } 
+  
+        @include link-active {
+          @include underline(4px, $link);
+        }
+      }
+  
+      &--active {
+        @include link {
+          @include underline(4px, $link);
+        }
+      }
+    }
+
+    @if ($logoletter) {
+      .logo__letter {
+        fill: $logoletter;
+    
+        &:nth-child(n+7):nth-child(-n+12) {
+          fill: $logoletter2;
+          stroke: transparent;
+        }
+      }
+    }
+    
+    @content;
+  }
+}
+
+@mixin blog-post-width {
+  @include mq(xl) {
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 81rem;
+
+    @content;
+  }
+}

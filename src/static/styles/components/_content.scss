@@ -12,7 +12,7 @@
     @include corner(1rem, 2rem);
     margin: 0 -1rem;
     
-    display: block;
+    display: inline-block;
   }
 
   &__image {

@@ -9,7 +9,7 @@ pre[class*='language-'] {
   background: none;
   color: $c-light;
   font-family: Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace;
-  font-size: 1.8rem;
+  font-size: 1.6rem;
   -webkit-hyphens: none;
   -moz-hyphens: none;
   -ms-hyphens: none;
@@ -34,7 +34,7 @@ pre[class*='language-'] {
 }
 
 pre[class*='language-css'] {
-  border-left-color: $c-sec;
+  border-left-color: $c-highlight-light;
 }
 
 :not(pre) > code[class*='language-'],
@@ -95,7 +95,6 @@ pre[class*='language-'] {
 .token.attr-value,
 .token.function {
   color: #ffd700;
-  
 }
 
 .token.keyword {
