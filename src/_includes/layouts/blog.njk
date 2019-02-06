@@ -26,20 +26,22 @@ layout: layouts/base.njk
       {{ content | safe }}
     </div>
   {% else %}
-    <p>
-      Read the full article on 
-      <a href="{{ url }}" rel="noopener" class="no-line" aria-hidden="true">
-        {% for pub in collections.publications %}
-          {% if publication == pub.data.title %}
-            <span class="post-list__image post-list__image--{{ publication | stringify | slug }} blog__publication">
-              <img src="{{ metadata.cloudinary }}/h_32/{{ pub.data.logo }}" data-no-lazy alt="" width="32" />
-            </span>
-          {% endif %}
-        {% endfor %}
-        </a>
-      <a href="{{ url }}" rel="noopener">
-        {{ publication}} 
-      </a>.
-    </p>
+    <div class="blog__content">
+      <p>
+        Read the full article on  
+        <a href="{{ url }}" rel="noopener" class="no-line" aria-hidden="true">
+          {% for pub in collections.publications %}
+            {% if publication == pub.data.title %}
+              <span class="post-list__image post-list__image--{{ publication | stringify | slug }} blog__publication">
+                <img src="{{ metadata.cloudinary }}/h_32/{{ pub.data.logo }}" data-no-lazy alt="" width="32" />
+              </span>
+            {% endif %}
+          {% endfor %}
+          </a>
+        <a href="{{ url }}" rel="noopener">
+          {{ publication}} 
+        </a>.
+      </p>
+    </div>
   {% endif %}
 </article>
