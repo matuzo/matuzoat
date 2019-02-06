@@ -93,7 +93,7 @@ The The Dark Side of the Moon LP in front of some other of my records.
 
 Now you might think I’m a huge Pink Floyd fan. Well, I’m sorry to disappoint you, I’m not, I just like the design. However, I can’t borrow their design without telling you about them.  
 
-Therefore, I present to you **Pink Floyd Fact #1**.
+Therefore, I present to you: **Pink Floyd Fact #1**.
 
 <div class="fact u-full-width">
 <div class="fact__inner">
@@ -117,7 +117,7 @@ Rachel Andrew | <a href="(https://www.rachelandrew.co.uk/archives/2015/07/28/mod
 </footer>
 </figure>
 
-I’ll show you why in a simple example.\
+I’ll show you why in a simple example\
 Let’s say we have a `section` with a heading and a list of items. 
 
 ```html
