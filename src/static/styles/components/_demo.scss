@@ -1,0 +1,33 @@
+.demo {
+  --demo-margin: #{ $spacing $content-padding * -1 };
+  --demo-content-margin: #{ $content-padding };
+  --demo-controls-margin: #{$spacing / 2};
+
+  @include mq(m) {
+    --demo-controls-margin: #{$spacing};
+  }
+
+  @include mq(l) {
+    --demo-margin: #{ $spacing 0 };
+    --demo-content-margin: 0;
+  }
+
+  @include mq(wide) {
+    --demo-margin: #{ $spacing * 1.5 0 };
+  }
+}
+
+
+.demo {
+  margin: var(--demo-margin);
+
+  &__btn {
+    margin-left: var(--demo-content-margin);
+  }
+
+  &__controls {
+    @include blog-post-width;
+
+    margin-top: var(--demo-controls-margin);
+  }
+}

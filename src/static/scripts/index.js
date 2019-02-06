@@ -1,6 +1,7 @@
 import Squares from './squares';
 import prefetchNav from './prefetch-nav';
 import lazyLoad from './lazyload';
+import enhanceDemos from './demo';
 require('focus-visible');
 
 if (!Element.prototype.closest) {
@@ -165,3 +166,12 @@ function loadPage(url) {
 
 // Lazy load images
 lazyLoad(document.querySelectorAll('img[data-src]'));
+
+/** 
+ * Enhance demos with JS
+ * Adds "Replay" Button
+ * Adds Intersection Observer to auto play animations 
+ */
+enhanceDemos();
+
+
