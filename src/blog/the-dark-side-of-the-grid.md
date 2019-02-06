@@ -85,6 +85,8 @@ Before we dive into the dark side of the grid, I shortly have to address the nam
 
 <figure class="figure figure--full">
 <img src="https://res.cloudinary.com/dp3mem7or/image/upload/v1549440257/articles/floyd.jpg" alt="" />
+
+
 <figcaption>
 The The Dark Side of the Moon LP in front of some other of my records.
 </figcaption>
