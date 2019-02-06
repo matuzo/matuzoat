@@ -141,7 +141,7 @@ Let’s say we have a `section` with a heading and a list of items.
 The section forms a 3-column grid, we want the heading to span all columns and each `li` should fill one cell.
 It should look something like this:
 
-![The headings spans the whole with and the list items are split in 3 columns](https://res.cloudinary.com/dp3mem7or/image/upload/v1549441106/articles/Screen_Shot_2019-02-06_at_09.14.05.png)
+[![The headings spans the whole with and the list items are split in 3 columns](https://res.cloudinary.com/dp3mem7or/image/upload/v1549441106/articles/Screen_Shot_2019-02-06_at_09.14.05.png)](https://res.cloudinary.com/dp3mem7or/image/upload/v1549441106/articles/Screen_Shot_2019-02-06_at_09.14.05.png)
 
 That shouldn't be too hard. We select the `section`, set `display` to `grid`, add 3 even columns, a `10px` gutter and we make the heading span all 3 columns.
 
@@ -246,9 +246,9 @@ Edge doesn’t support display: contents due to an accessibility bug in Chrome, 
 The lack of support per se isn’t the issue but rather why it’s not supported. There’s a bug in Chrome, Opera, and Safari that removes an element with a `display` value of `contents` from the accessibility tree [making it inaccessible to screen reader users](http://adrianroselli.com/2018/05/display-contents-is-not-a-css-reset.html). It’s like applying `display: none`, the element just doesn’t exist anymore for assistive technology.
 
 <figure class="figure figure--full">
-<img src="https://res.cloudinary.com/dp3mem7or/image/upload/v1549444356/articles/contents_devtools.jpg" alt="The accessibility panel in Chrome DevTools." />
+<a href="https://res.cloudinary.com/dp3mem7or/image/upload/v1549444356/articles/contents_devtools.jpg" rel="noopener"><img src="https://res.cloudinary.com/dp3mem7or/image/upload/v1549444356/articles/contents_devtools.jpg" alt="The accessibility panel in Chrome DevTools." /></a>
 <figcaption>
-The `ul` should have a `role` of `list` but inspecting the element shows that it's not exposed to the accessibility tree at all.
+The <code>ul</code> should have a <code>role</code> of <code>list</code> but inspecting the element shows that it's not exposed to the accessibility tree at all.
 </figcaption>
 </figure>
 
