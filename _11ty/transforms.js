@@ -1,5 +1,7 @@
 const htmlmin = require('html-minifier');
 const helpers = require('./helpers.js')
+var slugify = require('slugify');
+var headings = [];
 
 module.exports = {
   lazyload: (content, outputPath) => {
@@ -18,5 +20,17 @@ module.exports = {
         })
     }
     return content
+  },
+
+  anchors: (content, outputPath) => {
+    if( outputPath.includes('/blog/') ) {
+      return content.replaceAll(new RegExp("<h2>(.*)</h2>","i"), function(match, heading) {
+        var slug = slugify(heading, { lower: true, remove: /[*+~.()'"!?:@]/g });
+        headings.push([slug, heading]);
+      
+        return `<h2 id="${slug}">${heading}</h2>`;
+      });
+    }
+    return content;
   }
 }
