@@ -187,7 +187,7 @@
   @include mq(xl) {
     margin-left: auto;
     margin-right: auto;
-    max-width: 81rem;
+    max-width: $blog-post-width;
 
     @content;
   }

@@ -52,8 +52,13 @@
 
   &__header {
     @include blog-post-width {
+
+    }
+
+    @include mq(wide) {
       max-width: -moz-max-content;
       max-width: max-content;
+      min-width: $blog-post-width;
     }
 
     margin-bottom: var(--blog-header-margin);
@@ -129,6 +134,7 @@
 
     .content__image-wrapper {
       padding: 0;
+      margin: 0;
 
       &::before,
       &::after {
