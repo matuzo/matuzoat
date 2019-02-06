@@ -119,7 +119,7 @@ I’ll show you why in a simple example.\
 Let’s say we have a `section` with a heading and a list of items. The section forms a 3-column grid, we want the heading to span all columns and each `li` should fill one cell.
 It should look something like this:
 
-![The headings spans the whole with and the list items are split in 3 columns](articles/Screen_Shot_2019-02-06_at_09.14.05.png)
+![The headings spans the whole with and the list items are split in 3 columns](https://res.cloudinary.com/dp3mem7or/image/upload/v1549441106/articles/Screen_Shot_2019-02-06_at_09.14.05.png)
 
 ```html
 <section>
