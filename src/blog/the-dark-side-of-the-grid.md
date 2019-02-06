@@ -11,7 +11,7 @@ intro: >-
 teaser: >-
   **[CSS Grid Layout](https://www.w3.org/TR/css-grid-1/) is one of the most
   exciting recent CSS specifications because of its flexibility, extent, and
-  power. It makes our lives so much easier but it also entails new dangers
+  power. It makes our lives so much easier but it also creates new dangers
   regarding user experience and accessibility.**
 tags:
   - css
@@ -23,10 +23,10 @@ archive: false
 ---
 ## Preface
 
-It has already been two years since the first browsers, Chromium 57 and Firefox 52, shipped CSS Grid Layout unprefixed. Many developers have experimented with it or are using it in production already. More will come as soon as support for Internet Explorer 10 and 11 becomes less important.\
-Grid offers many ways of building layouts and it challenges us to rethink the way we approach them. This flexibility is great for our development experience but it may come at the cost of user experience and accessibility if we don’t use it responsibly.
+It has already been two years since the first browsers, Chromium 57 and Firefox 52, shipped CSS Grid Layout un-prefixed. Many developers have experimented with it or are using it in production already. More will come as soon as support for Internet Explorer 10 and 11 becomes less important.\
+Grid offers many ways of building layouts and it challenges us to rethink the way we approach them. This flexibility is great for our development experience, but it may come at the cost of user experience and accessibility if we don’t use it responsibly.
 
-This series of articles will give you an overview of the dangerous features of the specification, or in other words, the dark side of the grid.
+This series of articles will give you an overview of potential implementation pitfalls, or in other words, the dark side of the grid.
 
 <div class="demo u-full-width js-demo"> 
   <div class="a-title">
@@ -55,7 +55,7 @@ This series of articles will give you an overview of the dangerous features of t
 
 ## What’s CSS Grid Layout?
 
-CSS Grid Layout is a grid-based layout system designed for two-dimensional layouts. It’s the first true layout method in CSS, properties like `float`, `display: inline-block`, `position`, and `display: table` were originally not intended for building layouts.\
+CSS Grid Layout is a grid-based layout system designed for two-dimensional layouts. It’s the first true layout method in CSS. Properties like `float`, `display: inline-block`, `position`, and `display: table` were not originally intended for building layouts.\
 Grid is a great choice if you're not working on just one axis but one two axes.
 
 <div class="demo u-full-width js-demo"> 
@@ -69,7 +69,7 @@ Grid is a great choice if you're not working on just one axis but one two axes.
 </ul>
 </div>
 
-Of course, there’s Flexbox but its strength lies in distributing available space and placing items _either_ vertically or horizontally. Flexbox loses a lot of its flexibility as soon as you’re applying `flex-wrap` and add widths to your flex items.
+Of course, there’s Flexbox, but its strength lies in distributing available space and placing items _either_ vertically or horizontally. Flexbox loses a lot of its flexibility as soon as you’re applying `flex-wrap` and add widths to your flex items.
 
 <figure class="figure">
 <blockquote>If you are adding widths to all your flex items, you probably need grid.
@@ -85,13 +85,13 @@ This article assumes that you have at least a basic knowledge of CSS Grid Layout
 
 ## Name and theme of this article
 
-Before we dive into the dark side of the grid, I shortly have to address the name and theme of this article. They’re based on the LP [The Dark Side of the Moon](https://en.wikipedia.org/wiki/The_Dark_Side_of_the_Moon) by [Pink Floyd](https://de.wikipedia.org/wiki/Pink_Floyd), released in 1973. 
+Before we dive into the dark side of the grid, I wanted to quickly address the name and theme of this article. They’re based on the LP <a href="https://en.wikipedia.org/wiki/The_Dark_Side_of_the_Moon"><cite>The Dark Side of the Moon</cite></a> by [Pink Floyd](https://de.wikipedia.org/wiki/Pink_Floyd), released in 1973. 
 
 <figure class="figure figure--full">
-<a href="https://res.cloudinary.com/dp3mem7or/image/upload/v1549440257/articles/floyd.jpg" rel="noopener"><img src="https://res.cloudinary.com/dp3mem7or/image/upload/v1549440257/articles/floyd.jpg" alt=""></a>
+<a href="https://res.cloudinary.com/dp3mem7or/image/upload/v1549440257/articles/floyd.jpg" rel="noopener"><img src="https://res.cloudinary.com/dp3mem7or/image/upload/v1549440257/articles/floyd.jpg" alt="The “The Dark Side of the Moon LP” in front of some of my other records."></a>
 
 <figcaption>
-The “The Dark Side of the Moon LP” in front of some of my other records.
+I found this LP in a record store in Warsaw after talking about the dark side of the grid at Frontend Con 2018.
 </figcaption>
 </figure>
 
@@ -108,7 +108,7 @@ Therefore, I present to you: **Pink Floyd Fact #1**.
 
 ## Compromising on Semantics
 
-Even before grid shipped in any browser, experts like Rachel Andrew have already feared that developers will compromise on semantics and flatten out document structures to use CSS Grid. 
+Even before grid shipped in any browser, experts like Rachel Andrew were already fearful that developers would compromise on semantics and flatten out document structures to use CSS Grid. 
 
 <figure class="figure">
 <blockquote>I believe there will be a strong temptation, especially with Grid, to flatten out document structure in order that all elements become a child of the element with the Grid declared.<br />
@@ -142,12 +142,12 @@ Let’s say we have a `section` with a heading and a list of items.
 </section>
 ```
 
-The section forms a 3-column grid, we want the heading to span all columns and each `li` should fill one cell.
+The `section` forms a 3-column grid, we want the heading to span all columns, and each `li` should fill one cell.
 It should look something like this:
 
 [![The headings spans the whole with and the list items are split in 3 columns](https://res.cloudinary.com/dp3mem7or/image/upload/v1549441106/articles/Screen_Shot_2019-02-06_at_09.14.05.png)](https://res.cloudinary.com/dp3mem7or/image/upload/v1549441106/articles/Screen_Shot_2019-02-06_at_09.14.05.png)
 
-That shouldn't be too hard. We select the `section`, set `display` to `grid`, add 3 even columns, a `10px` gutter and we make the heading span all 3 columns.
+That shouldn't be too hard. We select the `section`, set `display: grid`, add 3 even columns, a `10px` gutter and we make the heading span all 3 columns.
 
 ```css
 section {
