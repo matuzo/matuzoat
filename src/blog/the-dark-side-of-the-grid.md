@@ -216,7 +216,7 @@ By setting the value of `grid-template-columns` to `subgrid` on the unordered li
 Unfortunately, support for subgrid is so bad, it doesn’t even have a [caniuse page](https://caniuse.com/#search=subgrid). Subgrids are part of [level 2 of the CSS Grid Layout specification](https://www.w3.org/TR/css-grid-2/#subgrids) which is still a working draft.
 
 <figure class="figure figure--full">
-<img src="https://res.cloudinary.com/dp3mem7or/image/upload/v1549208913/articles/s_B782E7B1F35388692E5B4FD985531DE5ABBF6EAD14964927E69E4CE6006AEDE1_1547011977841_Screen_Shot_2019-01-09_at_06.32.36.png" alt="" />
+<a href="https://res.cloudinary.com/dp3mem7or/image/upload/v1549208913/articles/s_B782E7B1F35388692E5B4FD985531DE5ABBF6EAD14964927E69E4CE6006AEDE1_1547011977841_Screen_Shot_2019-01-09_at_06.32.36.png" rel="noopener"><img src="https://res.cloudinary.com/dp3mem7or/image/upload/v1549208913/articles/s_B782E7B1F35388692E5B4FD985531DE5ABBF6EAD14964927E69E4CE6006AEDE1_1547011977841_Screen_Shot_2019-01-09_at_06.32.36.png" alt="" /></a>
 <figcaption>
 At the moment, subgrids aren’t a standard yet and not supported in any browser.
 </figcaption>
@@ -237,7 +237,7 @@ An alternative to using subgrids is a different property that has a similar effe
 In our example this causes the list items to take part in the alignment of the sections grid because for them the parent `ul` doesn’t exist anymore. This is exactly what we want, and it works perfectly fine but, yeah I’m sorry, there’s a _but_, Edge doesn’t support it.
 
 <figure class="figure figure--full">
-<img src="https://res.cloudinary.com/dp3mem7or/image/upload/v1549211279/articles/Screen_Shot_2019-02-03_at_17.26.50.png" alt="" />
+<a href="https://res.cloudinary.com/dp3mem7or/image/upload/v1549211279/articles/Screen_Shot_2019-02-03_at_17.26.50.png" rel="noopener"><img src="https://res.cloudinary.com/dp3mem7or/image/upload/v1549211279/articles/Screen_Shot_2019-02-03_at_17.26.50.png" alt="" /></a>
 <figcaption>
 Edge doesn’t support display: contents due to an accessibility bug in Chrome, Safari and Opera.
 </figcaption>
