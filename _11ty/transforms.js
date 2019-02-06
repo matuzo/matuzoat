@@ -1,3 +1,4 @@
+const htmlmin = require('html-minifier');
 const helpers = require('./helpers.js')
 
 module.exports = {
@@ -6,5 +7,16 @@ module.exports = {
       return content.replaceAll(new RegExp('<img src="(.*)>',"i"), '<span class="content__image-wrapper"><img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" class="content__image" data-src="$1></span>');
     }
     return content;
+  },
+
+  htmlmin: (content, outputPath) => {
+    if (process.env.ELEVENTY_ENV === 'production' && outputPath.endsWith('.html')) {
+        return htmlmin.minify(content, {
+            useShortDoctype: true,
+            removeComments: true,
+            collapseWhitespace: true
+        })
+    }
+    return content
   }
 }
