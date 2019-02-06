@@ -115,6 +115,26 @@ $dark-grid-animation-duration: 1s;
   }
 }
 
+@keyframes dark-grid-release-5 {
+  0% {
+    transform: $dark-grid-move-up;
+  }
+  
+  100% {
+    transform: none;
+  }
+}
+
+@keyframes dark-grid-release-6 {
+  0% {
+    transform: $dark-grid-move-up;
+  }
+
+  100% {
+    transform: none;
+  }
+}
+
 @keyframes dark-grid-release-x {
   100% {
     transform: $dark-grid-move-up;
@@ -313,9 +333,22 @@ $dark-grid-animation-duration: 1s;
         animation-name: dark-grid-release;
       }
 
-      .a-layout__item:nth-child(n + 4) {
+      .a-layout__item:nth-child(4) {
         animation: dark-grid-release-x $dark-grid-animation-duration,
-          dark-grid-release $dark-grid-animation-duration 1s;
+        dark-grid-release $dark-grid-animation-duration 1s;
+      }
+  
+      .a-layout__item:nth-child(5) {
+        animation: dark-grid-release-x $dark-grid-animation-duration,
+        dark-grid-release-5 $dark-grid-animation-duration 1s;
+      }
+  
+      .a-layout__item:nth-child(6) {
+        animation: dark-grid-release-x $dark-grid-animation-duration,
+        dark-grid-release-6 $dark-grid-animation-duration 1s;
+      }
+
+      .a-layout__item:nth-child(n + 4) {
         animation-fill-mode: forwards;
       }
     }
