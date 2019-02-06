@@ -9,14 +9,14 @@
 @import 'base/base';
 
 @import 'components/square-canvas';
+@import 'components/headings/headings.logic';
+@import 'components/headings/headings.fallback';
+@import 'components/headings/headings';
 @import 'components/rich-text';
 @import 'components/skip-links';
 @import 'components/site/site.logic';
 @import 'components/site/site.fallback';
 @import 'components/site/site';
-@import 'components/headings/headings.logic';
-@import 'components/headings/headings.fallback';
-@import 'components/headings/headings';
 @import 'components/button';
 @import 'components/footer';
 
@@ -38,7 +38,11 @@
 
 @import 'components/blog';
 @import 'components/content';
+@import 'components/demo';
+@import 'components/facts';
+@import 'components/figure';
 
+@import 'components/articles/dark-grid';
 @import 'components/theme';
 
 @import 'vendor/prism-matuzo';

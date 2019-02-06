@@ -1,0 +1,43 @@
+.fact {
+  --fact-margin: #{$spacing $content-padding * -1};
+  --fact-padding: #{$content-padding};
+  --fact-font-size: 2rem;
+  --fact-heading-font-size: 3rem;
+
+  @include mq(wide) {
+    --fact-margin: #{$spacing * 1.5};
+    --fact-padding: #{$spacing * 1.5};
+    --fact-font-size: 2.6rem;
+    --fact-heading-font-size: 4rem;
+  }
+}
+
+.rich-text .fact {
+  background-color: #2d2b0a;
+  color: $c-light;
+  font-size: var(--fact-font-size);
+  font-weight: bold;
+  padding: var(--fact-padding);
+  margin: var(--fact-margin);
+
+  @supports (background-blend-mode: multiply) {
+    background-image: url('/static/img/articles/pinkfloyd.jpg');
+    background-size: cover;
+    background-blend-mode: multiply;
+    background-position: center;
+  }
+
+  &__inner {
+    margin: 0 auto;
+    max-width: 90rem;
+  }
+
+  &__heading {
+    font-size: var(--fact-heading-font-size);
+    margin-bottom: $spacing / 1.5;
+
+    &::before {
+      display: none;
+    }
+  }
+}
