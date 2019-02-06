@@ -86,12 +86,10 @@ Before we dive into the dark side of the grid, I shortly have to address the nam
 <figure class="figure figure--full">
 <img src="https://res.cloudinary.com/dp3mem7or/image/upload/v1549440257/articles/floyd.jpg" alt="" />
 
-
 <figcaption>
 The The Dark Side of the Moon LP in front of some other of my records.
 </figcaption>
 </figure>
-
 
 Now you might think I’m a huge Pink Floyd fan. Well, I’m sorry to disappoint you, I’m not, I just like the design. However, I can’t borrow their design without telling you about them. Therefore, I present to you **Pink Floyd Fact #1**.
 
@@ -117,7 +115,11 @@ Rachel Andrew | <a href="(https://www.rachelandrew.co.uk/archives/2015/07/28/mod
 </footer>
 </figure>
 
-I’ll show you why in a simple example. Let’s say we have a `section` with a heading and a list of items.
+I’ll show you why in a simple example.\
+Let’s say we have a `section` with a heading and a list of items. The section forms a 3-column grid, we want the heading to span all columns and each `li` should fill one cell.
+It should look something like this:
+
+![The headings spans the whole with and the list items are split in 3 columns](articles/Screen_Shot_2019-02-06_at_09.14.05.png)
 
 ```html
 <section>
@@ -135,8 +137,6 @@ I’ll show you why in a simple example. Let’s say we have a `section` with a 
   </ul>
 </section>
 ```
-
-The section forms a 3-column grid. The heading should span all columns and each li should fill one cell.
 
 <p class="codepen" data-height="400" data-theme-id="6054" data-default-tab="result" data-user="matuzo" data-slug-hash="QYgjZe" style="height: 300px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid black; margin: 1em 0; padding: 1em;" data-pen-title="QYgjZe">
   <span>See the Pen <a href="https://codepen.io/matuzo/pen/QYgjZe/">
