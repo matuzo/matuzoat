@@ -61,15 +61,6 @@ const home_intro = new Squares({
     0,0,1,1,0,1`
 });
 
-const site_header = new Squares({
-  canvas: '.js-sq-site-header',
-  num_x: 'infinite',
-  num_y: 1,
-  size: 5,
-  color: '#1d4e6d',
-  fill: 'even'
-});
-
 /**
  * Random emoji
  */
