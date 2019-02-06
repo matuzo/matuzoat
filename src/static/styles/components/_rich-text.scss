@@ -55,7 +55,7 @@
 
       color: $c-sec-dark;
       text-decoration: none;
-      transition: all 0.2s cubic-bezier(0.47, 0, 0.74, 0.71);
+      transition: color 0.2s cubic-bezier(0.47, 0, 0.74, 0.71), font-size 0.2s cubic-bezier(0.47, 0, 0.74, 0.71);
     }
 
     &:hover {

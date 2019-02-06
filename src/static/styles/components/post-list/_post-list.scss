@@ -75,7 +75,7 @@
     margin: 0;
     padding: 0 1rem;
     transform-origin: left center;
-    transition: all 0.3s;
+    transition: transform 0.3s;
 
     #{$post-list-link}:hover &,
     #{$post-list-link}:focus & {
