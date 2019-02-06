@@ -102,67 +102,67 @@ if (document.querySelector('.js-scroll-top')) {
 
 prefetchNav();
 
-history.pushState(
-  { theme: location.pathname.replace(/\//g, '') },
-  location.pathname,
-  location.pathname
-);
+// history.pushState(
+//   { theme: location.pathname.replace(/\//g, '') },
+//   location.pathname,
+//   location.pathname
+// );
 
-function linkPostlist() {
-  event.preventDefault();
-  const link = event.target.closest('a');
-  const themeClass = `${link.dataset.publication}-${link.dataset.post}`;
-  document.documentElement.setAttribute('data-theme', themeClass);
-  history.pushState({ theme: themeClass }, link.href, link.href);
-  loadPage(link.href);
-}
+// function linkPostlist() {
+//   event.preventDefault();
+//   const link = event.target.closest('a');
+//   const themeClass = `${link.dataset.publication}-${link.dataset.post}`;
+//   document.documentElement.setAttribute('data-theme', themeClass);
+//   history.pushState({ theme: themeClass }, link.href, link.href);
+//   loadPage(link.href);
+// }
 
-if (document.querySelector('.js-post-list')) {
-  document
-    .querySelector('.js-post-list')
-    .addEventListener('click', linkPostlist);
-}
+// if (document.querySelector('.js-post-list')) {
+//   document
+//     .querySelector('.js-post-list')
+//     .addEventListener('click', linkPostlist);
+// }
 
-window.onpopstate = function(e) {
-  if (e.state) {
-    document.documentElement.setAttribute('data-theme', e.state.theme);
-    loadPage(location.pathname);
-  }
-};
+// window.onpopstate = function(e) {
+//   if (e.state) {
+//     document.documentElement.setAttribute('data-theme', e.state.theme);
+//     loadPage(location.pathname);
+//   }
+// };
 
-function loadPage(url) {
-  const main = document.querySelector('.js-site-content');
-  main.innerHTML = '';
-  main.classList.add('site__content--hidden');
+// function loadPage(url) {
+//   const main = document.querySelector('.js-site-content');
+//   main.innerHTML = '';
+//   main.classList.add('site__content--hidden');
 
-  var request = new XMLHttpRequest();
+//   var request = new XMLHttpRequest();
 
-  request.open('GET', url, true);
+//   request.open('GET', url, true);
 
-  request.onload = function() {
-    const container = document.createElement('div');
+//   request.onload = function() {
+//     const container = document.createElement('div');
 
-    if (this.status === 200) {
-      container.innerHTML = this.response;
-      main.innerHTML = container.querySelector('.js-site-content').innerHTML;
-      main.classList.remove('site__content--hidden');
-      if (main.querySelector('.js-post-list')) {
-        main
-          .querySelector('.js-post-list')
-          .addEventListener('click', linkPostlist);
-      }
+//     if (this.status === 200) {
+//       container.innerHTML = this.response;
+//       main.innerHTML = container.querySelector('.js-site-content').innerHTML;
+//       main.classList.remove('site__content--hidden');
+//       if (main.querySelector('.js-post-list')) {
+//         main
+//           .querySelector('.js-post-list')
+//           .addEventListener('click', linkPostlist);
+//       }
 
-      lazyLoad(main.querySelectorAll('img[data-src]'));
-    }
-  };
+//       lazyLoad(main.querySelectorAll('img[data-src]'));
+//     }
+//   };
 
-  request.onerror = function() {
-    page_content.innerHTML =
-      "For some reason I couldn't connect to the server, please try later again.";
-  };
+//   request.onerror = function() {
+//     page_content.innerHTML =
+//       "For some reason I couldn't connect to the server, please try later again.";
+//   };
 
-  request.send();
-}
+//   request.send();
+// }
 
 // Lazy load images
 lazyLoad(document.querySelectorAll('img[data-src]'));
