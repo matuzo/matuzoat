@@ -118,6 +118,8 @@ Rachel Andrew | <a href="(https://www.rachelandrew.co.uk/archives/2015/07/28/mod
 </figure>
 
 I’ll show you why in a simple example\
+\
+\
 Let’s say we have a `section` with a heading and a list of items. 
 
 ```html
