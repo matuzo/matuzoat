@@ -162,7 +162,8 @@ And this is what we get:
   on <a href="https://codepen.io">CodePen</a>.</span>
 </p>
 
-Doesn’t exactly look as expected. Only direct child items of the grid container will align with the grid. In our example, the `h2` and the `ul` but we want all the `li` to fill cells in the grid.
+Doesn’t exactly look as expected. The thing is, only direct child items of the grid container will align with the grid. In our example, the `h2` and the `ul` but we want all the `li` elements to fill cells in the grid.
+
 Okay, let’s try to fix that.
 
 ### Solution #1: Flattening the document structure.
