@@ -99,7 +99,7 @@ collections:
     format: 'yaml-frontmatter'
     fields: # The fields for each document, usually in front matter
       - { label: 'Title', name: 'title', widget: 'string' }
-      - { label: 'Meta Description', name: 'meta-description', widget: 'markdown', required: true }
+      - { label: 'Meta Description', name: 'metadescription', widget: 'markdown', required: true }
       - { label: 'Date', name: 'date', widget: 'date' }
       - { label: 'Featured image', name: 'image', widget: 'image', required: false }
       - { label: 'Intro', name: 'intro', widget: 'markdown', required: false }
