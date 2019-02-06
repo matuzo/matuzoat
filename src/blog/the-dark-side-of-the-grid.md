@@ -6,9 +6,9 @@ intro: >-
   accessibility.
 teaser: >-
   **[CSS Grid Layout](https://www.w3.org/TR/css-grid-1/) is one of the most
-  exciting CSS specifications because of its flexibility, extent, and power. It
-  makes our lives so much easier but it also entails new dangers regarding user
-  experience and accessibility.**
+  exciting recent CSS specifications because of its flexibility, extent, and
+  power. It makes our lives so much easier but it also entails new dangers
+  regarding user experience and accessibility.**
 tags:
   - css
   - grid
@@ -84,7 +84,7 @@ This article assumes that you have at least a basic knowledge of CSS Grid Layout
 Before we dive into the dark side of the grid, I shortly have to address the name and theme of this article. They’re based on the LP [The Dark Side of the Moon](https://en.wikipedia.org/wiki/The_Dark_Side_of_the_Moon) by [Pink Floyd](https://de.wikipedia.org/wiki/Pink_Floyd), released in 1973. 
 
 <figure class="figure figure--full">
-<img src="https://res.cloudinary.com/dp3mem7or/image/upload/v1549440257/articles/floyd.jpg" alt="" />
+<a href="https://res.cloudinary.com/dp3mem7or/image/upload/v1549440257/articles/floyd.jpg" rel="noopener"><img src="https://res.cloudinary.com/dp3mem7or/image/upload/v1549440257/articles/floyd.jpg" alt="" /></a>
 
 <figcaption>
 The The Dark Side of the Moon LP in front of some other of my records.
