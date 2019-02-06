@@ -98,7 +98,7 @@ Now you might think I’m a huge Pink Floyd fan. Well, I’m sorry to disappoint
 <div class="fact u-full-width">
 <div class="fact__inner">
 <h2>Pink Floyd Fun Fact #1</h2>
-<p>The Dark Side of the Moon is, with over 45 million copies sold, the <a href="https://en.wikipedia.org/wiki/List_of_best-selling_albums" rel="noopener">fourth best-selling album worldwide</a>.Only <em>Back in Black</em> by AC/DC (50 Million), <em>Their Greatest Hits</em> (1971–1975) by Eagles (51 Million) and, <em>of course</em>, <em>Thriller</em> by Michael Jackson (66 Million) have sold more often.</p>
+<p>The Dark Side of the Moon is, with over 45 million copies sold, the <a href="https://en.wikipedia.org/wiki/List_of_best-selling_albums" rel="noopener">fourth best-selling album worldwide</a>. Only <em>Back in Black</em> by AC/DC (50 Million), <em>Their Greatest Hits</em> (1971–1975) by Eagles (51 Million) and, <em>of course</em>, <em>Thriller</em> by Michael Jackson (66 Million) have sold more often.</p>
 </div>
 </div>
 
@@ -138,46 +138,11 @@ I’ll show you why in a simple example. Let’s say we have a `section` with a 
 
 The section forms a 3-column grid. The heading should span all columns and each li should fill one cell.
 
-<div class="codepen" data-height="400" data-theme-id="6054" data-default-tab="result" data-user="matuzo" data-slug-hash="QYgjZe" data-prefill='{"tags":\[],"stylesheets":\[],"scripts":\[]}'>
-  <pre data-lang="html">&lt;section>
-&lt;h2>Pink Floyd discography&lt;/h2>
-  
-&lt;ul>
-    &lt;li>The Piper at the Gates of Dawn&lt;/li>
-    &lt;li>A Saucerful of Secrets&lt;/li>
-    &lt;li>More&lt;/li>
-    &lt;li>Ummagumma&lt;/li>
-    &lt;li>Atom Heart Mother&lt;/li>
-    &lt;li>Meddle&lt;/li>
-    &lt;li>Obscured by Clouds&lt;/li>
-    &lt;li>The Dark Side of the Moon&lt;/li>
-  &lt;/ul>
-&lt;/section></pre>
-  <pre data-lang="css" >/\* Set display to grid, add 3 even columns and add 20px spacing \*/
-section {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  grid-gap: 20px;
-}
-/\* Make the heading span all 3 columns \*/
-h2 {
-  grid-column: 1 / -1;
-}
-body {
-  background: #000000;
-  color: #FFFFFF;
-  font-family: "Inria Sans", 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
-}
-ul {
-  list-style: none;
-  margin: 0;
-  padding: 0;
-}
-li {
-  outline: 1px solid #ffffff;
-}</pre>
-  
-</div>
+<p class="codepen" data-height="400" data-theme-id="6054" data-default-tab="result" data-user="matuzo" data-slug-hash="QYgjZe" style="height: 300px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid black; margin: 1em 0; padding: 1em;" data-pen-title="QYgjZe">
+  <span>See the Pen <a href="https://codepen.io/matuzo/pen/QYgjZe/">
+  QYgjZe</a> by Manuel Matuzovic (<a href="https://codepen.io/matuzo">@matuzo</a>)
+  on <a href="https://codepen.io">CodePen</a>.</span>
+</p>
 
 Doesn’t exactly look as expected. Only direct child items of the grid container will align with the grid. In our example, the `h2` and the `ul` but we want all the `li` to fill cells in the grid.
 Okay, let’s try to fix that.
