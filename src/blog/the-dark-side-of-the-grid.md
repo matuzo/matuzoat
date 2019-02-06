@@ -117,7 +117,7 @@ Rachel Andrew | <a href="(https://www.rachelandrew.co.uk/archives/2015/07/28/mod
 </footer>
 </figure>
 
-I’ll show you why in a simple example\
+I’ll show you why in a simple example (I know that there are different solutions for this particular task but this is just a demoto illustrate the issue).
 \
 \
 Let’s say we have a `section` with a heading and a list of items. 
