@@ -112,7 +112,7 @@ Making layout simple, but at what cost?
 </blockquote>
 <footer>
 <cite>
-Rachel Andrew | <a href="(https://www.rachelandrew.co.uk/archives/2015/07/28/modern-css-layout-power-and-responsibility/" rel="noopener">Modern CSS Layout, power and responsibility</a>
+Rachel Andrew | <a href="https://www.rachelandrew.co.uk/archives/2015/07/28/modern-css-layout-power-and-responsibility/" rel="noopener">Modern CSS Layout, power and responsibility</a>
 </cite>
 </footer>
 </figure>
