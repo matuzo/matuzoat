@@ -18,6 +18,10 @@
 
   @include mq(xwide) {
     --h1-font-size: 7rem;
+
+    &--inline {
+      --h1-font-size: 5rem;
+    }
   }
 }
 

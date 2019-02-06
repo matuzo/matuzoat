@@ -24,6 +24,10 @@
   padding: var(--padding);
   position: relative;
 
+  &--inline {
+    // font-size: calc(var(--h1-font-size) - 1rem);
+  }
+
   $size: $spacing / 3;
 
   &::after,
