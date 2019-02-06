@@ -140,7 +140,7 @@ It should look something like this:
 
 ![The headings spans the whole with and the list items are split in 3 columns](https://res.cloudinary.com/dp3mem7or/image/upload/v1549441106/articles/Screen_Shot_2019-02-06_at_09.14.05.png)
 
-That shouldn't be too hard. We select the `section`, set `display` to `grid`, add 3 even columns, a 10px gutter and we make the heading span all 3 columns.
+That shouldn't be too hard. We select the `section`, set `display` to `grid`, add 3 even columns, a `10px` gutter and we make the heading span all 3 columns.
 
 ``` css
 section {
@@ -185,8 +185,8 @@ If the placement algorithm only effects direct child items, we’ll just make ou
 </section>
 ```
 
-Flattening the document structure may have bad effects on the semantics of your document which is especially bad for screen reader users. For example, when you’re using a list, [screen readers usually announce the number of list items](https://www.scottohara.me/blog/2019/01/12/lists-and-safari.html) which helps with navigation and overview.
-Also, the document might be harder to read when displayed without CSS.
+Flattening the document structure may have bad effects on the semantics of your document which is especially bad for screen reader users. For example, when you’re using a list, [screen readers usually announce the number of list items](https://www.scottohara.me/blog/2019/01/12/lists-and-safari.html) which helps with navigation and overview.  
+Also, a flat document might be harder to read when displayed without CSS.
 
 <div class="info">
 <h3><span class="info__heading">Wait! What?</span>
