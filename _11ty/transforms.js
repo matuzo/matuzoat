@@ -11,17 +11,6 @@ module.exports = {
     return content;
   },
 
-  htmlmin: (content, outputPath) => {
-    if (process.env.ELEVENTY_ENV === 'production' && outputPath.endsWith('.html')) {
-        return htmlmin.minify(content, {
-            useShortDoctype: true,
-            removeComments: true,
-            collapseWhitespace: true
-        })
-    }
-    return content
-  },
-
   anchors: (content, outputPath) => {
     if( outputPath.includes('/blog/') ) {
       return content.replaceAll(new RegExp("<h2>(.*)</h2>","i"), function(match, heading) {
@@ -32,5 +21,16 @@ module.exports = {
       });
     }
     return content;
+  },
+
+  htmlmin: (content, outputPath) => {
+    if (process.env.ELEVENTY_ENV === 'production' && outputPath.endsWith('.html')) {
+        return htmlmin.minify(content, {
+            useShortDoctype: true,
+            removeComments: true,
+            collapseWhitespace: true
+        })
+    }
+    return content
   }
 }
