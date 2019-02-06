@@ -88,10 +88,10 @@ This article assumes that you have at least a basic knowledge of CSS Grid Layout
 Before we dive into the dark side of the grid, I shortly have to address the name and theme of this article. They’re based on the LP [The Dark Side of the Moon](https://en.wikipedia.org/wiki/The_Dark_Side_of_the_Moon) by [Pink Floyd](https://de.wikipedia.org/wiki/Pink_Floyd), released in 1973. 
 
 <figure class="figure figure--full">
-<a href="https://res.cloudinary.com/dp3mem7or/image/upload/v1549440257/articles/floyd.jpg" rel="noopener"><img src="https://res.cloudinary.com/dp3mem7or/image/upload/v1549440257/articles/floyd.jpg" alt=""></a>
+<a href="https://res.cloudinary.com/dp3mem7or/image/upload/v1549440257/articles/floyd.jpg" rel="noopener"><img src="https://res.cloudinary.com/dp3mem7or/image/upload/v1549440257/articles/floyd.jpg" alt="The “The Dark Side of the Moon LP” in front of some of my other records."></a>
 
 <figcaption>
-The “The Dark Side of the Moon LP” in front of some of my other records.
+I found this LP in a record store in Warsaw after talking about the dark side of the grid at Frontend Con 2018.
 </figcaption>
 </figure>
 
