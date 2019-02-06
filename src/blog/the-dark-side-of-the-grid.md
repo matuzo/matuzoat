@@ -3,7 +3,7 @@ title: The Dark Side of the Grid (Part 1)
 metadescription: >-
   CSS Grid Layout is one of the most exciting new CSS specifications but it also
   entails dangers regarding accessibility and UX.
-date: 2019-01-31T04:58:47.818Z
+date: 2019-02-06T04:58:47.818Z
 image: articles/darksidesm.jpg
 intro: >-
   This is part 1 of 3 in a series of articles about CSS Grid layout and
@@ -23,7 +23,7 @@ archive: false
 ---
 ## Preface
 
-It has already been 2 years since the first browsers, Chromium 57 and Firefox 52, shipped CSS Grid Layout unprefixed. Many developers have experimented with it or are using it in production already. More will come as soon as support for Internet Explorer 10 and 11 becomes less important.\
+It has already been two years since the first browsers, Chromium 57 and Firefox 52, shipped CSS Grid Layout unprefixed. Many developers have experimented with it or are using it in production already. More will come as soon as support for Internet Explorer 10 and 11 becomes less important.\
 Grid offers many ways of building layouts and it challenges us to rethink the way we approach them. This flexibility is great for our development experience but it may come at the cost of user experience and accessibility if we don’t use it responsibly.
 
 This series of articles will give you an overview of the dangerous features of the specification, or in other words, the dark side of the grid.
@@ -40,10 +40,10 @@ This series of articles will give you an overview of the dangerous features of t
 
 ## Overview
 
-1. [What’s CSS Grid Layout?](whats-grid)
-2. [Name and theme of this article](#name-theme)
-3. [Pink Floyd Fun Fact 1](floyd-1)
-4. [Compromising on Semantics](semantics)
+1. [What’s CSS Grid Layout?](#whats-css-grid-layout)
+2. [Name and theme of this article](#name-and-theme-of-this-article)
+3. [Pink Floyd Fun Fact 1](#fact__heading)
+4. [Compromising on Semantics](#compromising-on-semantics)
 5. Pink Floyd Fun Fact 2
 6. Changing Visual Order
 7. Cross Browser Support
@@ -81,7 +81,7 @@ Rachel Andrew | <a href="https://www.youtube.com/watch?v=tjHOLtouElA" rel="noope
 </footer>
 </figure>
 
-This article assumes that you have at least a basic knowledge of CSS Grid Layout. If you're new to the topic, I suggest you checkout [gridbyexample](https://gridbyexample.com/) by [Rachel Andrew](https://twitter.com/rachelandrew) or [Grid Garden](http://cssgridgarden.com) before you continue reading.
+This article assumes that you have at least a basic knowledge of CSS Grid Layout. If you're new to the topic, I suggest you check out [gridbyexample](https://gridbyexample.com/) by [Rachel Andrew](https://twitter.com/rachelandrew) or [Grid Garden](http://cssgridgarden.com) before you continue reading.
 
 ## Name and theme of this article
 
@@ -91,7 +91,7 @@ Before we dive into the dark side of the grid, I shortly have to address the nam
 <a href="https://res.cloudinary.com/dp3mem7or/image/upload/v1549440257/articles/floyd.jpg" rel="noopener"><img src="https://res.cloudinary.com/dp3mem7or/image/upload/v1549440257/articles/floyd.jpg" alt=""></a>
 
 <figcaption>
-The The Dark Side of the Moon LP in front of some other of my records.
+The “The Dark Side of the Moon LP” in front of some of my other records.
 </figcaption>
 </figure>
 
@@ -102,7 +102,7 @@ Therefore, I present to you: **Pink Floyd Fact #1**.
 <div class="fact u-full-width">
 <div class="fact__inner">
 <h2 class="fact__heading">Pink Floyd Fun Fact #1</h2>
-<p>The Dark Side of the Moon is, with over 45 million copies sold, the <a href="https://en.wikipedia.org/wiki/List_of_best-selling_albums" rel="noopener">fourth best-selling album worldwide</a>. Only <em>Back in Black</em> by AC/DC (50 Million), <em>Their Greatest Hits</em> (1971–1975) by Eagles (51 Million) and, <em>of course</em>, <em>Thriller</em> by Michael Jackson (66 Million) have sold more often.</p>
+<p>The Dark Side of the Moon is, with over 45 million copies sold, the <a href="https://en.wikipedia.org/wiki/List_of_best-selling_albums" rel="noopener">fourth best-selling album worldwide</a>. Only <em>Back in Black</em> by AC/DC (50 Million), <em>Their Greatest Hits</em> (1971–1975) by The Eagles (51 Million) and, <em>of course</em>, <em>Thriller</em> by Michael Jackson (66 Million) have sold more often.</p>
 </div>
 </div>
 
@@ -169,7 +169,7 @@ And this is what we get:
   on <a href="https://codepen.io">CodePen</a>.</span>
 </p>
 
-Doesn’t exactly look as expected. The thing is, only direct child items of the grid container will align with the grid. In our example, the `h2` and the `ul` but we want all the `li` elements to fill cells in the grid.
+Doesn’t exactly look as expected. The thing is, only direct children of the grid container will align with the grid. In our example, those are the `h2` and the `ul` – but we want all the `li` elements to fill cells in the grid.
 
 Okay, let’s try to fix that.
 
@@ -192,14 +192,14 @@ If the placement algorithm only effects direct child items, we’ll just make ou
 </section>
 ```
 
-Flattening the document structure may have bad effects on the semantics of your document which is especially bad for screen reader users. For example, when you’re using a list, [screen readers usually announce the number of list items](https://www.scottohara.me/blog/2019/01/12/lists-and-safari.html) which helps with navigation and overview.\
+Flattening the document structure may have bad affects on the semantics of your document which is especially bad for screen reader users. For example, when you’re using a list, [screen readers usually announce the number of list items](https://www.scottohara.me/blog/2019/01/12/lists-and-safari.html) which helps with navigation and overview.\
 Also, a flat document might be harder to read when displayed without CSS.
 
 <div class="info">
 <h4><span class="info__label">Wait! What?</span>
 <span class="info__heading">Why would someone disable CSS?</a></h4>
 
-<p>It’s unlikely that users disable CSS on purpose but sometimes an error occurs or the connection is just so slow that only the HTML displays successfully. If you’ve ever been on vacation to Italy and had to use a public WIFI, you know what I’m talking about.</p>
+<p>It’s unlikely that users disable CSS on purpose but sometimes an error occurs or the connection is just so slow that only the HTML displays successfully. If you’ve ever been on vacation in Italy and had to use public WIFI, you know what I’m talking about.</p>
 </div>
 
 Please don’t flatten document structures.
@@ -238,7 +238,7 @@ An alternative to using subgrids is a different property that has a similar effe
   }
 ```
 
-In our example this causes the list items to take part in the alignment of the sections grid because for them the parent `ul` doesn’t exist anymore. This is exactly what we want, and it works perfectly fine but, yeah I’m sorry, there’s a _but_, Edge doesn’t support it.
+In our example, this causes the list items to take part in the alignment of the sections grid because for them the parent `ul` doesn’t exist anymore. This is exactly what we want, and it works perfectly fine but, (yeah I’m sorry, there’s a _but_) Edge doesn’t support it.
 
 <figure class="figure figure--full">
 <a href="https://res.cloudinary.com/dp3mem7or/image/upload/v1549211279/articles/Screen_Shot_2019-02-03_at_17.26.50.png" rel="noopener"><img src="https://res.cloudinary.com/dp3mem7or/image/upload/v1549211279/articles/Screen_Shot_2019-02-03_at_17.26.50.png" alt="Browsersupport table on caniuse.com for display: contents; Supported by alt major desktop browsers but only in Firefox without bugs." /></a>
@@ -247,7 +247,7 @@ Edge doesn’t support display: contents due to an accessibility bug in Chrome, 
 </figcaption>
 </figure>
 
-The lack of support per se isn’t the issue but rather why it’s not supported. There’s a bug in Chrome, Opera, and Safari that removes an element with a `display` value of `contents` from the accessibility tree [making it inaccessible to screen reader users](http://adrianroselli.com/2018/05/display-contents-is-not-a-css-reset.html). It’s like applying `display: none`, the element just doesn’t exist anymore for assistive technology.
+The lack of support per se isn’t the issue but rather why it’s not supported. There’s a bug in Chrome, Opera, and Safari that removes an element with a `display` value of `contents` from the accessibility tree [making it inaccessible to screen reader users](http://adrianroselli.com/2018/05/display-contents-is-not-a-css-reset.html). It’s like applying `display: none` – the element just doesn’t exist anymore for assistive technology.
 
 <figure class="figure figure--full">
 <a href="https://res.cloudinary.com/dp3mem7or/image/upload/v1549454338/articles/contents_devtools.jpg" rel="noopener"><img src="https://res.cloudinary.com/dp3mem7or/image/upload/v1549454338/articles/contents_devtools.jpg" alt="The accessibility panel in Chrome DevTools." /></a>
@@ -271,7 +271,7 @@ As already mentioned, a grid item can also be a grid container. We can select th
   }
 ```
 
-Nesting grids isn’t a perfect solution and sometimes it might not work but in this simple example it’s good enough.
+Nesting grids isn’t a perfect solution and sometimes it might not work, but in this simple example it’s good enough.
 
 <p class="codepen" data-height="400" data-theme-id="6054" data-default-tab="result" data-user="matuzo" data-slug-hash="VgMdGO" style="height: 300px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid black; margin: 1em 0; padding: 1em;" data-pen-title="Grid nesting issue solution">
   <span>See the Pen <a href="https://codepen.io/matuzo/pen/VgMdGO/">
