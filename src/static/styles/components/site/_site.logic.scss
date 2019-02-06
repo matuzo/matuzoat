@@ -28,6 +28,8 @@
 
   --footer-padding: #{ 0 (($spacing / 2) + $site-corner + 1rem) 1rem (($spacing / 2) + $site-corner + 3rem) };
 
+  --square-positioning: absolute;
+
   @media (min-height: $site-min-height) {
     --body-layout: flex;
     --header-height: calc(var(--vh, 1vh) * 50);
@@ -63,6 +65,8 @@
     --separator-width: 12rem;
     --content-padding: #{$spacing $content-padding-large $spacing 0};
     --logo-margin: #{0 0 $spacing * 1.333 0};
+
+    --square-positioning: fixed;
   }
 
   @include mq(xl) {

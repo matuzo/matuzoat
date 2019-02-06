@@ -23,10 +23,10 @@
     margin: 0 auto;
     max-width: var(--body-width);
     min-height: 100%;
+    position: relative;
   }
 
   &__square {
-    --square-positioning: fixed;
     position: var(--square-positioning);
     z-index: $z-site;
 
