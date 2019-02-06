@@ -40,10 +40,10 @@ This series of articles will give you an overview of the dangerous features of t
 
 ## Overview
 
-1. [What’s CSS Grid Layout?](whats-grid)
+1. [What’s CSS Grid Layout?](#whats-grid)
 2. [Name and theme of this article](#name-theme)
-3. [Pink Floyd Fun Fact 1](floyd-1)
-4. [Compromising on Semantics](semantics)
+3. [Pink Floyd Fun Fact 1](#floyd-1)
+4. [Compromising on Semantics](#semantics)
 5. Pink Floyd Fun Fact 2
 6. Changing Visual Order
 7. Cross Browser Support
@@ -53,9 +53,9 @@ This series of articles will give you an overview of the dangerous features of t
 
 <hr>
 
-## What’s CSS Grid Layout?
+<h2 id="whats-grid">What’s CSS Grid Layout?</h2>
 
-CSS Grid Layout is a grid-based layout system designed for two-dimensional layouts. It’s the first true layout method in CSS, properties like `float`, `display: inline-block`, `position`, and `display: table` were originally not intended for building layouts.\
+CSS Grid Layout is a grid-based layout system designed for two-dimensional layouts. It’s the first true layout method in CSS, since properties like `float`, `display: inline-block`, `position`, and `display: table` were originally not intended for building layouts.\
 Grid is a great choice if you're not working on just one axis but one two axes.
 
 <div class="demo u-full-width js-demo"> 
@@ -83,7 +83,7 @@ Rachel Andrew | <a href="https://www.youtube.com/watch?v=tjHOLtouElA" rel="noope
 
 This article assumes that you have at least a basic knowledge of CSS Grid Layout. If you're new to the topic, I suggest you check out [gridbyexample](https://gridbyexample.com/) by [Rachel Andrew](https://twitter.com/rachelandrew) or [Grid Garden](http://cssgridgarden.com) before you continue reading.
 
-## Name and theme of this article
+<h2 id="name-theme">Name and theme of this article</h2>
 
 Before we dive into the dark side of the grid, I shortly have to address the name and theme of this article. They’re based on the LP [The Dark Side of the Moon](https://en.wikipedia.org/wiki/The_Dark_Side_of_the_Moon) by [Pink Floyd](https://de.wikipedia.org/wiki/Pink_Floyd), released in 1973. 
 
@@ -101,12 +101,12 @@ Therefore, I present to you: **Pink Floyd Fact #1**.
 
 <div class="fact u-full-width">
 <div class="fact__inner">
-<h2 class="fact__heading">Pink Floyd Fun Fact #1</h2>
+<h2 class="fact__heading" id="floyd-1">Pink Floyd Fun Fact #1</h2>
 <p>The Dark Side of the Moon is, with over 45 million copies sold, the <a href="https://en.wikipedia.org/wiki/List_of_best-selling_albums" rel="noopener">fourth best-selling album worldwide</a>. Only <em>Back in Black</em> by AC/DC (50 Million), <em>Their Greatest Hits</em> (1971–1975) by The Eagles (51 Million) and, <em>of course</em>, <em>Thriller</em> by Michael Jackson (66 Million) have sold more often.</p>
 </div>
 </div>
 
-## Compromising on Semantics
+<h2 id="semantics">Compromising on Semantics</h2>
 
 Even before grid shipped in any browser, experts like Rachel Andrew have already feared that developers will compromise on semantics and flatten out document structures to use CSS Grid. 
 
