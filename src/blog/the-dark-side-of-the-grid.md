@@ -245,10 +245,9 @@ The lack of support per se isn’t the issue but rather why it’s not supported
 <figure class="figure figure--full">
 <img src="https://res.cloudinary.com/dp3mem7or/image/upload/v1549444356/articles/contents_devtools.jpg" alt="The accessibility panel in Chrome DevTools." />
 <figcaption>
-The `ul` should have a `role` of `list` but inspecting the element shows that it's not exposed to the accessibility tree at all.
+The \`ul\` should have a \`role\` of \`list\` but inspecting the element shows that it's not exposed to the accessibility tree at all.
 </figcaption>
 </figure>
-
 
 [Microsoft Edge will consider adding the feature](https://github.com/MicrosoftEdge/Status/issues/608#issuecomment-394521198) as soon as blink and webkit-based browsers fix the bug. Consider not using `contents` until then.
 
@@ -267,7 +266,7 @@ As already mentioned, a grid item can also be a grid container. We can select th
 
 Nesting grids isn’t a perfect solution and sometimes it might not work but in this simple example it’s good enough.
 
-<p class="codepen" data-height="300" data-theme-id="6054" data-default-tab="css,result" data-user="matuzo" data-slug-hash="VgMdGO" style="height: 300px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid black; margin: 1em 0; padding: 1em;" data-pen-title="Grid nesting issue solution">
+<p class="codepen" data-height="300" data-theme-id="6054" data-default-tab="result" data-user="matuzo" data-slug-hash="VgMdGO" style="height: 300px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid black; margin: 1em 0; padding: 1em;" data-pen-title="Grid nesting issue solution">
   <span>See the Pen <a href="https://codepen.io/matuzo/pen/VgMdGO/">
   Grid nesting issue solution</a> by Manuel Matuzovic (<a href="https://codepen.io/matuzo">@matuzo</a>)
   on <a href="https://codepen.io">CodePen</a>.</span>
