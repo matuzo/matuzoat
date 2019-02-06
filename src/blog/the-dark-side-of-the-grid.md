@@ -117,8 +117,7 @@ Rachel Andrew | <a href="(https://www.rachelandrew.co.uk/archives/2015/07/28/mod
 </footer>
 </figure>
 
-I’ll show you why in a simple example (I know that there are different solutions for this particular task but this is just a demoto illustrate the issue).
-\
+I’ll show you why in a simple example (I know that there are different solutions for this particular task but this is just a demo to illustrate the issue).\
 \
 Let’s say we have a `section` with a heading and a list of items. 
 
@@ -196,7 +195,7 @@ Also, a flat document might be harder to read when displayed without CSS.
 <h3><span class="info__heading">Wait! What?</span>
 Why would someone disable CSS?</h3>
 
-<p>It’s unlikely that users disable CSS on purpose but sometimes an error occurs or the connection is just so slow that only the HTML displays successfully. If you’ve ever been on vacation in Italy and had to use a public WIFI, you know what I’m talking about.</p>
+<p>It’s unlikely that users disable CSS on purpose but sometimes an error occurs or the connection is just so slow that only the HTML displays successfully. If you’ve ever been on vacation to Italy and had to use a public WIFI, you know what I’m talking about.</p>
 </div>
 
 Please don’t flatten document structures.
@@ -235,12 +234,12 @@ An alternative to using subgrids is a different property that has a similar effe
   }
 ```
 
-In our example this causes the list items to take part in the alignment of the `sections` grid because for them the parent `ul` doesn’t exist anymore. This is exactly what we want, and it works perfectly fine but, yeah I’m sorry, there’s a _but_, Edge doesn’t support it.
+In our example this causes the list items to take part in the alignment of the sections grid because for them the parent `ul` doesn’t exist anymore. This is exactly what we want, and it works perfectly fine but, yeah I’m sorry, there’s a _but_, Edge doesn’t support it.
 
 <figure class="figure figure--full">
 <img src="https://res.cloudinary.com/dp3mem7or/image/upload/v1549211279/articles/Screen_Shot_2019-02-03_at_17.26.50.png" alt="" />
 <figcaption>
-Edge doesn’t support display: contents because to an accessibility bug in Chrome, Safari and Opera.
+Edge doesn’t support display: contents due to an accessibility bug in Chrome, Safari and Opera.
 </figcaption>
 </figure>
 
@@ -249,7 +248,7 @@ The lack of support per se isn’t the issue but rather why it’s not supported
 <figure class="figure figure--full">
 <img src="https://res.cloudinary.com/dp3mem7or/image/upload/v1549444356/articles/contents_devtools.jpg" alt="The accessibility panel in Chrome DevTools." />
 <figcaption>
-The \`ul\` should have a \`role\` of \`list\` but inspecting the element shows that it's not exposed to the accessibility tree at all.
+The `ul` should have a `role` of `list` but inspecting the element shows that it's not exposed to the accessibility tree at all.
 </figcaption>
 </figure>
 
