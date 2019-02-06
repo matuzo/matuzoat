@@ -42,7 +42,7 @@ This series of articles will give you an overview of the dangerous features of t
 
 1. [What’s CSS Grid Layout?](#whats-css-grid-layout)
 2. [Name and theme of this article](#name-and-theme-of-this-article)
-3. [Pink Floyd Fun Fact 1](#fact__heading)
+3. [Pink Floyd Fun Fact 1](#floyd-fact-1)
 4. [Compromising on Semantics](#compromising-on-semantics)
 5. Pink Floyd Fun Fact 2
 6. Changing Visual Order
@@ -101,7 +101,7 @@ Therefore, I present to you: **Pink Floyd Fact #1**.
 
 <div class="fact u-full-width">
 <div class="fact__inner">
-<h2 class="fact__heading">Pink Floyd Fun Fact #1</h2>
+<h2 id="floyd-fact-1" class="fact__heading">Pink Floyd Fun Fact #1</h2>
 <p>The Dark Side of the Moon is, with over 45 million copies sold, the <a href="https://en.wikipedia.org/wiki/List_of_best-selling_albums" rel="noopener">fourth best-selling album worldwide</a>. Only <em>Back in Black</em> by AC/DC (50 Million), <em>Their Greatest Hits</em> (1971–1975) by The Eagles (51 Million) and, <em>of course</em>, <em>Thriller</em> by Michael Jackson (66 Million) have sold more often.</p>
 </div>
 </div>
