@@ -1,8 +1,8 @@
 .figure {
   --figure-font-size: 2rem;
   --figure-width: 100%;
-  --figure-margin: #{$spacing / 1.8 auto};
-  --figcaption-font-size: 1.6rem;
+  --figure-margin: #{$spacing / 1.5 auto};
+  --figcaption-font-size: 1.5rem;
   --figcaption-padding: 0;
 
   @include mq(l) {
@@ -12,7 +12,7 @@
   @include mq(xl) {
     --figure-font-size: 2.7rem;
     --figure-width: 78%;
-    --figure-margin: #{$spacing auto};
+    --figure-margin: #{$spacing * 1.5 auto};
     --figcaption-font-size: 2rem;
   }
 }
@@ -38,6 +38,7 @@
 
   figcaption {
     font-size: var(--figcaption-font-size);
+    font-style: italic;
     padding: var(--figcaption-padding);
   }
 }
