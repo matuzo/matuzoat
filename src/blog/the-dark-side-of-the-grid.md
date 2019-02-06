@@ -1,6 +1,7 @@
 ---
 title: The Dark Side of the Grid (Part 1)
 date: 2019-01-31T04:58:47.818Z
+image: articles/darksidesm.jpg
 intro: >-
   This is part 1 of 3 in a series of articles about CSS Grid layout and
   accessibility.
