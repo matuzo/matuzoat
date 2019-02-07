@@ -34,7 +34,7 @@
     <meta property="og:title" content="{{ title or metadata.title }}">
     <meta property="og:description" content="{{ description or metadescription }}">
     <meta property="og:image" content="{{ metadata.cloudinary }}/w_1200/{{ image or metadata.smimage }}">
-    <meta property="og:url" content="{{ metadata.url }}/{{ slug }}">
+    <meta property="og:url" content="{{ metadata.url }}{{ page.url }}">
     <meta property="og:site_name" content="{{ title or metadata.title }}">
     <meta property="og:locale" content="en_GB">
     <meta property="og:type" content="website">
