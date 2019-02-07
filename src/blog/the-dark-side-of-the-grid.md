@@ -145,7 +145,7 @@ Let’s say we have a `section` with a heading and a list of items.
 The `section` forms a 3-column grid, we want the heading to span all columns, and each `li` should fill one cell.
 It should look something like this:
 
-<a href="https://res.cloudinary.com/dp3mem7or/image/upload/v1549441106/articles/Screen_Shot_2019-02-06_at_09.14.05.png" rel="noopener"><img src="https://res.cloudinary.com/dp3mem7or/image/upload/v1549441106/articles/Screen_Shot_2019-02-06_at_09.14.05.png" alt="The headings spans the whole with and the list items are split in 3 columns"></a>
+<a href="https://res.cloudinary.com/dp3mem7or/image/upload/v1549441106/articles/Screen_Shot_2019-02-06_at_09.14.05.png" rel="noopener" class="no-line"><img src="https://res.cloudinary.com/dp3mem7or/image/upload/v1549441106/articles/Screen_Shot_2019-02-06_at_09.14.05.png" alt="The headings spans the whole with and the list items are split in 3 columns"></a>
 
 That shouldn't be too hard. We select the `section`, set `display: grid`, add 3 even columns, a `10px` gutter and we make the heading span all 3 columns.
 
