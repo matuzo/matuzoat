@@ -20,22 +20,22 @@
     <meta name="description" content="{{ description or metadescription }}">
     <meta name="image" content="{{ metadata.cloudinary }}/w_1200/{{ image or metadata.smimage }}">
     <!-- Schema.org for Google -->
-    <meta itemprop="name" content="{{ title }}">
+    <meta itemprop="name" content="{{ title or metadata.title }}">
     <meta itemprop="description" content="{{ description or metadescription }}">
     <meta itemprop="image" content="{{ metadata.cloudinary }}/w_1200/{{ image or metadata.smimage }}">
     <!-- Twitter -->
     <meta name="twitter:card" content="summary">
-    <meta name="twitter:title" content="{{ title }}">
+    <meta name="twitter:title" content="{{ title or metadata.title }}">
     <meta name="twitter:description" content="{{ description or metadescription }}">
     <meta name="twitter:site" content="@mmatuzo">
     <meta name="twitter:creator" content="@mmatuzo">
     <meta name="twitter:image:src" content="{{ metadata.cloudinary }}/w_1024/{{ image or metadata.smimage }}">
     <!-- Open Graph general (Facebook, Pinterest & Google+) -->
-    <meta property="og:title" content="{{ title }}">
+    <meta property="og:title" content="{{ title or metadata.title }}">
     <meta property="og:description" content="{{ description or metadescription }}">
     <meta property="og:image" content="{{ metadata.cloudinary }}/w_1200/{{ image or metadata.smimage }}">
     <meta property="og:url" content="{{ slug }}">
-    <meta property="og:site_name" content="{{ title }}">
+    <meta property="og:site_name" content="{{ title or metadata.title }}">
     <meta property="og:locale" content="en_GB">
     <meta property="og:type" content="website">
 
