@@ -3,7 +3,7 @@ title: The Dark Side of the Grid (Part 1)
 metadescription: >-
   CSS Grid Layout is one of the most exciting new CSS specifications but it also
   creates new dangers regarding accessibility and UX.
-date: 2019-02-06T04:58:47.818Z
+date: 2019-02-07T04:58:47.818Z
 image: articles/darksidesm.jpg
 intro: >-
   This is part 1 of 3 in a series of articles about CSS Grid layout and
@@ -273,13 +273,15 @@ As already mentioned, a grid item can also be a grid container. We can select th
 
 Nesting grids isn’t a perfect solution and sometimes it might not work, but in this simple example it’s good enough.
 
+<a href="#recap" class="skip-link skip-link--inline">Skip CodePen</a>
+
 <p class="codepen" data-height="400" data-theme-id="6054" data-default-tab="result" data-user="matuzo" data-slug-hash="VgMdGO" style="height: 300px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid black; margin: 1em 0; padding: 1em;" data-pen-title="Grid nesting issue solution">
   <span>See the Pen <a href="https://codepen.io/matuzo/pen/VgMdGO/">
   Grid nesting issue solution</a> by Manuel Matuzovic (<a href="https://codepen.io/matuzo">@matuzo</a>)
   on <a href="https://codepen.io">CodePen</a>.</span>
 </p>
 
-### Recap
+## Recap
 
 The situation regarding subgrids is anything but perfect. The `subgrid` value isn’t a standard yet, `display: contents` is buggy, and nesting grids will only work in specific use cases. If you see yourself compromising on semantics just to use CSS Grid Layout, don’t use it or try to workaround the problem until browsers fix the `display: contents` bug or ship subgrids.
 
