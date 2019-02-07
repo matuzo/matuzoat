@@ -170,7 +170,7 @@ $dark-grid-animation-duration: 1s;
     transform: rotate(45deg);
     margin: 0 auto;
     position: relative;
-    background: #070707;
+    background: $theme-dark-grid-bg;
     z-index: 300;
 
     @at-root .demo--playing .a-title-grid {
@@ -370,6 +370,10 @@ $dark-grid-animation-duration: 1s;
 
   p code {
     background-color: rgba(255, 255, 255, 0.8);
-    color: #070707;
+    color: $theme-dark-grid-bg;
+  }
+
+  .logo {
+    @include logo-shadow($theme-dark-grid-bg, $green);
   }
 }
