@@ -1,3 +1,7 @@
+.skip-link-container {
+  position: relative;
+}
+
 .skip-link {
   background: $c-highlight;
   font-weight: bold;
@@ -15,7 +19,7 @@
 
   &::after,
   &::before {
-    content: "";
+    content: '';
     display: block;
     height: $spacing / 2;
     position: absolute;
@@ -27,11 +31,31 @@
     right: ($spacing / 2 + $site-corner) * -1;
     top: 0;
   }
-  
+
   &::before {
     background: $c-sec;
     bottom: ($spacing / 2 + $site-corner) * -1;
     right: 0;
+  }
+
+  &--inline {
+    color: $c-prim;
+    font-size: 1.5rem;
+    font-weight: bold;
+    left: 0;
+    padding: 0.1rem 1rem;
+    top: 0;
+    transform: translateY(-100%);
+
+    @include link-active {
+      // Override global theme settings
+      box-shadow: none !important;
+    }
+
+    &::after,
+    &::before {
+      display: none;
+    }
   }
 }
 
