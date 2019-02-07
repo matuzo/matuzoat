@@ -304,5 +304,6 @@ Thank you to [Aaron](https://twitter.com/AaronGustafson) and [Max](https://twitt
 * [Grid vs. Subgrid: An Elemental Example](http://fantasai.inkedblade.net/style/discuss/subgrid-markup/) by [fantasai](http://fantasai.inkedblade.net/)
 * [Display: Contents Is Not a CSS Reset](http://adrianroselli.com/2018/05/display-contents-is-not-a-css-reset.html) by [Adrian Roselli](http://adrianroselli.com)
 * [Add display:contents #608](https://github.com/MicrosoftEdge/Status/issues/608#issuecomment-394521198)
+* [Pink Floyd photo](http://leicestershirelalala.com/so-you-thought-youd-like-to-go-to-the-show-to-feel-the-warm-thrill-of-confusion-that-space-cadet-glow)
 
 <script async src="https://static.codepen.io/assets/embed/ei.js"></script>
