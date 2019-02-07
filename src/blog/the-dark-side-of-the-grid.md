@@ -175,7 +175,7 @@ Okay, let’s try to fix that.
 
 ### Solution #1: Flattening the document structure.
 
-If the placement algorithm only effects direct child items, we’ll just make our `li` direct child items by removing the `ul` and transforming the `li` to `div`s to avoid invalid HTML. This is a solution, but it’s a bad solution because we’re compromising on semantics for design reasons.
+If the placement algorithm only effects direct child elements, we’ll just make our `li` direct children by removing the `ul` and swapping the `li`s for `div`s to avoid invalid HTML. This is a solution, but it’s a bad solution because we’re compromising on semantics for design reasons.
 
 ```html
 <section>
@@ -192,7 +192,7 @@ If the placement algorithm only effects direct child items, we’ll just make ou
 </section>
 ```
 
-Flattening the document structure may have bad affects on the semantics of your document which is especially bad for screen reader users. For example, when you’re using a list, [screen readers usually announce the number of list items](https://www.scottohara.me/blog/2019/01/12/lists-and-safari.html) which helps with navigation and overview.\
+Flattening the document structure may have bad affects on the semantics of your document, which is especially bad for screen reader users. For example, when you’re using a list, [screen readers usually announce the number of list items](https://www.scottohara.me/blog/2019/01/12/lists-and-safari.html) which helps with navigation and overview.\
 Also, a flat document might be harder to read when displayed without CSS.
 
 <div class="info">
@@ -243,11 +243,11 @@ In our example, this causes the list items to take part in the alignment of the 
 <figure class="figure figure--full">
 <a href="https://res.cloudinary.com/dp3mem7or/image/upload/v1549211279/articles/Screen_Shot_2019-02-03_at_17.26.50.png" rel="noopener"><img src="https://res.cloudinary.com/dp3mem7or/image/upload/v1549211279/articles/Screen_Shot_2019-02-03_at_17.26.50.png" alt="Browsersupport table on caniuse.com for display: contents; Supported by alt major desktop browsers but only in Firefox without bugs." /></a>
 <figcaption>
-Edge doesn’t support display: contents due to an accessibility bug in Chrome, Safari and Opera.
+Edge doesn’t support <code>display: contents</code> due to an accessibility bug in Chrome, Safari and Opera.
 </figcaption>
 </figure>
 
-The lack of support per se isn’t the issue but rather why it’s not supported. There’s a bug in Chrome, Opera, and Safari that removes an element with a `display` value of `contents` from the accessibility tree [making it inaccessible to screen reader users](http://adrianroselli.com/2018/05/display-contents-is-not-a-css-reset.html). It’s like applying `display: none` – the element just doesn’t exist anymore for assistive technology.
+The lack of support per se isn’t the issue but rather why it’s not supported. There’s a bug in Chrome, Opera, and Safari that removes an element with a `display` value of `contents` from the accessibility tree, [making it inaccessible to screen reader users](http://adrianroselli.com/2018/05/display-contents-is-not-a-css-reset.html). It’s like applying `display: none` – the element just doesn’t exist anymore for assistive technology.
 
 <figure class="figure figure--full">
 <a href="https://res.cloudinary.com/dp3mem7or/image/upload/v1549454338/articles/contents_devtools.jpg" rel="noopener"><img src="https://res.cloudinary.com/dp3mem7or/image/upload/v1549454338/articles/contents_devtools.jpg" alt="The accessibility panel in Chrome DevTools." /></a>
@@ -281,8 +281,8 @@ Nesting grids isn’t a perfect solution and sometimes it might not work, but in
 
 ### Recap
 
-The situation regarding sub-grids is anything but perfect. The `subgrid` value isn’t a standard yet, `display: contents` is buggy, and nesting grids will only work in specific use cases. If you see yourself compromising on semantics just to use CSS Grid Layout, don’t use it or try to workaround the problem until browsers fix the `display: contents` bug or ship subgrids.
+The situation regarding subgrids is anything but perfect. The `subgrid` value isn’t a standard yet, `display: contents` is buggy, and nesting grids will only work in specific use cases. If you see yourself compromising on semantics just to use CSS Grid Layout, don’t use it or try to workaround the problem until browsers fix the `display: contents` bug or ship subgrids.
 
-This was part 1 of the dark side of the grid. In part two I’ll show you how easy it is to confuse users unintentionally, why it’s bad and how to avoid it.
+This was part 1 of the dark side of the grid. In part two I’ll show you how easy it is to confuse users unintentionally, why it’s bad, and how to avoid it.
 
 <script async src="https://static.codepen.io/assets/embed/ei.js"></script>
