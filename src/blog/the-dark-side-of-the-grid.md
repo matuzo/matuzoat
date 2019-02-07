@@ -163,13 +163,17 @@ h2 {
 
 And this is what we get:
 
+<div class="skip-link-container">
+<a href="#codepen1-skip" class="skip-link skip-link--inline">Skip CodePen</a>
+</div>
+
 <p class="codepen" data-height="400" data-theme-id="6054" data-default-tab="result" data-user="matuzo" data-slug-hash="QYgjZe" style="height: 300px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid black; margin: 1em 0; padding: 1em;" data-pen-title="QYgjZe">
   <span>See the Pen <a href="https://codepen.io/matuzo/pen/QYgjZe/">
   QYgjZe</a> by Manuel Matuzovic (<a href="https://codepen.io/matuzo">@matuzo</a>)
   on <a href="https://codepen.io">CodePen</a>.</span>
 </p>
 
-Doesn’t exactly look as expected. The thing is, only direct children of the grid container will align with the grid. In our example, those are the `h2` and the `ul` – but we want all the `li` elements to fill cells in the grid.
+<a name="codepen1-skip"></a>Doesn’t exactly look as expected. The thing is, only direct children of the grid container will align with the grid. In our example, those are the `h2` and the `ul` – but we want all the `li` elements to fill cells in the grid.
 
 Okay, let’s try to fix that.
 
