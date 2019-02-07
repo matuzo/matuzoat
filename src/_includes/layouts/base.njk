@@ -31,13 +31,13 @@
     <meta name="twitter:creator" content="@mmatuzo">
     <meta name="twitter:image:src" content="{{ metadata.cloudinary }}/w_1024/{{ image or metadata.smimage }}">
     <!-- Open Graph general (Facebook, Pinterest & Google+) -->
-    <meta name="og:title" content="{{ title }}">
-    <meta name="og:description" content="{{ description or metadescription }}">
-    <meta name="og:image" content="{{ metadata.cloudinary }}/w_1200/{{ image or metadata.smimage }}">
-    <meta name="og:url" content="{{ slug }}">
-    <meta name="og:site_name" content="{{ title }}">
-    <meta name="og:locale" content="en_GB">
-    <meta name="og:type" content="website">
+    <meta property="og:title" content="{{ title }}">
+    <meta property="og:description" content="{{ description or metadescription }}">
+    <meta property="og:image" content="{{ metadata.cloudinary }}/w_1200/{{ image or metadata.smimage }}">
+    <meta property="og:url" content="{{ slug }}">
+    <meta property="og:site_name" content="{{ title }}">
+    <meta property="og:locale" content="en_GB">
+    <meta property="og:type" content="website">
 
     <link rel="stylesheet" href="{{ '/static/min/main.min.css' | url | cacheBuster }}" />
   </head>
