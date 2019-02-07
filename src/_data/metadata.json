@@ -14,5 +14,6 @@
     "url": "https://matuzo.at/feed.xml",
     "id": "https://matuzo.at/"
   },
-  "cloudinary": "https://res.cloudinary.com/dp3mem7or/image/upload"
+  "cloudinary": "https://res.cloudinary.com/dp3mem7or/image/upload",
+  "smimage": "misc/sm.jpg"
 }
