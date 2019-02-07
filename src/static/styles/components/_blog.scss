@@ -1,7 +1,6 @@
 .blog {
   --date-padding: 1rem 0 0 0;
   --blog-header-margin: #{$spacing};
-  --teaser-padding: 0;
   --blog-hr-spacing: 5.65rem;
   --date-font-size: 1.6rem;
 
@@ -17,20 +16,17 @@
 
   @include mq(m) {
     --date-padding: 0 0 0 #{$spacing / 2};
-    --teaser-padding: 0 #{$spacing / 2.5};
     --blog-hr-spacing: 8.65rem;
     --quote-padding: 0 3rem 0 4rem;
   }
 
   @include mq(l) {
     --date-padding: 0 0 0 #{$spacing / 1.5};
-    --teaser-padding: 0;
   }
 
   @include mq(xl) {
     --date-padding: 0 0 0 #{$spacing};
     --date-font-size: 1.8rem;
-    --teaser-padding: 0 #{$spacing};
     --quote-cite-font-size: 2rem;
   }
 
@@ -69,12 +65,7 @@
 
     line-height: 1.6;
     margin-bottom: $spacing;
-    padding: var(--teaser-padding);
     position: relative;
-
-    &--aligned {
-      padding: 0;
-    }
   }
 
   &__heading {
