@@ -20,6 +20,10 @@ date: 1987-01-01
         <a href="{{ til.data.link }}" rel="noopener" class="image-list__link">
           <img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-src="{{ metadata.cloudinary }}/w_440/{{til.data.image}}" alt="" class="image-list__image"/>
         </a>
+      {% else %}
+        <a href="{{ metadata.cloudinary }}/{{til.data.image}}" rel="noopener" class="image-list__link">
+          <img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-src="{{ metadata.cloudinary }}/w_440/{{til.data.image}}" alt="" class="image-list__image"/>
+        </a>
       {% endif %}
     {% endif %}
   </li>
