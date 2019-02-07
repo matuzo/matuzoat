@@ -2,8 +2,8 @@
 title: The Dark Side of the Grid (Part 1)
 metadescription: >-
   CSS Grid Layout is one of the most exciting new CSS specifications but it also
-  entails dangers regarding accessibility and UX.
-date: 2019-02-06T04:58:47.818Z
+  creates new dangers regarding accessibility and UX.
+date: 2019-02-07T04:58:47.818Z
 image: articles/darksidesm.jpg
 intro: >-
   This is part 1 of 3 in a series of articles about CSS Grid layout and
@@ -102,7 +102,7 @@ Therefore, I present to you: **Pink Floyd Fact #1**.
 <div class="fact u-full-width">
 <div class="fact__inner">
 <h2 id="floyd-fact-1" class="fact__heading">Pink Floyd Fun Fact #1</h2>
-<p>The Dark Side of the Moon is, with over 45 million copies sold, the <a href="https://en.wikipedia.org/wiki/List_of_best-selling_albums" rel="noopener">fourth best-selling album worldwide</a>. Only <em>Back in Black</em> by AC/DC (50 Million), <em>Their Greatest Hits</em> (1971–1975) by The Eagles (51 Million) and, <em>of course</em>, <em>Thriller</em> by Michael Jackson (66 Million) have sold more often.</p>
+<p><cite>The Dark Side of the Moon</cite> is, with over 45 million copies sold, the <a href="https://en.wikipedia.org/wiki/List_of_best-selling_albums" rel="noopener">fourth best-selling album worldwide</a>. Only <em>Back in Black</em> by AC/DC (50 Million), <em>Their Greatest Hits</em> (1971–1975) by The Eagles (51 Million) and, <em>of course</em>, <em>Thriller</em> by Michael Jackson (66 Million) have sold more often.</p>
 </div>
 </div>
 
@@ -145,7 +145,7 @@ Let’s say we have a `section` with a heading and a list of items.
 The `section` forms a 3-column grid, we want the heading to span all columns, and each `li` should fill one cell.
 It should look something like this:
 
-[![The headings spans the whole with and the list items are split in 3 columns](https://res.cloudinary.com/dp3mem7or/image/upload/v1549441106/articles/Screen_Shot_2019-02-06_at_09.14.05.png)](https://res.cloudinary.com/dp3mem7or/image/upload/v1549441106/articles/Screen_Shot_2019-02-06_at_09.14.05.png)
+<a href="https://res.cloudinary.com/dp3mem7or/image/upload/v1549441106/articles/Screen_Shot_2019-02-06_at_09.14.05.png" rel="noopener" class="no-line"><img src="https://res.cloudinary.com/dp3mem7or/image/upload/v1549441106/articles/Screen_Shot_2019-02-06_at_09.14.05.png" alt="The headings spans the whole with and the list items are split in 3 columns"></a>
 
 That shouldn't be too hard. We select the `section`, set `display: grid`, add 3 even columns, a `10px` gutter and we make the heading span all 3 columns.
 
@@ -175,7 +175,7 @@ Okay, let’s try to fix that.
 
 ### Solution #1: Flattening the document structure.
 
-If the placement algorithm only effects direct child items, we’ll just make our `li` direct child items by removing the `ul` and transforming the `li` to `div`s to avoid invalid HTML. This is a solution, but it’s a bad solution because we’re compromising on semantics for design reasons.
+If the placement algorithm only effects direct child elements, we’ll just make our `li` direct children by removing the `ul` and swapping the `li`s for `div`s to avoid invalid HTML. This is a solution, but it’s a bad solution because we’re compromising on semantics for design reasons.
 
 ```html
 <section>
@@ -192,7 +192,7 @@ If the placement algorithm only effects direct child items, we’ll just make ou
 </section>
 ```
 
-Flattening the document structure may have bad affects on the semantics of your document which is especially bad for screen reader users. For example, when you’re using a list, [screen readers usually announce the number of list items](https://www.scottohara.me/blog/2019/01/12/lists-and-safari.html) which helps with navigation and overview.\
+Flattening the document structure may have bad affects on the semantics of your document, which is especially bad for screen reader users. For example, when you’re using a list, [screen readers usually announce the number of list items](https://www.scottohara.me/blog/2019/01/12/lists-and-safari.html) which helps with navigation and overview.\
 Also, a flat document might be harder to read when displayed without CSS.
 
 <div class="info">
@@ -243,11 +243,11 @@ In our example, this causes the list items to take part in the alignment of the 
 <figure class="figure figure--full">
 <a href="https://res.cloudinary.com/dp3mem7or/image/upload/v1549211279/articles/Screen_Shot_2019-02-03_at_17.26.50.png" rel="noopener"><img src="https://res.cloudinary.com/dp3mem7or/image/upload/v1549211279/articles/Screen_Shot_2019-02-03_at_17.26.50.png" alt="Browsersupport table on caniuse.com for display: contents; Supported by alt major desktop browsers but only in Firefox without bugs." /></a>
 <figcaption>
-Edge doesn’t support display: contents due to an accessibility bug in Chrome, Safari and Opera.
+Edge doesn’t support <code>display: contents</code> due to an accessibility bug in Chrome, Safari and Opera.
 </figcaption>
 </figure>
 
-The lack of support per se isn’t the issue but rather why it’s not supported. There’s a bug in Chrome, Opera, and Safari that removes an element with a `display` value of `contents` from the accessibility tree [making it inaccessible to screen reader users](http://adrianroselli.com/2018/05/display-contents-is-not-a-css-reset.html). It’s like applying `display: none` – the element just doesn’t exist anymore for assistive technology.
+The lack of support per se isn’t the issue but rather why it’s not supported. There’s a bug in Chrome, Opera, and Safari that removes an element with a `display` value of `contents` from the accessibility tree, [making it inaccessible to screen reader users](http://adrianroselli.com/2018/05/display-contents-is-not-a-css-reset.html). It’s like applying `display: none` – the element just doesn’t exist anymore for assistive technology.
 
 <figure class="figure figure--full">
 <a href="https://res.cloudinary.com/dp3mem7or/image/upload/v1549454338/articles/contents_devtools.jpg" rel="noopener"><img src="https://res.cloudinary.com/dp3mem7or/image/upload/v1549454338/articles/contents_devtools.jpg" alt="The accessibility panel in Chrome DevTools." /></a>
@@ -273,16 +273,18 @@ As already mentioned, a grid item can also be a grid container. We can select th
 
 Nesting grids isn’t a perfect solution and sometimes it might not work, but in this simple example it’s good enough.
 
+<a href="#recap" class="skip-link skip-link--inline">Skip CodePen</a>
+
 <p class="codepen" data-height="400" data-theme-id="6054" data-default-tab="result" data-user="matuzo" data-slug-hash="VgMdGO" style="height: 300px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid black; margin: 1em 0; padding: 1em;" data-pen-title="Grid nesting issue solution">
   <span>See the Pen <a href="https://codepen.io/matuzo/pen/VgMdGO/">
   Grid nesting issue solution</a> by Manuel Matuzovic (<a href="https://codepen.io/matuzo">@matuzo</a>)
   on <a href="https://codepen.io">CodePen</a>.</span>
 </p>
 
-### Recap
+## Recap
 
-The situation regarding sub-grids is anything but perfect. The `subgrid` value isn’t a standard yet, `display: contents` is buggy, and nesting grids will only work in specific use cases. If you see yourself compromising on semantics just to use CSS Grid Layout, don’t use it or try to workaround the problem until browsers fix the `display: contents` bug or ship subgrids.
+The situation regarding subgrids is anything but perfect. The `subgrid` value isn’t a standard yet, `display: contents` is buggy, and nesting grids will only work in specific use cases. If you see yourself compromising on semantics just to use CSS Grid Layout, don’t use it or try to workaround the problem until browsers fix the `display: contents` bug or ship subgrids.
 
-This was part 1 of the dark side of the grid. In part two I’ll show you how easy it is to confuse users unintentionally, why it’s bad and how to avoid it.
+This was part 1 of the dark side of the grid. In part two I’ll show you how easy it is to confuse users unintentionally, why it’s bad, and how to avoid it.
 
 <script async src="https://static.codepen.io/assets/embed/ei.js"></script>
