@@ -2,7 +2,7 @@
 title: The Dark Side of the Grid (Part 1)
 metadescription: >-
   CSS Grid Layout is one of the most exciting new CSS specifications but it also
-  entails dangers regarding accessibility and UX.
+  creates new dangers regarding accessibility and UX.
 date: 2019-02-06T04:58:47.818Z
 image: articles/darksidesm.jpg
 intro: >-
@@ -145,7 +145,7 @@ Let’s say we have a `section` with a heading and a list of items.
 The `section` forms a 3-column grid, we want the heading to span all columns, and each `li` should fill one cell.
 It should look something like this:
 
-[![The headings spans the whole with and the list items are split in 3 columns](https://res.cloudinary.com/dp3mem7or/image/upload/v1549441106/articles/Screen_Shot_2019-02-06_at_09.14.05.png)](https://res.cloudinary.com/dp3mem7or/image/upload/v1549441106/articles/Screen_Shot_2019-02-06_at_09.14.05.png)
+<a href="https://res.cloudinary.com/dp3mem7or/image/upload/v1549441106/articles/Screen_Shot_2019-02-06_at_09.14.05.png" rel="noopener"><img src="https://res.cloudinary.com/dp3mem7or/image/upload/v1549441106/articles/Screen_Shot_2019-02-06_at_09.14.05.png" alt="The headings spans the whole with and the list items are split in 3 columns"></a>
 
 That shouldn't be too hard. We select the `section`, set `display: grid`, add 3 even columns, a `10px` gutter and we make the heading span all 3 columns.
 
