@@ -293,4 +293,16 @@ The situation regarding subgrids is anything but perfect. The `subgrid` value is
 
 This was part 1 of the dark side of the grid. In part two I’ll show you how easy it is to confuse users unintentionally, why it’s bad, and how to avoid it.
 
+Thank you to [Aaron](https://twitter.com/AaronGustafson) and [Max](https://twitter.com/mxbck) for reviewing this article.
+
+## Resources
+
+* [The Story of CSS Grid, from Its Creators](https://alistapart.com/article/the-story-of-css-grid-from-its-creators) by [Aaron Gustafson](https://www.aaron-gustafson.com/)
+* [Modern CSS Layout, power and responsibility](https://rachelandrew.co.uk/archives/2015/07/28/modern-css-layout-power-and-responsibility/) by [Rachel Andrew](https://rachelandrew.co.uk)
+* [CSS Grid Level 2: Here Comes Subgrid](https://www.smashingmagazine.com/2018/07/css-grid-2/) by [Rachel Andrew](https://rachelandrew.co.uk)
+* [CSS Grid Layout Module Level 2](https://drafts.csswg.org/css-grid-2/)
+* [Grid vs. Subgrid: An Elemental Example](http://fantasai.inkedblade.net/style/discuss/subgrid-markup/) by [fantasai](http://fantasai.inkedblade.net/)
+* [Display: Contents Is Not a CSS Reset](http://adrianroselli.com/2018/05/display-contents-is-not-a-css-reset.html) by [Adrian Roselli](http://adrianroselli.com)
+* [Add display:contents #608](https://github.com/MicrosoftEdge/Status/issues/608#issuecomment-394521198)
+
 <script async src="https://static.codepen.io/assets/embed/ei.js"></script>
