@@ -25,6 +25,10 @@
     background-size: cover;
     background-blend-mode: multiply;
     background-position: center;
+
+    &.lazy {
+      background: none;
+    }
   }
 
   &__inner {

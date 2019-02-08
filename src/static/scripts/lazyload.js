@@ -12,7 +12,9 @@ function loadImage(image) {
 function fetchImage(url) {
   return new Promise((resolve, reject) => {
     const image = new Image();
-    image.src = url;
+    if (url) {
+      image.src = url;
+    }
     image.onload = resolve;
     image.onerror = reject;
   });
@@ -22,8 +24,11 @@ function imageVisible(entries) {
   for (let i = 0; i < entries.length; i++) {
     let entry = entries[i];
     if (entry.intersectionRatio > 0) {
-      observer.unobserve(entry.target);
-      loadImage(entry.target);
+      const image = entry.target;
+      loadImage(image);
+      image.classList.remove('lazy');
+
+      observer.unobserve(image);
     }
   }
 }

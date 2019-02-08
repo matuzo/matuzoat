@@ -156,7 +156,7 @@ prefetchNav();
 // }
 
 // Lazy load images
-lazyLoad(document.querySelectorAll('img[data-src]'));
+lazyLoad(document.querySelectorAll('.lazy'));
 
 /** 
  * Enhance demos with JS

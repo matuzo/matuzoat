@@ -16,7 +16,7 @@
       {% for pub in collections.publications %}
         {% if post.data.publication == pub.data.title %}
           <div class="post-list__image post-list__image--{{ post.data.publication | stringify | slug }}">
-            <img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-src="{{ metadata.cloudinary }}/h_32/{{ pub.data.logo }}" alt="{{ pub.data.title }}" width="32" />
+            <img class="lazy" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-src="{{ metadata.cloudinary }}/h_32/{{ pub.data.logo }}" alt="{{ pub.data.title }}" width="32" />
           </div>
         {% endif %}
       {% endfor %} 
