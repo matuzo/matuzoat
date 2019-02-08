@@ -262,7 +262,7 @@ The <code>ul</code> should have a <code>role</code> of <code>list</code> but ins
 
 [Microsoft Edge will consider adding the feature](https://github.com/MicrosoftEdge/Status/issues/608#issuecomment-394521198) as soon as blink and webkit-based browsers fix the bug. Consider not using `contents` until then.
 
-### Solutions #4: Nesting grids
+### Solution #4: Nesting grids
 
 As already mentioned, a grid item can also be a grid container. We can select the unordered list, make it span the whole width, and inherit values from the parent grid.
 
