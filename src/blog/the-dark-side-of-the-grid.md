@@ -179,7 +179,7 @@ Okay, let’s try to fix that.
 
 ### Solution #1: Flattening the document structure.
 
-If the placement algorithm only effects direct child elements, we’ll just make our `li` direct children by removing the `ul` and swapping the `li`s for `div`s to avoid invalid HTML. This is a solution, but it’s a bad solution because we’re compromising on semantics for design reasons.
+If the placement algorithm only affects direct child elements, we’ll just make our `li` direct children by removing the `ul` and swapping the `li`s for `div`s to avoid invalid HTML. This is a solution, but it’s a bad solution because we’re compromising on semantics for design reasons.
 
 ```html
 <section>
@@ -196,7 +196,7 @@ If the placement algorithm only effects direct child elements, we’ll just make
 </section>
 ```
 
-Flattening the document structure may have bad affects on the semantics of your document, which is especially bad for screen reader users. For example, when you’re using a list, [screen readers usually announce the number of list items](https://www.scottohara.me/blog/2019/01/12/lists-and-safari.html) which helps with navigation and overview.\
+Flattening the document structure may have bad effects on the semantics of your document, which is especially bad for screen reader users. For example, when you’re using a list, [screen readers usually announce the number of list items](https://www.scottohara.me/blog/2019/01/12/lists-and-safari.html) which helps with navigation and overview.\
 Also, a flat document might be harder to read when displayed without CSS.
 
 <div class="info">
