@@ -15,13 +15,11 @@ module.exports = function(eleventyConfig) {
 
   // Collections
   Object.keys(collections).forEach(collectionName => {
-    console.log(collectionName)
     eleventyConfig.addCollection(collectionName, collections[collectionName])
   });
 
   // Transforms
   Object.keys(transforms).forEach(transformName => {
-    console.log(transformName)
     eleventyConfig.addTransform(transformName, transforms[transformName])
   });
 

@@ -17,6 +17,7 @@ axios.get(`https://api.netlify.com/api/v1/forms/${form_id}/submissions/?access_t
     fs.writeFileSync('./src/pages/guestbook/guestbook.json', JSON.stringify(guestbook));
     
     console.log("*** File written successfully");
+    console.log(guestbook.submissions)
 
 
   })
