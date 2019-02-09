@@ -31,4 +31,6 @@ navtitle: Guestbook
 
 {% for submission in submissions %}
   {{ submission.email }}
+  {{ submission.name }}
+  {{ submission.body }}
 {% endfor %}
