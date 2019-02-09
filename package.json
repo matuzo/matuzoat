@@ -6,7 +6,8 @@
   "scripts": {
     "start": "ELEVENTY_ENV=development eleventy --serve | webpack --config webpack.common.js --watch",
     "debug": "DEBUG=Eleventy* eleventy --serve | webpack --config webpack.common.js --watch",
-    "build": "ELEVENTY_ENV=production webpack --config webpack.prod.js && eleventy"
+    "build": "node guestbook.js && ELEVENTY_ENV=production webpack --config webpack.prod.js && eleventy",
+    "guestbook": "node guestbook.js"
   },
   "repository": {
     "type": "git",
@@ -35,13 +36,14 @@
     "webpack": "^4.27.1",
     "webpack-cli": "^3.1.2",
     "webpack-merge": "^4.1.4",
-    "luxon": "^1.4.3"
-  },
-  "dependencies": {
+    "luxon": "^1.4.3",
     "@11ty/eleventy-plugin-syntaxhighlight": "^2.0.1",
-    "focus-visible": "^4.1.5",
+    "axios": "^0.18.0",
     "html-minifier": "^3.5.21",
     "markdown-it": "^8.4.2",
     "slugify": "^1.3.4"
+  },
+  "dependencies": {
+    "focus-visible": "^4.1.5"
   }
 }

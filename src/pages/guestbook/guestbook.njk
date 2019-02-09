@@ -28,3 +28,7 @@ navtitle: Guestbook
     <button type="submit">Send</button>
   </p>
 </form>
+
+{% for submission in submissions %}
+  {{ submission.email }}
+{% endfor %}
