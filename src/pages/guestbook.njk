@@ -1,0 +1,26 @@
+---
+layout: layouts/page.njk
+title: Guestbook
+description: Manuel Matuzovic, Mitglied der Wirtschaftskammer Wien.
+permalink: /guestbook/index.html
+tags:
+  - nav
+navtitle: Guestbook
+---
+
+<form name="guestbook" method="POST" data-netlify="true">
+  <p>
+    <label>Your Name: <input type="text" name="name" /></label>   
+  </p>
+
+  <p>
+    <label>Your Email: <input type="email" name="email" /></label>
+  </p>
+
+  <p>
+    <label>Message: <textarea name="message"></textarea></label>
+  </p>
+  <p>
+    <button type="submit">Send</button>
+  </p>
+</form>
