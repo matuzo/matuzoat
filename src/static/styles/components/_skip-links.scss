@@ -50,6 +50,8 @@
     @include link-active {
       // Override global theme settings
       box-shadow: none !important;
+      color: $c-prim !important;
+      outline: none !important;
     }
 
     &::after,
