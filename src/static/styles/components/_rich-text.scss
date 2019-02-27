@@ -79,4 +79,26 @@
   pre {
     overflow: auto;
   }
+
+  *:target {
+    transition: background 0.2s;
+    animation: target-highlight 1.2s ease-in-out;
+    position: relative;
+  }
+  
+  *:target::after {
+    position: absolute;
+    width: 1rem;
+    height: 3rem;
+    content: "";
+    background: #f23c50;
+    left: -2rem;
+    top: 0.4rem;
+    display: block;
+  }
+  
+  @keyframes target-highlight {
+    50% { background: #f23c50; }
+    100% { background: none; }
+  }
 }
