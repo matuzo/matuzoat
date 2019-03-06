@@ -177,6 +177,8 @@ And this is what we get:
 
 Okay, let’s try to fix that.
 
+PS: I'm well aware that I could apply `display: grid` to the `ul` directly but this is just a simplified example. There are other (more complicated) use cases where you can't do that easily. 
+
 ### Solution #1: Flattening the document structure.
 
 If the placement algorithm only affects direct child elements, we’ll just make our `li` direct children by removing the `ul` and swapping the `li`s for `div`s to avoid invalid HTML. This is a solution, but it’s a bad solution because we’re compromising on semantics for design reasons.
