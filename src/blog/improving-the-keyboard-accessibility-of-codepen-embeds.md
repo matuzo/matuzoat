@@ -5,7 +5,8 @@ metadescription: >-
   styles and in-page skip links.
 date: 2019-03-07T18:58:49.130Z
 image: articles/codepensm.jpg
-intro: >-
+intro: ''
+teaser: >-
   I'm a [huge fan](https://xkcd.com/1378/) of [CodePen](https://codepen.io/)
   (No, they didn't pay me to write this). I'm using it for prototyping,
   experimenting, sharing code, and in my latest blog post, [The Dark Side of the
@@ -18,7 +19,6 @@ intro: >-
 
   As a PRO user, I can also add custom CSS, which gives me the ability to
   improve Pens not just visually but in terms of accessibility.
-teaser: .
 tags:
   - css
   - a11y
