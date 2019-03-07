@@ -18,6 +18,7 @@ intro: >-
 
   As a PRO user, I can also add custom CSS, which gives me the ability to
   improve Pens not just visually but in terms of accessibility.
+teaser: .
 tags:
   - css
   - a11y
