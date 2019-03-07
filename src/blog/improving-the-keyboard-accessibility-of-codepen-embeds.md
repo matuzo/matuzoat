@@ -27,21 +27,20 @@ archive: false
 ---
 <figure class="figure ">
   <span class="content__image-wrapper">
-     <img class="content__image" src="https://d2mxuefqeaa7sj.cloudfront.net/s_4A526A782EC430ED0BB5AD619387A9B6FCCD655511B65196DD333E88F585466C_1550745903247_Screen+Shot+2019-02-12+at+06.40.12.png" alt="The Embed Theme Builder with several options to change the look and feel of embedded Pens.">
+     <img class="content__image" src="https://res.cloudinary.com/dp3mem7or/image/upload/v1551942694/articles/s_4A526A782EC430ED0BB5AD619387A9B6FCCD655511B65196DD333E88F585466C_1550745903247_Screen_Shot_2019-02-12_at_06.40.12.png" alt="The Embed Theme Builder with several options to change the look and feel of embedded Pens.">
   </span>
 
   <figcaption>CodePen Embed Theme Builder</figcaption>
 </figure>
 
-
 ## Accessibility wins
 
 Before I tell you where I see room for improvement, I want to highlight what they did well.
 
-- You can customize colors and make sure that [contrast ratios are high enough](https://webaim.org/resources/contrastchecker/). 
-- There's a click-to-load option. Pens can be in a preview state where they need to be clicked to loaded, which is good for performance.
-- All buttons and links in Pens are HTML `<button>` and `<a>` elements with actual text (What a time we live in that this makes me happy).
-- Embedded Pens are `iframe`s. There's a `title` attribute on each `iframe` with the title of the Pen as a value. This is important because screen readers announce this value when the `iframe` is focussed. If the attribute is omitted, VoiceOver for example, falls back to the `name` attribute. This can be annoying, especially if the value of the `name` is a long hash.
+* You can customize colors and make sure that [contrast ratios are high enough](https://webaim.org/resources/contrastchecker/). 
+* There's a click-to-load option. Pens can be in a preview state where they need to be clicked to loaded, which is good for performance.
+* All buttons and links in Pens are HTML `<button>` and `<a>` elements with actual text (What a time we live in that this makes me happy).
+* Embedded Pens are `iframe`s. There's a `title` attribute on each `iframe` with the title of the Pen as a value. This is important because screen readers announce this value when the `iframe` is focussed. If the attribute is omitted, VoiceOver for example, falls back to the `name` attribute. This can be annoying, especially if the value of the `name` is a long hash.
 
 <figure class="figure">
   <div class="content__video-wrapper">
@@ -53,12 +52,12 @@ Before I tell you where I see room for improvement, I want to highlight what the
   <figcaption>The CodePen is named “Buttons demo”. VoiceOver annouces the name because it’s the value of the <code>title</code> attribute. It falls back to the <code>name</code> attribute if the <code>title</code> is omitted.</figcaption>
 </figure>
 
-
 ## Accessibility improvements
 
 [I use the keyboard a lot](https://www.24a11y.com/2018/i-threw-away-my-mouse/), even on the web, and I want to make sure that other keyboard users get the best possible experience on my website.
 
 ### Focus styling
+
 Depending on the colors in a CodePen theme and the browser used, focus styles are more or less visible. To make sure that focusable elements are sufficiently highlighted all the time, I added these lines to my custom CSS file:
 
 ```css
@@ -72,20 +71,19 @@ a:focus {
 }
 ```
 
-
 <figure class="figure">
   <span class="content__image-wrapper">
-     <img class="content__image" src="https://d2mxuefqeaa7sj.cloudfront.net/s_4A526A782EC430ED0BB5AD619387A9B6FCCD655511B65196DD333E88F585466C_1550815810550_Screen+Shot+2019-02-22+at+07.09.44.png" alt="Embedded Pen with HTML on the left side and a preview on the right side. Multiple buttons with a single letter each form the sentence 'I love buttons'.">
+     <img class="content__image" src="https://res.cloudinary.com/dp3mem7or/image/upload/v1551942659/articles/Screen_Shot_2019-02-22_at_07.09.44.png" alt="Embedded Pen with HTML on the left side and a preview on the right side. Multiple buttons wit
+
+h a single letter each form the sentence 'I love buttons'.">
   </span>
 
   <figcaption>The <code>outline</code> property highlights the “CSS” Button on focus.</figcaption>
 </figure>
 
-
 <div class="info">
 <h4><span class="info__label">Wait! What?</span><span class="info__heading">Why did you add <code>transform: rotate(0);</code>?</a></h4>
 <p>To make sure that other items don't overlap the outline of the focused item, I create a new <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Positioning/Understanding_z_index/The_stacking_context" rel="noopener">stacking context</a> on focus by applying the <code>transform</code> property with a value that doesn't change anything else visually. <code>transform</code> is just one of <a href="https://codepen.io/matuzo/pen/aERqyg" rel="noopener">many other properties that create a new stacking context</a>.</p></div>
-
 
 As part of my testing, I discovered that in Firefox on macOS 10.13.6 a `pre` element within the `iframe` receives focus as well. That's why added the following lines.
 
@@ -121,11 +119,9 @@ This is how the Pen looks like in Firefox:
   <figcaption>All focusable elements are now clearly highlighted.</figcaption>
 </figure>
 
-
 ### Skip links
 
 Let's say, you're not interested in the embedded Pen. As a mouse user, you just keep scrolling. As a keyboard user, you have to press <kbd>Tab</kbd> at least 9 times until you get to the next focusable element. Or worse, you get trapped in the Pen. This happens if the Pen is editable. You can pass the buttons in the top bar but the journey ends as soon as you get to the `pre` element where the code is displayed. Once you're in there, there's no way of getting out. 
-
 
 <figure class="figure">
   <div class="content__video-wrapper">
@@ -142,7 +138,7 @@ A skip link is a link that’s usually only visible on focus and lets users skip
 
 <figure class="figure  figure--full">
   <span class="content__image-wrapper">
-     <img class="content__image" src="https://d2mxuefqeaa7sj.cloudfront.net/s_4A526A782EC430ED0BB5AD619387A9B6FCCD655511B65196DD333E88F585466C_1550818301313_Screen+Shot+2019-02-22+at+07.51.17.png" alt="A skip link at the top center of the page that says 'skip to main content'">
+     <img class="content__image" src="https://res.cloudinary.com/dp3mem7or/image/upload/v1551942659/articles/Screen_Shot_2019-02-22_at_07.51.17.png" alt="A skip link at the top center of the page that says 'skip to main content'">
   </span>
 
   <figcaption>Skip link on Max Böcks website.</figcaption>
@@ -154,8 +150,7 @@ Sometimes it also makes sense to add in-page skip links. For example when you wa
 
 Directly before the embed code for the Pen, I added a `div` with an anchor link to an element that comes after the Pen in the DOM. By clicking this link, users can skip everything between the link and the target.
 
-
-``` html
+```html
   <div class="skip-link-container">
     <a href="#codepen1-skip" class="skip-link">
       Skip CodePen
@@ -170,7 +165,7 @@ Directly before the embed code for the Pen, I added a `div` with an anchor link 
 
 By default, this link is visually hidden and only visible on focus. It’s not enough to just apply `display: none` and remove it on focus. To ensure that the link is still accessible to screen reader users, it's necessary to get more creative.
 
-``` css
+```css
   .skip-link-container {
     position: relative;
   }
@@ -192,10 +187,9 @@ By default, this link is visually hidden and only visible on focus. It’s not e
   }
 ```
 
+This is a great improvement because we’ve reduced the number of key presses needed to skip the Pen from 9 to 1. There’s just one more thing I want to add. Since the page _jumps_ from the anchor link to the target and the skipped area might not be in the viewport anymore, users might become lost. To help with that, we can give them a visual feedback after the jump has happened.
 
-This is a great improvement because we’ve reduced the number of key presses needed to skip the Pen from 9 to 1. There’s just one more thing I want to add. Since the page *jumps* from the anchor link to the target and the skipped area might not be in the viewport anymore, users might become lost. To help with that, we can give them a visual feedback after the jump has happened.
-
-``` css
+```css
   /* “The :target CSS pseudo-class represents a unique element (the target element) with an id matching the URL's fragment.”
   https://developer.mozilla.org/en-US/docs/Web/CSS/:target */
   
@@ -209,7 +203,6 @@ This is a great improvement because we’ve reduced the number of key presses ne
     100% { background: none; }
   }
 ```
-
 
 And this is how the final result looks like. Watch the video or [try it yourself](http://dev.matuzo.at/codepen/).
 
@@ -230,4 +223,5 @@ Keyboard users benefit the most from my proposed improvements. I haven't tested 
 Until then, keep on making awesome websites for everyone. If you have any questions or feedback, please find me on [Twitter](https://twitter.com/mmatuzo) or write me an [e-mail](mailto:manuel@matuzo.at).
 
 PS: Thank you for reviewing this post, Scott. ❤️
+
 <script async src="https://static.codepen.io/assets/embed/ei.js"></script>
