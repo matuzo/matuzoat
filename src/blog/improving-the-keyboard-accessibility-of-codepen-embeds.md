@@ -73,9 +73,7 @@ a:focus {
 
 <figure class="figure">
   <span class="content__image-wrapper">
-     <img class="content__image" src="https://res.cloudinary.com/dp3mem7or/image/upload/v1551942659/articles/Screen_Shot_2019-02-22_at_07.09.44.png" alt="Embedded Pen with HTML on the left side and a preview on the right side. Multiple buttons wit
-
-h a single letter each form the sentence 'I love buttons'.">
+     <img class="content__image" src="https://res.cloudinary.com/dp3mem7or/image/upload/v1551942659/articles/Screen_Shot_2019-02-22_at_07.09.44.png" alt="Embedded Pen with HTML on the left side and a preview on the right side. Multiple buttons with a single letter each form the sentence 'I love buttons'.">
   </span>
 
   <figcaption>The <code>outline</code> property highlights the “CSS” Button on focus.</figcaption>
