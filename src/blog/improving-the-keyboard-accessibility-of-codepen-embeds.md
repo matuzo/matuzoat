@@ -78,7 +78,7 @@ a:focus {
      <img class="content__image" src="https://res.cloudinary.com/dp3mem7or/image/upload/v1551942659/articles/Screen_Shot_2019-02-22_at_07.09.44.png" alt="Embedded Pen with HTML on the left side and a preview on the right side. Multiple buttons with a single letter each form the sentence 'I love buttons'.">
   </span>
 
-  <figcaption>The <code>outline</code> property highlights the “CSS” Button on focus.</figcaption>
+  <figcaption>The <code>outline</code> property highlights the “CSS” button on focus.</figcaption>
 </figure>
 
 <div class="info">
@@ -93,7 +93,7 @@ pre:focus {
   outline: 5px solid #f23c50;
   /* The negative value insets the outline */
   outline-offset: -5px;
-  /* Fallback for browser that don't support outline-offset */
+  /* Fallback for browsers that don't support outline-offset */
   border: 5px solid #f23c50; 
 }
 
@@ -163,7 +163,7 @@ Directly before the embed code for the Pen, I added a `div` with an anchor link 
   <h2 id="codepen1-skip">Subsequent element</h2>
 ```
 
-By default, this link is visually hidden and only visible on focus. It’s not enough to just apply `display: none` and remove it on focus. To ensure that the link is still accessible to screen reader users, it's necessary to get more creative.
+By default, this link should be visually hidden and only visible on focus. It’s not enough to just apply `display: none` and remove it on focus. To ensure that the link is still accessible to screen reader users, it's necessary to get more creative.
 
 ```css
   .skip-link-container {
