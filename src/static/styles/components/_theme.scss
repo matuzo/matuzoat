@@ -6,8 +6,10 @@
   $c-highlight-light,
   $c-light
 );
-@include theme('medium', $c-light, $c-highlight, $theme-medium-color) @include
-  theme(
+
+@include theme('medium', $c-light, $c-highlight, $theme-medium-color) 
+
+@include theme(
     '24a11y',
     $c-light,
     $c-light,
@@ -15,7 +17,9 @@
     $c-highlight-light,
     $c-light
   );
+
 @include theme('a-list-apart', $theme-a-list-apart-color, $c-sec, $c-highlight);
+
 @include theme(
   'css-tricks',
   $c-light,
@@ -43,3 +47,5 @@
     }
   }
 }
+
+@include theme('codepen', #fff, #ffdd40, #ffffff, #0ebeff, #ffdd40);
