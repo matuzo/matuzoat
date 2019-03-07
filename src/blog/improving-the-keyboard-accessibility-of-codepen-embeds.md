@@ -75,7 +75,9 @@ a:focus {
   <span class="content__image-wrapper">
      <img class="content__image" src="https://res.cloudinary.com/dp3mem7or/image/upload/v1551942659/articles/Screen_Shot_2019-02-22_at_png" alt="Embedded Pen with HTML on the left side and a preview on the right side. Multiple buttons wit
 
-h a single letter each form the sentence 'I love buttons'.">
+<figure class="figure">
+  <span class="content__image-wrapper">
+     <img class="content__image" src="https://res.cloudinary.com/dp3mem7or/image/upload/v1551942659/articles/Screen_Shot_2019-02-22_at_png" alt="Embedded Pen with HTML on the left side and a preview on the right side. Multiple buttons with a single letter each form the sentence 'I love buttons'.">
   </span>
 
   <figcaption>The <code>outline</code> property highlights the “CSS” Button on focus.</figcaption>
@@ -225,4 +227,5 @@ Until then, keep on making awesome websites for everyone. If you have any questi
 PS: Thank you for reviewing this post, Scott. ❤️
 
 <script async src="https://static.codepen.io/assets/embed/ei.js"></script>
+
 S
