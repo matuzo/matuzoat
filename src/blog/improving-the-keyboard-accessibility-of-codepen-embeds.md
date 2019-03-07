@@ -27,7 +27,7 @@ archive: false
 ---
 <figure class="figure ">
   <span class="content__image-wrapper">
-     <img class="content__image" src="https://res.cloudinary.com/dp3mem7or/image/upload/v1551942694/articles/s_4A526A782EC430ED0BB5AD619387A9B6FCCD655511B65196DD333E88F585466C_1550745903247_Screen_Shot_2019-02-12_at_06.40.12.png" alt="The Embed Theme Builder with several options to change the look and feel of embedded Pens.">
+     <img class="content__image" src="https://res.cloudinary.com/dp3mem7or/image/upload/v1551942694/articles/s_4A526A782EC430ED0BB5AD619387A9B6FCCD655511B65196DD333E88F585466C_1550745903247_Screen_Shot_2019-02-12_png" alt="The Embed Theme Builder with several options to change the look and feel of embedded Pens.">
   </span>
 
   <figcaption>CodePen Embed Theme Builder</figcaption>
@@ -73,7 +73,7 @@ a:focus {
 
 <figure class="figure">
   <span class="content__image-wrapper">
-     <img class="content__image" src="https://res.cloudinary.com/dp3mem7or/image/upload/v1551942659/articles/Screen_Shot_2019-02-22_at_07.09.44.png" alt="Embedded Pen with HTML on the left side and a preview on the right side. Multiple buttons wit
+     <img class="content__image" src="https://res.cloudinary.com/dp3mem7or/image/upload/v1551942659/articles/Screen_Shot_2019-02-22_at_png" alt="Embedded Pen with HTML on the left side and a preview on the right side. Multiple buttons wit
 
 h a single letter each form the sentence 'I love buttons'.">
   </span>
@@ -138,7 +138,7 @@ A skip link is a link that’s usually only visible on focus and lets users skip
 
 <figure class="figure  figure--full">
   <span class="content__image-wrapper">
-     <img class="content__image" src="https://res.cloudinary.com/dp3mem7or/image/upload/v1551942659/articles/Screen_Shot_2019-02-22_at_07.51.17.png" alt="A skip link at the top center of the page that says 'skip to main content'">
+     <img class="content__image" src="https://res.cloudinary.com/dp3mem7or/image/upload/v1551942659/articles/Screen_Shot_2019-02-22_at_" alt="A skip link at the top center of the page that says 'skip to main content'">
   </span>
 
   <figcaption>Skip link on Max Böcks website.</figcaption>
