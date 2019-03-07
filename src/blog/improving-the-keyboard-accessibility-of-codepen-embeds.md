@@ -1,5 +1,5 @@
 ---
-title: Improving the keyboard accessibility of CodePen Embeds
+title: Improving the keyboard accessibility of CodePen Embeds.
 metadescription: >-
   Improving the keyboard accessibility of CodePen Embeds by adding custom focus
   styles and in-page skip links.
