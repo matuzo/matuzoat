@@ -1,9 +1,10 @@
 ---
-title: Improving the keyboard accessibility of CodePen Embeds.
+title: Improving the keyboard accessibility of Embedded CodePens
 metadescription: >-
   Improving the keyboard accessibility of CodePen Embeds by adding custom focus
   styles and in-page skip links.
 date: 2019-03-07T18:58:49.130Z
+image: articles/codepensm.jpg
 intro: >-
   I'm a [huge fan](https://xkcd.com/1378/) of [CodePen](https://codepen.io/)
   (No, they didn't pay me to write this). I'm using it for prototyping,
@@ -22,7 +23,7 @@ tags:
   - a11y
   - codepen
 publication: Matuzo
-draft: true
+draft: false
 archive: false
 ---
 <figure class="figure ">
