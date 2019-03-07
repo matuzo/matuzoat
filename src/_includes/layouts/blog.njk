@@ -17,9 +17,11 @@ layout: layouts/base.njk
     </div>
   {% endif %}
 
-  <div class="blog__teaser {% if content %}blog__teaser--aligned{% endif %}">
-    {{ teaser | md | safe }}
-  </div>
+  {% if teaser %}
+    <div class="blog__teaser {% if content %}blog__teaser--aligned{% endif %}">
+      {{ teaser | md | safe }}
+    </div>
+  {% endif %}
 
   {% if content %}
     <div class="blog__content content rich-text">
