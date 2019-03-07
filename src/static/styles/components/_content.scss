@@ -16,6 +16,11 @@
     vertical-align: middle;
   }
 
+  &__video-wrapper {
+    @include corner(1rem, 2rem);
+    margin: 0 -1rem;
+  }
+
   &__image {
     display: block;
     position: relative;
