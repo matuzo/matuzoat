@@ -27,7 +27,7 @@ archive: false
 ---
 <figure class="figure ">
   <span class="content__image-wrapper">
-     <img class="content__image" src="https://res.cloudinary.com/dp3mem7or/image/upload/v1551942694/articles/s_4A526A782EC430ED0BB5AD619387A9B6FCCD655511B65196DD333E88F585466C_1550745903247_Screen_Shot_2019-02-12_png" alt="The Embed Theme Builder with several options to change the look and feel of embedded Pens.">
+     <img class="content_image" src="https://res.cloudinary.com/dp3mem7or/image/upload/v1551942694/articles/s_4A526A782EC430ED0BB5AD619387A9B6FCCD655511B65196DD333E88F585466C_1550745903247_Screen_Shot_2019-02-12_png" alt="The Embed Theme Builder with several options to change the look and feel of embedded Pens.">
   </span>
 
   <figcaption>CodePen Embed Theme Builder</figcaption>
