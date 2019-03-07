@@ -218,7 +218,7 @@ And this is how the final result looks like. Watch the video or [try it yourself
 
 ### What's next?
 
-Keyboard users benefit the most from my proposed improvements. I haven't tested how accessible embedded CodePens are for screen reader users but [Scott O'Hara](https://twitter.com/scottohara), who reviewed this article, told me that he had difficulties using Pens with VoiceOver. So, the next thing I (or you? 🙂) could do is to test CodePens with several screen readers and share the results.
+Keyboard users benefit the most from my proposed improvements. I haven't tested how accessible embedded CodePens are for screen reader users but [Scott O'Hara](https://twitter.com/scottohara), who reviewed this article, told me that he had difficulties using Pens with VoiceOver in the past. So, the next thing I (or you? 🙂) could do is to test CodePens with several screen readers and share the results.
 
 Until then, keep on making awesome websites for everyone. If you have any questions or feedback, please find me on [Twitter](https://twitter.com/mmatuzo) or write me an [e-mail](mailto:manuel@matuzo.at).
 
