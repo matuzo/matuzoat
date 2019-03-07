@@ -72,8 +72,8 @@ a:focus {
 ```
 
 <figure class="figure">
-  <span class="content__image-wrapper">
-     <img class="content__image" src="https://res.cloudinary.com/dp3mem7or/image/upload/v1551942659/articles/Screen_Shot_2019-02-22_at_png" alt="Embedded Pen with HTML on the left side and a preview on the right side. Multiple buttons wit
+<figure class="n 
+edded Pen with HTML on the left side and a preview on the right side. Multiple buttons wit
 
 <figure class="figure">
   <span class="content__image-wrapper">
