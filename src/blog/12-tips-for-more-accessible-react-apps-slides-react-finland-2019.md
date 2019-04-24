@@ -28,13 +28,13 @@ The slides are online on this page slide by slide with descriptions and on [noti
 
 ### Introduction
 
-![](articles/react-finland/accessible_react_apps.001.jpg)
+![](https://res.cloudinary.com/dp3mem7or/image/upload/v1549208913/articles/react-finland/accessible_react_apps.001.jpg)
 
 <p>Hello React Finland!</p>
 
 ### About me
 
-![](articles/react-finland/accessible_react_apps.002.jpg)
+![](https://res.cloudinary.com/dp3mem7or/image/upload/v1549208913/articles/react-finland/accessible_react_apps.002.jpg)
 
 My name is Manuel Matuzovic, I'm a frontend developer from Vienna.
 I work for the City of Vienna and I'm specialised in HTML, CSS, and accessibility.
@@ -42,7 +42,7 @@ My twitter handle is [mmatuzo](https://twitter.com/mmatuzo).
 
 ### Link to the Slides
 
-![](articles/react-finland/accessible_react_apps.003.jpeg)
+![](https://res.cloudinary.com/dp3mem7or/image/upload/v1549208913/articles/react-finland/accessible_react_apps.003.jpeg)
 
 The [slides for this talk](https://bit.ly/react-tips) are already online if you want to follow along on your laptop.
 
@@ -50,7 +50,7 @@ I'm not a React developer but I know how awesome React is. Today I'm here to giv
 
 ### About this talk
 
-![](/static/img/tmp/accessible_react_apps.004.jpeg)
+![](https://res.cloudinary.com/dp3mem7or/image/upload/v1549208913/articles/react-finland/accessible_react_apps.004.jpeg)
 
 This talk is called <cite>12 Tips For More Accessible React Apps</cite>. At the time when I picked the title I didn't know how much time I will have so I just picked an arbitrary number and I thought that 12 will be fine.
 
