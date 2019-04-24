@@ -62,12 +62,12 @@ As it turns out, I only have 20 minutes so let's get started with my 8 tips for 
 
 My first tip is: Create a sound document outline.
 
-![&lt;h1&gt;Yo! I'm the title of your page.&lt;/h1&gt;&lt;h2&gt;I'm very important.&lt;/h2&gt;&lt;h3&gt;My parent is very important.&lt;/h3&gt;&lt;h3&gt;My parent is very important.&lt;/h3&gt;&lt;h4&gt;I exist.&lt;/h4&gt;&lt;h2&gt;I'm very important.&lt;/h2&gt;&lt;h3&gt;My parent is very important.&lt;/h3&gt;](https://res.cloudinary.com/dp3mem7or/image/upload/v1549208913/articles/react-finland/accessible_react_apps.006.jpeg)
+![<h1>Yo! I'm the title of your page.</h1><h2>I'm very important.</h2><h3>My parent is very important.</h3><h3>My parent is very important.</h3><h4>I exist.</h4><h2>I'm very important.</h2><h3>My parent is very important.</h3>](https://res.cloudinary.com/dp3mem7or/image/upload/v1549208913/articles/react-finland/accessible_react_apps.006.jpeg)
 
 What I mean by that is that you should start your document with an `h1` and the title of your page.
 
 Large sections, thematic groupings of content, in your page start with an `h2`. If there are subsections use `h3`, `h4`, etc. If there's another large thematic section you go back to the `h2`.<div class="content__video-wrapper">
-  
+
 <div class="video-wrapper">
     <iframe width="560" height="315" src="https://www.youtube.com/embed/x0OF9-4ABDQ?rel=0" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen title="iframe title attribute demo"></iframe>
   </div>
@@ -77,13 +77,13 @@ This is important because screen reader users don't just use the software by rea
 
 In VoiceOver you get a list of all headings. The level is announced with the text of the heading to give users context and understand the page hierarchy.
 
-![&lt;Heading.H&gt;I will be an h1&lt;/Heading.H&gt;&lt;Heading.LevelBoundary&gt;&lt;Heading.H&gt;I will be an h2&lt;/Heading.H&gt;&lt;Heading.LevelBoundary&gt;&lt;Heading.H&gt;I will be an h3&lt;/Heading.H&gt;&lt;/Heading.LevelBoundary&gt;&lt;Heading.H&gt;I will be an h2&lt;/Heading.H&gt;&lt;/Heading.LevelBoundary&gt;](https://res.cloudinary.com/dp3mem7or/image/upload/v1549208913/articles/react-finland/accessible_react_apps.007.jpeg)
+![<Heading.H>I will be an h1</Heading.H><Heading.LevelBoundary><Heading.H>I will be an h2</Heading.H><Heading.LevelBoundary><Heading.H>I will be an h3</Heading.H></Heading.LevelBoundary><Heading.H>I will be an h2</Heading.H></Heading.LevelBoundary>](https://res.cloudinary.com/dp3mem7or/image/upload/v1549208913/articles/react-finland/accessible_react_apps.007.jpeg)
 
 Sometimes that's hard to get right, especially when you're working with nested components. An `h2` in a component is correct in one place but might be wrong when it's nested in another.
 
 [Tenon UI](https://www.tenon-ui.info/), an accessible React components library, has a component that takes care of that. You start with a `Heading.H` component which will automatically become an `h1` and then you use the `Heading.LevelBoundary` component to create a new section and allow automatic level calculation.
 
-![&lt;h1&gt;I will be an h1&lt;/h1&gt;&lt;h2&gt;I will be an h2&lt;/h2&gt;&lt;h3&gt;I will be an h3&lt;/h3&gt;&lt;h2&gt;I will be an h2&lt;/h2&gt;](https://res.cloudinary.com/dp3mem7or/image/upload/v1549208913/articles/react-finland/accessible_react_apps.008.jpeg)
+![<h1>I will be an h1</h1><h2>I will be an h2</h2><h3>I will be an h3</h3><h2>I will be an h2</h2>](https://res.cloudinary.com/dp3mem7or/image/upload/v1549208913/articles/react-finland/accessible_react_apps.008.jpeg)
 
 The result is an automatically calculated correct document outline.
 
@@ -96,11 +96,9 @@ The result is an automatically calculated correct document outline.
 There are many ways of testing the document outline. A quick and easy way is a browser extension called [tota11y](https://khan.github.io/tota11y/).
 tota11y annotates headings and shows the document outline. It displays errors if the outline is not correct.
 
-
 #### Summary of the first tip
 
 ![](https://res.cloudinary.com/dp3mem7or/image/upload/v1549208913/articles/react-finland/accessible_react_apps.009.jpeg)
-
 
 Create a sound document outline because it gives your document structure, helps screen reader users with navigation, and it's important for SEO.
 
@@ -126,15 +124,15 @@ I guess it's missing because it hasn't been considered in the design either. The
 
 We need a little bit more than that. A [combination of properties](https://medium.com/@matuzo/writing-css-with-accessibility-in-mind-8514a0007939#81ec) that makes sure that content is still accessible to screen readers but not visible or focusable.
 
-![&lt;h2 className=&quot;visually-hidden&quot;&gt;Sponsors&lt;/h2&gt;](https://res.cloudinary.com/dp3mem7or/image/upload/v1549208913/articles/react-finland/accessible_react_apps.014.jpeg)
+![<h2 className="visually-hidden">Sponsors</h2>](https://res.cloudinary.com/dp3mem7or/image/upload/v1549208913/articles/react-finland/accessible_react_apps.014.jpeg)
 
 To improve the React Finland website we add a visually hidden `h2` and transform the existing `h2`s to `h3`s.
 
-![&lt;button&gt;&lt;span class=&quot;visually-hidden&quot;&gt;Save&lt;/span&gt;&lt;svg aria-hidden width=&quot;32&quot; height=&quot;32&quot;&gt;&lt;path &hellip;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/button&gt;](https://res.cloudinary.com/dp3mem7or/image/upload/v1549208913/articles/react-finland/accessible_react_apps.015.jpeg)
+![<button><span class="visually-hidden">Save</span><svg aria-hidden width="32" height="32"><path …></path></svg></button>](https://res.cloudinary.com/dp3mem7or/image/upload/v1549208913/articles/react-finland/accessible_react_apps.015.jpeg)
 
 You can use this technique as well when you have an icon button without text. You just put the text in a visually-hidden `span` inside the `button` and you've got yourself an accessible button.
 
-![&lt;button&gt;&lt;VisuallyHidden&gt;Save&lt;/VisuallyHidden&gt;&lt;svg aria-hidden width=&quot;32&quot; height=&quot;32&quot;&gt;&lt;path &hellip;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/button&gt;](https://res.cloudinary.com/dp3mem7or/image/upload/v1549208913/articles/react-finland/accessible_react_apps.016.jpeg)
+![<button><VisuallyHidden>Save</VisuallyHidden><svg aria-hidden width="32" height="32"><path …></path></svg></button>](https://res.cloudinary.com/dp3mem7or/image/upload/v1549208913/articles/react-finland/accessible_react_apps.016.jpeg)
 
 You could write a component for that or use the existing [VisuallyHidden component](https://github.com/reach/reach-ui/tree/master/packages/visually-hidden) from the [Reach UI React library](https://github.com/reach/reach-ui/).	
 
@@ -176,7 +174,7 @@ A fake button is inaccessible to keyboard and screen reader users.
 ![](https://res.cloudinary.com/dp3mem7or/image/upload/v1549208913/articles/react-finland/accessible_react_apps.019.jpeg)
 Summary of the third tip: `<button>`s are focusable by default, they come with keyevents for free and they're semantic. A `<div>` is just generic text.
 
-Check out [Just use button](https://www.youtube.com/watch?v=CZGqnp06DnI) by [Rob Dodson](https://twitter.com/rob_dodson) and The [Links vs. Buttons Showdown](https://www.youtube.com/watch?v=8XjwDq9zG4I&t=1son) by [Marcy Sutton](https://twitter.com/marcysutton) on YouTube.
+Check out [Just use button](https://www.youtube.com/watch?v=CZGqnp06DnI) by [Rob Dodson](https://twitter.com/rob_dodson) and [The Links vs. Buttons Showdown](https://www.youtube.com/watch?v=8XjwDq9zG4I&t=1son) by [Marcy Sutton](https://twitter.com/marcysutton) on YouTube.
 
 ### <abbr title="acessibility">a11y</abbr> tip #4: Use fragments to avoid invalid HTML.
 
@@ -186,4 +184,28 @@ If a component returns multiple elements, they must be wrapped in a wrapper elem
 
 React 16.2 introduced a nice little feature called [Fragments](https://reactjs.org/docs/fragments.html). Fragments let you group a list of children without adding extra nodes to the DOM.
 
+![](https://res.cloudinary.com/dp3mem7or/image/upload/v1549208913/articles/react-finland/accessible_react_apps.021.jpeg)
+
 Let's say we have table component and in each table row there's a column component.
+
+![](https://res.cloudinary.com/dp3mem7or/image/upload/v1549208913/articles/react-finland/accessible_react_apps.022.jpeg)
+
+This is how the `Columns` component looks like. All cells are wrapped in a `div` because we need a wrapper element.
+
+![](https://res.cloudinary.com/dp3mem7or/image/upload/v1549208913/articles/react-finland/accessible_react_apps.023.jpeg)
+
+The result is invalid markup because a `div` is not a valid descendent of `tr`.
+
+![](https://res.cloudinary.com/dp3mem7or/image/upload/v1549208913/articles/react-finland/accessible_react_apps.024.jpeg)
+
+This can be fixed by using a `Fragment` instead of a `div`. All you have to do is to replace `<div></div>` with `<React.Fragment></React.Fragment>`.
+
+![](https://res.cloudinary.com/dp3mem7or/image/upload/v1549208913/articles/react-finland/accessible_react_apps.025.jpeg)
+
+As a result the component returns the contents without extra markup.
+
+![](https://res.cloudinary.com/dp3mem7or/image/upload/v1549208913/articles/react-finland/accessible_react_apps.026.jpeg)
+
+Summary of tip 4: Fragments help you write valid HTML and they reduce bloat. There's also a shorter syntax, you can write `<></>` instead of `<React.Fragment></React.Fragment>`.
+
+Check out the Fragments docs for more details and examples.
