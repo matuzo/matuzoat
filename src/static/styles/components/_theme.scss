@@ -49,3 +49,16 @@
 }
 
 @include theme('codepen', #fff, #ffdd40, #ffffff, #0ebeff, #ffdd40);
+@include theme('react-finland', #FFF, #FFF, rgba(255,255,255,.75), rgba(255,255,255,.75), #fff) {
+  .content__image-wrapper {
+    &::before,
+    &::after {
+      background: rgba(#fff, 0.4);
+    }
+  }
+
+  code {
+    background: #fff;
+    color: #002fa9;
+  }
+}
