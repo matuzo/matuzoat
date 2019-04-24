@@ -28,4 +28,14 @@ The slides are online on this page slide by slide with descriptions and on [noti
 
 ### Introduction
 
-![]()
+![](articles/react-finland/accessible_react_apps.001.jpg)
+
+<p>Hello React Finland!</p>
+
+### About me
+
+![](articles/react-finland/accessible_react_apps.002.jpg)
+
+My name is Manuel Matuzovic, I'm a frontend developer from Vienna.
+I work for the City of Vienna and I'm specialised in HTML, CSS, and accessibility.
+My twitter handle is [mmatuzo](https://twitter.com/mmatuzo).
