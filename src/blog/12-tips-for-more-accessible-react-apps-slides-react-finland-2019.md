@@ -260,6 +260,9 @@ Take advantage of refs in React to manage focus.
 
 Check out the [A11y dialog on Github](https://github.com/edenspiekermann/a11y-dialog) and the [accessibility docs on reactjs.org](https://reactjs.org/docs/accessibility.html).
 
+
+### <abbr title="acessibility">a11y</abbr> tip #6: Make notifications accessible to everyone.
+
 ![](https://res.cloudinary.com/dp3mem7or/image/upload/v1549208913/articles/react-finland/accessible_react_apps.030.jpeg)
 
 Tip number 6: Make notifications accessible to everyone.
@@ -286,8 +289,7 @@ If an element has the role attribute with alert as a value, it becomes a live re
 
 And now, with the role attribute in place, the notification will be announced.
 
-
-![](https://res.cloudinary.com/dp3mem7or/image/upload/v1549208913/articles/react-finland/accessible_react_apps.031.jpeg)
+![](https://res.cloudinary.com/dp3mem7or/image/upload/v1549208913/articles/react-finland/accessible_react_apps.032.jpeg)
 
 Summary of tip 6: If you add `role="alert"` or `role="status"` to an element you're transforming it to a so called live region.
 
@@ -296,3 +298,22 @@ Use live regions only for significant changes that you need to communicate.
 
 Check out [Reach UI's alert component](https://ui.reach.tech/alert/), [react-aria-live](https://github.com/AlmeroSteyn/react-aria-live) on Github, and read [ARIA live regions in React](https://almerosteyn.com/2017/09/aria-live-regions-in-react) on Almero Steyns blog.
 
+### <abbr title="acessibility">a11y</abbr> tip #7: Announce page changes.
+
+![](https://res.cloudinary.com/dp3mem7or/image/upload/v1549208913/articles/react-finland/accessible_react_apps.033.jpeg)
+
+Tip number 7 is important: routing. If you use a screen reader on a server side rendered page and you click a link, the whole page loads, the title of the page is announced and the focus is on the document. With single page applications that's a little bit different.
+
+<div class="content__video-wrapper">
+  <div class="video-wrapper">
+<iframe width="560" height="315" src="https://www.youtube.com/embed/cZqdtkG-Z4M?rel=0" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen title="React demo: inaccessible routing (no announcement)"></iframe>
+  </div>
+</div>
+
+If I tab to the "about" link the screen reader announces the text in the link. When I click it, the page changes but the screen reader doesn't announce the change and focus stays where it is.
+
+<div class="content__video-wrapper">
+  <div class="video-wrapper">
+<iframe width="560" height="315" src="https://www.youtube.com/embed/VtPqRyBUz5w?rel=0" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen title="React demo: accessible notification"></iframe>
+  </div>
+</div>
