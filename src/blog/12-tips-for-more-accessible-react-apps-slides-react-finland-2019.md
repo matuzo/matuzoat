@@ -312,8 +312,30 @@ Tip number 7 is important: routing. If you use a screen reader on a server side 
 
 If I tab to the "about" link the screen reader announces the text in the link. When I click it, the page changes but the screen reader doesn't announce the change and focus stays where it is.
 
+The issue with the fact the focus doesn't move is especially visible if I click a link in the footer. I'm on the "about" page, I tab down to the footer links and click the "blog" link. The content of the page changes but I don't hear and see it.
+
+![class About extends React.Component { constructor(props) { super(props); this.section = React.createRef(); } componentDidMount(){ this.section.current.focus(); document.title = "About"; } render() { return ( <section tabIndex="-1" ref={ this.section }> <h2>About</h2><p>We are…</p><p>Lorem ipsum…</p> </section> ) } }](https://res.cloudinary.com/dp3mem7or/image/upload/v1549208913/articles/react-finland/accessible_react_apps.034.jpeg)
+
+In order to fix it I again create a `ref`. This time to get access to a reference to the `section` DOM element.
+I add the `tabindex` attribute with the value `-1` to make the `section` focusable. I focus it on `componentDidMount`.
+
+And while I'm at it I also update the document title.
+
+VoiceOver will now announce the whole region, so the heading and the text. I'm not sure if this is the best way to do it, I prefer to be as close to the native behaviour as possible. That's why I want to announce just the title of the page.
+
+![class About extends React.Component { constructor(props) { super(props); this.section = React.createRef(); } componentDidMount(){ this.section.current.focus(); document.title = &quot;About&quot;; } render() { return ( &lt;section tabIndex=&quot;-1&quot; ref={ this.section }&gt; &lt;h2&gt;About&lt;/h2&gt;&lt;p&gt;We are&hellip;&lt;/p&gt;&lt;p&gt;Lorem ipsum&hellip;&lt;/p&gt; &lt;/section&gt; ) } }](https://res.cloudinary.com/dp3mem7or/image/upload/v1549208913/articles/react-finland/accessible_react_apps.035.jpeg)
+
+One way to do that is to label the focused region with the text in the heading.
+
+I give the heading an `id` and reference it in the section by adding the `aria-labelledby` attribute with the `id` as a value. Now the `section` is labelled by the content of the heading. The difference is that screen readers will on focus just read the content of the heading instead of everything.
+
 <div class="content__video-wrapper">
   <div class="video-wrapper">
-<iframe width="560" height="315" src="https://www.youtube.com/embed/VtPqRyBUz5w?rel=0" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen title="React demo: accessible notification"></iframe>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/8YTtqT4JvuU"?rel=0" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen title="React demo: accessible routing"></iframe>
   </div>
 </div>
+
+If I do all that, the focus moves to the `section`, announces the content of the heading as well the information that focus is on a region.
+
+
+![render() {return (&lt;section aria-labelledby=&quot;pageTitle&quot; tabIndex=&quot;-1&quot; ref= { this.section }&gt;&lt;h2 id=&quot;pageTitle&quot;&gt;About&lt;/h2&gt;&lt;p&gt;We are&hellip;&lt;/p&gt;&lt;p&gt;Lorem ipsum&hellip;&lt;/p&gt;&lt;/section&gt;) }](https://res.cloudinary.com/dp3mem7or/image/upload/v1549208913/articles/react-finland/accessible_react_apps.036.jpeg)
