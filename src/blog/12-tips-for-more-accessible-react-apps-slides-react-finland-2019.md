@@ -150,16 +150,14 @@ It's tempting to use `div`s as buttons because they come with less default styli
 I'll show you the difference in the following demo.
 
 <div class="content__video-wrapper">
-  <div class="video-wrapper">
-    <iframe width="560" height="315" src="https://www.youtube.com/embed/x0OF9-4ABDQ?rel=0" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen title="iframe title attribute demo"></iframe>
+  <div class="video-wrapper"><iframe width="560" height="315" src="https://www.youtube.com/embed/K1sdW9GNSwE?rel=0" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen title="React demo: Using a HTML button as button"></iframe>
   </div>
 </div>
 
 In this example I put a click event on a HTML `button`. You can see that I can click it with a mouse and focus it using the keyboard. I can trigger the event using the mouse or by pressing the <kbd>Enter</kbd> or <kbd>Space</kbd> key.
 
 <div class="content__video-wrapper">
-  <div class="video-wrapper">
-    <iframe width="560" height="315" src="https://www.youtube.com/embed/x0OF9-4ABDQ?rel=0" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen title="iframe title attribute demo"></iframe>
+  <div class="video-wrapper"><iframe width="560" height="315" src="https://www.youtube.com/embed/mbGqcHdCIRA?rel=0" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen title="React demo: Using a div as button"></iframe>
   </div>
 </div>
 
