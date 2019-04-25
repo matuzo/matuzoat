@@ -62,7 +62,7 @@ As it turns out, I only have 20 minutes so let's get started with my 8 tips for 
 
 My first tip is: Create a sound document outline.
 
-![<h1>Yo! I'm the title of your page.</h1><h2>I'm very important.</h2><h3>My parent is very important.</h3><h3>My parent is very important.</h3><h4>I exist.</h4><h2>I'm very important.</h2><h3>My parent is very important.</h3>](https://res.cloudinary.com/dp3mem7or/image/upload/v1549208913/articles/react-finland/accessible_react_apps.006.jpeg)
+![&lt;h1&gt;Yo! I'm the title of your page.&lt;/h1&gt;&lt;h2&gt;I'm very important.&lt;/h2&gt;&lt;h3&gt;My parent is very important.&lt;/h3&gt;&lt;h3&gt;My parent is very important.&lt;/h3&gt;&lt;h4&gt;I exist.&lt;/h4&gt;&lt;h2&gt;I'm very important.&lt;/h2&gt;&lt;h3&gt;My parent is very important.&lt;/h3&gt;](https://res.cloudinary.com/dp3mem7or/image/upload/v1549208913/articles/react-finland/accessible_react_apps.006.jpeg)
 
 What I mean by that is that you should start your document with an `h1` and the title of your page.
 
@@ -74,13 +74,13 @@ This is important because screen reader users don't just use the software by rea
 
 In VoiceOver you get a list of all headings. The level is announced with the text of the heading to give users context and understand the page hierarchy.
 
-![<Heading.H>I will be an h1</Heading.H><Heading.LevelBoundary><Heading.H>I will be an h2</Heading.H><Heading.LevelBoundary><Heading.H>I will be an h3</Heading.H></Heading.LevelBoundary><Heading.H>I will be an h2</Heading.H></Heading.LevelBoundary>](https://res.cloudinary.com/dp3mem7or/image/upload/v1549208913/articles/react-finland/accessible_react_apps.007.jpeg)
+![&lt;Heading.H&gt;I will be an h1&lt;/Heading.H&gt;&lt;Heading.LevelBoundary&gt;&lt;Heading.H&gt;I will be an h2&lt;/Heading.H&gt;&lt;Heading.LevelBoundary&gt;&lt;Heading.H&gt;I will be an h3&lt;/Heading.H&gt;&lt;/Heading.LevelBoundary&gt;&lt;Heading.H&gt;I will be an h2&lt;/Heading.H&gt;&lt;/Heading.LevelBoundary&gt;](https://res.cloudinary.com/dp3mem7or/image/upload/v1549208913/articles/react-finland/accessible_react_apps.007.jpeg)
 
 Sometimes that's hard to get right, especially when you're working with nested components. An `h2` in a component is correct in one place but might be wrong when it's nested in another.
 
 [Tenon UI](https://www.tenon-ui.info/), an accessible React components library, has a component that takes care of that. You start with a `Heading.H` component which will automatically become an `h1` and then you use the `Heading.LevelBoundary` component to create a new section and allow automatic level calculation.
 
-![<h1>I will be an h1</h1><h2>I will be an h2</h2><h3>I will be an h3</h3><h2>I will be an h2</h2>](https://res.cloudinary.com/dp3mem7or/image/upload/v1549208913/articles/react-finland/accessible_react_apps.008.jpeg)
+![&lt;h1&gt;I will be an h1&lt;/h1&gt;&lt;h2&gt;I will be an h2&lt;/h2&gt;&lt;h3&gt;I will be an h3&lt;/h3&gt;&lt;h2&gt;I will be an h2&lt;/h2&gt;](https://res.cloudinary.com/dp3mem7or/image/upload/v1549208913/articles/react-finland/accessible_react_apps.008.jpeg)
 
 The result is an automatically calculated correct document outline.
 
@@ -110,7 +110,7 @@ My second tip is: Hide content correctly.
 
 The React Finland website starts with an `h1` and has a well structured document outline. It's almost perfect, there's just one thing I'd want to improve. There should be a "Sponsors" `h2` that groups the different types of sponsorships.
 
-I guess it's missing because it hasn't been considered in the design either. There might be a reason to leave it away in the design but it should be in the document. The design shouldn't specify the outline but the content should. What we need here is a heading that's hidden from sighted users but accessible to screen reader users.
+I guess it's missing because it hasn't been considered in the design either. There might be a reason to leave it away in the design but it should be in the document. The design shouldn't dictate the outline but the content should. What we need here is a heading that's hidden from sighted users but accessible to screen reader users.
 
 ![](https://res.cloudinary.com/dp3mem7or/image/upload/v1549208913/articles/react-finland/accessible_react_apps.012.jpeg)
 
@@ -120,15 +120,15 @@ I guess it's missing because it hasn't been considered in the design either. The
 
 We need a little bit more than that. A [combination of properties](https://medium.com/@matuzo/writing-css-with-accessibility-in-mind-8514a0007939#81ec) that makes sure that content is still accessible to screen readers but not visible or focusable.
 
-![<h2 className="visually-hidden">Sponsors</h2>](https://res.cloudinary.com/dp3mem7or/image/upload/v1549208913/articles/react-finland/accessible_react_apps.014.jpeg)
+![&lt;h2 className=&quot;visually-hidden&quot;&gt;Sponsors&lt;/h2&gt;](https://res.cloudinary.com/dp3mem7or/image/upload/v1549208913/articles/react-finland/accessible_react_apps.014.jpeg)
 
 To improve the React Finland website we add a visually hidden `h2` and transform the existing `h2`s to `h3`s.
 
-![<button><span class="visually-hidden">Save</span><svg aria-hidden width="32" height="32"><path …></path></svg></button>](https://res.cloudinary.com/dp3mem7or/image/upload/v1549208913/articles/react-finland/accessible_react_apps.015.jpeg)
+![&lt;button&gt;&lt;span class=&quot;visually-hidden&quot;&gt;Save&lt;/span&gt;&lt;svg aria-hidden width=&quot;32&quot; height=&quot;32&quot;&gt;&lt;path &hellip;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/button&gt;](https://res.cloudinary.com/dp3mem7or/image/upload/v1549208913/articles/react-finland/accessible_react_apps.015.jpeg)
 
 You can use this technique as well when you have an icon button without text. You just put the text in a visually-hidden `span` inside the `button` and you've got yourself an accessible button.
 
-![<button><VisuallyHidden>Save</VisuallyHidden><svg aria-hidden width="32" height="32"><path …></path></svg></button>](https://res.cloudinary.com/dp3mem7or/image/upload/v1549208913/articles/react-finland/accessible_react_apps.016.jpeg)
+![&lt;button&gt;&lt;VisuallyHidden&gt;Save&lt;/VisuallyHidden&gt;&lt;svg aria-hidden width=&quot;32&quot; height=&quot;32&quot;&gt;&lt;path &hellip;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/button&gt;](https://res.cloudinary.com/dp3mem7or/image/upload/v1549208913/articles/react-finland/accessible_react_apps.016.jpeg)
 
 You could write a component for that or use the existing [VisuallyHidden component](https://github.com/reach/reach-ui/tree/master/packages/visually-hidden) from the [Reach UI React library](https://github.com/reach/reach-ui/).	
 
