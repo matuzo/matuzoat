@@ -69,7 +69,7 @@ What I mean by that is that you should start your document with an `h1` and the 
 Large sections, thematic groupings of content, in your page start with an `h2`. If there are subsections use `h3`, `h4`, etc. If there's another large thematic section you go back to the `h2`.<div class="content__video-wrapper">
 
 <div class="video-wrapper">
-    <iframe width="560" height="315" src="https://www.youtube.com/embed/x0OF9-4ABDQ?rel=0" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen title="iframe title attribute demo"></iframe>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/gbHCgiktPNc" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen title="React demo: VoiceOver navigation by headings"></iframe>
   </div>
 </div>
 
