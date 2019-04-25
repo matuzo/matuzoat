@@ -68,10 +68,7 @@ What I mean by that is that you should start your document with an `h1` and the 
 
 Large sections, thematic groupings of content, in your page start with an `h2`. If there are subsections use `h3`, `h4`, etc. If there's another large thematic section you go back to the `h2`.<div class="content__video-wrapper">
 
-<div class="video-wrapper">
-<iframe width="560" height="315" src="https://www.youtube.com/embed/gbHCgiktPNc" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen title="React demo: VoiceOver navigation by headings"></iframe>
-  </div>
-</div>
+<div class="video-wrapper"><iframe width="560" height="315" src="https://www.youtube.com/embed/gbHCgiktPNc" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen title="React demo: VoiceOver navigation by headings"></iframe></div></div>
 
 This is important because screen reader users don't just use the software by reading the contents on a page from top to bottom. There are additional ways of navigation, for example by listing all headings and jumping directly to a specific heading.
 
@@ -88,8 +85,7 @@ Sometimes that's hard to get right, especially when you're working with nested c
 The result is an automatically calculated correct document outline.
 
 <div class="content__video-wrapper">
-  <div class="video-wrapper">
-    <iframe width="560" height="315" src="https://www.youtube.com/embed/x0OF9-4ABDQ?rel=0" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen title="iframe title attribute demo"></iframe>
+  <div class="video-wrapper"><iframe width="560" height="315" src="https://www.youtube.com/embed/tLSEWdpmYrc?rel=0" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen title="React demo: Testing the document outline with tota11y"></iframe>
   </div>
 </div>
 
