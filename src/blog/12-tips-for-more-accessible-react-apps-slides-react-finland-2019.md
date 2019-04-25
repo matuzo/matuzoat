@@ -331,7 +331,7 @@ I give the heading an `id` and reference it in the section by adding the `aria-l
 
 <div class="content__video-wrapper">
   <div class="video-wrapper">
-<iframe width="560" height="315" src="https://www.youtube.com/embed/8YTtqT4JvuU"?rel=0" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen title="React demo: accessible routing"></iframe>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/8YTtqT4JvuU?rel=0" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen title="React demo: accessible routing"></iframe>
   </div>
 </div>
 
