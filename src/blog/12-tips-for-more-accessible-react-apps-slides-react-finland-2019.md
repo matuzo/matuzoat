@@ -203,3 +203,31 @@ As a result the component returns the contents without extra markup.
 Summary of tip 4: Fragments help you write valid HTML and they reduce bloat. There's also a shorter syntax, you can write `<></>` instead of `<React.Fragment></React.Fragment>`.
 
 Check out the Fragments docs for more details and examples.
+
+### <abbr title="acessibility">a11y</abbr> tip #5: Take care of focus management.
+
+![](https://res.cloudinary.com/dp3mem7or/image/upload/v1549208913/articles/react-finland/accessible_react_apps.027.jpeg)
+
+My fifth tip is that you should take care of focus management.
+
+React applications continuously modify the HTML DOM during runtime, sometimes leading to keyboard focus being lost or set to an unexpected element. In order to fix this, we need to manually move focus in the right direction.
+
+<div class="content__video-wrapper">
+  <div class="video-wrapper">
+<iframe width="560" height="315" src="https://www.youtube.com/embed/eGyEQT8EDLs?rel=0" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen title="React demo: bad focusmanagement"></iframe>
+  </div>
+</div>
+
+If I focus this button and press Enter, a modal window pop ups. I would expect that I can access the content in the modal with my keyboard. Instead the focus is still behind the modal window because tab order always follows DOM order and the modal window is at the very end of the page. I'd have to tab through all items on the page until I reach the modal.
+
+This is a situation were we have to move focus manually from the button to the modal window.
+
+<div class="content__video-wrapper">
+  <div class="video-wrapper">
+<iframe width="560" height="315" src="https://www.youtube.com/embed/9Z3imL-fqdU?rel=0" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen title="React demo: good focusmanagement"></iframe>
+  </div>
+</div>
+
+If we do that, we can access the elements in the modal by pressing the <kbd>Tab</kbd> key as we would expect it. Of course, if the user closes the modal, we have to make sure to move focus back to the button.
+
+To set focus in React, we can use `refs`.
