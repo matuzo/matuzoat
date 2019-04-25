@@ -29,7 +29,7 @@ A recording of the talk will follow in the next days.
 
 ## Slides
 
-The slides are online on this page slide by slide with descriptions and on [noti.st](https://).
+The slides are online on this page slide by slide with descriptions.
 
 ### Introduction
 
