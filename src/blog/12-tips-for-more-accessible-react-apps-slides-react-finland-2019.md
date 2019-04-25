@@ -66,9 +66,9 @@ My first tip is: Create a sound document outline.
 
 What I mean by that is that you should start your document with an `h1` and the title of your page.
 
-Large sections, thematic groupings of content, in your page start with an `h2`. If there are subsections use `h3`, `h4`, etc. If there's another large thematic section you go back to the `h2`.<div class="content__video-wrapper">
+Large sections, thematic groupings of content, in your page start with an `h2`. If there are subsections use `h3`, `h4`, etc. If there's another large thematic section you go back to the `h2`.
 
-<div class="video-wrapper"><iframe width="560" height="315" src="https://www.youtube.com/embed/gbHCgiktPNc" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen title="React demo: VoiceOver navigation by headings"></iframe></div></div>
+<div class="content__video-wrapper"><div class="video-wrapper"><iframe width="560" height="315" src="https://www.youtube.com/embed/gbHCgiktPNc" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen title="React demo: VoiceOver navigation by headings"></iframe></div></div>
 
 This is important because screen reader users don't just use the software by reading the contents on a page from top to bottom. There are additional ways of navigation, for example by listing all headings and jumping directly to a specific heading.
 
@@ -190,11 +190,11 @@ This is how the `Columns` component looks like. All cells are wrapped in a `div`
 
 The result is invalid markup because a `div` is not a valid descendent of `tr`.
 
-![](https://res.cloudinary.com/dp3mem7or/image/upload/v1549208913/articles/react-finland/accessible_react_apps.024.jpeg)
+![const Columns = props =&gt; { return ( &lt;React.Fragment&gt; &lt;td&gt;Hello&lt;/td&gt; &lt;td&gt;World&lt;/td&gt; &lt;/React.Fragment&gt; ); }](https://res.cloudinary.com/dp3mem7or/image/upload/v1549208913/articles/react-finland/accessible_react_apps.024.jpeg)
 
 This can be fixed by using a `Fragment` instead of a `div`. All you have to do is to replace `<div></div>` with `<React.Fragment></React.Fragment>`.
 
-![](https://res.cloudinary.com/dp3mem7or/image/upload/v1549208913/articles/react-finland/accessible_react_apps.025.jpeg)
+![&lt;table&gt; &lt;tr&gt; &lt;td&gt;Hello&lt;/td&gt; &lt;td&gt;World&lt;/td&gt; &lt;/tr&gt; &lt;/table&gt;](https://res.cloudinary.com/dp3mem7or/image/upload/v1549208913/articles/react-finland/accessible_react_apps.025.jpeg)
 
 As a result the component returns the contents without extra markup.
 
