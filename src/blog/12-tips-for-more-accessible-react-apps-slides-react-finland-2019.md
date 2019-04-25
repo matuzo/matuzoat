@@ -178,15 +178,15 @@ If a component returns multiple elements, they must be wrapped in a wrapper elem
 
 React 16.2 introduced a nice little feature called [Fragments](https://reactjs.org/docs/fragments.html). Fragments let you group a list of children without adding extra nodes to the DOM.
 
-![](https://res.cloudinary.com/dp3mem7or/image/upload/v1549208913/articles/react-finland/accessible_react_apps.021.jpeg)
+![const Table = props =&gt; { return ( &lt;table&gt; &lt;tr&gt; &lt;Columns /&gt; &lt;/tr&gt; &lt;/table&gt; ); }](https://res.cloudinary.com/dp3mem7or/image/upload/v1549208913/articles/react-finland/accessible_react_apps.021.jpeg)
 
 Let's say we have table component and in each table row there's a column component.
 
-![](https://res.cloudinary.com/dp3mem7or/image/upload/v1549208913/articles/react-finland/accessible_react_apps.022.jpeg)
+![const Columns = props =&gt; { return ( &lt;div&gt; &lt;td&gt;Hello&lt;/td&gt; &lt;td&gt;World&lt;/td&gt; &lt;/div&gt; ); }](https://res.cloudinary.com/dp3mem7or/image/upload/v1549208913/articles/react-finland/accessible_react_apps.022.jpeg)
 
 This is how the `Columns` component looks like. All cells are wrapped in a `div` because we need a wrapper element.
 
-![](https://res.cloudinary.com/dp3mem7or/image/upload/v1549208913/articles/react-finland/accessible_react_apps.023.jpeg)
+![&lt;table&gt; &lt;tr&gt; &lt;div&gt; &lt;td&gt;Hello&lt;/td&gt; &lt;td&gt;World&lt;/td&gt; &lt;/div&gt; &lt;/tr&gt; &lt;/table&gt;](https://res.cloudinary.com/dp3mem7or/image/upload/v1549208913/articles/react-finland/accessible_react_apps.023.jpeg)
 
 The result is invalid markup because a `div` is not a valid descendent of `tr`.
 
