@@ -4,6 +4,7 @@ metadescription: >-
   12 Tips for More Accessible React Apps (Slides, React Finland 2019) - Manuel
   Matuzovic
 date: 2019-04-25T20:18:30.807Z
+image: articles/react-finland/reactsm.png
 teaser: >-
   If you want to improve the accessibility of your React apps but you don't know
   how or where to start, this talk is just what you need. Manuel shares 12 tips
@@ -15,14 +16,14 @@ tags:
   - React
   - accessibility
 publication: Matuzo
-draft: true
+draft: false
 archive: false
 ---
 ## Recording of the talk
 
 [Live stream Thursday](https://www.youtube.com/watch?v=gDkUpx0dVc0)
 
-[Live stream Thursday](https://www.youtube.com/watch?v=d_BtZ8bv0sw)
+[Live stream Friday](https://www.youtube.com/watch?v=d_BtZ8bv0sw)
 
 A recording of the talk will follow in the next days.
 
@@ -287,7 +288,7 @@ If an element has the role attribute with alert as a value, it becomes a live re
   </div>
 </div>
 
-And now, with the role attribute in place, the notification will be announced.
+And now, with the `role` attribute in place, the notification will be announced.
 
 ![](https://res.cloudinary.com/dp3mem7or/image/upload/v1549208913/articles/react-finland/accessible_react_apps.032.jpeg)
 
