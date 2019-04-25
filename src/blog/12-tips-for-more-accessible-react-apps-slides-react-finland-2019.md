@@ -323,7 +323,7 @@ And while I'm at it I also update the document title.
 
 VoiceOver will now announce the whole region, so the heading and the text. I'm not sure if this is the best way to do it, I prefer to be as close to the native behaviour as possible. That's why I want to announce just the title of the page.
 
-![class About extends React.Component { constructor(props) { super(props); this.section = React.createRef(); } componentDidMount(){ this.section.current.focus(); document.title = &quot;About&quot;; } render() { return ( &lt;section tabIndex=&quot;-1&quot; ref={ this.section }&gt; &lt;h2&gt;About&lt;/h2&gt;&lt;p&gt;We are&hellip;&lt;/p&gt;&lt;p&gt;Lorem ipsum&hellip;&lt;/p&gt; &lt;/section&gt; ) } }](https://res.cloudinary.com/dp3mem7or/image/upload/v1549208913/articles/react-finland/accessible_react_apps.035.jpeg)
+![render() {return (&lt;section aria-labelledby=&quot;pageTitle&quot; tabIndex=&quot;-1&quot; ref= { this.section }&gt;&lt;h2 id=&quot;pageTitle&quot;&gt;About&lt;/h2&gt;&lt;p&gt;We are&hellip;&lt;/p&gt;&lt;p&gt;Lorem ipsum&hellip;&lt;/p&gt;&lt;/section&gt;) }](https://res.cloudinary.com/dp3mem7or/image/upload/v1549208913/articles/react-finland/accessible_react_apps.035.jpeg)
 
 One way to do that is to label the focused region with the text in the heading.
 
@@ -337,5 +337,45 @@ I give the heading an `id` and reference it in the section by adding the `aria-l
 
 If I do all that, the focus moves to the `section`, announces the content of the heading as well the information that focus is on a region.
 
+![](https://res.cloudinary.com/dp3mem7or/image/upload/v1549208913/articles/react-finland/accessible_react_apps.036.jpeg)
 
-![render() {return (&lt;section aria-labelledby=&quot;pageTitle&quot; tabIndex=&quot;-1&quot; ref= { this.section }&gt;&lt;h2 id=&quot;pageTitle&quot;&gt;About&lt;/h2&gt;&lt;p&gt;We are&hellip;&lt;/p&gt;&lt;p&gt;Lorem ipsum&hellip;&lt;/p&gt;&lt;/section&gt;) }](https://res.cloudinary.com/dp3mem7or/image/upload/v1549208913/articles/react-finland/accessible_react_apps.036.jpeg)
+There's a router called Reach Router that does these things and more out-of-the-box.
+
+<https://reach.tech/router>
+
+
+![](https://res.cloudinary.com/dp3mem7or/image/upload/v1549208913/articles/react-finland/accessible_react_apps.037.jpeg)
+
+Summary of tip 7: Announce page changes. Use `ref`s to manage focus. If necessary, make items focusable by applying `tabindex="-1"`
+
+Check out [Reach Router](https://reach.tech/router).
+
+### <abbr title="acessibility">a11y</abbr> tip #8: Test your React code automatically.
+
+![](https://res.cloudinary.com/dp3mem7or/image/upload/v1549208913/articles/react-finland/accessible_react_apps.038.jpeg)
+
+My last tip, tip number 8: Test your React code automatically.
+
+Don't get me wrong, you have to do manual testing as well, but automatic testing is a good first step.
+
+![var React = require('react'); var ReactDOM = require('react-dom'); if (process.env.NODE_ENV !== 'production') { var axe = require('react-axe'); axe(React, ReactDOM, 1000); }](https://res.cloudinary.com/dp3mem7or/image/upload/v1549208913/articles/react-finland/accessible_react_apps.039.jpeg)
+
+There's a great tool called [React-Axe](https://github.com/dequelabs/react-axe). It uses the axe-core accessibility testing library. Results will show in the Chrome DevTools console.
+
+Call the exported function passing in the React and ReactDOM objects as well as a timing delay in milliseconds.
+Be sure to only run the module in your development environment.
+
+![](https://res.cloudinary.com/dp3mem7or/image/upload/v1549208913/articles/react-finland/accessible_react_apps.040.jpeg)
+
+The advantage compared to other tools is that react-axe tests the accessibility of the rendered DOM.
+
+If you open the console of your dev tools you'll see the errors that axe has detected. For example, the `<html>` element must a have a `lang` attribute, because it defines the natural language of the document.
+
+![](https://res.cloudinary.com/dp3mem7or/image/upload/v1549208913/articles/react-finland/accessible_react_apps.041.jpeg)
+
+Summary of tip 7: Automatic tests help you notice low hanging fruits. Automatic testing is only the first step. Manual testing is necessary.
+Check out React-axe and [eslint-plugin-jsx-a11y](https://github.com/evcohen/eslint-plugin-jsx-a11y) on Github.
+
+![](https://res.cloudinary.com/dp3mem7or/image/upload/v1549208913/articles/react-finland/accessible_react_apps.042.jpeg)
+
+Thank you ❤️
