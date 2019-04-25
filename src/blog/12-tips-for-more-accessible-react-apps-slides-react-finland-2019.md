@@ -20,6 +20,10 @@ archive: false
 ---
 ## Recording of the talk
 
+[Live stream Thursday](https://www.youtube.com/watch?v=gDkUpx0dVc0)
+
+[Live stream Thursday](https://www.youtube.com/watch?v=d_BtZ8bv0sw)
+
 A recording of the talk will follow in the next days.
 
 ## Slides
@@ -231,3 +235,64 @@ This is a situation were we have to move focus manually from the button to the m
 If we do that, we can access the elements in the modal by pressing the <kbd>Tab</kbd> key as we would expect it. Of course, if the user closes the modal, we have to make sure to move focus back to the button.
 
 To set focus in React, we can use `refs`.
+
+![class Button2 extends React.Component { constructor(props) { super(props); this.btn = React.createRef(); } setFocus(){ this.btn.current.focus(); } render() { return ( &lt;button className=&quot;btn&quot; ref={ this.btn }&gt; { this.props.children } &lt;/button&gt; ) }}](https://res.cloudinary.com/dp3mem7or/image/upload/v1549208913/articles/react-finland/accessible_react_apps.028.jpeg)
+
+1. First we create a ref using React.createRef().
+2. We attach the ref to a DOM element, in our example a button, via the ref attribute.
+3. This gives us access to a reference to the node.
+4. Now we can focus the button using the raw DOM API.
+
+<div class="content__video-wrapper">
+  <div class="video-wrapper">
+<iframe width="560" height="315" src="https://www.youtube.com/embed/BpP2-hwRbM0?rel=0" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen title="React demo: inaccessible modal on vice.com"></iframe>
+  </div>
+</div>
+
+Not taking care of focus can be a real problem.
+
+On vice.com the focus should be on this dialog when the site is accessed for the first time to allow users to close it but instead it's behind the modal and keyboard users have no chance to interact with it. Neither pressing Tab nor pressing Escape will help.
+
+![](https://res.cloudinary.com/dp3mem7or/image/upload/v1549208913/articles/react-finland/accessible_react_apps.029.jpeg)
+
+Summary of tip 5: Focus management is important because it's essential for keyboard and screen reader users.
+Take advantage of refs in React to manage focus.
+
+Check out the [A11y dialog on Github](https://github.com/edenspiekermann/a11y-dialog) and the [accessibility docs on reactjs.org](https://reactjs.org/docs/accessibility.html).
+
+![](https://res.cloudinary.com/dp3mem7or/image/upload/v1549208913/articles/react-finland/accessible_react_apps.030.jpeg)
+
+Tip number 6: Make notifications accessible to everyone.
+
+<div class="content__video-wrapper">
+  <div class="video-wrapper">
+<iframe width="560" height="315" src="https://www.youtube.com/embed/IkVjAnFp6GI?rel=0" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen title="React demo: inaccessible notification"></iframe>
+  </div>
+</div>
+
+I'm using VoiceOver on this page. If I click the button, a notification pops up that tells me that everything has been saved successfully.
+The problem is that there's only visual feedback. The app doesn't provide screen readers with the information. 
+
+![&lt;div className=&quot;alert&quot; role=&quot;alert&quot;&gt;Saved successfully&lt;/div&gt;](https://res.cloudinary.com/dp3mem7or/image/upload/v1549208913/articles/react-finland/accessible_react_apps.031.jpeg)
+
+The notification looks something like this. In order to make it accessible we have to add one more attribute.
+If an element has the role attribute with alert as a value, it becomes a live region. Screen readers will than watch and announce content that has changed inside this element.
+
+<div class="content__video-wrapper">
+  <div class="video-wrapper">
+<iframe width="560" height="315" src="https://www.youtube.com/embed/VtPqRyBUz5w?rel=0" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen title="React demo: accessible notification"></iframe>
+  </div>
+</div>
+
+And now, with the role attribute in place, the notification will be announced.
+
+
+![](https://res.cloudinary.com/dp3mem7or/image/upload/v1549208913/articles/react-finland/accessible_react_apps.031.jpeg)
+
+Summary of tip 6: If you add `role="alert"` or `role="status"` to an element you're transforming it to a so called live region.
+
+The difference between `alert` and `status` is that `alert` will interrupt the screen reader if it's in the course of announcing something else. `status` will wait until the screen reader has finished announcing.
+Use live regions only for significant changes that you need to communicate.
+
+Check out [Reach UI's alert component](https://ui.reach.tech/alert/), [react-aria-live](https://github.com/AlmeroSteyn/react-aria-live) on Github, and read [ARIA live regions in React](https://almerosteyn.com/2017/09/aria-live-regions-in-react) on Almero Steyns blog.
+
