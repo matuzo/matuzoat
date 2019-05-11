@@ -8,7 +8,7 @@ intro: >-
   This is part 2 of 3 in a series of articles about CSS Grid layout and
   accessibility.
 teaser: >-
-  CSS Grid layout if powerful and and flexible. It's great for our development
+  CSS Grid layout if powerful and flexible, it's great for our development
   experience, but it may come at the cost of user experience and accessibility
   if we don’t use it responsibly.
 
@@ -36,7 +36,7 @@ archive: false
 
 ## Overview
 
-1. [What’s CSS Grid Layout?](#whats-css-grid-layout)
+1. [What’s CSS Grid Layout?](/blog/the-dark-side-of-the-grid/#whats-css-grid-layout)
 2. [Name and theme of this article](#name-and-theme-of-this-article)
 3. [Pink Floyd Fun Fact 1](#floyd-fact-1)
 4. [Compromising on Semantics](#compromising-on-semantics)
@@ -49,7 +49,7 @@ archive: false
 
 <hr>
 
-## Chaning visual order
+## Changing Visual Order
 
 In [part 1](/blog/the-dark-side-of-the-grid/) I addressed the issue with flattening document structures. Before we talk about the next topic, changing visual order, let me enlighten you with more Pink Floyd wisdom.
 
