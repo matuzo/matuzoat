@@ -8,9 +8,13 @@ intro: >-
   This is part 2 of 3 in a series of articles about CSS Grid layout and
   accessibility.
 teaser: >-
-  In [part 1](/blog/the-dark-side-of-the-grid/) I addressed the issue with
-  flattening document structures. Before we talk about the next topic, changing
-  visual order, let me enlighten you with more Pink Floyd wisdom.
+  CSS Grid layout if powerful and and flexible. It's great for our development
+  experience, but it may come at the cost of user experience and accessibility
+  if we don’t use it responsibly.
+
+
+  This series of articles will give you an overview of potential implementation
+  pitfalls, or in other words, the dark side of the grid.
 tags:
   - css
   - grid
@@ -20,20 +24,6 @@ css: dark-grid
 draft: true
 archive: false
 ---
-<div class="fact lazy u-full-width">
-<div class="fact__inner">
-<h2 id="floyd-fact-1" class="fact__heading">Pink Floyd Fun Fact #2</h2>
-<p>In 1975 Pink Floyd helped to finance the movie <cite>Monty Python and the Holy Grail</cite> by the comedy group Monty Python. Some other investors were Led Zeppelin and Genesis.</p>
-</div>
-</div>
-
-## Preface
-
-CSS Grid layout if powerful and and flexible. It's great for our development experience, but it may come at the cost of user experience and accessibility if we don’t use it responsibly.
-
-This series of articles will give you an overview of potential implementation pitfalls, or in other words, the dark side of the grid.
-
-
 <div class="demo u-full-width js-demo"> 
   <div class="a-title">
     <div class="a-title-white-light"></div>
@@ -58,3 +48,14 @@ This series of articles will give you an overview of potential implementation pi
 10. Pink Floyd Fun Fact 4
 
 <hr>
+
+## Chaning visual order
+
+In [part 1](/blog/the-dark-side-of-the-grid/) I addressed the issue with flattening document structures. Before we talk about the next topic, changing visual order, let me enlighten you with more Pink Floyd wisdom.
+
+<div class="fact lazy u-full-width">
+<div class="fact__inner">
+<h2 id="floyd-fact-1" class="fact__heading">Pink Floyd Fun Fact #2</h2>
+<p>In 1975 Pink Floyd helped to finance the movie <cite>Monty Python and the Holy Grail</cite> by the comedy group Monty Python. Some other investors were Led Zeppelin and Genesis.</p>
+</div>
+</div>
