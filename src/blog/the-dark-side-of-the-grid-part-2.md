@@ -24,8 +24,6 @@ css: dark-grid
 draft: true
 archive: false
 ---
-![](articles/dark-grid/grid-explicit.png)
-
 <div class="demo u-full-width js-demo"> 
   <div class="a-title">
     <div class="a-title-white-light"></div>
@@ -155,3 +153,5 @@ However, in the next few paragraphs I’ll focus on manipulating order in grids.
 ### Explicit placement
 
 One of the most exciting features in Grid is the ability to place grid items anywhere inside or outside of the grid.
+
+![](https://res.cloudinary.com/dp3mem7or/image/upload/v1557597833/articles/dark-grid/grid-explicit.png)
