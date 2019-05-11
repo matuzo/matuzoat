@@ -75,27 +75,27 @@ Both tab order and the order in which screen readers read content follow DOM ord
       </a>
     </li>
     <li class="a-grid-order__item" data-number="2">
-      <a class="a-grid-order__link" href="#">
+      <a class="a-grid-order__link no-line" href="#">
         <span class="a-grid-order__text">{ &nbsp; 2 &nbsp; }</span>
       </a>
     </li>
     <li class="a-grid-order__item" data-number="3">
-      <a class="a-grid-order__link" href="#">
+      <a class="a-grid-order__link no-line" href="#">
         <span class="a-grid-order__text">{ &nbsp; 3 &nbsp; }</span>
       </a>
     </li>
     <li class="a-grid-order__item" data-number="4">
-      <a class="a-grid-order__link" href="#">
+      <a class="a-grid-order__link no-line" href="#">
         <span class="a-grid-order__text">{ &nbsp; 4 &nbsp; }</span>
       </a>
     </li>
     <li class="a-grid-order__item" data-number="5">
-      <a class="a-grid-order__link" href="#">
+      <a class="a-grid-order__link no-line" href="#">
         <span class="a-grid-order__text">{ &nbsp; 5 &nbsp; }</span>
       </a>
     </li>
     <li class="a-grid-order__item" data-number="6">
-      <a class="a-grid-order__link" href="#">
+      <a class="a-grid-order__link no-line" href="#">
         <span class="a-grid-order__text">{ &nbsp; 6 &nbsp; }</span>
       </a>
     </li>
@@ -104,32 +104,32 @@ Both tab order and the order in which screen readers read content follow DOM ord
   <h2>Visual order doesn’t match DOM order</h2>
   <ul class="a-grid-order">
     <li class="a-grid-order__item" data-number="1" style="order: 1">
-      <a class="a-grid-order__link" href="#">
+      <a class="a-grid-order__link no-line" href="#">
         <span class="a-grid-order__text">{ &nbsp; 1 &nbsp; }</span>
       </a>
     </li>
     <li class="a-grid-order__item" data-number="4" style="order: 4">
-      <a class="a-grid-order__link a-grid-order__link--mismatch" href="#">
+      <a class="a-grid-order__link a-grid-order__link--mismatch no-line" href="#">
         <span class="a-grid-order__text a-grid-order__text--mismatch">{ &nbsp; 2 &nbsp; }</span>
       </a>
     </li>
     <li class="a-grid-order__item" data-number="2" style="order: 2">
-      <a class="a-grid-order__link a-grid-order__link--mismatch" href="#">
+      <a class="a-grid-order__link a-grid-order__link--mismatch no-line" href="#">
         <span class="a-grid-order__text a-grid-order__text--mismatch">{ &nbsp; 3 &nbsp; }</span>
       </a>
     </li>
     <li class="a-grid-order__item" data-number="6" style="order: 6">
-      <a class="a-grid-order__link a-grid-order__link--mismatch" href="#">
+      <a class="a-grid-order__link a-grid-order__link--mismatch no-line" href="#">
         <span class="a-grid-order__text a-grid-order__text--mismatch">{ &nbsp; 4 &nbsp; }</span>
       </a>
     </li>
     <li class="a-grid-order__item" data-number="5" style="order: 5">
-      <a class="a-grid-order__link" href="#">
+      <a class="a-grid-order__link no-line" href="#">
         <span class="a-grid-order__text">{ &nbsp; 5 &nbsp; }</span>
       </a>
     </li>
     <li class="a-grid-order__item" data-number="3" style="order: 3">
-      <a class="a-grid-order__link a-grid-order__link--mismatch" href="#">
+      <a class="a-grid-order__link a-grid-order__link--mismatch no-line" href="#">
         <span class="a-grid-order__text a-grid-order__text--mismatch">{ &nbsp; 6 &nbsp; }</span>
       </a>
     </li>
