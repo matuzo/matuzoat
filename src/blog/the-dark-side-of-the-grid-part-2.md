@@ -154,4 +154,23 @@ However, in the next few paragraphs I’ll focus on manipulating order in grids.
 
 One of the most exciting features in Grid is the ability to place grid items anywhere inside or outside of the grid.
 
-![](https://res.cloudinary.com/dp3mem7or/image/upload/v1557597833/articles/dark-grid/grid-explicit.png)
+![Visualization of the lines in a 3 by 2 grid](https://res.cloudinary.com/dp3mem7or/image/upload/v1557597833/articles/dark-grid/grid-explicit.png)
+
+You can place items explicitly by defining on which line they start or end. For vertical lines there’s `grid-column-start`, `grid-column-end`, or the shorthand `grid-column`. For horizontal lines `grid-row-start`, `grid-row-end`, and `grid-row`. Allowed values are a positive or negative line number or the span keyword.
+
+<div class="a-grid-explicit">
+  <ul class="a-grid-explicit__items">
+    <li class="a-grid-explicit__item">
+      <button class="a-grid-explicit__button">Item 1</button>
+    </li>
+    <li class="a-grid-explicit__item">
+      <button class="a-grid-explicit__button">Item 2</button>
+    </li>
+    <li class="a-grid-explicit__item">
+      <button class="a-grid-explicit__button">Item 3</button>
+    </li>
+    <li class="a-grid-explicit__item">
+      <button class="a-grid-explicit__button">Item 4</button>
+    </li>
+  </ul>
+</div>
