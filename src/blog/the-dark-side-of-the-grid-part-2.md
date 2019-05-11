@@ -166,12 +166,12 @@ You can place items explicitly by defining on which line they start or end. For 
   grid-gap: 1.4rem;
 }
 
-.grid__item {
+.grid__item:nth-child(2) {
   grid-column: 2;
   grid-row: 2;
 }
 
-.grid__item {
+.grid__item:nth-child(4) {
   grid-column: 1;
   grid-row: 1;
 }
@@ -196,3 +196,25 @@ Explicit placement might create a mismatch between DOM order and visual order.
     </li>
   </ul>
 </div>
+
+### Order
+You might already be familiar with the `order` property because it has been around since Flexbox. `order` can be set to any integer value to change the ordering of flex items. This also works with grid items.
+
+```css
+.grid {
+  display: grid;
+  grid-template-columns: repeat(2, 200px);
+  grid-auto-rows: 100px;
+  grid-gap: 1.4rem;
+}
+
+.grid__item:nth-child(2) {
+  order: 4;
+}
+
+.grid__item:nth-child(4) {
+  order: 1;
+}
+```
+
+[See the order property demo on CodePen](https://codepen.io/matuzo/pen/XooEXd) or read more about the [order property on MDN](https://developer.mozilla.org/en-US/docs/Web/CSS/order).
