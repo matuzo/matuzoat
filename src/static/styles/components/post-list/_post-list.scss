@@ -21,10 +21,6 @@
   margin-bottom: $spacing;
 
   &__item {
-    display: grid;
-    justify-items: start;
-    grid-gap: 0.5rem;
-    grid-template-columns: $post-list-image-size 1fr;
     margin-bottom: $spacing / 1.5;
     position: relative;
 
@@ -32,6 +28,16 @@
       margin-bottom: 0;
     }
   }
+
+  &__header {
+    position: relative;
+    grid-column: 1 / -1;
+    display: grid;
+    justify-items: start;
+    grid-gap: 0.5rem;
+    grid-template-columns: $post-list-image-size 1fr;
+  }
+
 
   &__image {
     align-items: center;
@@ -95,5 +101,15 @@
     display: flex;
     justify-content: center;
     padding: 0 0.5rem;
+  }
+
+  &__teaser {
+    font-size: 2rem;
+    grid-column: 1 / -1;
+    line-height: 1.6;
+
+    @include mq(l) {
+      max-width: 65ch;
+    }
   }
 }
