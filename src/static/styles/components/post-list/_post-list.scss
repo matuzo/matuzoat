@@ -11,6 +11,9 @@
   );
   @include box-list-theme('medium ', $theme-medium-bg, $theme-medium-color);
   @include box-list-theme('24a11y ', $theme-24a11y-bg, $theme-24a11y-color);
+  @include box-list-theme('dark-grid ',$theme-dark-grid-bg, #f4812e);
+  @include box-list-theme('react-finland ', $theme-react-finland-bg, $theme-react-finland-color);
+  @include box-list-theme('codepen ', $theme-codepen-bg, $theme-codepen-color);
 
   align-items: flex-start;
   display: flex;
