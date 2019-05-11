@@ -217,3 +217,139 @@ You might already be familiar with the `order` property because it has been arou
 ```
 
 [See the order property demo on CodePen](https://codepen.io/matuzo/pen/XooEXd) or read more about the [order property on MDN](https://developer.mozilla.org/en-US/docs/Web/CSS/order).
+
+### Absolute positioning
+It’s possible to combine absolute positioning and explicit placement. I haven’t found a use case yet in any of my projects but I believe it’s interesting. Let’s see how it works.
+
+In the following 3 by 2 grid with 6 items I’m moving the second item from line 2 to line 3 by applying `grid-column: 3`. Since I haven’t set the row property explicitly, and I haven’t placed other items, all subsequent items move one cell with the explicitly placed item. DOM order still matches visual order.
+
+[ DEMO ]
+
+Now let’s see what happens if we add absolute positioning to the mix and position the item in the top left corner relative to its parent.
+
+```css
+ul {
+  position: relative;
+}
+
+li:nth-child(2) {
+  grid-column: 3;
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+```
+
+Positioned grid items lie on top of other items just like any absolute positioned element but setting left and top to 0 doesn’t place them in the top left corner of their parent item but in the cell they’re placed in. They don’t affect the position of other items, and they’re completely ignored during auto-placement. Again, this may cause a disconnect between content and presentation.
+
+[ DEMO ]
+
+### Auto flow
+
+Placing differently sized items explicitly may have unexpected side effects with Grids default auto-placement algorithm. The combination of explicit and implicit placement sometimes results in unwanted gaps between grid items. This is because of the default placement algorithm only ever moving forward when placing items and never backtracking to fill holes.
+
+
+[ INFO/TIP BLOCK ]
+Implicit, explicit, whatisit?
+If you’re not sure what I mean by explicit and implicit, head over to CSS-Tricks and read about the difference between explicit and implicit grids.
+
+```css
+.grid {
+  display: grid;
+  grid-template-columns: repeat(3, 100px);
+  grid-auto-rows: 40px;
+  grid-gap: 20px;
+}
+
+.item:nth-child(1) { grid-row-end: span 3; }
+.item:nth-child(3) { grid-row-end: span 3; }
+.item:nth-child(4) { grid-column: span 2; }
+.item:nth-child(5) { grid-row: span 2; }
+.item:nth-child(7) { grid-column: span 2; }
+.item:nth-child(8) { grid-column: span 3; }
+.item:nth-child(9) { grid-row: span 2; }
+```
+
+[DEMO]
+
+This can give your designs a nice touch but I can also annoy if it’s undesirable. Grids default auto-placement algorithm can be changed by switching from a “sparse” to a “dense” packing mode using the grid-auto-flow property.
+
+```css
+.grid {
+  display: grid;
+  grid-template-columns: repeat(3, 100px);
+  grid-auto-rows: 40px;
+  grid-gap: 20px;
+
+  grid-auto-flow: dense;
+}
+```
+
+This is a dream come true but the advantage of the default packing mode is that order stays intact which isn’t guaranteed with `grid-auto-flow: dense;`  in place.
+
+Read more about [grid-auto-flow on MDN](https://developer.mozilla.org/en-US/docs/Web/CSS/grid-auto-flow).
+
+### Areas
+Time to make a confession: I’m deeply in love with Grid Areas . I’ll share my intense feelings about this property in another article soon. Areas are awesome, but nobody is perfect and since this article deals with the dark side of things, let’s see what may go wrong.
+
+The grid-template-areas property does 2 things. 
+First, it describes layouts in CSS visually. If you have a 2-column layout with a header, content, sidebar and a footer, this is what it may look like in CSS.
+
+```css
+.layout {
+  grid-template-areas: "header header"
+                       "content sidebar"
+                       "footer footer";
+}
+```
+
+Second, it defines named grid areas where any grid item may be placed inside, and when I say any, I mean any.
+
+Let’s take this example where the source order is wrong.
+
+```html
+<body>
+  <footer>
+    Footer
+  </footer>
+  
+  <header>
+    HEADER
+  </header>
+  
+  <main>
+    MAIN
+  </main>
+</body>
+```
+
+The source order of these main content areas is  footer - header - main where it should be header- main- footer. The correct approach to fixing this is to change the order in HTML but with Areas we don’t have to.
+All it takes is to define the correct layout in CSS and then place the elements in the respective area using the grid-area property.
+
+```css
+
+body {
+  grid-template-areas: "header"
+                       "content"
+                       "footer";
+}
+
+header {
+  grid-area: header;
+}
+
+footer {
+  grid-area: footer;
+}
+
+main {
+  grid-area: content;
+}
+```
+
+This is so simple, so beautiful, yet so dangerous. It looks right, but the order is only correct on the surface because the source order is still the same.
+
+[DEMO MIT JS]
+
+## Recap
+None of these features is bad but they may affect an important part of the user experience negatively. If you’re changing visual order, test your components with the keyboard by pressing Tab or Shift + Tab for the opposite direction. Make sure that visual order is comprehensible and that it matches DOM order as correctly as in any way possible. Also, test on different devices and screen sizes because [many screen reader users use a keyboard with their mobile device](https://webaim.org/projects/screenreadersurvey7/#mobilekeyboard).
