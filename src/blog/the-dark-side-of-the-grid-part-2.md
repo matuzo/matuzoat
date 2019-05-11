@@ -67,7 +67,7 @@ Before we look at what’s possible with Grid, let’s briefly talk about visual
 
 Both tab order and the order in which screen readers read content follow DOM order. Changing visual order with CSS has no effect on DOM order. No matter where we place items on the page using CSS, keyboard users will still encounter elements in the order in which they appear in the HTML document.
 
-<div class="demo js-a-grid-order">
+<div class="demo js-a-focus-demo">
   <h4>Visual order matches DOM order</h4>
   <ul class="a-grid-order">
     <li class="a-grid-order__item" data-number="1">
@@ -154,11 +154,32 @@ However, in the next few paragraphs I’ll focus on manipulating order in grids.
 
 One of the most exciting features in Grid is the ability to place grid items anywhere inside or outside of the grid.
 
-![Visualization of the lines in a 3 by 2 grid](https://res.cloudinary.com/dp3mem7or/image/upload/v1557597833/articles/dark-grid/grid-explicit.png)
+![Visualization of the lines in a 3 by 2 grid](https://res.cloudinary.com/dp3mem7or/image/upload/v1557599128/articles/dark-grid/grid-explicit.png)
 
 You can place items explicitly by defining on which line they start or end. For vertical lines there’s `grid-column-start`, `grid-column-end`, or the shorthand `grid-column`. For horizontal lines `grid-row-start`, `grid-row-end`, and `grid-row`. Allowed values are a positive or negative line number or the span keyword.
 
-<div class="a-grid-explicit">
+```css
+.grid {
+  display: grid;
+  grid-template-columns: repeat(2, 200px);
+  grid-auto-rows: 100px;
+  grid-gap: 1.4rem;
+}
+
+.grid__item {
+  grid-column: 2;
+  grid-row: 2;
+}
+
+.grid__item {
+  grid-column: 1;
+  grid-row: 1;
+}
+```
+
+Explicit placement might create a mismatch between DOM order and visual order.
+
+<div class="a-grid-explicit js-a-focus-demo">
   <ul class="a-grid-explicit__items">
     <li class="a-grid-explicit__item">
       <button class="a-grid-explicit__button">Item 1</button>
