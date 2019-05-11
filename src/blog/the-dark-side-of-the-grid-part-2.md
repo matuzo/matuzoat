@@ -67,7 +67,7 @@ Before we look at what’s possible with Grid, let’s briefly talk about visual
 
 Both tab order and the order in which screen readers read content follow DOM order. Changing visual order with CSS has no effect on DOM order. No matter where we place items on the page using CSS, keyboard users will still encounter elements in the order in which they appear in the HTML document.
 
-<div class="demo">
+<div class="demo js-a-grid-order">
   <h4>Visual order matches DOM order</h4>
   <ul class="a-grid-order">
     <li class="a-grid-order__item" data-number="1">
