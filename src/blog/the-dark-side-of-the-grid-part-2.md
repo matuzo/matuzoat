@@ -24,6 +24,8 @@ css: dark-grid
 draft: true
 archive: false
 ---
+![](articles/dark-grid/grid-explicit.png)
+
 <div class="demo u-full-width js-demo"> 
   <div class="a-title">
     <div class="a-title-white-light"></div>
@@ -41,7 +43,7 @@ archive: false
 3. [Pink Floyd Fun Fact 1](/blog/the-dark-side-of-the-grid/#floyd-fact-1) (part 1)
 4. [Compromising on Semantics](/blog/the-dark-side-of-the-grid/#compromising-on-semantics) (part 1)
 5. [Pink Floyd Fun Fact 2](#floyd-fact-1)
-6. Changing Visual Order
+6. [Changing Visual Order](#changing-visual-order)
 7. Cross Browser Support
 8. Pink Floyd Fun Fact 3
 9. Whose responsibility is it?
@@ -138,8 +140,18 @@ Both tab order and the order in which screen readers read content follow DOM ord
 </div>
 
 ### Disconnect between content and presentation
+
 If visual order and DOM order don’t match, it can irritate and confuse users up to a point where the experience is so bad that the site is unusable.
 
 1. Visual order concerns keyboard users because they may have trouble predicting where focus will go next. 
-2. It may irritate users of screen magnifiers if the enlarged portion of the screen skips around a lot.
+2. It may irritate [users of screen magnifiers](https://axesslab.com/make-site-accessible-screen-magnifiers/) if the enlarged portion of the screen skips around a lot.
 3. If a blind user is working with a sighted user, who reads the page in visual order, it may confuse them when they encounter information in different order.
+
+### Manipulating visual order
+
+When you’re applying any property that changes order you should especially pay attention to testing with a keyboard. This applies to all properties, not just to those associated with CSS Grid. 
+However, in the next few paragraphs I’ll focus on manipulating order in grids.
+
+### Explicit placement
+
+One of the most exciting features in Grid is the ability to place grid items anywhere inside or outside of the grid.
