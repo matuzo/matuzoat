@@ -8,7 +8,7 @@ intro: >-
   This is part 2 of 3 in a series of articles about CSS Grid layout and
   accessibility.
 teaser: >-
-  CSS Grid layout if powerful and flexible, it's great for our development
+  CSS Grid layout is powerful and flexible, it's great for our development
   experience, but it may come at the cost of user experience and accessibility
   if we don’t use it responsibly.
 
@@ -56,6 +56,6 @@ In [part 1](/blog/the-dark-side-of-the-grid/) I addressed the issue with flatten
 <div class="fact lazy u-full-width">
 <div class="fact__inner">
 <h2 id="floyd-fact-1" class="fact__heading">Pink Floyd Fun Fact #2</h2>
-<p>In 1975 Pink Floyd helped to finance the movie <cite>Monty Python and the Holy Grail</cite> by the comedy group Monty Python. Some other investors were Led Zeppelin and Genesis.</p>
+<p>In 1975 Pink Floyd helped to finance the movie Monty Python and the Holy Grail by the comedy group Monty Python. Led Zeppelin and Genesis were also amongst the investors.</p>
 </div>
 </div>
