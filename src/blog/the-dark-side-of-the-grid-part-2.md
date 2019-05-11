@@ -70,7 +70,7 @@ Both tab order and the order in which screen readers read content follow DOM ord
   <h2>Visual order matches DOM order</h2>
   <ul class="a-grid-order">
     <li class="a-grid-order__item" data-number="1">
-      <a class="a-grid-order__link" href="#">
+      <a class="a-grid-order__link no-line" href="#">
         <span class="a-grid-order__text">{ &nbsp; 1 &nbsp; }</span>
       </a>
     </li>
