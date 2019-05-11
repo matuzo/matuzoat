@@ -9,10 +9,10 @@ intro: >-
   This is part 1 of 3 in a series of articles about CSS Grid layout and
   accessibility.
 teaser: >-
-  **[CSS Grid Layout](https://www.w3.org/TR/css-grid-1/) is one of the most
+  [CSS Grid Layout](https://www.w3.org/TR/css-grid-1/) is one of the most
   exciting recent CSS specifications because of its flexibility, extent, and
   power. It makes our lives so much easier but it also creates new dangers
-  regarding user experience and accessibility.**
+  regarding user experience and accessibility.
 tags:
   - css
   - grid
