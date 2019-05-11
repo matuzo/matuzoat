@@ -180,7 +180,6 @@ You can place items explicitly by defining on which line they start or end. For 
 Explicit placement might create a mismatch between DOM order and visual order.
 
 <div class="a-grid-explicit js-a-focus-demo">
-  <h4>A grid with explicitly places items</h4>
   <ul class="a-grid-explicit__items">
     <li class="a-grid-explicit__item">
       <button class="a-grid-explicit__button">Item 1</button>
