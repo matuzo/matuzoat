@@ -36,11 +36,11 @@ archive: false
 
 ## Overview
 
-1. [What’s CSS Grid Layout?](/blog/the-dark-side-of-the-grid/#whats-css-grid-layout)
-2. [Name and theme of this article](#name-and-theme-of-this-article)
-3. [Pink Floyd Fun Fact 1](#floyd-fact-1)
-4. [Compromising on Semantics](#compromising-on-semantics)
-5. Pink Floyd Fun Fact 2
+1. [What’s CSS Grid Layout?](/blog/the-dark-side-of-the-grid/#whats-css-grid-layout) (part 1)
+2. [Name and theme of this article](/blog/the-dark-side-of-the-grid/#name-and-theme-of-this-article) (part 1)
+3. [Pink Floyd Fun Fact 1](/blog/the-dark-side-of-the-grid/#floyd-fact-1) (part 1)
+4. [Compromising on Semantics](/blog/the-dark-side-of-the-grid/#compromising-on-semantics) (part 1)
+5. [Pink Floyd Fun Fact 2](#floyd-fact-1)
 6. Changing Visual Order
 7. Cross Browser Support
 8. Pink Floyd Fun Fact 3
@@ -60,10 +60,11 @@ In [part 1](/blog/the-dark-side-of-the-grid/) I addressed the issue with flatten
 </div>
 </div>
 
+### Visual order
+
 The CSS Grid Layout specification provides us with many ways of changing visual order. This flexibility is a nice thing to have but bad for accessibility if we don’t use it consciously.
 Before we look at what’s possible with Grid, let’s briefly talk about visual order.
 
-### Visual order
 Both tab order and the order in which screen readers read content follow DOM order. Changing visual order with CSS has no effect on DOM order. No matter where we place items on the page using CSS, keyboard users will still encounter elements in the order in which they appear in the HTML document.
 
 <div class="demo">
