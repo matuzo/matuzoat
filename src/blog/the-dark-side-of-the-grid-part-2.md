@@ -59,3 +59,80 @@ In [part 1](/blog/the-dark-side-of-the-grid/) I addressed the issue with flatten
 <p>In 1975 Pink Floyd helped to finance the movie Monty Python and the Holy Grail by the comedy group Monty Python. Led Zeppelin and Genesis were also amongst the investors.</p>
 </div>
 </div>
+
+The CSS Grid Layout specification provides us with many ways of changing visual order. This flexibility is a nice thing to have but bad for accessibility if we don’t use it consciously.
+Before we look at what’s possible with Grid, let’s briefly talk about visual order.
+
+### Visual order
+Both tab order and the order in which screen readers read content follow DOM order. Changing visual order with CSS has no effect on DOM order. No matter where we place items on the page using CSS, keyboard users will still encounter elements in the order in which they appear in the HTML document.
+
+<div class="demo">
+  <h2>Visual order matches DOM order</h2>
+  <ul class="a-grid-order">
+    <li class="a-grid-order__item" data-number="1">
+      <a class="a-grid-order__link" href="#">
+        <span class="a-grid-order__text">{ &nbsp; 1 &nbsp; }</span>
+      </a>
+    </li>
+    <li class="a-grid-order__item" data-number="2">
+      <a class="a-grid-order__link" href="#">
+        <span class="a-grid-order__text">{ &nbsp; 2 &nbsp; }</span>
+      </a>
+    </li>
+    <li class="a-grid-order__item" data-number="3">
+      <a class="a-grid-order__link" href="#">
+        <span class="a-grid-order__text">{ &nbsp; 3 &nbsp; }</span>
+      </a>
+    </li>
+    <li class="a-grid-order__item" data-number="4">
+      <a class="a-grid-order__link" href="#">
+        <span class="a-grid-order__text">{ &nbsp; 4 &nbsp; }</span>
+      </a>
+    </li>
+    <li class="a-grid-order__item" data-number="5">
+      <a class="a-grid-order__link" href="#">
+        <span class="a-grid-order__text">{ &nbsp; 5 &nbsp; }</span>
+      </a>
+    </li>
+    <li class="a-grid-order__item" data-number="6">
+      <a class="a-grid-order__link" href="#">
+        <span class="a-grid-order__text">{ &nbsp; 6 &nbsp; }</span>
+      </a>
+    </li>
+  </ul>
+  
+  <h2>Visual order doesn’t match DOM order</h2>
+  <ul class="a-grid-order">
+    <li class="a-grid-order__item" data-number="1" style="order: 1">
+      <a class="a-grid-order__link" href="#">
+        <span class="a-grid-order__text">{ &nbsp; 1 &nbsp; }</span>
+      </a>
+    </li>
+    <li class="a-grid-order__item" data-number="4" style="order: 4">
+      <a class="a-grid-order__link a-grid-order__link--mismatch" href="#">
+        <span class="a-grid-order__text a-grid-order__text--mismatch">{ &nbsp; 2 &nbsp; }</span>
+      </a>
+    </li>
+    <li class="a-grid-order__item" data-number="2" style="order: 2">
+      <a class="a-grid-order__link a-grid-order__link--mismatch" href="#">
+        <span class="a-grid-order__text a-grid-order__text--mismatch">{ &nbsp; 3 &nbsp; }</span>
+      </a>
+    </li>
+    <li class="a-grid-order__item" data-number="6" style="order: 6">
+      <a class="a-grid-order__link a-grid-order__link--mismatch" href="#">
+        <span class="a-grid-order__text a-grid-order__text--mismatch">{ &nbsp; 4 &nbsp; }</span>
+      </a>
+    </li>
+    <li class="a-grid-order__item" data-number="5" style="order: 5">
+      <a class="a-grid-order__link" href="#">
+        <span class="a-grid-order__text">{ &nbsp; 5 &nbsp; }</span>
+      </a>
+    </li>
+    <li class="a-grid-order__item" data-number="3" style="order: 3">
+      <a class="a-grid-order__link a-grid-order__link--mismatch" href="#">
+        <span class="a-grid-order__text a-grid-order__text--mismatch">{ &nbsp; 6 &nbsp; }</span>
+      </a>
+    </li>
+  </ul>
+</div>
+
