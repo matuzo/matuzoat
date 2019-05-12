@@ -67,7 +67,7 @@ Before we look at what’s possible with Grid, let’s briefly talk about visual
 
 Both tab order and the order in which screen readers read content follow DOM order. Changing visual order with CSS has no effect on DOM order. No matter where we place items with CSS, keyboard users will still encounter elements in the order in which they appear in the HTML document.
 
-<div class="demo js-a-focus-demo">
+<div class="demo js-a-focus-demo" data-button="Show tab order">
   <h4>Visual order matches DOM order</h4>
   <ul class="a-grid-order">
     <li class="a-grid-order__item" data-number="1">
@@ -160,10 +160,10 @@ You can place items explicitly by defining on which line they start or end. For 
 
 ```html
 <div class="grid">
-  <div class="grid__item"></div>
-  <div class="grid__item"></div>
-  <div class="grid__item"></div>
-  <div class="grid__item"></div>
+  <div class="grid__item">Item 1</div>
+  <div class="grid__item">Item 2</div>
+  <div class="grid__item">Item 3</div>
+  <div class="grid__item">Item 4</div>
 </div>
 ```
 
@@ -190,7 +190,7 @@ You can place items explicitly by defining on which line they start or end. For 
 
 Explicit placement might create a mismatch between DOM order and visual order.
 
-<div class="a-grid-explicit js-a-focus-demo">
+<div class="a-grid-explicit js-a-focus-demo" data-button="Show tab order">
   <ul class="a-grid-explicit__items">
     <li class="a-grid-explicit__item">
       <button class="a-grid-explicit__button">Item 1</button>
