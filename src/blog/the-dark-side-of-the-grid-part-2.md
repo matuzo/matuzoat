@@ -65,7 +65,7 @@ In [part 1](/blog/the-dark-side-of-the-grid/) I addressed the issue with flatten
 The CSS Grid Layout specification provides us with many ways of changing visual order. This flexibility is a nice thing to have but bad for accessibility if we don’t use it consciously.
 Before we look at what’s possible with Grid, let’s briefly talk about visual order.
 
-Both tab order and the order in which screen readers read content follow DOM order. Changing visual order with CSS has no effect on DOM order. No matter where we place items on the page using CSS, keyboard users will still encounter elements in the order in which they appear in the HTML document.
+Both tab order and the order in which screen readers read content follow DOM order. Changing visual order with CSS has no effect on DOM order. No matter where we place items with CSS, keyboard users will still encounter elements in the order in which they appear in the HTML document.
 
 <div class="demo js-a-focus-demo">
   <h4>Visual order matches DOM order</h4>
@@ -156,21 +156,32 @@ One of the most exciting features in Grid is the ability to place grid items any
 
 ![Visualization of the lines in a 3 by 2 grid](https://res.cloudinary.com/dp3mem7or/image/upload/v1557599128/articles/dark-grid/grid-explicit.png)
 
-You can place items explicitly by defining on which line they start or end. For vertical lines there’s `grid-column-start`, `grid-column-end`, or the shorthand `grid-column`. For horizontal lines `grid-row-start`, `grid-row-end`, and `grid-row`. Allowed values are a positive or negative line number or the span keyword.
+You can place items explicitly by defining on which line they start or end. For vertical lines there’s `grid-column-start`, `grid-column-end`, or the shorthand `grid-column`. For horizontal lines `grid-row-start`, `grid-row-end`, and `grid-row`. Allowed values are a positive or negative line number or the [span keyword](https://developer.mozilla.org/en-US/docs/Web/CSS/grid-column#Values).
+
+```html
+<div class="grid">
+  <div class="grid__item"></div>
+  <div class="grid__item"></div>
+  <div class="grid__item"></div>
+  <div class="grid__item"></div>
+</div>
+```
 
 ```css
 .grid {
   display: grid;
   grid-template-columns: repeat(2, 200px);
   grid-auto-rows: 100px;
-  grid-gap: 1.4rem;
+  grid-gap: 15px;
 }
 
+/* Place item on the second horizontal and vertical line */
 .grid__item:nth-child(2) {
   grid-column: 2;
   grid-row: 2;
 }
 
+/* Place item on the first horizontal and vertical line */
 .grid__item:nth-child(4) {
   grid-column: 1;
   grid-row: 1;
