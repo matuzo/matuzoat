@@ -251,7 +251,7 @@ li:nth-child(2) {
 }
 ```
 
-Positioned grid items lie on top of other items just like any absolute positioned element but setting left and top to 0 doesn’t place them in the top left corner of their parent item but in the cell they’re placed in. They don’t affect the position of other items, and they’re completely ignored during auto-placement. Again, this may cause a disconnect between content and presentation.
+Positioned grid items lie on top of other items just like any absolute positioned element. Setting `left` and `top` to `0` doesn’t place them in the top left corner of their parent item – and this is where it gets interesting – but in the cell they’re placed in. They don’t affect the position of other items, and they’re completely ignored during auto-placement. Again, this may cause a disconnect between content and presentation.
 
 [ DEMO ]
 
