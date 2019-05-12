@@ -259,11 +259,6 @@ Positioned grid items lie on top of other items just like any absolute positione
 
 Placing differently sized items explicitly may have unexpected side effects with Grids default auto-placement algorithm. The combination of explicit and implicit placement sometimes results in unwanted gaps between grid items. This is because of the default placement algorithm only ever moving forward when placing items and never backtracking to fill holes.
 
-
-[ INFO/TIP BLOCK ]
-Implicit, explicit, whatisit?
-If you’re not sure what I mean by explicit and implicit, head over to CSS-Tricks and read about the difference between explicit and implicit grids.
-
 ```css
 .grid {
   display: grid;
@@ -299,6 +294,10 @@ This can give your designs a nice touch but I can also annoy if it’s undesirab
 This is a dream come true but the advantage of the default packing mode is that order stays intact which isn’t guaranteed with `grid-auto-flow: dense;`  in place.
 
 Read more about [grid-auto-flow on MDN](https://developer.mozilla.org/en-US/docs/Web/CSS/grid-auto-flow).
+
+[ INFO/TIP BLOCK ]
+Implicit, explicit, whatisit?
+If you’re not sure what I mean by explicit and implicit, head over to CSS-Tricks and read about the difference between explicit and implicit grids.
 
 ### Areas
 Time to make a confession: I’m deeply in love with Grid Areas . I’ll share my intense feelings about this property in another article soon. Areas are awesome, but nobody is perfect and since this article deals with the dark side of things, let’s see what may go wrong.
