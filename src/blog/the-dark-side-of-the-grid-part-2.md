@@ -36,12 +36,12 @@ archive: false
 
 ## Overview
 
-1. [What’s CSS Grid Layout?](/blog/the-dark-side-of-the-grid/#whats-css-grid-layout) (part 1)
-2. [Name and theme of this article](/blog/the-dark-side-of-the-grid/#name-and-theme-of-this-article) (part 1)
-3. [Pink Floyd Fun Fact 1](/blog/the-dark-side-of-the-grid/#floyd-fact-1) (part 1)
-4. [Compromising on Semantics](/blog/the-dark-side-of-the-grid/#compromising-on-semantics) (part 1)
-5. [Pink Floyd Fun Fact 2](#floyd-fact-1)
-6. [Changing Visual Order](#changing-visual-order)
+1. [What’s CSS Grid Layout?](/blog/the-dark-side-of-the-grid/#whats-css-grid-layout) (in part 1)
+2. [Name and theme of this article](/blog/the-dark-side-of-the-grid/#name-and-theme-of-this-article) (in part 1)
+3. [Pink Floyd Fun Fact 1](/blog/the-dark-side-of-the-grid/#floyd-fact-1) (in part 1)
+4. [Compromising on Semantics](/blog/the-dark-side-of-the-grid/#compromising-on-semantics) (in part 1)
+5. [Pink Floyd Fun Fact 2](#floyd-fact-1) (in this article)
+6. [Changing Visual Order](#visual-order) (in this article)
 7. Cross Browser Support
 8. Pink Floyd Fun Fact 3
 9. Whose responsibility is it?
@@ -295,9 +295,9 @@ This is a dream come true but the advantage of the default packing mode is that 
 
 Read more about [grid-auto-flow on MDN](https://developer.mozilla.org/en-US/docs/Web/CSS/grid-auto-flow).
 
-[ INFO/TIP BLOCK ]
-Implicit, explicit, whatisit?
-If you’re not sure what I mean by explicit and implicit, head over to CSS-Tricks and read about the difference between explicit and implicit grids.
+<div class="info">
+<h4><span class="info__label">Implicit, explicit, whatisit?</span><span class="info__heading">Why did you add <code>transform: rotate(0);</code>?</a></h4>
+<p>If you’re not sure what I mean by explicit and implicit, head over to CSS-Tricks and read about the <a href="https://css-tricks.com/difference-explicit-implicit-grids/" rel="noopener">difference between explicit and implicit grids</a>.</p></div>
 
 ### Areas
 Time to make a confession: I’m deeply in love with Grid Areas . I’ll share my intense feelings about this property in another article soon. Areas are awesome, but nobody is perfect and since this article deals with the dark side of things, let’s see what may go wrong.
