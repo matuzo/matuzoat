@@ -165,4 +165,76 @@ lazyLoad(document.querySelectorAll('.lazy'));
  */
 enhanceDemos();
 
+/** 
+ * Order demo
+ */
+var demos = document.querySelectorAll('.js-a-focus-demo');
+var activeLink = [];
+for (let i = 0; i < demos.length; i++) {
+  activeLink.push(0);
+
+  (function () {
+    const demo = demos[i];
+    var links = demo.querySelectorAll('a, button');
+    var animating = false;
+    var focusInterval;
+
+    var playpause = document.createElement('button');
+    var playpause_inner = document.createElement('span');
+    playpause.classList.add('btn')
+    playpause_inner.classList.add('btn__inner')
+    playpause.appendChild(playpause_inner);
+
+    var buttonTextActive = 'Stop animation';
+    var buttonTextInactive = 'Play animation';
+
+    if (demo.hasAttribute('data-button')) {
+      buttonTextInactive = demo.getAttribute('data-button');
+    }
+
+    setButtonText(buttonTextInactive);
+
+    demo.insertBefore(playpause, demo.firstChild);
+
+    playpause.addEventListener('click', function() {
+      if (animating) {
+        clearInterval(focusInterval)
+        playpause.textContent = buttonTextInactive;
+      } else {
+        links[activeLink[i]].focus();
+
+        focusInterval = window.setInterval(focusNext, 700);
+        setButtonText(buttonTextActive);
+      }  
+      
+      animating = !animating;
+    });
+
+    for (var j = 0; j < links.length; j++) {
+      links[j].addEventListener('focus', function(e) {
+        if (e.target.classList.contains('a-grid-order__link--mismatch')) {
+          e.target.classList.add('a-grid-order__link--dangle')
+        }
+      })
+    }
+
+    function setButtonText(text) {
+      playpause_inner.textContent = text;
+    }
+
+    function focusNext() {  
+      if (activeLink[i] < links.length - 1) {
+          activeLink[i]++;
+        } else {
+          activeLink[i] = 0;
+          clearInterval(focusInterval);
+          setButtonText(buttonTextInactive);
+          animating = false;
+        }
+
+      links[activeLink[i]].focus();
+    }
+  })(i)
+}
+
 
