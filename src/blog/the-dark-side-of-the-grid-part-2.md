@@ -393,11 +393,11 @@ Let’s take this example where the source order is wrong.
   </footer>
   
   <header>
-    HEADER
+    Header
   </header>
   
   <main>
-    MAIN
+    Main
   </main>
 </body>
 ```
@@ -413,12 +413,12 @@ body {
                        "footer";
 }
 
-header {
-  grid-area: header;
-}
-
 footer {
   grid-area: footer;
+}
+
+header {
+  grid-area: header;
 }
 
 main {
@@ -428,7 +428,21 @@ main {
 
 This is so simple, so beautiful, yet so dangerous. It looks right, but the order is only correct on the surface because the source order is still the same.
 
-[DEMO MIT JS]
+<div class="js-a-focus-demo" data-button="Show tab order">
+<div class="a-grid-areas">
+<footer>
+  <button>Footer</button>
+</footer>    
+
+<header>
+  <button>Header</button>
+</header>    
+
+<main>
+  <button>Main</button>
+</main>
+</div>
+</div>
 
 ## Recap
 None of these features is bad but they may affect an important part of the user experience negatively. If you’re changing visual order, test your components with the keyboard by pressing Tab or Shift + Tab for the opposite direction. Make sure that visual order is comprehensible and that it matches DOM order as correctly as in any way possible. Also, test on different devices and screen sizes because [many screen reader users use a keyboard with their mobile device](https://webaim.org/projects/screenreadersurvey7/#mobilekeyboard).
