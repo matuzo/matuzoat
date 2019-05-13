@@ -282,7 +282,7 @@ li:nth-child(2) {
 Positioned grid items lie on top of other items just like any absolute positioned element. They don’t affect the position of other items, and they’re completely ignored during auto-placement.  
 This is where it gets interesting: Setting `left` and `top` to `0` doesn’t place them in the top left corner of their parent item (the `ul`) but in the cell they’re placed in. 
 
-<ul class="a-grid-absolute">
+<ul class="a-grid-absolute js-a-focus-demo" data-button="Show tab order">
   <li><button>Item 1</button></li>
   <li class="positioned"><button>Item 2</button></li>
   <li><button>Item 3</button></li>
@@ -332,8 +332,8 @@ This can give your designs a nice touch but I can also annoy if it’s undesirab
 ```css
 .grid {
   display: grid;
-  grid-template-columns: repeat(3, 100px);
-  grid-auto-rows: 40px;
+  grid-template-columns: repeat(3, 200px);
+  grid-auto-rows: 70px;
   grid-gap: 20px;
 
   grid-auto-flow: dense;
@@ -354,20 +354,22 @@ This can give your designs a nice touch but I can also annoy if it’s undesirab
 
 This is a dream come true but the advantage of the default packing mode is that order stays intact which isn’t guaranteed with `grid-auto-flow: dense;`  in place.
 
-Read more about [grid-auto-flow on MDN](https://developer.mozilla.org/en-US/docs/Web/CSS/grid-auto-flow).
+Play with the [auto-flow demo on CodePen](https://codepen.io/matuzo/pen/pONEzJ?editors=1100) or read more about [grid-auto-flow on MDN](https://developer.mozilla.org/en-US/docs/Web/CSS/grid-auto-flow).
 
 <div class="info">
 <h4><span class="info__label">Aaahhmmm</span><span class="info__heading">Implicit, explicit, whatisit?</code>?</a></h4>
 <p>If you’re not sure what I mean by explicit and implicit, head over to CSS-Tricks and read about the <a href="https://css-tricks.com/difference-explicit-implicit-grids/" rel="noopener">difference between explicit and implicit grids</a>.</p></div>
 
 ### Areas
-Time to make a confession: I’m deeply in love with Grid Areas . I’ll share my intense feelings about this property in another article soon. Areas are awesome, but nobody is perfect and since this article deals with the dark side of things, let’s see what may go wrong.
+Time to make a confession: I’m deeply in love with Grid Areas ❤️. I’ll share my intense feelings about this property in another article soon. Areas are awesome, but nobody is perfect and since this article deals with the dark side of things, let’s see what may go wrong.
 
 The grid-template-areas property does 2 things. 
 First, it describes layouts in CSS visually. If you have a 2-column layout with a header, content, sidebar and a footer, this is what it may look like in CSS.
 
 ```css
 .layout {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
   grid-template-areas: "header header"
                        "content sidebar"
                        "footer footer";
@@ -394,12 +396,12 @@ Let’s take this example where the source order is wrong.
 </body>
 ```
 
-The source order of these main content areas is  footer - header - main where it should be header- main- footer. The correct approach to fixing this is to change the order in HTML but with Areas we don’t have to.
-All it takes is to define the correct layout in CSS and then place the elements in the respective area using the grid-area property.
+The source order of these elements is <em>footer - header - main</em> where it should be <em>header - main - footer</em>. The correct approach to fixing this is to change the order in HTML but with Areas we don’t have to.
+All it takes is to define the correct layout in CSS and then place the elements in the respective area using the `grid-area` property.
 
 ```css
-
 body {
+  display: grid;
   grid-template-areas: "header"
                        "content"
                        "footer";
