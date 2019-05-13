@@ -345,7 +345,7 @@ This is a dream come true but the advantage of the default packing mode is that 
 Read more about [grid-auto-flow on MDN](https://developer.mozilla.org/en-US/docs/Web/CSS/grid-auto-flow).
 
 <div class="info">
-<h4><span class="info__label">Implicit, explicit, whatisit?</span><span class="info__heading">Why did you add <code>transform: rotate(0);</code>?</a></h4>
+<h4><span class="info__label">Aaahhmmm</span><span class="info__heading">Implicit, explicit, whatisit?</code>?</a></h4>
 <p>If you’re not sure what I mean by explicit and implicit, head over to CSS-Tricks and read about the <a href="https://css-tricks.com/difference-explicit-implicit-grids/" rel="noopener">difference between explicit and implicit grids</a>.</p></div>
 
 ### Areas
