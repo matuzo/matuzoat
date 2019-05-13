@@ -166,6 +166,7 @@ You can place items explicitly by defining on which line they start or end. For 
   <div class="grid__item">Item 4</div>
 </div>
 ```
+The order in the DOM in this grid is <em>Item 1 - 2 - 3 - 4</em>.
 
 ```css
 .grid {
@@ -191,6 +192,7 @@ You can place items explicitly by defining on which line they start or end. For 
   grid-row: 1;
 }
 ```
+The order in the DOM is still <em>Item 1 - 2 - 3 - 4</em> but the visual order is now <em>Item 4 - 1 - 3 - 2</em>.
 
 Explicit placement might create a mismatch between DOM order and visual order.
 
@@ -234,11 +236,31 @@ You might already be familiar with the `order` property because it has been arou
 [See the order property demo on CodePen](https://codepen.io/matuzo/pen/XooEXd) or read more about the [order property on MDN](https://developer.mozilla.org/en-US/docs/Web/CSS/order).
 
 ### Absolute positioning
-It’s possible to combine absolute positioning and explicit placement. I haven’t found a use case yet in any of my projects but I believe it’s interesting. Let’s see how it works.
+It’s possible to combine absolute positioning and explicit placement. I haven’t found a use case yet in any of my projects but I believe it’s interesting how an positioned item behaves in a grid.
 
-In the following 3 by 2 grid with 6 items I’m moving the second item from line 2 to line 3 by applying `grid-column: 3`. Since I haven’t set the row property explicitly, and I haven’t placed other items, all subsequent items move one cell with the explicitly placed item. DOM order still matches visual order.
+In the following 3 by 2 grid with 6 items I’m moving the second item from line 2 to line 3 by applying `grid-column: 3`. Since I haven’t set the row property explicitly and I haven’t placed other items, all subsequent items move one cell with the explicitly placed item. DOM order still matches visual order.
 
-[ DEMO ]
+```css
+ul {
+  display: grid;
+  grid-template-columns: repeat(3, 200px);
+  grid-auto-rows: 100px;
+  grid-gap: 1.4rem;
+}
+
+li:nth-child(2) {
+  grid-column: 3;
+}
+```
+
+<ul class="a-grid-absolute">
+  <li><button>Item 1</button></li>
+  <li><button>Item 2</button></li>
+  <li><button>Item 3</button></li>
+  <li><button>Item 4</button></li>
+  <li><button>Item 5</button></li>
+  <li><button>Item 6</button></li>
+</ul>
 
 Now let’s see what happens if we add absolute positioning to the mix and position the item in the top left corner relative to its parent.
 
@@ -249,6 +271,7 @@ ul {
 
 li:nth-child(2) {
   grid-column: 3;
+
   position: absolute;
   left: 0;
   top: 0;
