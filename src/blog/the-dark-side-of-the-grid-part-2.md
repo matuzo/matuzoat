@@ -147,7 +147,9 @@ If visual order and DOM order don’t match, it can irritate and confuse users u
 
 ### Manipulating visual order
 
-When you’re applying any property that changes order you should especially pay attention to testing with a keyboard. This applies to all properties, not just to those associated with CSS Grid. 
+When you’re applying any property that changes order you should especially pay attention to testing with a keyboard. Use the <kbd>Tab</kbd> and <kbd>Shift></kbd> + <kbd>Tab</kbd> keys to test if your website is usable without a mouse.
+
+This applies to all properties, not just to those associated with CSS Grid.  
 However, in the next few paragraphs I’ll focus on manipulating order in grids.
 
 ### Explicit placement
@@ -166,6 +168,7 @@ You can place items explicitly by defining on which line they start or end. For 
   <div class="grid__item">Item 4</div>
 </div>
 ```
+
 The order in the DOM in this grid is <em>Item 1 - 2 - 3 - 4</em>.
 
 ```css
@@ -192,6 +195,7 @@ The order in the DOM in this grid is <em>Item 1 - 2 - 3 - 4</em>.
   grid-row: 1;
 }
 ```
+
 The order in the DOM is still <em>Item 1 - 2 - 3 - 4</em> but the visual order is now <em>Item 4 - 1 - 3 - 2</em>.
 
 Explicit placement might create a mismatch between DOM order and visual order.
@@ -214,6 +218,7 @@ Explicit placement might create a mismatch between DOM order and visual order.
 </div>
 
 ### Order
+
 You might already be familiar with the `order` property because it has been around since Flexbox. `order` can be set to any integer value to change the ordering of flex items. This also works with grid items.
 
 ```css
@@ -236,6 +241,7 @@ You might already be familiar with the `order` property because it has been arou
 [See the order property demo on CodePen](https://codepen.io/matuzo/pen/XooEXd) or read more about the [order property on MDN](https://developer.mozilla.org/en-US/docs/Web/CSS/order).
 
 ### Absolute positioning
+
 It’s possible to combine absolute positioning and explicit placement. I haven’t found a use case yet in any of my projects but it’s interesting how a positioned item behaves inside a grid.
 
 In the following 3 by 2 grid with 6 items I’m moving the second item from line 2 to line 3 by applying `grid-column: 3`. Since I haven’t set the row property explicitly and I haven’t placed other items, all subsequent items move one cell with the explicitly placed item. DOM order still matches visual order.
@@ -253,6 +259,7 @@ li:nth-child(2) {
   grid-column: 3;
 }
 ```
+
 <div class="js-a-focus-demo" data-button="Show tab order">
 <ul class="a-grid-absolute">
   <li><button>Item 1</button></li>
@@ -280,7 +287,7 @@ li:nth-child(2) {
 }
 ```
 
-Positioned grid items lie on top of other items just like any absolute positioned element. They don’t affect the position of other items, and they’re completely ignored during auto-placement.  
+Positioned grid items lie on top of other items just like any absolute positioned element. They don’t affect the position of other items, and they’re completely ignored during auto-placement.\
 This is where it gets interesting: Setting `left` and `top` to `0` doesn’t place them in the top left corner of their parent item (the `ul`) but in the cell they’re placed in. 
 
 <div class="js-a-focus-demo" data-button="Show tab order">
@@ -344,6 +351,7 @@ This can give your designs a nice touch but I can also annoy if it’s undesirab
   grid-auto-flow: dense;
 }
 ```
+
 <div class="js-a-focus-demo" data-button="Show tab order">
 <div class="a-grid-flow dense">
   <button>1</button>
@@ -358,7 +366,7 @@ This can give your designs a nice touch but I can also annoy if it’s undesirab
 </div>
 </div>
 
-This is a dream come true but the advantage of the default packing mode is that order stays intact which isn’t guaranteed with `grid-auto-flow: dense;`  in place.
+This is a dream come true but the advantage of the default packing mode is that order stays intact which isn’t guaranteed with `grid-auto-flow: dense;`.
 
 Play with the [auto-flow demo on CodePen](https://codepen.io/matuzo/pen/pONEzJ?editors=1100) or read more about [grid-auto-flow on MDN](https://developer.mozilla.org/en-US/docs/Web/CSS/grid-auto-flow).
 
@@ -367,6 +375,7 @@ Play with the [auto-flow demo on CodePen](https://codepen.io/matuzo/pen/pONEzJ?e
 <p>If you’re not sure what I mean by explicit and implicit, head over to CSS-Tricks and read about the <a href="https://css-tricks.com/difference-explicit-implicit-grids/" rel="noopener">difference between explicit and implicit grids</a>.</p></div>
 
 ### Areas
+
 Time to make a confession: I’m deeply in love with Grid Areas ❤️. I’ll share my intense feelings about this property in another article soon. Areas are awesome, but nobody is perfect and since this article deals with the dark side of things, let’s see what may go wrong.
 
 The grid-template-areas property does 2 things. 
@@ -445,8 +454,9 @@ This is so simple, so beautiful, yet so dangerous. It looks right, but the order
 </div>
 
 ## Recap
-None of these features is bad but they may affect an important part of the user experience negatively. If you’re changing visual order, test your components with the keyboard by pressing <kbd>Tab</kbd> or <kbd>Shift + Tab</kbd> for the opposite direction.  
-Make sure that visual order is comprehensible and that it matches DOM order as correctly as in any way possible. Also, test on different devices and screen sizes because [many screen reader users use a keyboard with their mobile device](https://webaim.org/projects/screenreadersurvey7/#mobilekeyboard).
 
-Thanks for reading ❤️.  
+None of these features is bad but they may affect an important part of the user experience negatively. If you’re changing visual order, test your components with the keyboard by pressing <kbd>Tab</kbd> or <kbd>Shift + Tab</kbd> for the opposite direction.\
+Make sure that visual order is comprehensible and that it matches DOM order as good as in any way possible. Also, test on different devices and screen sizes because [people also use keyboards on mobile devices](https://webaim.org/projects/screenreadersurvey7/#mobilekeyboard).
+
+Thanks for reading ❤️.\
 The last part of this series "Cross Browser Support" will be published soon.
