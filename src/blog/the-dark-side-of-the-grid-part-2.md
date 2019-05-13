@@ -282,7 +282,8 @@ li:nth-child(2) {
 Positioned grid items lie on top of other items just like any absolute positioned element. They don’t affect the position of other items, and they’re completely ignored during auto-placement.  
 This is where it gets interesting: Setting `left` and `top` to `0` doesn’t place them in the top left corner of their parent item (the `ul`) but in the cell they’re placed in. 
 
-<ul class="a-grid-absolute js-a-focus-demo" data-button="Show tab order">
+<div class="js-a-focus-demo" data-button="Show tab order">
+<ul class="a-grid-absolute">
   <li><button>Item 1</button></li>
   <li class="positioned"><button>Item 2</button></li>
   <li><button>Item 3</button></li>
@@ -290,6 +291,7 @@ This is where it gets interesting: Setting `left` and `top` to `0` doesn’t pla
   <li><button>Item 5</button></li>
   <li><button>Item 6</button></li>
 </ul>
+</div>
 
 Again, this may cause a disconnect between content and presentation.
 
