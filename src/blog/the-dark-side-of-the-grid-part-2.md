@@ -169,9 +169,13 @@ You can place items explicitly by defining on which line they start or end. For 
 
 ```css
 .grid {
+  /* Draw a grid...*/
   display: grid;
+  /* with 2 200px columns. */
   grid-template-columns: repeat(2, 200px);
+  /* Make all rows 100px high... */
   grid-auto-rows: 100px;
+  /* and add 15px space between cells. */
   grid-gap: 15px;
 }
 
