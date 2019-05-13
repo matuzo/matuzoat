@@ -430,17 +430,17 @@ This is so simple, so beautiful, yet so dangerous. It looks right, but the order
 
 <div class="js-a-focus-demo" data-button="Show tab order">
 <div class="a-grid-areas">
-<footer>
+<div class="footer">
   <button>Footer</button>
-</footer>    
+</div>    
 
-<header>
+<div class="header">
   <button>Header</button>
-</header>    
+</div>    
 
-<main>
+<div class="main">
   <button>Main</button>
-</main>
+</div>
 </div>
 </div>
 
