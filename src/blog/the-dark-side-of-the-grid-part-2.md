@@ -249,6 +249,7 @@ ul {
 }
 
 li:nth-child(2) {
+  /* Move the second item to the third vertical line */
   grid-column: 3;
 }
 ```
@@ -278,9 +279,19 @@ li:nth-child(2) {
 }
 ```
 
-Positioned grid items lie on top of other items just like any absolute positioned element. Setting `left` and `top` to `0` doesn’t place them in the top left corner of their parent item – and this is where it gets interesting – but in the cell they’re placed in. They don’t affect the position of other items, and they’re completely ignored during auto-placement. Again, this may cause a disconnect between content and presentation.
+Positioned grid items lie on top of other items just like any absolute positioned element. They don’t affect the position of other items, and they’re completely ignored during auto-placement.  
+This is where it gets interesting: Setting `left` and `top` to `0` doesn’t place them in the top left corner of their parent item (the `ul`) but in the cell they’re placed in. 
 
-[ DEMO ]
+<ul class="a-grid-absolute">
+  <li><button>Item 1</button></li>
+  <li class="positioned"><button>Item 2</button></li>
+  <li><button>Item 3</button></li>
+  <li><button>Item 4</button></li>
+  <li><button>Item 5</button></li>
+  <li><button>Item 6</button></li>
+</ul>
+
+Again, this may cause a disconnect between content and presentation.
 
 ### Auto flow
 
