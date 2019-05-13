@@ -445,4 +445,7 @@ This is so simple, so beautiful, yet so dangerous. It looks right, but the order
 </div>
 
 ## Recap
-None of these features is bad but they may affect an important part of the user experience negatively. If you’re changing visual order, test your components with the keyboard by pressing Tab or Shift + Tab for the opposite direction. Make sure that visual order is comprehensible and that it matches DOM order as correctly as in any way possible. Also, test on different devices and screen sizes because [many screen reader users use a keyboard with their mobile device](https://webaim.org/projects/screenreadersurvey7/#mobilekeyboard).
+None of these features is bad but they may affect an important part of the user experience negatively. If you’re changing visual order, test your components with the keyboard by pressing <kbd>Tab</kbd> or <kbd>Shift + Tab</kbd> for the opposite direction.  
+Make sure that visual order is comprehensible and that it matches DOM order as correctly as in any way possible. Also, test on different devices and screen sizes because [many screen reader users use a keyboard with their mobile device](https://webaim.org/projects/screenreadersurvey7/#mobilekeyboard).
+
+Thanks for reading ❤️. I'll publish the last part of this series "Cross Browser Support" in the next couple of weeks.
