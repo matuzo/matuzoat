@@ -253,7 +253,7 @@ li:nth-child(2) {
   grid-column: 3;
 }
 ```
-
+<div class="js-a-focus-demo" data-button="Show tab order">
 <ul class="a-grid-absolute">
   <li><button>Item 1</button></li>
   <li><button>Item 2</button></li>
@@ -262,6 +262,7 @@ li:nth-child(2) {
   <li><button>Item 5</button></li>
   <li><button>Item 6</button></li>
 </ul>
+</div>
 
 Now let’s see what happens if we add absolute positioning to the mix and position the item in the top left corner relative to its parent.
 
@@ -317,6 +318,7 @@ Placing differently sized items explicitly may have unexpected side effects with
 .item:nth-child(9) { grid-row: span 2; }
 ```
 
+<div class="js-a-focus-demo" data-button="Show tab order">
 <div class="a-grid-flow">
   <button>1</button>
   <button>2</button>
@@ -327,6 +329,7 @@ Placing differently sized items explicitly may have unexpected side effects with
   <button>7</button>
   <button>8</button>
   <button>9</button>
+</div>
 </div>
 
 This can give your designs a nice touch but I can also annoy if it’s undesirable. Grids default auto-placement algorithm can be changed by switching from a “sparse” to a “dense” packing mode using the grid-auto-flow property.
@@ -341,7 +344,7 @@ This can give your designs a nice touch but I can also annoy if it’s undesirab
   grid-auto-flow: dense;
 }
 ```
-
+<div class="js-a-focus-demo" data-button="Show tab order">
 <div class="a-grid-flow dense">
   <button>1</button>
   <button>2</button>
@@ -352,6 +355,7 @@ This can give your designs a nice touch but I can also annoy if it’s undesirab
   <button>7</button>
   <button>8</button>
   <button>9</button>
+</div>
 </div>
 
 This is a dream come true but the advantage of the default packing mode is that order stays intact which isn’t guaranteed with `grid-auto-flow: dense;`  in place.
