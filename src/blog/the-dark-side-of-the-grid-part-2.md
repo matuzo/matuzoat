@@ -236,7 +236,7 @@ You might already be familiar with the `order` property because it has been arou
 [See the order property demo on CodePen](https://codepen.io/matuzo/pen/XooEXd) or read more about the [order property on MDN](https://developer.mozilla.org/en-US/docs/Web/CSS/order).
 
 ### Absolute positioning
-It’s possible to combine absolute positioning and explicit placement. I haven’t found a use case yet in any of my projects but I believe it’s interesting how an positioned item behaves in a grid.
+It’s possible to combine absolute positioning and explicit placement. I haven’t found a use case yet in any of my projects but it’s interesting how a positioned item behaves inside a grid.
 
 In the following 3 by 2 grid with 6 items I’m moving the second item from line 2 to line 3 by applying `grid-column: 3`. Since I haven’t set the row property explicitly and I haven’t placed other items, all subsequent items move one cell with the explicitly placed item. DOM order still matches visual order.
 
