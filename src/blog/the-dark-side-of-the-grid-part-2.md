@@ -310,8 +310,8 @@ Placing differently sized items explicitly may have unexpected side effects with
 .item:nth-child(3) { grid-row-end: span 3; }
 .item:nth-child(4) { grid-column: span 2; }
 .item:nth-child(5) { grid-row: span 2; }
-.item:nth-child(7) { grid-column: span 2; }
-.item:nth-child(8) { grid-column: span 3; }
+.item:nth-child(7) { grid-column: 2 / span 2; }
+.item:nth-child(8) { grid-column: 2 / span 3; }
 .item:nth-child(9) { grid-row: span 2; }
 ```
 
@@ -339,6 +339,18 @@ This can give your designs a nice touch but I can also annoy if it’s undesirab
   grid-auto-flow: dense;
 }
 ```
+
+<div class="a-grid-flow dense">
+  <button>1</button>
+  <button>2</button>
+  <button>3</button>
+  <button>4</button>
+  <button>5</button>
+  <button>6</button>
+  <button>7</button>
+  <button>8</button>
+  <button>9</button>
+</div>
 
 This is a dream come true but the advantage of the default packing mode is that order stays intact which isn’t guaranteed with `grid-auto-flow: dense;`  in place.
 
