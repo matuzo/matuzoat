@@ -305,6 +305,7 @@ Placing differently sized items explicitly may have unexpected side effects with
   grid-gap: 20px;
 }
 
+/* You can use the span keyword to make items span multiple columns or rows. */
 .item:nth-child(1) { grid-row-end: span 3; }
 .item:nth-child(3) { grid-row-end: span 3; }
 .item:nth-child(4) { grid-column: span 2; }
@@ -314,7 +315,17 @@ Placing differently sized items explicitly may have unexpected side effects with
 .item:nth-child(9) { grid-row: span 2; }
 ```
 
-[DEMO]
+<div class="a-grid-flow">
+  <button>1</button>
+  <button>2</button>
+  <button>3</button>
+  <button>4</button>
+  <button>5</button>
+  <button>6</button>
+  <button>7</button>
+  <button>8</button>
+  <button>9</button>
+</div>
 
 This can give your designs a nice touch but I can also annoy if it’s undesirable. Grids default auto-placement algorithm can be changed by switching from a “sparse” to a “dense” packing mode using the grid-auto-flow property.
 
