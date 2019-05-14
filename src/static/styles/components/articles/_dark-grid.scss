@@ -381,18 +381,27 @@ $dark-grid-animation-duration: 1s;
   .a-grid-order {
     display: flex;
     flex-wrap: wrap;
-    font-size: 2.4rem;
+    font-size: 2rem;
     list-style: none;
     margin: 1rem 0 4rem;
     padding: 0;
     line-height: 1.2;
+
+    @include mq(m) {
+      font-size: 2.4rem;
+    }
     
     &__item {
       border-radius: 2px;
       text-align: center;
       position: relative;
-      margin-right: 2rem;
-      min-width: 9.8rem;
+      margin-right: 1.4rem;
+      min-width: 9rem;
+
+      @include mq(m) {
+        min-width: 9.8rem;
+        margin-right: 2rem;
+      }
       
       &::before {
         color: #fff;
@@ -670,6 +679,31 @@ $dark-grid-animation-duration: 1s;
                          "footer";
     grid-gap: 1.4rem;
     margin: 2rem 0 0;
+    counter-reset: order;
+
+    button {
+      counter-increment: order;
+      position: relative;
+
+      &::before {
+        content: counter(order);
+        font-size: 2rem;
+        position: absolute;
+        left: 0;
+        top: 0;
+        padding: 0.5rem;
+        background: #fff;
+        color: #000;
+        min-width: 2rem;
+        text-align: center;
+        display: none;
+      }
+
+      &:focus::before,
+      &.focus::before {
+        display: block;
+      }
+    }
 
     .footer {
       grid-area: footer;
