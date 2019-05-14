@@ -8,13 +8,13 @@ intro: >-
   This is part 2 of 3 in a series of articles about CSS Grid layout and
   accessibility.
 teaser: >-
-  CSS Grid layout is powerful and flexible, it's great for our development
+  CSS Grid layout is powerful and flexible. It's great for our development
   experience, but it may come at the cost of user experience and accessibility
   if we don’t use it responsibly.
 
 
   This series of articles will give you an overview of potential implementation
-  pitfalls, or in other words, the dark side of the grid.
+  pitfalls; or, in other words, the dark side of the grid.
 tags:
   - css
   - grid
@@ -51,7 +51,7 @@ archive: false
 
 ## Changing Visual Order
 
-In [part 1](/blog/the-dark-side-of-the-grid/) I addressed the issue with flattening document structures. Before we talk about the next topic, changing visual order, let me enlighten you with more Pink Floyd wisdom.
+In [part 1](/blog/the-dark-side-of-the-grid/), I addressed the issue with flattening document structures. Before we talk about changing visual order, let me enlighten you with more Pink Floyd wisdom.
 
 <div class="fact lazy u-full-width">
 <div class="fact__inner">
@@ -147,10 +147,10 @@ If visual order and DOM order don’t match, it can irritate and confuse users u
 
 ### Manipulating visual order
 
-When you’re applying any property that changes order you should especially pay attention to testing with a keyboard. Use the <kbd>Tab</kbd> and <kbd>Shift></kbd> + <kbd>Tab</kbd> keys to test if your website is usable without a mouse.
+When you’re applying any property that changes order, you should especially pay attention to testing with a keyboard. Use the <kbd>Tab</kbd> and <kbd>Shift</kbd> + <kbd>Tab</kbd> keys to test if your website is usable without a mouse.
 
 This applies to all properties, not just to those associated with CSS Grid.  
-However, in the next few paragraphs I’ll focus on manipulating order in grids.
+However, I’ll focus on manipulating order in grids.
 
 ### Explicit placement
 
@@ -158,7 +158,7 @@ One of the most exciting features in Grid is the ability to place grid items any
 
 ![Visualization of the lines in a 3 by 2 grid](https://res.cloudinary.com/dp3mem7or/image/upload/v1557599128/articles/dark-grid/grid-explicit.png)
 
-You can place items explicitly by defining on which line they start or end. For vertical lines there’s `grid-column-start`, `grid-column-end`, or the shorthand `grid-column`. For horizontal lines `grid-row-start`, `grid-row-end`, and `grid-row`. Allowed values are a positive or negative line number or the [span keyword](https://developer.mozilla.org/en-US/docs/Web/CSS/grid-column#Values).
+You can place items explicitly by defining on which line they start or end. For vertical lines, there’s `grid-column-start`, `grid-column-end`, or the shorthand `grid-column`. For horizontal lines, `grid-row-start`, `grid-row-end`, and `grid-row`. These rules allow a line number (either positive or negative) or the [span keyword](https://developer.mozilla.org/en-US/docs/Web/CSS/grid-column#Values).
 
 ```html
 <div class="grid">
@@ -339,7 +339,7 @@ Placing differently sized items explicitly may have unexpected side effects with
 </div>
 </div>
 
-This can give your designs a nice touch but I can also annoy if it’s undesirable. Grids default auto-placement algorithm can be changed by switching from a “sparse” to a “dense” packing mode using the grid-auto-flow property.
+This can give your designs a nice touch, but it can also annoy. Grid's default auto-placement algorithm can be changed by switching from a “sparse” to a “dense” packing mode using the grid-auto-flow property.
 
 ```css
 .grid {
@@ -411,7 +411,7 @@ Let’s take this example where the source order is wrong.
 </body>
 ```
 
-The source order of these elements is <em>footer - header - main</em> where it should be <em>header - main - footer</em>. The correct approach to fixing this is to change the order in HTML but with Areas we don’t have to.
+The source order of these elements is <em>footer - header - main</em>, where it should be <em>header - main - footer</em>. The correct approach to fixing this is to change the order in HTML but with Areas we don’t have to.
 All it takes is to define the correct layout in CSS and then place the elements in the respective area using the `grid-area` property.
 
 ```css
@@ -455,8 +455,8 @@ This is so simple, so beautiful, yet so dangerous. It looks right, but the order
 
 ## Recap
 
-None of these features is bad but they may affect an important part of the user experience negatively. If you’re changing visual order, test your components with the keyboard by pressing <kbd>Tab</kbd> or <kbd>Shift + Tab</kbd> for the opposite direction.\
-Make sure that visual order is comprehensible and that it matches DOM order as good as in any way possible. Also, test on different devices and screen sizes because [people also use keyboards on mobile devices](https://webaim.org/projects/screenreadersurvey7/#mobilekeyboard).
+None of these features are bad, but just they may affect an important part of the user experience negatively. If you’re changing visual order, test your components with the keyboard by pressing <kbd>Tab</kbd> or <kbd>Shift + Tab</kbd> for the opposite direction.\
+Make sure that visual order is comprehensible and that it matches DOM order as good as in any way possible. Also, test on different devices and screen sizes. [People also use keyboards on mobile devices](https://webaim.org/projects/screenreadersurvey7/#mobilekeyboard).
 
 Thanks for reading ❤️.\
-The last part of this series "Cross Browser Support" will be published soon.
+The last part of this series, "Cross Browser Support", will be published soon.
