@@ -461,7 +461,7 @@ This is so simple, so beautiful, yet so dangerous. It looks right, but the order
 
 None of these features are bad, but just they may affect an important part of the user experience negatively. If you’re changing visual order, be aware of the affets it may have.
 
-* Test your components with the keyboard by pressing <kbd>Tab</kbd> or <kbd>Shift + Tab</kbd> for the opposite direction.\
+* Test your components with the keyboard by pressing <kbd>Tab</kbd> or <kbd>Shift + Tab</kbd> for the opposite direction.
 * Make sure that visual order is comprehensible and that it matches DOM order as good as in any way possible. 
 * Test on different devices and screen sizes. [People also use keyboards on mobile devices](https://webaim.org/projects/screenreadersurvey7/#mobilekeyboard).
 
