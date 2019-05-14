@@ -4,6 +4,7 @@ metadescription: >-
   CSS Grid Layout is one of the most exciting new CSS specifications but it also
   creates new dangers regarding accessibility and UX.
 date: 2019-05-11T15:44:43.040Z
+image: articles/darksidesm2.jpg
 intro: >-
   This is part 2 of 3 in a series of articles about CSS Grid layout and
   accessibility.
