@@ -221,6 +221,78 @@ Explicit placement might create a mismatch between DOM order and visual order.
   </ul>
 </div>
 
+
+### Auto flow
+
+Explicitly placing items that have the same size is one thing, but placing differently sized items may have unexpected side effects with Grids default auto-placement algorithm. The combination of explicit and implicit placement sometimes results in unwanted gaps between grid items. This is because of the default placement algorithm only ever moving forward when placing items and never backtracking to fill holes.
+
+```css
+.grid {
+  display: grid;
+  grid-template-columns: repeat(3, 100px);
+  grid-auto-rows: 40px;
+  grid-gap: 20px;
+}
+
+/* You can use the span keyword to make items span multiple columns or rows. */
+.item:nth-child(1) { grid-row-end: span 3; }
+.item:nth-child(3) { grid-row-end: span 3; }
+.item:nth-child(4) { grid-column: span 2; }
+.item:nth-child(5) { grid-row: span 2; }
+.item:nth-child(7) { grid-column: 2 / span 2; }
+.item:nth-child(8) { grid-column: 2 / span 3; }
+.item:nth-child(9) { grid-row: span 2; }
+```
+
+<div class="js-a-focus-demo" data-button="Show tab order">
+<div class="a-grid-flow">
+  <button>1</button>
+  <button>2</button>
+  <button>3</button>
+  <button>4</button>
+  <button>5</button>
+  <button>6</button>
+  <button>7</button>
+  <button>8</button>
+  <button>9</button>
+</div>
+</div>
+
+This can give your designs a nice touch, but it can also annoy. Grid's default auto-placement algorithm can be changed by switching from a “sparse” to a “dense” packing mode using the `grid-auto-flow` property.
+
+```css
+.grid {
+  display: grid;
+  grid-template-columns: repeat(3, 200px);
+  grid-auto-rows: 70px;
+  grid-gap: 20px;
+
+  grid-auto-flow: dense;
+}
+```
+
+<div class="js-a-focus-demo" data-button="Show tab order">
+<div class="a-grid-flow dense">
+  <button>1</button>
+  <button>2</button>
+  <button>3</button>
+  <button>4</button>
+  <button>5</button>
+  <button>6</button>
+  <button>7</button>
+  <button>8</button>
+  <button>9</button>
+</div>
+</div>
+
+This is a dream come true but the advantage of the default packing mode is that order stays intact which isn’t guaranteed with `grid-auto-flow: dense;`.
+
+Play with the [auto-flow demo on CodePen](https://codepen.io/matuzo/pen/pONEzJ?editors=1100) or read more about [grid-auto-flow on MDN](https://developer.mozilla.org/en-US/docs/Web/CSS/grid-auto-flow).
+
+<div class="info">
+<h4><span class="info__label">Aaahhmmm</span><span class="info__heading">Implicit, explicit, whatisit?</code>?</a></h4>
+<p>If you’re not sure what I mean by explicit and implicit, head over to CSS-Tricks and read about the <a href="https://css-tricks.com/difference-explicit-implicit-grids/" rel="noopener">difference between explicit and implicit grids</a>.</p></div>
+
 ### Order
 
 You might already be familiar with the `order` property because it has been around since Flexbox. `order` can be set to any integer value to change the ordering of flex items. This also works with grid items.
@@ -306,77 +378,6 @@ This is where it gets interesting: setting `left` and `top` to `0` doesn’t pla
 </div>
 
 Again, this may cause a disconnect between content and presentation.
-
-### Auto flow
-
-Placing differently sized items explicitly may have unexpected side effects with Grids default auto-placement algorithm. The combination of explicit and implicit placement sometimes results in unwanted gaps between grid items. This is because of the default placement algorithm only ever moving forward when placing items and never backtracking to fill holes.
-
-```css
-.grid {
-  display: grid;
-  grid-template-columns: repeat(3, 100px);
-  grid-auto-rows: 40px;
-  grid-gap: 20px;
-}
-
-/* You can use the span keyword to make items span multiple columns or rows. */
-.item:nth-child(1) { grid-row-end: span 3; }
-.item:nth-child(3) { grid-row-end: span 3; }
-.item:nth-child(4) { grid-column: span 2; }
-.item:nth-child(5) { grid-row: span 2; }
-.item:nth-child(7) { grid-column: 2 / span 2; }
-.item:nth-child(8) { grid-column: 2 / span 3; }
-.item:nth-child(9) { grid-row: span 2; }
-```
-
-<div class="js-a-focus-demo" data-button="Show tab order">
-<div class="a-grid-flow">
-  <button>1</button>
-  <button>2</button>
-  <button>3</button>
-  <button>4</button>
-  <button>5</button>
-  <button>6</button>
-  <button>7</button>
-  <button>8</button>
-  <button>9</button>
-</div>
-</div>
-
-This can give your designs a nice touch, but it can also annoy. Grid's default auto-placement algorithm can be changed by switching from a “sparse” to a “dense” packing mode using the `grid-auto-flow` property.
-
-```css
-.grid {
-  display: grid;
-  grid-template-columns: repeat(3, 200px);
-  grid-auto-rows: 70px;
-  grid-gap: 20px;
-
-  grid-auto-flow: dense;
-}
-```
-
-<div class="js-a-focus-demo" data-button="Show tab order">
-<div class="a-grid-flow dense">
-  <button>1</button>
-  <button>2</button>
-  <button>3</button>
-  <button>4</button>
-  <button>5</button>
-  <button>6</button>
-  <button>7</button>
-  <button>8</button>
-  <button>9</button>
-</div>
-</div>
-
-This is a dream come true but the advantage of the default packing mode is that order stays intact which isn’t guaranteed with `grid-auto-flow: dense;`.
-
-Play with the [auto-flow demo on CodePen](https://codepen.io/matuzo/pen/pONEzJ?editors=1100) or read more about [grid-auto-flow on MDN](https://developer.mozilla.org/en-US/docs/Web/CSS/grid-auto-flow).
-
-<div class="info">
-<h4><span class="info__label">Aaahhmmm</span><span class="info__heading">Implicit, explicit, whatisit?</code>?</a></h4>
-<p>If you’re not sure what I mean by explicit and implicit, head over to CSS-Tricks and read about the <a href="https://css-tricks.com/difference-explicit-implicit-grids/" rel="noopener">difference between explicit and implicit grids</a>.</p></div>
 
 ### Areas
 
