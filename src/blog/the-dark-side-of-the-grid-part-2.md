@@ -482,5 +482,6 @@ None of these features are bad, but just they may affect an important part of th
   <figcaption>Accessibility Insights tracks all the tab stops you make when you press the <kbd>tab</kbd> key.</figcaption>
 </figure>
 
-Thanks for reading ❤️.\
+Thanks for reading. ❤️
+
 The last part of this series, "Cross Browser Support", will be published soon.
