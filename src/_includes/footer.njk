@@ -8,10 +8,10 @@
     </ul>
   </nav>
 
-  {% set text = "Menu" %}
-  {% set size = "small" %}
-  {% set style = "highlight" %}
-  {% set link = "#top" %}
-  {% set classes = "js-scroll-top" %}
-  {% include 'components/button.njk' %}
+  <a href="#top" class="btn btn--small btn--highlight" class="js-scroll-top">
+    <span class="btn__inner">
+      <span class="visually-hidden">Back to</span> top
+    </span>
+  </a>
+
 </footer>
