@@ -22,7 +22,7 @@ tags:
   - a11y
 publication: Matuzo
 css: dark-grid
-draft: true
+draft: false
 archive: false
 ---
 <div class="demo u-full-width js-demo"> 
