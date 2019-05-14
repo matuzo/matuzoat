@@ -199,9 +199,9 @@ for (let i = 0; i < demos.length; i++) {
     playpause.addEventListener('click', function() {
       if (animating) {
         clearInterval(focusInterval)
-        playpause.textContent = buttonTextInactive;
+        playpause_inner.textContent = buttonTextInactive;
       } else {
-        links[activeLink[i]].focus();
+        links[activeLink[i]].classList.add('focus');
 
         focusInterval = window.setInterval(focusNext, 700);
         setButtonText(buttonTextActive);
@@ -210,29 +210,20 @@ for (let i = 0; i < demos.length; i++) {
       animating = !animating;
     });
 
-    for (var j = 0; j < links.length; j++) {
-      links[j].addEventListener('focus', function(e) {
-        if (e.target.classList.contains('a-grid-order__link--mismatch')) {
-          e.target.classList.add('a-grid-order__link--dangle')
-        }
-      })
-    }
-
     function setButtonText(text) {
       playpause_inner.textContent = text;
     }
 
     function focusNext() {  
       if (activeLink[i] < links.length - 1) {
-          activeLink[i]++;
-        } else {
-          activeLink[i] = 0;
-          clearInterval(focusInterval);
-          setButtonText(buttonTextInactive);
-          animating = false;
-        }
+        activeLink[i]++;
+      } else {
+        activeLink[i] = 0;
+      }
 
-      links[activeLink[i]].focus();
+      demo.querySelector('.focus').classList.remove('focus');
+
+      links[activeLink[i]].classList.add('focus');
     }
   })(i)
 }
