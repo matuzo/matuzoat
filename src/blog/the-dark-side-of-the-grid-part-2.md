@@ -104,7 +104,8 @@ No matter where we place items with CSS, keyboard users will still encounter ele
       </a>
     </li>
   </ul>
-  
+</div>
+<div class="js-a-focus-demo" data-button="Show tab order"> 
   <h4>Visual order doesn’t match DOM order</h4>
   <ul class="a-grid-order">
     <li class="a-grid-order__item" data-number="1" style="order: 1">
