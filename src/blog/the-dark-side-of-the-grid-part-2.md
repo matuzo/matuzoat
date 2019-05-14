@@ -13,7 +13,7 @@ teaser: >-
   if we don’t use it responsibly.
 
 
-  This series of articles will give you an overview of potential implementation
+  This article series gives you an overview of potential implementation
   pitfalls; or, in other words, the dark side of the grid.
 tags:
   - css
@@ -56,7 +56,7 @@ In [part 1](/blog/the-dark-side-of-the-grid/), I addressed the issue with flatte
 <div class="fact lazy u-full-width">
 <div class="fact__inner">
 <h2 id="floyd-fact-1" class="fact__heading">Pink Floyd Fun Fact #2</h2>
-<p>In 1975 Pink Floyd helped to finance the movie Monty Python and the Holy Grail by the comedy group Monty Python. Led Zeppelin and Genesis were also amongst the investors.</p>
+<p>In 1975, Pink Floyd helped to finance the movie Monty Python and the Holy Grail by the comedy group Monty Python. Led Zeppelin and Genesis were also amongst the investors.</p>
 </div>
 </div>
 
@@ -65,7 +65,10 @@ In [part 1](/blog/the-dark-side-of-the-grid/), I addressed the issue with flatte
 The CSS Grid Layout specification provides us with many ways of changing visual order. This flexibility is a nice thing to have but bad for accessibility if we don’t use it consciously.
 Before we look at what’s possible with Grid, let’s briefly talk about visual order.
 
-Both tab order and the order in which screen readers read content follow DOM order. Changing visual order with CSS has no effect on DOM order. No matter where we place items with CSS, keyboard users will still encounter elements in the order in which they appear in the HTML document.
+* Both tab order and the order in which screen readers read content follow DOM order.
+* Changing visual order with CSS has no effect on DOM order. 
+
+No matter where we place items with CSS, keyboard users will still encounter elements in the order in which they appear in the HTML document.
 
 <div class="js-a-focus-demo" data-button="Show tab order">
   <h4>Visual order matches DOM order</h4>
@@ -139,7 +142,7 @@ Both tab order and the order in which screen readers read content follow DOM ord
 
 ### Disconnect between content and presentation
 
-If visual order and DOM order don’t match, it can irritate and confuse users up to a point where the experience is so bad that the site is unusable.
+If the visual order and the DOM order don’t match, it can irritate and confuse users up to a point where the experience is so bad that the site is unusable.
 
 1. Visual order concerns keyboard users because they may have trouble predicting where focus will go next. 
 2. It may irritate [users of screen magnifiers](https://axesslab.com/make-site-accessible-screen-magnifiers/) if the enlarged portion of the screen skips around a lot.
@@ -288,7 +291,7 @@ li:nth-child(2) {
 ```
 
 Positioned grid items lie on top of other items just like any absolute positioned element. They don’t affect the position of other items, and they’re completely ignored during auto-placement.\
-This is where it gets interesting: Setting `left` and `top` to `0` doesn’t place them in the top left corner of their parent item (the `ul`) but in the cell they’re placed in. 
+This is where it gets interesting: setting `left` and `top` to `0` doesn’t place them in the top left corner of their parent item (the `ul`) but in the cell they’re placed in. 
 
 <div class="js-a-focus-demo" data-button="Show tab order">
 <ul class="a-grid-absolute">
@@ -455,8 +458,11 @@ This is so simple, so beautiful, yet so dangerous. It looks right, but the order
 
 ## Recap
 
-None of these features are bad, but just they may affect an important part of the user experience negatively. If you’re changing visual order, test your components with the keyboard by pressing <kbd>Tab</kbd> or <kbd>Shift + Tab</kbd> for the opposite direction.\
-Make sure that visual order is comprehensible and that it matches DOM order as good as in any way possible. Also, test on different devices and screen sizes. [People also use keyboards on mobile devices](https://webaim.org/projects/screenreadersurvey7/#mobilekeyboard).
+None of these features are bad, but just they may affect an important part of the user experience negatively. If you’re changing visual order, be aware of the affets it may have.
+
+* Test your components with the keyboard by pressing <kbd>Tab</kbd> or <kbd>Shift + Tab</kbd> for the opposite direction.\
+* Make sure that visual order is comprehensible and that it matches DOM order as good as in any way possible. 
+* Test on different devices and screen sizes. [People also use keyboards on mobile devices](https://webaim.org/projects/screenreadersurvey7/#mobilekeyboard).
 
 Thanks for reading ❤️.\
 The last part of this series, "Cross Browser Support", will be published soon.
