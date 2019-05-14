@@ -65,8 +65,8 @@ In [part 1](/blog/the-dark-side-of-the-grid/), I addressed the issue with flatte
 The CSS Grid Layout specification provides us with many ways of changing visual order. This flexibility is a nice thing to have but bad for accessibility if we don’t use it consciously.
 Before we look at what’s possible with Grid, let’s briefly talk about visual order.
 
-* Both tab order and the order in which screen readers read content follow DOM order.
-* Changing visual order with CSS has no effect on DOM order. 
+1. Both tab order and the order in which screen readers read content follow DOM order.
+2. Changing visual order with CSS has no effect on DOM order. 
 
 No matter where we place items with CSS, keyboard users will still encounter elements in the order in which they appear in the HTML document.
 
