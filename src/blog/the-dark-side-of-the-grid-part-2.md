@@ -343,7 +343,7 @@ Placing differently sized items explicitly may have unexpected side effects with
 </div>
 </div>
 
-This can give your designs a nice touch, but it can also annoy. Grid's default auto-placement algorithm can be changed by switching from a “sparse” to a “dense” packing mode using the grid-auto-flow property.
+This can give your designs a nice touch, but it can also annoy. Grid's default auto-placement algorithm can be changed by switching from a “sparse” to a “dense” packing mode using the `grid-auto-flow` property.
 
 ```css
 .grid {
@@ -382,7 +382,7 @@ Play with the [auto-flow demo on CodePen](https://codepen.io/matuzo/pen/pONEzJ?e
 
 Time to make a confession: I’m deeply in love with Grid Areas ❤️. I’ll share my intense feelings about this property in another article soon. Areas are awesome, but nobody is perfect and since this article deals with the dark side of things, let’s see what may go wrong.
 
-The grid-template-areas property does 2 things. 
+The `grid-template-areas` property does 2 things. 
 First, it describes layouts in CSS visually. If you have a 2-column layout with a header, content, sidebar and a footer, this is what it may look like in CSS.
 
 ```css
@@ -395,7 +395,7 @@ First, it describes layouts in CSS visually. If you have a 2-column layout with 
 }
 ```
 
-Second, it defines named grid areas where any grid item may be placed inside, and when I say any, I mean any.
+Second, it defines named grid areas where any grid item may be placed inside.
 
 Let’s take this example where the source order is wrong.
 
@@ -421,20 +421,24 @@ All it takes is to define the correct layout in CSS and then place the elements 
 ```css
 body {
   display: grid;
+  /* Three single column, single row areas */
   grid-template-areas: "header"
                        "content"
                        "footer";
 }
 
 footer {
+  /* place the footer in the third row/area */
   grid-area: footer;
 }
 
 header {
+  /* place the header in the first row/area */
   grid-area: header;
 }
 
 main {
+ /* place the main element in the second row/area */
   grid-area: content;
 }
 ```
