@@ -464,6 +464,17 @@ None of these features are bad, but just they may affect an important part of th
 * Test your components with the keyboard by pressing <kbd>Tab</kbd> or <kbd>Shift + Tab</kbd> for the opposite direction.
 * Make sure that visual order is comprehensible and that it matches DOM order as good as in any way possible. 
 * Test on different devices and screen sizes. [People also use keyboards on mobile devices](https://webaim.org/projects/screenreadersurvey7/#mobilekeyboard).
+* You can use a tool Like [Accessibility Insights](https://chrome.google.com/webstore/detail/accessibility-insights-fo/pbjjkligggfmakdaogkfomddhfmpjeni?hl=en) to visualize and better understand the tab order of your web pages.
+
+<figure class="figure">
+  <div class="content__video-wrapper">
+    <div class="video-wrapper">
+      <iframe width="560" height="315" src="https://www.youtube.com/embed/x0OF9-4ABDQ?rel=0" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen title="iframe title attribute demo"></iframe>
+    </div>
+  </div>
+
+  <figcaption>Accessibility Insights tracks all the tab stops you make when you press the <kbd>tab</kbd> key.</figcaption>
+</figure>
 
 Thanks for reading ❤️.\
 The last part of this series, "Cross Browser Support", will be published soon.
