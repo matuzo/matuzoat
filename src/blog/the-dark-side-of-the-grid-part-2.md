@@ -485,3 +485,5 @@ None of these features are bad, but just they may affect an important part of th
 Thanks for reading. ❤️
 
 The last part of this series, "Cross Browser Support", will be published soon.
+
+PS: Thanks to [Juho](https://twitter.com/bebraw) and [E.J.](https://twitter.com/codeability) for proofreading.
