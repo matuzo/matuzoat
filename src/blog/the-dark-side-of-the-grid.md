@@ -45,8 +45,8 @@ This series of articles will give you an overview of potential implementation pi
 2. [Name and theme of this article](#name-and-theme-of-this-article) (in this article)
 3. [Pink Floyd Fun Fact 1](#floyd-fact-1) (in this article)
 4. [Compromising on Semantics](#compromising-on-semantics) (in this article)
-5. [Pink Floyd Fun Fact 2](blog/the-dark-side-of-the-grid-part-2#floyd-fact-1) (in part 2)
-6. [Changing Visual Order](blog/the-dark-side-of-the-grid-part-2#visual-order) (in part 2)
+5. [Pink Floyd Fun Fact 2](/blog/the-dark-side-of-the-grid-part-2#floyd-fact-1) (in part 2)
+6. [Changing Visual Order](/blog/the-dark-side-of-the-grid-part-2#visual-order) (in part 2)
 7. Cross Browser Support
 8. Pink Floyd Fun Fact 3
 9. Whose responsibility is it?
