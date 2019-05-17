@@ -22,11 +22,8 @@ archive: false
 ---
 ## Recording of the talk
 
-[Live stream Thursday](https://www.youtube.com/watch?v=gDkUpx0dVc0)
-
-[Live stream Friday](https://www.youtube.com/watch?v=d_BtZ8bv0sw)
-
-A recording of the talk will follow in the next days.
+<div class="content__video-wrapper"><div class="video-wrapper">
+<iframe width="560" height="315" src="https://www.youtube.com/embed/NL6XKcX4sxc" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div></div>
 
 ## Slides
 
