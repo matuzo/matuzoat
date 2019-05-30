@@ -228,4 +228,29 @@ for (let i = 0; i < demos.length; i++) {
   })(i)
 }
 
+// Lighthouse demos
 
+function addDemoLighthouseTest() {
+  var lighthouseTests = document.querySelectorAll('.js-lighthouse-test');
+
+  if(lighthouseTests.length === 0) {
+    return
+  }
+
+  for (let i = 0; i < lighthouseTests.length; i++) {
+    const lighthouseTest = lighthouseTests[i];
+    const button = lighthouseTest.querySelector('.js-run-lighthouse-test');
+    button.addEventListener('click', function(e) {
+      button.querySelector('span').textContent = "Running tests…";
+      lighthouseTest.querySelector('.js-lighthouse-status').textContent = "Running tests…";
+
+      setTimeout(function() {
+        lighthouseTest.classList.add('lighthouse-test--finished');
+        lighthouseTest.querySelector('.js-lighthouse-status').textContent = "Tests finished. Accessibility score: 100.";
+      }, 1000);
+    });
+  
+  }
+}
+
+addDemoLighthouseTest();
