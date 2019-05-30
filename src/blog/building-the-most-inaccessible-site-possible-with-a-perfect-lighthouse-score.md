@@ -178,14 +178,24 @@ Time for another test.
 document.querySelector('.js-run-lighthouse-test').addEventListener('click', function(e) {
 
 document.querySelector('.js-run-lighthouse-test').querySelector('span').textContent = "Running tests…";
-document.querySelector('.js-lighthouse-status').querySelector('span').textContent = "Running tests…";
+document.querySelector('.js-lighthouse-test').querySelector('.js-lighthouse-status').textContent = "Running tests…";
 
 setTimeout(function() {
 document.querySelector('.js-lighthouse-test').classList.add('lighthouse-test--finished');
-document.querySelector('.js-lighthouse-status').querySelector('span').textContent = "Accessibility score: 1000";
+document.querySelector('.js-lighthouse-test').querySelector('.js-lighthouse-status').textContent = "Accessibility score: 1000";
 }, 1000);
 });
 </script>
 
 Still perfect.<br />
 Okay, now it's time to get dirty.
+
+### 🖕 High contrast mode 🖕
+
+People with low vision can improve contrasts on Windows by enabling the so called [High Contrast Mode](https://developer.paciellogroup.com/blog/2016/12/windows-high-contrast-mode-the-limited-utility-of-ms-high-contrast/).
+
+[ Screenshot ]
+
+The whole operating system uses high contrasting colors for all applications including browsers and websites.
+
+We can target high contrast mode users specifically by using a dedicated media feature.
