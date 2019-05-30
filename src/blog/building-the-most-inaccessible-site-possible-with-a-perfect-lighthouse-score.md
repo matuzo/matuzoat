@@ -5,7 +5,10 @@ metadescription: >-
   doesn't necessarily mean that it actually is. 
 date: 2019-05-30T07:08:19.931Z
 image: articles/lighthouse/lighthouse_sm.png
-intro: ''
+intro: >-
+  If lighthouse tells us that our site is 100% accessible, it doesn't
+  necessarily mean that it actually is. To prove that, I built the most
+  inaccessible site possible with a perfect lighthouse score.
 teaser: >-
   It’s always nice to see when people post their lighthouse scores on social
   media to highlight how well they’ve optimised their own or their clients
