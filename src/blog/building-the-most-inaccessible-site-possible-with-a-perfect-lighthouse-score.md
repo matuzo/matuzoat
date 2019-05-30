@@ -166,13 +166,14 @@ Our exclusion-first app now removes the default functionality of all keys.
 
 Time for another test.
 
-<div class="lighthouse-test">
+<div class="lighthouse-test js-lighthouse-test">
 <button class="btn js-run-lighthouse-test">Run lighthouse test</button>
 <img src="https://res.cloudinary.com/dp3mem7or/image/upload/v1559207447/articles/lighthouse/lighthouse_test.png" alt="Score: 100" />
 </div>
+
 <script>
 document.querySelector('.js-run-lighthouse-test').addEventListener('click', function(e) {
-e.target.style.display = 'none';
+document.querySelector('.js-lighthouse-test').classList.add('lighthouse-test--finished');
 });
 </script>
 
