@@ -116,7 +116,11 @@ Great! The site still looks the same but in order for it to display anything at 
 
 I'd say it's time for our first lighthouse test. Fingers crossed! 🤞🏼
 
-\[ Lighthouse score ]
+<div class="lighthouse-test js-lighthouse-test">
+<button class="btn js-run-lighthouse-test"><span class="btn__inner">Run lighthouse test</span></button>
+<span class="visually-hidden js-lighthouse-status" role="status"></span>
+<img src="https://res.cloudinary.com/dp3mem7or/image/upload/v1559207447/articles/lighthouse/lighthouse_test.png" alt="Score: 100" />
+</div>
 
 Perfect score on a CSS and JS only site. That's great, but we can do better.
 
@@ -173,19 +177,6 @@ Time for another test.
 <span class="visually-hidden js-lighthouse-status" role="status"></span>
 <img src="https://res.cloudinary.com/dp3mem7or/image/upload/v1559207447/articles/lighthouse/lighthouse_test.png" alt="Score: 100" />
 </div>
-
-<script>
-document.querySelector('.js-run-lighthouse-test').addEventListener('click', function(e) {
-
-document.querySelector('.js-run-lighthouse-test').querySelector('span').textContent = "Running tests…";
-document.querySelector('.js-lighthouse-test').querySelector('.js-lighthouse-status').textContent = "Running tests…";
-
-setTimeout(function() {
-document.querySelector('.js-lighthouse-test').classList.add('lighthouse-test--finished');
-document.querySelector('.js-lighthouse-test').querySelector('.js-lighthouse-status').textContent = "Tests finished. Accessibility score: 100.";
-}, 1000);
-});
-</script>
 
 Still perfect.<br />
 Okay, now it's time to get dirty.
@@ -273,3 +264,13 @@ removeA11y();
 This JavaScript fallback will kick in and remove click events from all elements, if the browser doesn't support the pointer-events property.
 
 [CodePen: “100%” accessible - step 6](https://s.codepen.io/matuzo/pen/zQmJYB)
+
+### 🖕 Readability 🖕
+
+Let's test our code before we move on. 
+
+<div class="lighthouse-test js-lighthouse-test">
+<button class="btn js-run-lighthouse-test"><span class="btn__inner">Run lighthouse test</span></button>
+<span class="visually-hidden js-lighthouse-status" role="status"></span>
+<img src="https://res.cloudinary.com/dp3mem7or/image/upload/v1559207447/articles/lighthouse/lighthouse_test.png" alt="Score: 100" />
+</div>
