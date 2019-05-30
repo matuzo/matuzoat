@@ -5,8 +5,11 @@ metadescription: >-
   first step.
 date: 2019-05-30T07:08:19.931Z
 image: articles/lighthouse/lighthouse_sm.png
-intro: "**Googles built-in testing tool lighthouse judges the accessibility of our websites with a score between 0 and 100. It’s laudable to try to\_get a high grading, but a score of 100 doesn’t mean that the site is perfectly accessible.\nTo prove that I carried out a little experiment.?**"
-teaser: ''
+intro: "**Googles built-in testing tool lighthouse judges the accessibility of our websites with a score between 0 and 100. It’s laudable to try to\_get a high grading, but a score of 100 doesn’t mean that the site is perfectly accessible.\nTo prove that I carried out a little experiment.**"
+teaser: >
+  It’s always nice to see when people post their lighthouse scores on social
+  media to highlight how well they’ve optimised their own or their clients
+  website. It shows that they care about the quality of what they build. 
 tags:
   - css
   - a11y
@@ -15,9 +18,7 @@ css: lighthouse
 draft: true
 archive: false
 ---
-It’s always nice to see when people post their lighthouse scores on social media to highlight how well they’ve optimised their own or their clients website. It shows that they care about the quality of what they build. 
-
-![](https://res.cloudinary.com/dp3mem7or/image/upload/v1559201876/articles/lighthouse/lighthousescore.png)
+![A perfect lighthouse score for performance, accessibility, best practices and SEO](https://res.cloudinary.com/dp3mem7or/image/upload/v1559201876/articles/lighthouse/lighthousescore.png)
 
 Lighthouse awards us with the number 100 in a green circle if we did an exceptional job. It’s something you can proudly share with your client or on twitter.
 
@@ -141,7 +142,7 @@ Screen reader users will now experience one of those _“rare”_ moments when t
 
 ### 🖕 Keyboard users 🖕
 
-Keyboard users navigate through a page by pressing the `Tab` key to jump from one interactive element to another. Browsers show an outline around these items if they’re in focus.
+Keyboard users navigate through a page by pressing the <kbd>Tab</kbd> key to jump from one interactive element to another. Browsers show an outline around these items if they’re in focus.
 
 ![Focus outline on a text link](https://res.cloudinary.com/dp3mem7or/image/upload/v1559208552/articles/lighthouse/lighthouse_step4.png)
 
@@ -202,7 +203,7 @@ We can target high contrast mode users specifically by using a dedicated media f
 ```
 
 Rules in this media query only apply if High Contrast is enabled. Unfortunately, we don’t know which colors the theme uses, nor if it’s a light or dark theme. Setting the color to `#000000` on all elements might or might not work, depending on user preference.
-This fifty-fifty chance is not exclusive enough for me, but we’re lucky. Windows High Contrast colors are mapped to CSS system color keywords. This means we can use the specified colors with no need to know them. The background-color is mapped to `window`.  So, let’s use the value of the background color for the text color of all elements.
+This fifty-fifty chance is not exclusive enough for me, but we’re lucky. Windows High Contrast colors are mapped to CSS system color keywords. This means we can use the specified colors with no need to know them. The background color is mapped to `window`.  So, let’s use the value of the background color for the text color of all elements.
 
 <p class="code-label"><strong>CSS</strong></p>
 
@@ -214,9 +215,9 @@ This fifty-fifty chance is not exclusive enough for me, but we’re lucky. Windo
 }
 ```
 
-Oh, man. This is so evil. My LinkedIn inbox will be filled with job offerings by companies like Facebook and Uber.
-
 ![Windows in high contrast but the text color has the same color as the background](https://res.cloudinary.com/dp3mem7or/image/upload/v1559212676/articles/lighthouse/lighthouse_step5_2.png)
+
+Oh, man. This is so evil. My LinkedIn inbox will be filled with job offerings by companies like Facebook and Uber.
 
 [CodePen: “100%” accessible - step 5](https://s.codepen.io/matuzo/pen/Ezdpoa)
 
@@ -243,7 +244,7 @@ body {
 }
 ```
 
-pointer-events: none; frees our users from the ability to click anything on our site. This property is well supported, but if we want to make sure that this feature works on as many browsers as possible, we can apply a principle called progressive degradation™.
+`pointer-events: none;` frees our users from the ability to click anything on our site. This property is well supported, but if we want to make sure that this feature works on as many browsers as possible, we can apply a principle called progressive degradation™.
 
 <p class="code-label"><strong>JS</strong></p>
 
@@ -262,11 +263,9 @@ function removeA11y() {
 removeA11y();
 ```
 
-This JavaScript fallback will kick in and remove click events from all elements, if the browser doesn't support the pointer-events property.
+This JavaScript fallback will kick in and remove click events from all elements, if the browser doesn't support the `pointer-events` property.
 
 [CodePen: “100%” accessible - step 6](https://s.codepen.io/matuzo/pen/zQmJYB)
-
-### 🖕 Readability 🖕
 
 Let's test our code before we move on. 
 
@@ -276,9 +275,11 @@ Let's test our code before we move on.
 <img src="https://res.cloudinary.com/dp3mem7or/image/upload/v1559207447/articles/lighthouse/lighthouse_test.png" alt="Score: 100" />
 </div>
 
-Great! Still perfectly accessible!.
+Great! Still perfectly accessible!
 
-We can’t use the mouse or keyboard anymore but we can still read the content above the fold.
+### 🖕 Readability 🖕
+
+We can’t use the mouse or keyboard anymore but we can still read the content above the fold. Let's do something about that.
 
 <p class="code-label"><strong>CSS</strong></p>
 
