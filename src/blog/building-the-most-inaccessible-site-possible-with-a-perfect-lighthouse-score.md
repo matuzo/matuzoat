@@ -340,6 +340,8 @@ Next time you see a high lighthouse score and you want to call it a day, read th
 
 > These checks highlight opportunities to [improve the accessibility of your web app](https://developers.google.com/web/fundamentals/accessibility/?utm_source=lighthouse&utm_medium=devtools). Only a subset of accessibility issues can be automatically detected so manual testing is also encouraged.
 
+Thanks to [Eric](https://ericwbailey.design/) for proofreading and feedback.
+
 ## Links and resources
 
 * [Google Lighthouse](https://developers.google.com/web/tools/lighthouse/)
