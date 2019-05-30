@@ -35,7 +35,7 @@ Zach Leatherman recently posted this on [twitter](https://twitter.com/zachleat/s
 
 And here’s [Vadim Makeev’s response](https://twitter.com/pepelsbey_/status/1122203926584074240) to his tweet, which inspired me to write this post.
 
-<blockquote>That would be a wonderful read! Here’s one for a11y audit:<br> \\\`&lt;img src=picture.png alt=picture.png&gt;\\\`</blockquote>
+<blockquote>That would be a wonderful read! Here’s one for a11y audit:<br> `&lt;img src=picture.png alt=picture.png&gt;`</blockquote>
 
 I thought it would be a fantastic idea to not just try to mess with as many people as possible, but get rewarded with a perfect lighthouse score on top.
 
@@ -50,6 +50,8 @@ We’ll take this simple, accessible page as a basis.
 ### 🖕 CSS only 🖕
 
 Let's start nice and easy. I want to make sure that CSS is a dependency on my perfect website. To achieve that I'm adding the `hidden` attribute to the `body` element. `hidden` is the HTML equivalent to `display: none;` in CSS. 
+
+<p class="code-label"><strong>HTML</strong></p>
 
 ```html
 <body hidden>
@@ -165,9 +167,14 @@ Our exclusion-first app now removes the default functionality of all keys.
 Time for another test.
 
 <div class="lighthouse-test">
-<button>Run lighthouse test</button>
-![Score: 100](https://res.cloudinary.com/dp3mem7or/image/upload/v1559207447/articles/lighthouse/lighthouse_test.png)
+<button class="btn js-run-lighthouse-test">Run lighthouse test</button>
+<img src="https://res.cloudinary.com/dp3mem7or/image/upload/v1559207447/articles/lighthouse/lighthouse_test.png" alt="Score: 100" />
 </div>
+<script>
+document.querySelector('.js-run-lighthouse-test').addEventListener('click', function(e) {
+e.target.style.display = 'none';
+});
+</script>
 
 Still perfect.<br />
 Okay, now it's time to get dirty.
