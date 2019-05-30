@@ -87,7 +87,7 @@ We’re back to where we were before but now CSS must load if users want to get 
 
 Let’s add one more dependency. I’m not applying the class that displays our content in HTML anymore, but I add it via JS.
 
-<p style="margin-bottom: -4rem">**HTML**</p>
+<p class="code-label"><strong>HTML</strong></p>
 
 ```html
 <head>
