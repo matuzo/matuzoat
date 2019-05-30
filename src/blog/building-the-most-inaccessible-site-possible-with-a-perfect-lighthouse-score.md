@@ -35,7 +35,7 @@ Zach Leatherman recently posted this on [twitter](https://twitter.com/zachleat/s
 
 And here’s [Vadim Makeev’s response](https://twitter.com/pepelsbey_/status/1122203926584074240) to his tweet, which inspired me to write this post.
 
-<blockquote>That would be a wonderful read! Here’s one for a11y audit:<br> \`&lt;img src=picture.png alt=picture.png&gt;\`</blockquote>
+<blockquote>That would be a wonderful read! Here’s one for a11y audit:<br> \\`&lt;img src=picture.png alt=picture.png&gt;\\`</blockquote>
 
 I thought it would be a fantastic idea to not just try to mess with as many people as possible, but get rewarded with a perfect lighthouse score on top.
 
@@ -146,13 +146,13 @@ Let’s get rid of that.
 
 <p class="code-label"><strong>CSS</strong></p>
 
-```html
+```css
 *:focus {
   outline: none !important;
 }
 ```
 
-All it takes are 3 lines of CSS to exclude a whole user group from being able to use the site. Although, technically, they can still interact with it. They won’t see the focus indicator anymore but interactive elements are still tababble. Since this experiment is all about exclusion, let’s make sure that the keyboard can’t be used at all.
+All it takes are 3 lines of CSS to exclude a whole user group from being able to access the site. Although, technically, they can still interact with it. They won’t see the focus indicator anymore but interactive elements are still tababble. Since this experiment is all about exclusion, let’s make sure that the keyboard can’t be used at all.
 
 <p class="code-label"><strong>JS</strong></p>
 
@@ -170,6 +170,7 @@ Time for another test.
 
 <div class="lighthouse-test js-lighthouse-test">
 <button class="btn js-run-lighthouse-test"><span class="btn__inner">Run lighthouse test</span></button>
+<span class="visually-hidden js-lighthouse-status" role="status"></span>
 <img src="https://res.cloudinary.com/dp3mem7or/image/upload/v1559207447/articles/lighthouse/lighthouse_test.png" alt="Score: 100" />
 </div>
 
@@ -177,11 +178,98 @@ Time for another test.
 document.querySelector('.js-run-lighthouse-test').addEventListener('click', function(e) {
 
 document.querySelector('.js-run-lighthouse-test').querySelector('span').textContent = "Running tests…";
+document.querySelector('.js-lighthouse-test').querySelector('.js-lighthouse-status').textContent = "Running tests…";
+
 setTimeout(function() {
 document.querySelector('.js-lighthouse-test').classList.add('lighthouse-test--finished');
+document.querySelector('.js-lighthouse-test').querySelector('.js-lighthouse-status').textContent = "Tests finished. Accessibility score: 100.";
 }, 1000);
 });
 </script>
 
 Still perfect.<br />
 Okay, now it's time to get dirty.
+
+### 🖕 High contrast mode 🖕
+
+People with low vision can improve contrasts on Windows by enabling the so called [High Contrast Mode](https://developer.paciellogroup.com/blog/2016/12/windows-high-contrast-mode-the-limited-utility-of-ms-high-contrast/).
+
+![Windows with high contrasting colors. Black background and yellow text.](https://res.cloudinary.com/dp3mem7or/image/upload/v1559211531/articles/lighthouse/lighthouse_step5.png)
+
+The whole operating system uses high contrasting colors for all applications including browsers and websites.
+
+We can target high contrast mode users specifically by using a dedicated media feature.
+
+<p class="code-label"><strong>CSS</strong></p>
+
+```css
+@media screen and (-ms-high-contrast: active) {
+  /* High contrast styling rules */
+  * {
+    color: #000000;
+  }
+}
+```
+
+Rules in this media query only apply if High Contrast is enabled. Unfortunately, we don’t know which colors the theme uses, nor if it’s a light or dark theme. Setting the color to `#000000` on all elements might or might not work, depending on user preference.
+This fifty-fifty chance is not exclusive enough for me, but we’re lucky. Windows High Contrast colors are mapped to CSS system color keywords. This means we can use the specified colors with no need to know them. The background-color is mapped to `window`.  So, let’s use the value of the background color for the text color of all elements.
+
+<p class="code-label"><strong>CSS</strong></p>
+
+```css
+@media screen and (-ms-high-contrast: active) {
+  * {
+    color: window !important;
+  }
+}
+```
+
+Oh, man. This is so evil. My LinkedIn inbox will be filled with job offerings by companies like Facebook and Uber.
+
+[CodePen: “100%” accessible - step 5](https://s.codepen.io/matuzo/pen/Ezdpoa)
+
+### 🖕 Mouse users 🖕
+
+Excluding mouse users is easy, we just remove the cursor.
+
+<p class="code-label"><strong>CSS</strong></p>
+
+```css
+*,
+*:hover {
+  cursor: none;
+}
+```
+
+`cursor: none;` is to mouse users what `outline: none;`  is to keyboard users. Orientation is annoyingly hard but interactive elements are still clickable. Let's improve the quality of our app by decreasing the user experience once more.
+
+<p class="code-label"><strong>CSS</strong></p>
+
+```css
+body {
+  pointer-events: none;
+}
+```
+
+pointer-events: none; frees our users from the ability to click anything on our site. This property is well supported, but if we want to make sure that this feature works on as many browsers as possible, we can apply a principle called progressive degradation™.
+
+<p class="code-label"><strong>JS</strong></p>
+
+```js
+function removeA11y() {
+  if ("pointerEvents" in document.body.style) {
+    console.log('pointer-events supported')
+    return;
+  }
+
+  document.addEventListener('click', function(e) {
+    e.preventDefault();
+  })
+}
+
+removeA11y();
+```
+
+This JavaScript fallback will kick in and remove click events from all elements, if the browser doesn't support the pointer-events property.
+
+[CodePen: “100%” accessible - step 6](https://s.codepen.io/matuzo/pen/zQmJYB)
