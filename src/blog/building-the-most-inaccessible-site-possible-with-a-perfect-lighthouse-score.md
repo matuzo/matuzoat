@@ -295,7 +295,7 @@ Our page content is still present but almost invisible. Fabulous!
 
 🖕 Reader mode 🖕
 
-Testing the site in different browsers, I noticed that it’s still accessible in Safari in Reader Mode if I add more paragraphs.
+Testing the site in different browsers, I noticed that it’s still accessible in Safari in Reader Mode.
 
 ![Safari Reader Mode](https://res.cloudinary.com/dp3mem7or/image/upload/v1559213808/articles/lighthouse/lighthouse_step6.png)
 
