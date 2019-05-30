@@ -306,9 +306,9 @@ As it turns out, it’s possible to disable Reader Mode by defining a small font
 🖕 View Page Source 🖕
 
 The site is inaccessible to people with low and good vision, mouse, keyboard and screen reader users.  
-If browser power users encounter a site like this, it awakens their inner [Zero Cool](https://en.wikipedia.org/wiki/Hackers_(film)#Plot) and they try to hack the site. What I mean by hack is view the page source.  
-To put the cherry on top of my exclusion-first app, I’m [converting the text to html entities](https://v2.cryptii.com/text/htmlentities).
+If browser power users encounter a site like this, it awakens their inner [Zero Cool](https://en.wikipedia.org/wiki/Hackers_(film)#Plot) and they probably try to hack the site. What I mean by hack is view the page source.  
+To put the cherry on top of my exclusion-first site, I’m [converting the text to html entities](https://v2.cryptii.com/text/htmlentities).
 
-![Text is not readable when viewing the source because it's written in HTML entities](https://res.cloudinary.com/dp3mem7or/image/upload/v1559215401/articles/lighthouse/lighthouse_step7.png)
+[![Text is not readable when viewing the source because it's written in HTML entities](https://res.cloudinary.com/dp3mem7or/image/upload/v1559215401/articles/lighthouse/lighthouse_step7.png)](https://codepen.io/matuzo/pen/joeeqy)
 
 [CodePen: “100%” accessible - step 9](https://s.codepen.io/matuzo/pen/joeeqy)
