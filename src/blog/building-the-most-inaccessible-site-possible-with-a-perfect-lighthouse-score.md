@@ -35,7 +35,7 @@ Zach Leatherman recently posted this on [twitter](https://twitter.com/zachleat/s
 
 And here’s [Vadim Makeev’s response](https://twitter.com/pepelsbey_/status/1122203926584074240) to his tweet, which inspired me to write this post.
 
-<blockquote>That would be a wonderful read! Here’s one for a11y audit:<br> \\\\\`&lt;img src=picture.png alt=picture.png&gt;\\\\\`</blockquote>
+<blockquote>That would be a wonderful read! Here’s one for a11y audit:<br> \\\\\\`&lt;img src=picture.png alt=picture.png&gt;\\\\\\`</blockquote>
 
 I thought it would be a fantastic idea to not just try to mess with as many people as possible, but get rewarded with a perfect lighthouse score on top.
 
@@ -301,6 +301,14 @@ Testing the site in different browsers, I noticed that it’s still accessible i
 
 As it turns out, it’s possible to disable Reader Mode by defining a small font size in the `body`.
 
-🖕 Dev Tools / View Page Source 🖕
-
 [CodePen: “100%” accessible - step 8](https://s.codepen.io/matuzo/pen/QRZVJj)
+
+🖕 View Page Source 🖕
+
+The site is inaccessible to people with low and good vision, mouse, keyboard and screen reader users.  
+If browser power users encounter a site like this, it awakens their inner [Zero Cool](https://en.wikipedia.org/wiki/Hackers_(film)#Plot) and they try to hack the site. What I mean by hack is view the page source.  
+To put the cherry on top of my exclusion-first app, I’m [converting the text to html entities](https://v2.cryptii.com/text/htmlentities).
+
+![Text is not readable when viewing the source because it's written in HTML entities](https://res.cloudinary.com/dp3mem7or/image/upload/v1559215401/articles/lighthouse/lighthouse_step7.png)
+
+[CodePen: “100%” accessible - step 9](https://s.codepen.io/matuzo/pen/joeeqy)
