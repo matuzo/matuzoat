@@ -33,7 +33,7 @@ Zach Leatherman recently posted this on [twitter](https://twitter.com/zachleat/s
 >
 > How to Build the Slowest Website with a Perfect Lighthouse Score
 
-And here’s Vadim Makeev’s response to his tweet, which inspired me to write this post.
+And here’s [Vadim Makeev’s response](https://twitter.com/pepelsbey_/status/1122203926584074240) to his tweet, which inspired me to write this post.
 
 <blockquote>That would be a wonderful read! Here’s one for a11y audit:<br> \`<img src=picture.png alt=picture.png>\`</blockquote>
 
@@ -43,6 +43,43 @@ I thought it would be a fantastic idea to not just try to mess with as many peop
 
 We’ll take this simple, accessible page as a basis.
 
-[![A page with a heading, link, two paragrphas, a list and a simple form](https://res.cloudinary.com/dp3mem7or/image/upload/v1559205173/articles/lighthouse/lighthouse_step1.png)](https://codepen.io/matuzo/pen/vwVRJx)
+[![A page with a heading, a link, two paragraphs, a list and a simple form](https://res.cloudinary.com/dp3mem7or/image/upload/v1559205173/articles/lighthouse/lighthouse_step1.png)](https://codepen.io/matuzo/debug/vwVRJx)
 
-[CodePen: 100% accessible step 0](https://codepen.io/matuzo/pen/vwVRJx)
+[CodePen: 100% accessible - step 0](https://codepen.io/matuzo/pen/vwVRJx)
+
+### 🖕 CSS only 🖕
+
+Let's start nice and easy. I want to make sure that CSS is a dependency on my perfect website. To achieve that I'm adding the `hidden` attribute to the `body` element. `hidden` is the HTML equivalent to `display: none;` in CSS. 
+
+
+```css
+<body hidden>
+  ...
+</body>
+```
+
+[ Screenshot ]
+
+That alone would be enough to exclude everyone and pass the lighthouse tests, but I don't want to make it too easy on myself. I want to create a site that’s perfectly inaccessible and technically still displays content.
+So let's add come CSS and bring our content back.
+
+HTML
+```html
+<head>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body class="loaded" hidden>
+  ...
+</body>
+```
+
+CSS
+```css
+.loaded {
+  display: block;
+}
+```
+
+We’re back to where we were before but now CSS must load if users want to get access to content on our site.
+
+[CodePen: 100% accessible - step 1](https://s.codepen.io/matuzo/pen/QRZmrJ)
