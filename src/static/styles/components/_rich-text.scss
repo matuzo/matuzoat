@@ -114,3 +114,37 @@
     100% { background: none; }
   }
 }
+
+// Lighthouse article
+
+.lighthouse-test {
+  button {
+    position: absolute;
+    z-index: 111;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+    max-height: 5.3rem;
+  }
+
+  img {
+    visibility: hidden;
+  }
+
+  .content__image-wrapper::before,
+  .content__image-wrapper::after {
+    display: none;
+  }
+
+  &--finished {
+    button {
+      display: none;
+    }
+
+    img {
+      visibility: visible;
+    }
+  }
+}
