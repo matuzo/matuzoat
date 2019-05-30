@@ -88,6 +88,7 @@ We’re back to where we were before but now CSS must load if users want to get 
 Let’s add one more dependency. I’m not applying the class that displays our content in HTML anymore, but I add it via JS.
 
 <p style="margin-bottom: -4rem">**HTML**</p>
+
 ```html
 <head>
   <link rel="stylesheet" href="style.css">
@@ -125,4 +126,39 @@ There are many ways to exclude screen reader users. The easiest and most efficie
 </body>
 ```
 
-Screen reader users will now experience one of those “rare” moments when they have to deal with an inaccessible site.
+Screen reader users will now experience one of those _“rare”_ moments when they have to deal with an inaccessible site.
+
+[CodePen: “100%” accessible - step 3)](https://s.codepen.io/matuzo/pen/OYBZbd)
+
+### 🖕 Keyboard users 🖕
+
+Keyboard users navigate through a page by pressing the `Tab` key to jump from one interactive element to another. Browsers show an outline around these items if they’re in focus.
+
+[ screenshot outline ]
+
+Let’s get rid of that.
+
+**CSS**
+```html
+*:focus {
+  outline: none !important;
+}
+```
+
+All it takes are 3 lines of CSS to exclude a whole user group from being able to use the site. Although, technically, they can still interact with it. They won’t see the focus indicator anymore but interactive elements are still tababble. Since this experiment is all about exclusion, let’s make sure that the keyboard can’t be used at all.
+
+**JS**
+```js
+document.addEventListener('keydown', function(e) {
+  e.preventDefault();
+})
+```
+
+Our exclusion-first app now removes the default functionality of all keys.
+
+Time for another test.
+
+[ Lighthouse score ]
+
+Still perfect. 
+Okay, now it's time to get dirty.
