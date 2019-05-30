@@ -341,7 +341,7 @@ My intention with this post was not to diss lighthouse or axe-core, the engine b
 This post is about you and me. We have to understand that automatic testing is just a first step. Scores indicate the quality of our apps and sites, but we must not trust these numbers blindly.  
 Next time you see a high lighthouse score and you want to call it a day, read the text next to the score.
 
-[](https://res.cloudinary.com/dp3mem7or/image/upload/v1559207447/articles/lighthouse/lighthouse_test.png)
+![](https://res.cloudinary.com/dp3mem7or/image/upload/v1559207447/articles/lighthouse/lighthouse_test.png)
 
 > These checks highlight opportunities to improve the accessibility of your web app. Only a subset of accessibility issues can be automatically detected so manual testing is also encouraged.
 
