@@ -199,3 +199,14 @@ People with low vision can improve contrasts on Windows by enabling the so calle
 The whole operating system uses high contrasting colors for all applications including browsers and websites.
 
 We can target high contrast mode users specifically by using a dedicated media feature.
+
+<p class="code-label"><strong>CSS</strong></p>
+
+```css
+@media screen and (-ms-high-contrast: active) {
+  /* High contrast styling rules */
+  * {
+    color: #000000;
+  }
+}
+```
