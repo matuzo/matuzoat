@@ -34,7 +34,7 @@ Zach Leatherman recently posted this on [twitter](https://twitter.com/zachleat/s
 
 And here’s [Vadim Makeev’s response](https://twitter.com/pepelsbey_/status/1122203926584074240) to his tweet, which inspired me to write this post.
 
-<blockquote>That would be a wonderful read! Here’s one for a11y audit:<br> ``&lt;img src=picture.png alt=picture.png&gt;`</blockquote>
+<blockquote>That would be a wonderful read! Here’s one for a11y audit:<br> `&lt;img src=picture.png alt=picture.png&gt;`</blockquote>
 
 I thought it would be a fantastic idea to not just try to mess with as many people as possible, but get rewarded with a perfect lighthouse score on top.
 
@@ -135,7 +135,7 @@ There are many ways to exclude screen reader users. The easiest and most efficie
 </body>
 ```
 
-Screen reader users will now experience one of those _“rare”_ moments when they have to deal with an inaccessible site.
+Screen reader users will now experience one of those _“rare”_ moments when they have to deal with an inaccessible site. <span aria-label="(sarcasm)" title="(sarcasm)">*</span>
 
 [CodePen: “100%” accessible - step 3](https://s.codepen.io/matuzo/pen/OYBZbd)
 
@@ -343,3 +343,5 @@ Next time you see a high lighthouse score and you want to call it a day, read th
 
 * [Google Lighthouse](https://developers.google.com/web/tools/lighthouse/)
 * [axe-core](https://github.com/dequelabs/axe-core)
+
+* (sarcasm)
