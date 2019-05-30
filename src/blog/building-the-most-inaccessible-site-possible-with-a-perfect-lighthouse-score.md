@@ -35,7 +35,7 @@ Zach Leatherman recently posted this on [twitter](https://twitter.com/zachleat/s
 
 And here’s [Vadim Makeev’s response](https://twitter.com/pepelsbey_/status/1122203926584074240) to his tweet, which inspired me to write this post.
 
-<blockquote>That would be a wonderful read! Here’s one for a11y audit:<br> `&lt;img src=picture.png alt=picture.png&gt;`</blockquote>
+<blockquote>That would be a wonderful read! Here’s one for a11y audit:<br> \`&lt;img src=picture.png alt=picture.png&gt;\`</blockquote>
 
 I thought it would be a fantastic idea to not just try to mess with as many people as possible, but get rewarded with a perfect lighthouse score on top.
 
@@ -140,7 +140,7 @@ Screen reader users will now experience one of those _“rare”_ moments when t
 
 Keyboard users navigate through a page by pressing the `Tab` key to jump from one interactive element to another. Browsers show an outline around these items if they’re in focus.
 
-\[ screenshot outline ]
+![Focus outline on a text link](https://res.cloudinary.com/dp3mem7or/image/upload/v1559208552/articles/lighthouse/lighthouse_step4.png)
 
 Let’s get rid of that.
 
@@ -164,16 +164,22 @@ document.addEventListener('keydown', function(e) {
 
 Our exclusion-first app now removes the default functionality of all keys.
 
+[CodePen: “100%” accessible - step 4](https://s.codepen.io/matuzo/pen/vwVrxo)
+
 Time for another test.
 
 <div class="lighthouse-test js-lighthouse-test">
-<button class="btn js-run-lighthouse-test">Run lighthouse test</button>
+<button class="btn js-run-lighthouse-test"><span class="btn__inner">Run lighthouse test</span></button>
 <img src="https://res.cloudinary.com/dp3mem7or/image/upload/v1559207447/articles/lighthouse/lighthouse_test.png" alt="Score: 100" />
 </div>
 
 <script>
 document.querySelector('.js-run-lighthouse-test').addEventListener('click', function(e) {
+
+document.querySelector('.js-run-lighthouse-test').textContent = "Running tests…";
+setTimeout(function() {
 document.querySelector('.js-lighthouse-test').classList.add('lighthouse-test--finished');
+}, 300);
 });
 </script>
 
