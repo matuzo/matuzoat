@@ -22,7 +22,6 @@ archive: false
 
 Lighthouse awards us with the number 100 in a green circle if we did an exceptional job. It’s something you can proudly share with your client or on twitter.
 
- 
 It’s important to measure the quality of our code but it’s even more important that we interpret the scores automatic testing tools give us correctly. If lighthouse tells us that our site is 100% accessible, it doesn’t mean it is. It just means we’ve laid the groundwork for manual testing. With automatic testing alone you can’t ensure good quality.
 To prove that, I built the most inaccessible site possible with a perfect lighthouse score.
 
@@ -36,10 +35,14 @@ Zach Leatherman recently posted this on [twitter](https://twitter.com/zachleat/s
 
 And here’s Vadim Makeev’s response to his tweet, which inspired me to write this post.
 
-> That would be a wonderful read! Here’s one for a11y audit: `<img src=picture.png alt=picture.png>`
+<blockquote>That would be a wonderful read! Here’s one for a11y audit:<br> \`<img src=picture.png alt=picture.png>\`</blockquote>
 
 I thought it would be a fantastic idea to not just try to mess with as many people as possible, but get rewarded with a perfect lighthouse score on top.
 
 ## Let’s exclude as many people as possible
 
 We’ll take this simple, accessible page as a basis.
+
+[![A page with a heading, link, two paragrphas, a list and a simple form](https://res.cloudinary.com/dp3mem7or/image/upload/v1559205173/articles/lighthouse/lighthouse_step1.png)](https://codepen.io/matuzo/pen/vwVRJx)
+
+[CodePen: 100% accessible step 0](https://codepen.io/matuzo/pen/vwVRJx)
