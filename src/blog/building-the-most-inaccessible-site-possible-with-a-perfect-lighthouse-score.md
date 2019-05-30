@@ -113,3 +113,16 @@ I'd say it's time for our first lighthouse test. Fingers crossed! 🤞🏼
 [ Lighthouse score ]
 
 Perfect score on a CSS and JS only site. That's great, but we can do better.
+
+### 🖕 Screen reader users 🖕
+
+There are many ways to exclude screen reader users. The easiest and most efficient way is to remove the whole body from the accessibility tree by adding the `aria-hidden="true"` attribute and value.
+
+**HTML**
+```html
+<body hidden aria-hidden="true">
+  ...
+</body>
+```
+
+Screen reader users will now experience one of those “rare” moments when they have to deal with an inaccessible site.
