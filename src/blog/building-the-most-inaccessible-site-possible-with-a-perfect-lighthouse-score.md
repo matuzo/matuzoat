@@ -35,7 +35,7 @@ Zach Leatherman recently posted this on [twitter](https://twitter.com/zachleat/s
 
 And here’s [Vadim Makeev’s response](https://twitter.com/pepelsbey_/status/1122203926584074240) to his tweet, which inspired me to write this post.
 
-<blockquote>That would be a wonderful read! Here’s one for a11y audit:<br> \\`&lt;img src=picture.png alt=picture.png&gt;\\`</blockquote>
+<blockquote>That would be a wonderful read! Here’s one for a11y audit:<br> `&lt;img src=picture.png alt=picture.png&gt;`</blockquote>
 
 I thought it would be a fantastic idea to not just try to mess with as many people as possible, but get rewarded with a perfect lighthouse score on top.
 
@@ -51,6 +51,8 @@ We’ll take this simple, accessible page as a basis.
 
 Let's start nice and easy. I want to make sure that CSS is a dependency on my perfect website. To achieve that I'm adding the `hidden` attribute to the `body` element. `hidden` is the HTML equivalent to `display: none;` in CSS. 
 
+<p class="code-label"><strong>HTML</strong></p>
+
 ```html
 <body hidden>
   ...
@@ -62,7 +64,8 @@ Let's start nice and easy. I want to make sure that CSS is a dependency on my pe
 That alone would be enough to exclude everyone and pass the lighthouse tests, but I don't want to make it too easy on myself. I want to create a site that’s perfectly inaccessible and technically still displays content.
 So let's add come CSS and bring our content back.
 
-**HTML**
+<p class="code-label"><strong>HTML</strong></p>
+
 ```html
 <head>
   <link rel="stylesheet" href="style.css">
@@ -72,7 +75,8 @@ So let's add come CSS and bring our content back.
 </body>
 ```
 
-**CSS**
+<p class="code-label"><strong>CSS</strong></p>
+
 ```css
 .loaded {
   display: block;
@@ -87,7 +91,7 @@ We’re back to where we were before but now CSS must load if users want to get 
 
 Let’s add one more dependency. I’m not applying the class that displays our content in HTML anymore, but I add it via JS.
 
-<p style="margin-bottom: -4rem">**HTML**</p>
+<p class="code-label"><strong>HTML</strong></p>
 
 ```html
 <head>
@@ -100,7 +104,8 @@ Let’s add one more dependency. I’m not applying the class that displays our 
 </body>
 ```
 
-**JS**
+<p class="code-label"><strong>JS</strong></p>
+
 ```js
   document.querySelector('body').classList.add('loaded');
 ```
@@ -111,7 +116,7 @@ Great! The site still looks the same but in order for it to display anything at 
 
 I'd say it's time for our first lighthouse test. Fingers crossed! 🤞🏼
 
-[ Lighthouse score ]
+\[ Lighthouse score ]
 
 Perfect score on a CSS and JS only site. That's great, but we can do better.
 
@@ -119,7 +124,8 @@ Perfect score on a CSS and JS only site. That's great, but we can do better.
 
 There are many ways to exclude screen reader users. The easiest and most efficient way is to remove the whole body from the accessibility tree by adding the `aria-hidden="true"` attribute and value.
 
-**HTML**
+<p class="code-label"><strong>HTML</strong></p>
+
 ```html
 <body hidden aria-hidden="true">
   ...
@@ -128,17 +134,18 @@ There are many ways to exclude screen reader users. The easiest and most efficie
 
 Screen reader users will now experience one of those _“rare”_ moments when they have to deal with an inaccessible site.
 
-[CodePen: “100%” accessible - step 3)](https://s.codepen.io/matuzo/pen/OYBZbd)
+[CodePen: “100%” accessible - step 3](https://s.codepen.io/matuzo/pen/OYBZbd)
 
 ### 🖕 Keyboard users 🖕
 
 Keyboard users navigate through a page by pressing the `Tab` key to jump from one interactive element to another. Browsers show an outline around these items if they’re in focus.
 
-[ screenshot outline ]
+\[ screenshot outline ]
 
 Let’s get rid of that.
 
-**CSS**
+<p class="code-label"><strong>CSS</strong></p>
+
 ```html
 *:focus {
   outline: none !important;
@@ -147,7 +154,8 @@ Let’s get rid of that.
 
 All it takes are 3 lines of CSS to exclude a whole user group from being able to use the site. Although, technically, they can still interact with it. They won’t see the focus indicator anymore but interactive elements are still tababble. Since this experiment is all about exclusion, let’s make sure that the keyboard can’t be used at all.
 
-**JS**
+<p class="code-label"><strong>JS</strong></p>
+
 ```js
 document.addEventListener('keydown', function(e) {
   e.preventDefault();
@@ -158,7 +166,15 @@ Our exclusion-first app now removes the default functionality of all keys.
 
 Time for another test.
 
-[ Lighthouse score ]
+<div class="lighthouse-test">
+<button class="btn js-run-lighthouse-test">Run lighthouse test</button>
+<img src="https://res.cloudinary.com/dp3mem7or/image/upload/v1559207447/articles/lighthouse/lighthouse_test.png" alt="Score: 100" />
+</div>
+<script>
+document.querySelector('.js-run-lighthouse-test').addEventListener('click', function(e) {
+e.target.style.display = 'none';
+});
+</script>
 
-Still perfect. 
+Still perfect.<br />
 Okay, now it's time to get dirty.
