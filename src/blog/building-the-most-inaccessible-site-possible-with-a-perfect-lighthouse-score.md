@@ -146,13 +146,13 @@ Let’s get rid of that.
 
 <p class="code-label"><strong>CSS</strong></p>
 
-```html
+```css
 *:focus {
   outline: none !important;
 }
 ```
 
-All it takes are 3 lines of CSS to exclude a whole user group from being able to use the site. Although, technically, they can still interact with it. They won’t see the focus indicator anymore but interactive elements are still tababble. Since this experiment is all about exclusion, let’s make sure that the keyboard can’t be used at all.
+All it takes are 3 lines of CSS to exclude a whole user group from being able to access the site. Although, technically, they can still interact with it. They won’t see the focus indicator anymore but interactive elements are still tababble. Since this experiment is all about exclusion, let’s make sure that the keyboard can’t be used at all.
 
 <p class="code-label"><strong>JS</strong></p>
 
@@ -170,6 +170,7 @@ Time for another test.
 
 <div class="lighthouse-test js-lighthouse-test">
 <button class="btn js-run-lighthouse-test"><span class="btn__inner">Run lighthouse test</span></button>
+<span class="visually-hidden js-lighthouse-status" role="alert"></span>
 <img src="https://res.cloudinary.com/dp3mem7or/image/upload/v1559207447/articles/lighthouse/lighthouse_test.png" alt="Score: 100" />
 </div>
 
@@ -177,8 +178,11 @@ Time for another test.
 document.querySelector('.js-run-lighthouse-test').addEventListener('click', function(e) {
 
 document.querySelector('.js-run-lighthouse-test').querySelector('span').textContent = "Running tests…";
+document.querySelector('.js-lighthouse-status').querySelector('span').textContent = "Running tests…";
+
 setTimeout(function() {
 document.querySelector('.js-lighthouse-test').classList.add('lighthouse-test--finished');
+document.querySelector('.js-lighthouse-status').querySelector('span').textContent = "Accessibility score: 1000";
 }, 1000);
 });
 </script>
