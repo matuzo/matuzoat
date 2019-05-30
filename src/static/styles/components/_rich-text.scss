@@ -118,6 +118,8 @@
 // Lighthouse article
 
 .lighthouse-test {
+  position: relative;
+
   button {
     position: absolute;
     z-index: 111;
@@ -130,7 +132,8 @@
   }
 
   img {
-    visibility: hidden;
+    opacity: 0;
+    transition: opacity 0.3s;
   }
 
   .content__image-wrapper::before,
@@ -144,7 +147,7 @@
     }
 
     img {
-      visibility: visible;
+      opacity: 1;
     }
   }
 }
