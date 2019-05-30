@@ -176,10 +176,10 @@ Time for another test.
 <script>
 document.querySelector('.js-run-lighthouse-test').addEventListener('click', function(e) {
 
-document.querySelector('.js-run-lighthouse-test').textContent = "Running tests…";
+document.querySelector('.js-run-lighthouse-test').querySelector('span').textContent = "Running tests…";
 setTimeout(function() {
 document.querySelector('.js-lighthouse-test').classList.add('lighthouse-test--finished');
-}, 300);
+}, 1000);
 });
 </script>
 
