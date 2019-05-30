@@ -24,3 +24,17 @@ Lighthouse awards us with the number 100 in a green circle if we did an exceptio
  
 It’s important to measure the quality of our code but it’s even more important that we interpret the scores automatic testing tools give us correctly. If lighthouse tells us that our site is 100% accessible, it doesn’t mean it is. It just means we’ve laid the groundwork for manual testing. With automatic testing alone you can’t ensure good quality.
 To prove that, I built the most inaccessible site possible with a perfect lighthouse score.
+
+## Background
+
+Zach Leatherman recently posted this on twitter: 
+
+> Free blog post idea:
+>
+> How to Build the Slowest Website with a Perfect Lighthouse Score
+
+And here’s Vadim Makeev’s response to his tweet, which inspired me to write this post.
+
+> That would be a wonderful read! Here’s one for a11y audit: `<img src=picture.png alt=picture.png>`
+
+I thought it would be a fantastic idea to not just try to mess with as many people as possible, but get rewarded with a perfect lighthouse score on top.
