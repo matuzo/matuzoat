@@ -45,13 +45,13 @@ We’ll take this simple, accessible page as a basis.
 
 [![A page with a heading, a link, two paragraphs, a list and a simple form](https://res.cloudinary.com/dp3mem7or/image/upload/v1559205173/articles/lighthouse/lighthouse_step1.png)](https://codepen.io/matuzo/debug/vwVRJx)
 
-[CodePen: 100% accessible - step 0](https://codepen.io/matuzo/pen/vwVRJx)
+[CodePen: “100%” accessible - step 0](https://codepen.io/matuzo/pen/vwVRJx)
 
 ### 🖕 CSS only 🖕
 
 Let's start nice and easy. I want to make sure that CSS is a dependency on my perfect website. To achieve that I'm adding the `hidden` attribute to the `body` element. `hidden` is the HTML equivalent to `display: none;` in CSS. 
 
-```css
+```html
 <body hidden>
   ...
 </body>
@@ -62,8 +62,7 @@ Let's start nice and easy. I want to make sure that CSS is a dependency on my pe
 That alone would be enough to exclude everyone and pass the lighthouse tests, but I don't want to make it too easy on myself. I want to create a site that’s perfectly inaccessible and technically still displays content.
 So let's add come CSS and bring our content back.
 
-HTML
-
+**HTML**
 ```html
 <head>
   <link rel="stylesheet" href="style.css">
@@ -73,8 +72,7 @@ HTML
 </body>
 ```
 
-CSS
-
+**CSS**
 ```css
 .loaded {
   display: block;
@@ -83,4 +81,35 @@ CSS
 
 We’re back to where we were before but now CSS must load if users want to get access to content on our site.
 
-[CodePen: 100% accessible - step 1](https://s.codepen.io/matuzo/pen/QRZmrJ)
+[CodePen: “100%” accessible - step 1](https://s.codepen.io/matuzo/pen/QRZmrJ)
+
+### 🖕 JS only 🖕
+
+Let’s add one more dependency. I’m not applying the class that displays our content in HTML anymore, but I add it via JS.
+
+**HTML**
+```html
+<head>
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js"></script>
+</head>
+
+<body hidden>
+  ...
+</body>
+```
+
+**JS**
+```js
+  document.querySelector('body').classList.add('loaded');
+```
+
+Great! The site still looks the same but in order for it to display anything at all the CSS and JS file must load and work properly.
+
+[CodePen: “100%” accessible - step 2)](https://s.codepen.io/matuzo/pen/GaYxLx)
+
+I'd say it's time for our first lighthouse test. Fingers crossed! 🤞🏼
+
+[ Lighthouse score ]
+
+Perfect score on a CSS and JS only site. That's great, but we can do better.
