@@ -350,4 +350,4 @@ Next time you see a high lighthouse score and you want to call it a day, read th
 * [Google Lighthouse](https://developers.google.com/web/tools/lighthouse/)
 * [axe-core](https://github.com/dequelabs/axe-core)
 
-* (sarcasm)
+&lowast; (sarcasm)
