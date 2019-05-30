@@ -107,7 +107,7 @@ Let’s add one more dependency. I’m not applying the class that displays our 
 
 Great! The site still looks the same but in order for it to display anything at all the CSS and JS file must load and work properly.
 
-[CodePen: “100%” accessible - step 2)](https://s.codepen.io/matuzo/pen/GaYxLx)
+[CodePen: “100%” accessible - step 2](https://s.codepen.io/matuzo/pen/GaYxLx)
 
 I'd say it's time for our first lighthouse test. Fingers crossed! 🤞🏼
 
