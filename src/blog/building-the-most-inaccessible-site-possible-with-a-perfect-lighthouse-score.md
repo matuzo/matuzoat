@@ -35,7 +35,7 @@ Zach Leatherman recently posted this on [twitter](https://twitter.com/zachleat/s
 
 And here’s [Vadim Makeev’s response](https://twitter.com/pepelsbey_/status/1122203926584074240) to his tweet, which inspired me to write this post.
 
-<blockquote>That would be a wonderful read! Here’s one for a11y audit:<br> \\`&lt;img src=picture.png alt=picture.png&gt;\\`</blockquote>
+<blockquote>That would be a wonderful read! Here’s one for a11y audit:<br> \\\`&lt;img src=picture.png alt=picture.png&gt;\\\`</blockquote>
 
 I thought it would be a fantastic idea to not just try to mess with as many people as possible, but get rewarded with a perfect lighthouse score on top.
 
@@ -216,6 +216,8 @@ This fifty-fifty chance is not exclusive enough for me, but we’re lucky. Windo
 ```
 
 Oh, man. This is so evil. My LinkedIn inbox will be filled with job offerings by companies like Facebook and Uber.
+
+![Windows in high contrast but the text color has the same color as the background](https://res.cloudinary.com/dp3mem7or/image/upload/v1559212676/articles/lighthouse/lighthouse_step5_2.png)
 
 [CodePen: “100%” accessible - step 5](https://s.codepen.io/matuzo/pen/Ezdpoa)
 
