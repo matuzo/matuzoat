@@ -170,7 +170,7 @@ Time for another test.
 
 <div class="lighthouse-test js-lighthouse-test">
 <button class="btn js-run-lighthouse-test"><span class="btn__inner">Run lighthouse test</span></button>
-<span class="visually-hidden js-lighthouse-status" role="alert"></span>
+<span class="visually-hidden js-lighthouse-status" role="status"></span>
 <img src="https://res.cloudinary.com/dp3mem7or/image/upload/v1559207447/articles/lighthouse/lighthouse_test.png" alt="Score: 100" />
 </div>
 
@@ -182,7 +182,7 @@ document.querySelector('.js-lighthouse-test').querySelector('.js-lighthouse-stat
 
 setTimeout(function() {
 document.querySelector('.js-lighthouse-test').classList.add('lighthouse-test--finished');
-document.querySelector('.js-lighthouse-test').querySelector('.js-lighthouse-status').textContent = "Accessibility score: 1000";
+document.querySelector('.js-lighthouse-test').querySelector('.js-lighthouse-status').textContent = "Tests finished. Accessibility score: 100.";
 }, 1000);
 });
 </script>
