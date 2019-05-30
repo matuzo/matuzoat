@@ -35,7 +35,7 @@ Zach Leatherman recently posted this on [twitter](https://twitter.com/zachleat/s
 
 And here’s [Vadim Makeev’s response](https://twitter.com/pepelsbey_/status/1122203926584074240) to his tweet, which inspired me to write this post.
 
-<blockquote>That would be a wonderful read! Here’s one for a11y audit:<br> \`<img src=picture.png alt=picture.png>\`</blockquote>
+<blockquote>That would be a wonderful read! Here’s one for a11y audit:<br> \\`&lt;img src=picture.png alt=picture.png&gt;\\`</blockquote>
 
 I thought it would be a fantastic idea to not just try to mess with as many people as possible, but get rewarded with a perfect lighthouse score on top.
 
@@ -51,19 +51,19 @@ We’ll take this simple, accessible page as a basis.
 
 Let's start nice and easy. I want to make sure that CSS is a dependency on my perfect website. To achieve that I'm adding the `hidden` attribute to the `body` element. `hidden` is the HTML equivalent to `display: none;` in CSS. 
 
-
 ```css
 <body hidden>
   ...
 </body>
 ```
 
-[ Screenshot ]
+![A blank page](https://res.cloudinary.com/dp3mem7or/image/upload/v1559206005/articles/lighthouse/lighthouse_step2.png)
 
 That alone would be enough to exclude everyone and pass the lighthouse tests, but I don't want to make it too easy on myself. I want to create a site that’s perfectly inaccessible and technically still displays content.
 So let's add come CSS and bring our content back.
 
 HTML
+
 ```html
 <head>
   <link rel="stylesheet" href="style.css">
@@ -74,6 +74,7 @@ HTML
 ```
 
 CSS
+
 ```css
 .loaded {
   display: block;
