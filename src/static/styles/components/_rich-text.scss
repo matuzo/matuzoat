@@ -88,6 +88,10 @@
     overflow: auto;
   }
 
+  .code-label {
+    margin-bottom: -4rem;
+  }
+
   *:target {
     transition: background 0.2s;
     animation: target-highlight 1.2s ease-in-out;
