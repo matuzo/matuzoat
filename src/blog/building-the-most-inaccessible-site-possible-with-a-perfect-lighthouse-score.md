@@ -318,7 +318,7 @@ The site is inaccessible to people with low and good vision, mouse, keyboard and
 If browser power users encounter a site like this, it might awaken their inner [Zero Cool](https://en.wikipedia.org/wiki/Hackers_(film)#Plot) and they try to hack the site. What I mean by _hack_ is _view the page source_.  
 To put the cherry on top of my exclusion-first site, I’m [converting the text to html entities](https://v2.cryptii.com/text/htmlentities).
 
-![https://res.cloudinary.com/dp3mem7or/image/upload/v1559215401/articles/lighthouse/lighthouse_step7.png](Text is not readable when viewing the source because it's written in HTML entities)
+![Text is not readable when viewing the source because it's written in HTML entities](https://res.cloudinary.com/dp3mem7or/image/upload/v1559215401/articles/lighthouse/lighthouse_step7.png)
 
 [CodePen: “100%” accessible - step 9](https://s.codepen.io/matuzo/pen/joeeqy)
 
