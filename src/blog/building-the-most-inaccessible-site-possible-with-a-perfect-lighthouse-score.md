@@ -35,7 +35,7 @@ Zach Leatherman recently posted this on [twitter](https://twitter.com/zachleat/s
 
 And here’s [Vadim Makeev’s response](https://twitter.com/pepelsbey_/status/1122203926584074240) to his tweet, which inspired me to write this post.
 
-<blockquote>That would be a wonderful read! Here’s one for a11y audit:<br> \\\`&lt;img src=picture.png alt=picture.png&gt;\\\`</blockquote>
+<blockquote>That would be a wonderful read! Here’s one for a11y audit:<br> \\\\\`&lt;img src=picture.png alt=picture.png&gt;\\\\\`</blockquote>
 
 I thought it would be a fantastic idea to not just try to mess with as many people as possible, but get rewarded with a perfect lighthouse score on top.
 
@@ -276,3 +276,31 @@ Let's test our code before we move on.
 <span class="visually-hidden js-lighthouse-status" role="status"></span>
 <img src="https://res.cloudinary.com/dp3mem7or/image/upload/v1559207447/articles/lighthouse/lighthouse_test.png" alt="Score: 100" />
 </div>
+
+Great! Still perfectly accessible!.
+
+We can’t use the mouse or keyboard anymore but we can still read the content above the fold.
+
+<p class="code-label"><strong>CSS</strong></p>
+
+```css
+body {
+  opacity: 0.03;
+}
+```
+
+Our page content is still present but almost invisible. Fabulous!
+
+[CodePen: “100%” accessible - step 7](https://s.codepen.io/matuzo/pen/eaPLeB)
+
+🖕 Reader mode 🖕
+
+Testing the site in different browsers, I noticed that it’s still accessible in Safari in Reader Mode if I add more paragraphs.
+
+![Safari Reader Mode](https://res.cloudinary.com/dp3mem7or/image/upload/v1559213808/articles/lighthouse/lighthouse_step6.png)
+
+As it turns out, it’s possible to disable Reader Mode by defining a small font size in the `body`.
+
+🖕 Dev Tools / View Page Source 🖕
+
+[CodePen: “100%” accessible - step 8](https://s.codepen.io/matuzo/pen/QRZVJj)
