@@ -7,7 +7,7 @@ date: 2019-05-30T07:08:19.931Z
 image: articles/lighthouse/lighthouse_sm.png
 intro: "**Google's built-in testing tool Lighthouse judges the accessibility of our websites with a score between 0 and 100. It’s laudable to try to\_get a high grading, but a score of 100 doesn’t mean that the site is perfectly accessible.\nTo prove that I carried out a little experiment.**"
 teaser: >-
-  It’s always nice to see when people post their lighthouse scores on social
+  It’s always nice to see when people post their Lighthouse scores on social
   media to highlight how well they’ve optimised their own or their client's
   website. It shows that they care about the quality of what they build.
 tags:
@@ -38,7 +38,7 @@ And here’s [Vadim Makeev’s response](https://twitter.com/pepelsbey_/status/1
 
 <blockquote>That would be a wonderful read! Here’s one for a11y audit:<br> `&lt;img src=picture.png alt=picture.png&gt;`</blockquote>
 
-I thought it would be a fantastic idea to not just try to mess with as many people as possible, but get rewarded with a perfect lighthouse score on top.
+I thought it would be a fantastic idea to not just try to mess with as many people as possible, but get rewarded with a perfect Lighthouse score on top.
 
 ## Let’s exclude as many people as possible
 
@@ -50,7 +50,7 @@ We’ll take this simple, accessible page as a basis.
 
 ### 🖕 CSS only 🖕
 
-Let's start nice and easy. I want to make sure that CSS is a dependency on my perfect website. To achieve that I'm adding the `hidden` attribute to the `body` element. `hidden` is the HTML equivalent to `display: none;` in CSS. (Checkout [Inclusively Hidden](https://www.scottohara.me/blog/2017/04/14/inclusively-hidden.html) by [Scott O’Hara](https://twitter.com/scottohara), if you want to learn more about accessible hiding.
+Let's start nice and easy. I want to make sure that CSS is a dependency on my perfect website. To achieve that I'm adding the `hidden` attribute to the `body` element. `hidden` is the HTML equivalent to `display: none;` in CSS. (Checkout [Inclusively Hidden](https://www.scottohara.me/blog/2017/04/14/inclusively-hidden.html) by [Scott O’Hara](https://twitter.com/scottohara), if you want to learn more about accessible hiding).
 
 
 <p class="code-label"><strong>HTML</strong></p>
