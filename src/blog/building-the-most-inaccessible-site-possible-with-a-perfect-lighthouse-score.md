@@ -1,8 +1,8 @@
 ---
 title: Building the most inaccessible site possible with a perfect Lighthouse score
 metadescription: >-
-  An experiment that proves that automatic accessibility testing is only the
-  first step.
+  An experiment that proves that automatic accessibility testing is only a first
+  step and that manual testing is vital.
 date: 2019-05-31T07:08:19.931Z
 image: articles/lighthouse/lighthouse_sm.png
 intro: "**Google's built-in testing tool Lighthouse judges the accessibility of our websites with a score between 0 and 100. It’s laudable to try to\_get a high grading, but a score of 100 doesn’t mean that the site is perfectly accessible.\nTo prove that I carried out a little experiment.**"
@@ -316,7 +316,7 @@ body {
 ### 🖕 View Page Source 🖕
 
 The site is inaccessible to people with low and good vision, mouse, keyboard and screen reader users.\
-If browser power users encounter a site like this, it might awaken their inner [Zero Cool](https://en.wikipedia.org/wiki/Hackers_(film)#Plot) and they try to hack the site. What I mean by _hack_ is _view the page source_.\
+If browser power users encounter a site like this, it might awaken their inner [Zero Cool](https://en.wikipedia.org/wiki/Hackers_(film)#Plot) and they try to hack the site. What I mean by _hack_ is _view the page source_.
 
 To put the cherry on top of my exclusion-first site, I’m [converting the text to html entities](https://v2.cryptii.com/text/htmlentities). [Entities](https://developer.mozilla.org/en-US/docs/Glossary/Entity) are usually used to display reserved characters, invisible characters, and characters that are difficult to type with a standard keyboard. I’m using them to obfuscate text on our site.
 
