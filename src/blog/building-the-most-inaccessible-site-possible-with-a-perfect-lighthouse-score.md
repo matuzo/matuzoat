@@ -317,6 +317,7 @@ body {
 
 The site is inaccessible to people with low and good vision, mouse, keyboard and screen reader users.\
 If browser power users encounter a site like this, it might awaken their inner [Zero Cool](https://en.wikipedia.org/wiki/Hackers_(film)#Plot) and they try to hack the site. What I mean by _hack_ is _view the page source_.\
+
 To put the cherry on top of my exclusion-first site, I’m [converting the text to html entities](https://v2.cryptii.com/text/htmlentities). [Entities](https://developer.mozilla.org/en-US/docs/Glossary/Entity) are usually used to display reserved characters, invisible characters, and characters that are difficult to type with a standard keyboard. I’m using them to obfuscate text on our site.
 
 ![Text is not readable when viewing the source because it's written in HTML entities](https://res.cloudinary.com/dp3mem7or/image/upload/v1559215401/articles/lighthouse/lighthouse_step7.png)
@@ -333,16 +334,16 @@ To wrap it up, a final test.
 
 ## Conclusion
 
-My intention with this post was not to diss lighthouse or axe-core, the engine behind lighthouse. I use both tools regularly and I’m glad I have them.\
+My intention with this post was not to diss Lighthouse or axe-core, the engine behind Lighthouse. I use both tools regularly and I’m glad I have them.\
 This post is about you and me. Scores indicate the quality of our apps and sites, but we must not trust these numbers blindly. We have to understand that automatic testing is just a first step.  
-Next time you see a high lighthouse score and you want to call it a day, read the text next to the score.
+Next time you see a high Lighthouse score and you want to call it a day, read the text next to the score.
 
 ![](https://res.cloudinary.com/dp3mem7or/image/upload/v1559207447/articles/lighthouse/lighthouse_test.png)
 
 > These checks highlight opportunities to [improve the accessibility of your web app](https://developers.google.com/web/fundamentals/accessibility/?utm_source=lighthouse&utm_medium=devtools). Only a subset of accessibility issues can be automatically detected so manual testing is also encouraged.
 
 We don’t test and optimize our sites for the good feeling a high score gives us. We’re doing it because we want to, and we have to, make sure that what we build is accessible to as many people as possible. 
-We don’t fully rely on automation when we’re designing and developing, and we should do it either when we’re testing.
+We don’t fully rely on automation when we’re designing and developing, and we shouldn't do it either when we’re testing.
 
 Thanks to [Eric](https://ericwbailey.design/) for proofreading and feedback.
 
