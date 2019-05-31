@@ -116,10 +116,10 @@ Great! The site still looks the same but in order for it to display anything at 
 
 [CodePen: “100%” accessible - step 2](https://s.codepen.io/matuzo/pen/GaYxLx)
 
-I'd say it's time for our first lighthouse test. Fingers crossed! 🤞🏼
+I'd say it's time for our first Lighthouse test. Fingers crossed! 🤞🏼
 
 <div class="lighthouse-test js-lighthouse-test">
-<button class="btn js-run-lighthouse-test"><span class="btn__inner">Run lighthouse test</span></button>
+<button class="btn js-run-lighthouse-test"><span class="btn__inner">Run Lighthouse test</span></button>
 <span class="visually-hidden js-lighthouse-status" role="status"></span>
 <img src="https://res.cloudinary.com/dp3mem7or/image/upload/v1559207447/articles/lighthouse/lighthouse_test.png" alt="Score: 100" />
 </div>
@@ -176,7 +176,7 @@ Our exclusion-first app now removes the default functionality of all keys.
 Time for another test.
 
 <div class="lighthouse-test js-lighthouse-test">
-<button class="btn js-run-lighthouse-test"><span class="btn__inner">Run lighthouse test</span></button>
+<button class="btn js-run-lighthouse-test"><span class="btn__inner">Run Lighthouse test</span></button>
 <span class="visually-hidden js-lighthouse-status" role="status"></span>
 <img src="https://res.cloudinary.com/dp3mem7or/image/upload/v1559207447/articles/lighthouse/lighthouse_test.png" alt="Score: 100" />
 </div>
@@ -271,7 +271,7 @@ This JavaScript fallback will kick in and remove click events from all elements,
 [CodePen: “100%” accessible - step 6](https://s.codepen.io/matuzo/pen/zQmJYB)
 
 <div class="lighthouse-test js-lighthouse-test">
-<button class="btn js-run-lighthouse-test"><span class="btn__inner">Run lighthouse test</span></button>
+<button class="btn js-run-lighthouse-test"><span class="btn__inner">Run Lighthouse test</span></button>
 <span class="visually-hidden js-lighthouse-status" role="status"></span>
 <img src="https://res.cloudinary.com/dp3mem7or/image/upload/v1559207447/articles/lighthouse/lighthouse_test.png" alt="Score: 100" />
 </div>
@@ -327,7 +327,7 @@ To put the cherry on top of my exclusion-first site, I’m [converting the text 
 To wrap it up, a final test.
 
 <div class="lighthouse-test js-lighthouse-test">
-<button class="btn js-run-lighthouse-test"><span class="btn__inner">Run lighthouse test</span></button>
+<button class="btn js-run-lighthouse-test"><span class="btn__inner">Run Lighthouse test</span></button>
 <span class="visually-hidden js-lighthouse-status" role="status"></span>
 <img src="https://res.cloudinary.com/dp3mem7or/image/upload/v1559207447/articles/lighthouse/lighthouse_test.png" alt="Score: 100" />
 </div>
