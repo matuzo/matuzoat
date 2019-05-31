@@ -351,5 +351,10 @@ Thanks to [Eric](https://ericwbailey.design/) for proofreading and feedback.
 
 * [Google Lighthouse](https://developers.google.com/web/tools/lighthouse/)
 * [axe-core](https://github.com/dequelabs/axe-core)
+* [Inclusively Hidden](https://www.scottohara.me/blog/2017/04/14/inclusively-hidden.html)
+* [The WebAIM Million](https://webaim.org/projects/million/)
+* [Web Fundamentals – Accessibility ](https://developers.google.com/web/fundamentals/accessibility/?utm_source=lighthouse&utm_medium=devtools)
+* [Eric W. Bailey](https://ericwbailey.design/)
+* [The A11y Project](https://a11yproject.com)
 
 &lowast; (sarcasm)
