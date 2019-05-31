@@ -15,7 +15,7 @@ tags:
   - a11y
 publication: Matuzo
 css: lighthouse
-draft: true
+draft: false
 archive: false
 ---
 ![A perfect lighthouse score for performance, accessibility, best practices and SEO](https://res.cloudinary.com/dp3mem7or/image/upload/v1559201876/articles/lighthouse/lighthousescore.png)
