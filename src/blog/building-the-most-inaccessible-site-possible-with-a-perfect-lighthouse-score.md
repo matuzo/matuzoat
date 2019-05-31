@@ -14,7 +14,7 @@ tags:
   - css
   - a11y
 publication: Matuzo
-css: lighthouse
+css: ''
 draft: false
 archive: false
 ---
