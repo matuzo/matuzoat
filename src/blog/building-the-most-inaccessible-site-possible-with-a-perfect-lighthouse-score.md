@@ -1,15 +1,15 @@
 ---
-title: Building the most inaccessible site possible with a perfect lighthouse score
+title: Building the most inaccessible site possible with a perfect Lighthouse score
 metadescription: >-
   An experiment that proves that automatic accessibility testing is only the
   first step.
 date: 2019-05-30T07:08:19.931Z
 image: articles/lighthouse/lighthouse_sm.png
-intro: "**Googles built-in testing tool lighthouse judges the accessibility of our websites with a score between 0 and 100. It’s laudable to try to\_get a high grading, but a score of 100 doesn’t mean that the site is perfectly accessible.\nTo prove that I carried out a little experiment.**"
-teaser: >
+intro: "**Google's built-in testing tool Lighthouse judges the accessibility of our websites with a score between 0 and 100. It’s laudable to try to\_get a high grading, but a score of 100 doesn’t mean that the site is perfectly accessible.\nTo prove that I carried out a little experiment.**"
+teaser: >-
   It’s always nice to see when people post their lighthouse scores on social
-  media to highlight how well they’ve optimised their own or their clients
-  website. It shows that they care about the quality of what they build. 
+  media to highlight how well they’ve optimised their own or their client's
+  website. It shows that they care about the quality of what they build.
 tags:
   - css
   - a11y
@@ -20,10 +20,11 @@ archive: false
 ---
 ![A perfect lighthouse score for performance, accessibility, best practices and SEO](https://res.cloudinary.com/dp3mem7or/image/upload/v1559201876/articles/lighthouse/lighthousescore.png)
 
-Lighthouse awards us with the number 100 in a green circle if we did an exceptional job. It’s something you can proudly share with your client or on twitter.
+Lighthouse awards us with the number 100 in a green circle if we did an exceptional job. It’s something you can proudly share with your client or on Twitter.
 
-It’s important to measure the quality of our code but it’s even more important that we interpret the scores automatic testing tools give us correctly. If lighthouse tells us that our site is 100% accessible, it doesn’t mean it is. It just means we’ve laid the groundwork for manual testing. With automatic testing alone you can’t ensure good quality.
-To prove that, I built the most inaccessible site possible with a perfect lighthouse score.
+It’s important to measure the quality of our code, but it’s even more important that we interpret the scores automatic testing tools give us correctly. If Lighthouse tells us that our site is 100% accessible, it doesn’t mean it is. It just means we’ve laid the groundwork for manual testing. Lighthouse uses the [axe-core](https://github.com/dequelabs/axe-core) accessibility testing library with a [custom set of rules](https://github.com/GoogleChrome/lighthouse/blob/ad0a747a712b815677b6ea3bcc59ee7a0883426d/lighthouse-core/gather/gatherers/accessibility.js#L26-L50) for its tests. It identifies some bad practices, but not all of them. Other practices aren’t bad per se, but can be harmful, if we misuse them.  
+ 
+With automatic testing alone you can’t ensure good quality. To prove that, I built the most inaccessible site possible with a perfect Lighthouse score. 
 
 ## Background
 
@@ -49,7 +50,8 @@ We’ll take this simple, accessible page as a basis.
 
 ### 🖕 CSS only 🖕
 
-Let's start nice and easy. I want to make sure that CSS is a dependency on my perfect website. To achieve that I'm adding the `hidden` attribute to the `body` element. `hidden` is the HTML equivalent to `display: none;` in CSS. 
+Let's start nice and easy. I want to make sure that CSS is a dependency on my perfect website. To achieve that I'm adding the `hidden` attribute to the `body` element. `hidden` is the HTML equivalent to `display: none;` in CSS. (Checkout [Inclusively Hidden](https://www.scottohara.me/blog/2017/04/14/inclusively-hidden.html) by [Scott O’Hara](https://twitter.com/scottohara), if you want to learn more about accessible hiding.
+
 
 <p class="code-label"><strong>HTML</strong></p>
 
@@ -61,8 +63,8 @@ Let's start nice and easy. I want to make sure that CSS is a dependency on my pe
 
 ![A blank page](https://res.cloudinary.com/dp3mem7or/image/upload/v1559206005/articles/lighthouse/lighthouse_step2.png)
 
-That alone would be enough to exclude everyone and pass the lighthouse tests, but I don't want to make it too easy on myself. I want to create a site that’s perfectly inaccessible and technically still displays content.
-So let's add come CSS and bring our content back.
+`hidden` hides content visually, and it removes it from the accessibility tree. That alone would be enough to exclude everyone and pass the Lighthouse tests, but I don’t want to make it too easy on myself. I want to create a site that’s perfectly inaccessible and technically still displays content.
+So let’s add some CSS and bring our content back.
 
 <p class="code-label"><strong>HTML</strong></p>
 
@@ -126,7 +128,8 @@ Perfect score on a CSS and JS only site. That's great, but we can do better.
 
 ### 🖕 Screen reader users 🖕
 
-There are many ways to exclude screen reader users. The easiest and most efficient way is to remove the whole body from the accessibility tree by adding the `aria-hidden="true"` attribute and value.
+There are many ways to exclude screen reader users. The easiest and most efficient way is to use the `aria-hidden="true"` attribute and value. This attribute is powerful and we must apply it with caution, because it removes elements from the accessibility tree. Normally, we may only use it to improve the experience for users of assistive technologies by [removing redundant or extraneous content](https://www.w3.org/WAI/PF/aria/states_and_properties#aria-hidden).
+In our website we’re putting it on the `body` element.
 
 <p class="code-label"><strong>HTML</strong></p>
 
@@ -136,13 +139,13 @@ There are many ways to exclude screen reader users. The easiest and most efficie
 </body>
 ```
 
-Screen reader users will now experience one of those _“rare”_ moments when they have to deal with an inaccessible site. <span aria-label="(sarcasm)" title="(sarcasm)">*</span>
+Screen reader users will now experience one of those [_“rare”_ moments](https://webaim.org/projects/million/) when they have to deal with an inaccessible site. <span aria-label="(sarcasm)" title="(sarcasm)">*</span>
 
 [CodePen: “100%” accessible - step 3](https://s.codepen.io/matuzo/pen/OYBZbd)
 
 ### 🖕 Keyboard users 🖕
 
-Keyboard users navigate through a page by pressing the <kbd>Tab</kbd> key to jump from one interactive element to another. Browsers show an outline around these items if they’re in focus.
+Keyboard users can navigate through a page by pressing the <kbd>Tab</kbd> key to jump from one interactive element to another. Browsers show an outline around these items if they’re in focus.
 
 ![Focus outline on a text link](https://res.cloudinary.com/dp3mem7or/image/upload/v1559208552/articles/lighthouse/lighthouse_step4.png)
 
@@ -156,7 +159,7 @@ Let’s get rid of that.
 }
 ```
 
-All it takes are 3 lines of CSS to exclude a whole user group from being able to access the site. Although, technically, they can still interact with it. They won’t see the focus indicator anymore but interactive elements are still tababble. Since this experiment is all about exclusion, let’s make sure that the keyboard can’t be used at all.
+All it takes are 3 lines of CSS to exclude a whole group of people from being able to access the site. Although, technically, they can still interact with it. They won’t see the focus indicator anymore but interactive elements are still tababble. Since this experiment is all about exclusion, let’s make sure that the keyboard can’t be used at all.
 
 <p class="code-label"><strong>JS</strong></p>
 
@@ -203,7 +206,7 @@ We can target high contrast mode users specifically by using a dedicated media f
 ```
 
 Rules in this media query only apply if High Contrast is enabled. Unfortunately, we don’t know which colors the theme uses, nor if it’s a light or dark theme. Setting the color to `#000000` on all elements might or might not work, depending on user preference.
-This fifty-fifty chance is not exclusive enough for me, but we’re lucky. Windows High Contrast colors are mapped to CSS system color keywords. This means we can use the specified colors with no need to know them. The background color is mapped to `window`.  So, let’s use the value of the background color for the text color of all elements.
+This fifty-fifty chance is not exclusive enough for me, but we’re lucky: Windows High Contrast colors are mapped to [CSS system color keywords](https://www.w3.org/wiki/CSS/Properties/color/keywords#System_Colors). We can use these system color keywords to make sure our text always matches our High Contrast Mode background color, regardless of what it is set to. The background color is mapped to `window`. So, let’s use the value of the background color for the text color of all elements.
 
 <p class="code-label"><strong>CSS</strong></p>
 
@@ -234,7 +237,7 @@ Excluding mouse users is easy, we just remove the cursor.
 }
 ```
 
-`cursor: none;` is to mouse users what `outline: none;`  is to keyboard users. Orientation is annoyingly hard but interactive elements are still clickable. Let's improve the quality of our app by decreasing the user experience once more.
+`cursor: none;` is to mouse users what `outline: none;`  is to keyboard users. Getting your bearings is initially difficult, but interactive elements are still clickable. Let's improve the quality of our app by decreasing the user experience once more.
 
 <p class="code-label"><strong>CSS</strong></p>
 
@@ -244,7 +247,7 @@ body {
 }
 ```
 
-`pointer-events: none;` frees our users from the ability to click anything on our site. This property is well supported, but if we want to make sure that this feature works on as many browsers as possible, we can apply a principle called progressive degradation™.
+`pointer-events: none;` frees our users from the ability to click anything on our site. This property is well-supported, but if we want to make sure that this feature works on as many browsers as possible, we can apply a principle called progressive degradation™.
 
 <p class="code-label"><strong>JS</strong></p>
 
@@ -266,8 +269,6 @@ removeA11y();
 This JavaScript fallback will kick in and remove click events from all elements, if the browser doesn't support the `pointer-events` property.
 
 [CodePen: “100%” accessible - step 6](https://s.codepen.io/matuzo/pen/zQmJYB)
-
-Let's test our code before we move on. 
 
 <div class="lighthouse-test js-lighthouse-test">
 <button class="btn js-run-lighthouse-test"><span class="btn__inner">Run lighthouse test</span></button>
@@ -314,9 +315,9 @@ body {
 
 ### 🖕 View Page Source 🖕
 
-The site is inaccessible to people with low and good vision, mouse, keyboard and screen reader users.  
-If browser power users encounter a site like this, it might awaken their inner [Zero Cool](https://en.wikipedia.org/wiki/Hackers_(film)#Plot) and they try to hack the site. What I mean by _hack_ is _view the page source_.  
-To put the cherry on top of my exclusion-first site, I’m [converting the text to html entities](https://v2.cryptii.com/text/htmlentities).
+The site is inaccessible to people with low and good vision, mouse, keyboard and screen reader users.\
+If browser power users encounter a site like this, it might awaken their inner [Zero Cool](https://en.wikipedia.org/wiki/Hackers_(film)#Plot) and they try to hack the site. What I mean by _hack_ is _view the page source_.\
+To put the cherry on top of my exclusion-first site, I’m [converting the text to html entities](https://v2.cryptii.com/text/htmlentities). [Entities](https://developer.mozilla.org/en-US/docs/Glossary/Entity) are usually used to display reserved characters, invisible characters, and characters that are difficult to type with a standard keyboard. I’m using them to obfuscate text on our site.
 
 ![Text is not readable when viewing the source because it's written in HTML entities](https://res.cloudinary.com/dp3mem7or/image/upload/v1559215401/articles/lighthouse/lighthouse_step7.png)
 
@@ -332,13 +333,16 @@ To wrap it up, a final test.
 
 ## Conclusion
 
-My intention with this post was not to diss lighthouse or axe-core, the engine behind lighthouse. I use both tools regularly and I’m glad I have them.  
-This post is about you and me. We have to understand that automatic testing is just a first step. Scores indicate the quality of our apps and sites, but we must not trust these numbers blindly.  
+My intention with this post was not to diss lighthouse or axe-core, the engine behind lighthouse. I use both tools regularly and I’m glad I have them.\
+This post is about you and me. Scores indicate the quality of our apps and sites, but we must not trust these numbers blindly. We have to understand that automatic testing is just a first step.  
 Next time you see a high lighthouse score and you want to call it a day, read the text next to the score.
 
 ![](https://res.cloudinary.com/dp3mem7or/image/upload/v1559207447/articles/lighthouse/lighthouse_test.png)
 
 > These checks highlight opportunities to [improve the accessibility of your web app](https://developers.google.com/web/fundamentals/accessibility/?utm_source=lighthouse&utm_medium=devtools). Only a subset of accessibility issues can be automatically detected so manual testing is also encouraged.
+
+We don’t test and optimize our sites for the good feeling a high score gives us. We’re doing it because we want to, and we have to, make sure that what we build is accessible to as many people as possible. 
+We don’t fully rely on automation when we’re designing and developing, and we should do it either when we’re testing.
 
 Thanks to [Eric](https://ericwbailey.design/) for proofreading and feedback.
 
