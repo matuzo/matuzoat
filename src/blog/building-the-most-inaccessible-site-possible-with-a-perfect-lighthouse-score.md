@@ -18,7 +18,7 @@ css: ''
 draft: false
 archive: false
 ---
-![A perfect lighthouse score for performance, accessibility, best practices and SEO](https://res.cloudinary.com/dp3mem7or/image/upload/v1559201876/articles/lighthouse/lighthousescore.png)
+![A perfect lighthouse score for performance, accessibility, best practices and SEO](/images/lighthouse/lighthousescore.png)
 
 Lighthouse awards us with the number 100 in a green circle if we did an exceptional job. It’s something you can proudly share with your client or on Twitter.
 
@@ -44,7 +44,7 @@ I thought it would be a fantastic idea to not just try to mess with as many peop
 
 We’ll take this simple, accessible page as a basis.
 
-![A page with a heading, a link, two paragraphs, a list and a simple form](https://res.cloudinary.com/dp3mem7or/image/upload/v1559205173/articles/lighthouse/lighthouse_step1.png)
+![A page with a heading, a link, two paragraphs, a list and a simple form]/images/lighthouse/lighthouse_step1.png)
 
 [CodePen: “100%” accessible - step 0](https://codepen.io/matuzo/pen/vwVRJx)
 
@@ -61,7 +61,7 @@ Let's start nice and easy. I want to make sure that CSS is a dependency on my pe
 </body>
 ```
 
-![A blank page](https://res.cloudinary.com/dp3mem7or/image/upload/v1559206005/articles/lighthouse/lighthouse_step2.png)
+![A blank page](/images/lighthouse/lighthouse_step2.png)
 
 `hidden` hides content visually, and it removes it from the accessibility tree. That alone would be enough to exclude everyone and pass the Lighthouse tests, but I don’t want to make it too easy on myself. I want to create a site that’s perfectly inaccessible and technically still displays content.
 So let’s add some CSS and bring our content back.
@@ -121,7 +121,7 @@ I'd say it's time for our first Lighthouse test. Fingers crossed! 🤞🏼
 <div class="lighthouse-test js-lighthouse-test">
 <button class="btn js-run-lighthouse-test"><span class="btn__inner">Run Lighthouse test</span></button>
 <span class="visually-hidden js-lighthouse-status" role="status"></span>
-<img src="https://res.cloudinary.com/dp3mem7or/image/upload/v1559207447/articles/lighthouse/lighthouse_test.png" alt="Score: 100" />
+<img src="/images/lighthouse/lighthouse_test.png" alt="Score: 100" />
 </div>
 
 Perfect score on a CSS and JS only site. That's great, but we can do better.
@@ -147,7 +147,7 @@ Screen reader users will now experience one of those [_“rare”_ moments](http
 
 Keyboard users can navigate through a page by pressing the <kbd>Tab</kbd> key to jump from one interactive element to another. Browsers show an outline around these items if they’re in focus.
 
-![Focus outline on a text link](https://res.cloudinary.com/dp3mem7or/image/upload/v1559208552/articles/lighthouse/lighthouse_step4.png)
+![Focus outline on a text link](/images/lighthouse/lighthouse_step4.png)
 
 Let’s get rid of that.
 
@@ -178,7 +178,7 @@ Time for another test.
 <div class="lighthouse-test js-lighthouse-test">
 <button class="btn js-run-lighthouse-test"><span class="btn__inner">Run Lighthouse test</span></button>
 <span class="visually-hidden js-lighthouse-status" role="status"></span>
-<img src="https://res.cloudinary.com/dp3mem7or/image/upload/v1559207447/articles/lighthouse/lighthouse_test.png" alt="Score: 100" />
+<img src="/images/lighthouse/lighthouse_test.png" alt="Score: 100" />
 </div>
 
 Still perfect.<br />
@@ -188,7 +188,7 @@ Okay, now it's time to get dirty.
 
 People with low vision can improve contrasts on Windows by enabling the so called [High Contrast Mode](https://developer.paciellogroup.com/blog/2016/12/windows-high-contrast-mode-the-limited-utility-of-ms-high-contrast/).
 
-![Windows with high contrasting colors. Black background and yellow text.](https://res.cloudinary.com/dp3mem7or/image/upload/v1559211531/articles/lighthouse/lighthouse_step5.png)
+![Windows with high contrasting colors. Black background and yellow text.](/images/lighthouse/lighthouse_step5.png)
 
 The whole operating system uses high contrasting colors for all applications including browsers and websites.
 
@@ -218,7 +218,7 @@ This fifty-fifty chance is not exclusive enough for me, but we’re lucky: Windo
 }
 ```
 
-![Windows in high contrast but the text color has the same color as the background](https://res.cloudinary.com/dp3mem7or/image/upload/v1559212676/articles/lighthouse/lighthouse_step5_2.png)
+![Windows in high contrast but the text color has the same color as the background](/images/lighthouse/lighthouse_step5_2.png)
 
 Oh, man. This is so evil. My LinkedIn inbox will be filled with job offerings by companies like Facebook and Uber.
 
@@ -273,7 +273,7 @@ This JavaScript fallback will kick in and remove click events from all elements,
 <div class="lighthouse-test js-lighthouse-test">
 <button class="btn js-run-lighthouse-test"><span class="btn__inner">Run Lighthouse test</span></button>
 <span class="visually-hidden js-lighthouse-status" role="status"></span>
-<img src="https://res.cloudinary.com/dp3mem7or/image/upload/v1559207447/articles/lighthouse/lighthouse_test.png" alt="Score: 100" />
+<img src="/images/lighthouse/lighthouse_test.png" alt="Score: 100" />
 </div>
 
 Great! Still perfectly accessible!
@@ -298,7 +298,7 @@ Our page content is still present but almost invisible. Fabulous!
 
 Testing the site in different browsers, I noticed that it’s still accessible in Safari in Reader Mode.
 
-![Safari Reader Mode](https://res.cloudinary.com/dp3mem7or/image/upload/v1559213808/articles/lighthouse/lighthouse_step6.png)
+![Safari Reader Mode](/images/lighthouse/lighthouse_step6.png)
 
 As it turns out, it’s possible to disable Reader Mode by defining a small font size in the `body`.
 
@@ -320,7 +320,7 @@ If browser power users encounter a site like this, it might awaken their inner [
 
 To put the cherry on top of my exclusion-first site, I’m [converting the text to html entities](https://v2.cryptii.com/text/htmlentities). [Entities](https://developer.mozilla.org/en-US/docs/Glossary/Entity) are usually used to display reserved characters, invisible characters, and characters that are difficult to type with a standard keyboard. I’m using them to obfuscate text on our site.
 
-![Text is not readable when viewing the source because it's written in HTML entities](https://res.cloudinary.com/dp3mem7or/image/upload/v1559215401/articles/lighthouse/lighthouse_step7.png)
+![Text is not readable when viewing the source because it's written in HTML entities](/images/lighthouse/lighthouse_step7.png)
 
 [CodePen: “100%” accessible - step 9](https://s.codepen.io/matuzo/pen/joeeqy)
 
@@ -329,7 +329,7 @@ To wrap it up, a final test.
 <div class="lighthouse-test js-lighthouse-test">
 <button class="btn js-run-lighthouse-test"><span class="btn__inner">Run Lighthouse test</span></button>
 <span class="visually-hidden js-lighthouse-status" role="status"></span>
-<img src="https://res.cloudinary.com/dp3mem7or/image/upload/v1559207447/articles/lighthouse/lighthouse_test.png" alt="Score: 100" />
+<img src="/images/lighthouse/lighthouse_test.png" alt="Score: 100" />
 </div>
 
 ## Conclusion
@@ -338,7 +338,7 @@ My intention with this post was not to diss Lighthouse or axe-core, the engine b
 This post is about you and me. Scores indicate the quality of our apps and sites, but we must not trust these numbers blindly. We have to understand that automatic testing is just a first step.  
 Next time you see a high Lighthouse score and you want to call it a day, read the text next to the score.
 
-![](https://res.cloudinary.com/dp3mem7or/image/upload/v1559207447/articles/lighthouse/lighthouse_test.png)
+![](/images/lighthouse/lighthouse_test.png)
 
 > These checks highlight opportunities to [improve the accessibility of your web app](https://developers.google.com/web/fundamentals/accessibility/?utm_source=lighthouse&utm_medium=devtools). Only a subset of accessibility issues can be automatically detected so manual testing is also encouraged.
 
