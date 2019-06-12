@@ -20,6 +20,8 @@ archive: false
 ---
 ![A perfect lighthouse score for performance, accessibility, best practices and SEO](/images/lighthouse/lighthousescore.png)
 
+*Disclaimer: This post is not about lighthouse, other testing tools perform similarly. It's about us developers and our responsibility to not blindly rely on automatic testing.*
+
 Lighthouse awards us with the number 100 in a green circle if we did an exceptional job. It’s something you can proudly share with your client or on Twitter.
 
 It’s important to measure the quality of our code, but it’s even more important that we interpret the scores automatic testing tools give us correctly. If Lighthouse tells us that our site is 100% accessible, it doesn’t mean it is. It just means we’ve laid the groundwork for manual testing. Lighthouse uses the [axe-core](https://github.com/dequelabs/axe-core) accessibility testing library with a [custom set of rules](https://github.com/GoogleChrome/lighthouse/blob/ad0a747a712b815677b6ea3bcc59ee7a0883426d/lighthouse-core/gather/gatherers/accessibility.js#L26-L50) for its tests. It identifies some bad practices, but not all of them. Other practices aren’t bad per se, but can be harmful, if we misuse them.  
@@ -340,7 +342,11 @@ Next time you see a high Lighthouse score and you want to call it a day, read th
 
 ![](/images/lighthouse/lighthouse_test.png)
 
-> These checks highlight opportunities to [improve the accessibility of your web app](https://developers.google.com/web/fundamentals/accessibility/?utm_source=lighthouse&utm_medium=devtools). Only a subset of accessibility issues can be automatically detected so manual testing is also encouraged.
+> These checks highlight opportunities to [improve the accessibility of your web app](https://developers.google.com/web/fundamentals/accessibility/). Only a subset of accessibility issues can be automatically detected so manual testing is also encouraged.
+
+Below that paragraph, you'll find a list of additional items you should test manually and a link to a page that explains [How To Do an Accessibility Review](https://developers.google.com/web/fundamentals/accessibility/how-to-review).
+
+![A list of recommendations like "Headings don't skip levels" or "The page has a logical tab order"](/images/lighthouse/lighthouse_manual.png)
 
 We don’t test and optimize our sites for the good feeling a high score gives us. We’re doing it because we want to, and we have to, make sure that what we build is accessible to as many people as possible. 
 We don’t fully rely on automation when we’re designing and developing, and we shouldn't do it either when we’re testing.
@@ -358,3 +364,6 @@ Thanks to [Eric](https://ericwbailey.design/) for proofreading and feedback.
 * [The A11y Project](https://a11yproject.com)
 
 &lowast; (sarcasm)
+
+## Update June 12th
+Added a paragraph about manual testing recommendations provided by lighthouse. 
