@@ -20,8 +20,6 @@ archive: false
 ---
 ![A perfect lighthouse score for performance, accessibility, best practices and SEO](/images/lighthouse/lighthousescore.png)
 
-*Disclaimer: This post is not about lighthouse, other testing tools perform similarly. It's about us developers and our responsibility to not blindly rely on automatic testing.*
-
 Lighthouse awards us with the number 100 in a green circle if we did an exceptional job. It’s something you can proudly share with your client or on Twitter.
 
 It’s important to measure the quality of our code, but it’s even more important that we interpret the scores automatic testing tools give us correctly. If Lighthouse tells us that our site is 100% accessible, it doesn’t mean it is. It just means we’ve laid the groundwork for manual testing. Lighthouse uses the [axe-core](https://github.com/dequelabs/axe-core) accessibility testing library with a [custom set of rules](https://github.com/GoogleChrome/lighthouse/blob/ad0a747a712b815677b6ea3bcc59ee7a0883426d/lighthouse-core/gather/gatherers/accessibility.js#L26-L50) for its tests. It identifies some bad practices, but not all of them. Other practices aren’t bad per se, but can be harmful, if we misuse them.  
