@@ -44,7 +44,7 @@ I thought it would be a fantastic idea to not just try to mess with as many peop
 
 We’ll take this simple, accessible page as a basis.
 
-![A page with a heading, a link, two paragraphs, a list and a simple form]/images/lighthouse/lighthouse_step1.png)
+![A page with a heading, a link, two paragraphs, a list and a simple form](/images/lighthouse/lighthouse_step1.png)
 
 [CodePen: “100%” accessible - step 0](https://codepen.io/matuzo/pen/vwVRJx)
 
