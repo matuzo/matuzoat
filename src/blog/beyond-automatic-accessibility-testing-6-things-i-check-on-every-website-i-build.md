@@ -62,7 +62,9 @@ This is an important check because it will tell you if parts of your design work
 
 > Underline your fucking links you sociopaths.
 
-Heydon Pickering
+\- Heydon Pickering
+
+![The Smashing Magazine website works in black and white.](https://res.cloudinary.com/dp3mem7or/image/upload/v1571204684/articles/a11y-test/a11y_tips_step5.png)
 
 You don’t have to install a browser extension, you can also use [CSS to achieve a similar effect](https://github.com/matuzo/a11y-tests.css).
 
@@ -76,14 +78,13 @@ body {
 
 Put your mouse away and tab through the page and see if you can use every single part of the site without a mouse/touch pad. The <kbd>tab</kbd> key is a powerful testing tool, it will tell you a lot about your site:
 
-* Do you see which item is currently focused? No? Use `:focus{}`, `:focus-within{}`, or `:focus-visible{}` to style elements in their focus state.
-* Is everything focusable that should be? No? Work on your HTML. You're probably using `<div>`, `<span>`, `<svg>` only, etc. where you should use `<button>` or `<a>`.
-* Does nothing happen when you press <kbd>Enter</kbd> or <kbd>Space</kbd> on a `button? You're probably not using an HTML`<button>`or`<input type="button">`
-* Do you have to tab through a lot of elements before you can reach a certain part of your UI? You probably want to implement [skip links](https://webaim.org/techniques/skipnav/).
-* When you press a button and a modal/dialog pops up, can you access its contents immediately? No? You probably have to shift focus from the button to the modal.
-* Does the focus indicator suddenly disappear while you keep tabbing? It's likely that you're focusing off-screen items. Hide them correctly. `height: 0`, `transform: translateX(-100%)`, etc. don't remove items from tab order, `display: none;` does.
-* Does the focus indicator skip around a lot? Most of the time it's because visual order doesn't match DOM order. Try to avoid reordering logical content and don't use higher values than `0` as a value in the `tabindex` attribute.
-* Are parts of your UI only accessible when you hover over them with your mouse? Besides `:hover {}`, use `:focus {}` in CSS and/or the focus event in Javascript.
-* Are only parts of your JS components accessible with the keyboard? Read the WAI-ARIA Authoring Practices to learn how to build common patterns correctly and make them accessible to everyone.
+* Are focus styles clearly visible?
+* Is everything focusable that should be?
+* Are your buttons real `<button>`s?
+* Is the overall UX using a keyboard great?
+* Are you managing focus correctly?
+* Do you hide and show elements correctly?
+* Does visual order match DOM order?
+* Can you use custom JS components without a mouse?
 
 That’s not the end of the story. There are more things that you should check, but that’s it for now. I’ll share more in another post. :)
