@@ -12,3 +12,4 @@ _site/
 
 # Misc
 .DS_Store
+.env
