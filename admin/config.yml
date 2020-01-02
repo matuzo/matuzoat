@@ -76,7 +76,7 @@ collections:
     fields: # The fields for each document, usually in front matter
       - { label: 'Title', name: 'title', widget: 'string' }
       - { label: 'Link', name: 'link', widget: 'string' }
-      - { label: 'Date', name: 'date', widget: 'date',  format: "YYYY-MM-DD" }
+      - { label: 'Date', name: 'date', widget: 'date',  format: "YYYY-MM" }
       - { label: 'Category', 
           name: 'link',
           widget: 'select',
