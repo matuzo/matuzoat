@@ -63,7 +63,7 @@ module.exports = {
 
   bookmarks: collection => {
     return collection.getAllSorted().filter(function(item) {
-      return item.inputPath.match(/^\.\/bookmarks\//) !== null;
+      return item.inputPath.match(/^\.\/src\/bookmarks\//) !== null;
     });
   },
 

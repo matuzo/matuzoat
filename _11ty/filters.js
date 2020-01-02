@@ -17,6 +17,16 @@ module.exports = {
     return date.toFormat("LLLL d., yyyy");
   },
 
+  // Date formatting (human readable)
+  readableMonth: dateObj => {
+    let date = DateTime.fromJSDate(dateObj);
+
+    date = DateTime.fromFormat(dateObj.split(" GMT")[0], "ccc LLL dd y hh:mm:ss");
+
+
+    return date.toFormat("LLLL, yyyy");
+  },
+
   // input to string
   stringify: input => {
     return input + "";

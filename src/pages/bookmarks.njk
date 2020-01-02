@@ -5,12 +5,11 @@ navtitle: Bookmarks
 permalink: /bookmarks/index.html
 date: 1987-01-01
 ---
-<p>Articles and videos I've enjoyed reading or watching.</p>
+<p>Articles and books I've enjoyed reading.</p>
   {% for day, ressources in collections.bookmarks | reverse | groupby("date") %}
-    <div class="bookmarks__day">
       <h2>
         <time datetime="{{ day|machineDate }}" class="date">
-          <span class="date__fragment">{{ day }}</span>
+          <span class="date__fragment">{{ day | readableMonth }}</span>
         </time>
       </h2>
       
@@ -21,5 +20,4 @@ date: 1987-01-01
         </li>
       {% endfor %}
       </ul>
-    </div>
   {% endfor %}
