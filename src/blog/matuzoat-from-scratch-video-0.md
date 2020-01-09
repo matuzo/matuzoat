@@ -4,7 +4,7 @@ metadescription: >-
   I'm redesigning and building my website from scratch. In this first video I
   introduce myself and I describe what my plans are for the following weeks and
   months.
-date: 2019-10-15T07:06:26.546Z
+date: 2020-01-09T07:06:26.546Z
 image: videos/video1.jpg
 teaser: >-
   I'm redesigning and building my website from scratch. In this first video I
