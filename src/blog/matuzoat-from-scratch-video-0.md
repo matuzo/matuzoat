@@ -1,12 +1,17 @@
 ---
-title: >-
-  matuzo.at from scratch #0 - introduction
+title: 'matuzo.at from scratch #0 - introduction'
 metadescription: >-
-  I'm redesigning and building my website from scratch. In this first video I introduce myself and I describe what my plans are for the following weeks and months.
+  I'm redesigning and building my website from scratch. In this first video I
+  introduce myself and I describe what my plans are for the following weeks and
+  months.
 date: 2019-10-15T07:06:26.546Z
-image: articles/a11y-test/a11y_tips_step1.jpg
+image: /static/img/uploads/video1.jpg
 teaser: >-
-  I'm redesigning and building my website from scratch. In this first video I introduce myself and I describe what my plans are for the following weeks and months.  Watch it to see if this series of videos is for you or not.
+  I'm redesigning and building my website from scratch. In this first video I
+  introduce myself and I describe what my plans are for the following weeks and
+  months.  Watch it to see if this series of videos is for you or not.
+tags:
+  - video
 publication: Matuzo
 draft: false
 archive: false
