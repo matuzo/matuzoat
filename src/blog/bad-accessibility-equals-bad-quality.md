@@ -38,8 +38,10 @@ No, because the developers decided to wrap these images in `div`s and link them 
 ﻿
 ### Semantic HTML is beneficial for everyone.
 ﻿
-Using `a` instead of `div` gives links a semantic meaning, users more options when using a mouse and it makes links keyboard focusable. Although – and this is the paradox – the list was keyboard accessible, because they made their `div`-links focusable with JavaScript instead of taking advantage of the browsers native behaviour.  
+Using `a` instead of `div` gives links a semantic meaning, users more options when using a mouse and it makes links keyboard focusable. Although – and this is the paradox – the list was keyboard accessible, because they made their `div`-links focusable with JavaScript instead of taking advantage of the browsers native behaviour.     
 ﻿
-This is just a minor problem and others have to deal with much bigger barriers every day, but this example is characteristic for how carelessly we sometimes treat our users.  
+
+This is just a minor problem and others have to deal with much bigger barriers every day, but this example is characteristic for how carelessly we sometimes treat our users.     
 ﻿
+
 Bad accessibility affects all of us at some point, please (re)learn HTML and take advantage of its fantastic features.
