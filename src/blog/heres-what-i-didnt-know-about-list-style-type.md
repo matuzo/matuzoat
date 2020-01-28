@@ -11,7 +11,7 @@ publication: Matuzo
 draft: false
 archive: false
 ---
-## list-style-type excepts a string value
+## list-style-type accepts a string value
 
 In Chrome  79+, Firefox 39+, and Opera 66+ it's possible to define a string value as the bullet of an ordered or unordered list, which means that emojis work, as well. 
 
