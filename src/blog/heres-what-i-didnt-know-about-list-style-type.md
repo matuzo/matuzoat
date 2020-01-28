@@ -3,6 +3,7 @@ title: 'Here’s what I didn’t know about list-style-type'
 metadescription: >-
   In Chrome  79+, Firefox 39+, and Opera 66+ it's possible to define a string value as the bullet of an ordered or unordered list.
 date: 2020-01-28T06:58:54.969Z
+image: articles/sm_list-style-type.png
 teaser: "At the CSS-in-Vienna meet-up last week [Ulrich](https://twitter.com/udobiasch) told me that starting with Chrome 79 it's possible to define a string value for the `list-style-type` property. I was surprised because I thought `::marker` was supposed to solve that. That's why I did some research, here's what I learned."
 tags:
   - css
