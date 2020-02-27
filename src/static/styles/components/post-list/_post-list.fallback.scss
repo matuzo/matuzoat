@@ -19,6 +19,17 @@
     -ms-grid-row: 1;
   }
 
+  &__header {
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 2;
+  }
+
+  &__teaser {
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 2;
+    -ms-grid-row: 1;
+  }
+
   &__date {
     display: block;
     min-height: $post-list-image-size;
