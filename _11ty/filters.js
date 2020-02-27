@@ -3,7 +3,13 @@ const MarkdownIt = require('markdown-it');
 module.exports = {
   // Date formatting (machine readable)
   machineDate: dateObj => {
-    return DateTime.fromJSDate(dateObj).toFormat("yyyy-MM-ddT00:00:00+00:00");
+    let date = DateTime.fromJSDate(dateObj);
+
+    if (typeof dateObj === 'string') {
+      date = DateTime.fromFormat(dateObj.split(" GMT")[0], "yyyy-MM-dd");
+    }
+
+    return date.toFormat("yyyy-MM-dd");
   },
 
   // Date formatting (human readable)
