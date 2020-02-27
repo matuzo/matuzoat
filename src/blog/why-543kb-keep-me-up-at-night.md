@@ -8,7 +8,7 @@ teaser: >-
 tags:
   - a11y
 publication: Matuzo
-image: articles/sm_543.png
+image: articles/sm_543kb.png
 draft: false
 archive: false
 ---
