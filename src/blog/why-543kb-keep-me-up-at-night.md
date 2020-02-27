@@ -4,7 +4,7 @@ metadescription: “It’s online and works in most browsers” is not enough - 
 date: 2020-02-26T06:41:15.944Z
 intro: ''
 teaser: >-
-  The question how good *good enough* is and at which point a website is ready to go online is keeping me busy lately. The web is in a bad shape and it’s because we’re making it too easy on ourselves. *“It’s online and works in most browsers”* is not enough - we have to be much more considerate of what we’re putting online. 
+  The question how good *good enough* is and at which point a website is ready to go online is keeping me busy lately. The web is in bad shape and it’s because we’re making it too easy on ourselves. *“It’s online and works in most browsers”* is not enough - we have to be much more considerate of what we’re putting online. 
 tags:
   - a11y
 publication: Matuzo
