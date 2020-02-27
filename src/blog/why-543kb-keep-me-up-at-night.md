@@ -243,3 +243,5 @@ Don’t build throw-away websites, build websites that last.
 * [Innovation Can’t Keep the Web Fast](https://css-tricks.com/innovation-cant-keep-the-web-fast/)
 * [5G Will Definitely Make the Web Slower, Maybe](https://www.filamentgroup.com/lab/5g/)
 * [Keeping it simple with CSS that scales](https://hankchizljaw.com/wrote/keeping-it-simple-with-css-that-scales/)
+
+Big thanks to [Max](https://mxb.at/) and [Sven](http://maddesigns.de/) for helping me with this article. ❤️
