@@ -218,7 +218,7 @@ Here are a few things I (as a front-end dev) believe have to happen before a web
 
 There’s more, but if we all did at least that, our users would be much happier. I know you might be thinking: *“We don’t have the budget for that.”*. But that’s the point: you should have it. *“It’s online and works in most browsers”* is not enough. We have to make performance, accessibility, usability, and user experience part of the conversation.
 
-By the time you’ve reached this paragraph, you’ve downloaded 1.15 MB of data. Can that be improved? Most definitely. Is this website 100% accessible? Probably not. Did you get the best possible user experience? I guess no, I don’t know shit about UX.  
+By the time you’ve reached this paragraph, you’ve downloaded 837 KB of data. Can that be improved? Most definitely. Is this website 100% accessible? Probably not. Did you get the best possible user experience? I guess no, I don’t know shit about UX.  
 If my own website isn’t perfect, who am I to lecture you? Well it’s not about publishing perfect websites. That’s not possible for many different reasons, but it’s important that we’re conscious of what we’re shipping to our users. It’s important that we care about our users and about the quality of our products and that our standards become higher than they are at the moment. 
 
 
