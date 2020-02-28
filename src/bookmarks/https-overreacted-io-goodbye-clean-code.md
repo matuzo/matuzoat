@@ -1,5 +1,5 @@
 ---
-title: 'https://overreacted.io/goodbye-clean-code/'
+title: 'Goodbye, Clean Code'
 link: 'https://overreacted.io/goodbye-clean-code/'
 date: 2020-01
 ---
