@@ -136,7 +136,7 @@ Another thing worth considering is splitting up the main CSS file by media featu
 <!-- Downloaded and render blocking -->
 <link rel="stylesheet" href="main.css" />
 
-<!-- Downloaded and but not render blocking if media query doesn’t match -->
+<!-- Downloaded but not render blocking if media query doesn’t match -->
 <link rel="stylesheet" href="medium.css" media="(min-width: 768px)" />
 <link rel="stylesheet" href="large.css" media="(min-width: 1024px)" />
 <link rel="stylesheet" href="print.css" media="print" />
@@ -154,7 +154,7 @@ It’s been years since I’ve used services like Font Awesome, SVGs have so muc
 
 ### JavaScript and bundle sizes
 
-There are 22 JS files with a total file size of 320 KB (886 KB compressed). This is way too much considering that there’s only a navigation and a share button on this page.
+There are 22 JS files with a total file size of 320 KB (886 KB uncompressed). This is way too much considering that there’s only a navigation and a share button on this page.
 
 I will not bash JavaScript, I love JS and I enjoy writing it. I’m not great at it though, and I’d argue that most of us aren’t. Lack of knowledge paired with a language that can easily fuck up performance is dangerous. That’s why I’m very cautious of what I’m doing and which 3rd party plugins I’m using.
 
