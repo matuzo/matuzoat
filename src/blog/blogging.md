@@ -3,7 +3,6 @@ title: 'Blogging is one of the best ways of learning'
 metadescription: >-
   I’ve learned so much more in the last 4-5 years compared to the years before, just because I wrote and talked about the topics that interested me and not about things I already knew.
 date: 2020-04-19T06:58:54.969Z
-image: articles/sm_list-style-type.png
 teaser: "I can’t stress enough how important it is to blog if you want to become better at web development. You learn so much more by explaining something in your own words than by just reading and copying & pasting."
 tags:
   - css
