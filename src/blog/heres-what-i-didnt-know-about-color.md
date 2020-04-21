@@ -166,9 +166,9 @@ HSL (Hue, Saturation, Lightness) is an alternative representation of the RGB col
 ### Hue
 H is an angle of the color circle. It can be defined using 4 different units.
 
-`deg` (or unitless): a value between 0 and 360. Red: 0deg, Green: 120deg, Blue: 240deg.
-`rad`: a value between 0 and 2π (~6.2832). (Red: 0rad, Green: 2.0944rad, Blue: 4.1888rad)
-`grad`: a value between 0 and 400. (Re: 0grad, Green: 133.33grad, Blue: 266.66grad)
+`deg` (or unitless): a value between 0 and 360. Red: 0deg, Green: 120deg, Blue: 240deg.  
+`rad`: a value between 0 and 2π (~6.2832). (Red: 0rad, Green: 2.0944rad, Blue: 4.1888rad)  
+`grad`: a value between 0 and 400. (Re: 0grad, Green: 133.33grad, Blue: 266.66grad)  
 `turn`: a value between 0 and 1. (Re: 0grad, Green: 0.333turn, Blue: 0.6666turn)
 
 
