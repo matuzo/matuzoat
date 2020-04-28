@@ -14,7 +14,7 @@ archive: false
 
 ![4 Nokia 3310 phones in blue, read, gray, and yellow](https://res.cloudinary.com/dp3mem7or/image/upload/c_scale,q_90,w_800/v1588058813/articles/progressive/nokia_phones.jpg)
 
-Screenshot: <https://www.nokia.com/phones/en_int/nokia-3310>.
+Screenshot: [Nokia](https://www.nokia.com/phones/en_int/nokia-3310).
 
 ## Opera Mini
 You can access the worldwide web on the Nokia 3310 with [Opera Mini](https://www.opera.com/de/mobile). There are different versions of the Opera Mini browser, how it renders pages depends on the operating system, device, and settings you’re using.
@@ -49,7 +49,7 @@ I didn’t have to change much because I follow the Progressive Enhancement prin
 
 ![A peanut M&M whith each layer labelled. The nut represents  content, the chocolate layer presentation and the sugar coating JavaScript.](https://res.cloudinary.com/dp3mem7or/image/upload/c_scale,q_100,w_540/v1588060675/articles/progressive/m-m.jpg)
 
-Image: <https://alistapart.com/article/understandingprogressiveenhancement/>
+Image: [A List Apart](https://alistapart.com/article/understandingprogressiveenhancement/)
 
 > Start with your content peanut, marked up in rich, semantic (X)HTML. Coat that content with a layer of rich, creamy CSS. Finally, add JavaScript as the hard candy shell to make a wonderfully tasty treat (and keep it from melting in your hands).
 
