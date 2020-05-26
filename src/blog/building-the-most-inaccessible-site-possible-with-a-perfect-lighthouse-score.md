@@ -50,7 +50,7 @@ We’ll take this simple, accessible page as a basis.
 
 ### 🖕 CSS only 🖕
 
-Let's start nice and easy. I want to make sure that CSS is a dependency on my perfect website. To achieve that I'm adding the `hidden` attribute to the `body` element. `hidden` is the HTML equivalent to `display: none;` in CSS. (Checkout [Inclusively Hidden](https://www.scottohara.me/blog/2017/04/14/inclusively-hidden.html) by [Scott O’Hara](https://twitter.com/scottohara), if you want to learn more about accessible hiding).
+Let’s start nice and easy. I want to make sure that CSS is a dependency on my perfect website. To achieve that I'm adding the `hidden` attribute to the `body` element. `hidden` is the HTML equivalent to `display: none;` in CSS. (Checkout [Inclusively Hidden](https://www.scottohara.me/blog/2017/04/14/inclusively-hidden.html) by [Scott O’Hara](https://twitter.com/scottohara), if you want to learn more about accessible hiding).
 
 
 <p class="code-label"><strong>HTML</strong></p>
@@ -237,7 +237,7 @@ Excluding mouse users is easy, we just remove the cursor.
 }
 ```
 
-`cursor: none;` is to mouse users what `outline: none;`  is to keyboard users. Getting your bearings is initially difficult, but interactive elements are still clickable. Let's improve the quality of our app by decreasing the user experience once more.
+`cursor: none;` is to mouse users what `outline: none;`  is to keyboard users. Getting your bearings is initially difficult, but interactive elements are still clickable. Let’s improve the quality of our app by decreasing the user experience once more.
 
 <p class="code-label"><strong>CSS</strong></p>
 
@@ -280,7 +280,7 @@ Great! Still perfectly accessible!
 
 ### 🖕 Readability 🖕
 
-We can’t use the mouse or keyboard anymore but we can still read the content above the fold. Let's do something about that.
+We can’t use the mouse or keyboard anymore but we can still read the content above the fold. Let’s do something about that.
 
 <p class="code-label"><strong>CSS</strong></p>
 

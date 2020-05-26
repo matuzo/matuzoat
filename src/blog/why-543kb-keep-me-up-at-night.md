@@ -89,9 +89,9 @@ Now you might think, “*Dude, chill. 543 KB? That’s not bad, even on a 3G con
 
 ## Why 543 KB might be bad
 
-Yes, I know, it depends. 543 KB aren't always bad, but on that specific page there's only a single image (the logo ~20 KB) and a single paragraph. So why then is the page still relatively large, where are the remaining 523 KB coming from? 
+Yes, I know, it depends. 543 KB aren't always bad, but on that specific page there’s only a single image (the logo ~20 KB) and a single paragraph. So why then is the page still relatively large, where are the remaining 523 KB coming from? 
 
-Let's break it up and see what we could take into account when we evaluate the total transferred bytes. 
+Let’s break it up and see what we could take into account when we evaluate the total transferred bytes. 
 
 ### Page weight
 Even in times of 4G or 5G, optimizing for fast download is important. People don’t always surf the web under the best conditions. Build your website for someone who visits it at Starbucks using Starbucks WIFI and not for someone who’s connected to their own fast internet at home.

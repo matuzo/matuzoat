@@ -16,7 +16,7 @@ I overcame my fear of writing and speaking, because I realized that…
 2. You don’t have to create cool demos or present smart hacks. **Most people are looking for actionable advice**, not next level shit or eye candy.
 3. It doesn’t matter how many people read your blog. **Someone somewhere will be glad you wrote that article**.
 4. **Talk about what interests you, not about what you believe others will like**. Most of my talks and articles are about “basic” HTML and CSS, because that's what I like. 
-5. **Don’t be afraid to write/speak in a foreign language.** I speak English with a strong accent and there are probably many mistakes in this tweet alone, but guess what, most people don’t care. My English isn't perfect, but I gave a talk in Toronto and people understood me…<br>
+5. **Don’t be afraid to write/speak in a foreign language.** I speak English with a strong accent and there are probably many mistakes in this tweet alone, but guess what, most people don’t care. My English isn’t perfect, but I gave a talk in Toronto and people understood me…<br>
 …at least I hope they did. 😁
 6. **It’s okay to make mistakes.** If you or someone else finds an error, fix it, explain what and why you’ve changed it and move on.
 7. **Don’t be afraid of what others might say or think.** Some people are assholes (ignore), but most people are nice. 

@@ -9,7 +9,7 @@ teaser: >-
 
   **I thought I got everything figured out, but when I tried it on a website a
   colleague has recently made, nothing worked as expected. No matter what we
-  did, the layout didn't look and work like it did in my demo. That got me
+  did, the layout didn’t look and work like it did in my demo. That got me
   thinking and I started to doubt that I knew what flex-grow was all about.**
 tags:
   - css

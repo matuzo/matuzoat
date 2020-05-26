@@ -4,7 +4,7 @@ metadescription: >-
   In Chrome  79+, Firefox 39+, and Opera 66+ it's possible to define a string value as the bullet of an ordered or unordered list.
 date: 2020-04-19T06:58:54.969Z
 image: articles/sm_color.png
-teaser: "This is part 2 of my series [Here’s what I didn’t know about…](/blog/heres-what-i-didnt-know/) in which I try to learn new things about CSS. This time I'm trying to find out what I didn't know about the `color` property."
+teaser: "This is part 2 of my series [Here’s what I didn’t know about…](/blog/heres-what-i-didnt-know/) in which I try to learn new things about CSS. This time I'm trying to find out what I didn’t know about the `color` property."
 tags:
   - css
 publication: Matuzo
@@ -153,7 +153,7 @@ input {
 }
 ```
 
-<div class="div-color"><p style="columns: 3; column-rule: solid;">I didn't know that column-rule exists. How did I miss that?</p></div>
+<div class="div-color"><p style="columns: 3; column-rule: solid;">I didn’t know that column-rule exists. How did I miss that?</p></div>
 
 Now that I've written it down, it absolutely makes sense and I guess I subconsciously knew how most of the properties behave, but I just wasn't aware. Now I am. :)
 

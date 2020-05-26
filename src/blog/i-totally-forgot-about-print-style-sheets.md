@@ -57,7 +57,7 @@ Alternatively you can embed your print styles in HTML, but this will give you an
 
 You don’t have to print a page every time you make a small change. Depending on your browser you can export the page as a PDF, show a print preview or even debug directly in the browser.
 
-**Update November 6, 2019**: Here's a detailed post ([Can you view print stylesheets applied directly in the browser? ](https://css-tricks.com/can-you-view-print-stylesheets-applied-directly-in-the-browser/)) on how to emulate print styles in 2019 by [Chris](https://twitter.com/chriscoyier).
+**Update November 6, 2019**: Here’s a detailed post ([Can you view print stylesheets applied directly in the browser? ](https://css-tricks.com/can-you-view-print-stylesheets-applied-directly-in-the-browser/)) on how to emulate print styles in 2019 by [Chris](https://twitter.com/chriscoyier).
 
 For debugging print styles in Firefox open the *Developer Toolbar* (Shift + F2 or Tools > Web Developer > Developer Toolbar) and enter media emulate print in the input field at the bottom of the browser window and press enter. The active tab will act as if the *media type* was print until you close it or refresh the page. *(**Update October 20, 2018**: This doesn’t work anymore in Firefox 63+ since the Developer Toolbar has been removed)*
 

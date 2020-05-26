@@ -8,7 +8,7 @@ image: articles/codepensm.jpg
 intro: ''
 teaser: >-
   I'm a [huge fan](https://xkcd.com/1378/) of [CodePen](https://codepen.io/)
-  (No, they didn't pay me to write this). I'm using it for prototyping,
+  (No, they didn’t pay me to write this). I'm using it for prototyping,
   experimenting, sharing code, and in my latest blog post, [The Dark Side of the
   Grid](https://www.matuzo.at/blog/the-dark-side-of-the-grid/), I'm also making
   use of their [Embedded Pens](https://codepen.io/embeds/).
@@ -41,9 +41,9 @@ archive: false
 Before I tell you where I see room for improvement, I want to highlight what they did well.
 
 * You can customize colors and make sure that [contrast ratios are high enough](https://webaim.org/resources/contrastchecker/). 
-* There's a click-to-load option. Pens can be in a preview state where they need to be clicked to loaded, which is good for performance.
+* There’s a click-to-load option. Pens can be in a preview state where they need to be clicked to loaded, which is good for performance.
 * All buttons and links in Pens are HTML `<button>` and `<a>` elements with actual text (What a time we live in that this makes me happy).
-* Embedded Pens are `iframe`s. There's a `title` attribute on each `iframe` with the title of the Pen as a value. This is important because screen readers announce this value when the `iframe` is focussed. If the attribute is omitted, VoiceOver for example, falls back to the `name` attribute. This can be annoying, especially if the value of the `name` is a long hash.
+* Embedded Pens are `iframe`s. There’s a `title` attribute on each `iframe` with the title of the Pen as a value. This is important because screen readers announce this value when the `iframe` is focussed. If the attribute is omitted, VoiceOver for example, falls back to the `name` attribute. This can be annoying, especially if the value of the `name` is a long hash.
 
 <figure class="figure">
   <div class="content__video-wrapper">
@@ -122,7 +122,7 @@ This is how the Pen looks like in Firefox:
 
 ### Skip links
 
-Let's say, you're not interested in the embedded Pen. As a mouse user, you just keep scrolling. As a keyboard user, you have to press <kbd>Tab</kbd> at least 9 times until you get to the next focusable element. Or worse, you get trapped in the Pen. This happens if the Pen is editable. You can pass the buttons in the top bar but the journey ends as soon as you get to the `pre` element where the code is displayed. Once you're in there, there's no way of getting out. 
+Let’s say, you're not interested in the embedded Pen. As a mouse user, you just keep scrolling. As a keyboard user, you have to press <kbd>Tab</kbd> at least 9 times until you get to the next focusable element. Or worse, you get trapped in the Pen. This happens if the Pen is editable. You can pass the buttons in the top bar but the journey ends as soon as you get to the `pre` element where the code is displayed. Once you're in there, there’s no way of getting out. 
 
 <figure class="figure">
   <div class="content__video-wrapper">
@@ -131,10 +131,10 @@ Let's say, you're not interested in the embedded Pen. As a mouse user, you just 
     </div>
   </div>
 
-  <figcaption>There's no way of escaping the code area in an editable Pen.</figcaption>
+  <figcaption>There’s no way of escaping the code area in an editable Pen.</figcaption>
 </figure>
 
-We can't fix that issue but we can give users more options. You might have heard of skip links. If not, please read [Skip links are important](https://knowbility.org/blog/2019/skip-links/) by [Nicolas Steenhout](https://twitter.com/vavroom).
+We can’t fix that issue but we can give users more options. You might have heard of skip links. If not, please read [Skip links are important](https://knowbility.org/blog/2019/skip-links/) by [Nicolas Steenhout](https://twitter.com/vavroom).
 A skip link is a link that’s usually only visible on focus and lets users skip large parts or repetitive blocks in a page. They're often the very first item in a page.
 
 <figure class="figure  figure--full">
@@ -217,7 +217,7 @@ And this is how the final result looks like. Watch the video or [try it yourself
   <figcaption>Focus styles are clearly visible and users can skip the entire Pen.</figcaption>
 </figure>
 
-### What's next?
+### What’s next?
 
 Keyboard users benefit the most from my proposed improvements. I haven't tested how accessible embedded CodePens are for screen reader users but [Scott O'Hara](https://twitter.com/scottohara), who reviewed this article, told me that he had difficulties using Pens with VoiceOver in the past. So, the next thing I (or you? 🙂) could do is to test CodePens with several screen readers and share the results.
 

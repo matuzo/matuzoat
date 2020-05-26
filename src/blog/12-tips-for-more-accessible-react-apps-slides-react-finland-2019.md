@@ -55,9 +55,9 @@ I'm not a React developer but I know how awesome React is. Today I'm here to giv
 
 ![](https://res.cloudinary.com/dp3mem7or/image/upload/v1549208913/articles/react-finland/accessible_react_apps.004.jpeg)
 
-This talk is called <cite>12 Tips For More Accessible React Apps</cite>. At the time when I picked the title I didn't know how much time I will have so I just picked an arbitrary number and I thought that 12 will be fine.
+This talk is called <cite>12 Tips For More Accessible React Apps</cite>. At the time when I picked the title I didn’t know how much time I will have so I just picked an arbitrary number and I thought that 12 will be fine.
 
-As it turns out, I only have 20 minutes so let's get started with my 8 tips for more accessible react apps. 😄
+As it turns out, I only have 20 minutes so let’s get started with my 8 tips for more accessible react apps. 😄
 
 ### <abbr title="acessibility">a11y</abbr> tip #1: Create a sound document outline
 
@@ -69,7 +69,7 @@ My first tip is: Create a sound document outline.
 
 What I mean by that is that you should start your document with an `h1` and the title of your page.
 
-Large sections, thematic groupings of content, in your page start with an `h2`. If there are subsections use `h3`, `h4`, etc. If there's another large thematic section you go back to the `h2`.
+Large sections, thematic groupings of content, in your page start with an `h2`. If there are subsections use `h3`, `h4`, etc. If there’s another large thematic section you go back to the `h2`.
 
 <div class="content__video-wrapper"><div class="video-wrapper"><iframe width="560" height="315" src="https://www.youtube.com/embed/gbHCgiktPNc" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen title="React demo: VoiceOver navigation by headings"></iframe></div></div>
 
@@ -111,7 +111,7 @@ My second tip is: Hide content correctly.
 
 ![](https://res.cloudinary.com/dp3mem7or/image/upload/v1549208913/articles/react-finland/accessible_react_apps.011.jpeg)
 
-The React Finland website starts with an `h1` and has a well structured document outline. It's almost perfect, there's just one thing I'd want to improve. There should be a "Sponsors" `h2` that groups the different types of sponsorships.
+The React Finland website starts with an `h1` and has a well structured document outline. It's almost perfect, there’s just one thing I'd want to improve. There should be a "Sponsors" `h2` that groups the different types of sponsorships.
 
 I guess it's missing because it hasn't been considered in the design either. There might be a reason to leave it away in the design but it should be in the document. The design shouldn't dictate the outline but the content should. What we need here is a heading that's hidden from sighted users but accessible to screen reader users.
 
@@ -140,7 +140,7 @@ You could write a component for that or use the existing [VisuallyHidden compone
 ![](https://res.cloudinary.com/dp3mem7or/image/upload/v1549208913/articles/react-finland/accessible_react_apps.017.jpeg)
 
 `display: none;`, `visibility: hidden;` and the `hidden` attribute remove content from the accessibility tree.
-Every item needs a textual representation, even if it isn't visible. Check out Reach UI's VisuallyHidden component.
+Every item needs a textual representation, even if it isn’t visible. Check out Reach UI's VisuallyHidden component.
 
 ### <abbr title="acessibility">a11y</abbr> tip #3: Use `<button>` if you need a button.
 
@@ -148,7 +148,7 @@ Every item needs a textual representation, even if it isn't visible. Check out R
 
 Tip number 3: Use `<button>` if you need a button.
 
-It's tempting to use `div`s as buttons because they come with less default styling than HTML `button`s but there's a huge difference when it comes to user experience.
+It's tempting to use `div`s as buttons because they come with less default styling than HTML `button`s but there’s a huge difference when it comes to user experience.
 
 I'll show you the difference in the following demo.
 
@@ -164,7 +164,7 @@ In this example I put a click event on a HTML `button`. You can see that I can c
   </div>
 </div>
 
-This button looks the same but this time I'm using a `div` instead of a `button`. I can click the button but I can't focus it, because divs aren't focusable by default. Even if I could focus it, I wouldn't get the key events I get with the HTML `button` element.
+This button looks the same but this time I'm using a `div` instead of a `button`. I can click the button but I can’t focus it, because divs aren't focusable by default. Even if I could focus it, I wouldn't get the key events I get with the HTML `button` element.
 
 A fake button is inaccessible to keyboard and screen reader users. 
 
@@ -183,7 +183,7 @@ React 16.2 introduced a nice little feature called [Fragments](https://reactjs.o
 
 ![const Table = props =&gt; { return ( &lt;table&gt; &lt;tr&gt; &lt;Columns /&gt; &lt;/tr&gt; &lt;/table&gt; ); }](https://res.cloudinary.com/dp3mem7or/image/upload/v1549208913/articles/react-finland/accessible_react_apps.021.jpeg)
 
-Let's say we have table component and in each table row there's a column component.
+Let’s say we have table component and in each table row there’s a column component.
 
 ![const Columns = props =&gt; { return ( &lt;div&gt; &lt;td&gt;Hello&lt;/td&gt; &lt;td&gt;World&lt;/td&gt; &lt;/div&gt; ); }](https://res.cloudinary.com/dp3mem7or/image/upload/v1549208913/articles/react-finland/accessible_react_apps.022.jpeg)
 
@@ -203,7 +203,7 @@ As a result the component returns the contents without extra markup.
 
 ![](https://res.cloudinary.com/dp3mem7or/image/upload/v1549208913/articles/react-finland/accessible_react_apps.026.jpeg)
 
-Summary of tip 4: Fragments help you write valid HTML and they reduce bloat. There's also a shorter syntax, you can write `<></>` instead of `<React.Fragment></React.Fragment>`.
+Summary of tip 4: Fragments help you write valid HTML and they reduce bloat. There’s also a shorter syntax, you can write `<></>` instead of `<React.Fragment></React.Fragment>`.
 
 Check out the Fragments docs for more details and examples.
 
@@ -273,7 +273,7 @@ Tip number 6: Make notifications accessible to everyone.
 </div>
 
 I'm using VoiceOver on this page. If I click the button, a notification pops up that tells me that everything has been saved successfully.
-The problem is that there's only visual feedback. The app doesn't provide screen readers with the information. 
+The problem is that there’s only visual feedback. The app doesn't provide screen readers with the information. 
 
 ![&lt;div className=&quot;alert&quot; role=&quot;alert&quot;&gt;Saved successfully&lt;/div&gt;](https://res.cloudinary.com/dp3mem7or/image/upload/v1549208913/articles/react-finland/accessible_react_apps.031.jpeg)
 
@@ -338,7 +338,7 @@ If I do all that, the focus moves to the `section`, announces the content of the
 
 ![](https://res.cloudinary.com/dp3mem7or/image/upload/v1549208913/articles/react-finland/accessible_react_apps.036.jpeg)
 
-There's a router called Reach Router that does these things and more out-of-the-box.
+There’s a router called Reach Router that does these things and more out-of-the-box.
 
 <https://reach.tech/router>
 
@@ -359,7 +359,7 @@ Don't get me wrong, you have to do manual testing as well, but automatic testing
 
 ![var React = require('react'); var ReactDOM = require('react-dom'); if (process.env.NODE_ENV !== 'production') { var axe = require('react-axe'); axe(React, ReactDOM, 1000); }](https://res.cloudinary.com/dp3mem7or/image/upload/v1549208913/articles/react-finland/accessible_react_apps.039.jpeg)
 
-There's a great tool called [React-Axe](https://github.com/dequelabs/react-axe). It uses the axe-core accessibility testing library. Results will show in the Chrome DevTools console.
+There’s a great tool called [React-Axe](https://github.com/dequelabs/react-axe). It uses the axe-core accessibility testing library. Results will show in the Chrome DevTools console.
 
 Call the exported function passing in the React and ReactDOM objects as well as a timing delay in milliseconds.
 Be sure to only run the module in your development environment.

@@ -73,7 +73,7 @@ ul {
 
 ![single column vs. 2 column layout comparison](https://res.cloudinary.com/dp3mem7or/image/upload/v1588061714/articles/progressive/ie11ff.jpg)
 
-The single column layout isn't ideal, but it's good enough.
+The single column layout isn’t ideal, but it's good enough.
 
 ### Search
 

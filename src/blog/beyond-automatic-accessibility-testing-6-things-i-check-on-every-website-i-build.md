@@ -87,6 +87,6 @@ Put your mouse away and tab through the page and see if you can use every single
 * Does visual order match DOM order?
 * Can you use custom JS components without a mouse?
 
-There's even a [npm package for disabling the mouse cursor](https://www.npmjs.com/package/no-mouse-days), built by the wonderful [Marcy Sutton](https://twitter.com/marcysutton).
+There’s even a [npm package for disabling the mouse cursor](https://www.npmjs.com/package/no-mouse-days), built by the wonderful [Marcy Sutton](https://twitter.com/marcysutton).
 
 That’s not the end of the story. There are more things that you should check, but that’s it for now. I’ll share more in another post. :)

@@ -30,8 +30,8 @@ Fast forward 10 years, I was at my second conference ever, at Smashing Conf Frei
 
 ![My second personal site. A web development blog in German.](https://res.cloudinary.com/dp3mem7or/image/upload/w_700/articles/matuzoat2014.png)
 
-Again, I lost interest after 2 years because I didn't like the design, the site was slow and there where cooler platforms to publish your articles at. I moved to [Medium](https://medium.com/@matuzo/).
+Again, I lost interest after 2 years because I didn’t like the design, the site was slow and there where cooler platforms to publish your articles at. I moved to [Medium](https://medium.com/@matuzo/).
 
-Medium is great for reach but its accessibility isn't great and there's an important thing missing: personality. Medium is just content. Besides writing, you can't express yourself and show your style and your skills. You can't experiment, you can't try out new things, optimize performance, accessibility and user experience.
+Medium is great for reach but its accessibility isn’t great and there’s an important thing missing: personality. Medium is just content. Besides writing, you can’t express yourself and show your style and your skills. You can’t experiment, you can’t try out new things, optimize performance, accessibility and user experience.
 
-As already mentioned, I'm bad at getting things done. I always wanted to have a nice looking, fast, and all in all cool website but it just didn't happen. Not until now! In 2019 I finally launched my new blog. It's by far not done but it's live and will [work on it regularly](https://github.com/matuzo/matuzoat) and post articles.
+As already mentioned, I'm bad at getting things done. I always wanted to have a nice looking, fast, and all in all cool website but it just didn’t happen. Not until now! In 2019 I finally launched my new blog. It's by far not done but it's live and will [work on it regularly](https://github.com/matuzo/matuzoat) and post articles.

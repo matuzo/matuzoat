@@ -178,7 +178,7 @@ And this is what we get:
 
 Okay, let’s try to fix that.
 
-PS: I'm well aware that I could apply `display: grid` to the `ul` directly but this is just a simplified example. There are other (more complicated) use cases where you can't do that easily. 
+PS: I'm well aware that I could apply `display: grid` to the `ul` directly but this is just a simplified example. There are other (more complicated) use cases where you can’t do that easily. 
 
 ### Solution #1: Flattening the document structure.
 
