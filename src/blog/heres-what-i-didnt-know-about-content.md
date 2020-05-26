@@ -341,6 +341,15 @@ blockquote::after {
   .contentdemoquote2::after {
     content: close-quote;
   }
+
+  .contentdemoquote2[lang="fr"]::before {
+    content: open-quote "\00a0"  !important;
+    display: inline;
+  }
+
+  .contentdemoquote2[lang="fr"]::after {
+    content: "\00a0" close-quote;
+  }
 </style>
 
 <blockquote class="contentdemoquote contentdemoquote2">
