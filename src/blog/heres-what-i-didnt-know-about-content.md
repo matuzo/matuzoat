@@ -390,72 +390,75 @@ Just because I was curious, here are some variations of the second example in ot
 
 ```html
 <blockquote lang="fr">
-  My mama always said,  
+   Maman disait toujours,  
   <q>  
-    Life was like a box of chocolates. You never know what you’re gonna get.  
-  </q>
+   la vie, c'est comme une boîte de chocolats: on ne sait jamais sur quoi on va tomber  
+  </q>.
 </blockquote>
 ```
 
 <blockquote lang="fr" class="contentdemoquote contentdemoquote2">
-  My mama always said,  
+   Maman disait toujours,  
   <q>  
-    Life was like a box of chocolates. You never know what you’re gonna get.  
-  </q>
+   la vie, c'est comme une boîte de chocolats: on ne sait jamais sur quoi on va tomber  
+  </q>.
 </blockquote>
 
 #### Russian
+
 ```html
 <blockquote lang="ru">
-  My mama always said,  
+  Моя мама всегда говорила,  
   <q>  
-    Life was like a box of chocolates. You never know what you’re gonna get.  
-  </q>
+    Жизнь как коробка шоколадных конфет: никогда не знаешь, какая начинка тебе попадётся  
+  </q>.
 </blockquote>
 ```
 
 <blockquote lang="ru" class="contentdemoquote contentdemoquote2">
-  My mama always said,  
+  Моя мама всегда говорила,  
   <q>  
-    Life was like a box of chocolates. You never know what you’re gonna get.  
-  </q>
+    Жизнь как коробка шоколадных конфет: никогда не знаешь, какая начинка тебе попадётся  
+  </q>.
 </blockquote>
 
 #### German
 
 ```html
 <blockquote lang="de">
-  My mama always said,  
+  Mama hat immer gesagt, 
   <q>  
-    Life was like a box of chocolates. You never know what you’re gonna get.  
-  </q>
+    Das Leben ist wie eine Schachtel Pralinen. Man weiß nie, was man kriegt 
+  </q>.
 </blockquote>
 ```
 
 <blockquote lang="de" class="contentdemoquote contentdemoquote2">
-  My mama always said,  
+  Mama hat immer gesagt, 
   <q>  
-    Life was like a box of chocolates. You never know what you’re gonna get.  
-  </q>
+    Das Leben ist wie eine Schachtel Pralinen. Man weiß nie, was man kriegt 
+  </q>.
 </blockquote>
 
 #### Spanish
 
 ```html
 <blockquote lang="es">
-  My mama always said,  
+  Mi mamá siempre decía,  
   <q>  
-    Life was like a box of chocolates. You never know what you’re gonna get.  
-  </q>
+    La vida es como una caja de bombones, nunca sabes lo que vas a conseguir  
+  </q>.
 </blockquote>
 ```
 
 <blockquote lang="es" class="contentdemoquote contentdemoquote2">
-  My mama always said,  
+  Mi mamá siempre decía,  
   <q>  
-    Life was like a box of chocolates. You never know what you’re gonna get.  
-  </q>
+    La vida es como una caja de bombones, nunca sabes lo que vas a conseguir  
+  </q>.
 </blockquote>
+
+Sorry, if I fucked up any of the translations.
 
 
 ## There’s counter() and counters()
