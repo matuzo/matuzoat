@@ -33,6 +33,10 @@ pre[class*='language-'] {
   padding: 2rem;
 }
 
+h4 + pre[class*='language-'] {
+  margin-top: 1rem;
+}
+
 pre[class*='language-css'] {
   border-left-color: $c-highlight-light;
 }
