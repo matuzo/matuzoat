@@ -256,6 +256,24 @@ $dark-grid-animation-duration: 1s;
 
     @at-root .demo--playing .a-title-rainbow {
       animation: dark-grid-rainbow 300ms 300ms both;
+
+      @media (prefers-reduced-motion: reduce) {
+        width: 44%;
+        right: 0;
+        top: 39.5%;
+      }
+
+      @media (min-width: 700px) {
+        width: 44%;
+        right: 0;
+        top: 40.5%;
+      }
+
+      @media (min-width: 1300px) {
+        width: 44%;
+        right: 0;
+        top: 42.5%;
+      }
     }
   }
 
@@ -270,6 +288,10 @@ $dark-grid-animation-duration: 1s;
 
     @at-root .demo--playing .a-title-text {
       animation: dark-grid-text 300ms 900ms forwards;
+
+      @media (prefers-reduced-motion: reduce) {
+        opacity: 1;
+      }
     }
     @include mq(m) {
       max-width: 60%;
