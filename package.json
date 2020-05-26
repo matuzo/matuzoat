@@ -4,9 +4,9 @@
   "description": "* <http://blog.klipse.tech/javascript/2016/06/20/blog-javascript.html> * <http://nickersoft.github.io/push.js/>",
   "main": "index.js",
   "scripts": {
-    "start": "ELEVENTY_ENV=development eleventy --serve | webpack --config webpack.common.js --watch",
-    "debug": "DEBUG=Eleventy* eleventy --serve | webpack --config webpack.common.js --watch",
-    "build": "ELEVENTY_ENV=production webpack --config webpack.prod.js && eleventy"
+    "start": "ELEVENTY_ENV=development npx @11ty/eleventy --serve | webpack --config webpack.common.js --watch",
+    "debug": "DEBUG=Eleventy* npx @11ty/eleventy  --serve | webpack --config webpack.common.js --watch",
+    "build": "ELEVENTY_ENV=production webpack --config webpack.prod.js && npx @11ty/eleventy "
   },
   "repository": {
     "type": "git",
