@@ -12,7 +12,8 @@ archive: false
 ---
 In this series of articles I’m (re)visiting CSS properties and selectors, trying to find out what I didn’t know about them.
 
-## Here's what I didn't about…
+## Here’s what I didn’t about…
 
+1. [content](/blog/heres-what-i-didnt-know-about-content/)
 1. [color](/blog/heres-what-i-didnt-know-about-color/)
 1. [list-style-type](/blog/heres-what-i-didnt-know-about-list-style-type/)
