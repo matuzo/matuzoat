@@ -46,3 +46,14 @@
 @import 'components/theme';
 
 @import 'vendor/prism-matuzo';
+
+
+@media (prefers-reduced-motion: reduce) {
+    *::before,
+    *::after,
+    * {
+        animation-duration: 0s !important;
+        transition: none !important;
+    }
+  }
+ 
