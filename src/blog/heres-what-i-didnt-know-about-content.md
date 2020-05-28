@@ -228,6 +228,9 @@ Checkout [example 5 on CodePen](https://codepen.io/matuzo/pen/ZEbweNj?editors=11
 
 Unfortunately, this only works in Chrome (tested on macOS 10.15.4, Chrome 81 with VoiceOver). Firefox and Safari don't even render the pseudo element because the value is invalid. Too bad.
 
+Even if this worked in most browsers, I wouldn’t recommend adding text content to a CSS file. Others working on the project probably wouldn’t expect text coming from a CSS file, things might get messy on sites with multiple languages, auto-translation may not work, and the content is only accessible if the CSS loads successfully.
+Adrian Roselli shares an example of a poor practice in [Link Targets and 3.2.5](https://adrianroselli.com/2020/02/link-targets-and-3-2-5.html#CSS).
+
 ## You can combine text and images
 
 Nor did I know that you can use the `url()` function as a value, I also didn’t know that you can combine it with text.
@@ -541,6 +544,13 @@ li::before {
 
 Checkout [example 8 on CodePen](https://codepen.io/matuzo/pen/ZEbwMNR).
 
+You’ll find more ways of using the `content` property in Adrian’s article [https://adrianroselli.com/2019/12/showing-file-types-in-links.html](https://adrianroselli.com/2019/12/showing-file-types-in-links.html).
+
+
 Wow, that was a lot. I didn’t expect to write and learn so much. I hope that you’ve learned as much as I did. 
 
 Thanks for reading ❤️ and thanks to Stefan for the inspiration for this post.
+
+## Updates
+
+**28.05.2020** Added a disclaimer about putting text in CSS files, and a link to an article by Adrian Roselli.
