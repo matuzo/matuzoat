@@ -78,7 +78,7 @@ collections:
       - { label: 'Link', name: 'link', widget: 'string' }
       - { label: 'Date', name: 'date', widget: 'date',  format: "YYYY-MM" }
       - { label: 'Category', 
-          name: 'link',
+          name: 'category',
           widget: 'select',
           options: ["UX", "Accessibility", "Development", "Design", "Progressive Enhancement"]
         }
