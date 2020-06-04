@@ -51,7 +51,8 @@ The easiest and most straightforward solution is the `reversed` attribute in HTM
 
 It reverses the order of the list marker semantically and visually; the list starts with 3. and ends with 1., and screen readers announce the list in <abbr title="Document Object Model">DOM</abbr> order together with the correct number. “3 C 2 B 1 A”
 
-That’s how you do it, you can stop reading here, if that’s what you were looking for. Keep reading, if you need more options and more flexibility.
+That’s how you do it, you can stop reading here, if you don’t need custom styling and it doesn’t bother you that the `reversed` attribute is [not supported in IE and old implementations of Edge](https://caniuse.com/#feat=ol-reversed).  
+Keep reading, if you need more options, better browser support and more flexibility.
 
 
 ## The value attribute in HTML
