@@ -137,6 +137,19 @@ To optimize image loading performance, I’ll use lazy-loading which makes sure 
 
 Rahul Nanwani explains in his article [The Complete Guide to Lazy Loading Images](https://css-tricks.com/the-complete-guide-to-lazy-loading-images/) how a fallback for native lazy-loading might look like.
 
+Update June 10, 2020.
+
+This pattern uses Javascript to add the `src` attribute to the image. If JavaScript is not active in the browser, the image won’t show. We can work around that by progressively enhancing the pattern once more. 
+
+```html
+<img data-src="myimage.jpg" loading="lazy" />
+<noscript>
+  <img src="myimage_lowres.jpg" />
+</noscript>
+```
+
+Content wrapped in `noscript` tags will only execute, if scripting is currently turned off in the browser. For that scenario, we can provide a low-resolution version of the image which is much smaller in file size.
+
 ## Progressive Enhancement is beautiful
 
 I’ve titled this post *The beauty of progressive enhancement* because it’s beautiful to see which shape an experience can take on different devices, operating systems, and browsers. Progressive Enhancement allows us to use the latest and greatest features HTML, CSS and JavaScript offer us, by providing a basic, but robust foundation for all.
