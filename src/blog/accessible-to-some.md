@@ -8,7 +8,7 @@ teaser: "According to [WebAims annual accessibility analysis](https://webaim.org
 tags:
   - a11y
 publication: Matuzo
-draft: true
+draft: false
 archive: false
 ---
 
