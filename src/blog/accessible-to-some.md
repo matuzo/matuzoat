@@ -12,7 +12,7 @@ draft: false
 archive: false
 ---
 
- Only 1.9% of the tested home pages pass automatic testing, which is fine, but it doesn’t mean that [there aren](https://www.matuzo.at/blog/building-the-most-inaccessible-site-possible-with-a-perfect-lighthouse-score/)’[t any barriers on these websites](https://www.matuzo.at/blog/building-the-most-inaccessible-site-possible-with-a-perfect-lighthouse-score/) either. True accessibility extends beyond automated tests and [WCAG](https://www.w3.org/WAI/standards-guidelines/wcag/) regulations.
+ Only 1.9% of the tested home pages pass automatic testing, which is fine, but it doesn’t mean that [there aren’t any barriers on these websites](https://www.matuzo.at/blog/building-the-most-inaccessible-site-possible-with-a-perfect-lighthouse-score/) either. True accessibility extends beyond automated tests and [WCAG](https://www.w3.org/WAI/standards-guidelines/wcag/) regulations.
 
 It's fair to say that most websites are **only accessible to some**.
 
@@ -283,7 +283,7 @@ A common accessibility issue is the presence of elements on a page that look lik
 
 That was a fun experiment and I hope that you had joy reading this article. The underlying issue, though, is no fun at all. That’s just my way of dealing with serious topics.
 
-Your website, app, or new feature is only half as good if only some people can access it. Consider inclusion and diversity from the very beginning and test properly. A score of 100 in Lighthouse or 0 errors in axe don’t mean that you’re done, it means that you’re ready to start manual testing and testing with real users, if possible.
+Your website, app, or new feature is only half as good if only some people can access it. Consider inclusion and diversity from the very beginning and test properly. A score of 100 in Lighthouse or 0 errors in axe doesn’t mean that you’re done, it means that you’re ready to start manual testing and testing with real users, if possible.
 Before just you build and launch something, think about your users first and how your decisions might affect them.
 
 Here’s the accessible version of the [page about expressionist architecture](https://codepen.io/matuzo/debug/qBbrMgW?editors=1100).
