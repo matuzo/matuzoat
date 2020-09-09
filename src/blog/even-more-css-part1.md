@@ -758,7 +758,7 @@ What’s great about this approach is that we can use <abbr title="ECMAScript">E
 
 Progressive enhancement is amazing. Building websites layer by layer allows for a cleaner separation of concerns, which makes the website more accessible. If one layer doesn't work in a specific browser, it doesn't matter because the layers below will make sure that users can still access our content.
 
-Improve the experience of your users by making it to one of your core principles. You can learn more about Progressive Enhancement in the following articles.
+Improve the experience of your users by making Progressive Enhancement to one of your core principles. You can learn more about it in the following articles:
 
 ### Resources
 
