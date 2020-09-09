@@ -79,6 +79,11 @@
     }
   }
 
+  [tabindex],
+  button {
+    @include link-focus;
+  }
+
   p + .h2 {
     margin-top: $spacing * 1.5;
     margin-bottom: $spacing / 2.5;
