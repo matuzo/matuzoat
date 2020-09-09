@@ -504,7 +504,7 @@ The list looks a little different, but most users probably won’t even notice.
 We can use `shape-outside` to make a paragraph that wraps an image look more interesting. 
 
 ![A photo of a dog from the side looking up wearing a red party hat with white dots and text that wraps around the shape of the dogs head and body.](https://res.cloudinary.com/dp3mem7or/image/upload/c_scale,w_1200/v1599629649/articles/Screen_Shot_2020-08-15_at_13.22.43.png)
-
+<noscript><img class="no-script" src="https://res.cloudinary.com/dp3mem7or/image/upload/c_scale,w_1200/v1599629649/articles/Screen_Shot_2020-08-15_at_13.22.43.png" alt="A photo of a dog from the side looking up wearing a red party hat with white dots and text that wraps around the shape of the dogs head and body." /></noscript>
 ```html
 <img src="dog.jpg" width="400" alt="A dog from the side looking up wearing a red party hat with white dots" />
 <p>
@@ -524,6 +524,7 @@ img {
 Most browsers support the `shape-outside` and `shape-margin` properties. Edge < 18, Internet Explorer, and Opera Mini are an exception. This is what users of these browsers will get.
 
 ![A photo of a dog from the side looking up wearing a red party hat with white dots and text that wraps around the photo.](https://res.cloudinary.com/dp3mem7or/image/upload/c_scale,w_1200/v1599629648/articles/Screen_Shot_2020-08-15_at_13.22.31.png)
+<noscript><img class="no-script" src="https://res.cloudinary.com/dp3mem7or/image/upload/c_scale,w_1200/v1599629648/articles/Screen_Shot_2020-08-15_at_13.22.31.png" alt="A photo of a dog from the side looking up wearing a red party hat with white dots and text that wraps around the photo." /></noscript>
 
 It still looks nice and it’s accessible, just not as fancy. Check out [CSS Shapes Demo / shape-outside](https://codepen.io/matuzo/pen/yEYyOB?editors=1100) on CodePen.
 
