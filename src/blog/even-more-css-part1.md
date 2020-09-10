@@ -221,6 +221,8 @@ Let’s take a simple form that allows users to enable tracking.
   .css2-pe-toggle-css {
     padding-left: 7.5rem;
     position: relative;
+    display: block;
+    margin-bottom: 1rem;
   }
 
   .css2-pe-toggle-css::before,
@@ -245,6 +247,15 @@ Let’s take a simple form that allows users to enable tracking.
     background: #aaa;
     left: 0.2rem;
     top: 0.2rem;
+  }
+
+    @media (min-width: 768px) {
+    .css2-pe-toggle-css::before {
+      top: 0.4rem;
+    }
+    .css2-pe-toggle-css::after {
+      top: 0.6rem;
+    }
   }
 
   [type="checkbox"]:focus  + .css2-pe-toggle-css::before {
@@ -362,11 +373,11 @@ Let’s take a simple form that allows users to enable tracking.
 
 <h4 class="css2-pe-l-j">JS</h4>
 
-Now we can get rid of the button and save the settings as the user clicks the checkbox.
+Now we can enhance the form some more and save settings as the user clicks the checkbox so that their settings persist even when the page crashes or they close the window accidentally.
 
 ```js
-  document.querySelector('button').setAttribute('hidden', 'hidden')
   document.querySelector('#tracking').addEventListener('change', function(e) {
+    // Save in database or in a local storage, etc..
     alert('Saved: ' + e.target.checked)
   })
 ```
@@ -379,12 +390,9 @@ Now we can get rid of the button and save the settings as the user clicks the ch
 </form>
 
 <script>
-
-  document.querySelector('.css2-pe-toggle-btn').setAttribute('hidden', 'hidden')
   document.getElementById('tracking3').addEventListener('change', function(e) {
     alert('Save: ' + e.target.checked)
   })
-
 </script>
 
 **Please note that this switch toggle is not accessible** because it doesn’t communicate state good enough. I just built it that way to illustrate progressive enhancement. If you want to learn how to create accessible toggle buttons, read [Toggle Buttons](https://inclusive-components.design/toggle-button/) by Heydon Pickering.
