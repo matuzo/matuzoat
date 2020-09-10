@@ -395,7 +395,7 @@ Now we can enhance the form some more and save settings as the user clicks the c
   })
 </script>
 
-**Please note that this switch toggle is not accessible** because it doesn’t communicate state good enough. I just built it that way to illustrate progressive enhancement. If you want to learn how to create accessible toggle buttons, read [Toggle Buttons](https://inclusive-components.design/toggle-button/) by Heydon Pickering.
+**Please note that this switch toggle is not accessible** because it doesn’t communicate state well enough. I just built it that way to illustrate progressive enhancement. If you want to learn how to create accessible toggle buttons, read [Toggle Buttons](https://inclusive-components.design/toggle-button/) by Heydon Pickering.
 
 </div>
 
