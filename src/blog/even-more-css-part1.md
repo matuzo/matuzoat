@@ -1,5 +1,5 @@
 ---
-title: "Writing even more CSS with Accessibility in Mind,Part 1: Progressive Enhancement"
+title: "Writing even more CSS with Accessibility in Mind, Part 1: Progressive Enhancement"
 permalink: blog/writing-even-more-css-with-accessibility-in-mind-progressive-enhancement/index.html
 metadescription: >-
   Progressive enhancement is amazing. Building websites layer by layer allows for a cleaner separation of concerns, which makes the website more accessible.
