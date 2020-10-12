@@ -776,9 +776,9 @@ Improve the experience of your users by making Progressive Enhancement to one of
 - [The beauty of progressive enhancement](https://www.matuzo.at/blog/beauty-of-progressive-enhancement/)
 - [Cutting the mustard - 2018 edition](https://fettblog.eu/cutting-the-mustard-2018/) by Stefan Baumgartner
 
-### Talks
+### Recording
 
-If you want to learn more about CSS and accessibility and you don’t want to wait for me to publish the other articles in this series, you can watch me talk about writing CSS with accessibility in mind at these events for free:
+If you want to learn more about CSS and accessibility and you don’t want to wait for me to publish the other articles in this series, you can watch my talk about writing CSS with accessibility in mind at #ID24:
 
-* September 17th, 12:00 UTC at [Inclusive Design 24](https://inclusivedesign24.org/2020/schedule/#talk13)
-* September 17th, 17:00 UTC at [CSS Café](https://www.meetup.com/CSS-Cafe/events/273001505/)
+<div class="content__video-wrapper"><div class="video-wrapper">
+<iframe width="560" height="315" src="https://www.youtube.com/embed/o6ssu5oKyaU" title="Writing even more CSS with Accessibility in Mind" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div></div>
