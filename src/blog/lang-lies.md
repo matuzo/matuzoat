@@ -1,11 +1,11 @@
 ---
-title: "The lang attribute: tell me lies, tell me sweet little lies"
+title: "The lang attribute: browsers telling lies, telling sweet little lies"
 permalink: blog/lang-attribute/index.html
 metadescription: >-
   Users change browser or OS settings to improve their experiences for a reason. We should respect these decisions by writing CSS.
 date: 2020-10-19T06:58:54.969Z
 image: articles/luegen.jpg
-teaser: "The `lang` attribute is an essential ingredient in the basic structure of an HTML document. It’s important that we define it correctly because it affects many aspects of user experience. Unfortunately, the negative effects a missing or wrong attribute can have aren’t always evident. Austrian news site [orf.at](http://orf.at) learned that the hard way recently." 
+teaser: "The `lang` attribute is an essential component in the basic structure of an HTML document. It’s important that we define it correctly because it affects many aspects of user experience. Unfortunately, the negative effects a missing or wrong attribute can have aren’t always evident. Austrian news site [orf.at](http://orf.at) learned that the hard way recently." 
 tags:
   - a11y
 publication: Matuzo
@@ -26,11 +26,11 @@ Search engines, screen readers, browser extensions, and other software use this 
 
 ## Why is the lang attribute so important?
 
-Adrian Roselli wrote about the [Use of the Lang Attribute](https://adrianroselli.com/2015/01/on-use-of-lang-attribute.html), so I will not repeat everything he says but I’ll give you some examples of how this attribute influences UX, and I will show you what happened recently on the most popular Austrian website in Austria.
+[Adrian Roselli](https://twitter.com/aardrian) wrote about the [Use of the Lang Attribute](https://adrianroselli.com/2015/01/on-use-of-lang-attribute.html), so I will not repeat everything he says but I’ll give you some examples of how this attribute influences UX, and I will show you what happened recently on the most popular Austrian website in Austria.
 
 ### Auto-translation
 
-Translation tools like Google Translate may offer to translate contents of a page if the language defined in the `<html>` element is not the same as the default language in the browser. It seems it doesn’t matter in which language the page is actually written, what counts for Google Translate is the value of the `lang` attribute. In the following example, Chrome gives me the option to translate the Croatian text on the page which of course is not Croatian, to English because I set `lang` to `hr`.
+Translation tools like Google Translate may offer to translate contents of a page if the language defined in the `<html>` element is not the same as the default language in the browser. It seems it doesn’t matter in which language the page is actually written, what counts for Google Translate is the value of the `lang` attribute. In the following example, Chrome gives me the option to translate the Croatian text on the page, which isn’t Croatian, to English because I set `lang` to `hr`.
 
 ![Google Translate prompt offering to translate Croatian which is actually English to English](https://res.cloudinary.com/dp3mem7or/image/upload/c_scale,w_1000/v1603086165/articles/croatian.png)
 
@@ -46,31 +46,31 @@ Translation tools like Google Translate may offer to translate contents of a pag
 </html>
 ```
 
-That makes sense and in principle, it’s a useful feature but it can be problematic, if translations are not desired:
+That makes sense and in principle it’s a useful feature but it can be problematic, if translations are not desired:
 
-Vienna went to the polls this month to vote for a (new) municipal government and [orf.at](https://orf.at) published the results on their website. They split the results by district, from the 1st district "Innere Stadt" to the 23rd district "Liesing". Soon after they’ve published the results, they received bug reports from users stating that some names of districts where wrong. When they tried to reproduce the bug, they noticed that Chrome offered to translate the page. If you just close the prompt, nothing happens, but if in the past you [let Google Translate translate pages automatically](https://res.cloudinary.com/dp3mem7or/image/upload/c_scale,w_1000/v1603086165/articles/croatian2.png), it wouldn’t ask anymore but automatically just translate the page.
+Vienna went to the polls this month to elect a (new) municipal government and [orf.at](https://orf.at) published the results on their website. They split the results by district, from the 1st district “Innere Stadt” to the 23rd district “Liesing”. Soon after they’ve published the results, they received bug reports from users stating that some names of districts where wrong. When they tried to reproduce the bug, they noticed that Chrome offered to translate the page. If you just close the prompt, nothing happens, but if in the past you [let Google Translate translate pages automatically](https://res.cloudinary.com/dp3mem7or/image/upload/c_scale,w_1000/v1603086165/articles/croatian2.png), it wouldn’t ask anymore but automatically just translate the page.
 
-The page was written in German but the natural language of the page was set to English in HTML, and that’s why Chrome users who instructed the browser to translate English to German automatically saw this:
+The page was written in German but the natural language of the page was set to English in HTML (`en`), and that’s why Chrome users who instructed the browser to translate English to German automatically saw this:
 
 ![A list of districts on orf.at. Instead of Liesing some users so Lügen](https://res.cloudinary.com/dp3mem7or/image/upload/c_scale,w_1000/v1603086166/articles/luegen.jpg)
 
-Google Translate changed the name of the 23rd district “Liesing” to “Lügen”  (*to lie* in English) and the name of the 10th district from “Simmering” to “Sieden” (*to simmer* in English). Google Translate assumed that the authors meant to write "lying" (lügen in German) and that "Simmering" isn’t just a name but the act of cooking liquids.
+Google Translate changed the name of the 23rd district “Liesing” to “Lügen”  (*to lie* in English) and the name of the 10th district from “Simmering” to “Sieden” (*to simmer* in English). Google Translate assumed that the authors meant to write "lying" (<span lang="de">lügen</a> in German) and that "Simmering" isn’t just a name but the act of cooking liquids.
 
-**How did it happen?**
+#### How did it happen?
 
 First, I have that to say that it’s not a big deal. I’m just writing about it because it’s an interesting side effect of an issue that usually affects accessibility and not user experience in general.
 
 I know some devs at [orf.at](http://orf.at) and I also know that they care about quality and accessibility, so why did that still happen? Of course, because we’re all human and shit happens, but the specific problem on [orf.at](http://orf.at) was that they’re using [vue-cli](https://github.com/vuejs/vue-cli), which automatically creates a boilerplate structure for documents that sets the `lang` attribute to `en` by default. The devs didn’t notice it because validators and automatic accessibility testing tools just check if the attribute is present and the value valid. 
 
-**Preventing this bug**
+#### Preventing this bug
 
 So, it’s a bug that’s hard to spot, but how can we prevent it?
 
 1. Frameworks and other setups that offer a boilerplate HTML structure could make picking the natural language part of the automatic or manual installation process instead of setting a default. The devs at [orf.at](http://orf.at) already created an [issue for vue-cli](https://github.com/vuejs/vue-cli/issues/5945).
 2. The documentation should include a section about the HTML document structure and explain why certain things are important and which side effects a wrong implementation can have.
-3. You could use something like [a11y.css](https://ffoodd.github.io/a11y.css/) to debug your document or create your own debug.css and add tests you want to run in your development environment. “Tests” sounds fancy, but it’s just a bunch of selectors that show big red border or other visual indicators, if there’s an error.
+3. You could use something like [a11y.css](https://ffoodd.github.io/a11y.css/) to debug your document or create your own debug.css and add tests you want to run in your development environment. “Tests” sounds fancy, but it’s just a bunch of selectors that show a big red border or other visual indicators, if there’s an error.
 
-**Debugging the lang attribute**
+#### Debugging the lang attribute
 
 There are several things you can check.
 
@@ -121,7 +121,7 @@ html:not(:lang(en)) {
 
 [Wrong value in lang attribute demo on CodePen](https://codepen.io/matuzo/project/editor/DNabgn)
 
-What’s great about using the `lang()` pseudo class is that this test will work even if the value is `en-US` or `en-GB`.
+What’s great about using the `lang()` pseudo class is that this test will work even if the value is `en-US` or `en-GB`, <abbr title="et cetera">etc</abbr>.
 
 Note: That won’t work on multilingual websites and you’ll have to adjust it for every project depending on the language.
 
@@ -260,7 +260,7 @@ You can learn more about quotation marks in CSS in [Here’s what I didn’t kno
 
 ### Others
 
-The correct usage of the value also may affect hyphenation, WCAG compliance, input fields, spell checking and the default font selection for CJK languages (Chinese, Japanese, and Korean). Read [Adrian Rosellis article](https://adrianroselli.com/2015/01/on-use-of-lang-attribute.html) (and the comments section) for details.
+The correct usage of the value also may affect hyphenation, <abbr title="Web Content Accessibility Guidelines">WCAG</abbr> compliance, input fields, spell checking and the default font selection for CJK languages (Chinese, Japanese, and Korean). Read [Adrian Rosellis article](https://adrianroselli.com/2015/01/on-use-of-lang-attribute.html) (and the comments section) for details.
 
 ## Tell me lies, tell me sweet little lies
 
