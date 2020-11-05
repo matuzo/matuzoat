@@ -1,0 +1,39 @@
+---
+permalink: feed_til.xml
+---
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>Today I Learned{{ metadata.title }}</title>
+  <subtitle>A feed with things I’ve learned.</subtitle>
+  <link href="{{ metadata.feed.url }}" rel="self"/>
+  <link href="{{ metadata.url }}"/>
+  <updated>{{ collections.blog | rssLastUpdatedDate }}</updated>
+  <id>{{ metadata.feed.id }}</id>
+  <author>
+    <name>{{ metadata.author.name }}</name>
+    <email>{{ metadata.author.email }}</email>
+  </author>
+  {%- for post in collections.til|reverse %}
+      {% set absolutePostUrl %}{{ post.url | url | absoluteUrl(metadata.url) }}{% endset %}
+      <entry>
+        <title>{{ post.data.title }}</title>
+        <link href="{{ absolutePostUrl }}"/>
+        <updated>{{ post.date | rssDate }}</updated>
+        <id>{{ absolutePostUrl }}</id>
+        <content type="html">
+
+        {% if post.data.link %}
+        <a href="{{ post.data.link }}" rel="noopener" >
+        {% endif %}
+          {% if post.data.image %}
+            <img src="{{ metadata.cloudinary }}/w_440/{{post.data.image}}" alt="{% if post.data.link %}TIL # {{ loop.revindex }}  demo or article{% endif %}" class="image-list__image lazy"/>
+          {% endif %}
+        {% if post.data.link %}
+        </a>
+
+        <a href="{{ post.data.link }}" rel="noopener">{{ post.data.link }}</a>
+        {% endif %}
+        </content>
+      </entry>
+  {%- endfor %}
+</feed>
