@@ -4,6 +4,7 @@ const transforms = require('./_11ty/transforms.js')
 
 const pluginRss = require("@11ty/eleventy-plugin-rss");
 const syntaxHighlight = require("@11ty/eleventy-plugin-syntaxhighlight");
+var escape = require('escape-html');
 
 
 module.exports = function(eleventyConfig) {
@@ -24,6 +25,11 @@ module.exports = function(eleventyConfig) {
     console.log(transformName)
     eleventyConfig.addTransform(transformName, transforms[transformName])
   });
+
+  eleventyConfig.addPairedShortcode("escape", function(content) {
+    return escape(content)
+  });
+
 
   // Plugins
   eleventyConfig.addPlugin(pluginRss);

@@ -1,5 +1,7 @@
 const { DateTime } = require("luxon");
 const MarkdownIt = require('markdown-it');
+var escape = require('escape-html');
+
 module.exports = {
   // Date formatting (machine readable)
   machineDate: dateObj => {
@@ -47,5 +49,9 @@ module.exports = {
   md: value => {
     const md = new MarkdownIt();
     return md.render(value);
-  } 
+  },
+
+  escape: string => {
+    return escape(string)
+  }
 }

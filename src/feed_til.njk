@@ -21,7 +21,7 @@ permalink: feed_til.xml
         <updated>{{ post.date | rssDate }}</updated>
         <id>{{ absolutePostUrl }}</id>
         <content type="html">
-
+{% escape %}
         {% if post.data.link %}
         <a href="{{ post.data.link }}" rel="noopener" >
         {% endif %}
@@ -33,6 +33,8 @@ permalink: feed_til.xml
 
         <a href="{{ post.data.link }}" rel="noopener">{{ post.data.link }}</a>
         {% endif %}
+{% endescape %}
+
         </content>
       </entry>
   {%- endfor %}
