@@ -1,4 +1,3 @@
-<ul class="post-list js-post-list">
 {% for post in collections.blog.slice(0, max) %}
 
   {% set url = post.url %}
@@ -10,7 +9,7 @@
   {% endif %}
 
   {% if not post.data.draft %}
-    <li class="post-list__item post-list__item--{{ theme | stringify | slug }}">
+    <article>
       <div class="post-list__header">
         <a href="{{ url }}" class="post-list__link post-list__link--{{ theme | stringify | slug }}" data-post="{{ post.data.title | slug }}" data-publication="{{ theme | slug }}">
           <h2 class="post-list__heading post-list__heading--{{ theme | stringify | slug }}">
@@ -38,7 +37,6 @@
           {{ post.data.teaser | md | safe }}
         </p>
       </div>
-    </li>
+    </article>
   {% endif %}
 {% endfor %}
-</ul>
