@@ -21,21 +21,15 @@
   "devDependencies": {
     "@11ty/eleventy": "^0.5.4",
     "@11ty/eleventy-plugin-rss": "^1.0.5",
-    "@babel/core": "^7.2.0",
-    "@babel/preset-env": "^7.2.0",
-    "babel-loader": "^8.0.4",
     "css-loader": "^1.0.1",
+    "escape-html": "^1.0.3",
     "file-loader": "^3.0.1",
     "luxon": "^1.4.3",
     "mini-css-extract-plugin": "^0.5.0",
     "node-sass": "^4.13.1",
     "optimize-css-assets-webpack-plugin": "^5.0.1",
     "sass-loader": "^7.1.0",
-    "style-loader": "^0.23.1",
-    "uglifyjs-webpack-plugin": "^2.1.1",
-    "webpack": "^4.27.1",
-    "webpack-cli": "^3.1.2",
-    "webpack-merge": "^4.1.4"
+    "style-loader": "^0.23.1"
   },
   "dependencies": {
     "@11ty/eleventy-plugin-syntaxhighlight": "^2.0.1",
