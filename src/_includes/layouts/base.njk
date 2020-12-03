@@ -40,20 +40,16 @@
     <link rel="webmention" href="https://webmention.io/www.matuzo.at/webmention" />
     <link rel="pingback" href="https://webmention.io/www.matuzo.at/xmlrpc" />
 
-    <link rel="stylesheet" href="{{ '/static/min/main.min.css' | url | cacheBuster }}" />
+    {# <link rel="stylesheet" href="{{ '/static/min/main.min.css' | url | cacheBuster }}" /> #}
+    <link rel="stylesheet" href="{{ '/static/min/relaunch.css' | url | cacheBuster }}" />
   </head>
 
-  <body class="site__body {{ renderData.page_classes }}">
-    <a href="#content" class="skip-link">Skip to Content</a>
-
-    <canvas class="site__square site__square--tl square-canvas js-sq-tl" hidden aria-hidden="true"></canvas>
-    <canvas class="site__square site__square--tr square-canvas js-sq-tr" hidden aria-hidden="true"></canvas>
-    <canvas class="site__square site__square--br square-canvas js-sq-br" hidden aria-hidden="true"></canvas>
-    <canvas class="site__square site__square--bl square-canvas js-sq-bl" hidden aria-hidden="true"></canvas>
+  <body>
+    <a href="#content" class="skip-link">Skip to main content</a>
 
     {% include 'header.njk' %}
 
-    <main class="site__content page js-site-content {{ renderData.content_classes }}" id="content">
+    <main id="content">
       {{ content | safe }}
     </main>
 
