@@ -37,9 +37,6 @@
     <meta property="og:type" content="website">
     <meta name="author" content="Manuel Matuzović" /> 
 
-    <link rel="webmention" href="https://webmention.io/www.matuzo.at/webmention" />
-    <link rel="pingback" href="https://webmention.io/www.matuzo.at/xmlrpc" />
-
     {# <link rel="stylesheet" href="{{ '/static/min/main.min.css' | url | cacheBuster }}" /> #}
     <link rel="stylesheet" href="{{ '/static/min/relaunch.css' | url | cacheBuster }}" />
   </head>
@@ -56,7 +53,6 @@
     {% include 'footer.njk' %}
 
     {# Polyfill for Intersection Observer#}
-    <script src="https://polyfill.io/v3/polyfill.min.js?features=default%2CIntersectionObserver"></script>
     <script src="{{ '/static/min/main.min.js' | url | cacheBuster }}"></script>
   </body>
 </html>
