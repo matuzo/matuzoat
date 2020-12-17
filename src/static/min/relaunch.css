@@ -1,9 +1,0 @@
-body {
-  background-image: url("data:image/svg+xml,%3Csvg version='1.1' id='Ebene_1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' x='0px' y='0px' viewBox='0 0 20.3 20.3' style='enable-background:new 0 0 20.3 20.3;' xml:space='preserve'%3E%3Cstyle type='text/css'%3E .st0%7Bopacity:0.15;fill:none;stroke:%2334B1BF;stroke-miterlimit:10;%7D%0A%3C/style%3E%3Cline class='st0' x1='0.5' y1='0' x2='0.5' y2='20.3'/%3E%3Cline class='st0' x1='20.3' y1='0.5' x2='1' y2='0.5'/%3E%3C/svg%3E%0A");
-  background-size: 20px;
-  background-position: left center;
-  background-color: #efefef;
-  margin: 0;
-  background-attachment: fixed;
-  font-family: sans-serif;
-}
