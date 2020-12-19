@@ -1,5 +1,11 @@
+const htmlmin = require('html-minifier');
 var slugify = require('slugify');
 var headings = [];
+
+String.prototype.replaceAll = function (search, replacement) {
+  var target = this;
+  return target.replace(new RegExp(search, 'g'), replacement);
+};
 
 module.exports = {
   anchors: (content, outputPath) => {
@@ -32,6 +38,20 @@ module.exports = {
           return `<h3 id="${slug}">${heading}</h3>`;
         }
       );
+    }
+    return content;
+  },
+
+  htmlmin: (content, outputPath) => {
+    if (
+      process.env.ELEVENTY_ENV === 'production' &&
+      outputPath.endsWith('.html')
+    ) {
+      return htmlmin.minify(content, {
+        useShortDoctype: true,
+        removeComments: true,
+        collapseWhitespace: true,
+      });
     }
     return content;
   },
