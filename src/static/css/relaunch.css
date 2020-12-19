@@ -73,6 +73,10 @@ p code {
   font-weight: normal;
 }
 
+iframe {
+  border: 0;
+}
+
 .u-vh {
   border: 0;
   clip: rect(0 0 0 0);

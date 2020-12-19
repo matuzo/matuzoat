@@ -28,6 +28,7 @@ css: codepen
 draft: false
 archive: false
 ---
+
 <figure class="figure ">
   <span class="content__image-wrapper">
      <img class="content__image" src="https://res.cloudinary.com/dp3mem7or/image/upload/v1551942694/articles/s_4A526A782EC430ED0BB5AD619387A9B6FCCD655511B65196DD333E88F585466C_1550745903247_Screen_Shot_2019-02-12_at_06.40.12.png" alt="The Embed Theme Builder with several options to change the look and feel of embedded Pens.">
@@ -40,15 +41,15 @@ archive: false
 
 Before I tell you where I see room for improvement, I want to highlight what they did well.
 
-* You can customize colors and make sure that [contrast ratios are high enough](https://webaim.org/resources/contrastchecker/). 
-* There’s a click-to-load option. Pens can be in a preview state where they need to be clicked to loaded, which is good for performance.
-* All buttons and links in Pens are HTML `<button>` and `<a>` elements with actual text (What a time we live in that this makes me happy).
-* Embedded Pens are `iframe`s. There’s a `title` attribute on each `iframe` with the title of the Pen as a value. This is important because screen readers announce this value when the `iframe` is focussed. If the attribute is omitted, VoiceOver for example, falls back to the `name` attribute. This can be annoying, especially if the value of the `name` is a long hash.
+- You can customize colors and make sure that [contrast ratios are high enough](https://webaim.org/resources/contrastchecker/).
+- There’s a click-to-load option. Pens can be in a preview state where they need to be clicked to loaded, which is good for performance.
+- All buttons and links in Pens are HTML `<button>` and `<a>` elements with actual text (What a time we live in that this makes me happy).
+- Embedded Pens are `iframe`s. There’s a `title` attribute on each `iframe` with the title of the Pen as a value. This is important because screen readers announce this value when the `iframe` is focussed. If the attribute is omitted, VoiceOver for example, falls back to the `name` attribute. This can be annoying, especially if the value of the `name` is a long hash.
 
 <figure class="figure">
   <div class="content__video-wrapper">
     <div class="video-wrapper">
-      <iframe width="560" height="315" src="https://www.youtube.com/embed/x0OF9-4ABDQ?rel=0" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen title="iframe title attribute demo"></iframe>
+      <iframe width="560" height="315" src="https://www.youtube.com/embed/x0OF9-4ABDQ?rel=0"  allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen title="iframe title attribute demo"></iframe>
     </div>
   </div>
 
@@ -95,10 +96,10 @@ pre:focus {
   /* The negative value insets the outline */
   outline-offset: -5px;
   /* Fallback for browsers that don't support outline-offset */
-  border: 5px solid #f23c50; 
+  border: 5px solid #f23c50;
 }
 
-@supports(outline-offset: -5px) {
+@supports (outline-offset: -5px) {
   pre:focus {
     /* Removes the border in browsers that support outline-offset */
     border: none;
@@ -113,7 +114,7 @@ This is how the Pen looks like in Firefox:
 <figure class="figure">
   <div class="content__video-wrapper">
     <div class="video-wrapper">
-      <iframe width="560" height="315" src="https://www.youtube.com/embed/EDdACjbi64M?rel=0" title="Embedded CodePen with custom focus styling" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+      <iframe width="560" height="315" src="https://www.youtube.com/embed/EDdACjbi64M?rel=0" title="Embedded CodePen with custom focus styling"  allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
     </div>
   </div>
 
@@ -122,12 +123,12 @@ This is how the Pen looks like in Firefox:
 
 ### Skip links
 
-Let’s say, you're not interested in the embedded Pen. As a mouse user, you just keep scrolling. As a keyboard user, you have to press <kbd>Tab</kbd> at least 9 times until you get to the next focusable element. Or worse, you get trapped in the Pen. This happens if the Pen is editable. You can pass the buttons in the top bar but the journey ends as soon as you get to the `pre` element where the code is displayed. Once you're in there, there’s no way of getting out. 
+Let’s say, you're not interested in the embedded Pen. As a mouse user, you just keep scrolling. As a keyboard user, you have to press <kbd>Tab</kbd> at least 9 times until you get to the next focusable element. Or worse, you get trapped in the Pen. This happens if the Pen is editable. You can pass the buttons in the top bar but the journey ends as soon as you get to the `pre` element where the code is displayed. Once you're in there, there’s no way of getting out.
 
 <figure class="figure">
   <div class="content__video-wrapper">
     <div class="video-wrapper">
-      <iframe width="560" height="315" src="https://www.youtube.com/embed/3UK70AcUb84?rel=0" title="Trapped in an embedded iframe" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+      <iframe width="560" height="315" src="https://www.youtube.com/embed/3UK70AcUb84?rel=0" title="Trapped in an embedded iframe"  allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
     </div>
   </div>
 
@@ -152,57 +153,59 @@ Sometimes it also makes sense to add in-page skip links. For example when you wa
 Directly before the embed code for the Pen, I added a `div` with an anchor link to an element that comes after the Pen in the DOM. By clicking this link, users can skip everything between the link and the target.
 
 ```html
-  <div class="skip-link-container">
-    <a href="#codepen1-skip" class="skip-link">
-      Skip CodePen
-    </a>
-  </div>
-  
-  <!-- CODEPEN EMBED CODE -->
-  
-  <!-- The target: -->
-  <h2 id="codepen1-skip">Subsequent element</h2>
+<div class="skip-link-container">
+  <a href="#codepen1-skip" class="skip-link"> Skip CodePen </a>
+</div>
+
+<!-- CODEPEN EMBED CODE -->
+
+<!-- The target: -->
+<h2 id="codepen1-skip">Subsequent element</h2>
 ```
 
 By default, this link should be visually hidden and only visible on focus. It’s not enough to just apply `display: none` and remove it on focus. To ensure that the link is still accessible to screen reader users, it's necessary to get more creative.
 
 ```css
-  .skip-link-container {
-    position: relative;
-  }
-  
-  /* All the properties in this declaration block only apply if the link isn’t focused. */
-  .skip-link:not(:focus) {
-    border: 0;
-    clip: rect(0 0 0 0);
-    clip-path: inset(50%);
-    height: 1px;
-    left: 0;
-    margin: -1px;
-    overflow: hidden;
-    padding: 0;
-    position: absolute;
-    top: 0;
-    white-space: nowrap;
-    width: 1px;
-  }
+.skip-link-container {
+  position: relative;
+}
+
+/* All the properties in this declaration block only apply if the link isn’t focused. */
+.skip-link:not(:focus) {
+  border: 0;
+  clip: rect(0 0 0 0);
+  clip-path: inset(50%);
+  height: 1px;
+  left: 0;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  top: 0;
+  white-space: nowrap;
+  width: 1px;
+}
 ```
 
 This is a great improvement because we’ve reduced the number of key presses needed to skip the Pen from 9 to 1. There’s just one more thing I want to add. Since the page _jumps_ from the anchor link to the target and the skipped area might not be in the viewport anymore, users might become lost. To help with that, we can give them a visual feedback after the jump has happened.
 
 ```css
-  /* “The :target CSS pseudo-class represents a unique element (the target element) with an id matching the URL's fragment.”
+/* “The :target CSS pseudo-class represents a unique element (the target element) with an id matching the URL's fragment.”
   https://developer.mozilla.org/en-US/docs/Web/CSS/:target */
-  
-  *:target {
-    transition: background 0.2s;
-    animation: target-highlight 1.2s ease-in-out;
+
+*:target {
+  transition: background 0.2s;
+  animation: target-highlight 1.2s ease-in-out;
+}
+
+@keyframes target-highlight {
+  50% {
+    background: #f23c50;
   }
-  
-  @keyframes target-highlight {
-    50% { background: #f23c50; }
-    100% { background: none; }
+  100% {
+    background: none;
   }
+}
 ```
 
 And this is how the final result looks like. Watch the video or [try it yourself](http://dev.matuzo.at/codepen/).
@@ -210,7 +213,7 @@ And this is how the final result looks like. Watch the video or [try it yourself
 <figure class="figure">
   <div class="content__video-wrapper">
     <div class="video-wrapper">
-      <iframe width="560" height="315" title="Embedded CodePen with custom focus styles and in-page skip link" src="https://www.youtube.com/embed/g2B_bZYR4Kc?rel=0" title="Trapped in an embedded iframe" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+      <iframe width="560" height="315" title="Embedded CodePen with custom focus styles and in-page skip link" src="https://www.youtube.com/embed/g2B_bZYR4Kc?rel=0" title="Trapped in an embedded iframe"  allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
     </div>
   </div>
 

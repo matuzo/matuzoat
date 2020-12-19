@@ -43,7 +43,7 @@ Yesterday I was curious and wanted to know if and how [a website I recently made
 
 Here’s a short demo of how the website looks like in Safari on an iPhone XR compared to Opera Mini.
 
-<div class="content__video-wrapper"><div class="video-wrapper"><iframe width="560" height="315" src="https://www.youtube.com/embed/78gtfL9ZA7U" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen title="Progressive Enhancement Demo on a Nokia 3310." loading="lazy"></iframe></div></div>
+<div class="content__video-wrapper"><div class="video-wrapper"><iframe width="560" height="315" src="https://www.youtube.com/embed/78gtfL9ZA7U"  allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen title="Progressive Enhancement Demo on a Nokia 3310." loading="lazy"></iframe></div></div>
 
 To my surprise, I only had to [reduce some paddings and font sizes](https://github.com/matuzo/front-end-bookmarks/commit/6f1c0cdc3bef830b9f87ad1a1d50bc4b4c258166) to make it look nice.
 I didn’t have to change much because I follow the Progressive Enhancement principle when I build websites. Progressive Enhancement focuses on content and enhances experiences layer by layer. [Aaron Gustafson](https://www.aaron-gustafson.com/) explains how we can apply Progressive Enhancement to web development in his iconic article [“Understanding Progressive Enhancement“](https://alistapart.com/article/understandingprogressiveenhancement/).

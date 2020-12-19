@@ -1,11 +1,11 @@
 ---
-title: "Writing even more CSS with Accessibility in Mind, Part 2: Respecting user preferences"
+title: 'Writing even more CSS with Accessibility in Mind, Part 2: Respecting user preferences'
 permalink: blog/writing-even-more-css-with-accessibility-in-mind-user-preferences/index.html
 metadescription: >-
   Users change browser or OS settings to improve their experiences for a reason. We should respect these decisions by writing CSS.
 date: 2020-10-12T06:58:54.969Z
 image: articles/sm_css_a11y2_up.jpg
-teaser: "In the first article of this series, I explained how important progressive enhancement is for web accessibility. Building websites layer by layer allows for a cleaner separation of concerns and more resilient experiences. This second article is about user preferences and how to respect them when writing CSS." 
+teaser: 'In the first article of this series, I explained how important progressive enhancement is for web accessibility. Building websites layer by layer allows for a cleaner separation of concerns and more resilient experiences. This second article is about user preferences and how to respect them when writing CSS.'
 tags:
   - a11y
 publication: Matuzo
@@ -54,7 +54,7 @@ body {
 <h5>Video demo:</h5>
 
 <div class="content__video-wrapper"><div class="video-wrapper">
-<iframe width="560" height="315" title="Accessible CSS demo: font-size property with an absolute value" src="https://www.youtube.com/embed/_leBu4I1yqc" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div></div>
+<iframe width="560" height="315" title="Accessible CSS demo: font-size property with an absolute value" src="https://www.youtube.com/embed/_leBu4I1yqc"  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div></div>
 <br>
 
 If we use a relative unit like `rem`, instead, we can still define our preferred size while respecting user preferences. `1rem` is relative to the root font size, as already mentioned, `16px` in most browsers. This means that the the size of `1rem` changes with the default font size in the browser.
@@ -76,9 +76,8 @@ body {
 <h5>Video demo:</h5>
 
 <div class="content__video-wrapper"><div class="video-wrapper">
-<iframe width="560" height="315" title="Accessible CSS demo: font-size property with a relative value" src="https://www.youtube.com/embed/vE_0JWb9iOA" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div></div>
+<iframe width="560" height="315" title="Accessible CSS demo: font-size property with a relative value" src="https://www.youtube.com/embed/vE_0JWb9iOA"  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div></div>
 <br>
-
 
 It makes sense to use relative units like `rem`, `em`, or `%` because they’re relative to a parents font size when used with the `font-size` property. Other relative units like `vh` or `vw` are not suitable because they’re relative to the viewport. Even combinations of units like `calc(2vw + 0.5rem)`should be treated with caution because they might lead to unexpected results. Read [Responsive Type and Zoom](https://adrianroselli.com/2019/12/responsive-type-and-zoom.html) by Adrian Roselli for details.
 
@@ -91,14 +90,13 @@ I like to constrain the width of content container elements to improve readabili
   max-width: 80ch;
 }
 ```
-[ch unit Demo on CodePen.](https://codepen.io/matuzo/pen/RwaZNVa?editors=1100)
 
+[ch unit Demo on CodePen.](https://codepen.io/matuzo/pen/RwaZNVa?editors=1100)
 
 <h5>Video demo:</h5>
 
 <div class="content__video-wrapper"><div class="video-wrapper">
-<iframe width="560" height="315" title="Accessible CSS demo: difference between px and ch in max-width declarations." src="https://www.youtube.com/embed/7LR9HnV-j7Q" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div></div>
-
+<iframe width="560" height="315" title="Accessible CSS demo: difference between px and ch in max-width declarations." src="https://www.youtube.com/embed/7LR9HnV-j7Q"  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div></div>
 
 ### Motion and animation
 
@@ -117,7 +115,6 @@ I can highly recommend this article, it outlines well how important it is to use
 [Some operating systems allow users to reduce motion](https://developer.paciellogroup.com/blog/2019/05/short-note-on-prefers-reduced-motion-and-puzzled-windows-users/), and we can react to that in CSS by using the `prefers-reduced-motion` media feature. If our users prefer less motion on the screen, we should respect that and serve CSS without or with fewer animations and transitions.
 
 Here’s an example: If you don’t have any preference for reduced motion, you should see someone moonwalking from one end of the article to the other. If you do, you should see someone moonwalking in place.
-
 
 <style>
 @keyframes walk {
@@ -148,7 +145,10 @@ Here’s an example: If you don’t have any preference for reduced motion, you 
 Inspired by [Marquee Jackson](https://codepen.io/lassediercks/pen/MEmEyj) by Lasse Diercks.
 
 ```html
-<img src="https://media.giphy.com/media/EDZP0UCtxiRQQ/giphy.gif" alt="Person doing the moon walk.">
+<img
+  src="https://media.giphy.com/media/EDZP0UCtxiRQQ/giphy.gif"
+  alt="Person doing the moon walk."
+/>
 ```
 
 ```css
@@ -185,7 +185,6 @@ We could go one step further and replace the gif with a png by using a combinati
 
 In this example I set the `animation` property to `none` , but you don’t always have to remove motion entirely. Eric W. Bailey points out that [animation isn’t bad per se](https://css-tricks.com/revisiting-prefers-reduced-motion-the-reduced-motion-media-query/#article-header-id-5), because it may help users, especially people with cognitive disabilities, understand the relationship between seemingly disparate objects. Val Head outlines even more benefits of animations in “[Designing Safer Web Animation For Motion Sensitivity](https://alistapart.com/article/designing-safer-web-animation-for-motion-sensitivity/#section7)” and “[Designing With Reduced Motion For Motion Sensitivities](https://www.smashingmagazine.com/2020/09/design-reduced-motion-sensitivities/)”.
 
-
 **Progressive enhancement applied to animation**
 
 It’s important to respect user preferences, but this approach, applying animation and conditionally removing it, isn’t perfect. The reduced motion media feature was introduced only a few years ago, which means that [users of legacy browsers will see animations no matter what](https://caniuse.com/#feat=prefers-reduced-motion).
@@ -206,13 +205,13 @@ div {
 /* Important note: This has no effect in browsers that don’t support prefers-reduced-motion */
 @media (prefers-reduced-motion: reduce) {
   * {
-    animation: none !important; 
+    animation: none !important;
     transition: none !important;
   }
 }
 ```
 
-That’s why [Patrick H. Lauke](https://twitter.com/patrick_h_lauke) recommends a [defensive prefers-reduced-motion use](https://codepen.io/patrickhlauke/pen/YzPPdeo) where animations only run in browsers that support the media feature and only if they have *not* expressed a preference for reduced motion.
+That’s why [Patrick H. Lauke](https://twitter.com/patrick_h_lauke) recommends a [defensive prefers-reduced-motion use](https://codepen.io/patrickhlauke/pen/YzPPdeo) where animations only run in browsers that support the media feature and only if they have _not_ expressed a preference for reduced motion.
 
 ```css
 /* has no effect in browsers that don’t support prefers-reduced-motion */
@@ -247,13 +246,11 @@ Please respect your user’s motion preferences in your style sheets.
 
 \- [Eric Bailey](https://twitter.com/ericwbailey)
 
-
-
 ### Dark Mode
 
-Another setting some operating systems provide is the ability to switch the default theme from one that uses light colors to one that uses dark colors ([Dark Mode](https://www.a11yproject.com/posts/2020-01-23-operating-system-and-browser-accessibility-display-modes/#toc_Dark-Mode)). That’s especially useful for people who want to reduce eye strain or for people who have certain photosensitive conditions. 
+Another setting some operating systems provide is the ability to switch the default theme from one that uses light colors to one that uses dark colors ([Dark Mode](https://www.a11yproject.com/posts/2020-01-23-operating-system-and-browser-accessibility-display-modes/#toc_Dark-Mode)). That’s especially useful for people who want to reduce eye strain or for people who have certain photosensitive conditions.
 
-The media feature `prefers-color-scheme` allows us to react to these settings and provide users with a dark or light design accordingly. 
+The media feature `prefers-color-scheme` allows us to react to these settings and provide users with a dark or light design accordingly.
 
 ```css
 body {
@@ -273,7 +270,7 @@ body {
 
 I did some research and collected useful tips and tricks for working with Dark Mode.
 
-#### 1. Change the design according to user preference but allow users to change it back. 
+#### 1. Change the design according to user preference but allow users to change it back.
 
 Some users may prefer a dark theme for the OS but light themes on the web. They should be able to pick their preferred theme. You can see how Cassie Evans does it on her website [cassie.codes](https://www.cassie.codes/).
 
@@ -285,7 +282,7 @@ Comparison of light and dark mode.
 </figcaption>
 </figure>
 
-#### 2. Try to avoid hard contrasts like `#FFFFFF` text color on a `#000000` background. 
+#### 2. Try to avoid hard contrasts like `#FFFFFF` text color on a `#000000` background.
 
 Use softer combinations like `#EFEFEF` on `#111111`, which are easier on the eyes.
 
@@ -330,7 +327,7 @@ Dark backgrounds may amplify the brightness of light images, dimming images can 
 ```css
 img {
   opacity: 0.8;
-  transition: opacity .5s ease-in-out;
+  transition: opacity 0.5s ease-in-out;
 }
 
 a:hover img,
@@ -338,7 +335,6 @@ a:focus img {
   opacity: 1;
 }
 ```
-
 
 <style>
 .a-up-image {
@@ -392,7 +388,8 @@ a:focus img {
 Some articles recommend to simply invert colors and call it a day. While this might work on some sites, it doesn’t mean that it works well.
 
 ```css
-html, body {
+html,
+body {
   background-color: #fff;
 }
 
@@ -414,7 +411,7 @@ body {
 
 [Dark Mode with filter: invert(100%) on CodePen](https://codepen.io/matuzo/pen/ExKKMGw)
 
-The `filter` property and `invert` function reverts colors in a page. 
+The `filter` property and `invert` function reverts colors in a page.
 
 That’s not a best practice because just like you’ve picked the right combination of colors for your default theme carefully, you want to [hand-pick the colors for your dark theme](https://twitter.com/steveschoger/status/1151160261170126850), too. However, on a component level `filter: invert(100%)` might work well, so I’d keep it in my tool set.
 
@@ -433,36 +430,36 @@ In this simplified example you can see that the fill color of the SVG in the but
 
 ```css
 button {
-  color: #F00;
+  color: #f00;
 }
 
 circle {
-  fill: #F00;
+  fill: #f00;
 }
 
 button:hover {
-  color: #0F0;
+  color: #0f0;
 }
 
 button:hover circle {
-  fill: #0F0;
+  fill: #0f0;
 }
 
 @media (prefers-color-scheme: dark) {
   button {
-    color: #00F
+    color: #00f;
   }
 
   circle {
-    fill: #00F;
+    fill: #00f;
   }
 
   button:hover {
-    color: #F0F;
+    color: #f0f;
   }
 
-  button:hover circle{
-    fill: #F0F;
+  button:hover circle {
+    fill: #f0f;
   }
 }
 ```
@@ -522,15 +519,15 @@ button:hover circle {
 </button>
 </div>
 
-It works but the code is too verbose. We can reduce the number of lines and make it more dynamic by using the  `currentColor` keyword. `currentColor`is relative to the `color`  property of the element or its parent element, it changes with the color on hover, focus, Dark Mode, etc.
+It works but the code is too verbose. We can reduce the number of lines and make it more dynamic by using the `currentColor` keyword. `currentColor`is relative to the `color` property of the element or its parent element, it changes with the color on hover, focus, Dark Mode, etc.
 
 ```css
 button {
-  color: #F00;
+  color: #f00;
 }
 
 button:hover {
-  color: #0F0;
+  color: #0f0;
 }
 
 circle {
@@ -539,11 +536,11 @@ circle {
 
 @media (prefers-color-scheme: dark) {
   button {
-    color: #00F
+    color: #00f;
   }
 
   button:hover {
-    color: #F0F;
+    color: #f0f;
   }
 }
 ```
@@ -585,14 +582,14 @@ For the sake of completeness, here’s an example that uses custom properties an
 
 ```css
 :root {
-  --color: #F00;
-  --color_hover: #0F0;
+  --color: #f00;
+  --color_hover: #0f0;
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --color: #00F;
-    --color_hover: #F0F;
+    --color: #00f;
+    --color_hover: #f0f;
   }
 }
 
@@ -608,7 +605,6 @@ circle {
   fill: currentColor;
 }
 ```
-
 
 <style>
 :root {
@@ -662,7 +658,6 @@ CSS has its limitations when it comes to swaping colors or manipulating colors i
 
 Users change browser or OS settings to improve their experiences for a reason. Please respect these decisions by writing CSS that’s flexible enough to respond to their preferences. Font size, motion, and dark colors settings are only examples, there’s even more to consider like [High Contrast mode](https://developer.paciellogroup.com/blog/2016/12/windows-high-contrast-mode-the-limited-utility-of-ms-high-contrast/) on Windows or [inverted colors](https://adrianroselli.com/2017/11/os-high-contrast-versus-inverted-colors.html).
 
-
 ### Resources
 
 Dark Mode is a fantastic example for a feature that's [essential for some and useful for all](https://www.w3.org/WAI/perspective-videos//). If you want to add it to your website (yeah, I know, there’s no Dark Mode on my site. It’s a long story...), check these links. (Thanks, [Max](https://twitter.com/mxbck/)).
@@ -677,6 +672,6 @@ Dark Mode is a fantastic example for a feature that's [essential for some and us
 If you want to learn more about CSS and accessibility and you don’t want to wait for me to publish the other articles in this series, you can watch my talk about writing CSS with accessibility in mind at #ID24:
 
 <div class="content__video-wrapper"><div class="video-wrapper">
-<iframe width="560" height="315" src="https://www.youtube.com/embed/o6ssu5oKyaU" title="Writing even more CSS with Accessibility in Mind" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div></div>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/o6ssu5oKyaU" title="Writing even more CSS with Accessibility in Mind"  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div></div>
 
 Thanks to [Eric](https://twitter.com/yatil) for helping me with this article.

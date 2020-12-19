@@ -799,4 +799,4 @@ Improve the experience of your users by making Progressive Enhancement to one of
 If you want to learn more about CSS and accessibility and you don’t want to wait for me to publish the other articles in this series, you can watch my talk about writing CSS with accessibility in mind at #ID24:
 
 <div class="content__video-wrapper"><div class="video-wrapper">
-<iframe width="560" height="315" src="https://www.youtube.com/embed/o6ssu5oKyaU" title="Writing even more CSS with Accessibility in Mind" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div></div>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/o6ssu5oKyaU" title="Writing even more CSS with Accessibility in Mind"  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div></div>

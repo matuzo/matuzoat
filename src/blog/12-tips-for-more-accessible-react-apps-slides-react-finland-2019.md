@@ -24,7 +24,7 @@ archive: false
 ## Recording of the talk
 
 <div class="content__video-wrapper"><div class="video-wrapper">
-<iframe width="560" height="315" src="https://www.youtube.com/embed/NL6XKcX4sxc" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div></div>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/NL6XKcX4sxc"  allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div></div>
 
 ## Slides
 
@@ -72,7 +72,7 @@ What I mean by that is that you should start your document with an `h1` and the 
 
 Large sections, thematic groupings of content, in your page start with an `h2`. If there are subsections use `h3`, `h4`, etc. If there’s another large thematic section you go back to the `h2`.
 
-<div class="content__video-wrapper"><div class="video-wrapper"><iframe width="560" height="315" src="https://www.youtube.com/embed/gbHCgiktPNc" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen title="React demo: VoiceOver navigation by headings"></iframe></div></div>
+<div class="content__video-wrapper"><div class="video-wrapper"><iframe width="560" height="315" src="https://www.youtube.com/embed/gbHCgiktPNc"  allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen title="React demo: VoiceOver navigation by headings"></iframe></div></div>
 
 This is important because screen reader users don't just use the software by reading the contents on a page from top to bottom. There are additional ways of navigation, for example by listing all headings and jumping directly to a specific heading.
 
@@ -89,7 +89,7 @@ Sometimes that's hard to get right, especially when you're working with nested c
 The result is an automatically calculated correct document outline.
 
 <div class="content__video-wrapper">
-  <div class="video-wrapper"><iframe width="560" height="315" src="https://www.youtube.com/embed/tLSEWdpmYrc?rel=0" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen title="React demo: Testing the document outline with tota11y"></iframe>
+  <div class="video-wrapper"><iframe width="560" height="315" src="https://www.youtube.com/embed/tLSEWdpmYrc?rel=0"  allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen title="React demo: Testing the document outline with tota11y"></iframe>
   </div>
 </div>
 
@@ -154,14 +154,14 @@ It's tempting to use `div`s as buttons because they come with less default styli
 I'll show you the difference in the following demo.
 
 <div class="content__video-wrapper">
-  <div class="video-wrapper"><iframe width="560" height="315" src="https://www.youtube.com/embed/K1sdW9GNSwE?rel=0" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen title="React demo: Using a HTML button as button"></iframe>
+  <div class="video-wrapper"><iframe width="560" height="315" src="https://www.youtube.com/embed/K1sdW9GNSwE?rel=0"  allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen title="React demo: Using a HTML button as button"></iframe>
   </div>
 </div>
 
 In this example I put a click event on a HTML `button`. You can see that I can click it with a mouse and focus it using the keyboard. I can trigger the event using the mouse or by pressing the <kbd>Enter</kbd> or <kbd>Space</kbd> key.
 
 <div class="content__video-wrapper">
-  <div class="video-wrapper"><iframe width="560" height="315" src="https://www.youtube.com/embed/mbGqcHdCIRA?rel=0" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen title="React demo: Using a div as button"></iframe>
+  <div class="video-wrapper"><iframe width="560" height="315" src="https://www.youtube.com/embed/mbGqcHdCIRA?rel=0"  allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen title="React demo: Using a div as button"></iframe>
   </div>
 </div>
 
@@ -218,7 +218,7 @@ React applications continuously modify the HTML DOM during runtime, sometimes le
 
 <div class="content__video-wrapper">
   <div class="video-wrapper">
-<iframe width="560" height="315" src="https://www.youtube.com/embed/eGyEQT8EDLs?rel=0" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen title="React demo: bad focusmanagement"></iframe>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/eGyEQT8EDLs?rel=0"  allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen title="React demo: bad focusmanagement"></iframe>
   </div>
 </div>
 
@@ -228,7 +228,7 @@ This is a situation were we have to move focus manually from the button to the m
 
 <div class="content__video-wrapper">
   <div class="video-wrapper">
-<iframe width="560" height="315" src="https://www.youtube.com/embed/9Z3imL-fqdU?rel=0" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen title="React demo: good focusmanagement"></iframe>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/9Z3imL-fqdU?rel=0"  allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen title="React demo: good focusmanagement"></iframe>
   </div>
 </div>
 
@@ -245,7 +245,7 @@ To set focus in React, we can use `refs`.
 
 <div class="content__video-wrapper">
   <div class="video-wrapper">
-<iframe width="560" height="315" src="https://www.youtube.com/embed/BpP2-hwRbM0?rel=0" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen title="React demo: inaccessible modal on vice.com"></iframe>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/BpP2-hwRbM0?rel=0"  allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen title="React demo: inaccessible modal on vice.com"></iframe>
   </div>
 </div>
 
@@ -268,7 +268,7 @@ Tip number 6: Make notifications accessible to everyone.
 
 <div class="content__video-wrapper">
   <div class="video-wrapper">
-<iframe width="560" height="315" src="https://www.youtube.com/embed/IkVjAnFp6GI?rel=0" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen title="React demo: inaccessible notification"></iframe>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/IkVjAnFp6GI?rel=0"  allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen title="React demo: inaccessible notification"></iframe>
   </div>
 </div>
 
@@ -282,7 +282,7 @@ If an element has the role attribute with alert as a value, it becomes a live re
 
 <div class="content__video-wrapper">
   <div class="video-wrapper">
-<iframe width="560" height="315" src="https://www.youtube.com/embed/VtPqRyBUz5w?rel=0" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen title="React demo: accessible notification"></iframe>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/VtPqRyBUz5w?rel=0"  allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen title="React demo: accessible notification"></iframe>
   </div>
 </div>
 
@@ -305,7 +305,7 @@ Tip number 7 is important: routing. If you use a screen reader on a server side 
 
 <div class="content__video-wrapper">
   <div class="video-wrapper">
-<iframe width="560" height="315" src="https://www.youtube.com/embed/cZqdtkG-Z4M?rel=0" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen title="React demo: inaccessible routing (no announcement)"></iframe>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/cZqdtkG-Z4M?rel=0"  allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen title="React demo: inaccessible routing (no announcement)"></iframe>
   </div>
 </div>
 
@@ -330,7 +330,7 @@ I give the heading an `id` and reference it in the section by adding the `aria-l
 
 <div class="content__video-wrapper">
   <div class="video-wrapper">
-<iframe width="560" height="315" src="https://www.youtube.com/embed/8YTtqT4JvuU?rel=0" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen title="React demo: accessible routing"></iframe>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/8YTtqT4JvuU?rel=0"  allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen title="React demo: accessible routing"></iframe>
   </div>
 </div>
 

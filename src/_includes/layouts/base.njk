@@ -35,13 +35,12 @@
     <meta property="og:site_name" content="{{ title or metadata.title }}">
     <meta property="og:locale" content="en_GB">
     <meta property="og:type" content="website">
-    <meta name="author" content="Manuel Matuzović" /> 
+    <meta name="author" content="Manuel Matuzović"> 
 
-    {# <link rel="stylesheet" href="{{ '/static/min/main.min.css' | url | cacheBuster }}" /> #}
-    <link rel="stylesheet" href="{{ '/assets/relaunch.css' | url | cacheBuster }}" />
+    <link rel="stylesheet" href="{{ '/assets/relaunch.css' | url | cacheBuster }}">
     {% for sheet in sheets %}
       {% set sheet_url = '/assets/' + sheet + '.css' %}
-      <link rel="stylesheet" href="{{ sheet_url | url | cacheBuster }}" />
+      <link rel="stylesheet" href="{{ sheet_url | url | cacheBuster }}">
     {% endfor %}
   </head>
 

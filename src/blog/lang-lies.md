@@ -178,7 +178,7 @@ Screen readers, the software people use to read content on a page, may pick a di
 Steve Faulkner recorded a demo to show you the effects.
 
 <div class="content__video-wrapper"><div class="video-wrapper">
-<iframe width="560" title="Effect of lang attribute values on JAWS speech" height="315" src="https://www.youtube.com/embed/0uzxu9dQnuU" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div></div>
+<iframe width="560" title="Effect of lang attribute values on JAWS speech" height="315" src="https://www.youtube.com/embed/0uzxu9dQnuU"  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div></div>
 
 ### Quotation marks
 
