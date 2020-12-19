@@ -20,6 +20,7 @@ css: react-finland
 draft: false
 archive: false
 ---
+
 ## Recording of the talk
 
 <div class="content__video-wrapper"><div class="video-wrapper">
@@ -65,7 +66,7 @@ As it turns out, I only have 20 minutes so let’s get started with my 8 tips fo
 
 My first tip is: Create a sound document outline.
 
-![&lt;h1&gt;Yo! I'm the title of your page.&lt;/h1&gt;&lt;h2&gt;I'm very important.&lt;/h2&gt;&lt;h3&gt;My parent is very important.&lt;/h3&gt;&lt;h3&gt;My parent is very important.&lt;/h3&gt;&lt;h4&gt;I exist.&lt;/h4&gt;&lt;h2&gt;I'm very important.&lt;/h2&gt;&lt;h3&gt;My parent is very important.&lt;/h3&gt;](https://res.cloudinary.com/dp3mem7or/image/upload/v1549208913/articles/react-finland/accessible_react_apps.006.jpeg)
+![<h1>Yo! I'm the title of your page.</h1><h2>I'm very important.</h2><h3>My parent is very important.</h3><h3>My parent is very important.</h3><h4>I exist.</h4><h2>I'm very important.</h2><h3>My parent is very important.</h3>](https://res.cloudinary.com/dp3mem7or/image/upload/v1549208913/articles/react-finland/accessible_react_apps.006.jpeg)
 
 What I mean by that is that you should start your document with an `h1` and the title of your page.
 
@@ -77,13 +78,13 @@ This is important because screen reader users don't just use the software by rea
 
 In VoiceOver you get a list of all headings. The level is announced with the text of the heading to give users context and understand the page hierarchy.
 
-![&lt;Heading.H&gt;I will be an h1&lt;/Heading.H&gt;&lt;Heading.LevelBoundary&gt;&lt;Heading.H&gt;I will be an h2&lt;/Heading.H&gt;&lt;Heading.LevelBoundary&gt;&lt;Heading.H&gt;I will be an h3&lt;/Heading.H&gt;&lt;/Heading.LevelBoundary&gt;&lt;Heading.H&gt;I will be an h2&lt;/Heading.H&gt;&lt;/Heading.LevelBoundary&gt;](https://res.cloudinary.com/dp3mem7or/image/upload/v1549208913/articles/react-finland/accessible_react_apps.007.jpeg)
+![<Heading.H>I will be an h1</Heading.H><Heading.LevelBoundary><Heading.H>I will be an h2</Heading.H><Heading.LevelBoundary><Heading.H>I will be an h3</Heading.H></Heading.LevelBoundary><Heading.H>I will be an h2</Heading.H></Heading.LevelBoundary>](https://res.cloudinary.com/dp3mem7or/image/upload/v1549208913/articles/react-finland/accessible_react_apps.007.jpeg)
 
 Sometimes that's hard to get right, especially when you're working with nested components. An `h2` in a component is correct in one place but might be wrong when it's nested in another.
 
 [Tenon UI](https://www.tenon-ui.info/), an accessible React components library, has a component that takes care of that. You start with a `Heading.H` component which will automatically become an `h1` and then you use the `Heading.LevelBoundary` component to create a new section and allow automatic level calculation.
 
-![&lt;h1&gt;I will be an h1&lt;/h1&gt;&lt;h2&gt;I will be an h2&lt;/h2&gt;&lt;h3&gt;I will be an h3&lt;/h3&gt;&lt;h2&gt;I will be an h2&lt;/h2&gt;](https://res.cloudinary.com/dp3mem7or/image/upload/v1549208913/articles/react-finland/accessible_react_apps.008.jpeg)
+![<h1>I will be an h1</h1><h2>I will be an h2</h2><h3>I will be an h3</h3><h2>I will be an h2</h2>](https://res.cloudinary.com/dp3mem7or/image/upload/v1549208913/articles/react-finland/accessible_react_apps.008.jpeg)
 
 The result is an automatically calculated correct document outline.
 
@@ -101,7 +102,7 @@ tota11y annotates headings and shows the document outline. It displays errors if
 
 Create a sound document outline because it gives your document structure, helps screen reader users with navigation, and it's important for SEO.
 
-Check out [Tenon UI's headings component](https://www.tenon-ui.info/headings). Test your document outline with [tota11y](https://khan.github.io/tota11y/) or [wave](https://wave.webaim.org/). 
+Check out [Tenon UI's headings component](https://www.tenon-ui.info/headings). Test your document outline with [tota11y](https://khan.github.io/tota11y/) or [wave](https://wave.webaim.org/).
 
 ### <abbr title="acessibility">a11y</abbr> tip #2: Hide content correctly
 
@@ -119,21 +120,21 @@ I guess it's missing because it hasn't been considered in the design either. The
 
 `display: none;`, `visibility: hidden`; and the `hidden` attribute are not suitable for hiding content visually because they remove content from the accessibility tree making it inaccessible to screen reader users.
 
-![.visually-hidden { border: 0; clip: rect(0 0 0 0); height: 1px; margin: -1px; overflow: hidden; padding: 0; position: absolute; width: 1px; white-space: nowrap;}](https://res.cloudinary.com/dp3mem7or/image/upload/v1549208913/articles/react-finland/accessible_react_apps.013.jpeg)
+![.u-vh { border: 0; clip: rect(0 0 0 0); height: 1px; margin: -1px; overflow: hidden; padding: 0; position: absolute; width: 1px; white-space: nowrap;}](https://res.cloudinary.com/dp3mem7or/image/upload/v1549208913/articles/react-finland/accessible_react_apps.013.jpeg)
 
 We need a little bit more than that. A [combination of properties](https://medium.com/@matuzo/writing-css-with-accessibility-in-mind-8514a0007939#81ec) that makes sure that content is still accessible to screen readers but not visible or focusable.
 
-![&lt;h2 className=&quot;visually-hidden&quot;&gt;Sponsors&lt;/h2&gt;](https://res.cloudinary.com/dp3mem7or/image/upload/v1549208913/articles/react-finland/accessible_react_apps.014.jpeg)
+![<h2 className="u-vh">Sponsors</h2>](https://res.cloudinary.com/dp3mem7or/image/upload/v1549208913/articles/react-finland/accessible_react_apps.014.jpeg)
 
 To improve the React Finland website we add a visually hidden `h2` and transform the existing `h2`s to `h3`s.
 
-![&lt;button&gt;&lt;span class=&quot;visually-hidden&quot;&gt;Save&lt;/span&gt;&lt;svg aria-hidden width=&quot;32&quot; height=&quot;32&quot;&gt;&lt;path &hellip;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/button&gt;](https://res.cloudinary.com/dp3mem7or/image/upload/v1549208913/articles/react-finland/accessible_react_apps.015.jpeg)
+![<button><span class="u-vh">Save</span><svg aria-hidden width="32" height="32"><path …></path></svg></button>](https://res.cloudinary.com/dp3mem7or/image/upload/v1549208913/articles/react-finland/accessible_react_apps.015.jpeg)
 
-You can use this technique as well when you have an icon button without text. You just put the text in a visually-hidden `span` inside the `button` and you've got yourself an accessible button.
+You can use this technique as well when you have an icon button without text. You just put the text in a u-vh `span` inside the `button` and you've got yourself an accessible button.
 
-![&lt;button&gt;&lt;VisuallyHidden&gt;Save&lt;/VisuallyHidden&gt;&lt;svg aria-hidden width=&quot;32&quot; height=&quot;32&quot;&gt;&lt;path &hellip;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/button&gt;](https://res.cloudinary.com/dp3mem7or/image/upload/v1549208913/articles/react-finland/accessible_react_apps.016.jpeg)
+![<button><VisuallyHidden>Save</VisuallyHidden><svg aria-hidden width="32" height="32"><path …></path></svg></button>](https://res.cloudinary.com/dp3mem7or/image/upload/v1549208913/articles/react-finland/accessible_react_apps.016.jpeg)
 
-You could write a component for that or use the existing [VisuallyHidden component](https://github.com/reach/reach-ui/tree/master/packages/visually-hidden) from the [Reach UI React library](https://github.com/reach/reach-ui/).	
+You could write a component for that or use the existing [VisuallyHidden component](https://github.com/reach/reach-ui/tree/master/packages/u-vh) from the [Reach UI React library](https://github.com/reach/reach-ui/).
 
 #### Summary of the second tip
 
@@ -166,7 +167,7 @@ In this example I put a click event on a HTML `button`. You can see that I can c
 
 This button looks the same but this time I'm using a `div` instead of a `button`. I can click the button but I can’t focus it, because divs aren't focusable by default. Even if I could focus it, I wouldn't get the key events I get with the HTML `button` element.
 
-A fake button is inaccessible to keyboard and screen reader users. 
+A fake button is inaccessible to keyboard and screen reader users.
 
 ![](https://res.cloudinary.com/dp3mem7or/image/upload/v1549208913/articles/react-finland/accessible_react_apps.019.jpeg)
 Summary of the third tip: `<button>`s are focusable by default, they come with keyevents for free and they're semantic. A `<div>` is just generic text.
@@ -181,23 +182,23 @@ If a component returns multiple elements, they must be wrapped in a wrapper elem
 
 React 16.2 introduced a nice little feature called [Fragments](https://reactjs.org/docs/fragments.html). Fragments let you group a list of children without adding extra nodes to the DOM.
 
-![const Table = props =&gt; { return ( &lt;table&gt; &lt;tr&gt; &lt;Columns /&gt; &lt;/tr&gt; &lt;/table&gt; ); }](https://res.cloudinary.com/dp3mem7or/image/upload/v1549208913/articles/react-finland/accessible_react_apps.021.jpeg)
+![const Table = props => { return ( <table> <tr> <Columns /> </tr> </table> ); }](https://res.cloudinary.com/dp3mem7or/image/upload/v1549208913/articles/react-finland/accessible_react_apps.021.jpeg)
 
 Let’s say we have table component and in each table row there’s a column component.
 
-![const Columns = props =&gt; { return ( &lt;div&gt; &lt;td&gt;Hello&lt;/td&gt; &lt;td&gt;World&lt;/td&gt; &lt;/div&gt; ); }](https://res.cloudinary.com/dp3mem7or/image/upload/v1549208913/articles/react-finland/accessible_react_apps.022.jpeg)
+![const Columns = props => { return ( <div> <td>Hello</td> <td>World</td> </div> ); }](https://res.cloudinary.com/dp3mem7or/image/upload/v1549208913/articles/react-finland/accessible_react_apps.022.jpeg)
 
 This is how the `Columns` component looks like. All cells are wrapped in a `div` because we need a wrapper element.
 
-![&lt;table&gt; &lt;tr&gt; &lt;div&gt; &lt;td&gt;Hello&lt;/td&gt; &lt;td&gt;World&lt;/td&gt; &lt;/div&gt; &lt;/tr&gt; &lt;/table&gt;](https://res.cloudinary.com/dp3mem7or/image/upload/v1549208913/articles/react-finland/accessible_react_apps.023.jpeg)
+![<table> <tr> <div> <td>Hello</td> <td>World</td> </div> </tr> </table>](https://res.cloudinary.com/dp3mem7or/image/upload/v1549208913/articles/react-finland/accessible_react_apps.023.jpeg)
 
 The result is invalid markup because a `div` is not a valid descendent of `tr`.
 
-![const Columns = props =&gt; { return ( &lt;React.Fragment&gt; &lt;td&gt;Hello&lt;/td&gt; &lt;td&gt;World&lt;/td&gt; &lt;/React.Fragment&gt; ); }](https://res.cloudinary.com/dp3mem7or/image/upload/v1549208913/articles/react-finland/accessible_react_apps.024.jpeg)
+![const Columns = props => { return ( <React.Fragment> <td>Hello</td> <td>World</td> </React.Fragment> ); }](https://res.cloudinary.com/dp3mem7or/image/upload/v1549208913/articles/react-finland/accessible_react_apps.024.jpeg)
 
 This can be fixed by using a `Fragment` instead of a `div`. All you have to do is to replace `<div></div>` with `<React.Fragment></React.Fragment>`.
 
-![&lt;table&gt; &lt;tr&gt; &lt;td&gt;Hello&lt;/td&gt; &lt;td&gt;World&lt;/td&gt; &lt;/tr&gt; &lt;/table&gt;](https://res.cloudinary.com/dp3mem7or/image/upload/v1549208913/articles/react-finland/accessible_react_apps.025.jpeg)
+![<table> <tr> <td>Hello</td> <td>World</td> </tr> </table>](https://res.cloudinary.com/dp3mem7or/image/upload/v1549208913/articles/react-finland/accessible_react_apps.025.jpeg)
 
 As a result the component returns the contents without extra markup.
 
@@ -235,7 +236,7 @@ If we do that, we can access the elements in the modal by pressing the <kbd>Tab<
 
 To set focus in React, we can use `refs`.
 
-![class Button2 extends React.Component { constructor(props) { super(props); this.btn = React.createRef(); } setFocus(){ this.btn.current.focus(); } render() { return ( &lt;button className=&quot;btn&quot; ref={ this.btn }&gt; { this.props.children } &lt;/button&gt; ) }}](https://res.cloudinary.com/dp3mem7or/image/upload/v1549208913/articles/react-finland/accessible_react_apps.028.jpeg)
+![class Button2 extends React.Component { constructor(props) { super(props); this.btn = React.createRef(); } setFocus(){ this.btn.current.focus(); } render() { return ( <button className="btn" ref={ this.btn }> { this.props.children } </button> ) }}](https://res.cloudinary.com/dp3mem7or/image/upload/v1549208913/articles/react-finland/accessible_react_apps.028.jpeg)
 
 1. First we create a ref using React.createRef().
 2. We attach the ref to a DOM element, in our example a button, via the ref attribute.
@@ -259,7 +260,6 @@ Take advantage of refs in React to manage focus.
 
 Check out the [A11y dialog on Github](https://github.com/edenspiekermann/a11y-dialog) and the [accessibility docs on reactjs.org](https://reactjs.org/docs/accessibility.html).
 
-
 ### <abbr title="acessibility">a11y</abbr> tip #6: Make notifications accessible to everyone.
 
 ![](https://res.cloudinary.com/dp3mem7or/image/upload/v1549208913/articles/react-finland/accessible_react_apps.030.jpeg)
@@ -273,9 +273,9 @@ Tip number 6: Make notifications accessible to everyone.
 </div>
 
 I'm using VoiceOver on this page. If I click the button, a notification pops up that tells me that everything has been saved successfully.
-The problem is that there’s only visual feedback. The app doesn't provide screen readers with the information. 
+The problem is that there’s only visual feedback. The app doesn't provide screen readers with the information.
 
-![&lt;div className=&quot;alert&quot; role=&quot;alert&quot;&gt;Saved successfully&lt;/div&gt;](https://res.cloudinary.com/dp3mem7or/image/upload/v1549208913/articles/react-finland/accessible_react_apps.031.jpeg)
+![<div className="alert" role="alert">Saved successfully</div>](https://res.cloudinary.com/dp3mem7or/image/upload/v1549208913/articles/react-finland/accessible_react_apps.031.jpeg)
 
 The notification looks something like this. In order to make it accessible we have to add one more attribute.
 If an element has the role attribute with alert as a value, it becomes a live region. Screen readers will than watch and announce content that has changed inside this element.
@@ -322,7 +322,7 @@ And while I'm at it I also update the document title.
 
 VoiceOver will now announce the whole region, so the heading and the text. I'm not sure if this is the best way to do it, I prefer to be as close to the native behaviour as possible. That's why I want to announce just the title of the page.
 
-![render() {return (&lt;section aria-labelledby=&quot;pageTitle&quot; tabIndex=&quot;-1&quot; ref= { this.section }&gt;&lt;h2 id=&quot;pageTitle&quot;&gt;About&lt;/h2&gt;&lt;p&gt;We are&hellip;&lt;/p&gt;&lt;p&gt;Lorem ipsum&hellip;&lt;/p&gt;&lt;/section&gt;) }](https://res.cloudinary.com/dp3mem7or/image/upload/v1549208913/articles/react-finland/accessible_react_apps.035.jpeg)
+![render() {return (<section aria-labelledby="pageTitle" tabIndex="-1" ref= { this.section }><h2 id="pageTitle">About</h2><p>We are…</p><p>Lorem ipsum…</p></section>) }](https://res.cloudinary.com/dp3mem7or/image/upload/v1549208913/articles/react-finland/accessible_react_apps.035.jpeg)
 
 One way to do that is to label the focused region with the text in the heading.
 
@@ -341,7 +341,6 @@ If I do all that, the focus moves to the `section`, announces the content of the
 There’s a router called Reach Router that does these things and more out-of-the-box.
 
 <https://reach.tech/router>
-
 
 ![](https://res.cloudinary.com/dp3mem7or/image/upload/v1549208913/articles/react-finland/accessible_react_apps.037.jpeg)
 

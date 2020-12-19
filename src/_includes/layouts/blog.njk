@@ -2,48 +2,32 @@
 layout: layouts/base.njk
 ---
 
-<article class="blog__post rich-text">
-  <header class="blog__header">
-    <h1 class="blog__heading h1">{{ title }}</h1>
+<article class="rich-text">
+  <header>
+    <h1>{{ title }}</h1>
 
-    <p class="blog__date">
+    <p>
       posted on <time datetime="{{ date | machineDate }}">{{ date | readableDate }}</time>
     </p>
   </header>
 
   {% if intro %}
-    <div class="blog__intro">
-      {{ intro | md | safe }}
-    </div>
+    {{ intro | md | safe }}
   {% endif %}
 
   {% if teaser %}
-    <div class="blog__teaser {% if content %}blog__teaser--aligned{% endif %}">
-      {{ teaser | md | safe }}
-    </div>
+    {{ teaser | md | safe }}
   {% endif %}
 
   {% if content %}
-    <div class="blog__content content rich-text">
-      {{ content | safe }}
-    </div>
+    {{ content | safe }}
   {% else %}
-    <div class="blog__content">
-      <p>
-        Read the full article on  
-        <a href="{{ url }}" rel="noopener" class="no-line" aria-hidden="true">
-          {% for pub in collections.publications %}
-            {% if publication == pub.data.title %}
-              <span class="post-list__image post-list__image--{{ publication | stringify | slug }} blog__publication">
-                <img src="{{ metadata.cloudinary }}/h_32/{{ pub.data.logo }}" data-no-lazy alt="" width="32" />
-              </span>
-            {% endif %}
-          {% endfor %}
-          </a>
-        <a href="{{ url }}" rel="noopener">
-          {{ publication}} 
-        </a>.
-      </p>
-    </div>
+    <p>
+      Read the full article on  
+
+      <a href="{{ url }}" rel="noopener">
+        {{ publication}} 
+      </a>.
+    </p>
   {% endif %}
 </article>

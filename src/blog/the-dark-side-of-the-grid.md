@@ -21,7 +21,13 @@ publication: Matuzo
 css: dark-grid
 draft: false
 archive: false
+page_class: dark
+sheets:
+  - grid
 ---
+
+<div data-theme="dark-side-of-the-grid">
+
 ## Preface
 
 It has already been two years since the first browsers, Chromium 57 and Firefox 52, shipped CSS Grid Layout un-prefixed. Many developers have experimented with it or are using it in production already. More will come as soon as support for Internet Explorer 10 and 11 becomes less important.\
@@ -86,7 +92,7 @@ This article assumes that you have at least a basic knowledge of CSS Grid Layout
 
 ## Name and theme of this article
 
-Before we dive into the dark side of the grid, I wanted to quickly address the name and theme of this article. They’re based on the LP <a href="https://en.wikipedia.org/wiki/The_Dark_Side_of_the_Moon"><cite>The Dark Side of the Moon</cite></a> by [Pink Floyd](https://de.wikipedia.org/wiki/Pink_Floyd), released in 1973. 
+Before we dive into the dark side of the grid, I wanted to quickly address the name and theme of this article. They’re based on the LP <a href="https://en.wikipedia.org/wiki/The_Dark_Side_of_the_Moon"><cite>The Dark Side of the Moon</cite></a> by [Pink Floyd](https://de.wikipedia.org/wiki/Pink_Floyd), released in 1973.
 
 <figure class="figure figure--full">
 <a href="https://res.cloudinary.com/dp3mem7or/image/upload/v1549440257/articles/floyd.jpg" rel="noopener"><img src="https://res.cloudinary.com/dp3mem7or/image/upload/v1549440257/articles/floyd.jpg" alt="The “The Dark Side of the Moon LP” in front of some of my other records."></a>
@@ -96,7 +102,7 @@ I found this LP in a record store in Warsaw after talking about the dark side of
 </figcaption>
 </figure>
 
-Now you might think I’m a huge Pink Floyd fan. Well, I’m sorry to disappoint you, I’m not, I just like the design. However, I can’t borrow their design without telling you about them.  
+Now you might think I’m a huge Pink Floyd fan. Well, I’m sorry to disappoint you, I’m not, I just like the design. However, I can’t borrow their design without telling you about them.
 
 Therefore, I present to you: **Pink Floyd Fact #1**.
 
@@ -109,7 +115,7 @@ Therefore, I present to you: **Pink Floyd Fact #1**.
 
 ## Compromising on Semantics
 
-Even before grid shipped in any browser, experts like Rachel Andrew were already fearful that developers would compromise on semantics and flatten out document structures to use CSS Grid. 
+Even before grid shipped in any browser, experts like Rachel Andrew were already fearful that developers would compromise on semantics and flatten out document structures to use CSS Grid.
 
 <figure class="figure">
 <blockquote>I believe there will be a strong temptation, especially with Grid, to flatten out document structure in order that all elements become a child of the element with the Grid declared.<br />
@@ -124,12 +130,12 @@ Rachel Andrew | <a href="https://www.rachelandrew.co.uk/archives/2015/07/28/mode
 
 I’ll show you why in a simple example (I know that there are different solutions for this particular task but this is just a demo to illustrate the issue).\
 \
-Let’s say we have a `section` with a heading and a list of items. 
+Let’s say we have a `section` with a heading and a list of items.
 
 ```html
 <section>
   <h2>Pink Floyd discography</h2>
-  
+
   <ul>
     <li>The Piper at the Gates of Dawn</li>
     <li>A Saucerful of Secrets</li>
@@ -178,7 +184,7 @@ And this is what we get:
 
 Okay, let’s try to fix that.
 
-PS: I'm well aware that I could apply `display: grid` to the `ul` directly but this is just a simplified example. There are other (more complicated) use cases where you can’t do that easily. 
+PS: I'm well aware that I could apply `display: grid` to the `ul` directly but this is just a simplified example. There are other (more complicated) use cases where you can’t do that easily.
 
 ### Solution #1: Flattening the document structure.
 
@@ -187,7 +193,7 @@ If the placement algorithm only affects direct child elements, we’ll just make
 ```html
 <section>
   <h2>Pink Floyd discography</h2>
-  
+
   <div>The Piper at the Gates of Dawn</div>
   <div>A Saucerful of Secrets</div>
   <div>More</div>
@@ -240,9 +246,9 @@ Use subgrids as soon as they’re available.
 An alternative to using subgrids is a different property that has a similar effect. If you set the `display` value of an element to `contents`, it will act as if it got replaced by its child items.
 
 ```css
-  ul {
-    display: contents;
-  }
+ul {
+  display: contents;
+}
 ```
 
 In our example, this causes the list items to take part in the alignment of the sections grid because for them the parent `ul` doesn’t exist anymore. This is exactly what we want, and it works perfectly fine but, (yeah I’m sorry, there’s a _but_) Edge doesn’t support it.
@@ -270,12 +276,12 @@ The <code>ul</code> should have a <code>role</code> of <code>list</code> but ins
 As already mentioned, a grid item can also be a grid container. We can select the unordered list, make it span the whole width, and inherit values from the parent grid.
 
 ```css
-  ul {
-    grid-column: 1 / -1;
-    display: inherit;
-    grid-template-columns: inherit;
-    grid-gap: inherit;
-  }
+ul {
+  grid-column: 1 / -1;
+  display: inherit;
+  grid-template-columns: inherit;
+  grid-gap: inherit;
+}
 ```
 
 Nesting grids isn’t a perfect solution and sometimes it might not work, but in this simple example it’s good enough.
@@ -298,15 +304,67 @@ This was part 1 of the dark side of the grid. In part two I’ll show you how ea
 
 Thank you to [Aaron](https://twitter.com/AaronGustafson) and [Max](https://twitter.com/mxbck) for reviewing this article.
 
-## Resources
+</div>
 
-* [The Story of CSS Grid, from Its Creators](https://alistapart.com/article/the-story-of-css-grid-from-its-creators) by [Aaron Gustafson](https://www.aaron-gustafson.com/)
-* [Modern CSS Layout, power and responsibility](https://rachelandrew.co.uk/archives/2015/07/28/modern-css-layout-power-and-responsibility/) by [Rachel Andrew](https://rachelandrew.co.uk)
-* [CSS Grid Level 2: Here Comes Subgrid](https://www.smashingmagazine.com/2018/07/css-grid-2/) by [Rachel Andrew](https://rachelandrew.co.uk)
-* [CSS Grid Layout Module Level 2](https://drafts.csswg.org/css-grid-2/)
-* [Grid vs. Subgrid: An Elemental Example](http://fantasai.inkedblade.net/style/discuss/subgrid-markup/) by [fantasai](http://fantasai.inkedblade.net/)
-* [Display: Contents Is Not a CSS Reset](http://adrianroselli.com/2018/05/display-contents-is-not-a-css-reset.html) by [Adrian Roselli](http://adrianroselli.com)
-* [Add display:contents #608](https://github.com/MicrosoftEdge/Status/issues/608#issuecomment-394521198)
-* [Pink Floyd photo](http://leicestershirelalala.com/so-you-thought-youd-like-to-go-to-the-show-to-feel-the-warm-thrill-of-confusion-that-space-cadet-glow)
+<h2>Resources</h2>
+
+- [The Story of CSS Grid, from Its Creators](https://alistapart.com/article/the-story-of-css-grid-from-its-creators) by [Aaron Gustafson](https://www.aaron-gustafson.com/)
+- [Modern CSS Layout, power and responsibility](https://rachelandrew.co.uk/archives/2015/07/28/modern-css-layout-power-and-responsibility/) by [Rachel Andrew](https://rachelandrew.co.uk)
+- [CSS Grid Level 2: Here Comes Subgrid](https://www.smashingmagazine.com/2018/07/css-grid-2/) by [Rachel Andrew](https://rachelandrew.co.uk)
+- [CSS Grid Layout Module Level 2](https://drafts.csswg.org/css-grid-2/)
+- [Grid vs. Subgrid: An Elemental Example](http://fantasai.inkedblade.net/style/discuss/subgrid-markup/) by [fantasai](http://fantasai.inkedblade.net/)
+- [Display: Contents Is Not a CSS Reset](http://adrianroselli.com/2018/05/display-contents-is-not-a-css-reset.html) by [Adrian Roselli](http://adrianroselli.com)
+- [Add display:contents #608](https://github.com/MicrosoftEdge/Status/issues/608#issuecomment-394521198)
+- [Pink Floyd photo](http://leicestershirelalala.com/so-you-thought-youd-like-to-go-to-the-show-to-feel-the-warm-thrill-of-confusion-that-space-cadet-glow)
 
 <script async src="https://static.codepen.io/assets/embed/ei.js"></script>
+<script>
+  const demos = document.querySelectorAll('.js-demo');
+let demoObserver;
+function demoAddButton(demo) {
+  const controls = document.createElement('div');
+  controls.classList.add('demo__controls');
+  const button = document.createElement('button');
+  const button_inner = document.createElement('span');
+  button_inner.classList.add('btn__inner');
+  button_inner.textContent = 'Replay animation';
+  button.appendChild(button_inner);
+  button.classList.add('btn');
+  button.classList.add('demo__btn');
+  button.addEventListener('click', function() {
+    demo.classList.remove('demo--playing');
+    setTimeout(() => {
+      demo.classList.add('demo--playing');
+    }, 600);
+  });
+  controls.appendChild(button);
+  demo.appendChild(controls);
+}
+function demoVisible(entries) {
+  for (let i = 0; i < entries.length; i++) {
+    let entry = entries[i];
+    if (entry.intersectionRatio === 1) {
+      setTimeout(() => {
+        entry.target.classList.add('demo--playing');
+        demoObserver.unobserve(entry.target);
+      }, 400);
+    }
+  }
+}
+function enhanceDemos() {
+  if (demos.length) {
+    for (let i = 0; i < demos.length; i++) {
+      const demo = demos[i];
+      demoAddButton(demo);
+      demoObserver = new IntersectionObserver(demoVisible, {
+        threshold: [1]
+      });
+      if (demo.classList.contains('demo--playing')) {
+        continue;
+      }
+      demoObserver.observe(demo);
+    }
+  }
+}
+enhanceDemos();
+</script>

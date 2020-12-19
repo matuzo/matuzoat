@@ -1,0 +1,295 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background-image: url("data:image/svg+xml,%3Csvg version='1.1' id='Ebene_1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' x='0px' y='0px' viewBox='0 0 20.3 20.3' style='enable-background:new 0 0 20.3 20.3;' xml:space='preserve'%3E%3Cstyle type='text/css'%3E .st0%7Bopacity:0.15;fill:none;stroke:%2334B1BF;stroke-miterlimit:10;%7D%0A%3C/style%3E%3Cline class='st0' x1='0.5' y1='0' x2='0.5' y2='20.3'/%3E%3Cline class='st0' x1='20.3' y1='0.5' x2='1' y2='0.5'/%3E%3C/svg%3E%0A");
+  background-size: 20px;
+  background-position: left center;
+  background-color: #efefef;
+  margin: 0;
+  padding: 0.8rem 10px;
+  background-attachment: fixed;
+  font-family: sans-serif;
+  max-width: 80ch;
+  line-height: 1.6;
+  font-size: 1.2rem;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+@media (min-width: 375px) {
+  body {
+    padding: 2rem 20px;
+  }
+}
+
+main {
+  background: rgba(255, 255, 255, 0.7);
+  padding: 1rem;
+}
+
+@media (min-width: 375px) {
+  main {
+    padding: 2rem;
+  }
+}
+
+footer ul,
+nav ul {
+  display: flex;
+  list-style: none;
+  padding: 0;
+  flex-wrap: wrap;
+  margin: 0.6rem 0 0.3rem;
+}
+
+nav li {
+  margin-right: 1rem;
+  margin-bottom: 0.5rem;
+}
+
+footer li + li {
+  margin-left: 1rem;
+}
+
+img {
+  max-width: 100%;
+}
+
+h1 {
+  margin-top: 0;
+}
+
+li code,
+p code {
+  background: rgb(28, 78, 108);
+  border-radius: 3px;
+  color: rgb(255, 255, 255);
+  font-weight: bold;
+  font-size: 1rem;
+  margin: 0 0.2em;
+  padding: 0.2rem 0.2rem 0.1rem;
+  font-weight: normal;
+}
+
+.u-vh {
+  border: 0;
+  clip: rect(0 0 0 0);
+  clip-path: inset(50%);
+  height: 1px;
+  left: 0;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  top: 0;
+  white-space: nowrap;
+  width: 1px;
+}
+
+/**
+ * matuzo theme for JavaScript, CSS, and HTML
+ * Based on the a11y-dark theme: https://github.com/PrismJS/prism-themes/blob/master/themes/prism-a11y-dark.css
+ * @author matuzo
+ */
+
+code[class*='language-'],
+pre[class*='language-'] {
+  background: none;
+  color: rgb(239, 239, 239);
+  font-family: Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace;
+  font-size: 1rem;
+  -webkit-hyphens: none;
+  -moz-hyphens: none;
+  -ms-hyphens: none;
+  hyphens: none;
+  line-height: 1.5;
+  -moz-tab-size: 8;
+  -o-tab-size: 8;
+  tab-size: 8;
+  text-align: left;
+  white-space: pre;
+  word-spacing: normal;
+  word-break: normal;
+  word-wrap: normal;
+}
+
+/* Code blocks */
+pre[class*='language-'] {
+  border-left: 2rem solid hsl(186, 56%, 48%);
+  margin: 2.25rem 0;
+  overflow: auto;
+  padding: 2rem;
+}
+
+h4 + pre[class*='language-'] {
+  margin-top: 1rem;
+}
+
+pre[class*='language-css'] {
+  border-left-color: rgb(128, 210, 219);
+}
+
+:not(pre) > code[class*='language-'],
+pre[class*='language-'] {
+  background: rgb(21, 58, 81);
+}
+
+/* Inline code */
+:not(pre) > code[class*='language-'] {
+  padding: 0.1em;
+  border-radius: 0.3em;
+  white-space: normal;
+}
+
+.token.comment,
+.token.prolog,
+.token.doctype,
+.token.cdata {
+  color: #d4d0ab;
+}
+
+.token.punctuation {
+  color: rgb(239, 239, 239);
+}
+
+.token.property,
+.token.tag,
+.token.constant,
+.token.symbol,
+.token.deleted {
+  color: rgb(128, 210, 219);
+}
+
+.token.boolean,
+.token.number {
+  color: rgb(128, 210, 219);
+}
+
+.token.selector,
+.token.attr-name,
+.token.string,
+.token.char,
+.token.builtin,
+.token.inserted {
+  color: rgb(247, 132, 145);
+}
+
+.token.operator,
+.token.entity,
+.token.url,
+.language-css .token.string,
+.style .token.string,
+.token.variable {
+  color: rgb(128, 210, 219);
+}
+
+.token.atrule,
+.token.attr-value,
+.token.function {
+  color: #ffd700;
+}
+
+.token.keyword {
+  color: rgb(128, 210, 219);
+}
+
+.token.regex,
+.token.important {
+  color: #ffd700;
+}
+
+.token.important,
+.token.bold {
+  font-weight: bold;
+}
+.token.italic {
+  font-style: italic;
+}
+
+.token.entity {
+  cursor: help;
+}
+
+@media screen and (-ms-high-contrast: active) {
+  code[class*='language-'],
+  pre[class*='language-'] {
+    color: windowText;
+    background: window;
+  }
+
+  :not(pre) > code[class*='language-'],
+  pre[class*='language-'] {
+    background: window;
+  }
+
+  .token.important {
+    background: highlight;
+    color: window;
+    font-weight: normal;
+  }
+
+  .token.atrule,
+  .token.attr-value,
+  .token.function,
+  .token.keyword,
+  .token.operator,
+  .token.selector {
+    font-weight: bold;
+  }
+
+  .token.attr-value,
+  .token.comment,
+  .token.doctype,
+  .token.function,
+  .token.keyword,
+  .token.operator,
+  .token.property,
+  .token.string {
+    color: highlight;
+  }
+
+  .token.attr-value,
+  .token.url {
+    font-weight: normal;
+  }
+}
+
+.video-wrapper {
+  height: 0;
+  padding-bottom: 56.25%; /* 16:9 */
+  padding-top: 25px;
+  position: relative;
+}
+
+.video-wrapper iframe {
+  height: 100%;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 100%;
+}
+
+*:focus {
+  outline: 4px solid rgb(21, 58, 81);
+}
+
+.dark {
+  background: #000;
+  position: relative;
+  color: #fff;
+}
+
+.dark a:link,
+.dark a:visited {
+  color: #1cb4af;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+.dark *:focus {
+  outline: 4px solid #1cb4af;
+}

@@ -1,11 +1,11 @@
 ---
-title: "Writing even more CSS with Accessibility in Mind, Part 1: Progressive Enhancement"
+title: 'Writing even more CSS with Accessibility in Mind, Part 1: Progressive Enhancement'
 permalink: blog/writing-even-more-css-with-accessibility-in-mind-progressive-enhancement/index.html
 metadescription: >-
   Progressive enhancement is amazing. Building websites layer by layer allows for a cleaner separation of concerns, which makes the website more accessible.
 date: 2020-09-09T06:58:54.969Z
 image: articles/sm_css_a11y2_pe3.jpg
-teaser: "About 4 years ago, [I began to focus on web accessibility](https://alistapart.com/article/my-accessibility-journey-what-ive-learned-so-far/) professionally. I read many articles and books, watched talks, followed experts, and I also shared my knowledge at meet-ups and online. The first 3 articles I wrote were [Writing HTML with Accessibility in Mind](https://medium.com/alistapart/writing-html-with-accessibility-in-mind-a62026493412), [Writing JavaScript with Accessibility in Mind](https://medium.com/@matuzo/writing-javascript-with-accessibility-in-mind-a1f6a5f467b9), and [Writing CSS with Accessibility in Mind](https://medium.com/@matuzo/writing-css-with-accessibility-in-mind-8514a0007939). I've shared the most exciting new things I've learned about creating inclusive experiences in each language." 
+teaser: "About 4 years ago, [I began to focus on web accessibility](https://alistapart.com/article/my-accessibility-journey-what-ive-learned-so-far/) professionally. I read many articles and books, watched talks, followed experts, and I also shared my knowledge at meet-ups and online. The first 3 articles I wrote were [Writing HTML with Accessibility in Mind](https://medium.com/alistapart/writing-html-with-accessibility-in-mind-a62026493412), [Writing JavaScript with Accessibility in Mind](https://medium.com/@matuzo/writing-javascript-with-accessibility-in-mind-a1f6a5f467b9), and [Writing CSS with Accessibility in Mind](https://medium.com/@matuzo/writing-css-with-accessibility-in-mind-8514a0007939). I've shared the most exciting new things I've learned about creating inclusive experiences in each language."
 tags:
   - a11y
 publication: Matuzo
@@ -13,13 +13,13 @@ draft: false
 archive: false
 ---
 
-I wrote *Writing CSS with Accessibility in Mind* in 2017 and I’ve covered topics like font size, line height, print style sheets, hiding content, contrast, DOM order vs. visual order and focus styles. 3 years have passed, CSS has evolved, and I’ve learned new things. Therefore, I’ve decided to write about *even more CSS with accessibility in mind*.
+I wrote _Writing CSS with Accessibility in Mind_ in 2017 and I’ve covered topics like font size, line height, print style sheets, hiding content, contrast, DOM order vs. visual order and focus styles. 3 years have passed, CSS has evolved, and I’ve learned new things. Therefore, I’ve decided to write about _even more CSS with accessibility in mind_.
 
 ## In this series
 
 This series of articles covers 4 major topics:
 
-1. **Progressive enhancement <em>(this article)</em>** 
+1. **Progressive enhancement <em>(this article)</em>**
 2. User preferences <em>(coming soon)</em>
 3. CSS and semantics <em>(coming soon)</em>
 4. Improving accessibility with CSS <em>(coming soon)</em>
@@ -59,7 +59,7 @@ I strongly believe in progressive enhancement because it focuses on content and 
 
     @media (min-width: 768px) {
       .css2-pe ol {
-        padding: 2.4rem 0 0 22.4rem;
+        padding: 2.4rem 0 0 14.4rem;
       }
     }
 
@@ -78,8 +78,8 @@ I strongly believe in progressive enhancement because it focuses on content and 
     li::before {
       display: block;
       content: "";
-      width: 16rem;
-      height: 16rem;
+      width: 11rem;
+      height: 11rem;
       position: fixed;
       left: 0;
       top: 0;
@@ -96,18 +96,18 @@ I strongly believe in progressive enhancement because it focuses on content and 
 
     .css2-pe-html::before {
       background: #d25632;
-      width: 7.2rem;
-      height: 7.2rem;
+      width: 4.2rem;
+      height: 4.2rem;
       z-index: 3;
-      top: 4.4rem;
-      left: 4.4rem;
+      top: 3.4rem;
+      left: 3.4rem;
       opacity: 1;
     }
 
     .css2-pe-css::before {
       background: #1b73ba;
-      width: 12.8rem;
-      height: 12.8rem;
+      width: 7.8rem;
+      height: 7.8rem;
       z-index: 2;
       top: 1.6rem;
       left: 1.6rem;
@@ -199,7 +199,7 @@ I strongly believe in progressive enhancement because it focuses on content and 
 
 ### Example
 
-Let’s take a simple form that allows users to enable tracking.  
+Let’s take a simple form that allows users to enable tracking.
 
 <style>
   .css2-pe-toggle button {
@@ -233,7 +233,7 @@ Let’s take a simple form that allows users to enable tracking.
     content: "";
     display: inline-block;
     transition: transform 0.3s;
-    height: 2.6rem;
+    height: 2.7rem;
   }
 
   .css2-pe-toggle-css::before {
@@ -245,8 +245,8 @@ Let’s take a simple form that allows users to enable tracking.
   .css2-pe-toggle-css::after {
     width: 3rem;
     background: #aaa;
-    left: 0.2rem;
-    top: 0.2rem;
+    left: 0.1rem;
+    top: 0.1rem;
   }
 
     @media (min-width: 768px) {
@@ -254,7 +254,8 @@ Let’s take a simple form that allows users to enable tracking.
       top: 0.4rem;
     }
     .css2-pe-toggle-css::after {
-      top: 0.6rem;
+      top: 0.5rem;
+      height: 2.8rem;
     }
   }
 
@@ -278,38 +279,38 @@ Let’s take a simple form that allows users to enable tracking.
 <div class="css2-pe-toggle">
 
   <h4 class="css2-pe-l-h">HTML</h4>
-  We want to make sure that the only real dependency is core HTML. 
+  We want to make sure that the only real dependency is core HTML.
 
 ```html
 <form>
-  <input type="checkbox" id="tracking" class="visually-hidden">
+  <input type="checkbox" id="tracking" class="u-vh" />
   <label for="tracking">Turn on tracking.</label>
 
   <button type="submit">Save settings</button>
 </form>
 ```
 
-
   <form>
     <input type="checkbox" id="tracking2">
     <label for="tracking2">Turn on tracking.</label>
 
-  <button type="submit">Save settings</button>
+<button type="submit">Save settings</button>
+
   </form>
 
-  The button does nothing here. Let’s just assume that there’s a server-side script that saves the settings.
+The button does nothing here. Let’s just assume that there’s a server-side script that saves the settings.
 
   <h4 class="css2-pe-l-c">CSS</h4>
 
-  Our checkbox looks a bit boring, let’s add another layer. We can improve the design with CSS. We add a class (`.visually-hidden`) to hide the checkbox visually and use pseudo elements to create something that looks like a switch toggle.
+Our checkbox looks a bit boring, let’s add another layer. We can improve the design with CSS. We add a class (`.u-vh`) to hide the checkbox visually and use pseudo elements to create something that looks like a switch toggle.
 
   <form>
-    <input type="checkbox" id="tracking" class="visually-hidden" style="top: auto">
+    <input type="checkbox" id="tracking" class="u-vh" style="top: auto">
     <label for="tracking" class="css2-pe-toggle-css">Turn on tracking.</label>
 
-  <button type="submit">Save settings</button>
-  </form>
+<button type="submit">Save settings</button>
 
+  </form>
 
 ```css
 .label {
@@ -322,7 +323,7 @@ Let’s take a simple form that allows users to enable tracking.
   position: absolute;
   left: 0;
   top: 0;
-  content: "";
+  content: '';
   display: inline-block;
   transition: transform 0.3s;
   height: 2.6rem;
@@ -341,23 +342,23 @@ Let’s take a simple form that allows users to enable tracking.
   top: 0.2rem;
 }
 
-[type="checkbox"]:focus  + .label::before {
+[type='checkbox']:focus + .label::before {
   border-color: #1c4e6c;
   outline-offset: 2px;
   outline: 2px solid #f23c50;
 }
 
-[type="checkbox"]:checked + .label::before {
+[type='checkbox']:checked + .label::before {
   border-color: #1c4e6c;
 }
 
-[type="checkbox"]:checked + label::after {
+[type='checkbox']:checked + label::after {
   border-color: #1c4e6c;
   background-color: #1c4e6c;
   transform: translateX(3rem);
 }
 
-.visually-hidden {
+.u-vh {
   position: absolute;
   white-space: nowrap;
   width: 1px;
@@ -376,17 +377,18 @@ Let’s take a simple form that allows users to enable tracking.
 Now we can enhance the form some more and save settings as the user clicks the checkbox so that their settings persist even when the page crashes or they close the window accidentally.
 
 ```js
-  document.querySelector('#tracking').addEventListener('change', function(e) {
-    // Save in database or in a local storage, etc..
-    alert('Saved: ' + e.target.checked)
-  })
+document.querySelector('#tracking').addEventListener('change', function (e) {
+  // Save in database or in a local storage, etc..
+  alert('Saved: ' + e.target.checked);
+});
 ```
 
 <form>
-  <input type="checkbox" id="tracking3" class="visually-hidden" style="top: auto">
+  <input type="checkbox" id="tracking3" class="u-vh" style="top: auto">
   <label for="tracking3" class="css2-pe-toggle-css">Turn on tracking.</label>
 
 <button type="submit" class="css2-pe-toggle-btn">Save settings</button>
+
 </form>
 
 <script>
@@ -406,7 +408,7 @@ I’ve been following the basics of this principle for many years, but only rece
 ### Rediscovering Progressive Enhancement
 
 Nokia released an updated version of its iconic Nokia 3310 a few years ago. I bought it because it was affordable and I wanted to see how the surfing experience was in Opera Mini. You can download Opera Mini to your Android or iOS phone, too, but by default there isn’t much of a difference between Opera Mini and the default browser on these devices. Opera Mini on the Nokia 3310 runs on an operating system called Nokia Series 30+ and its function range is quite limited. If you search for almost any feature on [caniuse.com](http://caniuse.com/) and you see a red rectangle, that’s the Opera Mini we’re talking about. I’ve tested a website I’ve recently built using modern CSS and JS on the Nokia 3310 and after some minor tweaks it worked. Just like that. Guess why! Exactly, progressive enhancement.  
-The fact that JavaScript is just another layer and not a dependency allows users with low-end devices to access the website. 
+The fact that JavaScript is just another layer and not a dependency allows users with low-end devices to access the website.
 
 <div class="css2-pe">
   <ol>
@@ -418,7 +420,7 @@ The fact that JavaScript is just another layer and not a dependency allows users
 
 You can read more about the process in [The beauty of progressive enhancement](https://www.matuzo.at/blog/beauty-of-progressive-enhancement/).
 
-HTML, CSS and JS are large layers in our progressively enhanced website, but each layer may comprise even more layers. 
+HTML, CSS and JS are large layers in our progressively enhanced website, but each layer may comprise even more layers.
 
 ## Progressively enhancing CSS
 
@@ -432,8 +434,8 @@ The following code won’t throw any errors, the CSS parser will just skip the l
 
 ```css
 div {
-  color: #153a51; 
-  css-is: amazing; 
+  color: #153a51;
+  css-is: amazing;
   background: #36b1bf;
 }
 ```
@@ -462,7 +464,10 @@ ul {
   display: flex; /* Fallback for older browsers */
   flex-wrap: wrap; /* Allow items to wrap */
   display: grid; /* Most modern browsers */
-  grid-template-columns: repeat(auto-fill, 150px) /* Add as many 150px columns per line as possible */
+  grid-template-columns: repeat(
+    auto-fill,
+    150px
+  ); /* Add as many 150px columns per line as possible */
 }
 
 ul > * {
@@ -471,7 +476,7 @@ ul > * {
 }
 ```
 
-A modern browser first sets the `display` property to `flex` and allows wrapping of flex items, then it overwrites the first declaration and sets the `display` to `grid` and forgets about wrapping again because `flex-wrap` doesn’t work with grid items. Last, it adds grid columns with its own wrapping mechanism. 
+A modern browser first sets the `display` property to `flex` and allows wrapping of flex items, then it overwrites the first declaration and sets the `display` to `grid` and forgets about wrapping again because `flex-wrap` doesn’t work with grid items. Last, it adds grid columns with its own wrapping mechanism.
 
 <style>
 .css2-listgrid {
@@ -507,22 +512,35 @@ The list looks a little different, but most users probably won’t even notice.
   <li>Element 2</li>
 </ul>
 
-
 **Here’s another example:**  
-We can use `shape-outside` to make a paragraph that wraps an image look more interesting. 
+We can use `shape-outside` to make a paragraph that wraps an image look more interesting.
 
 ![A photo of a dog from the side looking up wearing a red party hat with white dots and text that wraps around the shape of the dogs head and body.](https://res.cloudinary.com/dp3mem7or/image/upload/c_scale,w_1200/v1599629649/articles/Screen_Shot_2020-08-15_at_13.22.43.png)
 <noscript><img class="no-script" src="https://res.cloudinary.com/dp3mem7or/image/upload/c_scale,w_1200/v1599629649/articles/Screen_Shot_2020-08-15_at_13.22.43.png" alt="A photo of a dog from the side looking up wearing a red party hat with white dots and text that wraps around the shape of the dogs head and body." /></noscript>
+
 ```html
-<img src="dog.jpg" width="400" alt="A dog from the side looking up wearing a red party hat with white dots" />
-<p>
-  Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt…
-</p>
+<img
+  src="dog.jpg"
+  width="400"
+  alt="A dog from the side looking up wearing a red party hat with white dots"
+/>
+<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt…</p>
 ```
 
 ```css
 img {
-  shape-outside: polygon(0.23% 2px, 17.11% 0.84%, 61.14% 21.01%, 69.91% 20.17%, 86.88% 27.73%, 90.64% 36.09%, 86.53% 50.56%, 80.07% 79.29%, 86.55% 99.48%, 0px 100%);
+  shape-outside: polygon(
+    0.23% 2px,
+    17.11% 0.84%,
+    61.14% 21.01%,
+    69.91% 20.17%,
+    86.88% 27.73%,
+    90.64% 36.09%,
+    86.53% 50.56%,
+    80.07% 79.29%,
+    86.55% 99.48%,
+    0px 100%
+  );
   shape-margin: 20px;
   float: left;
   display: inline-block;
@@ -536,14 +554,13 @@ Most browsers support the `shape-outside` and `shape-margin` properties. Edge < 
 
 It still looks nice and it’s accessible, just not as fancy. Check out [CSS Shapes Demo / shape-outside](https://codepen.io/matuzo/pen/yEYyOB?editors=1100) on CodePen.
 
-
 ### Cutting the mustard
 
 If people visit our websites in browsers like <abbr title="Internet Explorer">IE</abbr> 11 or Opera Mini, it’s fair to assume that they’re not using a high-end device. I like to make sure that they only get as much code as they need to access the content and still get a decent experience. Anything extra will only be served to more capable browsers and potentially faster devices. This means I have to decide at which point I want to draw the line between full and limited functionality for certain features. There are different ways of doing that.
 
 **Let CSS do its thing 2**
 
-Again, we can let CSS do its thing. For example, if we don’t want to bother users of legacy browsers  with having to download hundreds of kilobytes in font files, we can serve our fonts only in the `woff2` format ([see .woff2 support on caniuse.com](https://caniuse.com/#search=woff2)).
+Again, we can let CSS do its thing. For example, if we don’t want to bother users of legacy browsers with having to download hundreds of kilobytes in font files, we can serve our fonts only in the `woff2` format ([see .woff2 support on caniuse.com](https://caniuse.com/#search=woff2)).
 
 ```css
 @font-face {
@@ -594,7 +611,6 @@ ul {
 
 **Note:** It’s not possible to check support for a property only, you have to provide a value for the property. Something like `@supports (display) {}` won’t work.
 
-
 **Feature detection in JS**
 
 I've built a large website recently with many components, some of them enhanced with JavaScript. Each component works with and without JavaScript. This is important because we only serve a critical amount of JavaScript to users of legacy browsers, which means that they will see most components in their no-JS state.
@@ -605,14 +621,14 @@ We’re cutting the mustard by adding this block of Javascript to the `<head>` o
 <head>
   <script type="module">
     // Add the `.js` class to the <html> element
-    document.documentElement.classList.add('js')
+    document.documentElement.classList.add('js');
   </script>
 </head>
 ```
 
 The `type="module"` attribute and value ensures that the scripts block will be only executed, if the [browsers supports JavaScript modules](https://caniuse.com/#feat=es6-module). What’s great about this is that even with the attribute in place we don’t actually have to use JavaScript modules, we can write our JavaScript as usual.
 
-If the `<html>` element contains the class `js`, we know that it’s a modern browser because it supports JavaScript modules. This allows us to style components accordingly.  
+If the `<html>` element contains the class `js`, we know that it’s a modern browser because it supports JavaScript modules. This allows us to style components accordingly.
 
 In an accordion component, for example, the content is visible by default.
 
@@ -621,7 +637,10 @@ In an accordion component, for example, the content is visible by default.
   <div class="accordion">
     <h3 class="accordion__heading">Accordion Heading</h3>
     <div class="accordion__panel">
-      <p>Accordion panel content visibile by default and only hidden, if the `.js` class is present.
+      <p>
+        Accordion panel content visibile by default and only hidden, if the
+        `.js` class is present.
+      </p>
     </div>
   </div>
 </body>
@@ -696,30 +715,29 @@ We hide the content (`.accordion__panel`) and add attributes, events, etc. only 
 We replace the text content within the heading with a button and add a click event to the button that toggles the visibility of the panel.
 
 ```js
-  // Select elements
-  const accordion = document.querySelector('.js-accordion')
-  const heading = accordion.querySelector('h3')
-  const panel = accordion.querySelector('div')
-  const btn = document.createElement('button');
+// Select elements
+const accordion = document.querySelector('.js-accordion');
+const heading = accordion.querySelector('h3');
+const panel = accordion.querySelector('div');
+const btn = document.createElement('button');
 
-  // The panel is hidden by default, so set aria-expanded to false
-  btn.setAttribute('aria-expanded', false)
-  // Associate the button with the panel (works only with some screen readers)
-  btn.setAttribute('aria-controls', 'panel_1')
-  panel.id = 'panel_1'
+// The panel is hidden by default, so set aria-expanded to false
+btn.setAttribute('aria-expanded', false);
+// Associate the button with the panel (works only with some screen readers)
+btn.setAttribute('aria-controls', 'panel_1');
+panel.id = 'panel_1';
 
-  // Event that toggles aria-expanded and the panel visibility
-  btn.addEventListener('click', (e) => {
-    const state = btn.getAttribute('aria-expanded') === 'true' ? false : true;
-    btn.setAttribute('aria-expanded', state)
-    panel.classList.toggle('accordion__panel--visible')
-  })
+// Event that toggles aria-expanded and the panel visibility
+btn.addEventListener('click', (e) => {
+  const state = btn.getAttribute('aria-expanded') === 'true' ? false : true;
+  btn.setAttribute('aria-expanded', state);
+  panel.classList.toggle('accordion__panel--visible');
+});
 
-  // Replace text in heading with the button
-  btn.textContent = heading.textContent
-  heading.textContent = ''
-  heading.appendChild(btn)
-
+// Replace text in heading with the button
+btn.textContent = heading.textContent;
+heading.textContent = '';
+heading.appendChild(btn);
 ```
 
 <div>

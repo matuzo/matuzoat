@@ -24,9 +24,10 @@ When I saw this tweet it struck me, because I realized that it has been a long t
 Maybe it’s due to the constant resizing of our browsers and making sure that our sites work perfectly in all shapes and sizes or maybe it’s just because I rarely print web pages myself. Whatever it is, I totally forgot about print style sheets and that’s bad.
 
 Optimizing web pages for print is important because we want our sites to be as accessible as possible, no matter the medium. We [shouldn’t make assumptions](https://adactio.com/journal/11409) about our users and their behavior. People still print web pages. Just think about articles or blog posts, recipes, contact information, and directions or real estate sites. Someone somewhere will eventually try to print one of the pages you made.
-> # *I gave up on home printers a long time ago because they always seemed to break after ten minutes of use. But not everyone is like me,…*
 
-*-Heydon Pickering (Inclusive Design Patterns)*
+> _I gave up on home printers a long time ago because they always seemed to break after ten minutes of use. But not everyone is like me,…_
+
+_-Heydon Pickering (Inclusive Design Patterns)_
 
 If you see yourself in a similar position as I did, this post will hopefully serve you well as a quick refresher. If you haven’t yet optimized pages for print with CSS, the following tips will get you started.
 
@@ -59,13 +60,13 @@ You don’t have to print a page every time you make a small change. Depending o
 
 **Update November 6, 2019**: Here’s a detailed post ([Can you view print stylesheets applied directly in the browser? ](https://css-tricks.com/can-you-view-print-stylesheets-applied-directly-in-the-browser/)) on how to emulate print styles in 2019 by [Chris](https://twitter.com/chriscoyier).
 
-For debugging print styles in Firefox open the *Developer Toolbar* (Shift + F2 or Tools > Web Developer > Developer Toolbar) and enter media emulate print in the input field at the bottom of the browser window and press enter. The active tab will act as if the *media type* was print until you close it or refresh the page. *(**Update October 20, 2018**: This doesn’t work anymore in Firefox 63+ since the Developer Toolbar has been removed)*
+For debugging print styles in Firefox open the _Developer Toolbar_ (Shift + F2 or Tools > Web Developer > Developer Toolbar) and enter media emulate print in the input field at the bottom of the browser window and press enter. The active tab will act as if the _media type_ was print until you close it or refresh the page. _(**Update October 20, 2018**: This doesn’t work anymore in Firefox 63+ since the Developer Toolbar has been removed)_
 
 ![print style emulation in Firefox](https://res.cloudinary.com/dp3mem7or/image/upload/v1573101802/articles/print-styles/ff.png)
 
-In Chrome open DevTools (CMD + Opt + I (macOS) or Ctrl + Shift + I (Windows) or View > Developer > Developer Tools) and show the console drawer (Esc), open the rendering pane, check *Emulate CSS Media* and select *Print*.
+In Chrome open DevTools (CMD + Opt + I (macOS) or Ctrl + Shift + I (Windows) or View > Developer > Developer Tools) and show the console drawer (Esc), open the rendering pane, check _Emulate CSS Media_ and select _Print_.
 
-![print style emulation in Chrome](https://res.cloudinary.com/dp3mem7or/image/upload/v1573101803/articles/print-styles/chrome.png)*print style emulation in Chrome*
+![print style emulation in Chrome](https://res.cloudinary.com/dp3mem7or/image/upload/v1573101803/articles/print-styles/chrome.png)_print style emulation in Chrome_
 
 ## 3. Absolute units
 
@@ -200,27 +201,27 @@ It’s pretty easy to display a links target next to its text.
 
 ```css
 a[href]:after {
-  content: " (" attr(href) ")";
+  content: ' (' attr(href) ')';
 }
 ```
 
 Of course, this will display relative links, absolute links to your site, anchors, etc. as well. Something like this might serve better:
 
 ```css
-a[href^="http"]:not([href*="mywebsite.com"]):after {
-  content: " (" attr(href) ")";
+a[href^='http']:not([href*='mywebsite.com']):after {
+  content: ' (' attr(href) ')';
 }
 ```
 
-Looks *interesting*, I know. These lines mean: Display the value of the `href` attribute next to every link that has a `href` attribute, which starts with *http*, but doesn't have *mywebsite.com* in its value.
+Looks _interesting_, I know. These lines mean: Display the value of the `href` attribute next to every link that has a `href` attribute, which starts with _http_, but doesn't have _mywebsite.com_ in its value.
 
 ## 9. Revealing expansions in abbreviations
 
-Abbreviations should be wrapped in <abbr> elements and their expansions included in the title attribute. It makes sense to display those on printed pages.
+Abbreviations should be wrapped in `<abbr>` elements and their expansions included in the title attribute. It makes sense to display those on printed pages.
 
 ```css
 abbr[title]:after {
-  content: " (" attr(title) ")";
+  content: ' (' attr(title) ')';
 }
 ```
 
@@ -241,7 +242,7 @@ If you write your media queries like in the following example be aware that the 
 
 ```css
 @media screen and (min-width: 48em) {
-  /* screen only */ 
+  /* screen only */
 }
 ```
 
@@ -249,7 +250,7 @@ Why you ask? Because the CSS rules only apply if the `min-width` is `48em` and t
 
 ```css
 @media (min-width: 48em) {
-  /* all media types */ 
+  /* all media types */
 }
 ```
 
@@ -291,21 +292,20 @@ PS: Thanks to [Eva](https://twitter.com/eva_trostlos) for redacting my writing a
 
 ### Resources
 
-* [https://www.youtube.com/watch?v=jF-OQ-BrIAM](https://www.youtube.com/watch?v=jF-OQ-BrIAM)
+- [https://www.youtube.com/watch?v=jF-OQ-BrIAM](https://www.youtube.com/watch?v=jF-OQ-BrIAM)
 
-* [https://github.com/h5bp/html5-boilerplate/blob/master/dist/css/main.css#L217](https://github.com/h5bp/html5-boilerplate/blob/master/dist/css/main.css#L217)
+- [https://github.com/h5bp/html5-boilerplate/blob/master/dist/css/main.css#L217](https://github.com/h5bp/html5-boilerplate/blob/master/dist/css/main.css#L217)
 
-* [https://www.smashingmagazine.com/2013/03/tips-and-tricks-for-print-style-sheets/](https://www.smashingmagazine.com/2013/03/tips-and-tricks-for-print-style-sheets/)
+- [https://www.smashingmagazine.com/2013/03/tips-and-tricks-for-print-style-sheets/](https://www.smashingmagazine.com/2013/03/tips-and-tricks-for-print-style-sheets/)
 
-* [http://stackoverflow.com/questions/9519556/faster-way-to-develop-and-test-print-stylesheets-avoid-print-preview-every-time](http://stackoverflow.com/questions/9519556/faster-way-to-develop-and-test-print-stylesheets-avoid-print-preview-every-time)
+- [http://stackoverflow.com/questions/9519556/faster-way-to-develop-and-test-print-stylesheets-avoid-print-preview-every-time](http://stackoverflow.com/questions/9519556/faster-way-to-develop-and-test-print-stylesheets-avoid-print-preview-every-time)
 
-* [https://www.smashingmagazine.com/2015/01/designing-for-print-with-css/](https://www.smashingmagazine.com/2015/01/designing-for-print-with-css/)
+- [https://www.smashingmagazine.com/2015/01/designing-for-print-with-css/](https://www.smashingmagazine.com/2015/01/designing-for-print-with-css/)
 
-* [https://github.com/BafS/Gutenberg](https://github.com/BafS/Gutenberg)
+- [https://github.com/BafS/Gutenberg](https://github.com/BafS/Gutenberg)
 
-* [https://helloanselm.com/2014/unified-media-queries/](https://helloanselm.com/2014/unified-media-queries/)
+- [https://helloanselm.com/2014/unified-media-queries/](https://helloanselm.com/2014/unified-media-queries/)
 
-*Update November 17, 2016: Added Hartija Framework.*  
-*Update October 20, 2018: Info that the Developer Toolbar in Firefox has been removed.*  
-*Update November 6, 2019: Added link to browser emulation post on CSS Tricks.*
-
+_Update November 17, 2016: Added Hartija Framework._  
+_Update October 20, 2018: Info that the Developer Toolbar in Firefox has been removed._  
+_Update November 6, 2019: Added link to browser emulation post on CSS Tricks._

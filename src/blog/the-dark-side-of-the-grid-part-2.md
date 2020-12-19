@@ -24,7 +24,13 @@ publication: Matuzo
 css: dark-grid
 draft: false
 archive: false
+page_class: dark
+sheets:
+  - grid
 ---
+
+<div data-theme="dark-side-of-the-grid">
+
 <div class="demo u-full-width js-demo"> 
   <div class="a-title">
     <div class="a-title-white-light"></div>
@@ -67,7 +73,7 @@ The CSS Grid Layout specification provides us with many ways of changing visual 
 Before we look at what’s possible with Grid, let’s briefly talk about visual order.
 
 1. Both tab order and the order in which screen readers read content follow DOM order.
-2. Changing visual order with CSS has no effect on DOM order. 
+2. Changing visual order with CSS has no effect on DOM order.
 
 No matter where we place items with CSS, keyboard users will still encounter elements in the order in which they appear in the HTML document.
 
@@ -146,7 +152,7 @@ No matter where we place items with CSS, keyboard users will still encounter ele
 
 If the visual order and the DOM order don’t match, it can irritate and confuse users up to a point where the experience is so bad that the site is unusable.
 
-1. Visual order concerns keyboard users because they may have trouble predicting where focus will go next. 
+1. Visual order concerns keyboard users because they may have trouble predicting where focus will go next.
 2. It may irritate [users of screen magnifiers](https://axesslab.com/make-site-accessible-screen-magnifiers/) if the enlarged portion of the screen skips around a lot.
 3. If a blind user is working with a sighted user, who reads the page in visual order, it may confuse them when they encounter information in different order.
 
@@ -154,7 +160,7 @@ If the visual order and the DOM order don’t match, it can irritate and confuse
 
 When you’re applying any property that changes order, you should especially pay attention to testing with a keyboard. Use the <kbd>Tab</kbd> and <kbd>Shift</kbd> + <kbd>Tab</kbd> keys to test if your website is usable without a mouse.
 
-This applies to all properties, not just to those associated with CSS Grid.  
+This applies to all properties, not just to those associated with CSS Grid. 
 However, I'll focus on manipulating order in grids.
 
 ### Explicit placement
@@ -222,7 +228,6 @@ Explicit placement might create a mismatch between DOM order and visual order.
   </ul>
 </div>
 
-
 ### Auto flow
 
 Explicitly placing items that have the same size is one thing, but placing differently sized items may have unexpected side effects with Grids default auto-placement algorithm. The combination of explicit and implicit placement sometimes results in unwanted gaps between grid items. This is because of the default placement algorithm only ever moving forward when placing items and never backtracking to fill holes.
@@ -236,13 +241,27 @@ Explicitly placing items that have the same size is one thing, but placing diffe
 }
 
 /* You can use the span keyword to make items span multiple columns or rows. */
-.item:nth-child(1) { grid-row-end: span 3; }
-.item:nth-child(3) { grid-row-end: span 3; }
-.item:nth-child(4) { grid-column: span 2; }
-.item:nth-child(5) { grid-row: span 2; }
-.item:nth-child(7) { grid-column: 2 / span 2; }
-.item:nth-child(8) { grid-column: 2 / span 3; }
-.item:nth-child(9) { grid-row: span 2; }
+.item:nth-child(1) {
+  grid-row-end: span 3;
+}
+.item:nth-child(3) {
+  grid-row-end: span 3;
+}
+.item:nth-child(4) {
+  grid-column: span 2;
+}
+.item:nth-child(5) {
+  grid-row: span 2;
+}
+.item:nth-child(7) {
+  grid-column: 2 / span 2;
+}
+.item:nth-child(8) {
+  grid-column: 2 / span 3;
+}
+.item:nth-child(9) {
+  grid-row: span 2;
+}
 ```
 
 <div class="js-a-focus-demo" data-button="Show tab order">
@@ -365,7 +384,7 @@ li:nth-child(2) {
 ```
 
 Positioned grid items lie on top of other items just like any absolute positioned element. They don’t affect the position of other items, and they’re completely ignored during auto-placement.\
-This is where it gets interesting: setting `left` and `top` to `0` doesn’t place them in the top left corner of their parent item (the `ul`) but in the cell they’re placed in. 
+This is where it gets interesting: setting `left` and `top` to `0` doesn’t place them in the top left corner of their parent item (the `ul`) but in the cell they’re placed in.
 
 <div class="js-a-focus-demo" data-button="Show tab order">
 <ul class="a-grid-absolute">
@@ -391,9 +410,10 @@ First, it describes layouts in CSS visually. If you have a 2-column layout with 
 .layout {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  grid-template-areas: "header header"
-                       "content sidebar"
-                       "footer footer";
+  grid-template-areas:
+    'header header'
+    'content sidebar'
+    'footer footer';
 }
 ```
 
@@ -403,17 +423,11 @@ Let’s take this example where the source order is wrong.
 
 ```html
 <body>
-  <footer>
-    Footer
-  </footer>
-  
-  <header>
-    Header
-  </header>
-  
-  <main>
-    Main
-  </main>
+  <footer>Footer</footer>
+
+  <header>Header</header>
+
+  <main>Main</main>
 </body>
 ```
 
@@ -424,9 +438,10 @@ All it takes is to define the correct layout in CSS and then place the elements 
 body {
   display: grid;
   /* Three single column, single row areas */
-  grid-template-areas: "header"
-                       "content"
-                       "footer";
+  grid-template-areas:
+    'header'
+    'content'
+    'footer';
 }
 
 footer {
@@ -440,7 +455,7 @@ header {
 }
 
 main {
- /* place the main element in the second row/area */
+  /* place the main element in the second row/area */
   grid-area: content;
 }
 ```
@@ -451,11 +466,11 @@ This is so simple, so beautiful, yet so dangerous. It looks right, but the order
 <div class="a-grid-areas">
 <div class="footer">
   <button>Footer</button>
-</div>    
+</div>
 
 <div class="header">
   <button>Header</button>
-</div>    
+</div>
 
 <div class="main">
   <button>Main</button>
@@ -467,10 +482,10 @@ This is so simple, so beautiful, yet so dangerous. It looks right, but the order
 
 None of these features are bad, but just they may affect an important part of the user experience negatively. If you’re changing visual order, be aware of the effects it may have.
 
-* Test your components with the keyboard by pressing <kbd>Tab</kbd> or <kbd>Shift + Tab</kbd> for the opposite direction.
-* Make sure that visual order is comprehensible and that it matches DOM order as good as in any way possible. 
-* Test on different devices and screen sizes. [People also use keyboards on mobile devices](https://webaim.org/projects/screenreadersurvey7/#mobilekeyboard).
-* You can use a tool Like [Accessibility Insights](https://chrome.google.com/webstore/detail/accessibility-insights-fo/pbjjkligggfmakdaogkfomddhfmpjeni?hl=en) to visualize and better understand the tab order of your web pages.
+- Test your components with the keyboard by pressing <kbd>Tab</kbd> or <kbd>Shift + Tab</kbd> for the opposite direction.
+- Make sure that visual order is comprehensible and that it matches DOM order as good as in any way possible.
+- Test on different devices and screen sizes. [People also use keyboards on mobile devices](https://webaim.org/projects/screenreadersurvey7/#mobilekeyboard).
+- You can use a tool Like [Accessibility Insights](https://chrome.google.com/webstore/detail/accessibility-insights-fo/pbjjkligggfmakdaogkfomddhfmpjeni?hl=en) to visualize and better understand the tab order of your web pages.
 
 <figure class="figure">
   <div class="content__video-wrapper">
@@ -481,9 +496,126 @@ None of these features are bad, but just they may affect an important part of th
 
   <figcaption>Accessibility Insights tracks all the tab stops you make when you press the <kbd>tab</kbd> key.</figcaption>
 </figure>
+</div>
 
 Thanks for reading. ❤️
 
 The last part of this series, "Cross Browser Support", will be published soon.
 
 PS: Thanks to [Juho](https://twitter.com/bebraw) and [E.J.](https://twitter.com/codeability) for proofreading.
+
+<script>
+  const demos = document.querySelectorAll('.js-demo');
+let demoObserver;
+function demoAddButton(demo) {
+  const controls = document.createElement('div');
+  controls.classList.add('demo__controls');
+  const button = document.createElement('button');
+  const button_inner = document.createElement('span');
+  button_inner.classList.add('btn__inner');
+  button_inner.textContent = 'Replay animation';
+  button.appendChild(button_inner);
+  button.classList.add('btn');
+  button.classList.add('demo__btn');
+  button.addEventListener('click', function() {
+    demo.classList.remove('demo--playing');
+    setTimeout(() => {
+      demo.classList.add('demo--playing');
+    }, 600);
+  });
+  controls.appendChild(button);
+  demo.appendChild(controls);
+}
+function demoVisible(entries) {
+  for (let i = 0; i < entries.length; i++) {
+    let entry = entries[i];
+    if (entry.intersectionRatio === 1) {
+      setTimeout(() => {
+        entry.target.classList.add('demo--playing');
+        demoObserver.unobserve(entry.target);
+      }, 400);
+    }
+  }
+}
+function enhanceDemos() {
+  if (demos.length) {
+    for (let i = 0; i < demos.length; i++) {
+      const demo = demos[i];
+      demoAddButton(demo);
+      demoObserver = new IntersectionObserver(demoVisible, {
+        threshold: [1]
+      });
+      if (demo.classList.contains('demo--playing')) {
+        continue;
+      }
+      demoObserver.observe(demo);
+    }
+  }
+}
+enhanceDemos();
+
+
+/**
+ * Order demo
+ */
+var demos2 = document.querySelectorAll('.js-a-focus-demo');
+var activeLink = [];
+for (let i = 0; i < demos2.length; i++) {
+  activeLink.push(0);
+
+  (function () {
+    const demo = demos2[i];
+    var links = demo.querySelectorAll('a, button');
+    var animating = false;
+    var focusInterval;
+
+    var playpause = document.createElement('button');
+    var playpause_inner = document.createElement('span');
+    playpause.classList.add('btn');
+    playpause_inner.classList.add('btn__inner');
+    playpause.appendChild(playpause_inner);
+
+    var buttonTextActive = 'Stop animation';
+    var buttonTextInactive = 'Play animation';
+
+    if (demo.hasAttribute('data-button')) {
+      buttonTextInactive = demo.getAttribute('data-button');
+    }
+
+    setButtonText(buttonTextInactive);
+
+    demo.insertBefore(playpause, demo.firstChild);
+
+    playpause.addEventListener('click', function () {
+      if (animating) {
+        clearInterval(focusInterval);
+        playpause_inner.textContent = buttonTextInactive;
+      } else {
+        links[activeLink[i]].classList.add('focus');
+
+        focusInterval = window.setInterval(focusNext, 700);
+        setButtonText(buttonTextActive);
+      }
+
+      animating = !animating;
+    });
+
+    function setButtonText(text) {
+      playpause_inner.textContent = text;
+    }
+
+    function focusNext() {
+      if (activeLink[i] < links.length - 1) {
+        activeLink[i]++;
+      } else {
+        activeLink[i] = 0;
+      }
+
+      demo.querySelector('.focus').classList.remove('focus');
+
+      links[activeLink[i]].classList.add('focus');
+    }
+  })(i);
+}
+
+</script>

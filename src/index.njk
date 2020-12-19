@@ -4,32 +4,25 @@ description: I'm a frontend developer from Vienna, specialized in HTML, accessib
 renderData: 
   title: 'Manuel Matuzovic'
   page_classes: 'home'
+tags:
+  - nav
+navtitle: Home
 ---
-<h1 class="visually-hidden">
+<h1>
   {{ title or metadata.title }}
 </h1>
 
-<div class="page__intro page-intro">
-  <div class="rich-text"> 
-    <p>Hi! <span class="js-random-emoji">✌️</span> I'm a frontend developer from Vienna. I'm specialized in <strong>HTML</strong>, <strong>accessibility</strong>, and <strong>CSS layout and architecture</strong>.</p>
-    <p>If you want to get in touch, write me an <a href="mailto:manuel@matuzo.at" rel="me">email</a> or find me on <a href="https://twitter.com/mmatuzo" rel="noopener me">twitter</a>.</p>
-  </div>
-</div>
+<p>Hi! I'm a frontend developer from Vienna. I'm specialized in <strong>HTML</strong>, <strong>accessibility</strong>, and <strong>CSS layout and architecture</strong>.</p>
+<p>If you want to get in touch, write me an <a href="mailto:manuel@matuzo.at" rel="me">email</a> or find me on <a href="https://twitter.com/mmatuzo" rel="noopener me">twitter</a>.</p>
 
-<h2 class="h1 h1--inline">
+<h2>
   Recent blog posts
 </h2>
 
 {% set max = 5 %}
 {% include 'components/blog-posts.njk' %}
 
-{% set text = "More blog posts" %}
-{% set link = "/blog" %}
-{% set style = "lg-none" %}
-{% include 'components/button.njk' %}
+<a href="/blog">
+  More blog posts
+</a>
 
-<script>
-  let vh = window.innerHeight * 0.01;
-  // Then we set the value in the --vh custom property to the root of the document
-  document.documentElement.style.setProperty('--vh', `${vh}px`);
-</script>

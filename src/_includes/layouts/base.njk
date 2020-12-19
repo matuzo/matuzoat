@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html class="site no-js js-site" lang="en" id="top" {% if publication %}data-theme="{{ publication | slug }}-{{ title | slug }}"{% endif %}>
+<html lang="en" id="top">
   <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -37,30 +37,28 @@
     <meta property="og:type" content="website">
     <meta name="author" content="Manuel Matuzović" /> 
 
-    <link rel="webmention" href="https://webmention.io/www.matuzo.at/webmention" />
-    <link rel="pingback" href="https://webmention.io/www.matuzo.at/xmlrpc" />
-
-    <link rel="stylesheet" href="{{ '/static/min/main.min.css' | url | cacheBuster }}" />
+    {# <link rel="stylesheet" href="{{ '/static/min/main.min.css' | url | cacheBuster }}" /> #}
+    <link rel="stylesheet" href="{{ '/assets/relaunch.css' | url | cacheBuster }}" />
+    {% for sheet in sheets %}
+      {% set sheet_url = '/assets/' + sheet + '.css' %}
+      <link rel="stylesheet" href="{{ sheet_url | url | cacheBuster }}" />
+    {% endfor %}
   </head>
 
-  <body class="site__body {{ renderData.page_classes }}">
-    <a href="#content" class="skip-link">Skip to Content</a>
-
-    <canvas class="site__square site__square--tl square-canvas js-sq-tl" hidden aria-hidden="true"></canvas>
-    <canvas class="site__square site__square--tr square-canvas js-sq-tr" hidden aria-hidden="true"></canvas>
-    <canvas class="site__square site__square--br square-canvas js-sq-br" hidden aria-hidden="true"></canvas>
-    <canvas class="site__square site__square--bl square-canvas js-sq-bl" hidden aria-hidden="true"></canvas>
-
+  <body>
     {% include 'header.njk' %}
 
-    <main class="site__content page js-site-content {{ renderData.content_classes }}" id="content">
+    <div>
+      <h2>This site is updating in the open</h2>
+      <p>It looks like stylesheets are missing, but actually I’m working on this site openly and I just started to redesign it. Things will look a little better every time I find the time to update it.<br>
+      If something is completely broken, please <a href="mailto: manuel@matuzo.at">get in touch</a>.</p>
+    </div>
+
+    <main id="content" class="{{ page_class }}">
+      
       {{ content | safe }}
     </main>
 
     {% include 'footer.njk' %}
-
-    {# Polyfill for Intersection Observer#}
-    <script src="https://polyfill.io/v3/polyfill.min.js?features=default%2CIntersectionObserver"></script>
-    <script src="{{ '/static/min/main.min.js' | url | cacheBuster }}"></script>
   </body>
 </html>

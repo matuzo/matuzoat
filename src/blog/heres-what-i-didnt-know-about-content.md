@@ -12,16 +12,16 @@ draft: false
 archive: false
 ---
 
-A few weeks ago Stefan published a post on his website called “[The CSS "content" property accepts alternative text](https://www.stefanjudis.com/today-i-learned/css-content-accepts-alternative-text/)”, which blew my mind. He showed that the `content` property excepts 2 values and not just 1, the actual content and an alternative text. 
+A few weeks ago Stefan published a post on his website called “[The CSS "content" property accepts alternative text](https://www.stefanjudis.com/today-i-learned/css-content-accepts-alternative-text/)”, which blew my mind. He showed that the `content` property excepts 2 values and not just 1, the actual content and an alternative text.
 
 ```css
 .new-item::before {
   /* "Highlighted item" and element content is read out */
-  content: "★" / "Highlighted item";
+  content: '★' / 'Highlighted item';
 }
 ```
 
-I didn’t know that and I was wondering if there were more things I didn’t know about the `content` property. Since you’re reading this, I found something, so let’s see what I was able to add to my  [“Here’s what I didn’t know about…”](https://www.matuzo.at/blog/heres-what-i-didnt-know/) series.
+I didn’t know that and I was wondering if there were more things I didn’t know about the `content` property. Since you’re reading this, I found something, so let’s see what I was able to add to my [“Here’s what I didn’t know about…”](https://www.matuzo.at/blog/heres-what-i-didnt-know/) series.
 
 ## How I’m using the content attribute.
 
@@ -30,6 +30,7 @@ Before I started my research, I was using this property primarily for 3 things.
 ### Adding an element to another element using pseudo elements
 
 If I want to create a simple shape in CSS that is not a rectangle or circle, I use `:after` and `::before` to give myself more options for styling.
+
 <style>
   .contentdemo1 {
     width: 70px;
@@ -59,13 +60,13 @@ If I want to create a simple shape in CSS that is not a rectangle or circle, I u
     border-radius: 5px;
 
     transform: rotate(-45deg);
-    background: #efefef;
+    background: #fafafa;
   }
 </style>
 <div class="contentdemo1"></div>
 
 ```html
-  <div></div>
+<div></div>
 ```
 
 ```css
@@ -73,7 +74,7 @@ div {
   width: 70px;
   height: 50px;
   margin-top: 15px;
-  
+
   border: 5px solid #123456;
   border-radius: 5px;
 
@@ -81,12 +82,15 @@ div {
 }
 
 div::before {
-  content: "";
-  
+  content: '';
+
   position: absolute;
-  left: 0; right: 0; top: -16px;
-  
-  width: 20px; height: 20px;
+  left: 0;
+  right: 0;
+  top: -16px;
+
+  width: 20px;
+  height: 20px;
   margin: auto;
 
   border: solid #123456;
@@ -118,8 +122,9 @@ Printed links are useless if you don’t know where there are leading. I’m usi
 ```css
 @media print {
   a[href^="http://"]:after,
-  a[href^="https://"]:after {
-    content: " (" attr(href) ")";
+  a[href^="https://"]:after
+  {
+    content: ' (' attr(href) ')';
   }
 }
 ```
@@ -127,7 +132,6 @@ Printed links are useless if you don’t know where there are leading. I’m usi
 ### Custom counters
 
 Every now and then I need custom counters in lists. A combination of `content` and counter properties usually does the job.
-
 
 <style>
 	.contentdemo3 {
@@ -150,8 +154,6 @@ Every now and then I need custom counters in lists. A combination of `content` a
   <li>Element 003</li>
 </ol>
 
-
-
 ```html
 <ol>
   <li>Element 001</li>
@@ -171,7 +173,7 @@ li {
 }
 
 li::before {
-  content: "🤤 " counter(mylist) ": "
+  content: '🤤 ' counter(mylist) ': ';
 }
 ```
 
@@ -220,7 +222,7 @@ What’s the point of using `content` when `background-image` has better support
 
 ```css
 div::before {
-  content: url('pin.png') / "You are here."
+  content: url('pin.png') / 'You are here.';
 }
 ```
 
@@ -243,15 +245,13 @@ Nor did I know that you can use the `url()` function as a value, I also didn’t
 
 <div class="contentdemo4"></div>
 
-
 ```css
 div::before {
-  content: url('pin.png') "You are here."
+  content: url('pin.png') 'You are here.';
 }
 ```
 
 Checkout [example 6 on CodePen](https://codepen.io/matuzo/pen/xxwMLgJ?editors=1100).
-
 
 ## You can only replace the content of a regular element with an &lt;image&gt;
 
@@ -259,7 +259,7 @@ The `content` property is meant to be used with pseudo elements. You can’t use
 
 ```css
 div {
-  content: "You are here";
+  content: 'You are here';
 }
 ```
 
@@ -285,19 +285,19 @@ div {
 
 Checkout [example 7 on CodePen](https://codepen.io/matuzo/pen/pojGrPw?editors=1100).
 
-
 ## There are quotes and no-quotes
 
 Okay, now this one is really cool. Let’s say we have a quote nested in another quote.
 
 ```html
 <blockquote>
-  My mama always said,  
+  My mama always said,
   <q>
-    Life was like a box of chocolates. You never know what you’re gonna get
-  </q>.
+    Life was like a box of chocolates. You never know what you’re gonna get </q
+  >.
 </blockquote>
 ```
+
 <style>
   .contentdemoquote {
     margin-bottom: 3rem !important;
@@ -327,11 +327,11 @@ If we add opening and closing quotes to the `blockquote` using pseudo elements a
 
 ```css
 blockquote::before {
-  content: open-quote
+  content: open-quote;
 }
 
 blockquote::after {
-  content: close-quote
+  content: close-quote;
 }
 ```
 
@@ -402,10 +402,11 @@ Just because I was curious, here are some variations of the second example in ot
 
 ```html
 <blockquote lang="fr">
-   Maman disait toujours,  
-  <q>  
-   la vie, c'est comme une boîte de chocolats: on ne sait jamais sur quoi on va tomber  
-  </q>.
+  Maman disait toujours,
+  <q>
+    la vie, c'est comme une boîte de chocolats: on ne sait jamais sur quoi on va
+    tomber </q
+  >.
 </blockquote>
 ```
 
@@ -420,10 +421,11 @@ Just because I was curious, here are some variations of the second example in ot
 
 ```html
 <blockquote lang="ru">
-  Моя мама всегда говорила,  
-  <q>  
-    Жизнь как коробка шоколадных конфет: никогда не знаешь, какая начинка тебе попадётся  
-  </q>.
+  Моя мама всегда говорила,
+  <q>
+    Жизнь как коробка шоколадных конфет: никогда не знаешь, какая начинка тебе
+    попадётся </q
+  >.
 </blockquote>
 ```
 
@@ -438,10 +440,10 @@ Just because I was curious, here are some variations of the second example in ot
 
 ```html
 <blockquote lang="de">
-  Mama hat immer gesagt, 
-  <q>  
-    Das Leben ist wie eine Schachtel Pralinen. Man weiß nie, was man kriegt 
-  </q>.
+  Mama hat immer gesagt,
+  <q>
+    Das Leben ist wie eine Schachtel Pralinen. Man weiß nie, was man kriegt </q
+  >.
 </blockquote>
 ```
 
@@ -456,10 +458,10 @@ Just because I was curious, here are some variations of the second example in ot
 
 ```html
 <blockquote lang="es">
-  Mi mamá siempre decía,  
-  <q>  
-    La vida es como una caja de bombones, nunca sabes lo que vas a conseguir  
-  </q>.
+  Mi mamá siempre decía,
+  <q>
+    La vida es como una caja de bombones, nunca sabes lo que vas a conseguir </q
+  >.
 </blockquote>
 ```
 
@@ -471,7 +473,6 @@ Just because I was curious, here are some variations of the second example in ot
 </blockquote>
 
 Sorry, if I fucked up any of the translations.
-
 
 ## There’s counter() and counters()
 
@@ -511,7 +512,6 @@ I'm really not sure if I was aware of the fact there isn’t just a `counter()` 
   <li>Element 003</li>
 </ol>
 
-
 ```html
 <ol>
   <li>
@@ -538,7 +538,7 @@ li {
 }
 
 li::before {
-  content: "🤤 " counters(mylist, ".") ": "
+  content: '🤤 ' counters(mylist, '.') ': ';
 }
 ```
 
@@ -546,8 +546,7 @@ Checkout [example 8 on CodePen](https://codepen.io/matuzo/pen/ZEbwMNR).
 
 You’ll find more ways of using the `content` property in Adrian’s article [https://adrianroselli.com/2019/12/showing-file-types-in-links.html](https://adrianroselli.com/2019/12/showing-file-types-in-links.html).
 
-
-Wow, that was a lot. I didn’t expect to write and learn so much. I hope that you’ve learned as much as I did. 
+Wow, that was a lot. I didn’t expect to write and learn so much. I hope that you’ve learned as much as I did.
 
 Thanks for reading ❤️ and thanks to Stefan for the inspiration for this post.
 
