@@ -48,7 +48,14 @@
   <body>
     {% include 'header.njk' %}
 
+    <div>
+      <h2>This site is updating in the open</h2>
+      <p>It looks like stylesheets are missing, but actually I’m working on it openly and I just started to redesign it. Things will look a little better every time I find the time to work on it.<br>
+      If something is completely broken, please <a href="mailto: manuel@matuzo.at">get in touch</a>.</p>
+    </div>
+
     <main id="content" class="{{ page_class }}">
+      
       {{ content | safe }}
     </main>
 
