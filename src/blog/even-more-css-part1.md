@@ -745,7 +745,7 @@ heading.appendChild(btn);
     <div class="accordion js-accordion">
       <h3 class="accordion__heading">Accordion Heading</h3>
       <div class="accordion__panel accordion__panel--js">
-        <p>Accordion panel content visibile by default and only hidden, if the `.js` class is present.
+        <p>Accordion panel content visibile by default and only hidden, if the `.js` class is present.</p>
       </div>
     </div>
   </div>
