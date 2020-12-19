@@ -17,14 +17,3 @@ package = "netlify-plugin-html-validate"
   [plugins.inputs]
     ext = "html"
     config = ""
-
-[[plugins]]
-package = "netlify-plugin-minify-html"
-
-  # Specify which deploy contexts we'll minify HTML in.
-  # Supports any Deploy Contexts available in Netlify.
-  # https://docs.netlify.com/site-deploys/overview/#deploy-contexts
-  [plugins.inputs]
-    contexts = [
-      'production'
-    ]
