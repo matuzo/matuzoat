@@ -1,6 +1,4 @@
-import lazyLoad from './lazyload';
 import enhanceDemos from './demo';
-require('focus-visible');
 
 if (!Element.prototype.closest) {
   Element.prototype.closest = function (s) {
@@ -24,9 +22,6 @@ if (document.querySelector('.js-scroll-top')) {
     document.querySelector('.js-logo').focus();
   });
 }
-
-// Lazy load images
-lazyLoad(document.querySelectorAll('.lazy'));
 
 /**
  * Enhance demos with JS
