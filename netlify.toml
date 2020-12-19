@@ -16,4 +16,3 @@ package = "netlify-plugin-html-validate"
 
   [plugins.inputs]
     ext = "html"
-    config = ""
