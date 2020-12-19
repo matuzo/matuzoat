@@ -37,7 +37,10 @@ module.exports = function (eleventyConfig) {
   eleventyConfig.addPassthroughCopy('./src/images');
   eleventyConfig.addPassthroughCopy('admin');
   eleventyConfig.addPassthroughCopy('_redirects');
-  eleventyConfig.addPassthroughCopy({ './src/static/favicon': '/' });
+  eleventyConfig.addPassthroughCopy({
+    './src/static/favicon': '/',
+    './src/static/css': '/assets',
+  });
 
   return {
     templateFormats: ['md', 'njk'],
