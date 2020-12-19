@@ -180,7 +180,7 @@ And this is what we get:
   on <a href="https://codepen.io">CodePen</a>.</span>
 </p>
 
-<a id="codepen1-skip"></a>Doesn’t exactly look as expected. The thing is, only direct children of the grid container will align with the grid. In our example, those are the `h2` and the `ul` – but we want all the `li` elements to fill cells in the grid.
+<a id="codepen1-skip">Doesn’t exactly look as expected.</a> The thing is, only direct children of the grid container will align with the grid. In our example, those are the `h2` and the `ul` – but we want all the `li` elements to fill cells in the grid.
 
 Okay, let’s try to fix that.
 
