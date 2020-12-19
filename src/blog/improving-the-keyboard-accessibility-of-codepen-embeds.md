@@ -84,7 +84,7 @@ a:focus {
 </figure>
 
 <div class="info">
-<h4><span class="info__label">Wait! What?</span><span class="info__heading">Why did you add <code>transform: rotate(0);</code>?</a></h4>
+<h4><span class="info__label">Wait! What?</span><span class="info__heading">Why did you add <code>transform: rotate(0);</code>?</span></h4>
 <p>To make sure that other items don't overlap the outline of the focused item, I create a new <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Positioning/Understanding_z_index/The_stacking_context" rel="noopener">stacking context</a> on focus by applying the <code>transform</code> property with a value that doesn't change anything else visually. <code>transform</code> is just one of <a href="https://codepen.io/matuzo/pen/aERqyg" rel="noopener">many other properties that create a new stacking context</a>.</p></div>
 
 As part of my testing, I discovered that in Firefox on macOS 10.13.6 a `pre` element within the `iframe` receives focus as well. That's why added the following lines.

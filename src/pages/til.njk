@@ -17,11 +17,11 @@ date: 1987-01-01
     </h2>
     {% if til.data.image %}
       {% if til.data.link %}
-        <a href="{{ til.data.link }}" rel="noopener">
+        <a href="{{ til.data.link }}" rel="noopener" aria-hidden="true">
           <img loading="lazy" src="{{ metadata.cloudinary }}/w_440/{{til.data.image}}" alt="">
         </a>
       {% else %}
-        <a href="{{ metadata.cloudinary }}/{{til.data.image}}" rel="noopener">
+        <a href="{{ metadata.cloudinary }}/{{til.data.image}}" rel="noopener" aria-hidden="true">
           <img loading="lazy" src="{{ metadata.cloudinary }}/w_440/{{til.data.image}}" alt="">
         </a>
       {% endif %}

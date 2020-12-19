@@ -422,7 +422,7 @@ In this simplified example you can see that the fill color of the SVG in the but
 ```html
 <button>
   Sign up
-  <svg height="50" width="50">
+  <svg height="50" width="50" focusable="false">
     <circle cx="25" cy="25" r="20">
   </svg>
 </button>
@@ -511,9 +511,9 @@ button:hover circle {
 </style>
 
 <div>
-<button class="a-up-button a-up-button1">
+<button class="a-up-button a-up-button1" type="button">
   Sign up
-  <svg height="50" width="50">
+  <svg height="50" width="50" focusable="false">
     <circle cx="25" cy="25" r="20">
   </svg>
 </button>
@@ -570,9 +570,9 @@ circle {
 </style>
 
 <div>
-<button class="a-up-button a-up-button2">
+<button class="a-up-button a-up-button2" type="button">
   Sign up
-  <svg height="50" width="50">
+  <svg height="50" width="50" focusable="false">
     <circle cx="25" cy="25" r="20">
   </svg>
 </button>
@@ -635,7 +635,7 @@ circle {
 <div>
 <button class="a-up-button a-up-button3">
   Sign up
-  <svg height="50" width="50">
+  <svg height="50" width="50" focusable="false">
     <circle cx="25" cy="25" r="20">
   </svg>
 </button>

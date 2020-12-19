@@ -310,7 +310,7 @@ This is a dream come true but the advantage of the default packing mode is that 
 Play with the [auto-flow demo on CodePen](https://codepen.io/matuzo/pen/pONEzJ?editors=1100) or read more about [grid-auto-flow on MDN](https://developer.mozilla.org/en-US/docs/Web/CSS/grid-auto-flow).
 
 <div class="info">
-<h4><span class="info__label">Aaahhmmm</span><span class="info__heading">Implicit, explicit, whatisit?</code>?</a></h4>
+<h4><span class="info__label">Aaahhmmm</span><span class="info__heading">Implicit, explicit, whatisit?</code>?</span></h4>
 <p>If you’re not sure what I mean by explicit and implicit, head over to CSS-Tricks and read about the <a href="https://css-tricks.com/difference-explicit-implicit-grids/" rel="noopener">difference between explicit and implicit grids</a>.</p></div>
 
 ### Order
@@ -358,12 +358,12 @@ li:nth-child(2) {
 
 <div class="js-a-focus-demo" data-button="Show tab order">
 <ul class="a-grid-absolute">
-  <li><button>Item 1</button></li>
-  <li><button>Item 2</button></li>
-  <li><button>Item 3</button></li>
-  <li><button>Item 4</button></li>
-  <li><button>Item 5</button></li>
-  <li><button>Item 6</button></li>
+  <li><button type="button">Item 1</button></li>
+  <li><button type="button">Item 2</button></li>
+  <li><button type="button">Item 3</button></li>
+  <li><button type="button">Item 4</button></li>
+  <li><button type="button">Item 5</button></li>
+  <li><button type="button">Item 6</button></li>
 </ul>
 </div>
 
@@ -388,12 +388,12 @@ This is where it gets interesting: setting `left` and `top` to `0` doesn’t pla
 
 <div class="js-a-focus-demo" data-button="Show tab order">
 <ul class="a-grid-absolute">
-  <li><button>Item 1</button></li>
-  <li class="positioned"><button>Item 2</button></li>
-  <li><button>Item 3</button></li>
-  <li><button>Item 4</button></li>
-  <li><button>Item 5</button></li>
-  <li><button>Item 6</button></li>
+  <li><button type="button">Item 1</button></li>
+  <li class="positioned"><button type="button">Item 2</button></li>
+  <li><button type="button">Item 3</button></li>
+  <li><button type="button">Item 4</button></li>
+  <li><button type="button">Item 5</button></li>
+  <li><button type="button">Item 6</button></li>
 </ul>
 </div>
 
