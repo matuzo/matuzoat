@@ -8,7 +8,7 @@ body {
   background-position: left center;
   background-color: #efefef;
   margin: 0;
-  padding: 2rem 20px;
+  padding: 0.8rem 10px;
   background-attachment: fixed;
   font-family: sans-serif;
   max-width: 80ch;
@@ -18,9 +18,21 @@ body {
   margin-right: auto;
 }
 
+@media (min-width: 375px) {
+  body {
+    padding: 2rem 20px;
+  }
+}
+
 main {
   background: rgba(255, 255, 255, 0.7);
-  padding: 2rem;
+  padding: 1rem;
+}
+
+@media (min-width: 375px) {
+  main {
+    padding: 2rem;
+  }
 }
 
 footer ul,
