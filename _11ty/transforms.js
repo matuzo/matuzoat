@@ -1,4 +1,3 @@
-const htmlmin = require('html-minifier');
 var slugify = require('slugify');
 var headings = [];
 
@@ -38,20 +37,6 @@ module.exports = {
           return `<h3 id="${slug}">${heading}</h3>`;
         }
       );
-    }
-    return content;
-  },
-
-  htmlmin: (content, outputPath) => {
-    if (
-      process.env.ELEVENTY_ENV === 'production' &&
-      outputPath.endsWith('.html')
-    ) {
-      return htmlmin.minify(content, {
-        useShortDoctype: true,
-        removeComments: true,
-        collapseWhitespace: true,
-      });
     }
     return content;
   },
