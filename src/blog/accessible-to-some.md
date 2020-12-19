@@ -120,8 +120,7 @@ The `alt` attribute is often misused as a place to store SEO keywords or copyrig
 <figure>
   <img
     src="hetschip.jpg"
-    alt="A long rectangular building. Besides looking like a ship, Het Schip resembles a bizarre art form. Its appearance is unconventional from all angles. The exterior consists of bright orange bricks, decked with towers and architectural elements in unconventional shapes."
-  />
+    alt="A long rectangular building. Besides looking like a ship, Het Schip resembles a bizarre art form. Its appearance is unconventional from all angles. The exterior consists of bright orange bricks, decked with towers and architectural elements in unconventional shapes.">
   <figcaption>
     Dutch expressionism (Amsterdam School), Het Schip apartment building in
     Amsterdam, 1917–20 (Michel de Klerk)
@@ -269,7 +268,7 @@ I made the proper label “bad” only accessible to screen reader users by hidi
 
 ```html
 <p>
-  <input type="radio" id="rating2" name="rating" />
+  <input type="radio" id="rating2" name="rating">
   <label for="rating2" style="pointer-events: none">
     <span class="vh">bad</span>
     <span aria-hidden="true">Circled white star Circled white star</span>

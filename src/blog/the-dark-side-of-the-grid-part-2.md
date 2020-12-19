@@ -266,15 +266,15 @@ Explicitly placing items that have the same size is one thing, but placing diffe
 
 <div class="js-a-focus-demo" data-button="Show tab order">
 <div class="a-grid-flow">
-  <button>1</button>
-  <button>2</button>
-  <button>3</button>
-  <button>4</button>
-  <button>5</button>
-  <button>6</button>
-  <button>7</button>
-  <button>8</button>
-  <button>9</button>
+  <button type="button">1</button>
+  <button type="button">2</button>
+  <button type="button">3</button>
+  <button type="button">4</button>
+  <button type="button">5</button>
+  <button type="button">6</button>
+  <button type="button">7</button>
+  <button type="button">8</button>
+  <button type="button">9</button>
 </div>
 </div>
 
@@ -293,15 +293,15 @@ This can give your designs a nice touch, but it can also annoy. Grid's default a
 
 <div class="js-a-focus-demo" data-button="Show tab order">
 <div class="a-grid-flow dense">
-  <button>1</button>
-  <button>2</button>
-  <button>3</button>
-  <button>4</button>
-  <button>5</button>
-  <button>6</button>
-  <button>7</button>
-  <button>8</button>
-  <button>9</button>
+  <button type="button">1</button>
+  <button type="button">2</button>
+  <button type="button">3</button>
+  <button type="button">4</button>
+  <button type="button">5</button>
+  <button type="button">6</button>
+  <button type="button">7</button>
+  <button type="button">8</button>
+  <button type="button">9</button>
 </div>
 </div>
 
@@ -465,15 +465,15 @@ This is so simple, so beautiful, yet so dangerous. It looks right, but the order
 <div class="js-a-focus-demo" data-button="Show tab order">
 <div class="a-grid-areas">
 <div class="footer">
-  <button>Footer</button>
+  <button type="button">Footer</button>
 </div>
 
 <div class="header">
-  <button>Header</button>
+  <button type="button">Header</button>
 </div>
 
 <div class="main">
-  <button>Main</button>
+  <button type="button">Main</button>
 </div>
 </div>
 </div>

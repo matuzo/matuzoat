@@ -7,4 +7,4 @@ Once:
 
 Every time:  
 `npm start`
-Open <http://localhost:8080/>
+Open <http://localhost:8080>

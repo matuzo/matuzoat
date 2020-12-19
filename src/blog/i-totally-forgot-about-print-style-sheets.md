@@ -51,7 +51,7 @@ body {
 Alternatively you can embed your print styles in HTML, but this will give you an extra request.
 
 ```html
-<link media="print" href="print.css" />
+<link media="print" href="print.css">
 ```
 
 ## 2. Testing

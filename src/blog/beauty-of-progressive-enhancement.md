@@ -98,8 +98,7 @@ It’s not the best experience, but better than no experience.
     id="search"
     name="q"
     value="site:www.frontendbookmarks.com "
-    type="text"
-  />
+    type="text">
    <button type="submit">Search</button>
 </form>
 ```

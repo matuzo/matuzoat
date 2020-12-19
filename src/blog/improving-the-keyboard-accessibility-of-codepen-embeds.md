@@ -213,7 +213,7 @@ And this is how the final result looks like. Watch the video or [try it yourself
 <figure class="figure">
   <div class="content__video-wrapper">
     <div class="video-wrapper">
-      <iframe width="560" height="315" title="Embedded CodePen with custom focus styles and in-page skip link" src="https://www.youtube.com/embed/g2B_bZYR4Kc?rel=0" title="Trapped in an embedded iframe"  allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+      <iframe width="560" height="315" title="Embedded CodePen with custom focus styles and in-page skip link" src="https://www.youtube.com/embed/g2B_bZYR4Kc?rel=0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
     </div>
   </div>
 

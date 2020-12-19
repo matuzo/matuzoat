@@ -15,7 +15,7 @@ archive: false
 When setting the CSS `color` property, 2 things happen.
 
 1. The foreground `color` value of an element's text changes.
-3. The `currentcolor` value changes.
+2. The `currentcolor` value changes.
 
 ```css
 a {
@@ -30,11 +30,12 @@ circle {
 ```html
 <a href="#">
   Hello World!
-  <svg height="30" width="30">
-    <circle cx="15" cy="15" r="10" fill="red" />
-  </svg> 
+  <svg height="30" width="30" focusable="false">
+    <circle cx="15" cy="15" r="10" fill="red">
+  </svg>
 </a>
-````
+```
+
 <style>
 .rich-text .link-reset:link,
 .rich-text .link-reset:visited {
@@ -53,12 +54,11 @@ circle {
   <a href="#" class="link-reset">
     Hello World!
 
-  <svg height="30" width="30">
-    <circle cx="15" cy="15" r="10" fill="red" />
+  <svg height="30" width="30" focusable="false">
+    <circle cx="15" cy="15" r="10" fill="red">
 </svg> 
 </a>
 </p>
-
 
 ## currentColor is the default color value of some properties
 
@@ -72,9 +72,7 @@ Usually when I work with the `border` property, I change the width and color of 
 ```
 
 ```html
-<div class="parent">
-  yo!
-</div>
+<div class="parent">yo!</div>
 ```
 
 <style>
@@ -92,7 +90,7 @@ That’s the case for most properties that have a color.
 
 ```css
 .parent em {
-  text-emphasis-style: "*";
+  text-emphasis-style: '*';
 }
 ```
 
@@ -120,7 +118,7 @@ That’s the case for most properties that have a color.
 
 ### caret-color
 
-> The user agent selects an appropriate color for the caret. This is generally currentcolor, but the user agent may choose a different color to ensure good visibility and contrast with the surrounding content, taking into account the value of currentcolor, the background, shadows, and other factors. 
+> The user agent selects an appropriate color for the caret. This is generally currentcolor, but the user agent may choose a different color to ensure good visibility and contrast with the surrounding content, taking into account the value of currentcolor, the background, shadows, and other factors.
 
 <https://developer.mozilla.org/en-US/docs/Web/CSS/caret-color>
 
@@ -129,8 +127,9 @@ input {
   color: #ca3041;
 }
 ```
+
 <p>
-  <label for="input">The text and caret color should be red</label> <br/>
+  <label for="input">The text and caret color should be red</label> <br>
   <input type="text" class="div-color" id="input">
 </p>
 
@@ -164,6 +163,7 @@ Yes, I know, HSL colors are not specific to the color property and they’ve bee
 HSL (Hue, Saturation, Lightness) is an alternative representation of the RGB color model.
 
 ### Hue
+
 H is an angle of the color circle. It can be defined using 4 different units.
 
 `deg` (or unitless): a value between 0 and 360. Red: 0deg, Green: 120deg, Blue: 240deg.  
@@ -171,11 +171,9 @@ H is an angle of the color circle. It can be defined using 4 different units.
 `grad`: a value between 0 and 400. (Re: 0grad, Green: 133.33grad, Blue: 266.66grad)  
 `turn`: a value between 0 and 1. (Re: 0grad, Green: 0.333turn, Blue: 0.6666turn)
 
-
 For example, a right angle is 90deg = 100grad = 0.25turn ≈ 1.5708rad
 
 This page about [the &lt;angle&gt; CSS data type](https://developer.mozilla.org/en-US/docs/Web/CSS/angle) on MDN helped me better understand how these units relate.
-
 
 ### Saturation
 
@@ -184,7 +182,6 @@ S is a percentage. 0% is fully unsaturated (gray), 100% is fully saturated.
 ### Lightness
 
 L is a percentage. 0% lightness is black, 50% lightness is default, and 100% lightness is white.
-
 
 ```css
 body {
@@ -210,7 +207,6 @@ body {
 
 <p style="background: hsl(0, 100%, 50%); color: hsl(0, 100%, 100%)">hsl(0, 100%, 50%)</p>
 
-
 ```css
 body {
   background: hsl(0, 50%, 50%); /* = ##bf4040 */
@@ -229,7 +225,6 @@ body {
 
 <p style="background: hsla(0, 100%, 50%, 0.5); color: hsl(0, 100%, 0%)">hsla(0, 100%, 50%, 0.5)</p>
 
-
 CSS Colors Level 4 adds support for space-separated values.
 
 ```css
@@ -241,10 +236,8 @@ body {
 
 <p style="background: hsl(0 100% 50% / 15%); color: hsl(0, 100%, 0%)">hsl(0 100% 50% / 15%)</p>
 
-
 > Many designers find HSL more intuitive than RGB, since it allows hue, saturation, and lightness to each be adjusted independently. HSL can also make it easier to create a set of matching colors (such as when you want multiple shades of a single hue).
 
 <https://developer.mozilla.org/en-US/docs/Web/CSS/color_value#HSL_colors>
-
 
 Thanks for reading ❤️. In part 3 I'll probably write about `text-emphasis` or `column-rule` 🙃.

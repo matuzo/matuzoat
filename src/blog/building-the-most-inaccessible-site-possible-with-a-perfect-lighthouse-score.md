@@ -106,7 +106,7 @@ So let’s add some CSS and bring our content back.
 
 ```html
 <head>
-  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="style.css">
 </head>
 <body class="loaded" hidden>
   ...
@@ -133,7 +133,7 @@ Let’s add one more dependency. I’m not applying the class that displays our 
 
 ```html
 <head>
-  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="style.css">
   <script src="script.js"></script>
 </head>
 
@@ -155,9 +155,9 @@ Great! The site still looks the same but in order for it to display anything at 
 I'd say it's time for our first Lighthouse test. Fingers crossed! 🤞🏼
 
 <div class="lighthouse-test js-lighthouse-test">
-<button class="btn js-run-lighthouse-test"><span class="btn__inner">Run Lighthouse test</span></button>
+<button class="btn js-run-lighthouse-test" type="button"><span class="btn__inner">Run Lighthouse test</span></button>
 <span class="u-vh js-lighthouse-status" role="status"></span>
-<img src="/images/lighthouse/lighthouse_test.png" alt="Score: 100" />
+<img src="/images/lighthouse/lighthouse_test.png" alt="Score: 100">
 </div>
 
 Perfect score on a CSS and JS only site. That's great, but we can do better.
@@ -212,12 +212,12 @@ Our exclusion-first app now removes the default functionality of all keys.
 Time for another test.
 
 <div class="lighthouse-test js-lighthouse-test">
-<button class="btn js-run-lighthouse-test"><span class="btn__inner">Run Lighthouse test</span></button>
+<button class="btn js-run-lighthouse-test" type="button"><span class="btn__inner">Run Lighthouse test</span></button>
 <span class="u-vh js-lighthouse-status" role="status"></span>
-<img src="/images/lighthouse/lighthouse_test.png" alt="Score: 100" />
+<img src="/images/lighthouse/lighthouse_test.png" alt="Score: 100">
 </div>
 
-Still perfect.<br />
+Still perfect.<br>
 Okay, now it's time to get dirty.
 
 ### 🖕 High contrast mode 🖕
@@ -307,9 +307,9 @@ This JavaScript fallback will kick in and remove click events from all elements,
 [CodePen: “100%” accessible - step 6](https://s.codepen.io/matuzo/pen/zQmJYB)
 
 <div class="lighthouse-test js-lighthouse-test">
-<button class="btn js-run-lighthouse-test"><span class="btn__inner">Run Lighthouse test</span></button>
+<button class="btn js-run-lighthouse-test" type="button"><span class="btn__inner">Run Lighthouse test</span></button>
 <span class="u-vh js-lighthouse-status" role="status"></span>
-<img src="/images/lighthouse/lighthouse_test.png" alt="Score: 100" />
+<img src="/images/lighthouse/lighthouse_test.png" alt="Score: 100">
 </div>
 
 Great! Still perfectly accessible!
@@ -363,9 +363,9 @@ To put the cherry on top of my exclusion-first site, I’m [converting the text 
 To wrap it up, a final test.
 
 <div class="lighthouse-test js-lighthouse-test">
-<button class="btn js-run-lighthouse-test"><span class="btn__inner">Run Lighthouse test</span></button>
+<button class="btn js-run-lighthouse-test" type="button"><span class="btn__inner">Run Lighthouse test</span></button>
 <span class="u-vh js-lighthouse-status" role="status"></span>
-<img src="/images/lighthouse/lighthouse_test.png" alt="Score: 100" />
+<img src="/images/lighthouse/lighthouse_test.png" alt="Score: 100">
 </div>
 
 ## Conclusion

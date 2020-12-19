@@ -62,7 +62,7 @@ If we use a relative unit like `rem`, instead, we can still define our preferred
 If we want to use this unit, we have to convert `px` to `rem`. We can do that by taking the target value (`18px`) and dividing it by the default root value (`16px`):
 
 <div style="text-align: center">
-  <img class="234" src="https://res.cloudinary.com/dp3mem7or/image/upload/c_scale,w_350/v1602477333/articles/article_css2_calc.png" alt="18px/16px = 1.125rem" />
+  <img class="234" src="https://res.cloudinary.com/dp3mem7or/image/upload/c_scale,w_350/v1602477333/articles/article_css2_calc.png" alt="18px/16px = 1.125rem">
 </div>
 
 The result is the `rem` value. If we use it instead of the absolute pixel value, the font size for users with standard settings will still equal `18px`, but the font size for users who prefer a larger base font size like `20px` will be `22.5px` (1rem = 20px, 1.125rem = 22.5px).
@@ -137,7 +137,7 @@ Here’s an example: If you don’t have any preference for reduced motion, you 
 
 <div class="moonwalk">
 	<picture>
-		<source srcset="https://assets.codepen.io/144736/moonwalk.gif" media="(prefers-reduced-motion: no-preference)" />
+		<source srcset="https://assets.codepen.io/144736/moonwalk.gif" media="(prefers-reduced-motion: no-preference)">
 		<img class="p" src="https://assets.codepen.io/144736/moonwalk.png" alt="Someone doing the moon walk.">
 	</picture>
 </div>
@@ -423,7 +423,7 @@ In this simplified example you can see that the fill color of the SVG in the but
 <button>
   Sign up
   <svg height="50" width="50">
-    <circle cx="25" cy="25" r="20" />
+    <circle cx="25" cy="25" r="20">
   </svg>
 </button>
 ```
@@ -514,7 +514,7 @@ button:hover circle {
 <button class="a-up-button a-up-button1">
   Sign up
   <svg height="50" width="50">
-    <circle cx="25" cy="25" r="20" />
+    <circle cx="25" cy="25" r="20">
   </svg>
 </button>
 </div>
@@ -573,7 +573,7 @@ circle {
 <button class="a-up-button a-up-button2">
   Sign up
   <svg height="50" width="50">
-    <circle cx="25" cy="25" r="20" />
+    <circle cx="25" cy="25" r="20">
   </svg>
 </button>
 </div>
@@ -636,7 +636,7 @@ circle {
 <button class="a-up-button a-up-button3">
   Sign up
   <svg height="50" width="50">
-    <circle cx="25" cy="25" r="20" />
+    <circle cx="25" cy="25" r="20">
   </svg>
 </button>
 </div>
