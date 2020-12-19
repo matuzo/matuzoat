@@ -1,0 +1,13 @@
+[[plugins]]
+package = "netlify-plugin-a11y"
+
+  # all inputs are optional, we just show you the defaults below
+  [plugins.inputs]
+  
+  ## Another checkPaths Example 
+  checkPaths = [
+    '/blog/',
+    '/about-me/',
+    '/blog/lang-attribute/',
+  ]
+  
