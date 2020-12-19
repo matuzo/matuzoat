@@ -24,7 +24,7 @@ archive: false
 ## Recording of the talk
 
 <div class="content__video-wrapper"><div class="video-wrapper">
-<iframe width="560" height="315" src="https://www.youtube.com/embed/NL6XKcX4sxc"  allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div></div>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/NL6XKcX4sxc"  allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen title="The full talk at React Finland 2019"></iframe></div></div>
 
 ## Slides
 
