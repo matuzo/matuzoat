@@ -1,5 +1,9 @@
 {
   "rules": {
-    "no-trailing-whitespace": "off"
+    "no-trailing-whitespace": "off",
+    "long-title": "off",
+    "element-permitted-content": "off",
+    "no-raw-characters": "off",
+    "no-inline-style": "off"
   }
 }
