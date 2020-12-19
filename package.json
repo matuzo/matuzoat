@@ -28,7 +28,6 @@
   "dependencies": {
     "@11ty/eleventy-plugin-syntaxhighlight": "^3.0.4",
     "focus-visible": "^5.2.0",
-    "html-minifier": "^4.0.0",
     "slugify": "^1.4.6"
   }
 }
