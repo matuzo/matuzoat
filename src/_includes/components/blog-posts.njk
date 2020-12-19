@@ -3,7 +3,7 @@
   {% set url = post.url %}
 
   {% if not post.data.draft %}
-    <article>
+    <article class="rich-text">
       <{{level | default('h3') }}>
         <a href="{{ url }}">
           {{ post.data.title }}

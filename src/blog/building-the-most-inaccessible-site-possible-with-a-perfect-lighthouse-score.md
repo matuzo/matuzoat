@@ -18,17 +18,54 @@ css: ''
 draft: false
 archive: false
 ---
+
+<style>
+.lighthouse-test {
+  position: relative;
+}
+
+.lighthouse-test button {
+  position: absolute;
+  z-index: 111;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+  max-height: 5.3rem;
+}
+
+.lighthouse-test img {
+    opacity: 0;
+    transition: opacity 0.3s;
+  }
+
+.lighthouse-test .content__image-wrapper::before,
+.lighthouse-test .content__image-wrapper::after {
+    display: none;
+  }
+
+.lighthouse-test--finished button {
+  display: none;
+}
+
+.lighthouse-test--finished img {
+  opacity: 1;
+}
+
+</style>
+
 ![A perfect lighthouse score for performance, accessibility, best practices and SEO](/images/lighthouse/lighthousescore.png)
 
 Lighthouse awards us with the number 100 in a green circle if we did an exceptional job. It’s something you can proudly share with your client or on Twitter.
 
-It’s important to measure the quality of our code, but it’s even more important that we interpret the scores automatic testing tools give us correctly. If Lighthouse tells us that our site is 100% accessible, it doesn’t mean it is. It just means we’ve laid the groundwork for manual testing. Lighthouse uses the [axe-core](https://github.com/dequelabs/axe-core) accessibility testing library with a [custom set of rules](https://github.com/GoogleChrome/lighthouse/blob/ad0a747a712b815677b6ea3bcc59ee7a0883426d/lighthouse-core/gather/gatherers/accessibility.js#L26-L50) for its tests. It identifies some bad practices, but not all of them. Other practices aren’t bad per se, but can be harmful, if we misuse them.  
- 
-With automatic testing alone you can’t ensure good quality. To prove that, I built the most inaccessible site possible with a perfect Lighthouse score. 
+It’s important to measure the quality of our code, but it’s even more important that we interpret the scores automatic testing tools give us correctly. If Lighthouse tells us that our site is 100% accessible, it doesn’t mean it is. It just means we’ve laid the groundwork for manual testing. Lighthouse uses the [axe-core](https://github.com/dequelabs/axe-core) accessibility testing library with a [custom set of rules](https://github.com/GoogleChrome/lighthouse/blob/ad0a747a712b815677b6ea3bcc59ee7a0883426d/lighthouse-core/gather/gatherers/accessibility.js#L26-L50) for its tests. It identifies some bad practices, but not all of them. Other practices aren’t bad per se, but can be harmful, if we misuse them.
+
+With automatic testing alone you can’t ensure good quality. To prove that, I built the most inaccessible site possible with a perfect Lighthouse score.
 
 ## Background
 
-Zach Leatherman recently posted this on [twitter](https://twitter.com/zachleat/status/1122184546609446919): 
+Zach Leatherman recently posted this on [twitter](https://twitter.com/zachleat/status/1122184546609446919):
 
 > Free blog post idea:
 >
@@ -52,7 +89,6 @@ We’ll take this simple, accessible page as a basis.
 
 Let’s start nice and easy. I want to make sure that CSS is a dependency on my perfect website. To achieve that I'm adding the `hidden` attribute to the `body` element. `hidden` is the HTML equivalent to `display: none;` in CSS. (Checkout [Inclusively Hidden](https://www.scottohara.me/blog/2017/04/14/inclusively-hidden.html) by [Scott O’Hara](https://twitter.com/scottohara), if you want to learn more about accessible hiding).
 
-
 <p class="code-label"><strong>HTML</strong></p>
 
 ```html
@@ -70,7 +106,7 @@ So let’s add some CSS and bring our content back.
 
 ```html
 <head>
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body class="loaded" hidden>
   ...
@@ -97,7 +133,7 @@ Let’s add one more dependency. I’m not applying the class that displays our 
 
 ```html
 <head>
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="style.css" />
   <script src="script.js"></script>
 </head>
 
@@ -109,7 +145,7 @@ Let’s add one more dependency. I’m not applying the class that displays our 
 <p class="code-label"><strong>JS</strong></p>
 
 ```js
-  document.querySelector('body').classList.add('loaded');
+document.querySelector('body').classList.add('loaded');
 ```
 
 Great! The site still looks the same but in order for it to display anything at all the CSS and JS file must load and work properly.
@@ -120,7 +156,7 @@ I'd say it's time for our first Lighthouse test. Fingers crossed! 🤞🏼
 
 <div class="lighthouse-test js-lighthouse-test">
 <button class="btn js-run-lighthouse-test"><span class="btn__inner">Run Lighthouse test</span></button>
-<span class="visually-hidden js-lighthouse-status" role="status"></span>
+<span class="u-vh js-lighthouse-status" role="status"></span>
 <img src="/images/lighthouse/lighthouse_test.png" alt="Score: 100" />
 </div>
 
@@ -139,7 +175,7 @@ In our website we’re putting it on the `body` element.
 </body>
 ```
 
-Screen reader users will now experience one of those [_“rare”_ moments](https://webaim.org/projects/million/) when they have to deal with an inaccessible site. <span aria-label="(sarcasm)" title="(sarcasm)">*</span>
+Screen reader users will now experience one of those [_“rare”_ moments](https://webaim.org/projects/million/) when they have to deal with an inaccessible site. <span aria-label="(sarcasm)" title="(sarcasm)">\*</span>
 
 [CodePen: “100%” accessible - step 3](https://s.codepen.io/matuzo/pen/OYBZbd)
 
@@ -164,9 +200,9 @@ All it takes are 3 lines of CSS to exclude a whole group of people from being ab
 <p class="code-label"><strong>JS</strong></p>
 
 ```js
-document.addEventListener('keydown', function(e) {
+document.addEventListener('keydown', function (e) {
   e.preventDefault();
-})
+});
 ```
 
 Our exclusion-first app now removes the default functionality of all keys.
@@ -177,7 +213,7 @@ Time for another test.
 
 <div class="lighthouse-test js-lighthouse-test">
 <button class="btn js-run-lighthouse-test"><span class="btn__inner">Run Lighthouse test</span></button>
-<span class="visually-hidden js-lighthouse-status" role="status"></span>
+<span class="u-vh js-lighthouse-status" role="status"></span>
 <img src="/images/lighthouse/lighthouse_test.png" alt="Score: 100" />
 </div>
 
@@ -237,7 +273,7 @@ Excluding mouse users is easy, we just remove the cursor.
 }
 ```
 
-`cursor: none;` is to mouse users what `outline: none;`  is to keyboard users. Getting your bearings is initially difficult, but interactive elements are still clickable. Let’s improve the quality of our app by decreasing the user experience once more.
+`cursor: none;` is to mouse users what `outline: none;` is to keyboard users. Getting your bearings is initially difficult, but interactive elements are still clickable. Let’s improve the quality of our app by decreasing the user experience once more.
 
 <p class="code-label"><strong>CSS</strong></p>
 
@@ -253,14 +289,14 @@ body {
 
 ```js
 function removeA11y() {
-  if ("pointerEvents" in document.body.style) {
-    console.log('pointer-events supported')
+  if ('pointerEvents' in document.body.style) {
+    console.log('pointer-events supported');
     return;
   }
 
-  document.addEventListener('click', function(e) {
+  document.addEventListener('click', function (e) {
     e.preventDefault();
-  })
+  });
 }
 
 removeA11y();
@@ -272,7 +308,7 @@ This JavaScript fallback will kick in and remove click events from all elements,
 
 <div class="lighthouse-test js-lighthouse-test">
 <button class="btn js-run-lighthouse-test"><span class="btn__inner">Run Lighthouse test</span></button>
-<span class="visually-hidden js-lighthouse-status" role="status"></span>
+<span class="u-vh js-lighthouse-status" role="status"></span>
 <img src="/images/lighthouse/lighthouse_test.png" alt="Score: 100" />
 </div>
 
@@ -316,7 +352,7 @@ body {
 ### 🖕 View Page Source 🖕
 
 The site is inaccessible to people with low and good vision, mouse, keyboard and screen reader users.\
-If browser power users encounter a site like this, it might awaken their inner [Zero Cool](https://en.wikipedia.org/wiki/Hackers_(film)#Plot) and they try to hack the site. What I mean by _hack_ is _view the page source_.
+If browser power users encounter a site like this, it might awaken their inner [Zero Cool](<https://en.wikipedia.org/wiki/Hackers_(film)#Plot>) and they try to hack the site. What I mean by _hack_ is _view the page source_.
 
 To put the cherry on top of my exclusion-first site, I’m [converting the text to html entities](https://v2.cryptii.com/text/htmlentities). [Entities](https://developer.mozilla.org/en-US/docs/Glossary/Entity) are usually used to display reserved characters, invisible characters, and characters that are difficult to type with a standard keyboard. I’m using them to obfuscate text on our site.
 
@@ -328,7 +364,7 @@ To wrap it up, a final test.
 
 <div class="lighthouse-test js-lighthouse-test">
 <button class="btn js-run-lighthouse-test"><span class="btn__inner">Run Lighthouse test</span></button>
-<span class="visually-hidden js-lighthouse-status" role="status"></span>
+<span class="u-vh js-lighthouse-status" role="status"></span>
 <img src="/images/lighthouse/lighthouse_test.png" alt="Score: 100" />
 </div>
 
@@ -346,22 +382,53 @@ Below that paragraph, you'll find a list of additional items you should test man
 
 ![A list of recommendations like "Headings don't skip levels" or "The page has a logical tab order"](/images/lighthouse/lighthouse_manual.png)
 
-We don’t test and optimize our sites for the good feeling a high score gives us. We’re doing it because we want to, and we have to, make sure that what we build is accessible to as many people as possible. 
+We don’t test and optimize our sites for the good feeling a high score gives us. We’re doing it because we want to, and we have to, make sure that what we build is accessible to as many people as possible.
 We don’t fully rely on automation when we’re designing and developing, and we shouldn't do it either when we’re testing.
 
 Thanks to [Eric](https://ericwbailey.design/) for proofreading and feedback.
 
 ## Links and resources
 
-* [Google Lighthouse](https://developers.google.com/web/tools/lighthouse/)
-* [axe-core](https://github.com/dequelabs/axe-core)
-* [Inclusively Hidden](https://www.scottohara.me/blog/2017/04/14/inclusively-hidden.html)
-* [The WebAIM Million](https://webaim.org/projects/million/)
-* [Web Fundamentals – Accessibility ](https://developers.google.com/web/fundamentals/accessibility/?utm_source=lighthouse&utm_medium=devtools)
-* [Eric W. Bailey](https://ericwbailey.design/)
-* [The A11y Project](https://a11yproject.com)
+- [Google Lighthouse](https://developers.google.com/web/tools/lighthouse/)
+- [axe-core](https://github.com/dequelabs/axe-core)
+- [Inclusively Hidden](https://www.scottohara.me/blog/2017/04/14/inclusively-hidden.html)
+- [The WebAIM Million](https://webaim.org/projects/million/)
+- [Web Fundamentals – Accessibility ](https://developers.google.com/web/fundamentals/accessibility/?utm_source=lighthouse&utm_medium=devtools)
+- [Eric W. Bailey](https://ericwbailey.design/)
+- [The A11y Project](https://a11yproject.com)
 
 &lowast; (sarcasm)
 
 ## Update June 12th
-Added a paragraph about manual testing recommendations provided by lighthouse. 
+
+Added a paragraph about manual testing recommendations provided by lighthouse.
+
+<script>
+  // Lighthouse demos
+  function addDemoLighthouseTest() {
+    var lighthouseTests = document.querySelectorAll('.js-lighthouse-test');
+
+    if (lighthouseTests.length === 0) {
+      return;
+    }
+
+    for (let i = 0; i < lighthouseTests.length; i++) {
+      const lighthouseTest = lighthouseTests[i];
+      const button = lighthouseTest.querySelector('.js-run-lighthouse-test');
+      button.addEventListener('click', function (e) {
+        e.preventDefault();
+        button.querySelector('span').textContent = 'Running tests…';
+        lighthouseTest.querySelector('.js-lighthouse-status').textContent =
+          'Running tests…';
+
+        setTimeout(function () {
+          lighthouseTest.classList.add('lighthouse-test--finished');
+          lighthouseTest.querySelector('.js-lighthouse-status').textContent =
+            'Tests finished. Accessibility score: 100.';
+        }, 1000);
+      });
+    }
+  }
+
+  addDemoLighthouseTest();
+</script>
