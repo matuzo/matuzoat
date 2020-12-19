@@ -210,7 +210,7 @@ Also, a flat document might be harder to read when displayed without CSS.
 
 <div class="info">
 <h4><span class="info__label">Wait! What?</span>
-<span class="info__heading">Why would someone disable CSS?</a></h4>
+<span class="info__heading">Why would someone disable CSS?</span></h4>
 
 <p>It’s unlikely that users disable CSS on purpose but sometimes an error occurs or the connection is just so slow that only the HTML displays successfully. If you’ve ever been on vacation in Italy and had to use public WIFI, you know what I’m talking about.</p>
 </div>

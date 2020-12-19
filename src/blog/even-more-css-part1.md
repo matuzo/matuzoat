@@ -683,7 +683,7 @@ In an accordion component, for example, the content is visible by default.
     <div class="accordion">
       <h3 class="accordion__heading">Accordion Heading</h3>
       <div class="accordion__panel">
-        <p>Accordion panel content visibile by default and only hidden, if the `.js` class is present.
+        <p>Accordion panel content visibile by default and only hidden, if the `.js` class is present.</p>
       </div>
     </div>
   </div>

@@ -214,16 +214,16 @@ Explicit placement might create a mismatch between DOM order and visual order.
 <div class="a-grid-explicit js-a-focus-demo" data-button="Show tab order">
   <ul class="a-grid-explicit__items">
     <li class="a-grid-explicit__item">
-      <button class="a-grid-explicit__button">Item 1</button>
+      <button type="button" class="a-grid-explicit__button">Item 1</button>
     </li>
     <li class="a-grid-explicit__item">
-      <button class="a-grid-explicit__button">Item 2</button>
+      <button type="button" class="a-grid-explicit__button">Item 2</button>
     </li>
     <li class="a-grid-explicit__item">
-      <button class="a-grid-explicit__button">Item 3</button>
+      <button type="button" class="a-grid-explicit__button">Item 3</button>
     </li>
     <li class="a-grid-explicit__item">
-      <button class="a-grid-explicit__button">Item 4</button>
+      <button type="button" class="a-grid-explicit__button">Item 4</button>
     </li>
   </ul>
 </div>

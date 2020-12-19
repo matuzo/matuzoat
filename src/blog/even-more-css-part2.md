@@ -633,7 +633,7 @@ circle {
 </style>
 
 <div>
-<button class="a-up-button a-up-button3">
+<button class="a-up-button a-up-button3" type="button">
   Sign up
   <svg height="50" width="50" focusable="false">
     <circle cx="25" cy="25" r="20">
