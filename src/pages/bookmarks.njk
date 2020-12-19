@@ -8,18 +8,16 @@ tags:
   - nav
 ---
 <p>Articles and books I've enjoyed reading.</p>
-  {% for day, ressources in collections.bookmarks | reverse | groupby("date") %}
-      <h2>
-        <time datetime="{{ day|machineDate }}" class="date">
-          <span class="date__fragment">{{ day | readableMonth }}</span>
-        </time>
-      </h2>
-      
-      <ul class="bookmarks__list">
-      {% for res in ressources %}
-        <li>
-          <a href="{{ res.data.link }}">{{ res.data.title }}</a>
-        </li>
-      {% endfor %}
-      </ul>
-  {% endfor %}
+{% for day, ressources in collections.bookmarks | reverse | groupby("date") %}
+  <h2>
+    {{ day | readableMonth }}
+  </h2>
+
+  <ul>
+    {% for res in ressources %}
+      <li>
+        <a href="{{ res.data.link }}">{{ res.data.title }}</a>
+      </li>
+    {% endfor %}
+  </ul>
+{% endfor %}

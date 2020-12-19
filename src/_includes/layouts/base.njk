@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html class="site no-js js-site" lang="en" id="top" {% if publication %}data-theme="{{ publication | slug }}-{{ title | slug }}"{% endif %}>
+<html lang="en" id="top">
   <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -42,8 +42,6 @@
   </head>
 
   <body>
-    <a href="#content" class="skip-link">Skip to main content</a>
-
     {% include 'header.njk' %}
 
     <main id="content">

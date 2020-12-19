@@ -1,42 +1,20 @@
 {% for post in collections.blog.slice(0, max) %}
 
   {% set url = post.url %}
-  {% set publication = post.data.publication %}
-  {% set theme = publication %}
-
-  {% if post.data.css %}
-    {% set theme = post.data.css %}
-  {% endif %}
 
   {% if not post.data.draft %}
     <article>
-      <div class="post-list__header">
-        <a href="{{ url }}" class="post-list__link post-list__link--{{ theme | stringify | slug }}" data-post="{{ post.data.title | slug }}" data-publication="{{ theme | slug }}">
-          <h2 class="post-list__heading post-list__heading--{{ theme | stringify | slug }}">
-            <span class="post-list__heading-inner post-list__heading-inner--{{ theme | stringify | slug }}">
-              {{ post.data.title }}
-            </span>
-          </h2>
+      <{{level | default('h3') }}>
+        <a href="{{ url }}">
+          {{ post.data.title }}
         </a>
+      </{{level | default('h3') }}>
 
-        {% for pub in collections.publications %}
-          {% if publication == pub.data.title %}
-            <div class="post-list__image post-list__image--{{ theme | stringify | slug }}">
-              <img class="lazy" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-src="{{ metadata.cloudinary }}/h_32/{{ pub.data.logo }}" alt="{{ pub.data.title }}" width="32" />
-            </div>
-          {% endif %}
-        {% endfor %} 
+      <time datetime="{{ post.data.date|machineDate }}">
+        {{ post.data.date|readableDate }}
+      </time>
 
-        <time class="post-list__date post-list__date--{{ theme | stringify | slug }}" datetime="{{ post.data.date|machineDate }}">
-          {{ post.data.date|readableDate }}
-        </time>
-      </div>
-      
-      <div class="post-list__teaser">
-        <p>
-          {{ post.data.teaser | md | safe }}
-        </p>
-      </div>
+      {{ post.data.teaser | md | safe }}
     </article>
   {% endif %}
 {% endfor %}

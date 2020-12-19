@@ -1,15 +1,13 @@
-<header class="site__header">
-  <a href="/" class="site__logo logo js-logo">
-    <span class="visually-hidden">Home</span>
-  </a>
+<header>
+  <a href="#content">Skip to content</a>
 
-  <nav class="nav-main js-nav-main">
-    <ul class="nav-main__list">
+  <nav>
+    <ul>
       {%- for nav in collections.nav | reverse -%}
-        <li class="nav-main__item">
-          <a class="nav-main__link {% if nav.url == page.url %} nav-main__link--active{% endif %}" href="{{ nav.url | url }}">
-          {{ nav.data.navtitle }}
-            </a>
+        <li>
+          <a {% if nav.url == page.url %} aria-current="page"{% endif %} href="{{ nav.url | url }}">
+            {{ nav.data.navtitle }}
+          </a>
         </li>
       {%- endfor -%}
     </ul>
