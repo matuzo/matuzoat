@@ -8,15 +8,13 @@ tags:
   - nav
 ---
 <p>Articles and books I've enjoyed reading.</p>
-{% for day, ressources in collections.bookmarks | reverse | groupby("date") %}
-  <h2>
-    {{ day | readableMonth }}
-  </h2>
-
+{% for date in reading_list %}
+  <h2>{{ date.day }}</h2>
+  
   <ul>
-    {% for res in ressources %}
+    {% for link in date.links %}
       <li>
-        <a href="{{ res.data.link }}">{{ res.data.title }}</a>
+        <a href="{{ link.url }}">{{ link.text }}</a>
       </li>
     {% endfor %}
   </ul>

@@ -1,0 +1,424 @@
+[
+  {
+    "day": "January, 2021",
+    "links": [
+      {
+        "text": "Document and Content Language",
+        "url": "https://webaim.org/techniques/language/"
+      }
+    ]
+  },
+  {
+    "day": "December, 2020",
+    "links": [
+      {
+        "text": "Alt vs Figcaption",
+        "url": "https://thoughtbot.com/blog/alt-vs-figcaption"
+      }
+    ]
+  },
+  {
+    "day": "November, 2020",
+    "links": [
+      {
+        "text": "Under-Engineered Responsive Tables",
+        "url": "https://adrianroselli.com/2020/11/under-engineered-responsive-tables.html"
+      },
+
+      {
+        "text": "Not so short note on aria-label usage – Big Table Edition",
+        "url": "https://html5accessibility.com/stuff/2020/11/07/not-so-short-note-on-aria-label-usage-big-table-edition/"
+      },
+
+      {
+        "text": "Mobile Screen Reader Testing",
+        "url": "https://scottvinkle.me/blogs/blog/mobile-screen-reader-testing"
+      }
+    ]
+  },
+  {
+    "day": "October, 2020",
+    "links": [
+      {
+        "text": "Interaction Media Features and Their Potential (for Incorrect Assumptions)",
+        "url": "https://css-tricks.com/interaction-media-features-and-their-potential-for-incorrect-assumptions/"
+      },
+
+      {
+        "text": "If you use the WAI-ARIA role &quot;application&quot;, please do so wisely!",
+        "url": "https://www.marcozehe.de/if-you-use-the-wai-aria-role-application-please-do-so-wisely/"
+      },
+
+      {
+        "text": "How to use NVDA and Firefox to test your web pages for accessibility",
+        "url": "https://www.marcozehe.de/how-to-use-nvda-and-firefox-to-test-your-web-pages-for-accessibility/"
+      },
+
+      {
+        "text": "How screen readers navigate data tables",
+        "url": "https://tink.uk/how-screen-readers-navigate-data-tables/"
+      },
+
+      {
+        "text": "Grids Part 1: To grid or not to grid",
+        "url": "https://sarahmhigley.com/writing/grids-part1/"
+      },
+
+      {
+        "text": "Focus management and inert ",
+        "url": "https://css-tricks.com/focus-management-and-inert/"
+      },
+
+      {
+        "text": "Dialog Focus in Screen Readers",
+        "url": "https://adrianroselli.com/2020/10/dialog-focus-in-screen-readers.html"
+      },
+
+      {
+        "text": "Debugging broken accessibility / Sarah Higley #id24 2020",
+        "url": "https://www.youtube.com/watch?v=In2sH3h_fJg&amp;t=568s"
+      },
+
+      {
+        "text": "Create accessible forms",
+        "url": "https://www.a11yproject.com/posts/2020-09-19-how-to-write-accessible-forms/"
+      },
+
+      {
+        "text": "ARIA Grid As an Anti-Pattern",
+        "url": "https://adrianroselli.com/2020/07/aria-grid-as-an-anti-pattern.html"
+      },
+
+      {
+        "text": "Angular Component Libraries and Accessibility",
+        "url": "https://www.deque.com/blog/angular-component-libraries-and-accessibility/"
+      },
+
+      {
+        "text": "Alternative Text for CSS Generated Content",
+        "url": "https://adrianroselli.com/2020/10/alternative-text-for-css-generated-content.html"
+      }
+    ]
+  },
+  {
+    "day": "September, 2020",
+    "links": [
+      {
+        "text": "When there is no content between headings ",
+        "url": "https://hiddedevries.nl/en/blog/2020-09-05-when-there-is-no-content-between-headings"
+      },
+
+      {
+        "text": "The Thing With Leading in CSS",
+        "url": "https://matthiasott.com/notes/the-thing-with-leading-in-css"
+      }
+    ]
+  },
+  {
+    "day": "August, 2020",
+    "links": [
+      {
+        "text": "The difference between aria-label and aria-labelledby",
+        "url": "https://tink.uk/the-difference-between-aria-label-and-aria-labelledby/"
+      },
+
+      {
+        "text": "Be Wary of doc-subtitle",
+        "url": "https://adrianroselli.com/2020/08/be-wary-of-doc-subtitle.html"
+      },
+
+      {
+        "text": "5 most annoying website features I face as a blind person every single day",
+        "url": "https://bighack.org/5-most-annoying-website-features-i-face-as-a-blind-screen-reader-user-accessibility/"
+      }
+    ]
+  },
+  {
+    "day": "July, 2020",
+    "links": [
+      {
+        "text": "Hey now",
+        "url": "https://adactio.com/journal/17140"
+      }
+    ]
+  },
+  {
+    "day": "June, 2020",
+    "links": [
+      {
+        "text": "Today’s Javascript, from an outsider’s perspective",
+        "url": "http://lea.verou.me/2020/05/todays-javascript-from-an-outsiders-perspective/"
+      },
+
+      {
+        "text": "Screen readers and cookie consents",
+        "url": "https://www.youtube.com/watch?v=Uaqo4FOI_DY"
+      },
+
+      {
+        "text": " Responsive design: seams &amp; edges.",
+        "url": "https://ethanmarcotte.com/wrote/responsive-design-seams-edges/"
+      },
+
+      {
+        "text": "Quick Tips for High Contrast Mode",
+        "url": "https://sarahmhigley.com/writing/whcm-quick-tips/"
+      },
+
+      {
+        "text": "Form design: multiple inputs versus one input",
+        "url": "https://adamsilver.io/articles/form-design-multiple-inputs-versus-one-input/"
+      },
+
+      {
+        "text": "Building the Woke Web: Web Accessibility, Inclusion &amp; Social Justice",
+        "url": "https://alistapart.com/article/building-the-woke-web/#section10"
+      },
+
+      {
+        "text": "Beginners’ Guide To Writing Good HTML",
+        "url": "https://websitesetup.org/html-tutorial-beginners/"
+      },
+
+      {
+        "text": "Always bet on HTML",
+        "url": "https://gomakethings.com/always-bet-on-html/"
+      },
+
+      {
+        "text": "A Guide to Accessible Interactive Components using React Libraries",
+        "url": "https://www.a11ywithlindsey.com/blog/accessible-interactive-components-react"
+      }
+    ]
+  },
+  {
+    "day": "May, 2020",
+    "links": [
+      {
+        "text": "When debugging, your attitude matters",
+        "url": "https://jvns.ca/blog/debugging-attitude-matters/"
+      },
+
+      {
+        "text": "What is a &quot;name&quot;?",
+        "url": "https://sarahmhigley.com/writing/whats-in-a-name/"
+      },
+
+      {
+        "text": "Some Little Improvements to My VS Code Workflow (Workspaces, Icons, Tasks) ",
+        "url": "https://css-tricks.com/some-little-improvements-to-my-vs-code-workflow-workspaces-icons-tasks/"
+      },
+
+      {
+        "text": "Progressive Enhancement is essential",
+        "url": "https://medium.com/@dennisl/progressive-enhancement-is-essential-9e258cef87ba"
+      },
+
+      {
+        "text": "Optimize Cumulative Layout Shift",
+        "url": "https://web.dev/optimize-cls/"
+      },
+
+      {
+        "text": "Hydration",
+        "url": "https://adactio.com/journal/16404"
+      },
+
+      {
+        "text": "Avoid aria-roledescription",
+        "url": "https://adrianroselli.com/2020/04/avoid-aria-roledescription.html"
+      },
+
+      {
+        "text": " Accessible Font Sizing, Explained",
+        "url": "https://css-tricks.com/accessible-font-sizing-explained/"
+      }
+    ]
+  },
+  {
+    "day": "April, 2020",
+    "links": [
+      {
+        "text": "The WebAIM Million 2020",
+        "url": "https://webaim.org/projects/million/"
+      },
+
+      {
+        "text": "The Cost of Javascript Frameworks",
+        "url": "https://timkadlec.com/remembers/2020-04-21-the-cost-of-javascript-frameworks/"
+      },
+
+      {
+        "text": "I Don’t Care What Google or Apple or Whoever Did",
+        "url": "https://adrianroselli.com/2020/03/i-dont-care-what-google-or-apple-or-whomever-did.html"
+      },
+
+      {
+        "text": "Accessible SVGs: Inclusiveness Beyond Patterns",
+        "url": "https://www.smashingmagazine.com/2020/03/accessible-svgs-inclusiveness-beyond-patterns/"
+      }
+    ]
+  },
+  {
+    "day": "February, 2020",
+    "links": [
+      {
+        "text": "Why the GOV.UK Design System team changed the input type for numbers",
+        "url": "https://technology.blog.gov.uk/2020/02/24/why-the-gov-uk-design-system-team-changed-the-input-type-for-numbers/"
+      },
+
+      {
+        "text": "When CSS Blocks",
+        "url": "https://timkadlec.com/remembers/2020-02-13-when-css-blocks/"
+      },
+
+      {
+        "text": "What we learned from user testing of accessible client-side routing techniques with Fable Tech Labs",
+        "url": "https://www.gatsbyjs.org/blog/2019-07-11-user-testing-accessible-client-routing/"
+      },
+
+      {
+        "text": "The accessibility of placeholder links",
+        "url": "https://www.scottohara.me/note/2019/07/17/placeholder-link.html"
+      },
+
+      {
+        "text": "Short note on the disabled/aria-disabled attributes",
+        "url": "https://codepen.io/stevef/post/short-note-on-the-disabled-attribute"
+      },
+
+      {
+        "text": "Series: Producing accessible Content for the Web",
+        "url": "https://accessabilly.com/series-producing-accessible-content-for-the-web/"
+      },
+
+      {
+        "text": "Link Targets and 3.2.5",
+        "url": "https://adrianroselli.com/2020/02/link-targets-and-3-2-5.html"
+      },
+
+      {
+        "text": "Keeping it simple with CSS that scales",
+        "url": "https://hankchizljaw.com/wrote/keeping-it-simple-with-css-that-scales/"
+      },
+
+      {
+        "text": "Innovation Can’t Keep the Web Fast",
+        "url": "https://css-tricks.com/innovation-cant-keep-the-web-fast/"
+      },
+
+      {
+        "text": "My Priority of Methods for Labeling a Control",
+        "url": "https://adrianroselli.com/2020/01/my-priority-of-methods-for-labeling-a-control.html"
+      },
+
+      {
+        "text": "HTML: The Inaccessible Parts",
+        "url": "https://daverupert.com/2020/02/html-the-inaccessible-parts/"
+      },
+
+      {
+        "text": "Honesty is the best policy",
+        "url": "https://hankchizljaw.com/wrote/honesty-is-the-best-policy/"
+      },
+
+      {
+        "text": "CSS resize none on textarea is bad for UX",
+        "url": "https://catalin.red/css-resize-none-is-bad-for-ux/"
+      },
+
+      {
+        "text": "Accessibility for Vestibular Disorders: How My Temporary Disability Changed My Perspective",
+        "url": "https://alistapart.com/article/accessibility-for-vestibular/"
+      },
+
+      {
+        "text": "5G Will Definitely Make the Web Slower, Maybe",
+        "url": "https://www.filamentgroup.com/lab/5g/"
+      }
+    ]
+  },
+  {
+    "day": "January, 2020",
+    "links": [
+      {
+        "text": "Why You Should Choose HTML5 &lt;article&gt; Over &lt;section&gt;",
+        "url": "https://www.smashingmagazine.com/2020/01/html5-article-section"
+      },
+
+      {
+        "text": "Operating System and Browser Accessibility Display Modes",
+        "url": "https://a11yproject.com/posts/operating-system-and-browser-accessibility-display-modes/"
+      },
+
+      {
+        "text": "No, Absolutely Not",
+        "url": "https://css-tricks.com/no-absolutely-not/"
+      },
+
+      {
+        "text": "Move Fast &amp; Don’t Break Things",
+        "url": "https://www.filamentgroup.com/lab/dontbreakthings/"
+      },
+
+      {
+        "text": "Imperfect",
+        "url": "https://css-irl.info/imperfect/"
+      },
+
+      {
+        "text": "I Was Google’s Head of International Relations. Here’s Why I Left.",
+        "url": "https://medium.com/@rossformaine/i-was-googles-head-of-international-relations-here-s-why-i-left-49313d23065"
+      },
+
+      {
+        "text": "Goodbye, Clean Code",
+        "url": "https://overreacted.io/goodbye-clean-code/"
+      },
+
+      {
+        "text": " HTML5 Landmarks Exposed ",
+        "url": "https://www.scottohara.me/blog/2019/04/05/landmarks-exposed.html"
+      },
+
+      {
+        "text": "How accessible is the HTML video player?",
+        "url": "https://scottvinkle.me/blogs/blog/how-accessible-is-the-html-video-player"
+      },
+
+      {
+        "text": "CSS4 is here!",
+        "url": "https://www.quirksmode.org/blog/archives/2020/01/css4_is_here.html"
+      },
+
+      {
+        "text": "Boring by default",
+        "url": "https://justmarkup.com/notes/2020-01-14-boring-by-default/"
+      },
+
+      {
+        "text": "Be Wary of Nesting Roles",
+        "url": "https://adrianroselli.com/2016/12/be-wary-of-nesting-roles.html"
+      },
+
+      {
+        "text": "Accessible page title in a single-page React application",
+        "url": "https://hugogiraudel.com/2020/01/15/accessible-title-in-a-single-page-react-application/"
+      },
+
+      {
+        "text": "Accessible links and buttons with React",
+        "url": "https://hugogiraudel.com/2020/01/17/accessible-links-and-buttons-with-react/"
+      }
+    ]
+  },
+  {
+    "day": "December, 2019",
+    "links": [
+      {
+        "text": "CSS and Network Performance",
+        "url": "https://csswizardry.com/2018/11/css-and-network-performance/"
+      }
+    ]
+  }
+]
