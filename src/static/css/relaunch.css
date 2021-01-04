@@ -297,3 +297,17 @@ a:hover {
 .dark *:focus {
   outline: 4px solid #1cb4af;
 }
+
+.banner {
+  background: rgba(21, 58, 81, 0.1);
+  padding: 1rem;
+}
+
+.banner > * {
+  margin: 0;
+  font-size: 1.1rem;
+}
+
+.banner > * + * {
+  margin-top: 1rem;
+}
