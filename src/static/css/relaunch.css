@@ -311,3 +311,15 @@ a:hover {
 .banner > * + * {
   margin-top: 1rem;
 }
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(auto, 355px));
+  grid-gap: 60px 30px;
+  justify-content: center;
+}
+
+.h3 {
+  font-size: 1.4rem;
+  line-height: 1.3;
+}
