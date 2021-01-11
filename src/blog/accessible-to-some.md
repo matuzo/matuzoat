@@ -7,9 +7,6 @@ image: articles/sm_schip.jpg
 teaser: 'According to [WebAims annual accessibility analysis](https://webaim.org/projects/million/), 98.1% of home pages of the top 1,000,000 websites have detectable WCAG 2.0 failures. Some of these sites may only have minor contrast issues or maybe just a single missing `id`, while others are highly inaccessible. However, this number is pretty damn high, considering the fact that automatic testing tools [only report obvious accessibility issues](https://accessibility.blog.gov.uk/2017/02/24/what-we-found-when-we-tested-tools-on-the-worlds-least-accessible-webpage/).'
 tags:
   - a11y
-publication: Matuzo
-draft: false
-archive: false
 ---
 
 Only 1.9% of the tested home pages pass automatic testing, which is fine, but it doesn’t mean that [there aren’t any barriers on these websites](https://www.matuzo.at/blog/building-the-most-inaccessible-site-possible-with-a-perfect-lighthouse-score/) either. True accessibility extends beyond automated tests and [WCAG](https://www.w3.org/WAI/standards-guidelines/wcag/) regulations.
@@ -120,7 +117,8 @@ The `alt` attribute is often misused as a place to store SEO keywords or copyrig
 <figure>
   <img
     src="hetschip.jpg"
-    alt="A long rectangular building. Besides looking like a ship, Het Schip resembles a bizarre art form. Its appearance is unconventional from all angles. The exterior consists of bright orange bricks, decked with towers and architectural elements in unconventional shapes.">
+    alt="A long rectangular building. Besides looking like a ship, Het Schip resembles a bizarre art form. Its appearance is unconventional from all angles. The exterior consists of bright orange bricks, decked with towers and architectural elements in unconventional shapes."
+  />
   <figcaption>
     Dutch expressionism (Amsterdam School), Het Schip apartment building in
     Amsterdam, 1917–20 (Michel de Klerk)
@@ -268,7 +266,7 @@ I made the proper label “bad” only accessible to screen reader users by hidi
 
 ```html
 <p>
-  <input type="radio" id="rating2" name="rating">
+  <input type="radio" id="rating2" name="rating" />
   <label for="rating2" style="pointer-events: none">
     <span class="vh">bad</span>
     <span aria-hidden="true">Circled white star Circled white star</span>

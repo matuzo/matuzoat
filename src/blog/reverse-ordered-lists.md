@@ -4,20 +4,17 @@ metadescription: >-
   Different ways of reversing the order of lists in HTML and CSS..
 date: 2020-06-04T06:58:54.969Z
 image: articles/sm_reverse.jpg
-teaser: "I’m working on a project where I have a list of items in reverse order. The list starts with the latest item and ends with the oldest. I wanted to express that both semantically and visually. I did some research and found interesting solutions, some of them good, others not so much."
+teaser: 'I’m working on a project where I have a list of items in reverse order. The list starts with the latest item and ends with the oldest. I wanted to express that both semantically and visually. I did some research and found interesting solutions, some of them good, others not so much.'
 tags:
   - css
   - html
-publication: Matuzo
-draft: false
-archive: false
 ---
 
 The result should look a little like this.
 
 3\. C  
 2\. B  
-1\. A  
+1\. A
 
 Let’s check out our options.
 
@@ -54,7 +51,6 @@ It reverses the order of the list marker semantically and visually; the list sta
 That’s how you do it, you can stop reading here, if you don’t need custom styling and it doesn’t bother you that the `reversed` attribute is [not supported in IE and old implementations of Edge](https://caniuse.com/#feat=ol-reversed).  
 Keep reading, if you need more options, better browser support and more flexibility.
 
-
 ## The value attribute in HTML
 
 Another approach, which yields the same result, is using the value attribute on the list items.
@@ -74,6 +70,7 @@ Another approach, which yields the same result, is using the value attribute on 
 </ol>
 
 It's more verbose, but we also have more control over the list. You could do something like this:
+
 ```html
 <ol>
   <li value="6">C</li>
@@ -89,7 +86,6 @@ It's more verbose, but we also have more control over the list. You could do som
 </ol>
 
 You probably shouldn’t do this because skipping numbers may confuse your users, but it’s possible.
-
 
 ## Custom counter()s in CSS
 
@@ -115,7 +111,7 @@ ol li {
 }
 
 ol li::before {
-  content: counter(my-custom-counter) ". ";
+  content: counter(my-custom-counter) '. ';
   color: #f23c50;
   font-size: 2.5rem;
   font-weight: bold;
@@ -149,9 +145,10 @@ ol li::before {
 
 If we don’t know the exact number of items, we can move the `counter-reset` property into our HTML and let our back-end programming language or our static site generator do the counting.
 
-
 ```html
-<ol style="counter-reset: my-custom-counter {% raw %}{{ items.length + 1 }}{% endraw %}">
+<ol
+  style="counter-reset: my-custom-counter {% raw %}{{ items.length + 1 }}{% endraw %}"
+>
   <li>C</li>
   <li>B</li>
   <li>A</li>
@@ -168,14 +165,13 @@ ol li {
 }
 
 ol li::before {
-  content: counter(my-custom-counter) ". "
+  content: counter(my-custom-counter) '. ';
 }
 ```
 
 ## How not to do it
 
 Some articles suggested reversing the order of both the list marker and the item itself in CSS using Flexbox or similar techniques. We shouldn’t do that because it only looks correct, but the <abbr title="Document Object Model">DOM</abbr> order stays the same. Changing order in CSS has no effect on <abbr title="Document Object Model">DOM</abbr> order.
-
 
 ```html
 <ol>

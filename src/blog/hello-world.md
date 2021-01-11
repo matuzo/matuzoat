@@ -11,14 +11,20 @@ teaser: >-
   layout with no CSS at all. All styling happened by adding HTML attributes.
 tags:
   - writing
-publication: Matuzo
-archive: false
 ---
-``` html
+
+```html
 <font face="arial" size="4">
-    <table border="2" cellspacing="2" cellpadding="0" width="550" bordercolor="#000000" bgcolor="#004600">
-        ...
-    </table>
+  <table
+    border="2"
+    cellspacing="2"
+    cellpadding="0"
+    width="550"
+    bordercolor="#000000"
+    bgcolor="#004600"
+  >
+    ...
+  </table>
 </font>
 ```
 

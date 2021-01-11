@@ -6,14 +6,12 @@ intro: >-
   A transcript of a thread on Twitter
   (https://mobile.twitter.com/mmatuzo/status/1176887030594363393)
 teaser: >-
-  I saw a lot of JavaScript today considering that I was at a CSS conference. 
+  I saw a lot of JavaScript today considering that I was at a CSS conference.
 tags:
   - css
-draft: false
-archive: false
-publication: Matuzo
 ---
-It absolutely makes sense because for many people writing CSS means writing JS but I've seen enough pro/con talks about CSS-in-JS. 
+
+It absolutely makes sense because for many people writing CSS means writing JS but I've seen enough pro/con talks about CSS-in-JS.
 
 I do enjoy talks that are more advanced and show how to optimize the CSS people write in JS but I'd really love to see a CSS only talk or read an article again that challenges the way I write CSS or approach layout and architecture.
 

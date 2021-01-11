@@ -20,10 +20,6 @@ tags:
   - css
   - grid
   - a11y
-publication: Matuzo
-css: dark-grid
-draft: false
-archive: false
 page_class: dark
 sheets:
   - grid

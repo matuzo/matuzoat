@@ -7,9 +7,6 @@ image: articles/sm_color.png
 teaser: "This is part 2 of my series [Here’s what I didn’t know about…](/blog/heres-what-i-didnt-know/) in which I try to learn new things about CSS. This time I'm trying to find out what I didn’t know about the `color` property."
 tags:
   - css
-publication: Matuzo
-draft: false
-archive: false
 ---
 
 When setting the CSS `color` property, 2 things happen.

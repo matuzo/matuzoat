@@ -6,13 +6,10 @@ metadescription: >-
 date: 2016-11-15T07:35:14.729Z
 image: /static/img/uploads/1_j62alethwsrkedxmtpvj4q.png
 teaser: >-
-  **A small collection of useful CSS techniques and a quick reminder that print
-  style sheets are still a thing.**
+  A small collection of useful CSS techniques and a quick reminder that print
+  style sheets are still a thing.
 tags:
   - css
-publication: Matuzo
-url: ''
-archive: false
 ---
 
 [Aaron Gustafson](https://twitter.com/AaronGustafson) recently sent a [tweet](https://twitter.com/AaronGustafson/status/788073583528538112) to [Indiegogo](http://indiegogo.com) in which he pointed out that their order details pages aren’t usable when printed.
@@ -51,7 +48,7 @@ body {
 Alternatively you can embed your print styles in HTML, but this will give you an extra request.
 
 ```html
-<link media="print" href="print.css">
+<link media="print" href="print.css" />
 ```
 
 ## 2. Testing

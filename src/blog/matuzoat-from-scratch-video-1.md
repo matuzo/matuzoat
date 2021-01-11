@@ -8,9 +8,6 @@ teaser: >-
   The this video I explain how I approach design and how I find inspiration, _both_ online and offline. [Subscribe to the YouTube channel](https://www.youtube.com/channel/UCj29HII0sgJvKhqPIrO6Skw).
 tags:
   - video
-publication: Matuzo
-draft: false
-archive: false
 ---
 
 <nav>

@@ -12,9 +12,6 @@ teaser: >-
   months.  Watch it to see if this series of videos is for you or not.
 tags:
   - video
-publication: Matuzo
-draft: false
-archive: false
 ---
 
 <nav>

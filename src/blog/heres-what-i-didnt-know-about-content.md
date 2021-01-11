@@ -7,9 +7,6 @@ image: articles/sm_content.jpg
 teaser: "This is part 3 of my series [Here’s what I didn’t know about…](/blog/heres-what-i-didnt-know/) in which I try to learn new things about CSS. This time I'm trying to find out what I didn’t know about the `content` property."
 tags:
   - css
-publication: Matuzo
-draft: false
-archive: false
 ---
 
 A few weeks ago Stefan published a post on his website called “[The CSS "content" property accepts alternative text](https://www.stefanjudis.com/today-i-learned/css-content-accepts-alternative-text/)”, which blew my mind. He showed that the `content` property excepts 2 values and not just 1, the actual content and an alternative text.

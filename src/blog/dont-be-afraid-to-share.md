@@ -16,10 +16,8 @@ teaser: >-
   Here’s some advice, if you want to share stuff but are wary about doing it.
 tags:
   - misc
-publication: Matuzo
-draft: false
-archive: false
 ---
+
 ## 1. Find something that interests you and stick to it.
 
 Fullstack is bullshit and so is trying to be an expert in everything. Pick that one thing that interests you the most (design, js, css, a11y, ux,…) and try to be really good in that specific area.

@@ -16,10 +16,8 @@ tags:
   - css
   - a11y
   - testing
-publication: Matuzo
-draft: false
-archive: false
 ---
+
 ## Step 0: Automatic tests
 
 The first thing I do is run accessibility checks in [Lighthouse](https://developers.google.com/web/tools/lighthouse) to figure out if anything obvious is wrong. Automatic accessibility tests are great but they only check a subset of what needs to be tested. [If you have a score of 100 or 0 errors, you’re not done](https://www.matuzo.at/blog/building-the-most-inaccessible-site-possible-with-a-perfect-lighthouse-score/). It just means you’ve laid the groundwork for manual testing.
@@ -34,10 +32,10 @@ The first semi-manual test I perform is check if images have descriptions and if
 
 Another feature of the Web Developer extension is the ability to disable CSS on a page. If you disable CSS, you’re able to check various things.
 
-* Does the website work without CSS (in case it doesn’t load)?
-* Does the order of elements of your page make sense?
-* Are images and icons sized correctly?
-* Is your document well structured?
+- Does the website work without CSS (in case it doesn’t load)?
+- Does the order of elements of your page make sense?
+- Are images and icons sized correctly?
+- Is your document well structured?
 
 ![The schedule page on webclerks.at displayed without CSS.](https://res.cloudinary.com/dp3mem7or/image/upload/v1571155700/articles/a11y-test/a11y_tips_step2.jpg)
 
@@ -74,18 +72,18 @@ body {
 }
 ```
 
-## Step 6:  Use the keyboard
+## Step 6: Use the keyboard
 
 Put your mouse away and tab through the page and see if you can use every single part of the site without a mouse/touch pad. The <kbd>tab</kbd> key is a powerful testing tool, it will tell you a lot about your site:
 
-* Are focus styles clearly visible?
-* Is everything focusable that should be?
-* Are your buttons real `<button>`s?
-* Is the overall UX using a keyboard great?
-* Are you managing focus correctly?
-* Do you hide and show elements correctly?
-* Does visual order match DOM order?
-* Can you use custom JS components without a mouse?
+- Are focus styles clearly visible?
+- Is everything focusable that should be?
+- Are your buttons real `<button>`s?
+- Is the overall UX using a keyboard great?
+- Are you managing focus correctly?
+- Do you hide and show elements correctly?
+- Does visual order match DOM order?
+- Can you use custom JS components without a mouse?
 
 There’s even a [npm package for disabling the mouse cursor](https://www.npmjs.com/package/no-mouse-days), built by the wonderful [Marcy Sutton](https://twitter.com/marcysutton).
 

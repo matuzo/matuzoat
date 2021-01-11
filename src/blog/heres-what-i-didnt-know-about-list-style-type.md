@@ -7,17 +7,15 @@ image: articles/sm_list-style-type.png
 teaser: "At the CSS-in-Vienna meet-up last week [Ulrich](https://twitter.com/udobiasch) told me that starting with Chrome 79 it's possible to define a string value for the `list-style-type` property. I was surprised because I thought `::marker` was supposed to solve that. That's why I did some research, here’s what I learned."
 tags:
   - css
-publication: Matuzo
-draft: false
-archive: false
 ---
+
 ## list-style-type accepts a string value
 
-In Chrome  79+, Firefox 39+, and Opera 66+ it's possible to define a string value as the bullet of an ordered or unordered list, which means that emojis work, as well. 
+In Chrome 79+, Firefox 39+, and Opera 66+ it's possible to define a string value as the bullet of an ordered or unordered list, which means that emojis work, as well.
 
 ```css
 ul {
-  list-style-type: "🐣";
+  list-style-type: '🐣';
 }
 ```
 
@@ -32,11 +30,11 @@ ul {
 }
 </style>
 
-The list item may also be described as an Unicode value. 
+The list item may also be described as an Unicode value.
 
 ```css
 ul {
-  list-style-type: "\1F44D";
+  list-style-type: '\1F44D';
 }
 ```
 
@@ -53,17 +51,17 @@ ul {
 
 ## @counter-style is a thing
 
-Browsing the MDN page for `list-style-type` I discovered that there’s a `@counter-style` at-rule. It allows you to define custom counter styles. It's  `list-style-type` with super powers. 
+Browsing the MDN page for `list-style-type` I discovered that there’s a `@counter-style` at-rule. It allows you to define custom counter styles. It's `list-style-type` with super powers.
 
-Currently, only supported in Firefox, there are several interesting options, like a list of one or multiple `symbols`, `suffix`, `prefix` or `range`. I won’t describe them here, I suggest you read about [counter styles on MDN](https://developer.mozilla.org/en-US/docs/Web/CSS/@counter-style) or have a look at the demos below (Firefox only). 
+Currently, only supported in Firefox, there are several interesting options, like a list of one or multiple `symbols`, `suffix`, `prefix` or `range`. I won’t describe them here, I suggest you read about [counter styles on MDN](https://developer.mozilla.org/en-US/docs/Web/CSS/@counter-style) or have a look at the demos below (Firefox only).
 
 **Drooling emoji and a suffix**
 
 ```css
 @counter-style drooling {
   system: cyclic;
-  symbols: "\1F924";
-  suffix: ". ";
+  symbols: '\1F924';
+  suffix: '. ';
 }
 
 .counterstyle {
@@ -91,16 +89,16 @@ Currently, only supported in Firefox, there are several interesting options, lik
 **3 different symbols with a prefix only applied to the 2nd, 3rd and 4th list item**
 
 ```css
-  @counter-style custom {
-    system: cyclic;
-    symbols: "\1F924" "\1F44D" "\1F525";
-    prefix: "->";
-    range: 2 4;
-  }
-  
-  .counterstyle2 {
-    list-style: custom;
-  }
+@counter-style custom {
+  system: cyclic;
+  symbols: '\1F924''\1F44D''\1F525';
+  prefix: '->';
+  range: 2 4;
+}
+
+.counterstyle2 {
+  list-style: custom;
+}
 ```
 
 <ul class="lst-custom">
@@ -124,17 +122,17 @@ Currently, only supported in Firefox, there are several interesting options, lik
 }
 </style>
 
-[Check it out on CodePen](https://codepen.io/matuzo/pen/XWJQWPa?editors=1100). 
+[Check it out on CodePen](https://codepen.io/matuzo/pen/XWJQWPa?editors=1100).
 
-## What about `::marker? 
+## What about `::marker?
 
 On [HTMHell](https://www.htmhell.dev/15-letter-by-letter/) I’m using the `::marker` CSS pseudo-element to select the marker box of list items, which by default contains a bullet or number, and replace is using the `content` attribute.
 
 ```css
-  li::marker {
-    content: "🔥";
-    font-size: 2.6rem;
-  }
+li::marker {
+  content: '🔥';
+  font-size: 2.6rem;
+}
 ```
 
 <ul class="lst-marker">
@@ -152,10 +150,10 @@ On [HTMHell](https://www.htmhell.dev/15-letter-by-letter/) I’m using the `::ma
 What’s great about `::marker` is that you can finally style bullets.
 
 ```css
-  .li::marker {
-    color: #FF00FF;
-    font-size: 2em;
-  }
+.li::marker {
+  color: #ff00ff;
+  font-size: 2em;
+}
 ```
 
 <ul class="lst-marker2">
@@ -170,7 +168,7 @@ What’s great about `::marker` is that you can finally style bullets.
 }
 </style>
 
-Only all [font properties](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Fonts), [color](https://developer.mozilla.org/en-US/docs/Web/CSS/color), [text-combine-upright](https://developer.mozilla.org/en-US/docs/Web/CSS/text-combine-upright), [unicode-bidi](https://developer.mozilla.org/en-US/docs/Web/CSS/unicode-bidi), [direction](https://developer.mozilla.org/en-US/docs/Web/CSS/direction) and [content](https://developer.mozilla.org/en-US/docs/Web/CSS/content) can be used with `::marker`. 
+Only all [font properties](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Fonts), [color](https://developer.mozilla.org/en-US/docs/Web/CSS/color), [text-combine-upright](https://developer.mozilla.org/en-US/docs/Web/CSS/text-combine-upright), [unicode-bidi](https://developer.mozilla.org/en-US/docs/Web/CSS/unicode-bidi), [direction](https://developer.mozilla.org/en-US/docs/Web/CSS/direction) and [content](https://developer.mozilla.org/en-US/docs/Web/CSS/content) can be used with `::marker`.
 
 While it’s possible to change the `content`, I’d say that the main purpose of `::marker` is styling, and `list-style-type` and `@counter-style` are responsible for the value of the bullet.
 

@@ -7,10 +7,7 @@ teaser: >-
   The question how good *good enough* is and at which point a website is ready to go online is keeping me busy lately. The web is in bad shape and it’s because we’re making it too easy on ourselves. *“It’s online and works in most browsers”* is not enough - we have to be much more considerate of what we’re putting online.
 tags:
   - a11y
-publication: Matuzo
 image: articles/sm_543kb.png
-draft: false
-archive: false
 ---
 
 Some background: About three years ago I specialized in web accessibility. Now it’s not just my job to make sure that the websites I build are accessible, but the websites of others, too. I’m a front-end developer, but also a consultant and auditor. I’m employed for about a year now as well, and I have to evaluate a lot more third party web products than I used to.
@@ -136,12 +133,12 @@ Another thing worth considering is splitting up the main CSS file by media featu
 
 ```html
 <!-- Downloaded and render blocking -->
-<link rel="stylesheet" href="main.css">
+<link rel="stylesheet" href="main.css" />
 
 <!-- Downloaded but not render blocking if media query doesn’t match -->
-<link rel="stylesheet" href="medium.css" media="(min-width: 768px)">
-<link rel="stylesheet" href="large.css" media="(min-width: 1024px)">
-<link rel="stylesheet" href="print.css" media="print">
+<link rel="stylesheet" href="medium.css" media="(min-width: 768px)" />
+<link rel="stylesheet" href="large.css" media="(min-width: 1024px)" />
+<link rel="stylesheet" href="print.css" media="print" />
 ```
 
 Before HTTP2 this was kinda considered a bad practice, but with HTTP2 multiplexing, the number of requests that can be sent to the server at the same time is no longer limited. The big advantage of splitting CSS into multiple files is that browsers will download all of them, but only those needed to fulfill the current context will block rendering,

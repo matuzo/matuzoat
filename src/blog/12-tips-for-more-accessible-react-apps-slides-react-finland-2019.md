@@ -15,10 +15,6 @@ teaser: >-
 tags:
   - React
   - accessibility
-publication: Matuzo
-css: react-finland
-draft: false
-archive: false
 ---
 
 ## Recording of the talk

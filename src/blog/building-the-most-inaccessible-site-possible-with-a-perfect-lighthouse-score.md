@@ -13,10 +13,6 @@ teaser: >-
 tags:
   - css
   - a11y
-publication: Matuzo
-css: ''
-draft: false
-archive: false
 ---
 
 <style>
@@ -106,7 +102,7 @@ So let’s add some CSS and bring our content back.
 
 ```html
 <head>
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body class="loaded" hidden>
   ...
@@ -133,7 +129,7 @@ Let’s add one more dependency. I’m not applying the class that displays our 
 
 ```html
 <head>
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="style.css" />
   <script src="script.js"></script>
 </head>
 

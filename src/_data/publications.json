@@ -1,0 +1,18 @@
+{
+  "24a11y": {
+    "name": "24 Accessibility",
+    "url": "https://www.24a11y.com"
+  },
+  "ala": {
+    "name": "A List Apart",
+    "url": "https://alistapart.com/"
+  },
+  "csstricks": {
+    "name": "CSS-Tricks",
+    "url": "https://css-tricks.com/"
+  },
+  "sm": {
+    "name": "Smashing Magazine",
+    "url": "https://www.smashingmagazine.com/"
+  }
+}

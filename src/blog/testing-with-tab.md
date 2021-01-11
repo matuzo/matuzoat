@@ -7,10 +7,7 @@ teaser: >-
   I’m employed for about a year now and many things are different compared to being a freelancer. One interesting thing in my specific situation is that I have to evaluate the accessibility of third-party tools regularly. Usually there’s no time for a full audit, I have to gain a good overview of the quality of a product as quickly as possible.
 tags:
   - a11y
-publication: Matuzo
 image: articles/sm_tab.png
-draft: false
-archive: false
 ---
 
 I’ve already shared [6 things I check on every website I build](/blog/beyond-automatic-accessibility-testing-6-things-i-check-on-every-website-i-build/), but this time I want to focus on one of the most powerful testing tools: The <kbd>Tab</kbd> key.
@@ -22,7 +19,7 @@ Here’s what pressing the <kbd>Tab</kbd> key will tell you about your website:
 ## 1. Focus styles
 
 If you press the <kbd>Tab</kbd> key, do you see which item on the page is highlighted?
-No? Use `:focus{ }`, `:focus-within{ }`, or `:focus-visible{ }` to style elements in their focus state. 
+No? Use `:focus{ }`, `:focus-within{ }`, or `:focus-visible{ }` to style elements in their focus state.
 
 <figure class="figure">
   <span class="content__image-wrapper">
@@ -41,61 +38,52 @@ a:focus {
 
 ### Learn more about focus styles
 
-* [Focusing on Focus Styles](https://css-tricks.com/focusing-on-focus-styles/)
-* [:focus on MDN](https://developer.mozilla.org/en-US/docs/Web/CSS/:focus)
-* [:focus-within on MDN](https://developer.mozilla.org/en-US/docs/Web/CSS/:focus-within)
-* [focus visible polyfill](https://github.com/WICG/focus-visible)
-
+- [Focusing on Focus Styles](https://css-tricks.com/focusing-on-focus-styles/)
+- [:focus on MDN](https://developer.mozilla.org/en-US/docs/Web/CSS/:focus)
+- [:focus-within on MDN](https://developer.mozilla.org/en-US/docs/Web/CSS/:focus-within)
+- [focus visible polyfill](https://github.com/WICG/focus-visible)
 
 ## 2. Interactive elements
 
-Can you reach interactive elements like links, buttons, form elements, or video controls? 
+Can you reach interactive elements like links, buttons, form elements, or video controls?
 No? Work on your HTML. You’re probably using `<div>`, `<span>`, `<svg>` only, etc. where you should be using `<input>`, `<button>` or `<a>`.
 
 Don’t use `div`s for buttons. This fake button is not accessible to keyboard and screen reader users.
 
 ```html
-<div class="btn" onclick="send()">
-  Send
-</div>
+<div class="btn" onclick="send()">  Send</div>
 ```
 
 Do this instead:
 
 ```html
-<button class="btn" onclick="send()">
-  Send
-</button>
+<button class="btn" onclick="send()">  Send</button>
 ```
 
 ### Learn more about links and buttons
 
-* [#3 image-buttons on HTMHell](https://www.htmhell.dev/3-image-buttons/)
-* [The Links vs. Buttons Showdown ](https://www.youtube.com/watch?v=8XjwDq9zG4I)
+- [#3 image-buttons on HTMHell](https://www.htmhell.dev/3-image-buttons/)
+- [The Links vs. Buttons Showdown ](https://www.youtube.com/watch?v=8XjwDq9zG4I)
 
-## 3. Real buttons 
+## 3. Real buttons
 
 You can reach a button, but nothing happens when you press <kbd>Enter</kbd> or <kbd>Space</kbd>? It’s probably still not a real `<button>` or `<input type="button">`.
 
 You can make fake buttons tabbable and you can change their semantics, but you only get key events by default with real buttons.
 
 ```html
-<div class="btn" tabindex="0" role="button" onclick="send()">
-  Send
-</div>
+<div class="btn" tabindex="0" role="button" onclick="send()">  Send</div>
 ```
 
 Do this instead:
 
 ```html
-<button class="btn" onclick="send()">
-  Send
-</button>
+<button class="btn" onclick="send()">  Send</button>
 ```
 
 ### Learn more about buttons
 
-* [Just use button -- A11ycasts #05](https://www.youtube.com/watch?v=CZGqnp06DnI)
+- [Just use button -- A11ycasts #05](https://www.youtube.com/watch?v=CZGqnp06DnI)
 
 ## 4. Skip links
 
@@ -111,8 +99,7 @@ Do you have to tab through a lot of elements before you can reach a certain part
 
 ### Learn more about skip links
 
-* [“Skip Navigation” Links](https://webaim.org/techniques/skipnav/)
-
+- [“Skip Navigation” Links](https://webaim.org/techniques/skipnav/)
 
 ## 5. Focus management
 
@@ -120,37 +107,35 @@ When you press a button and a modal/dialog pops up, can you access its contents 
 
 ```js
 function showModal() {
-  ...   
-  // Store the last focused element  
-  lastFocusedElement = document.activeElement;  
+  ...
+  // Store the last focused element
+  lastFocusedElement = document.activeElement;
 
   var modal = document.getElementById(modalID);
-  modal.focus();  
+  modal.focus();
   ...
 }
 
 
 function closeModal() {
-  ...   
+  ...
   // Return the focus to the last focused element
-  lastFocusedElement.focus();   
+  lastFocusedElement.focus();
   ...
 }
 ```
 
-* [Writing JavaScript with accessibility in mind](https://medium.com/@matuzo/writing-javascript-with-accessibility-in-mind-a1f6a5f467b9#7a0c)
-
+- [Writing JavaScript with accessibility in mind](https://medium.com/@matuzo/writing-javascript-with-accessibility-in-mind-a1f6a5f467b9#7a0c)
 
 ## 6. Infinite scrolling
 
-Do you have a footer but you can’t access it by pressing <kbd>TAB</kbd> because you’ve implemented infinite scrolling? Burn it, burn it with fire! 
+Do you have a footer but you can’t access it by pressing <kbd>TAB</kbd> because you’ve implemented infinite scrolling? Burn it, burn it with fire!
 
 No, seriously. Infinite scrolling is usually a bad practice.
 
 ### Learn more about infinite scrolling
 
-* [Infinite Scrolling and Accessibility (It’s Usually Bad)](http://www.webaxe.org/infinite-scrolling-and-accessibility/)
-
+- [Infinite Scrolling and Accessibility (It’s Usually Bad)](http://www.webaxe.org/infinite-scrolling-and-accessibility/)
 
 ## 7. Off-screen items
 
@@ -172,7 +157,7 @@ Does the focus indicator skip around a lot? Most of the time it’s because visu
 
 ### Learn more about source order
 
-* [Source Order Matters](https://adrianroselli.com/2015/09/source-order-matters.html)
+- [Source Order Matters](https://adrianroselli.com/2015/09/source-order-matters.html)
 
 ## 9. Custom JS components
 
@@ -182,6 +167,6 @@ Are only parts of your JS components accessible with the keyboard? Read the [WAI
 
 You don't need to learn a software to get started with accessibility testing, the <kbd>Tab</kbd> key will tell you a lot about the quality of your website. There’s more you have to check, but testing with the keyboard brings you one step closer to creating an inclusive website.
 
-This post is based on a [twitter thread from last year](https://twitter.com/mmatuzo/status/1090932098456801281). 
+This post is based on a [twitter thread from last year](https://twitter.com/mmatuzo/status/1090932098456801281).
 
 <script async src="https://static.codepen.io/assets/embed/ei.js"></script>

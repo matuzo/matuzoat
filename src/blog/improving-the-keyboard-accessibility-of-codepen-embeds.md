@@ -23,10 +23,6 @@ tags:
   - css
   - a11y
   - codepen
-publication: Matuzo
-css: codepen
-draft: false
-archive: false
 ---
 
 <figure class="figure ">

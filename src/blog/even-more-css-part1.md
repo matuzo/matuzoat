@@ -8,9 +8,6 @@ image: articles/sm_css_a11y2_pe3.jpg
 teaser: "About 4 years ago, [I began to focus on web accessibility](https://alistapart.com/article/my-accessibility-journey-what-ive-learned-so-far/) professionally. I read many articles and books, watched talks, followed experts, and I also shared my knowledge at meet-ups and online. The first 3 articles I wrote were [Writing HTML with Accessibility in Mind](https://medium.com/alistapart/writing-html-with-accessibility-in-mind-a62026493412), [Writing JavaScript with Accessibility in Mind](https://medium.com/@matuzo/writing-javascript-with-accessibility-in-mind-a1f6a5f467b9), and [Writing CSS with Accessibility in Mind](https://medium.com/@matuzo/writing-css-with-accessibility-in-mind-8514a0007939). I've shared the most exciting new things I've learned about creating inclusive experiences in each language."
 tags:
   - a11y
-publication: Matuzo
-draft: false
-archive: false
 ---
 
 I wrote _Writing CSS with Accessibility in Mind_ in 2017 and I’ve covered topics like font size, line height, print style sheets, hiding content, contrast, DOM order vs. visual order and focus styles. 3 years have passed, CSS has evolved, and I’ve learned new things. Therefore, I’ve decided to write about _even more CSS with accessibility in mind_.

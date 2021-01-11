@@ -7,9 +7,6 @@ image: articles/sm_pe.png
 teaser: 'Nokia released an updated version of its iconic [Nokia 3310](https://www.nokia.com/phones/en_int/nokia-3310) about 3 years ago. It was affordable for me (€60/$65), so I had to get one. It came with a 2 MP camera, a battery that lasts 30 days (up to 22 hours talk time), 2G, 16 MB storage, the original Snake game, and a browser. '
 tags:
   - css
-publication: Matuzo
-draft: false
-archive: false
 ---
 
 ![4 Nokia 3310 phones in blue, read, gray, and yellow](https://res.cloudinary.com/dp3mem7or/image/upload/c_scale,q_90,w_800/v1588058813/articles/progressive/nokia_phones.jpg)
@@ -98,7 +95,8 @@ It’s not the best experience, but better than no experience.
     id="search"
     name="q"
     value="site:www.frontendbookmarks.com "
-    type="text">
+    type="text"
+  />
    <button type="submit">Search</button>
 </form>
 ```

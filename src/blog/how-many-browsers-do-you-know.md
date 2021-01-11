@@ -1,16 +1,13 @@
 ---
 title: 'How many browsers do you know?'
-metadescription: I will switch browsers every two weeks to learn more about them and I invite you to do the same. 
+metadescription: I will switch browsers every two weeks to learn more about them and I invite you to do the same.
 date: 2020-03-12T06:41:15.944Z
 intro: ''
 teaser: >-
-  While testing a new feature recently, I realised that I don’t know too many browsers. I can list some, but I don‘t really know them like I know Firefox or Chrome. I want to change that, and I invite you to do the same. 
+  While testing a new feature recently, I realised that I don’t know too many browsers. I can list some, but I don‘t really know them like I know Firefox or Chrome. I want to change that, and I invite you to do the same.
 tags:
   - testing
-publication: Matuzo
 image: articles/sm_browsers.png
-draft: false
-archive: false
 ---
 
 [Firefox Developer Tools](https://developer.mozilla.org/en-US/docs/Tools) have improved so much in the last few years that I naturally switched from Chrome as my main development browser to Firefox. This helped me understand their differences, not just when working (developer experience) but also when surfing (user experience). 
@@ -28,10 +25,9 @@ Did you know that there’s a [DuckDuckGo Browser](https://play.google.com/store
 
 I didn’t. There are even more browser with millions of downloads.
 
-## Let’s switch browsers 
+## Let’s switch browsers
 
 I know how Firefox, Chrome and Safari differ, but I don’t know too much about other browsers and I want to change that. I will switch browsers every two weeks to learn more about them and I invite you to do the same.
 
 So, for the next two weeks I’ll use [Vivaldi](https://vivaldi.com/) on my laptop and [Brave](https://brave.com/) on my smartphone and I will share my experience before I switch again.  
 If you join me, I'd love to hear about your experience on [twitter](https://twitter.com/mmatuzo) or via [email](manuel@matuzo.at).
-
