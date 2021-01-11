@@ -5,7 +5,7 @@
   {% if not post.data.draft %}
     <article class="rich-text">
       <{{level | default('h3') }}>
-        <a href="{{ url }}">
+        <a href="{{ post.data.url or url }}">
           {{ post.data.title }}
         </a>
       </{{level | default('h3') }}>
@@ -13,6 +13,12 @@
       <time datetime="{{ post.data.date|machineDate }}">
         {{ post.data.date|readableDate }}
       </time>
+
+      {% if post.data.publication %}
+        on <a href="{{ publications[post.data.publication].url}}">
+        {{ publications[post.data.publication].name}}
+      </a>
+      {% endif %}
 
       {{ post.data.teaser | md | safe }}
     </article>
