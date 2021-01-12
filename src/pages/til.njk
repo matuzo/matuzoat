@@ -13,7 +13,7 @@ date: 1987-01-01
 {% for til in collections.til|reverse %}
   <li>
     <h2>
-      TIL #{{ loop.revindex }} {{ til.data.title }}
+      {{ til.data.title }}
     </h2>
     {% if til.data.image %}
       {% if til.data.link %}
@@ -25,6 +25,16 @@ date: 1987-01-01
           <img loading="lazy" src="{{ metadata.cloudinary }}/w_440/{{til.data.image}}" alt="{{ til.data.title }}">
         </a>
       {% endif %}
+    {% endif %}
+
+    {{ til.templateContent | safe }}
+
+    {% if til.data.link %}
+      <p>
+        <a href="{{  til.data.link }}" rel="noopener">
+          {{  til.data.link }}
+        </a>
+      </p>
     {% endif %}
   </li>
 {% endfor %}
