@@ -1,13 +1,20 @@
-{% for post in collections.blog.slice(0, max) %}
+{% for post in posts.slice(0, max) %}
 
-  {% set url = post.url %}
+  {% set url = post.data.url or post.url %}
 
   {% if not post.data.draft %}
-    <article class="rich-text">
-      <{{level | default('h3') }}>
-        <a href="{{ post.data.url or url }}">
+    <article class="teaser rich-text">
+      <{{level | default('h3') }} class="teaser-heading">
+        {% if "til" in post.data.tags %}
+          TIL: 
+        {% endif %}
+        <a href="{{ url }}">
           {{ post.data.title }}
         </a>
+
+      {% if post.data.publication %}
+        (off-site)
+      {% endif %}
       </{{level | default('h3') }}>
 
       <time datetime="{{ post.data.date|machineDate }}">
@@ -20,7 +27,9 @@
       </a>
       {% endif %}
 
-      {{ post.data.teaser | md | safe }}
+      {% if post.data.teaser %}
+        {{ post.data.teaser | md | safe }}
+      {% endif %}
     </article>
   {% endif %}
 {% endfor %}

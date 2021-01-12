@@ -1,6 +1,3 @@
 {
-  "layout": "layouts/blog.njk",
-  "renderData": {
-    "page_classes": "blog"
-  }
+  "layout": "layouts/blog.njk"
 }
