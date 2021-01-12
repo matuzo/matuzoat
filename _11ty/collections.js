@@ -31,12 +31,6 @@ module.exports = {
     return [...tagSet];
   },
 
-  til: (collection) => {
-    return collection.getAllSorted().filter(function (item) {
-      return item.inputPath.match(/^\.\/src\/til\//) !== null;
-    });
-  },
-
   speaking_future: (collection) => {
     return collection.getAllSorted().filter(function (item) {
       return (

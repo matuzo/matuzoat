@@ -1,0 +1,4 @@
+{
+  "layout": "layouts/til.njk",
+  "tags": ["til", "posts"]
+}
