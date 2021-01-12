@@ -6,6 +6,8 @@ intro: ''
 teaser: >-
   I’m employed for about a year now and many things are different compared to being a freelancer. One interesting thing in my specific situation is that I have to evaluate the accessibility of third-party tools regularly. Usually there’s no time for a full audit, I have to gain a good overview of the quality of a product as quickly as possible.
 tags:
+  - blog
+  - posts
   - a11y
 image: articles/sm_tab.png
 ---

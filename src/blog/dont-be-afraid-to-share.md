@@ -15,6 +15,8 @@ teaser: >-
 
   Here’s some advice, if you want to share stuff but are wary about doing it.
 tags:
+  - blog
+  - posts
   - misc
 ---
 

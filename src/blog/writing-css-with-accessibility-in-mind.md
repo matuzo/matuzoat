@@ -13,6 +13,8 @@ teaser: >-
   Writing JavaScript with accessibility in mind now or later if you’re
   interested.
 tags:
+  - blog
+  - posts
   - css
   - a11y
 publication: medium

@@ -10,6 +10,8 @@ teaser: >-
   I decided to share some of the stuff that was particularly interesting to
   me, with you.
 tags:
+  - blog
+  - posts
   - css
   - grid
 publication: csstricks

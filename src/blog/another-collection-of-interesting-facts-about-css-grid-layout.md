@@ -10,6 +10,8 @@ teaser: >-
   Of course, I'm not going to keep my knowledge to myself. I'm happy to share
   my findings once again with you, the CSS-Tricks community.
 tags:
+  - blog
+  - posts
   - css
   - grid
 publication: csstricks

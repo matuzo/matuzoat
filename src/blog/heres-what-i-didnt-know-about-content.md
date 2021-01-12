@@ -6,6 +6,8 @@ date: 2020-05-26T06:58:54.969Z
 image: articles/sm_content.jpg
 teaser: "This is part 3 of my series [Here’s what I didn’t know about…](/blog/heres-what-i-didnt-know/) in which I try to learn new things about CSS. This time I'm trying to find out what I didn’t know about the `content` property."
 tags:
+  - blog
+  - posts
   - css
 ---
 

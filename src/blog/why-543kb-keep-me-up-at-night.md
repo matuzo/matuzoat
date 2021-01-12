@@ -6,6 +6,8 @@ intro: ''
 teaser: >-
   The question how good *good enough* is and at which point a website is ready to go online is keeping me busy lately. The web is in bad shape and it’s because we’re making it too easy on ourselves. *“It’s online and works in most browsers”* is not enough - we have to be much more considerate of what we’re putting online.
 tags:
+  - blog
+  - posts
   - a11y
 image: articles/sm_543kb.png
 ---

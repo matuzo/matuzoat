@@ -9,6 +9,8 @@ teaser: >-
   A small collection of useful CSS techniques and a quick reminder that print
   style sheets are still a thing.
 tags:
+  - blog
+  - posts
   - css
 ---
 

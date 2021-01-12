@@ -7,6 +7,8 @@ date: 2020-10-12T06:58:54.969Z
 image: articles/sm_css_a11y2_up.jpg
 teaser: 'In the first article of this series, I explained how important progressive enhancement is for web accessibility. Building websites layer by layer allows for a cleaner separation of concerns and more resilient experiences. This second article is about user preferences and how to respect them when writing CSS.'
 tags:
+  - blog
+  - posts
   - a11y
 ---
 

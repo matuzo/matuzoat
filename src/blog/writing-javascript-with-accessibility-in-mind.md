@@ -7,6 +7,8 @@ teaser: >-
   provide users with more and better ways to interact with your website or web
   app.
 tags:
+  - blog
+  - posts
   - css
 publication: medium
 url: >-

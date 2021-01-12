@@ -11,6 +11,8 @@ teaser: >-
   introduce myself and I describe what my plans are for the following weeks and
   months.  Watch it to see if this series of videos is for you or not.
 tags:
+  - blog
+  - posts
   - video
 ---
 

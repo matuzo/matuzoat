@@ -9,12 +9,12 @@ teaser: >-
   to work, but I got caught up reading about animation on the web and vestibular
   disorders.
 tags:
+  - blog
+  - posts
   - a11y
 ---
 
 The articles I read written by [Eric W. Bailey](https://ericwbailey.design/) and [Shell Little](https://twitter.com/ShellELittle), [Val Head](https://valhead.com/), and [Facundo Corradini](https://twitter.com/fcorradini) are so great that I just had to dedicate this post to them.
-
-
 
 ## Designing Safer Web Animation For Motion Sensitivity
 
@@ -27,8 +27,6 @@ Read [Designing Safer Web Animation](https://alistapart.com/article/designing-sa
 Eric highlights the importance of a thoughtful use of animation on the web and he raises awareness for the [prefers-reduced-motion media query](https://developer.mozilla.org/en-US/docs/Web/CSS/@media/prefers-reduced-motion). Shell explains the relation between animation and neurodivergence.
 
 Read [Revisiting prefers-reduced-motion](https://css-tricks.com/revisiting-prefers-reduced-motion-the-reduced-motion-media-query/) on CSS-Tricks.
-
-
 
 ## Accessibility for Vestibular Disorders: How My Temporary Disability Changed My Perspective
 

@@ -7,6 +7,8 @@ date: 2020-01-20T06:48:54.969Z
 image: articles/scrolltip_sm.png
 teaser: "I built a quite\_complicated component in HTML and CSS last week and I was happy with the result. After testing in different browsers and operating systems, I realised that I had to rewrite the whole thing because I didn’t consider that by default scroll bars don’t take up space on macOS, but on Windows they do. \nI [tweeted about a similar issue](https://twitter.com/mmatuzo/status/1116724406930366466) about a year ago, but it\_seems\_that\_I didn’t take my own\_advice, so here’s a reminder for you and me."
 tags:
+  - blog
+  - posts
   - css
 ---
 

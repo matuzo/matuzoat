@@ -11,6 +11,8 @@ teaser: >-
   to get the best out of it as soon as possible, if it makes sense for us and
   our projects.
 tags:
+  - blog
+  - posts
   - css
   - grid
   - progressive enhancement

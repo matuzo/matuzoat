@@ -7,6 +7,8 @@ date: 2020-10-19T06:58:54.969Z
 image: articles/luegen.jpg
 teaser: 'The `lang` attribute is an essential component in the basic structure of an HTML document. It’s important that we define it correctly because it affects many aspects of user experience. Unfortunately, the negative effects a missing or wrong attribute can have aren’t always evident. Austrian news site [orf.at](http://orf.at) learned that the hard way recently.'
 tags:
+  - blog
+  - posts
   - a11y
 ---
 

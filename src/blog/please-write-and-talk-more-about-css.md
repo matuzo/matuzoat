@@ -8,6 +8,8 @@ intro: >-
 teaser: >-
   I saw a lot of JavaScript today considering that I was at a CSS conference.
 tags:
+  - blog
+  - posts
   - css
 ---
 

@@ -6,6 +6,8 @@ teaser: >-
   I was in the mood to learn something new and so I decided to take a look at
   the CSS Font Loading API.
 tags:
+  - blog
+  - posts
   - css
 publication: medium
 url: 'https://medium.com/@matuzo/getting-started-with-css-font-loading-e24e7ffaa791'

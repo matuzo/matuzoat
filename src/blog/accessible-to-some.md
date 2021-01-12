@@ -6,6 +6,8 @@ date: 2020-06-24T06:58:54.969Z
 image: articles/sm_schip.jpg
 teaser: 'According to [WebAims annual accessibility analysis](https://webaim.org/projects/million/), 98.1% of home pages of the top 1,000,000 websites have detectable WCAG 2.0 failures. Some of these sites may only have minor contrast issues or maybe just a single missing `id`, while others are highly inaccessible. However, this number is pretty damn high, considering the fact that automatic testing tools [only report obvious accessibility issues](https://accessibility.blog.gov.uk/2017/02/24/what-we-found-when-we-tested-tools-on-the-worlds-least-accessible-webpage/).'
 tags:
+  - blog
+  - posts
   - a11y
 ---
 

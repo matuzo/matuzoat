@@ -12,6 +12,8 @@ teaser: >-
 
   This is all handled by the so called explicit and implicit grid.
 tags:
+  - blog
+  - posts
   - css
   - grid
 publication: csstricks

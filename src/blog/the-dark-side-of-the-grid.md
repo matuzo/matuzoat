@@ -14,6 +14,8 @@ teaser: >-
   power. It makes our lives so much easier but it also creates new dangers
   regarding user experience and accessibility.
 tags:
+  - blog
+  - posts
   - css
   - grid
   - a11y

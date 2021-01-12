@@ -7,6 +7,8 @@ teaser: >-
   provide users with more and betters ways to navigate and interact with your
   site.
 tags:
+  - blog
+  - posts
   - html
   - a11y
 publication: medium

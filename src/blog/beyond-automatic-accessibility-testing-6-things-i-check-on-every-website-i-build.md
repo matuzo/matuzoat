@@ -13,6 +13,8 @@ teaser: >-
   that you can apply to your project right away, you don’t have to learn a tool
   or a software.
 tags:
+  - blog
+  - posts
   - css
   - a11y
   - testing

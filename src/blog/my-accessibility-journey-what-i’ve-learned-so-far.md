@@ -12,6 +12,8 @@ teaser: >-
   it all the time. A lot of people seem to assume that a personal connection is
   the only reason someone would care about accessibility.
 tags:
+  - blog
+  - posts
   - css
   - a11y
 publication: ala

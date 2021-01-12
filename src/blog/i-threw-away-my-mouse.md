@@ -11,6 +11,8 @@ teaser: >-
   mouse, Laura mentioned that just testing with the keyboard wasn’t enough and
   that only going keyboard-only all the time made a difference.
 tags:
+  - blog
+  - posts
   - a11y
 publication: 24a11y
 url: 'https://www.24a11y.com/2018/i-threw-away-my-mouse/'

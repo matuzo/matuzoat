@@ -6,6 +6,8 @@ date: 2020-06-04T06:58:54.969Z
 image: articles/sm_reverse.jpg
 teaser: 'I’m working on a project where I have a list of items in reverse order. The list starts with the latest item and ends with the oldest. I wanted to express that both semantically and visually. I did some research and found interesting solutions, some of them good, others not so much.'
 tags:
+  - blog
+  - posts
   - css
   - html
 ---

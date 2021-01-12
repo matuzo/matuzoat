@@ -11,6 +11,8 @@ teaser: >-
   media to highlight how well they’ve optimised their own or their client's
   website. It shows that they care about the quality of what they build.
 tags:
+  - blog
+  - posts
   - css
   - a11y
 ---

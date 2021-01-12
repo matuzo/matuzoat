@@ -6,6 +6,8 @@ date: 2020-04-19T06:58:54.969Z
 image: articles/sm_color.png
 teaser: "This is part 2 of my series [Here’s what I didn’t know about…](/blog/heres-what-i-didnt-know/) in which I try to learn new things about CSS. This time I'm trying to find out what I didn’t know about the `color` property."
 tags:
+  - blog
+  - posts
   - css
 ---
 

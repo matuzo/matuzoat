@@ -13,6 +13,8 @@ teaser: >-
   practice right away without having to learn anything fundamentally new. The
   tips include testing, HTML, JS techniques, and general best practices.
 tags:
+  - blog
+  - posts
   - React
   - accessibility
 ---

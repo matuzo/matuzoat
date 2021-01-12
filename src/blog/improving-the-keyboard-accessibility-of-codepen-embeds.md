@@ -20,6 +20,8 @@ teaser: >-
   As a PRO user, I can also add custom CSS, which gives me the ability to
   improve Pens not just visually but in terms of accessibility.
 tags:
+  - blog
+  - posts
   - css
   - a11y
   - codepen

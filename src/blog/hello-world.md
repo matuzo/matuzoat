@@ -10,6 +10,8 @@ teaser: >-
   first personal site went online about 17 years ago. It was a table-based
   layout with no CSS at all. All styling happened by adding HTML attributes.
 tags:
+  - blog
+  - posts
   - writing
 ---
 

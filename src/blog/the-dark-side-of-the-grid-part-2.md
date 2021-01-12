@@ -17,6 +17,8 @@ teaser: >-
   This article series gives you an overview of potential implementation
   pitfalls; or, in other words, the dark side of the grid.
 tags:
+  - blog
+  - posts
   - css
   - grid
   - a11y

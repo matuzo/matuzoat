@@ -6,6 +6,8 @@ date: 2021-01-04T06:58:54.969Z
 image: articles/cssorder.png
 teaser: 'I haven’t thought about ordering CSS properties in a while, but I began to work on the redesign of [HTMHell](https://www.htmhell.dev) recently and I decided to challenge my current approach.'
 tags:
+  - blog
+  - posts
   - css
 ---
 

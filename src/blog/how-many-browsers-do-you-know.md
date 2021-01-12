@@ -6,6 +6,8 @@ intro: ''
 teaser: >-
   While testing a new feature recently, I realised that I don’t know too many browsers. I can list some, but I don‘t really know them like I know Firefox or Chrome. I want to change that, and I invite you to do the same.
 tags:
+  - blog
+  - posts
   - testing
 image: articles/sm_browsers.png
 ---
