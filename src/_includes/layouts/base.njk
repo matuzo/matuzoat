@@ -14,8 +14,10 @@
     <meta name="msapplication-TileColor" content="#efefef">
     <meta name="theme-color" content="#36b1bf">
 
-    <link type="application/atom+xml" rel="alternate" href="/feed.xml" title="{{ metadata.title }}">
+    <link type="application/atom+xml" rel="alternate" href="/feed.xml" title="Articles - {{ metadata.title }}">
     <link type="application/atom+xml" rel="alternate" href="/feed_til.xml" title="Today I Learned - {{ metadata.title }}">
+    <link type="application/atom+xml" rel="alternate" href="/feed_misc.xml" title="Personal blog - {{ metadata.title }}">
+    <link type="application/atom+xml" rel="alternate" href="/feed_all.xml" title="Articles, TIL, and personal blog - {{ metadata.title }}">
 
     <!-- Search Engine -->
     <meta name="description" content="{{ description or metadescription }}">
