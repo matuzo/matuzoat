@@ -2,8 +2,22 @@
 layout: layouts/base.njk
 ---
 
-<h1 class="h1">
-  {{ pagetitle or title }}
-</h1>
+<div class="page-header">
+  <h1 class="h1">
+    {{ pagetitle or title }}
+  </h1>
+
+  {% if local_nav %}
+    <ul class="local-nav">
+    {% for item in local_nav %}
+      <li>
+        <a href="{{ item.url }}">
+          {{ item.title }}
+        </a>
+      </li>
+    {% endfor %}
+    </ul>
+  {% endif %}
+</div>
 
 {{ content | safe }}

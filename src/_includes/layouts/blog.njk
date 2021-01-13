@@ -2,14 +2,12 @@
 layout: layouts/base.njk
 ---
 
-<article class="rich-text">
-  <header>
-    <h1>{{ title }}</h1>
+<article class="post rich-text">
+    <h1 class="post-heading">{{ title }}</h1>
 
     <p>
       posted on <time datetime="{{ date | machineDate }}">{{ date | readableDate }}</time>
     </p>
-  </header>
 
   {% if intro %}
     {{ intro | md | safe }}

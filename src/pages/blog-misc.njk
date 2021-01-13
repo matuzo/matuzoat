@@ -1,11 +1,9 @@
 ---
 layout: layouts/page.njk
-title: Web development Blog
+title: Personal Blog
 description: My personal blog. Nowadays I focus a lot on accessibility but I also write about CSS layout, architecure, and performance.
-tags:
-  - nav
-navtitle: Blog
-permalink: /blog/index.html
+navtitle: Personal Blog
+permalink: /blog/misc/index.html
 date: 1987-01-05
 local_nav:
   - title: "Web dev"
@@ -16,5 +14,5 @@ local_nav:
 
 {% set max = 1000 %}
 {% set level = 'h2' %}
-{% set posts = collections.blog | reverse %}
+{% set posts = collections.blogmisc | reverse %}
 {% include 'components/blog-posts.njk' %}
