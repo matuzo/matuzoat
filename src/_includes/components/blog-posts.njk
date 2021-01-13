@@ -34,3 +34,39 @@
     </article>
   {% endif %}
 {% endfor %}
+
+{% if pagination.pages | length > 1 %}
+  <nav aria-label="Change page">
+    <ol class="pagination">
+      {% if pagination.previousPageHref %}
+        <li>
+          <a href="{{ pagination.previousPageHref }}">
+            Previous
+            <span class="u-hidden">
+              page
+            </span>
+          </a>
+        </li>
+      {% endif %}
+
+      {% for page in pagination.hrefs %}
+        <li>
+          <a href="{{ page }}" {% if pagination.pageNumber == loop.index0 %}aria-current="page"{% endif %}>
+            <span class="u-hidden">page </span> {{ loop.index }}
+          </a>
+        </li>
+      {% endfor %}
+
+      {% if pagination.nextPageHref %}
+        <li>
+          <a href="{{ pagination.nextPageHref }}">
+            Next
+            <span class="u-hidden">
+              page
+            </span>
+          </a>
+        </li>
+      {% endif %}
+    </ol>
+  </nav>
+{% endif %}

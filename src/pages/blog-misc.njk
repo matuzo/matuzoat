@@ -10,9 +10,14 @@ local_nav:
     url: /blog
   - title: "Misc"
     url: /blog/misc
+pagination:
+  data: collections.blogmisc
+  size: 6
+  alias: blog_posts
+  reverse: true
 ---
 
 {% set max = 1000 %}
 {% set level = 'h2' %}
-{% set posts = collections.blogmisc | reverse %}
+{% set posts = blog_posts %}
 {% include 'components/blog-posts.njk' %}

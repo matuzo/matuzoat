@@ -395,3 +395,15 @@ a:hover {
 .local-nav > * + * {
   margin-left: 1rem;
 }
+
+.pagination {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+[aria-current='page'] {
+  font-weight: bold;
+}

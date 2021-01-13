@@ -11,6 +11,10 @@
     "name": "CSS-Tricks",
     "url": "https://css-tricks.com/"
   },
+  "medium": {
+    "name": "Medium",
+    "url": "https://www.medium.com/"
+  },
   "sm": {
     "name": "Smashing Magazine",
     "url": "https://www.smashingmagazine.com/"
