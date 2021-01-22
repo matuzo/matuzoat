@@ -17,7 +17,7 @@ I love the idea that people were so dedicated to solving the puzzle that they ke
 You can watch the story of the game and Card #256 on [YouTube](https://www.youtube.com/watch?v=o1PXriQ4frU&feature=emb_title).
 
 <div class="content__video-wrapper">
-  <div class="video-wrapper"><iframe width="560" height="315" src="https://www.youtube.com/embed/o1PXriQ4frU" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen title="Can You Find This Man? - Inside A Mind"></iframe>
+  <div class="video-wrapper"><iframe width="560" height="315" src="https://www.youtube.com/embed/o1PXriQ4frU" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen title="Can You Find This Man? - Inside A Mind"></iframe>
   </div>
 </div>
 
