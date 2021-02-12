@@ -4,7 +4,7 @@ metadescription: Using the keyboard only will tell you a lot about the accessibl
 date: 2020-02-20T06:41:15.944Z
 intro: ''
 teaser: >-
-  I’m employed for about a year now and many things are different compared to being a freelancer. One interesting thing in my specific situation is that I have to evaluate the accessibility of third-party tools regularly. Usually there’s no time for a full audit, I have to gain a good overview of the quality of a product as quickly as possible.
+  I’ve been employed for about a year now and many things are different compared to being a freelancer. One interesting thing in my specific situation is that I have to evaluate the accessibility of third-party tools regularly. Usually there’s no time for a full audit, I have to gain a good overview of the quality of a product as quickly as possible.
 tags:
   - blog
   - posts
