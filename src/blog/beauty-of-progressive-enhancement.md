@@ -53,7 +53,7 @@ Image: [A List Apart](https://alistapart.com/article/understandingprogressiveenh
 
 > Start with your content peanut, marked up in rich, semantic (X)HTML. Coat that content with a layer of rich, creamy CSS. Finally, add JavaScript as the hard candy shell to make a wonderfully tasty treat (and keep it from melting in your hands).
 
-<cite>Aaaron Gustafson</cite>.
+<cite>Aaron Gustafson</cite>.
 
 ## How I’m applying Progressive Enhancement
 
