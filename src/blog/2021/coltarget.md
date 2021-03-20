@@ -44,9 +44,9 @@ td, th {
 <table>
   <thead>
     <tr>
-      <th>First column</th>
-      <th>Second column</th>
-      <th>Third column</th>
+      <th scope="col">First column</th>
+      <th scope="col">Second column</th>
+      <th scope="col">Third column</th>
     </tr>
   </thead>
   <tbody>
@@ -63,9 +63,9 @@ td, th {
 ```html
 <table>
   <colgroup>
-    <col width="150">
+    <col style="width: 150px">
     <col>
-    <col width="150">
+    <col style="width: 150px">
   </colgroup>
   <thead>
    …
@@ -74,15 +74,15 @@ td, th {
 
 <table>
   <colgroup>
-    <col width="150">
+    <col style="width: 150px">
     <col>
-    <col width="150">
+    <col style="width: 150px">
   </colgroup>
   <thead>
     <tr>
-      <th>First column</th>
-      <th>Second column</th>
-      <th>Third column</th>
+      <th scope="col">First column</th>
+      <th scope="col">Second column</th>
+      <th scope="col">Third column</th>
     </tr>
   </thead>
   <tbody>
@@ -164,9 +164,9 @@ Why is this interesting? Well, there are no columns in HTML tables, only rows an
   </colgroup>
     <thead>
       <tr>
-        <th>Heading</th>
-        <th>Occurrences</th>
-        <th>Average per page</th>
+        <th scope="col">Heading</th>
+        <th scope="col">Occurrences</th>
+        <th scope="col">Average per page</th>
       </tr>
     </thead>
     <tbody>
@@ -232,56 +232,55 @@ col:target {
     <col id="table1-occurrences">
     <col id="table1-average">
   </colgroup>
-    <thead>
-      <tr>
-        <th><a href="#table1-heading">Heading</a></th>
-        <th><a href="#table1-occurrences">Occurrences</a></th>
-        <th><a href="#table1-average">Average per page</a></th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><code>h1</code></td>
-        <td>10,524,810</td>
-        <td>1.66</td>
-      </tr>
-      <tr>
-        <td><code>h2</code></td>
-        <td>37,312,338</td>
-        <td>5.88</td>
-      </tr>
-      <tr>
-        <td><code>h3</code></td>
-        <td>44,135,313</td>
-        <td>6.96</td>
-      </tr>
-      <tr>
-        <td><code>h4</code></td>
-        <td>20,473,598</td>
-        <td>3.23</td>
-      </tr>
-      <tr>
-        <td><code>h5</code></td>
-        <td>8,594,500</td>
-        <td>1.36</td>
-      </tr>
-      <tr>
-        <td><code>h6</code></td>
-        <td>3,527,470</td>
-        <td>0.56</td>
-      </tr>
-      <tr>
-        <td><code>h7</code></td>
-        <td>30,073</td>
-        <td>0.005</td>
-      </tr>
-      <tr>
-        <td><code>h8</code></td>
-        <td>9,266</td>
-        <td>0.0015</td>
-      </tr>
-    </tbody>
-  </table>
+   <thead>
+   <tr>
+      <th><a href="#table1-heading">Heading</a></th>
+      <th><a href="#table1-occurrences">Occurrences</a></th>
+      <th><a href="#table1-average">Average per page</a></th>
+   </tr>
+   </thead>
+   <tbody>
+   <tr>
+      <td><code>h1</code></td>
+      <td>10,524,810</td>
+      <td>1.66</td>
+   </tr>
+   <tr>
+      <td><code>h2</code></td>
+      <td>37,312,338</td>
+      <td>5.88</td>
+   </tr>
+   <tr>
+      <td><code>h3</code></td>
+      <td>44,135,313</td>
+      <td>6.96</td>
+   </tr>
+   <tr>
+      <td><code>h4</code></td>
+      <td>20,473,598</td>
+      <td>3.23</td>
+   </tr>
+   <tr>
+      <td><code>h5</code></td>
+      <td>8,594,500</td>
+      <td>1.36</td>
+   </tr>
+   <tr>
+      <td><code>h6</code></td>
+      <td>3,527,470</td>
+      <td>0.56</td>
+   </tr>
+   <tr>
+      <td><code>h7</code></td>
+      <td>30,073</td>
+      <td>0.005</td>
+   </tr>
+   <tr>
+      <td><code>h8</code></td>
+      <td>9,266</td>
+      <td>0.0015</td>
+   </tr>
+   </tbody>
 </table>
 ```
 
@@ -294,56 +293,55 @@ Click on any of the table headings and refresh the page to see it in action.
     <col id="table1-occurrences">
     <col id="table1-average">
   </colgroup>
-    <thead>
-      <tr>
-        <th><a href="#table1-heading">Heading</a></th>
-        <th><a href="#table1-occurrences">Occurrences</a></th>
-        <th><a href="#table1-average">Average per page</a></th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><code>h1</code></td>
-        <td>10,524,810</td>
-        <td>1.66</td>
-      </tr>
-      <tr>
-        <td><code>h2</code></td>
-        <td>37,312,338</td>
-        <td>5.88</td>
-      </tr>
-      <tr>
-        <td><code>h3</code></td>
-        <td>44,135,313</td>
-        <td>6.96</td>
-      </tr>
-      <tr>
-        <td><code>h4</code></td>
-        <td>20,473,598</td>
-        <td>3.23</td>
-      </tr>
-      <tr>
-        <td><code>h5</code></td>
-        <td>8,594,500</td>
-        <td>1.36</td>
-      </tr>
-      <tr>
-        <td><code>h6</code></td>
-        <td>3,527,470</td>
-        <td>0.56</td>
-      </tr>
-      <tr>
-        <td><code>h7</code></td>
-        <td>30,073</td>
-        <td>0.005</td>
-      </tr>
-      <tr>
-        <td><code>h8</code></td>
-        <td>9,266</td>
-        <td>0.0015</td>
-      </tr>
-    </tbody>
-  </table>
+   <thead>
+   <tr>
+      <th><a href="#table1-heading">Heading</a></th>
+      <th><a href="#table1-occurrences">Occurrences</a></th>
+      <th><a href="#table1-average">Average per page</a></th>
+   </tr>
+   </thead>
+   <tbody>
+   <tr>
+      <td><code>h1</code></td>
+      <td>10,524,810</td>
+      <td>1.66</td>
+   </tr>
+   <tr>
+      <td><code>h2</code></td>
+      <td>37,312,338</td>
+      <td>5.88</td>
+   </tr>
+   <tr>
+      <td><code>h3</code></td>
+      <td>44,135,313</td>
+      <td>6.96</td>
+   </tr>
+   <tr>
+      <td><code>h4</code></td>
+      <td>20,473,598</td>
+      <td>3.23</td>
+   </tr>
+   <tr>
+      <td><code>h5</code></td>
+      <td>8,594,500</td>
+      <td>1.36</td>
+   </tr>
+   <tr>
+      <td><code>h6</code></td>
+      <td>3,527,470</td>
+      <td>0.56</td>
+   </tr>
+   <tr>
+      <td><code>h7</code></td>
+      <td>30,073</td>
+      <td>0.005</td>
+   </tr>
+   <tr>
+      <td><code>h8</code></td>
+      <td>9,266</td>
+      <td>0.0015</td>
+   </tr>
+   </tbody>
 </table>
 
 Notes on accessibility: 1. I’m not sure if using links in table headings is the best idea. At least, they need better labels to provide users with context. 2. This technique only highlights columns visually, not semantically. 
