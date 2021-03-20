@@ -347,6 +347,6 @@ Notes on accessibility: 1. I’m not sure if using links in table headings is th
 
 
 <small>
-   Data from: <a href="https://almanac.httparchive.org/en/2020/markup#headings">https://almanac.httparchive.org/en/2020/markup#headings</a>
+   Data from: <a href="https://almanac.httparchive.org/en/2020/markup#headings">Web Almanac 2020: Markup</a>
 </small>
 
