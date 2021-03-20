@@ -162,56 +162,55 @@ Why is this interesting? Well, there are no columns in HTML tables, only rows an
     <col class="highlight">
     <col>
   </colgroup>
-    <thead>
-      <tr>
-        <th scope="col">Heading</th>
-        <th scope="col">Occurrences</th>
-        <th scope="col">Average per page</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><code>h1</code></td>
-        <td>10,524,810</td>
-        <td>1.66</td>
-      </tr>
-      <tr>
-        <td><code>h2</code></td>
-        <td>37,312,338</td>
-        <td>5.88</td>
-      </tr>
-      <tr>
-        <td><code>h3</code></td>
-        <td>44,135,313</td>
-        <td>6.96</td>
-      </tr>
-      <tr>
-        <td><code>h4</code></td>
-        <td>20,473,598</td>
-        <td>3.23</td>
-      </tr>
-      <tr>
-        <td><code>h5</code></td>
-        <td>8,594,500</td>
-        <td>1.36</td>
-      </tr>
-      <tr>
-        <td><code>h6</code></td>
-        <td>3,527,470</td>
-        <td>0.56</td>
-      </tr>
-      <tr>
-        <td><code>h7</code></td>
-        <td>30,073</td>
-        <td>0.005</td>
-      </tr>
-      <tr>
-        <td><code>h8</code></td>
-        <td>9,266</td>
-        <td>0.0015</td>
-      </tr>
-    </tbody>
-  </table>
+   <thead>
+   <tr>
+      <th scope="col">Heading</th>
+      <th scope="col">Occurrences</th>
+      <th scope="col">Average per page</th>
+   </tr>
+   </thead>
+   <tbody>
+   <tr>
+      <td><code>h1</code></td>
+      <td>10,524,810</td>
+      <td>1.66</td>
+   </tr>
+   <tr>
+      <td><code>h2</code></td>
+      <td>37,312,338</td>
+      <td>5.88</td>
+   </tr>
+   <tr>
+      <td><code>h3</code></td>
+      <td>44,135,313</td>
+      <td>6.96</td>
+   </tr>
+   <tr>
+      <td><code>h4</code></td>
+      <td>20,473,598</td>
+      <td>3.23</td>
+   </tr>
+   <tr>
+      <td><code>h5</code></td>
+      <td>8,594,500</td>
+      <td>1.36</td>
+   </tr>
+   <tr>
+      <td><code>h6</code></td>
+      <td>3,527,470</td>
+      <td>0.56</td>
+   </tr>
+   <tr>
+      <td><code>h7</code></td>
+      <td>30,073</td>
+      <td>0.005</td>
+   </tr>
+   <tr>
+      <td><code>h8</code></td>
+      <td>9,266</td>
+      <td>0.0015</td>
+   </tr>
+   </tbody>
 </table>
 
 That’s pretty cool, but what’s even better is that we can let users decide which column they want to highlight and they can even share a link to the table with a specific column highlighted.
@@ -295,9 +294,9 @@ Click on any of the table headings and refresh the page to see it in action.
   </colgroup>
    <thead>
    <tr>
-      <th><a href="#table1-heading">Heading</a></th>
-      <th><a href="#table1-occurrences">Occurrences</a></th>
-      <th><a href="#table1-average">Average per page</a></th>
+      <th scope="col"><a href="#table1-heading">Heading</a></th>
+      <th scope="col"><a href="#table1-occurrences">Occurrences</a></th>
+      <th scope="col"><a href="#table1-average">Average per page</a></th>
    </tr>
    </thead>
    <tbody>
