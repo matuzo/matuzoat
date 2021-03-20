@@ -24,7 +24,7 @@ sheets:
   - grid
 ---
 
-<div data-theme="dark-side-of-the-grid">
+<div class="post" data-theme="dark-side-of-the-grid">
 
 ## Preface
 

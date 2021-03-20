@@ -27,7 +27,7 @@ sheets:
   - grid
 ---
 
-<div data-theme="dark-side-of-the-grid">
+<div class="post" data-theme="dark-side-of-the-grid">
 
 <div class="demo u-full-width js-demo"> 
   <div class="a-title">
