@@ -3,41 +3,31 @@
   <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-
+    
     <title>{% if title %}{{ title }} - {% endif %}{{ metadata.title }}</title>
-    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+
+    <meta property="og:title" content="{{ title or metadata.title }}">
+    <meta property="og:description" content="{{ description or metadescription }}">
+    <meta property="og:image" content="{{ metadata.cloudinary }}/w_1200/{{ image or metadata.smimage }}">
+    <meta property="og:locale" content="en_GB">
+    <meta property="og:type" content="website">
+
+    <meta property="og:url" content="{{ metadata.url }}{{ page.url }}">
+    <meta property="og:site_name" content="{{ title or metadata.title }}">
+    <meta name="author" content="Manuel Matuzović"> 
+    <meta name="twitter:card" content="summary_large_image">
+
+    <link rel="icon" href="/favicon.ico">
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png">
     <link rel="manifest" href="/site.webmanifest">
-    <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#36b1bf">
-    <meta name="msapplication-TileColor" content="#efefef">
     <meta name="theme-color" content="#36b1bf">
 
     <link type="application/atom+xml" rel="alternate" href="{{ '/feed.xml' | cacheBuster }}" title="Articles - {{ metadata.title }}">
     <link type="application/atom+xml" rel="alternate" href="{{ '/feed_til.xml' | cacheBuster }}" title="Today I Learned - {{ metadata.title }}">
     <link type="application/atom+xml" rel="alternate" href="{{ '/feed_misc.xml' | cacheBuster }}" title="Personal blog - {{ metadata.title }}">
     <link type="application/atom+xml" rel="alternate" href="{{ '/feed_all.xml' | cacheBuster }}" title="Articles, TIL, and personal blog - {{ metadata.title }}">
-
-    <!-- Search Engine -->
-    <meta name="description" content="{{ description or metadescription }}">
-    <meta name="image" content="{{ metadata.cloudinary }}/w_1200/{{ image or metadata.smimage }}">
-    <!-- Twitter -->
-    <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="{{ title or metadata.title }}">
-    <meta name="twitter:description" content="{{ description or metadescription }}">
-    <meta name="twitter:site" content="@mmatuzo">
-    <meta name="twitter:creator" content="@mmatuzo">
-    <meta name="twitter:image:src" content="{{ metadata.cloudinary }}/w_1024/{{ image or metadata.smimage }}">
-    <!-- Open Graph general (Facebook, Pinterest & Google+) -->
-    <meta property="og:title" content="{{ title or metadata.title }}">
-    <meta property="og:description" content="{{ description or metadescription }}">
-    <meta property="og:image" content="{{ metadata.cloudinary }}/w_1200/{{ image or metadata.smimage }}">
-    <meta property="og:url" content="{{ metadata.url }}{{ page.url }}">
-    <meta property="og:site_name" content="{{ title or metadata.title }}">
-    <meta property="og:locale" content="en_GB">
-    <meta property="og:type" content="website">
-    <meta name="author" content="Manuel Matuzović"> 
 
     <link rel="stylesheet" href="{{ '/assets/relaunch.css' | url | cacheBuster }}">
     {% for sheet in sheets %}
