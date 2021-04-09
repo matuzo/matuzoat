@@ -2,17 +2,10 @@
     "name": "matuzo.at",
     "short_name": "matuzo.at",
     "icons": [
-        {
-            "src": "/android-chrome-192x192.png",
-            "sizes": "192x192",
-            "type": "image/png"
-        },
-        {
-            "src": "/android-chrome-512x512.png",
-            "sizes": "512x512",
-            "type": "image/png"
-        }
-    ],
+        { "src": "/192.png", "type": "image/png", "sizes": "192x192" },
+        { "src": "/512.png", "type": "image/png", "sizes": "512x512" }
+    ]
+    ,
     "theme_color": "#36b1bf",
     "background_color": "#36b1bf",
     "display": "standalone"
