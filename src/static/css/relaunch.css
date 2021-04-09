@@ -27,6 +27,7 @@ body {
 main {
   background: rgba(255, 255, 255, 0.7);
   padding: 1rem;
+  display: block;
 }
 
 footer ul,
@@ -406,4 +407,13 @@ a:hover {
 
 [aria-current='page'] {
   font-weight: bold;
+}
+
+[loading] {
+  display: block;
+}
+
+
+blockquote {
+  font-style: italic;
 }
