@@ -324,7 +324,7 @@ I’m [cutting the mustard](https://fettblog.eu/cutting-the-mustard-2018/) at JS
 <script src="/assets/js/xy-polyfill.js" nomodule></script>
 ```
 
-If I want to write JavaScript targeted specifically at browsers that don’t support modules, I add the `nomodule` attribute, which causes the script to only run in legacy browsers, namely IE 11.
+If I want to serve JavaScript targeted specifically at browsers that don’t support modules, I add the `nomodule` attribute, which causes the script to only run in legacy browsers, namely IE 11.
 
 ```html
 <script src="script.js" type="module"></script>
