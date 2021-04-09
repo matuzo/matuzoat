@@ -328,7 +328,7 @@ Use the `canonical` link element to prevent SEO issues caused by duplicate conte
 If I want to serve JavaScript targeted specifically at browsers that don’t support modules, I add the `nomodule` attribute, which causes the script to only run in legacy browsers, namely IE 11.
 
 ```html
-<script src="script.js" type="module"></script>
+<script src="/assers/js/script.js" type="module"></script>
 ```
 
 JavaScript with the `type="module"` will only run in browsers that support modules, it’s the opposite of the `nomodule` attribute.
