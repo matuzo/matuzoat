@@ -24,37 +24,36 @@ This is the final document. Scroll down for details.
   <meta name="viewport" content="width=device-width">
 
   <title>Unique page title - My Site</title>
-  <meta name="description" content="Page description">
 
+  <script type="module">
+    document.documentElement.classList.remove('no-js');
+    document.documentElement.classList.add('js');
+  </script>
+
+  <link rel="stylesheet" href="/assets/css/styles.css" />
+  <link rel="stylesheet" href="/assets/css/print.css" media="print" />
+
+  <meta name="description" content="Page description">
   <meta property="og:title" content="Unique page title - My Site">
   <meta property="og:description" content="Page description">
   <meta property="og:image" content="https://www.mywebsite.com/image.jpg">
   <meta property="og:image:alt" content="Image description">
   <meta property="og:locale" content="en_GB">
   <meta property="og:type" content="website">
-  <meta property="og:url" content="https://www.mywebsite.com/page">
   <meta name="twitter:card" content="summary_large_image">
+  <meta property="og:url" content="https://www.mywebsite.com/page">
+  <link rel="canonical" href="https://www.mywebsite.com/page" />
 
   <link rel="icon" href="/favicon.ico">
   <link rel="icon" href="/favicon.svg" type="image/svg+xml">
   <link rel="apple-touch-icon" href="/apple-touch-icon.png">
   <link rel="manifest" href="/my.webmanifest">
   <meta name="theme-color" content="#FF00FF">
-
-  <link rel="stylesheet" href="/assets/css/styles.css" />
-  <link rel="stylesheet" href="/assets/css/print.css" media="print" />
-
-  <link rel="canonical" href="https://www.mywebsite.com/page" />
-
-  <script type="module">
-    document.documentElement.classList.remove('no-js');
-    document.documentElement.classList.add('js');
-  </script>
 </head>
 
 <body>
   <!-- Content -->
-  <script src="/assets/js/legacy.js" nomodule></script>
+  <script src="/assets/js/xy-polyfill.js" nomodule></script>
   <script src="/assets/js/script.js" type="module"></script>
 </body>
 </html>
@@ -117,6 +116,35 @@ The unique title of the page. It’s displayed in many places, for example, on t
 
 * [Provide informative, unique page titles](https://www.w3.org/WAI/tips/writing/#provide-informative-unique-page-titles)
 * [Accessible page titles in a Single Page App](https://hiddedevries.nl/en/blog/2018-07-19-accessible-page-titles-in-a-single-page-app)
+
+
+```html
+<script type="module">
+  document.documentElement.classList.remove('no-js');
+  document.documentElement.classList.add('js');
+</script>
+```
+
+I’m [cutting the mustard](https://fettblog.eu/cutting-the-mustard-2018/) at JS module support. If a browser supports JavaScript modules, it means that it’s a browser that supports modern JavaScript, such as modules, ES 6 syntax, fetch, etc. I ship most JS only to these browsers and I use the `js` class in CSS, if the styling of a component is different, when JS is active.
+
+<a href="https://caniuse.com/?search=javascript%20modules">
+  <img src="https://res.cloudinary.com/dp3mem7or/image/upload/c_scale,q_100,w_750/v1616968362/articles/caniuse_jsmodules.png" width="750" height="266" loading="lazy" srcset="https://res.cloudinary.com/dp3mem7or/image/upload/c_scale,q_100,w_750/v1616968362/articles/caniuse_jsmodules.png 1x, https://res.cloudinary.com/dp3mem7or/image/upload/c_scale,q_100,w_1500/v1616968362/articles/caniuse_jsmodules.png 2x" alt="caniuse showing that all modern browser support JS modules">
+</a>
+
+```html
+<link rel="stylesheet" href="/assets/css/styles.css" />
+```
+
+CSS for the site.
+
+```html
+<link rel="stylesheet" href="/assets/css/print.css" media="print" />
+```
+
+Print CSS for the site.
+
+* [I totally forgot about print style sheets](https://www.matuzo.at/blog/i-totally-forgot-about-print-style-sheets/)
+
 
 ```html
 <meta name="description" content="Page description">
@@ -288,37 +316,10 @@ For Android devices we need a `.webmanifest` file, which provides browsers with 
 * [How to Favicon in 2021: Six files that fit most needs](https://evilmartians.com/chronicles/how-to-favicon-in-2021-six-files-that-fit-most-needs)
 
 ```html
-<link rel="stylesheet" href="/assets/css/styles.css" />
-```
-
-CSS for the site.
-
-```html
-<link rel="stylesheet" href="/assets/css/print.css" media="print" />
-```
-
-Print CSS for the site.
-
-* [I totally forgot about print style sheets](https://www.matuzo.at/blog/i-totally-forgot-about-print-style-sheets/)
-
-```html
 <link rel="canonical" href="https://www.mywebsite.com/page" />
 ```
 
 Use the `canonical` link element to prevent SEO issues caused by duplicate content by specifying the original source for pages that are available on multiple URLs.
-
-```html
-<script type="module">
-  document.documentElement.classList.remove('no-js');
-  document.documentElement.classList.add('js');
-</script>
-```
-
-I’m [cutting the mustard](https://fettblog.eu/cutting-the-mustard-2018/) at JS module support. If a browser supports JavaScript modules, it means that it’s a browser that supports modern JavaScript, such as modules, ES 6 syntax, fetch, etc. I ship most JS only to these browsers and I use the `js` class in CSS, if the styling of a component is different, when JS is active.
-
-<a href="https://caniuse.com/?search=javascript%20modules">
-  <img src="https://res.cloudinary.com/dp3mem7or/image/upload/c_scale,q_100,w_750/v1616968362/articles/caniuse_jsmodules.png" width="750" height="266" loading="lazy" srcset="https://res.cloudinary.com/dp3mem7or/image/upload/c_scale,q_100,w_750/v1616968362/articles/caniuse_jsmodules.png 1x, https://res.cloudinary.com/dp3mem7or/image/upload/c_scale,q_100,w_1500/v1616968362/articles/caniuse_jsmodules.png 2x" alt="caniuse showing that all modern browser support JS modules">
-</a>
 
 ```html
 <script src="/assets/js/xy-polyfill.js" nomodule></script>
