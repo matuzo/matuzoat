@@ -149,10 +149,10 @@ Ideally, it should be a square image with the important content placed in the mi
 Here’s is how [this image](https://res.cloudinary.com/dp3mem7or/image/upload/w_1200/articles/sm_tables.png) will look on Twitter and on WhatsApp.
 
 <p>
-  <img src="https://res.cloudinary.com/dp3mem7or/image/upload/v1617307737/articles/htmldoc_tw.png" width="500" height="353" alt="Large rectangle image in a Twitter card" />
+  <img src="https://res.cloudinary.com/dp3mem7or/image/upload/v1617307737/articles/htmldoc_tw.png" width="500" height="353" alt="Large rectangle image in a Twitter card">
 </p>
 <p>
-  <img src="https://res.cloudinary.com/dp3mem7or/image/upload/v1617307736/articles/htmldoc_wa.png" width="500" height="115" alt="Small square image on Whatsapp" />
+  <img src="https://res.cloudinary.com/dp3mem7or/image/upload/v1617307736/articles/htmldoc_wa.png" width="500" height="115" alt="Small square image on Whatsapp">
 </p>
 
 Rules for Twitter: <q>Images for this Card support an aspect ratio of 2:1 with minimum dimensions of 300x157 or maximum of 4096x4096 pixels. Images must be less than 5MB in size. JPG, PNG, WEBP and GIF formats are supported.</q>
@@ -245,12 +245,12 @@ Most modern browser support [SVG favicons](https://caniuse.com/link-icon-svg). T
 ```
 <p>
   Favicon on my website in light mode.<br>
-  <img src="https://res.cloudinary.com/dp3mem7or/image/upload/c_scale,w_800/v1617958912/articles/htmldoc_favicon_light.png" loading="lazy" width="400">
+  <img src="https://res.cloudinary.com/dp3mem7or/image/upload/c_scale,w_800/v1617958912/articles/htmldoc_favicon_light.png" loading="lazy" width="400" alt="A blue M on light background in the browser tab in Chrome">
 </p>
 
 <p>
   Favicon on my website in dark mode.<br>
-  <img src="https://res.cloudinary.com/dp3mem7or/image/upload/c_scale,w_800/v1617958912/articles/htmldoc_favicon_dark.png" loading="lazy" width="400">
+  <img src="https://res.cloudinary.com/dp3mem7or/image/upload/c_scale,w_800/v1617958912/articles/htmldoc_favicon_dark.png" loading="lazy" width="400" alt="A white M on dark background in the browser tab in Chrome">
 </p>
 
 </div>
