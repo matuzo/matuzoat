@@ -41,8 +41,8 @@ This is the final document. Scroll down for details.
   <link rel="manifest" href="/my.webmanifest">
   <meta name="theme-color" content="#FF00FF">
 
-  <link rel="stylesheet" href="styles.css" />
-  <link rel="stylesheet" href="print.css" media="print" />
+  <link rel="stylesheet" href="/assets/css/styles.css" />
+  <link rel="stylesheet" href="/assets/css/print.css" media="print" />
 
   <link rel="canonical" href="https://www.mywebsite.com/page" />
 
@@ -54,8 +54,8 @@ This is the final document. Scroll down for details.
 
 <body>
   <!-- Content -->
-  <script src="legacy.js" nomodule></script>
-  <script src="script.js" type="module"></script>
+  <script src="/assets/js/legacy.js" nomodule></script>
+  <script src="/assets/js/script.js" type="module"></script>
 </body>
 </html>
 ```
@@ -288,13 +288,13 @@ For Android devices we need a `.webmanifest` file, which provides browsers with 
 * [How to Favicon in 2021: Six files that fit most needs](https://evilmartians.com/chronicles/how-to-favicon-in-2021-six-files-that-fit-most-needs)
 
 ```html
-<link rel="stylesheet" href="styles.css" />
+<link rel="stylesheet" href="/assets/css/styles.css" />
 ```
 
 CSS for the site.
 
 ```html
-<link rel="stylesheet" href="print.css" media="print" />
+<link rel="stylesheet" href="/assets/css/print.css" media="print" />
 ```
 
 Print CSS for the site.
@@ -321,7 +321,7 @@ I’m [cutting the mustard](https://fettblog.eu/cutting-the-mustard-2018/) at JS
 </a>
 
 ```html
-<script src="legacy.js" nomodule></script>
+<script src="/assets/js/xy-polyfill.js" nomodule></script>
 ```
 
 If I want to write JavaScript targeted specifically at browsers that don’t support modules, I add the `nomodule` attribute, which causes the script to only run in legacy browsers, namely IE 11.
