@@ -100,7 +100,7 @@ The viewport meta tag allows us to change the width of the viewport, which is ne
 
 I’m not sure if setting `initial-scale=1` is still necessary. I believe I read somewhere that it was only needed for Safari on &lt; iOS 9, but I can’t find the article anymore.
 
-The `viewport` meta tag must come before the `<title>` element [to consistently ensure proper document rendering](https://github.com/joshbuchea/HEAD#recommended-minimum).
+The `viewport` meta tag should come as early as possible in the document [to ensure proper document rendering](https://github.com/joshbuchea/HEAD#recommended-minimum).
 
 We dont need the `shrink-to-fit=no` option anymore since iOS 9.3.
 
