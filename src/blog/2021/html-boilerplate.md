@@ -30,8 +30,8 @@ This is the final document. Scroll down for details.
     document.documentElement.classList.add('js');
   </script>
 
-  <link rel="stylesheet" href="/assets/css/styles.css" />
-  <link rel="stylesheet" href="/assets/css/print.css" media="print" />
+  <link rel="stylesheet" href="/assets/css/styles.css">
+  <link rel="stylesheet" href="/assets/css/print.css" media="print">
 
   <meta name="description" content="Page description">
   <meta property="og:title" content="Unique page title - My Site">
@@ -42,7 +42,7 @@ This is the final document. Scroll down for details.
   <meta property="og:type" content="website">
   <meta name="twitter:card" content="summary_large_image">
   <meta property="og:url" content="https://www.mywebsite.com/page">
-  <link rel="canonical" href="https://www.mywebsite.com/page" />
+  <link rel="canonical" href="https://www.mywebsite.com/page">
 
   <link rel="icon" href="/favicon.ico">
   <link rel="icon" href="/favicon.svg" type="image/svg+xml">
@@ -132,13 +132,13 @@ I’m [cutting the mustard](https://fettblog.eu/cutting-the-mustard-2018/) at JS
 </a>
 
 ```html
-<link rel="stylesheet" href="/assets/css/styles.css" />
+<link rel="stylesheet" href="/assets/css/styles.css">
 ```
 
 CSS for the site.
 
 ```html
-<link rel="stylesheet" href="/assets/css/print.css" media="print" />
+<link rel="stylesheet" href="/assets/css/print.css" media="print">
 ```
 
 Print CSS for the site.
@@ -316,7 +316,7 @@ For Android devices we need a `.webmanifest` file, which provides browsers with 
 * [How to Favicon in 2021: Six files that fit most needs](https://evilmartians.com/chronicles/how-to-favicon-in-2021-six-files-that-fit-most-needs)
 
 ```html
-<link rel="canonical" href="https://www.mywebsite.com/page" />
+<link rel="canonical" href="https://www.mywebsite.com/page">
 ```
 
 Use the `canonical` link element to prevent SEO issues caused by duplicate content by specifying the original source for pages that are available on multiple URLs.
