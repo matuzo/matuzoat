@@ -17,7 +17,7 @@ tags:
 [Aaron Gustafson](https://twitter.com/AaronGustafson) recently sent a [tweet](https://twitter.com/AaronGustafson/status/788073583528538112) to [Indiegogo](http://indiegogo.com) in which he pointed out that their order details pages aren’t usable when printed.
 
 ![Tweet: "Dear @Indiegogo
-, please take a look at how your Order Details pages print. It really sucks right now." and a screenshot of a print preview filled with huge icons.](https://res.cloudinary.com/dp3mem7or/image/upload/v1573101826/articles/print-styles/aaron_tweet.png)
+, please take a look at how your Order Details pages print. It really sucks right now." and a screenshot of a print preview filled with huge icons.](/images/aaron_tweet.png)
 
 When I saw this tweet it struck me, because I realized that it has been a long time since I have optimized a page for print or even spared a thought on checking.
 Maybe it’s due to the constant resizing of our browsers and making sure that our sites work perfectly in all shapes and sizes or maybe it’s just because I rarely print web pages myself. Whatever it is, I totally forgot about print style sheets and that’s bad.
@@ -61,11 +61,11 @@ You don’t have to print a page every time you make a small change. Depending o
 
 For debugging print styles in Firefox open the _Developer Toolbar_ (Shift + F2 or Tools > Web Developer > Developer Toolbar) and enter media emulate print in the input field at the bottom of the browser window and press enter. The active tab will act as if the _media type_ was print until you close it or refresh the page. _(**Update October 20, 2018**: This doesn’t work anymore in Firefox 63+ since the Developer Toolbar has been removed)_
 
-![print style emulation in Firefox](https://res.cloudinary.com/dp3mem7or/image/upload/v1573101802/articles/print-styles/ff.png)
+![print style emulation in Firefox](/images/ff.png)
 
 In Chrome open DevTools (CMD + Opt + I (macOS) or Ctrl + Shift + I (Windows) or View > Developer > Developer Tools) and show the console drawer (Esc), open the rendering pane, check _Emulate CSS Media_ and select _Print_.
 
-![print style emulation in Chrome](https://res.cloudinary.com/dp3mem7or/image/upload/v1573101803/articles/print-styles/chrome.png)_print style emulation in Chrome_
+![print style emulation in Chrome](/images/chrome.png)_print style emulation in Chrome_
 
 ## 3. Absolute units
 
