@@ -12,6 +12,11 @@ image: articles/sm_boilerplate.png
 ---
 Usually when I start a new project, I either copy the HTML structure of the last site I built or I head over to [HTML5 Boilerplate](https://html5boilerplate.com/) and copy their boilerplate. Recently I didn’t start a new project, but I had to document the structure we use at work for the sites we build. So, simply copying and pasting wasn’t an option, I had to understand the choices that have been made. Since I spent quite some time researching and putting the structure together, I decided to share it with you.
 
+<div class="quote">
+  <blockquote>Cool, this is like https://github.com/h5bp/html5-boilerplate but a little worse.</blockquote>
+  <p>-Random reply guy on Hacker News</p>
+</div>
+
 <h2>My boilerplate</h2>
 
 This is the final document. Scroll down for details.

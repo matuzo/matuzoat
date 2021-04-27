@@ -418,3 +418,26 @@ a:hover {
 blockquote {
   font-style: italic;
 }
+
+.quote {
+  padding: 0 1em;
+}
+
+.quote blockquote {
+  font-size: 1.2em;
+  margin-bottom: 0;
+}
+
+.quote p {
+  font-size: 0.9em;
+}
+
+blockquote::before {
+  content: open-quote;
+  display: inline;
+}
+
+blockquote::after {
+  content: close-quote;
+  display: inline;
+}
