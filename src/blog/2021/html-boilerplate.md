@@ -340,7 +340,7 @@ JavaScript with the `type="module"` will only run in browsers that support modul
 
 <hr>
 
-This isn’t the absolute minimum, but it’s what I need im most sites I build. To round things up, I’ve added a bunch of tags to this post that we probably don’t need anymore and some others that you might need occasionally. If you want to learn more about the `<head>` element and its children, check out Josh Buchea’s fantastic repository [HEAD](https://github.com/joshbuchea/HEAD).
+This isn’t the absolute minimum, but it’s what I need in most sites I build. To round things up, I’ve added a bunch of tags to this post that we probably don’t need anymore and some others that you might need occasionally. If you want to learn more about the `<head>` element and its children, check out Josh Buchea’s fantastic repository [HEAD](https://github.com/joshbuchea/HEAD).
 
 Did I get anything wrong or did I miss anything? Please tell me on [Twitter](https://twitter.com/mmatuzo) or via [e-mail](mailto:manuel@matuzo.at).
 
