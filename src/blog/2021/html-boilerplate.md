@@ -133,7 +133,7 @@ The unique title of the page. It’s displayed in many places, for example, on t
 I’m [cutting the mustard](https://fettblog.eu/cutting-the-mustard-2018/) at JS module support. If a browser supports JavaScript modules, it means that it’s a browser that supports modern JavaScript, such as modules, ES 6 syntax, fetch, etc. I ship most JS only to these browsers and I use the `js` class in CSS, if the styling of a component is different, when JS is active.
 
 <a href="https://caniuse.com/?search=javascript%20modules">
-  <img src="https://res.cloudinary.com/dp3mem7or/image/upload/c_scale,q_100,w_750/v1616968362/articles/caniuse_jsmodules.png" width="750" height="266" loading="lazy" srcset="https://res.cloudinary.com/dp3mem7or/image/upload/c_scale,q_100,w_750/v1616968362/articles/caniuse_jsmodules.png 1x, https://res.cloudinary.com/dp3mem7or/image/upload/c_scale,q_100,w_1500/v1616968362/articles/caniuse_jsmodules.png 2x" alt="caniuse showing that all modern browser support JS modules">
+   <img src="/images/caniuse_jsmodules750.png" width="750" height="266" loading="lazy" alt="caniuse showing that all modern browser support JS modules">
 </a>
 
 ```html
@@ -182,10 +182,10 @@ Ideally, it should be a square image with the important content placed in the mi
 Here’s is how [this image](https://res.cloudinary.com/dp3mem7or/image/upload/w_1200/articles/sm_tables.png) will look on Twitter and on WhatsApp.
 
 <p>
-  <img src="https://res.cloudinary.com/dp3mem7or/image/upload/v1617307737/articles/htmldoc_tw.png" width="500" height="353" alt="Large rectangle image in a Twitter card">
+  <img src="/images/htmldoc_tw500.png" width="500" height="353" alt="Large rectangle image in a Twitter card">
 </p>
 <p>
-  <img src="https://res.cloudinary.com/dp3mem7or/image/upload/v1617307736/articles/htmldoc_wa.png" width="500" height="115" alt="Small square image on Whatsapp">
+  <img src="/images/htmldoc_wa500.png" width="500" height="115" alt="Small square image on Whatsapp">
 </p>
 
 Rules for Twitter: <q>Images for this Card support an aspect ratio of 2:1 with minimum dimensions of 300x157 or maximum of 4096x4096 pixels. Images must be less than 5MB in size. JPG, PNG, WEBP and GIF formats are supported.</q>
@@ -226,12 +226,12 @@ This meta tag defines how cards will look when shared on Twitter. There are two 
 
 <p>
   <strong>summary_large_image</strong><br>
-  <img src="https://res.cloudinary.com/dp3mem7or/image/upload/v1617310456/articles/htmldoc_summary-large.png" width="500" height="351" loading="lazy" alt="A large rectangle image on top, followed by the page title, description and URL below.">
+  <img src="/images/htmldoc_summary-large500.png" width="500" height="351" loading="lazy" alt="A large rectangle image on top, followed by the page title, description and URL below.">
 </p>
 
 <p>
   <strong>summary</strong><br>
-<img src="https://res.cloudinary.com/dp3mem7or/image/upload/v1617310456/articles/htmldoc_summary.png" width="500" height="148" loading="lazy" alt="A small square image on the left, page title, description and URL on the right.">
+<img src="/images/htmldoc_summary500.png" width="500" height="148" loading="lazy" alt="A small square image on the left, page title, description and URL on the right.">
 </p>
 
 You can see that I’m using a square image to ensure that the card looks good in both variations. I’ve painted the top and bottom part of the card pink so that you can see that these parts will be cut off in a `summary_large_image`.
@@ -246,7 +246,7 @@ You can see that I’m using a square image to ensure that the card looks good i
 
 Supported browsers: Chrome, Brave and Samsung Internet on Android.
 
-<img src="https://res.cloudinary.com/dp3mem7or/image/upload/c_scale,q_100,w_800/v1617956013/articles/htmldoc_theme-color.jpg"  width="400" height="79" alt="Pink UI in Brave browser" loading="lazy">
+<img src="/images/htmldoc_theme-color800.jpg"  width="400" height="79" alt="Pink UI in Brave browser" loading="lazy">
 
 ```html
 <link rel="icon" href="/favicon.ico">
@@ -278,12 +278,12 @@ Most modern browser support [SVG favicons](https://caniuse.com/link-icon-svg). T
 ```
 <p>
   Favicon on my website in light mode.<br>
-  <img src="https://res.cloudinary.com/dp3mem7or/image/upload/c_scale,w_800/v1617958912/articles/htmldoc_favicon_light.png" loading="lazy" width="400" alt="A blue M on light background in the browser tab in Chrome">
+  <img src="/images/htmldoc_favicon_light800.png" loading="lazy" width="400" alt="A blue M on light background in the browser tab in Chrome">
 </p>
 
 <p>
   Favicon on my website in dark mode.<br>
-  <img src="https://res.cloudinary.com/dp3mem7or/image/upload/c_scale,w_800/v1617958912/articles/htmldoc_favicon_dark.png" loading="lazy" width="400" alt="A white M on dark background in the browser tab in Chrome">
+  <img src="/images/htmldoc_favicon_dark800.png" loading="lazy" width="400" alt="A white M on dark background in the browser tab in Chrome">
 </p>
 
 </div>
