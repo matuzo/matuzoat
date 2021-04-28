@@ -13,6 +13,10 @@ tags:
   - posts
   - css
 ---
+<div class="quote">
+  <blockquote>another old post (who cares?) that was originally on medium and now is on the author's domain blah blah</blockquote>
+  <p>-Random reply guy on Hacker News</p>
+</div>
 
 [Aaron Gustafson](https://twitter.com/AaronGustafson) recently sent a [tweet](https://twitter.com/AaronGustafson/status/788073583528538112) to [Indiegogo](http://indiegogo.com) in which he pointed out that their order details pages aren’t usable when printed.
 
