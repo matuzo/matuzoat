@@ -10,6 +10,9 @@ tags:
   - html
 image: articles/sm_boilerplate.png
 ---
+
+[Traducción a Español](https://www.ibidemgroup.com/edu/mi-plantilla-html/) by www.ibidemgroup.com.
+
 Usually when I start a new project, I either copy the HTML structure of the last site I built or I head over to [HTML5 Boilerplate](https://html5boilerplate.com/) and copy their boilerplate. Recently I didn’t start a new project, but I had to document the structure we use at work for the sites we build. So, simply copying and pasting wasn’t an option, I had to understand the choices that have been made. Since I spent quite some time researching and putting the structure together, I decided to share it with you.
 
 <div class="quote">
@@ -26,7 +29,7 @@ This is the final document. Scroll down for details.
 <html lang="en" class="no-js">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
 
   <title>Unique page title - My Site</title>
 
@@ -248,6 +251,18 @@ Supported browsers: Chrome, Brave and Samsung Internet on Android.
 
 <img src="/images/htmldoc_theme-color800.jpg"  width="400" height="79" alt="Pink UI in Brave browser" loading="lazy">
 
+Starting with version 15, Safari will support `theme-color` on macOS and iOS. On top of that it will also support the `prefers-color-scheme` media feature. As of <time datetime="2021-06-17">today (17.06.21)</time> Android does not support the `media` attribute on `theme-color` meta tags, it will just use the first of the two declarations, regardless of the `media` attribute.
+
+<div class="post" style="margin-left: 2.25rem">
+
+
+```html
+<meta name="theme-color" content="#000" media="(prefers-color-scheme: dark)">
+<meta name="theme-color" content="#FFF" media="(prefers-color-scheme: light)">
+```
+
+</div>
+
 ```html
 <link rel="icon" href="/favicon.ico">
 ```
@@ -397,3 +412,14 @@ Disable automatic detection and formatting of phone numbers.
 Disallow Twitter from using your site’s info for personalization purposes.
 
 Check out [HEAD](https://github.com/joshbuchea/HEAD) for much more.
+
+## Updates
+### Update 17.06.21
+
+1. Added Spanish translation.
+
+2. I tried to run some tests and find out whether `initial-scale=1` is still needed or not, but I realized that testing that properly what be too complicated, so to be safe I’ve included it again. Never change a winning team, right?
+
+3. Added details about `theme-color` support in Safari 15.
+
+<meta name="viewport" content="width=device-width, initial-scale=1">
