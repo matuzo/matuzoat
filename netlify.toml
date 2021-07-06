@@ -6,3 +6,8 @@ package = "netlify-plugin-a11y"
     '/about-me/',
     '/blog/lang-attribute/',
   ]
+[[plugins]]
+package = "netlify-plugin-cache-folder"
+
+[build]  
+  command = "npm run build"
