@@ -10,4 +10,4 @@ package = "netlify-plugin-a11y"
 package = "netlify-plugin-cache-folder"
 
 [build]  
-  command = "npm run build"
+  command = "CI= npm run build"
