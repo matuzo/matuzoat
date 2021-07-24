@@ -1,5 +1,52 @@
 [
   {
+    "day": "July, 2021",
+    "links": [
+      {
+        "text": "AVIF has landed",
+        "url": "https://jakearchibald.com/2020/avif-has-landed/"
+      },
+      {
+        "text": "CSS: A New Kind Of JavaScript",
+        "url": "https://heydonworks.com/article/css:-a-new-kind-of-javascript/"
+      },
+      {
+        "text": "What we learned from user testing of accessible client-side routing techniques with Fable Tech Labs",
+        "url": "https://www.gatsbyjs.com/blog/2019-07-11-user-testing-accessible-client-routing/"
+      },
+      {
+        "text": "Accessibility of the section element",
+        "url": " https://www.scottohara.me/blog/2021/07/16/section.html"
+      }
+    ]
+  },
+  {
+    "day": "June, 2021",
+    "links": [
+      {
+        "text": "10 quick accessibility tests",
+        "url": "https://www.youtube.com/playlist?list=PLTqm2yVMMUKWTr9XWdW5hJ9tk512Ow0SE"
+      },
+      {
+        "text": "A New Way To Reduce Font Loading Impact: CSS Font Descriptors",
+        "url": "https://www.smashingmagazine.com/2021/05/reduce-font-loading-impact-css-descriptors/"
+      },
+      {
+        "text": "The perfect link ",
+        "url": "https://a11y-collective.com/blog/the-perfect-link/"
+      },
+
+      {
+        "text": "JavaScript: Conditional JavaScript, only download when it is appropriate to do so",
+        "url": "https://umaar.com/dev-tips/242-considerate-javascript/"
+      },
+      {
+        "text": "Simple things are complicated: making a show password option",
+        "url": "https://technology.blog.gov.uk/2021/04/19/simple-things-are-complicated-making-a-show-password-option/"
+      }
+    ]
+  },
+  {
     "day": "January, 2021",
     "links": [
       {
