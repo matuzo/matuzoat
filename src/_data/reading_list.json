@@ -3,20 +3,24 @@
     "day": "July, 2021",
     "links": [
       {
-        "text": "AVIF has landed",
-        "url": "https://jakearchibald.com/2020/avif-has-landed/"
+        "text": "From A Colourblind Designer To The World: Please Stop Using Red And Green Together",
+        "url": "https://baselinehq.com/blog/colourblindness-information-ui-design-red-green-problems-tips-tricks.html"
       },
       {
         "text": "CSS: A New Kind Of JavaScript",
         "url": "https://heydonworks.com/article/css:-a-new-kind-of-javascript/"
       },
       {
-        "text": "What we learned from user testing of accessible client-side routing techniques with Fable Tech Labs",
-        "url": "https://www.gatsbyjs.com/blog/2019-07-11-user-testing-accessible-client-routing/"
-      },
-      {
         "text": "Accessibility of the section element",
         "url": " https://www.scottohara.me/blog/2021/07/16/section.html"
+      },
+      {
+        "text": "AVIF has landed",
+        "url": "https://jakearchibald.com/2020/avif-has-landed/"
+      },
+      {
+        "text": "What we learned from user testing of accessible client-side routing techniques with Fable Tech Labs",
+        "url": "https://www.gatsbyjs.com/blog/2019-07-11-user-testing-accessible-client-routing/"
       }
     ]
   },
@@ -470,12 +474,12 @@
 
       {
         "text": "Accessible page title in a single-page React application",
-        "url": "https://hugogiraudel.com/2020/01/15/accessible-title-in-a-single-page-react-application/"
+        "url": "https://kittygiraudel.com/2020/01/15/accessible-title-in-a-single-page-react-application/"
       },
 
       {
         "text": "Accessible links and buttons with React",
-        "url": "https://hugogiraudel.com/2020/01/17/accessible-links-and-buttons-with-react/"
+        "url": "https://kittygiraudel.com/2020/01/17/accessible-links-and-buttons-with-react/"
       }
     ]
   },
