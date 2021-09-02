@@ -1,8 +1,7 @@
 ---
 title: "Element diversity"
 permalink: blog/{{ title | slug }}/index.html
-metadescription: 'Browser support for the focus-visible and focus-within pseudo classes is pretty good.'
-teaser: 'Did you know that there are 112 elements in HTML?!'
+metadescription: 'Some thoughts on why we use the div element so much.'
 date: 2021-09-02T12:38:54.969Z
 tags:
   - blog
@@ -62,7 +61,7 @@ image: articles/sm_elementdiversity.png
     <a href="#thepage"> We don't care enough about <em>the page</em></a>
   </li>
   <li>
-    <a href="style">Some elements are hard to style</a>
+    <a href="#style">Some elements are hard to style</a>
   </li>
 </ol>
 
@@ -91,7 +90,7 @@ image: articles/sm_elementdiversity.png
   <q>For accessibility! Duh!</q>
 </p>
 <p>
-  Of course, for accessibility, but most people don't know why you need a <a href="/tips/the-document-outline/">sound document outline</a> or landmarks, or what the advantages of a <code>button</code> button over a <code>div</code> button are. If I don't know which consequences my choices have on users, why would I bother using <a href="https://htmhell.dev/18-main-divigation/">anything else but the div</a>?
+  Of course, for accessibility, but most people don't know why you need a <a href="https://www.htmhell.dev/tips/the-document-outline/">sound document outline</a> or landmarks, or what the advantages of a <code>button</code> button over a <code>div</code> button are. If I don't know which consequences my choices have on users, why would I bother using <a href="https://htmhell.dev/18-main-divigation/">anything else but the div</a>?
 </p>
 
 <h2 id="frameworks">JS frameworks</h2>
@@ -138,9 +137,9 @@ image: articles/sm_elementdiversity.png
 </p>
 
 ```css
-  button {
-    all: initial;
-  }
+button {
+  all: initial;
+}
 ```
 
 <button type="button" style="all:initial" onclick="alert('Yes, that’s a button.')">Look mum, no styles.</button>
@@ -148,17 +147,17 @@ image: articles/sm_elementdiversity.png
 If you want to reset everything, but inherit font styling, you need 2 more lines.
 
 ```css
-  button {
-    all: initial;
-    font: inherit;
-    color: inherit;
-  }
+button {
+  all: initial;
+  font: inherit;
+  color: inherit;
+}
 ```
 
 <button type="button" style="all:initial; font: inherit; color: inherit" onclick="alert('Yes, that’s a button.')">Look mum, no styles.</button>
 
 
-<h2>
+<h2 id="thepage">
   We don't care enough about <em>the page</em>
 </h2>
 
@@ -172,7 +171,7 @@ If you want to reset everything, but inherit font styling, you need 2 more lines
 
 <h2>Some elements are hard to style</h2>
 
-Yes, some elements are hard to style. To make our designers or customers happy, we don't use the default `select` element, but we write a complex component that consists of a bunch of divs with aria roles and a lot of JS. Sometimes have to do that, but sometimes it's better to just live with the fact that you can't style `option` elements and use the native components that comes with all the functionality and accessibility by default.
+Yes, some elements are hard to style. To make our designers or customers happy, we don't use the default `select` element, but we write a complex component that consists of a bunch of divs with aria roles and a lot of JS. Sometimes have to do that, but sometimes it's better to just live with the fact that you can't style `option` elements and use the native component that comes with all the functionality and accessibility by default.
 
 <script async src="https://cpwebassets.codepen.io/assets/embed/ei.js"></script>
 
