@@ -71,7 +71,7 @@ image: articles/sm_elementdiversity.png
 
 <p>
   It's hard to use something you don't know exists. As someone who teaches HTML, I know that universities don't put enough emphasis on teaching semantic HTML. They teach syntax, basic structure and the ~20 most important elements and attributes, and that's pretty much it.
-<p>
+</p>
 <p>
   Did you know that there are 112 elements in HTML? <a href="twitter.com/plfstr">Paul Foster</a> built this fantastic <a href="https://codepen.io/plfstr/full/zYqQeRw">HTML memory test</a>. Try it, you'll be surprised how much you don't remember and know. (Heads up: His test lists 115 elements because it includes <code>svg</code>, <code>math</code>, and the deprecated <code>rb</code> element.)
 </p>
@@ -92,6 +92,7 @@ image: articles/sm_elementdiversity.png
 </p>
 <p>
   Of course, for accessibility, but most people don't know why you need a <a href="/tips/the-document-outline/">sound document outline</a> or landmarks, or what the advantages of a <code>button</code> button over a <code>div</code> button are. If I don't know which consequences my choices have on users, why would I bother using <a href="https://htmhell.dev/18-main-divigation/">anything else but the div</a>?
+</p>
 
 <h2 id="frameworks">JS frameworks</h2>
 
