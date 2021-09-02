@@ -143,7 +143,7 @@ image: articles/sm_elementdiversity.png
   }
 ```
 
-<button style="all:initial" onclick="alert('Yes, that’s a button.')">Look mum, no styles.</button>
+<button type="button" style="all:initial" onclick="alert('Yes, that’s a button.')">Look mum, no styles.</button>
 
 If you want to reset everything, but inherit font styling, you need 2 more lines.
 
@@ -155,7 +155,7 @@ If you want to reset everything, but inherit font styling, you need 2 more lines
   }
 ```
 
-<button style="all:initial; font: inherit; color: inherit" onclick="alert('Yes, that’s a button.')">Look mum, no styles.</button>
+<button type="button" style="all:initial; font: inherit; color: inherit" onclick="alert('Yes, that’s a button.')">Look mum, no styles.</button>
 
 
 <h2>
