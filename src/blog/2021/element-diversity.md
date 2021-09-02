@@ -169,7 +169,7 @@ button {
   The problem with working on small pieces is that it's easy to ignore the big picture. We can conceive, design, and develop components, but the end results for users is usually a whole page. A component with 2 or 3 <code>div</code>s might not look bad, but if I nest it in 5 other components, I might end up with 15 <code>div</code>s that don't do anything but increase complexity and file size.
 </p>
 
-<h2>Some elements are hard to style</h2>
+<h2 id="style">Some elements are hard to style</h2>
 
 Yes, some elements are hard to style. To make our designers or customers happy, we don't use the default `select` element, but we write a complex component that consists of a bunch of divs with aria roles and a lot of JS. Sometimes have to do that, but sometimes it's better to just live with the fact that you can't style `option` elements and use the native component that comes with all the functionality and accessibility by default.
 
