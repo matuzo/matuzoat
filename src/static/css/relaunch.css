@@ -76,6 +76,10 @@ p code {
   font-weight: normal;
 }
 
+q {
+  font-style: italic;
+}
+
 iframe {
   border: 0;
 }
