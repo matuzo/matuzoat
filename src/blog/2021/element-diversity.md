@@ -2,6 +2,7 @@
 title: "Element diversity"
 permalink: blog/{{ title | slug }}/index.html
 metadescription: 'Some thoughts on why we use the div element so much.'
+teaser: 'Did you know that there are 112 elements in HTML?!'
 date: 2021-09-02T12:38:54.969Z
 tags:
   - blog
@@ -9,7 +10,6 @@ tags:
   - html
 image: articles/sm_elementdiversity.png
 ---
-
 ```html
 <div id="appRoot">
   <div>
