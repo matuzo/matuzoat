@@ -175,6 +175,22 @@ In our website we’re putting it on the `body` element.
 
 Screen reader users will now experience one of those [_“rare”_ moments](https://webaim.org/projects/million/) when they have to deal with an inaccessible site. <span aria-label="(sarcasm)" title="(sarcasm)">\*</span>
 
+**Update 06.10.21**: Originally, Lighthouse didn’t flag this as an issue, but they seem to have fixed it. That’s great! Unfortunately (fortunately for this article), we can work around that by setting `tabindex` to `-1` on all focusable elements.
+
+```html
+<a href="https://www.matuzo.at/blog/building-the-most-inaccessible-site-possible-with-a-perfect-lighthouse-score/" rel="noopener" tabindex="-1">  
+  Read the article  
+</a>
+
+<form action="#form">  
+  <p>  
+    <label for="text">Dummy form</label><br>  
+    <input type="text" id="text" tabindex="-1">  
+  </p>  
+  <button tabindex="-1">Send</button>  
+</form>
+```
+
 [CodePen: “100%” accessible - step 3](https://s.codepen.io/matuzo/pen/OYBZbd)
 
 ### 🖕 Keyboard users 🖕
@@ -325,6 +341,14 @@ body {
 ```
 
 Our page content is still present but almost invisible. Fabulous!
+
+**Update 06.10.21**: Originally, Lighthouse didn’t flag this as an issue, but they seem to have fixed it. That’s great! Unfortunately (fortunately for this article), we can work around that by using the filter property instead.
+
+```css
+body {
+  filter: opacity(0.03);
+}
+```
 
 [CodePen: “100%” accessible - step 7](https://s.codepen.io/matuzo/pen/eaPLeB)
 
