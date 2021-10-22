@@ -48,6 +48,7 @@ footer li + li {
   margin-left: 1rem;
 }
 
+video,
 img {
   max-width: 100%;
   height: auto;
