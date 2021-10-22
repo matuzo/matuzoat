@@ -3,7 +3,7 @@ title: "Workshop: Deep Dive on Accessibility Testing"
 permalink: blog/workshop-deep-dive-on-accessibility-testing/index.html
 metadescription: 'I’ve teamed up with my friends at Smashing Magazine to share with you everything I know about web accessibility testing'
 teaser: 'I’ve teamed up with my friends at [Smashing Magazine](https://www.smashingmagazine.com/) 😻 to share with you everything I know about web accessibility testing! In this [smashing workshop](https://smashingconf.com/online-workshops/workshops/manuel-matuzovic/) we’ll talk about automatic and manual testing, screen reader basics, Single Page Applications, Dev Tools, and more.'
-date: 2021-09-02T12:38:54.969Z
+date: 2021-10-02T12:38:54.969Z
 tags:
   - blog
   - posts
