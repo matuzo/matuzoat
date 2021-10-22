@@ -16,10 +16,8 @@ image: articles/sm_a11yworkshop.png
 Sounds interesting? Great! Here are some more details about the workshop:
 
 <video src="/images/workshop_promo.mp4" controls>
- <track default
-           kind="captions"
-           srclang="en"
-           src="/images/workshop_promo.vtt" />
+  <track default kind="captions" srclang="en" src="/images/workshop_promo.vtt" label="English">
+  <track default kind="subtitles" srclang="de" src="/images/workshop_promo_de.vtt" label="Deutsch">
     Sorry, your browser doesn't support embedded videos.
 </video>
 
