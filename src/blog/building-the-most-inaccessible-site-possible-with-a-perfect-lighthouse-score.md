@@ -5,7 +5,7 @@ metadescription: >-
   step and that manual testing is vital.
 date: 2019-05-31T07:08:19.931Z
 image: articles/lighthouse/lighthouse_sm.png
-intro: "*Disclaimer: This post is not about lighthouse, other testing tools perform similarly. It's about us developers and our responsibility to not blindly rely on automatic testing.*\n\n**Google's built-in testing tool Lighthouse judges the accessibility of our websites with a score between 0 and 100. It’s laudable to try to\_get a high grading, but a score of 100 doesn’t mean that the site is perfectly accessible.\nTo prove that I carried out a little experiment.**"
+intro: "*Disclaimer: This post is not about lighthouse, other testing tools perform similarly. It's about us developers and our responsibility to not thoughtlessly rely on automatic testing.*\n\n**Google's built-in testing tool Lighthouse judges the accessibility of our websites with a score between 0 and 100. It’s laudable to try to\_get a high grading, but a score of 100 doesn’t mean that the site is perfectly accessible.\nTo prove that I carried out a little experiment.**"
 teaser: >-
   It’s always nice to see when people post their Lighthouse scores on social
   media to highlight how well they’ve optimised their own or their client's
@@ -393,7 +393,7 @@ To wrap it up, a final test.
 ## Conclusion
 
 My intention with this post was not to diss Lighthouse or axe-core, the engine behind Lighthouse. I use both tools regularly and I’m glad I have them.\
-This post is about you and me. Scores indicate the quality of our apps and sites, but we must not trust these numbers blindly. We have to understand that automatic testing is just a first step.  
+This post is about you and me. Scores indicate the quality of our apps and sites, but we must not trust these numbers thoughtlessly. We have to understand that automatic testing is just a first step.  
 Next time you see a high Lighthouse score and you want to call it a day, read the text next to the score.
 
 ![](/images/lighthouse/lighthouse_test.png)
