@@ -10,7 +10,10 @@ tags:
   - posts
   - a11y
 image: articles/sm_tab.png
+permalink: blog/testing-with-tab/index.html
 ---
+
+*This article is available in German: [Eines meiner Lieblingswerkzeuge für Barrierefreiheit-Checks: Die Tabulatortaste](/blog/de/testing-with-tab/).*
 
 I’ve already shared [6 things I check on every website I build](/blog/beyond-automatic-accessibility-testing-6-things-i-check-on-every-website-i-build/), but this time I want to focus on one of the most powerful testing tools: The <kbd>Tab</kbd> key.
 
@@ -53,13 +56,13 @@ No? Work on your HTML. You’re probably using `<div>`, `<span>`, `<svg>` only, 
 Don’t use `div`s for buttons. This fake button is not accessible to keyboard and screen reader users.
 
 ```html
-<div class="btn" onclick="send()">  Send</div>
+<div class="btn" onclick="send()">Send</div>
 ```
 
 Do this instead:
 
 ```html
-<button class="btn" onclick="send()">  Send</button>
+<button class="btn" onclick="send()">Send</button>
 ```
 
 ### Learn more about links and buttons
@@ -74,18 +77,19 @@ You can reach a button, but nothing happens when you press <kbd>Enter</kbd> or <
 You can make fake buttons tabbable and you can change their semantics, but you only get key events by default with real buttons.
 
 ```html
-<div class="btn" tabindex="0" role="button" onclick="send()">  Send</div>
+<div class="btn" tabindex="0" role="button" onclick="send()">Send</div>
 ```
 
 Do this instead:
 
 ```html
-<button class="btn" onclick="send()">  Send</button>
+<button class="btn" onclick="send()">Send</button>
 ```
 
 ### Learn more about buttons
 
 - [Just use button -- A11ycasts #05](https://www.youtube.com/watch?v=CZGqnp06DnI)
+- [The Button Cheat Sheet](https://www.buttoncheatsheet.com/)
 
 ## 4. Skip links
 
@@ -141,7 +145,7 @@ No, seriously. Infinite scrolling is usually a bad practice.
 
 ## 7. Off-screen items
 
-Does the focus indicator suddenly disappear while you keep tabbing? It’s likely that you’re focusing off-screen items. You have to hide them correctly. `height: 0`, `transform: translateX(-100%)`, etc. don’t remove items from tab order, `display: none;` does.
+Does the focus indicator suddenly disappear while you keep tabbing? It’s likely that you’re focusing off-screen items. You have to hide them correctly. `height: 0`, `transform: translateX(-100%)`, etc. don’t remove items from tab order, `display: none;` or `visibility:hidden` do.
 
 <div class="skip-link-container">
 <a href="#codepen1-skip" class="skip-link skip-link--inline">Skip CodePen</a>
