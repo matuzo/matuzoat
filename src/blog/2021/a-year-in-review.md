@@ -25,7 +25,7 @@ Another personal highlight of 2021 was our first vacation as a family in Croatia
 
 <img src="/images/baby_urlaub.jpg" alt="My fiance, me and 1 month old Johanna in front of a sunrise">
 
-### Conclusion
+### Conclusion personal
 
 My personal year 2021 was overall great. I’m getting tired of the whole pandemic situation, but my fiance and I enjoyed the time she was pregnant a lot and the rest of the year as well, of course. I was always bad at work-life-balance and this year it has changed little. While I could keep most weekends work-free and I spent them with my fiance and my daughter, I didn’t have enough time and energy left for the rest of my family and my friends.
 
@@ -47,7 +47,7 @@ At my day job nothing too exceptional happened. This sounds negative, but it’s
 
 Other than that I did some accessibility audits, consulting for an university in Vienna, and several workshops. My favorite gig was a 2-day workshop with the designers and developers of [sipgate](https://www.sipgate.de/). They were so interested, involved and eager to improve the accessibility of their products that it didn’t feel like work for me. I had a lot of fun and I also learned from them.
 
-### Conclusion
+### Conclusion work
 
 Considering that I have a full-time job, that sounds like a lot, and it was. All in all, I’m happy with the quality of my work, but I was stressed out a lot this year, and I did fuck-up one or two tasks.
 
@@ -66,12 +66,12 @@ I’m really happy with my side projects. I created some pretty cool and useful 
 <p>I didn’t take part in many calls for papers, but I prepared a new talk and I presented it at 3 events. You can watch <a href="https://vimeo.com/654497457">“Building The Most Inaccessible Site Possible with Manuel Matuzovic - Smashing Meets For All December 2021”</a> from <a href="https://vimeo.com/smashingmagazine">Smashing Magazine</a> on Vimeo. I gave the same talk at <a href="https://webdirections.org/aaa/index.php">Web Directions Access All Areas</a> (I highly recommend this event) and at the German version of <a href="https://www.youtube.com/watch?v=WFlb0wpXm0s&list=PLLuwoY7nxnR3AXdmA8JYdbjdFMKaereMr">technica11y</a>.</p>
 
 <div class="video-wrapper">
-<iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/VulKOpb6uCw?start=1691" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/VulKOpb6uCw?start=1691" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 </div>
 
 I also did a live stream with my friend Christoph, which was super fun. We tested the accessibility of his website [larastreamers](https://larastreamers.com/).
 <div class="video-wrapper">
-<iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/Xr0r2Ft_ROQ?start=221" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/Xr0r2Ft_ROQ?start=221" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 </div>
 
 ## Articles
