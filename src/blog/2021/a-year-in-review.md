@@ -1,6 +1,6 @@
 ---
 title: 'A year in review: 2021'
-permalink: /blog/misc/{{ title | slug }}/index.html
+permalink: /blog/misc/a-year-in-review-2021/index.html
 teaser: '2021 was wild! That’s why I’ve decided to write an “A year in review” post for the first time.'
 metadescription: ''
 overview_teaser: ''
