@@ -3,6 +3,14 @@
     "day": "January, 2022",
     "links": [
       {
+        "text": "Design systems, structured content and headless publishing",
+        "url": "https://amyhupe.co.uk/articles/design-systems-structured-content/"
+      },
+      {
+        "text": "Embrace the Platform",
+        "url": "https://css-tricks.com/embrace-the-platform/"
+      },
+      {
         "text": "The surprising behavior of “important CSS custom properties”",
         "url": "https://www.stefanjudis.com/today-i-learned/the-surprising-behavior-of-important-css-custom-properties/"
       },
