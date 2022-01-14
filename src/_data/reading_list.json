@@ -3,6 +3,10 @@
     "day": "January, 2022",
     "links": [
       {
+        "text": "Under-Engineered Dependency Questions",
+        "url": "https://adrianroselli.com/2021/12/under-engineered-dependency-questions.html"
+      },
+      {
         "text": "Interaction Media Features and Their Potential (for Incorrect Assumptions) ",
         "url": "https://css-tricks.com/interaction-media-features-and-their-potential-for-incorrect-assumptions/"
       },
