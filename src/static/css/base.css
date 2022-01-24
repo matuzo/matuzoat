@@ -1,0 +1,49 @@
+:root {
+  --c-primary: #fac700;
+  --c-contrast: #000000;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  background-color: var(--c-primary);
+
+  margin: 0;
+
+  color: var(--c-contrast);
+  font-size: 1.6rem;
+  font-family: 'Yantramanav', sans-serif;
+}
+
+h1, h2 {
+  font-family: 'Courier Prime', monospace;
+}
+
+ul:where([class]) {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+a:where(:link, :visited) {
+  color: var(--c-contrast);
+  text-decoration-thickness: 2px;
+}
+
+a:focus {
+  outline: none;
+}
+
+a:focus-visible {
+  outline: 4px solid var(--c-contrast);
+  outline-offset: 2px;
+}
+
+

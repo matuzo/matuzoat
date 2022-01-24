@@ -6,28 +6,40 @@ tags:
   - nav
 navtitle: Home
 ---
-<h1>
-  {{ title or metadata.title }}
-</h1>
 
-<p>Hi! I'm a frontend developer from Vienna. I'm specialized in <strong>HTML</strong>, <strong>accessibility</strong>, and <strong>CSS layout and architecture</strong>.</p>
-<p>If you want to get in touch, write me an <a href="mailto:manuel@matuzo.at" rel="me">email</a> or find me on <a href="https://twitter.com/mmatuzo" rel="noopener me">twitter</a>.</p>
+<div>
+  <h2>
+    Recent posts
+  </h2>
 
-<h2>
-  Recent posts
-</h2>
+  {% set max = 7 %}
+  {% set posts = collections.blog | reverse %}
+  {% include 'components/blog-posts.njk' %}
 
-{% set max = 10 %}
-{% set posts = collections.posts | reverse %}
-{% include 'components/blog-posts.njk' %}
+  <a href="/blog">
+    More blog posts
+  </a>
+</div>
 
-<a href="/blog">
-  More blog posts
-</a>
+<div>
 
-or
+  <h2>Today I learned</h2>
 
-<a href="/til">
-  more “Today I learned” posts
-</a>
+  {% set max = 7 %}
+  {% set posts = collections.til | reverse %}
+  {% include 'components/blog-posts.njk' %}
 
+  <a href="/til">
+    more “Today I learned” posts
+  </a>
+
+</div>
+
+<div>
+  <h2>About me</h2>
+  <p>Hi! I'm a frontend developer from Vienna. I'm specialized in <strong>HTML</strong>, <strong>accessibility</strong>, and <strong>CSS layout and architecture</strong>.</p>
+  <p>If you want to get in touch, write me an <a href="mailto:manuel@matuzo.at" rel="me">email</a> or find me on <a href="https://twitter.com/mmatuzo" rel="noopener me">twitter</a>.</p>
+
+  <img src="https://dev.matuzo.at/manuel_matuzovic.jpg">
+  
+</div>

@@ -1,0 +1,35 @@
+.site-header {
+  --direction: column;
+
+  display: flex;
+  flex-direction: var(--direction);
+  border-bottom: 8px solid var(--c-contrast);
+  /* justify-content: space-between;
+  align-items: flex-end; */
+  /* padding: 2rem 1rem 0.5rem;
+  margin: 0 2rem 2rem; */
+  padding: 1rem;
+}
+
+.skip-link {
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: var(--c-contrast);
+  color: var(--c-primary);
+  padding: 1rem;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+
+.skip-link:not(:focus) {
+  border: 0;
+  clip: rect(0 0 0 0);
+  clip-path: inset(50%);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  white-space: nowrap;
+  width: 1px;
+}
