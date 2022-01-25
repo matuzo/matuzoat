@@ -148,7 +148,7 @@ button:touch {
 }
 </style>
 
-<button class="btn1">
+<button type="button" class="btn1">
   Send
 </button>
 
@@ -164,7 +164,7 @@ button:where(:focus,
 }
 ```
 
-<button class="btn2">
+<button type="button" class="btn2">
   Send
 </button>
 
