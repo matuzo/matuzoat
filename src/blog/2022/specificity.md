@@ -248,3 +248,10 @@ body {
   background: #efefef;
 }
 ```
+
+## Resources
+
+* [Demo on CodePen](https://codepen.io/matuzo/pen/dyZyrRw?editors=1100)
+* [Cascade Sorting Order](https://www.w3.org/TR/css-cascade-5/#cascade-origin)
+* [:where() on MDN](https://developer.mozilla.org/en-US/docs/Web/CSS/:where)
+* [specificity animation hack](https://codepen.io/t_afif/pen/QWOWKXY)
