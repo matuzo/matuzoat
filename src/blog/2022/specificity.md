@@ -94,9 +94,13 @@ Press the “Add selector” and “Remove selector” buttons to add or remove 
   }
 
   pre[class*="language-"] {
-    margin: 0;
+    margin-top: 0;
     padding: 1rem;
     border: none;
+  }
+
+  pre[class*="language-"]:not(:last-of-type) {
+    margin-bottom: 0;
   }
 
   header {
