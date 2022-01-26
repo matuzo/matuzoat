@@ -167,7 +167,7 @@ body {
 ```css
 /* Animation declarations take precedence over normal
  declarations */
-div {
+body {
   animation: bg 0s forwards;
 }
 
