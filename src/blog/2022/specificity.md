@@ -260,3 +260,4 @@ body {
 * [:where() on MDN](https://developer.mozilla.org/en-US/docs/Web/CSS/:where)
 * [specificity animation hack](https://codepen.io/t_afif/pen/QWOWKXY)
 * [SpeciFISHity](https://specifishity.com/)
+* [The CSS Cascade](https://wattenberger.com/blog/css-cascade#specificity)
