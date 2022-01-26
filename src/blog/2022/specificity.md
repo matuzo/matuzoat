@@ -73,6 +73,26 @@ Press the “Add selector” and “Remove selector” buttons to add or remove 
 </script>
 
 <style>
+  button {
+    background: #80d2db;
+    border: 2px solid #153a51;
+    color: #153a51;
+    padding: 0.7em 0.8em 0.5em;
+    font-family: inherit;
+    font-size: 0.9rem;
+    font-weight: bold;
+  }
+
+  button:not([disabled]):hover {
+    background: #153a51;
+    color: #fff;
+  }
+
+  button[disabled] {
+    opacity: 0.5;
+    cursor: not-allowed;
+  }
+
   pre[class*="language-"] {
     margin: 0;
     padding: 1rem;
