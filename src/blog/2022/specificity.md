@@ -16,11 +16,11 @@ Press the “Add selector” and “Remove selector” buttons to add or remove 
 
 <div role="alert" class="u-vh"></div>
 
-<button id="remove" disabled>
+<button id="remove" disabled type="button">
   Remove selector
 </button>
 
-<button id="add">
+<button id="add" type="button">
   Add selector
 </button>
 
