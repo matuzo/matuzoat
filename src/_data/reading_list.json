@@ -3,6 +3,14 @@
     "day": "January, 2022",
     "links": [
       {
+        "text": "Make Free Stuff",
+        "url": "https://mxb.dev/blog/make-free-stuff/"
+      },
+      {
+        "text": "More to give than just the div: semantics and how to get them right",
+        "url": "https://hiddedevries.nl/en/blog/2022-01-23-more-to-give-than-just-the-div-semantics-and-how-to-get-them-right"
+      },
+      {
         "text": "Under-Engineered Dependency Questions",
         "url": "https://adrianroselli.com/2021/12/under-engineered-dependency-questions.html"
       },
