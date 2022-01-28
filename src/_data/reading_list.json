@@ -3,6 +3,10 @@
     "day": "January, 2022",
     "links": [
       {
+        "text": "Getting Started With CSS Cascade Layers",
+        "url": "https://www.smashingmagazine.com/2022/01/introduction-css-cascade-layers/"
+      },
+      {
         "text": "Make Free Stuff",
         "url": "https://mxb.dev/blog/make-free-stuff/"
       },
