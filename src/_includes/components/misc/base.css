@@ -26,6 +26,10 @@ h1, h2 {
   font-family: 'Courier Prime', monospace;
 }
 
+img {
+  max-width: 100%;
+}
+
 ul:where([class]) {
   margin: 0;
   padding: 0;

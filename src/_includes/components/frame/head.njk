@@ -1,0 +1,78 @@
+{%- set page_title = metadata.title -%}
+
+{%- if page.url !== '/' -%}
+  {%- set page_title = title ~ " - " ~ page_title -%}
+{%- endif -%}
+
+{%- set meta_title = page_title -%}
+
+{%- if meta.title -%}
+  {%- set meta_title = meta.title -%}
+{%- endif -%}
+
+{% set canonicalURL = project.url ~ page.url%}
+
+{#- <meta charset|http-equiv|viewport> -#}
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+{#- <title> -#}
+<title>{{ page_title }}</title>
+
+{#- <link rel=preconnect> -#}
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+{#- <script async> -#}
+{#- / -#}
+{#- Synchronous JS -#}
+{#- / -#}
+
+{#- Synchronous CSS -#}
+<link rel="stylesheet" href="{{ '/assets/main.css' | url | cacheBuster }}">
+
+{#- {% for sheet in sheets %}
+{% set sheet_url = '/assets/' + sheet + '.css' %}
+<link rel="stylesheet" href="{{ sheet_url | url | cacheBuster }}">
+{% endfor %} -#}
+
+<link href="https://fonts.googleapis.com/css2?family=Courier+Prime:wght@400;700&family=Yantramanav:wght@400;700&display=swap" rel="stylesheet"> 
+
+{#- <link rel=preload> -#}
+{#- / -#}
+
+{#- <script defer> -#}
+{#- / -#}
+
+{#- <link rel=prefetch|prerender> -#}
+{#- / -#}
+
+{#- Everythign else -#}
+<meta name="description" content="{{ meta.description }}">
+<meta property="og:title" content="{{ meta_title }}">
+<meta property="og:description" content="{{ meta.description }}">
+<meta property="og:image" content="{{ meta.image }}">
+<meta property="og:locale" content="en_GB">
+<meta property="og:type" content="website">
+
+<meta property="og:url" content="{{ canonicalURL }}">
+<meta property="og:site_name" content="{{ meta_title }}">
+<meta name="author" content="{{ project.title }}"> 
+<meta name="twitter:card" content="summary_large_image">
+
+<link rel="icon" href="/favicon.ico">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<link rel="manifest" href="/site.webmanifest">
+<meta name="theme-color" content="#000000" media="(prefers-color-scheme: dark)">
+<meta name="theme-color" content="#fac700" media="(prefers-color-scheme: light)">
+
+<link type="application/atom+xml" rel="alternate" href="{{ '/feed.xml' | cacheBuster }}" title="Blog - {{ project.title }}">
+
+<link rel="webmention" href="https://webmention.io/www.matuzo.at/webmention">
+<link rel="pingback" href="https://webmention.io/www.matuzo.at/xmlrpc">
+<link rel="canonical" href="{{ canonicalURL }}">
+
+{# TODO: Remove when done #}
+<meta name="robots" content="noindex, nofollow">
