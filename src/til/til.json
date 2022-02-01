@@ -1,4 +1,4 @@
 {
-  "layout": "layouts/til.njk",
+  "layout": "til.njk",
   "tags": ["til"]
 }

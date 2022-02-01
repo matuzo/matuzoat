@@ -1,5 +1,5 @@
 ---
-layout: layouts/base.njk
+layout: base.njk
 ---
 
 <article class="post rich-text">
@@ -10,7 +10,7 @@ layout: layouts/base.njk
     </p>
 
   {% if intro %}
-    {{ intro | md | safe }}
+    {{ intro | safe }}
   {% endif %}
 
   {% if intro2 %}
@@ -18,11 +18,11 @@ layout: layouts/base.njk
   {% endif %}
 
   {% if intro3 %}
-    {{ intro3 | md | safe }}
+    {{ intro3 | safe }}
   {% endif %}
 
   {% if teaser %}
-    {{ teaser | md | safe }}
+    {{ teaser | safe }}
   {% endif %}
 
   {% if content %}
