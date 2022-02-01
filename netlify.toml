@@ -11,3 +11,15 @@ package = "netlify-plugin-cache-folder"
 
 [build]  
   command = "CI= npm run build"
+
+[[redirects]]
+  from = "/feed_til.xml"
+  to = "/feed.xml"
+
+[[redirects]]
+  from = "/feed_misc.xml"
+  to = "/feed.xml"
+
+[[redirects]]
+  from = "/feed_all.xml"
+  to = "/feed.xml"
