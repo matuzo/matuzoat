@@ -1,14 +1,14 @@
 ---
 title: 'Highlighting columns in HTML tables'
 permalink: blog/highlighting-columns/index.html
-metadescription: 'The col element allows us to style columns in tables.'
+meta:
+   description: 'The col element allows us to style columns in tables.'
+   image: sm_tables.png
 date: 2021-03-20T06:58:54.969Z
 teaser: 'The `col` element allows us to style columns in tables.'
 tags:
   - blog
-  - posts
   - html
-image: articles/sm_tables.png
 ---
 
 In the past, I’ve used the `colgroup` and `col` elements to define max-widths for columns in tables when I didn’t want to rely on the default algorithm for distribution of widths, usually when building templates for e-mail newsletters.

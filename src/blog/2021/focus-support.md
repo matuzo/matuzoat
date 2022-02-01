@@ -1,12 +1,12 @@
 ---
 title: "Browser support: focus pseudo classes"
 permalink: blog/{{ title | slug }}/index.html
-metadescription: 'Browser support for the focus-visible and focus-within pseudo classes is pretty good.'
+meta:
+  description: 'Browser support for the focus-visible and focus-within pseudo classes is pretty good.'
 teaser: 'I don’t know who needs to hear this, but that’s the current browser support for `:focus-visible` and `:focus-within`, and I love it!'
 date: 2021-07-07T12:38:54.969Z
 tags:
   - blog
-  - posts
   - css
 ---
 

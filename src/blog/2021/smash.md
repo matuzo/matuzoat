@@ -1,11 +1,11 @@
 ---
 title: 'Smash!'
 permalink: /blog/misc/smash/index.html
-metadescription: 'My thoughts on grouping and sorting CSS properties.'
+meta:
+  description: 'My thoughts on grouping and sorting CSS properties.'
 date: 2021-01-01T06:58:54.969Z
 tags:
   - blogmisc
-  - posts
 draft: true
 ---
 

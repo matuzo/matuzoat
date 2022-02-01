@@ -1,12 +1,12 @@
 ---
 title: 'Who sampled?'
 permalink: /blog/misc/who-sampled/index.html
-metadescription: 'A web tip, one of my favourite websites.'
+meta:
+  description: 'A web tip, one of my favourite websites.'
 overview_teaser: 'A web tip, one of my favourite websites.'
 date: 2021-01-13T06:58:54.969Z
 tags:
   - blogmisc
-  - posts
 ---
 
 It’s hard for me to enjoy surfing the web, because there are just too many things that annoy me: bad performance, pop-ups, too many ads, cookie dialogs, chat bots, push notifications, etc. Call it an occupational disease. Yet there are sites I enjoy using a lot, not because they don’t do the things I’ve listed, but because the service they provide is great.

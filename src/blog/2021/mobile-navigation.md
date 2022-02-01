@@ -1,14 +1,14 @@
 ---
 title: 'More or less burger-less navigation'
 permalink: blog/{{ title | slug }}/index.html
-metadescription: 'A collection of websites that don’t hide the navigation on mobile behind a burger/menu button'
+meta:
+   description: 'A collection of websites that don’t hide the navigation on mobile behind a burger/menu button'
+   image: mobilenav.png
 date: 2021-01-07T06:58:54.969Z
 teaser: 'For your and my inspiration: A collection of websites that don’t hide the navigation on mobile behind a burger/menu button.'
 tags:
   - blog
-  - posts
   - design
-image: articles/mobilenav.png
 ---
 
 <div class="grid">

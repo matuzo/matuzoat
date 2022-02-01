@@ -1,14 +1,14 @@
 ---
 title: 'My current HTML boilerplate'
 permalink: blog/html-boilerplate/index.html
-metadescription: 'Every element I use for the basic structure of a HTML document, with explanations why.'
+meta:
+  description: 'Every element I use for the basic structure of a HTML document, with explanations why.'
+  image: sm_boilerplate.png
 teaser: 'Every element I use for the basic structure of a HTML document, with explanations why.'
 date: 2021-04-09T12:38:54.969Z
 tags:
   - blog
-  - posts
   - html
-image: articles/sm_boilerplate.png
 ---
 
 [Traducción a Español](https://www.ibidemgroup.com/edu/mi-plantilla-html/) by www.ibidemgroup.com.

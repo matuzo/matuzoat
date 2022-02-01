@@ -1,14 +1,14 @@
 ---
 title: 'Dev Tools: Debugging DOM Tree modifications'
 permalink: blog/dev-tools-debugging-dom-tree-modifications//index.html
-metadescription: '“Break on Subtree Modification” allows you to debug dynamically added and removed DOM nodes.'
+meta:
+   description: '“Break on Subtree Modification” allows you to debug dynamically added and removed DOM nodes.'
+   image: sm_domtree.png
 date: 2021-01-29T06:58:54.969Z
 teaser: '“Break on Subtree Modification” allows you to debug dynamically added and removed DOM nodes.'
 tags:
   - blog
-  - posts
   - devtools
-image: articles/sm_domtree.png
 ---
 
 The other day I was debugging a Drag’n’Drop component, and I noticed that it added a DOM node every time I dragged an element. I wanted to inspect the node and see what’s going on in the CSS panel, but as soon as I dropped the element I was dragging, the new node was removed from the DOM (Document Object Model). I tried to catch it quickly, but I didn’t have a chance.

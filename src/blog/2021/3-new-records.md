@@ -1,12 +1,12 @@
 ---
 title: '3 new records'
 permalink: /blog/misc/{{ title | slug }}/index.html
-metadescription: 'I went for a jog today and I broke 3 personal records.'
+meta:
+  description: 'I went for a jog today and I broke 3 personal records.'
 overview_teaser: 'I went for a jog today and I broke 3 personal records. 🎉'
 date: 2021-01-15T06:58:54.969Z
 tags:
   - blogmisc
-  - posts
 ---
 
 Last year I started jogging again and with increasing regularity I ran 110km in November and December, respectively. Being at home most of the time and the lack of anything better to do helped with that, of course.

@@ -1,12 +1,12 @@
 ---
 title: 'Find Satoshi'
 permalink: /blog/misc/{{ title | slug }}/index.html
-metadescription: 'People around the world, playing an alternative reality game, were looking for a man for 14 years and finally found him.'
+meta:
+  description: 'People around the world, playing an alternative reality game, were looking for a man for 14 years and finally found him.'
 overview_teaser: 'People around the world, playing an alternative reality game, were looking for a man for 14 years and finally found him.'
 date: 2021-01-22T06:58:54.969Z
 tags:
   - blogmisc
-  - posts
 ---
 
 I just learned about a game called [Perplex City](http://www.perplexcity.com/) which was released in 2005 in [Chris Coyiers blog](https://chriscoyier.net/2021/01/20/perplex-city/). It’s an [alternative reality game](https://en.wikipedia.org/wiki/Alternate_reality_game), a game that uses the real world as a platform. The goal of the game was to solve puzzles printed on 256 cards with the main goal to find a Cube buried somewhere in the world. The cube was found 13 years ago and the winner of the game rewarded £100,000.  

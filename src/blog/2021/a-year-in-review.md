@@ -2,13 +2,13 @@
 title: 'A year in review: 2021'
 permalink: /blog/misc/a-year-in-review-2021/index.html
 teaser: '2021 was wild! That’s why I’ve decided to write an “A year in review” post for the first time.'
-metadescription: ''
+meta:
+  description: ''
+  image: sm_review21.png
 overview_teaser: ''
 date: 2022-01-09T06:58:54.969Z
 tags:
   - blogmisc
-  - posts
-image: articles/sm_review21.png
 ---
 
 ## Personal
