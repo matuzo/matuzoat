@@ -1,0 +1,29 @@
+---
+layout: base.njk
+---
+
+<article class="rich-text">
+  <h1>{{ title }}</h1>
+
+  {% if image %}
+    {% if link %}
+      <a href="{{ link }}" rel="noopener">
+        <img loading="lazy" src="{{ metadata.cloudinary }}/w_440/{{image}}" alt="{{ title }}">
+      </a>
+    {% else %}
+      <a href="{{ metadata.cloudinary }}/{{image}}" rel="noopener">
+        <img loading="lazy" src="{{ metadata.cloudinary }}/w_440/{{image}}" alt="{{ title }}">
+      </a>
+    {% endif %}
+  {% endif %}
+
+  {{ content | safe }}
+
+  {% if link %}
+    <p>
+      <a href="{{ link }}" rel="noopener">
+        {{ link }}
+      </a>
+    </p>
+  {% endif %}
+</article>

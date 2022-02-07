@@ -1,41 +1,65 @@
 ---
-layout: 'layouts/base.njk'
-description: I'm a frontend developer from Vienna, specialized in HTML, accessibility, and CSS layout and architecture.
 title: 'Manuel Matuzovic'
-tags:
-  - nav
+layout: 'base.njk'
+description: I'm a frontend developer from Vienna, specialized in HTML, accessibility, and CSS layout and architecture.
 navtitle: Home
+css:
+  - grid
 ---
 
-<div>
+<div class="col">
   <h2>
     Recent posts
   </h2>
 
-  {% set max = 7 %}
+  {% set max = 6 %}
   {% set posts = collections.blog | reverse %}
+
   {% include 'components/blog-posts.njk' %}
 
-  <a href="/blog">
-    More blog posts
+  <a href="/blog" class="btn">
+    Show older blog posts
   </a>
 </div>
 
-<div>
+<div class="col">
 
   <h2>Today I learned</h2>
 
-  {% set max = 7 %}
   {% set posts = collections.til | reverse %}
-  {% include 'components/blog-posts.njk' %}
+  <div data-random-til="loading">
+  {% for post in posts.slice(0, 1) %}
+  <article>
+    <h3>
+      <a href="/til/{{ post.data.no }}">
+        #{{ post.data.no }} {{ post.data.title }}
+      </a>
+    </h3>
 
-  <a href="/til">
-    more “Today I learned” posts
-  </a>
+    <div class="til-code">
+      {{ post.templateContent | safe  }}
+    </div>
+  </article>
+{% endfor %}
 
+
+    <a href="/til" class="btn">
+      more “Today I learned” posts
+    </a>
+</div>
+  <div data-random-video="loading">
+    <h2>Latest recording</h2>
+
+    <div>
+
+      <h3>{{ talks[0].name }}</h3>
+      <p> {{ talks[0].event }}</p>
+      {# <iframe src="{{ talks[0].video.src }}" width="{{ talks[0].video.width }}" height="{{ talks[0].video.height }}" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe> #}
+    </div>
+  </div>
 </div>
 
-<div>
+<div class="col">
   <h2>About me</h2>
   <p>Hi! I'm a frontend developer from Vienna. I'm specialized in <strong>HTML</strong>, <strong>accessibility</strong>, and <strong>CSS layout and architecture</strong>.</p>
   <p>If you want to get in touch, write me an <a href="mailto:manuel@matuzo.at" rel="me">email</a> or find me on <a href="https://twitter.com/mmatuzo" rel="noopener me">twitter</a>.</p>

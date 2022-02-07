@@ -12,8 +12,8 @@ date: 1987-01-01
 <ol class="til" reversed>
 {% for til in collections.til|reverse %}
   <li>
-    <h2>
-      {{ til.data.title }}
+    <h2 id="no{{ til.data.no }}">
+    #{{ til.data.no }} - {{ til.data.title }}
     </h2>
     {% if til.data.image %}
       {% if til.data.link %}

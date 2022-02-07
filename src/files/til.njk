@@ -1,0 +1,17 @@
+---
+title: TIL JSON
+permalink: /data/til.json
+---
+[
+{%- for til in collections.til|reverse -%}
+  {
+    "title": "{{ til.data.title | escapeQuotes | safe }}",
+    "url": "/til#{{ loop.index }}",
+    "content": "{{- til.templateContent | escapeQuotes | replaceNewLines | safe -}}",
+    "no": "{{ til.data.no }}"
+  }
+  {%- if not loop.last -%}
+  ,
+  {%- endif -%}
+{%- endfor -%}
+]
