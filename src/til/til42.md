@@ -2,6 +2,7 @@
 title: You can make a link in an iframe open in its parent window, if you set target="_parent". 
 link: https://codepen.io/matuzo/pen/mdrmJOB?editors=1000
 date: 2020-12-16T17:45:34.386Z
+no: 43
 ---
 
 ```html

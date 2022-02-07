@@ -3,7 +3,11 @@ title: >-
   The bullet or number of a list-item can be selected and styled with the
   ::marker pseudo-element.
 link: 'https://codepen.io/matuzo/pen/abbqMEZ?editors=1100'
-image: til/til23.png
 date: 2019-11-05T04:39:20.320Z
+no: 23
 ---
-
+```css
+li::marker {
+  content: "😮 ";
+}
+```
