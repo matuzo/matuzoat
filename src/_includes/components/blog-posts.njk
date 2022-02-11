@@ -1,4 +1,25 @@
 {% for post in posts.slice(0, max) %}
+  <article class="teaser">
+    <h3>
+      <a href="{{ post.url }}">
+        {{ post.data.title }}
+      </a>
+    </h3>
+
+    <p>
+      posted on <time datetime="{{ post.data.date | machineDate }}">{{ post.data.date | readableDate }}</time>
+    </p>
+
+    <p>
+  {% renderTemplate "njk, md", post.data %}
+  {{ teaser }}
+  {% endrenderTemplate %}
+    </p>
+  </article>
+{% endfor %}
+
+
+{# {% for post in posts.slice(0, max) %}
 
   {% set url = post.data.url or post.url %}
 
@@ -6,7 +27,6 @@
     <article class="teaser rich-text">
       <{{level | default('h3') }} class="teaser-heading">
         {% if "til" in post.data.tags %}
-          {# TIL:  #}
         {% endif %}
         <a href="{{ url }}">
           {{ post.data.title }}
@@ -29,7 +49,7 @@
 
       {% if post.data.overview_teaser or post.data.teaser %}
         {% set teaser = post.data.overview_teaser or post.data.teaser %}
-        {{ teaser | md | safe }}
+        {{ teaser | safe }}
       {% endif %}
     </article>
   {% endif %}
@@ -69,4 +89,4 @@
       {% endif %}
     </ol>
   </nav>
-{% endif %}
+{% endif %} #}

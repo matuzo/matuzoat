@@ -31,3 +31,12 @@ date: 1987-01-05
 
   <p>If you want to work with me or if you're interested in an in-house workshop, please contact me via <a href="mailto:manuel@matuzo.at">email</a> or find me on <a href="https://twitter.com/mmatuzo" rel="noopener">twitter</a>. I'd be happy to get to know you!</p>
 </div>
+
+## Fact Box
+
+In 2022 I…
+
+* …ran 40km
+* …listened to 4 new (to me) albums
+* …read/listened to 1 book
+* …didn't use Twitter on my Smartphone for 44 days
