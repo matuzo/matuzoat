@@ -1,6 +1,7 @@
 module.exports = {
   title: 'Manuel Matuzović',
-  url: 'https://www.matuzo.at',
+  // TODO: Replace with matuzo.at
+  url: 'https://relaunch22--matuzo.netlify.app/',
   env: process.env.ELEVENTY_ENV,
   currentYear: new Date().getFullYear(),
 };
