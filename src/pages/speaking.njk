@@ -7,10 +7,30 @@ date: 1987-01-02
 renderData: 
   title_classes: 'page-grid__heading'
   content_classes: 'page-grid'
+tags:
+  - nav
+cols_class: cols--full
 ---
-
-{% set collection = collections.speaking_future %}
-
+  {% for year in talks %}
+    <div class="col">
+      <h2>{{ year.year }}</h2>
+      
+      {% for event in year.events %}
+        <div>
+          <h3>{{ event.name }}</h3>
+          <p> {{ event.event }}</p>
+          <p> {{ event.date }}</p>
+          <div>
+            {% if event.video %}
+              <iframe src="{{ event.video.src }}" width="{{ event.video.width }}" height="{{ event.video.height }}" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>
+            {% endif %}
+          </div>
+        </div>
+      {% endfor %}
+    </div>
+  {% endfor %}
+{# {% set collection = collections.speaking_future %} #}
+{# 
 {% if collection|length %}
   <h2 class="page-heading page-grid__subheading">Upcoming talks</h2>
   {% include "components/speaking.njk" %}
@@ -21,4 +41,4 @@ renderData:
 {% if collection|length %}
   <h2 class="page-heading page-grid__subheading">Past talks</h2>
   {% include "components/speaking.njk" %}
-{% endif %}
+{% endif %} #}
