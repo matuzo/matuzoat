@@ -1,0 +1,14 @@
+.site-footer {
+    padding: var(--gap);
+}
+
+small {
+    margin-right: auto;
+}
+
+@media (min-width: 768px) {
+    .site-footer {
+        display: flex;
+        justify-content: flex-end;
+    }
+}

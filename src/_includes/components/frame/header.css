@@ -1,15 +1,65 @@
 .site-header {
-  --direction: column;
 
-  display: flex;
-  flex-direction: var(--direction);
-  border-bottom: 8px solid var(--c-contrast);
-  /* justify-content: space-between;
+
+  border-bottom: var(--gap) solid var(--c-contrast);
+  /* 
   align-items: flex-end; */
   /* padding: 2rem 1rem 0.5rem;
   margin: 0 2rem 2rem; */
-  padding: 1rem;
+  padding: 2rem 2rem 1rem;
 }
+
+.site-header__wrapper {
+  --direction: column;
+  display: flex;
+  flex-direction: var(--direction);
+  justify-content: space-between;
+  max-width: 1680px;
+
+}
+
+@media (min-width: 1024px) {
+  .site-header__wrapper {
+    --direction: row;
+  }
+}
+
+.site-title {
+  margin-bottom: 0.3rem;
+  font-size: 2.1em;
+}
+
+.site-title a {
+  text-decoration: none;
+}
+
+.nav-main {
+  font-size: 2.1rem;
+}
+
+.nav-main__list {
+  display: flex;
+  gap: 0 2rem;
+  flex-wrap: wrap;
+  line-height: 1;
+}
+
+.nav-main a {
+  display: inline-flex;
+  padding: 1rem 0;
+}
+
+.nav-main a:where(:link, :visited) {
+  text-decoration: none;
+}
+
+.nav-main a:where([aria-current]) {
+  font-weight: bold;
+  padding-bottom: 0.3rem;
+  box-shadow: 0 3px 0 0 #000;
+}
+
+
 
 .skip-link {
   position: absolute;

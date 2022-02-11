@@ -1,6 +1,8 @@
+
 :root {
   --c-primary: #fac700;
   --c-contrast: #000000;
+  --gap: 1rem;
 }
 
 * {
@@ -12,18 +14,63 @@ html {
   font-size: 62.5%;
 }
 
+
+body {
+  --max-width: 625px;
+}
+
+@media (min-width: 1024px) {
+  body {
+    --max-width: 100%;
+  }
+}
+
+
+@media (min-width: 1440px) {
+  html {
+    height: 100%;
+  }
+
+  body {
+    height: 100%;
+    display: grid;
+    grid-template-rows: auto 1fr auto;
+  }
+  }
+
+
 body {
   background-color: var(--c-primary);
 
   margin: 0;
 
   color: var(--c-contrast);
-  font-size: 1.6rem;
+  font-size: 1.9rem;
   font-family: 'Yantramanav', sans-serif;
+  max-width: var(--max-width);
+  margin: 0 auto;
+  line-height: 1.4;
 }
+
+
 
 h1, h2 {
   font-family: 'Courier Prime', monospace;
+  letter-spacing: -1px;
+}
+
+h2 {
+  font-size: 1.5em;
+  background-color: var(--c-contrast);
+  color: var(--c-primary);
+  padding: 0.6rem var(--gap) 0.2rem;
+  margin-bottom: 0em;
+  font-weight: normal;
+}
+
+h3 {
+  font-size: 1.2em;
+  margin-bottom: 0.2em;
 }
 
 img {
@@ -47,7 +94,188 @@ a:focus {
 
 a:focus-visible {
   outline: 4px solid var(--c-contrast);
-  outline-offset: 2px;
+  outline-offset: -1px;
+}
+
+iframe {
+  max-width: 100%;
+  aspect-ratio: 16 / 9;
+  height: auto;
 }
 
 
+
+/**
+ * matuzo theme for JavaScript, CSS, and HTML
+ * Based on the a11y-dark theme: https://github.com/PrismJS/prism-themes/blob/master/themes/prism-a11y-dark.css
+ * @author matuzo
+ */
+
+ code[class*='language-'],
+ pre[class*='language-'] {
+   background: none;
+   color: rgb(239, 239, 239);
+   font-family: Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace;
+   font-size: 1rem;
+   -webkit-hyphens: none;
+   -moz-hyphens: none;
+   -ms-hyphens: none;
+   hyphens: none;
+   line-height: 1.5;
+   -moz-tab-size: 8;
+   -o-tab-size: 8;
+   tab-size: 8;
+   text-align: left;
+   white-space: pre;
+   word-spacing: normal;
+   word-break: normal;
+   word-wrap: normal;
+ }
+ 
+ /* Code blocks */
+ pre[class*='language-'] {
+   border-left: 2rem solid hsl(186, 56%, 48%);
+   margin: 2.25rem 0;
+   overflow: auto;
+   padding: 2rem;
+ }
+ 
+ h4 + pre[class*='language-'] {
+   margin-top: 1rem;
+ }
+ 
+ pre[class*='language-css'] {
+   border-left-color: rgb(128, 210, 219);
+ }
+ 
+ :not(pre) > code[class*='language-'],
+ pre[class*='language-'] {
+   background: rgb(21, 58, 81);
+ }
+ 
+ /* Inline code */
+ :not(pre) > code[class*='language-'] {
+   padding: 0.1em;
+   border-radius: 0.3em;
+   white-space: normal;
+ }
+ 
+ .token.comment,
+ .token.prolog,
+ .token.doctype,
+ .token.cdata {
+   color: #d4d0ab;
+ }
+ 
+ .token.punctuation {
+   color: rgb(239, 239, 239);
+ }
+ 
+ .token.property,
+ .token.tag,
+ .token.constant,
+ .token.symbol,
+ .token.deleted {
+   color: rgb(128, 210, 219);
+ }
+ 
+ .token.boolean,
+ .token.number {
+   color: rgb(128, 210, 219);
+ }
+ 
+ .token.selector,
+ .token.attr-name,
+ .token.string,
+ .token.char,
+ .token.builtin,
+ .token.inserted {
+   color: rgb(247, 132, 145);
+ }
+ 
+ .token.operator,
+ .token.entity,
+ .token.url,
+ .language-css .token.string,
+ .style .token.string,
+ .token.variable {
+   color: rgb(128, 210, 219);
+ }
+ 
+ .token.atrule,
+ .token.attr-value,
+ .token.function {
+   color: #ffd700;
+ }
+ 
+ .token.keyword {
+   color: rgb(128, 210, 219);
+ }
+ 
+ .token.regex,
+ .token.important {
+   color: #ffd700;
+ }
+ 
+ .token.important,
+ .token.bold {
+   font-weight: bold;
+ }
+ .token.italic {
+   font-style: italic;
+ }
+ 
+ .token.entity {
+   cursor: help;
+ }
+ 
+ @media screen and (-ms-high-contrast: active) {
+   code[class*='language-'],
+   pre[class*='language-'] {
+     color: windowText;
+     background: window;
+   }
+ 
+   :not(pre) > code[class*='language-'],
+   pre[class*='language-'] {
+     background: window;
+   }
+ 
+   .token.important {
+     background: highlight;
+     color: window;
+     font-weight: normal;
+   }
+ 
+   .token.atrule,
+   .token.attr-value,
+   .token.function,
+   .token.keyword,
+   .token.operator,
+   .token.selector {
+     font-weight: bold;
+   }
+ 
+   .token.attr-value,
+   .token.comment,
+   .token.doctype,
+   .token.function,
+   .token.keyword,
+   .token.operator,
+   .token.property,
+   .token.string {
+     color: highlight;
+   }
+ 
+   .token.attr-value,
+   .token.url {
+     font-weight: normal;
+   }
+ }
+
+
+
+.js [data-random-video="loading"],
+.js [data-random-til="loading"] {
+   opacity: 0;
+ }

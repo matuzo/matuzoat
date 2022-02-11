@@ -1,0 +1,15 @@
+.btn {
+    border: 2px solid var(--c-contrast);
+    justify-self: start;
+    padding: 0.4rem 1rem;
+    text-decoration: none;
+    margin-left: 2.4rem;
+    box-shadow: -7px 0 0 var(--c-contrast), -15px 0 0 var(--c-primary), -24px 0 0 var(--c-contrast);
+    font-weight: bold;
+text-transform: uppercase;
+}
+
+.btn:where(:hover, :focus) {
+    background-color: var(--c-contrast);
+    color: var(--c-primary);
+}

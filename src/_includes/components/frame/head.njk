@@ -24,6 +24,7 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
 {#- <script async> -#}
+<script src="/assets/main.js" async></script>
 {#- / -#}
 {#- Synchronous JS -#}
 {#- / -#}
@@ -31,10 +32,10 @@
 {#- Synchronous CSS -#}
 <link rel="stylesheet" href="{{ '/assets/main.css' | url | cacheBuster }}">
 
-{#- {% for sheet in sheets %}
-{% set sheet_url = '/assets/' + sheet + '.css' %}
-<link rel="stylesheet" href="{{ sheet_url | url | cacheBuster }}">
-{% endfor %} -#}
+{%- for sheet in css -%}
+  {%- set sheet_url = '/assets/' + sheet + '.css' -%}
+  <link rel="stylesheet" href="{{ sheet_url | url | cacheBuster }}">
+{%- endfor -%}
 
 <link href="https://fonts.googleapis.com/css2?family=Courier+Prime:wght@400;700&family=Yantramanav:wght@400;700&display=swap" rel="stylesheet"> 
 
