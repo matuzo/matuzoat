@@ -2,6 +2,7 @@ const filters = require('./_11ty/filters.js');
 
 const pluginRss = require('@11ty/eleventy-plugin-rss');
 const syntaxHighlight = require('@11ty/eleventy-plugin-syntaxhighlight');
+const { EleventyRenderPlugin } = require("@11ty/eleventy");
 
 module.exports = function (eleventyConfig) {
   // Enable Quiet Mode to Reduce Console Noise 
@@ -15,6 +16,12 @@ module.exports = function (eleventyConfig) {
   // Plugins
   eleventyConfig.addPlugin(pluginRss);
   eleventyConfig.addPlugin(syntaxHighlight);
+  eleventyConfig.addPlugin(EleventyRenderPlugin);
+
+  eleventyConfig.addPassthroughCopy({
+    './src/static/favicon': '/',
+    './src/static/js': '/assets/',
+  });
   
   return {
     markdownTemplateEngine: 'njk',
