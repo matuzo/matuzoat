@@ -1,18 +1,24 @@
 <header class="site-header">
-  <h1>Manuel Matuzovic</h1>
-
   <a href="#main" class="skip-link">Skip to content</a>
 
-  <nav class="nav-main">
-    <ul class="nav-main__list">
-      {%- for nav in collections.nav | reverse -%}
-        <li>
-          <a {% if nav.url == page.url %} aria-current="page"{% endif %} href="{{ nav.url | url }}">
-            {{ nav.data.navtitle }}
-          </a>
-        </li>
-      {%- endfor -%}
-    </ul>
-  </nav>
+  <div class="site-header__wrapper">
+    <h1 class="site-title">
+      <a href="/">
+        {{ project.title }}
+      </a>
+    </h1>
+
+    <nav class="nav-main">
+      <ul class="nav-main__list">
+        {%- for nav in collections.nav | reverse -%}
+          <li>
+            <a {% if nav.url == page.url %} aria-current="page"{% endif %} href="{{ nav.url | url }}">
+              {{ nav.data.navtitle }}
+            </a>
+          </li>
+        {%- endfor -%}
+      </ul>
+    </nav>
+  </div>
 </header>
 

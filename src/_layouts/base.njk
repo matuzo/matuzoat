@@ -4,11 +4,13 @@
     {% include 'components/frame/head.njk' %}
   </head>
 
-  <body  class="{{ page_class }}">
+  <body class="{{ page_class }}">
     {% include 'components/frame/header.njk' %}
 
-    <main id="main">      
-      {{ content | safe }}
+    <main id="main">  
+      <div class="cols {{ cols_class }}">
+        {{ content | safe }}
+      </div>
     </main>
 
     {% include 'components/frame/footer.njk' %}
