@@ -1,0 +1,359 @@
+[
+  {
+    "year": 2021,
+    "events": [
+      {
+        "id": "larastreamers22",
+        "name": " Larastreamers #28 - But Is It Accessible?",
+        "event": "Larastreamers with Christoph Rumpel",
+        "date": "2021-12-22",
+        "year": 2021,
+        "video": {
+          "src": "https://www.youtube.com/embed/Xr0r2Ft_ROQ",
+          "width": 560,
+          "height": 315
+        },
+        "country": "Online",
+        "stream": "true"
+      },
+      {
+        "id": "smashing22",
+        "name": "Building The Most Inaccessible Site Possible with a Perfect Lighthouse Score",
+        "event": "Smashing Meets For All",
+        "date": "2021-12-06",
+        "year": 2021,
+        "video": {
+          "src": "https://player.vimeo.com/video/654497457?h=f2d9bf3fe9",
+          "width": 640,
+          "height": 360
+        },
+        "country": "Online"
+      },
+      {
+         "id": "wd221",
+         "name": "Building The Most Inaccessible Site Possible with a Perfect Lighthouse Score",
+         "event": "Web Directions AAA",
+         "date": "2021-10-29",
+         "country": "Online"
+     },
+     {
+         "id": "wd221",
+         "name": "Die perfekte Barriere (German)",
+         "event": "technica11y",
+         "date": "2021-11-15",
+         "country": "Online",
+         "video": {
+             "src": "https://www.youtube.com/embed/VulKOpb6uCw?start=1691",
+             "width": 560,
+             "height": 315
+         }
+     }
+    ]
+  },
+  {
+    "year": 2020,
+    "events": [
+      {
+        "id": "csscafe20",
+        "name": "Writing even more CSS with Accessibility in Mind",
+        "event": "CSSCafé",
+        "date": "2020-09-17",
+        "video": {
+          "src": "https://www.youtube.com/embed/Gm8GAB5SF5c",
+          "width": 560,
+          "height": 315
+        },
+        "country": "Online"
+      },
+      {
+         "id": "civ20",
+         "name": "Designed for Inclusion: Writing CSS with Accessibility in Mind",
+         "event": "CSS-in-Vienna #1",
+         "date": "2020-01-23",
+         "country": "AT"
+     },
+     {
+         "id": "civ220",
+         "name": "Here's what I didn't know about list-style-type (lightning talk)",
+         "event": "CSS-in-Vienna #2",
+         "date": "2020-03-04",
+         "country": "AT"
+     },
+     
+    
+     {
+         "id": "id2420",
+         "name": "Writing even more CSS with Accessibility in Mind",
+         "event": "Inclusive Design 24 #id24",
+         "date": "2020-09-17",
+         "video": {
+             "src": "https://www.youtube.com/embed/o6ssu5oKyaU",
+             "width": 560,
+             "height": 315
+         },
+         "country": "Online"
+     }
+    ]
+  },
+  {
+    "year": 2019,
+    "events": [
+      {
+        "id": "stripecon19",
+        "name": "The Dark Side of the Grid",
+        "event": "StripeCon ´19",
+        "date": "2019-10-12",
+        "video": {
+          "src": "https://www.youtube.com/embed/R8LZdoUbeg4",
+          "width": 560,
+          "height": 315
+        },
+        "country": "AT"
+      },
+      {
+         "id": "reactfi19",
+         "name": "12 Tips For More Accessible React Apps",
+         "event": " React Finland",
+         "date": "2019-04-25",
+         "video": {
+             "src": "https://www.youtube.com/embed/NL6XKcX4sxc",
+             "width": 560,
+             "height": 315
+         },
+         "country": "FI"
+     },
+     {
+         "id": "ss19",
+         "name": "The Dark Side of the Grid",
+         "event": "StahlstadtJS #21",
+         "date": "2019-04-02",
+         "video": {
+             "src": "https://www.youtube.com/embed/AB5diZ-i7-c",
+             "width": 560,
+             "height": 315
+         },
+         "country": "AT"
+     },
+     {
+      "id": "jd19",
+      "name": "Optimierte User Experience und Website performance durch Barrierefreiheit ",
+      "event": "Joomla Day",
+      "date": "2019-03-30",
+      "country": "AT"
+  },
+  {
+      "id": "ac19",
+      "name": "8 Tips for More Accessible React Apps",
+      "event": "Accessibility Club Meetup 8",
+      "date": "2019-05-15",
+      "country": "AT",
+      "video": {
+          "src": "https://www.youtube.com/embed/W98ZdGGRSc4",
+          "width": 560,
+          "height": 315
+      }
+  }
+    ]
+  },
+  {
+    "year": 2018,
+    "events": [
+      {
+        "id": "wek18",
+        "name": "The Dark Side of the Grid",
+        "slides": "ttps://noti.st/matuzo/KlSsWY/the-dark-side-of-the-grid",
+        "event": "Webkongress Erlangen",
+        "date": "2018-09-11",
+        "video": {
+          "src": "https://www.fau.tv/services/oembed/?url=https://www.fau.tv/webplayer/id/34998&format=iframe&maxwidth=1920&maxheight=1080",
+          "width": 1980,
+          "height": 1080
+        },
+        "country": "DE"
+      },
+      {
+        "id": "fec18",
+        "name": "The Dark Side of the Grid",
+        "event": "Frontend Con",
+        "date": "2018-12-04",
+        "video": {
+          "src": "https://www.youtube.com/embed/og9z2iDY0XU",
+          "width": 560,
+          "height": 315
+        },
+        "country": "PL"
+      },
+      {
+        "id": "atag18",
+        "name": "The Dark Side of the Grid",
+        "description": "Die CSS Grid Layout Spezifikation ist eine der spannendsten Entwicklungen in CSS der letzten Jahre. Sie bringt eine Reihe neuer Eigenschaften, Einheiten, Funktionen und verwandte Spezifikationen mit sich, aber leider auch einige Gefahren. In diesem Talk gibt Manuel Matuzović eine kurze Einführung in CSS Grid Layout und stellt sich besagten Gefahren, indem er die Probleme erklärt und Alternativen vorstellt. Du wirst lernen, was es bei der Arbeit mit Grid zu beachten gibt, warum Source Order wichtig ist, wie man mit Legacy-Browsern umgeht und welche Vor- und Nachteile neue display-Werte haben.",
+        "slides": "https://noti.st/matuzo/Id4Q7J/the-dark-side-of-the-grid",
+        "event": "A-Tag 2018",
+        "date": "2018-09-20",
+        "country": "AT"
+      },
+      {
+        "id": "a11yTO18",
+        "name": "The Dark Side of the Grid",
+        "event": "#a11yTO Conf",
+        "date": "2018-10-16",
+        "country": "CA"
+      },
+      {
+         "id": "fc18",
+         "name": "The Dark Side of the Grid",
+         "slides": "https://noti.st/matuzo/KUy0gd/i-threw-away-my-mouse",
+         "description": "Inspired by a talk by Laura Carvajal, Manuel Matuzović performed an experiment and didn’t use a mouse or trackpad for two weeks. He wanted to improve his understanding of how it is to use a computer and especially the web only with the keyboard. \n\n He has documented all sites he has visited and the good and bad practices he came across. This talk illustrates the most common issues he encountered and possible ways to fix them. You'll learn why it's important to make websites keyboard accessible and who benefits from it. On top of that, Manuel will share his favorite keyboard shortcuts and some other handy tips and tricks with you.",
+         "event": "Frontend Conf 2018",
+         "date": "2018-10-04",
+         "video": {
+             "src": "https://www.youtube.com/embed/oCFBkpqvLOI",
+             "width": 560,
+             "height": 315
+         },
+         "country": "RU"
+     },
+
+    
+    {
+      "id": "wc18",
+      "name": "Designed for Inclusion: Writing CSS with Accessibility in Mind",
+      "event": "webclerks Meetup #14",
+      "date": "2018-09-27",
+      "country": "AT"
+  },
+  {
+      "id": "cc18",
+      "name": "Writing HTML with Accessibilty in Mind (lightning talk)",
+      "event": "webclerks Meetup #1",
+      "date": "2018-03-03",
+      "country": "AT"
+  }
+    ]
+  },
+  {
+    "year": 2017,
+    "events": [
+      {
+        "id": "cssconf17",
+        "name": "Designed for Inclusion: Writing CSS with Accessibility in Mind",
+        "description": "Web accessibility has so many facets, that learning about it and implementing it correctly may seem daunting to some of us. Just imagine excluding a whole group of users by simply declaring * { outline: none; }.\n\nThe good news, though, is that CSS has a lot to offer that may help us create accessible web sites and web apps. This talk aims to demystify web accessibility and provide you with simple and practical CSS tips and tricks, which you can easily incorporate into your workflow today. You are going to find out how to make your web projects more inclusive and improve the usability and user experience at the same time.",
+        "event": "CSS Conf Budapest",
+        "slides": "https://noti.st/matuzo/k2433b/designed-for-inclusion-writing-css-with-accessibility-in-mind",
+        "date": "2017-10-24",
+        "year": 2017,
+        "video": {
+          "src": "https://www.youtube.com/embed/EOiC2M47GBY",
+          "width": 560,
+          "height": 315
+        },
+        "country": "HU"
+      },
+      {
+        "id": "sae17",
+        "name": "Accessible UX",
+        "event": "SAE Alumni Convention",
+        "date": "2017-10-19",
+        "country": "DE"
+      },
+      {
+        "id": "piter17",
+        "name": "Accessible UX",
+        "description": "What is the first thing that comes to your mind when you think about web accessibility? Maybe optimising a website in a way that it’s easier to use with assistive technology like screen readers? Of course, that’s one part, but accessibility is more than that. Accessibility is about making websites and web apps easier to understand and use for everyone. With better accessibility comes better usability and user experience. This talk aims to demystify web accessibility and provide you with simple and practical takeaways, which you can easily incorporate in your workflow today. You are going to get a better understanding of how other people surf the web and find out how to make your web projects more inclusive and improve the usability and user experience at the same time.",
+        "slides": "https://noti.st/matuzo/yfVeoP/accessible-ux",
+        "event": "Piter CSS",
+        "date": "2017-06-16",
+        "video": {
+          "src": "https://www.youtube.com/embed/cAyu5W7zpLI",
+          "width": 560,
+          "height": 315
+        },
+        "country": "RU"
+      },
+      {
+         "id": "wc17",
+         "name": "Accessible UX",
+         "description": "What is the first thing that comes to your mind when you think about web accessibility? Maybe optimising a website in a way that it’s easier to use with assistive technology like screen readers? Of course, that’s one part, but accessibility is more than that. Accessibility is about making websites and web apps easier to understand and use for everyone. With better accessibility comes better usability and user experience. This talk aims to demystify web accessibility and provide you with simple and practical takeaways, which you can easily incorporate in your workflow today. You are going to get a better understanding of how other people surf the web and find out how to make your web projects more inclusive and improve the usability and user experience at the same time.",
+         "event": "WordCamp Vienna",
+         "date": "2017-04-23",
+         "country": "AT"
+     },
+     {
+         "id": "fcc17",
+         "name": "Level-Up your career – Become a Focus Manager",
+         "event": "Free Code Camp Vienna",
+         "date": "2017-05-19",
+         "country": "AT"
+     },
+     {
+         "id": "sae17",
+         "name": "CSS Grid Layout workshop",
+         "event": "SAE Vienna",
+         "date": "2017-05-19",
+         "country": "AT"
+     },
+     {
+         "id": "vjs17",
+         "name": "Keyboard controls for an international user base.",
+         "event": "ViennaJS",
+         "date": "2017-05-31",
+         "country": "AT"
+     },
+     {
+         "id": "cm17",
+         "name": "Progressive Enhancement lightning talk",
+         "event": "CodePen Meetup Vienna",
+         "date": "2017-06-27",
+         "country": "AT"
+     },
+     {
+         "id": "cmjf17",
+         "name": "Designed for Inclusion: Writing CSS with Accessibility in Mind",
+         "event": "CSS-Minsk-JS ",
+         "date": "2017-09-10",
+         "country": "BE"
+     },
+     {
+         "id": "atag17",
+         "name": "Accessibility für DeveloperInnen: Hello World!",
+         "event": "A-Tag",
+         "date": "2017-10-20",
+         "country": "AT"
+     },
+     {
+         "id": "wc17",
+         "name": "Designed for Inclusion: Writing CSS with Accessibility in Mind",
+         "event": "webclerks Meetup #10",
+         "date": "2017-11-27",
+         "country": "AT"
+     },
+     {
+         "id": "ss17",
+         "name": "Designed for Inclusion: Writing CSS with Accessibility in Mind",
+         "event": "Stahlstadt.js Meetup",
+         "date": "2017-11-29",
+         "country": "AT"
+     }
+    ]
+  },
+  {
+    "year": 2016,
+    "events": [    {
+      "id": "webclerks16",
+      "name": "Cross Device Testing",
+      "event": "webclerks Meetup #1",
+      "date": "2016-03-17",
+      "country": "DE"
+  }]
+  },
+  {
+    "year": 2015,
+    "events": [    {
+      "id": "sae15",
+      "name": "Frontend Performance",
+      "event": "SAE Alumni Convention",
+      "date": "2015-10-22",
+      "country": "DE"
+  }]
+  }
+]
