@@ -2,7 +2,7 @@
 title: 'Web Security Basics: XSS'
 metadescription: >-
   An introduction to Cross Site Scripting and XSS prevention.
-date: 2022-01-28T10:50:54.969Z
+date: 2022-02-16T10:50:54.969Z
 image: articles/sm_xss.jpg
 teaser: "I decided to learn more about areas of web development I don’t know a lot about. You know,…stuff like SEO and web security. I’ll share my findings here on my blog and I’ll try to do as much research as possible, but please keep in mind that I’m a noob concerning these topics."
 tags:
