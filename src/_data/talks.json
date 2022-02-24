@@ -1,5 +1,19 @@
 [
   {
+    "year": 2022,
+    "events": [
+      {
+        "id": "bonn22",
+        "name": "Introduction to web accessibility and deceitful Lighthouse scores",
+        "event": "Bonn Code Meetup number 7",
+        "date": "2022-02-24",
+        "year": 2022,
+        "country": "Online",
+        "stream": "true"
+      }
+    ]
+  },
+  {
     "year": 2021,
     "events": [
       {
