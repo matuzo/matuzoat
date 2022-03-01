@@ -9,7 +9,12 @@
         "date": "2022-02-24",
         "year": 2022,
         "country": "Online",
-        "stream": "true"
+        "stream": "true",
+        "video": {
+          "src": "https://www.youtube.com/embed/jgFi4G1nQbM",
+          "width": 560,
+          "height": 315
+        }
       }
     ]
   },
