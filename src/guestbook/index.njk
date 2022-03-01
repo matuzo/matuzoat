@@ -1,0 +1,30 @@
+---
+layout: base.njk
+title: Guestbook
+navtitle: Guestbook
+permalink: /guestbook/index.html
+date: 1987-01-02
+renderData: 
+  title_classes: 'page-grid__heading'
+  content_classes: 'page-grid'
+tags:
+  - nav
+cols_class: cols--full
+---
+<div class="col">
+  <h1>Guestbook</h1>
+
+  <form>
+    <input type="text" name="titel">
+    <button>Save</button>
+  </form>
+
+  {% for entry in collections.guestbook %}
+    <h2>{{ entry.data.title }}</h2>
+
+    {% renderTemplate "njk, md" %}
+Lorem ipsum, dolor sit amet consectetur *dipisicing* elit. Quo fugiat **repellendus** earum, dolores corporis quis nisi aliquid iusto cum molestias reiciendis ea aperiam mollitia iure ut recusandae possimus, debitis autem?
+    {% endrenderTemplate %}
+
+  {% endfor %}
+</div>
