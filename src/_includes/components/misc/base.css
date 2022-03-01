@@ -12,6 +12,8 @@
 
 html {
   font-size: 62.5%;
+  text-size-adjust: none;
+  -webkit-text-size-adjust: none;
 }
 
 
@@ -103,6 +105,13 @@ iframe {
   height: auto;
 }
 
+
+input,
+textarea,
+button {
+  font-size: inherit;
+  font-family: inherit;
+}
 
 
 /**
