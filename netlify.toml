@@ -11,3 +11,7 @@ package = "netlify-plugin-cache-folder"
 
 [build]  
   command = "CI= npm run build"
+
+[[redirects]]
+  from = "/htmltest"
+  to = "https://cdpn.io/pen/debug/zYqQeRw"
