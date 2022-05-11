@@ -39,7 +39,8 @@ If you wrap the contents of a `details` element in a `div`, the browser or a scr
   </div>
 </details>
 ```
-<!-- [html-validate-disable] -->
+
+<!-- [html-validate-disable element-required-content] -->
 <details>
   <div>
     <summary>Show info</summary>
@@ -82,7 +83,7 @@ If you wrap the contents of a `figure` element in a `div`, the `figcaption` migh
   </div>
 </figure>
 ```
-<!-- [html-validate-disable] -->
+
 <figure>
   <img src="/images/gus.jpg" width="400" alt="Gus Polinski.">
   
@@ -99,7 +100,7 @@ If you wrap the contents of a `figure` element in a `div`, the `figcaption` migh
 
 ```html
 <figure>
-  <img src="/images/gus.jpg" width="400" alt="Gus Polinski."/>
+  <img src="/images/gus.jpg" width="400" alt="Gus Polinski.">
 
   <figcaption>
     The Polka King of the Midwest talking to a desperate mother.
@@ -108,7 +109,7 @@ If you wrap the contents of a `figure` element in a `div`, the `figcaption` migh
 ```
 
 <figure>
-  <img src="/images/gus.jpg" width="400" alt="Gus Polinski."/>
+  <img src="/images/gus.jpg" width="400" alt="Gus Polinski.">
   <figcaption>
     The Polka King of the Midwest talking to a desperate mother.
   </figcaption>
@@ -139,7 +140,7 @@ A `fieldset` gets its label from the `legend` element. If the `legend` is wrappe
 </fieldset>
 ```
 
-<!-- [html-validate-disable] -->
+<!-- [html-validate-disable wcag/h71] -->
 <fieldset>
   <div>
   <legend>Shirt sizes</legend>
