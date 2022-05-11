@@ -483,3 +483,12 @@ blockquote::after {
   transition: none !important;
   animation: none !important;
 }
+
+.code-label {
+  margin-bottom: 0;
+}
+
+
+.code-label + pre {
+  margin-top: 0;
+}
