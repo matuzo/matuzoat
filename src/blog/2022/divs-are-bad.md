@@ -39,7 +39,7 @@ If you wrap the contents of a `details` element in a `div`, the browser or a scr
   </div>
 </details>
 ```
-
+<!-- [html-validate-disable] -->
 <details>
   <div>
     <summary>Show info</summary>
@@ -73,7 +73,7 @@ If you wrap the contents of a `figure` element in a `div`, the `figcaption` migh
 
 ```html
 <figure>
-  <img src="/images/gus.jpg" width="400" alt="Gus Polinski."/>
+  <img src="/images/gus.jpg" width="400" alt="Gus Polinski.">
   
   <div>
     <figcaption>
@@ -82,9 +82,9 @@ If you wrap the contents of a `figure` element in a `div`, the `figcaption` migh
   </div>
 </figure>
 ```
-
+<!-- [html-validate-disable] -->
 <figure>
-  <img src="/images/gus.jpg" width="400" alt="Gus Polinski."/>
+  <img src="/images/gus.jpg" width="400" alt="Gus Polinski.">
   
   <div>
     <figcaption>
@@ -139,6 +139,7 @@ A `fieldset` gets its label from the `legend` element. If the `legend` is wrappe
 </fieldset>
 ```
 
+<!-- [html-validate-disable] -->
 <fieldset>
   <div>
   <legend>Shirt sizes</legend>
