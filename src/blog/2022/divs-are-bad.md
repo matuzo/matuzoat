@@ -1,9 +1,8 @@
 ---
 title: 'Divs are bad!'
-metadescription: >-
-
+metadescription: '…when you don’t use them correctly.'
 date: 2022-05-11T10:50:54.969Z
-image: articles/sm_divbad.jpg
+image: articles/sm_divsbad.jpg
 teaser: "Yes, clickbait, I’m so sorry! Of course, divs are not bad. For example, they can be really useful,…
 
 * …when you need additional elements for styling.
