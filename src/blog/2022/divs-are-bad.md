@@ -231,13 +231,42 @@ A `fieldset` gets its label from the `legend` element. If the `legend` is wrappe
   <li>C</li>
 </ul>
 
-I’ve seen all these wrong implementations (or variations of them) on several websites.
+*A quick side note*: It’s fine to use divs in a definition list (`dl`).
 
-## How do we prevent that?
+<p class="code-label">
+  <strong>Right</strong>
+</p>
 
-Before launching a site, when you deploy changes to an existing component or page or when you add a new component, validate the rendered markup. You can use the [validation bookmarklet](https://dequeuniversity.com/validator) by Deque for that. It works both with server- and client-side rendered pages. 
+```html
+<dl>
+  <div>
+    <dt>Key:</dt>
+    <dd>Value</dd>
+  </div>
+  <div>
+    <dt>Key:</dt>
+    <dd>Value</dd>
+  </div>
+</dl>
+```
 
-If you’re working with a JavaScript library or framework that demands that you wrap all items within the component in a parent element, before immediately going for the `div`, check first if you can use a [fragment](https://reactjs.org/docs/fragments.html) instead or if there’s a more suitable semantic element you could use. 
+<style>
+  dl div {
+    display: flex;
+    gap: 1rem;
+  }
+</style>
+
+<dl>
+  <div>
+    <dt>Key:</dt>
+    <dd>Value</dd>
+  </div>
+  <div>
+    <dt>Key:</dt>
+    <dd>Value</dd>
+  </div>
+</dl>
 
 ## paragraphs
 
@@ -302,3 +331,14 @@ I'm not wrapped in a div.
     I'm not wrapped in a div.
   </p>
 </div>
+
+
+<hr>
+
+I’ve seen all these wrong implementations (or variations of them) on several websites.
+
+## How do we prevent that?
+
+Before launching a site, when you deploy changes to an existing component or page or when you add a new component, validate the rendered markup. You can use the [validation bookmarklet](https://dequeuniversity.com/validator) by Deque for that. It works both with server- and client-side rendered pages. 
+
+If you’re working with a JavaScript library or framework that demands that you wrap all items within the component in a parent element, before immediately going for the `div`, check first if you can use a [fragment](https://reactjs.org/docs/fragments.html) instead or if there’s a more suitable semantic element you could use. 
