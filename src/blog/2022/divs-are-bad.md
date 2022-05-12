@@ -238,3 +238,67 @@ I’ve seen all these wrong implementations (or variations of them) on several w
 Before launching a site, when you deploy changes to an existing component or page or when you add a new component, validate the rendered markup. You can use the [validation bookmarklet](https://dequeuniversity.com/validator) by Deque for that. It works both with server- and client-side rendered pages. 
 
 If you’re working with a JavaScript library or framework that demands that you wrap all items within the component in a parent element, before immediately going for the `div`, check first if you can use a [fragment](https://reactjs.org/docs/fragments.html) instead or if there’s a more suitable semantic element you could use. 
+
+## paragraphs
+
+If you put a `div` in a `p`, it breaks the paragraph. For example, it could cause the browser to close the paragraph implicitly, render the content outside of it, and add another paragraph. 
+
+This is especially evident, if you try to style the paragraph, e.g. by adding a red border.
+
+<style>
+  .broken-p p {
+    border: 2px solid red;
+  }
+</style>
+
+```css
+p {
+  border: 2px solid red;
+}
+```
+
+<p class="code-label">
+  <strong>Wrong</strong>
+</p>
+
+```html
+<p>
+  <div>I'm wrapped in a div.</div>
+  I'm not wrapped in a div.
+</p>
+```
+
+<p class="code-label">
+  <strong>May result in:</strong>
+</p>
+
+```html
+<p></p>
+<div>I'm wrapped in a div.</div>
+I'm not wrapped in a div.
+<p></p>
+```
+<div class="broken-p">
+  <p>
+    <div>I'm wrapped in a div.</div>
+    I'm not wrapped in a div.
+  </p>
+</div>
+
+<p class="code-label">
+  <strong>Right</strong>
+</p>
+
+```html
+<p>
+  I'm wrapped in a div.<br>
+  I'm not wrapped in a div.
+</p>
+```
+
+<div class="broken-p">
+  <p>
+    I'm wrapped in a div.<br>
+    I'm not wrapped in a div.
+  </p>
+</div>
