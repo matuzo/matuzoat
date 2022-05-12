@@ -307,6 +307,7 @@ p {
 I'm not wrapped in a div.
 <p></p>
 ```
+<!-- [html-validate-disable no-implicit-close, close-order] -->
 <div class="broken-p">
   <p>
     <div>I'm wrapped in a div.</div>
