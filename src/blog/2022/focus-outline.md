@@ -64,6 +64,8 @@ The `outline` property is the perfect candidate for this job for several reasons
 <img src="/images/focus_sm2.webp" alt="Dark background color, white text and blueish highlights instead of white background, black text color and red highlights." loading="lazy" width="751" height="403">
 <figcaption>The same outline with different colors in a dark Windows theme.</figcaption>
 </figure>
+
+</li>
 </ul>
 
 ## outline sucks
