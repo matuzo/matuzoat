@@ -81,7 +81,8 @@ There are also disadvantages to using `outline`.
     I advice against leaving the default focus styles untouched because they might not work with every design. Overwrite them with something that works better with your theme.
     
     ```css
-    :focus {
+    /* Removes the default outline only in browsers that support :focus-visible */
+    :focus:not(:focus-visible) {
       outline: none;
     }
     
@@ -100,11 +101,12 @@ If you remember, one of the advantages of `outline` is that it works great in fo
 Here’s an example. Instead of using `outline`, I change the `background` and add a `box-shadow` on focus-visible.
 
 ```css
-:focus {
+:focus:not(:focus-visible) {
   outline: none;
 }
 
 :focus-visible {
+  outline: none;
   background: #000;
   color: #fff;
   box-shadow: 0 2px 0 0 #fff, 0 5px 0 0 #000;
