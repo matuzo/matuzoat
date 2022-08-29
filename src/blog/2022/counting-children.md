@@ -23,7 +23,15 @@ li:nth-last-child(n+3) ~ li {
 
 What I mean is that now we can style the parent element and other children differently depending on the number of items present anywhere in the parent element.
 
-*Note: `:has()` is only available in Safari or behind a flag in Firefox, Chrome, and Edge.*
+
+<div class="post" style="border: 10px dotted hotpink; padding: 1rem;">
+
+<p>
+  <strong>Note</strong>: <code>:has()</code> is only available in Safari or behind a flag in Firefox and Chrome.
+</p>
+
+</div>
+
 
 The following code checks if there are at least 3 list items in the list and adds a border to the parent if that's the case.
 ```css
@@ -255,12 +263,23 @@ I’ve built a demo to illustrate what can be done. If you click on the element,
   </button>
 </div>
 
-Pretty awesome, right?
-
-<p style="border: 10px dotted hotpink; padding: 1rem;">
-Disclaimer: This is not tested and not production-ready. Only use this technique for progressive enhancement. You shouldn’t use it to communicate important information, because changes are only reflected visually and not necessarily semantically.
-</p>
+Pretty awesome, right? [Try it on CodePen.](https://codepen.io/matuzo/pen/YzaoRLJ)
 
 ## Use cases
 
 I can image that this can be useful in content builders in CMS. You can use CSS to give users visual feedback depending on the number of items they have added to a block or component.
+
+<div class="post" style="border: 10px dotted hotpink; padding: 1rem;">
+
+<p style="margin-bottom: 1.5rem">
+  <strong>Disclaimer:</strong> This is not tested and not production-ready. Only use this technique for progressive enhancement and only with proper testing. You shouldn’t use it to communicate important information, because changes may only be reflected visually and not semantically.
+</p>
+
+
+<p>Safari is the only browser that supports <code>:has()</code> at the moment. No, it won't stay like that. Other browsers will follow soon.</p>
+
+<p>This solution might break, it's just a fun experiment. Don't use it in production.</p>
+
+<p>I've extended this disclaimer and I've added a pink, dotted border because people are apparently too lazy or ignorant to read the entire blog post.
+
+</div>
