@@ -280,6 +280,6 @@ I can image that this can be useful in content builders in CMS. You can use CSS 
 
 <p>This solution might break, it's just a fun experiment. Don't use it in production.</p>
 
-<p>I've extended this disclaimer and I've added a pink, dotted border because people are apparently too lazy or ignorant to read the entire blog post.
+<p>I've extended this disclaimer and I've added a pink, dotted border because people are apparently too lazy or ignorant to read the entire blog post.</p>
 
 </div>
