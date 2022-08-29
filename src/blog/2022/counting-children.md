@@ -2,7 +2,7 @@
 title: 'Parents counting children in CSS'
 metadescription: 'Using :has() to select parent elements that have a specific number of children.'
 date: 2022-08-29T09:38:54.969Z
-image: articles/sm_parenthas.jpg.jpg
+image: articles/sm_parenthas.jpg
 teaser: "The other day I was driving home when suddenly it hit me: We can use `:has()` to determine how many children a parent element has."
 tags:
   - blog
