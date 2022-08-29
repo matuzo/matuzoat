@@ -117,7 +117,7 @@ I’ve built a demo to illustrate what can be done. If you click on the element,
 .list li {
   counter-increment: count;
   margin: 0;
-  padding: 0.3rem 0.5rem 0.2rem 3.5ch;
+  padding: 0.3rem 0.5rem 0.2rem 4.5ch;
   height: 2.8rem;
   position: relative;
 }
@@ -129,7 +129,7 @@ I’ve built a demo to illustrate what can be done. If you click on the element,
   color: #fff;
   padding: 0.5rem;
   margin-right: 1rem;
-  width: 3ch;
+  width: 4ch;
   position: absolute;
   left: 0;
   top: 0;
@@ -257,7 +257,9 @@ I’ve built a demo to illustrate what can be done. If you click on the element,
 
 Pretty awesome, right?
 
+<p style="border: 10px dotted hotpink; padding: 1rem;">
 Disclaimer: This is not tested and not production-ready. Only use this technique for progressive enhancement. You shouldn’t use it to communicate important information, because changes are only reflected visually and not necessarily semantically.
+</p>
 
 ## Use cases
 
