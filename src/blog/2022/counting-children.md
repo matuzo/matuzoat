@@ -27,7 +27,7 @@ What I mean is that now we can style the parent element and other children diffe
 <div class="post" style="border: 10px dotted hotpink; padding: 1rem;">
 
 <p>
-  <strong>Note</strong>: <code>:has()</code> is only available in Safari or behind a flag in Firefox and Chrome.
+  <strong>Note</strong>: <code>:has()</code> is only available in Safari 15.4+, Chrome 105+ or behind a flag in Firefox.
 </p>
 
 </div>
@@ -276,7 +276,7 @@ I can image that this can be useful in content builders in CMS. You can use CSS 
 </p>
 
 
-<p>Safari is the only browser that supports <code>:has()</code> at the moment. No, it won't stay like that. Other browsers will follow soon.</p>
+<p>Safari and Chrome are the only browsers that support <code>:has()</code> at the moment. No, it won't stay like that. Other browsers will follow soon.</p>
 
 <p>This solution might break, it's just a fun experiment. Don't use it in production.</p>
 
