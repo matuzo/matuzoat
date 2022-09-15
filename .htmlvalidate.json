@@ -4,6 +4,7 @@
     "long-title": "off",
     "element-permitted-content": "off",
     "no-raw-characters": "off",
-    "no-inline-style": "off"
+    "no-inline-style": "off",
+    "svg-focusable": "off"
   }
 }

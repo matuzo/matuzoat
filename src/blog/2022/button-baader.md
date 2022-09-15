@@ -48,17 +48,17 @@ To help with that issue, I've collected different correct and wrong ways of labe
 
 The all-time classic “just using visible text” works for everyone.
 
-<button>Tweet!</button>
+<button type="button">Tweet!</button>
 
 ```html
-<button>Tweet!</button>
+<button type="button">Tweet!</button>
 ```
 
 ### Text and Icon
 
 It’s absolutely fine if you want to add an image or icon to the button. Just make sure to hide it from assistive technology using `aria-hidden="true"`. The text label of the button should be sufficient, we don’t need extra information.
 
-<button>
+<button type="button">
   <svg aria-hidden="true" width="28" height="28">
     <use xlink:href="#twitter"></use>
   </svg>
@@ -66,7 +66,7 @@ It’s absolutely fine if you want to add an image or icon to the button. Just m
 </button>
 
 ```html
-<button>
+<button type="button">
   <svg aria-hidden="true" width="28" height="28">
     <use xlink:href="#twitter"></use>
   </svg>
@@ -83,7 +83,7 @@ There are different ways of creating icon-only buttons.
 
 You can put text inside the button and hide it visually using a custom class.
 
-<button>
+<button type="button">
   <svg aria-hidden="true" width="28" height="28">
     <use xlink:href="#twitter"></use>
   </svg>
@@ -91,7 +91,7 @@ You can put text inside the button and hide it visually using a custom class.
 </button>
 
 ```html
-<button>
+<button type="button">
   <span class="sr-only">Tweet!</span>
 
   <svg aria-hidden="true" width="28" height="28">
@@ -122,14 +122,14 @@ You can put text inside the button and hide it visually using a custom class.
 
 You can add a text alternative for the icon using `aria-label` on the button.
 
-<button aria-label="Tweet!">
+<button aria-label="Tweet!" type="button">
   <svg aria-hidden="true" width="28" height="28">
     <use xlink:href="#twitter"></use>
   </svg>
 </button>
 
 ```html
-<button aria-label="Tweet!">
+<button aria-label="Tweet!" type="button">
   <svg aria-hidden="true" width="28" height="28">
     <use xlink:href="#twitter"></use>
   </svg>
@@ -142,7 +142,7 @@ If the label you want to use already exists somewhere on the page, you can refer
 
 <h2 id="heading" role="presentation" style="font-size: 1.5rem">Tweet!</h2>
 
-<button aria-labelledby="heading">
+<button aria-labelledby="heading" type="button">
   <svg aria-hidden="true" width="28" height="28">
     <use xlink:href="#twitter"></use>
   </svg>
@@ -151,7 +151,7 @@ If the label you want to use already exists somewhere on the page, you can refer
 ```html
 <h2 id="heading">Tweet!</h2>
 
-<button aria-labelledby="heading">
+<button aria-labelledby="heading" type="button">
   <svg aria-hidden="true" width="28" height="28">
     <use xlink:href="#twitter"></use>
   </svg>
@@ -162,7 +162,7 @@ If the label you want to use already exists somewhere on the page, you can refer
 
 The `<title>` element inside the `<svg>` can serve as the accessible name for the button. Unfortunately, in order for this to work properly with all screen readers and browsers, you have to label the `<svg>` using `aria-labelledby` explicitly.
 
-<button>
+<button type="button">
   <svg aria-labelledby="title_twitter_h72d" width="28" height="28">
     <title id="title_twitter_h72d">Tweet!</title>
     <use xlink:href="#twitter"></use>
@@ -170,7 +170,7 @@ The `<title>` element inside the `<svg>` can serve as the accessible name for th
 </button>
 
 ```html
-<button>
+<button type="button">
   <svg aria-labelledby="title_twitter_h72d" width="28" height="28">
     <title id="title_twitter_h72d">Tweet!</title>
     <use xlink:href="#twitter"></use>
@@ -181,13 +181,13 @@ The `<title>` element inside the `<svg>` can serve as the accessible name for th
 
 If you’re using an `<img>` element instead of `<svg>`, then the `alt` attribute serves as the accessible name of the button.
 
-<button>
-  <img src="/images/twitter.png" alt="Tweet!" width="28" />
+<button type="button">
+  <img src="/images/twitter.png" alt="Tweet!" width="28">
 </button>  
 
 ```html
-<button>
-  <img src="/images/twitter.png" alt="Tweet!" width="28" />
+<button type="button">
+  <img src="/images/twitter.png" alt="Tweet!" width="28">
 </button>  
 ```
 
@@ -206,12 +206,12 @@ If you’re using a background image, the best option is to add visually hidden 
   }
 </style>
 
-<button class="bgimg">
+<button type="button" class="bgimg">
   <span class="u-vh">Tweet!</span>
 </button>  
 
 ```html
-<button>
+<button type="button">
   <span class="sr-only">Tweet!</span>
 </button>  
 ```
@@ -230,10 +230,10 @@ Here are some of the wrong solutions I see often. Don’t do this!
 
 Don’t do this!
 
-<button class="bgimg"></button>
+<button type="button" class="bgimg"></button>
 
 ```html
-<button></button>
+<button type="button"></button>
 ```
 
 ```css
@@ -246,14 +246,14 @@ button {
 
 Don’t do this!
 
-<button>
+<button type="button">
   <svg width="28" height="28">
     <use xlink:href="#twitter"></use>
   </svg>
 </button>
 
 ```html
-<button>
+<button type="button">
   <svg width="28" height="28">
     <use xlink:href="#twitter"></use>
   </svg>
@@ -264,26 +264,26 @@ Don’t do this!
 
 Don’t do this!
 
-<button>
-  <img src="/images/twitter.png" alt="" width="28" />
+<button type="button">
+  <img src="/images/twitter.png" alt="" width="28">
 </button>  
 
 ```html
-<button>
-  <img src="/images/twitter.png" alt="" width="28" />
+<button type="button">
+  <img src="/images/twitter.png" alt="" width="28">
 </button>
 ```
 
 or
-<!-- [html-validate-disable wcag/h36] -->
-<button>
-  <img src="/images/twitter.png" width="28" />
+<!-- [html-validate-disable wcag/h37] -->
+<button type="button">
+  <img src="/images/twitter.png" width="28">
 </button>  
-<!-- [html-validate-enable wcag/h36] -->
+<!-- [html-validate-enable wcag/h37] -->
 
 ```html
-<button>
-  <img src="/images/twitter.png" width="28" />
+<button type="button">
+  <img src="/images/twitter.png" width="28">
 </button>
 ```
 
