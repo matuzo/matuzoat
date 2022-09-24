@@ -5,6 +5,7 @@ const transforms = require('./_11ty/transforms.js');
 const pluginRss = require('@11ty/eleventy-plugin-rss');
 const syntaxHighlight = require('@11ty/eleventy-plugin-syntaxhighlight');
 var escape = require('escape-html');
+const cssBrowserSupport = require("@11tyrocks/eleventy-plugin-css-browser-support");
 
 module.exports = function (eleventyConfig) {
   // Filters
@@ -29,6 +30,9 @@ module.exports = function (eleventyConfig) {
   // Plugins
   eleventyConfig.addPlugin(pluginRss);
   eleventyConfig.addPlugin(syntaxHighlight);
+  eleventyConfig.addPlugin(cssBrowserSupport, {
+    includePanelJS: false
+  });
 
   eleventyConfig.addPassthroughCopy('./src/static/img');
   eleventyConfig.addPassthroughCopy('./src/static/min');
