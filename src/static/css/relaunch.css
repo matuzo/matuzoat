@@ -28,6 +28,15 @@ main {
   display: block;
 }
 
+
+a:where(:link, :visited) {
+  color: #156d8f;
+}
+
+a:visited {
+  color: #0f4d65;
+}
+
 footer ul,
 nav ul {
   display: flex;
@@ -35,11 +44,18 @@ nav ul {
   padding: 0;
   flex-wrap: wrap;
   margin: 0.6rem 0 0.3rem;
+  font-size: 1.3rem;
+  gap: 1rem;
+  letter-spacing: 1px;
 }
 
-nav li {
-  margin-right: 1rem;
-  margin-bottom: 0.5rem;
+nav a:is(:link, :visited) {
+  text-decoration: none;
+  color: #156d8f;
+}
+
+nav a:hover {
+  text-decoration: underline;
 }
 
 footer li + li {
@@ -296,7 +312,11 @@ pre[class*='language-'] {
   width: 100%;
 }
 
-*:focus {
+:focus:not(:focus-visible) {
+  outline: none;
+}
+
+*:focus-visible {
   outline: 4px solid rgb(21, 58, 81);
 }
 
@@ -416,10 +436,11 @@ a:hover {
   list-style: none;
   display: flex;
   flex-wrap: wrap;
+  gap: 1rem;
 }
 
 [aria-current='page'] {
-  font-weight: bold;
+  text-decoration: underline !important;
 }
 
 [loading] {
@@ -512,5 +533,79 @@ figure img {
 figcaption {
   background: #efefef;
   padding: 0.2rem 0.4rem 0;
+  display: block;
+}
+
+.table-wrapper {
+  overflow: auto;
+}
+
+.css-support-table {
+  table-layout: fixed;
+  margin-block: 1rem;
+}
+
+.css-support-table td, 
+.css-support-table th {
+  padding: 0.2rem 0.5rem;
+}
+
+.css-support-table td {
+  border: 1px solid #ccc;
+  empty-cells: hide;
+  background-color: green;
+  color: #fff;
+  letter-spacing: 1px;
+  text-align: center;
+}
+
+.css-support-table a:link,
+.css-support-table a:visited {
+  color: #fff;
+}
+
+
+.css-support-cell--na {
+  background-color: red;
+}
+
+.prevnext {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  gap: 1rem;
+}
+
+.prevnext li {
+  border: 3px solid #156d8f;
+}
+
+.prevnext a {
+  padding: 0.5rem;
+  display: block;
+  line-height: 1.4;
+  height: 100%;
+}
+
+.prevnext a:is(:focus, :hover) {
+  background-color: #156d8f;
+  color: #fff;
+  text-decoration: none;
+}
+
+.prevnext .next {
+  color: #fff;
+  background-color: #156d8f;
+}
+
+.prevnext .next:is(:focus, :hover) {
+  background-color: #fff;
+  color: #156d8f;
+}
+
+.prevnext strong {
+  font-size: 1.4rem;
   display: block;
 }
