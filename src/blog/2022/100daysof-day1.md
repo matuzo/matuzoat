@@ -14,35 +14,64 @@ reading:
   - title: "CSS Custom Properties Fail Without Fallback"
     url: https://matthiasott.com/notes/css-custom-properties-fail-without-fallback
 ---
-Okay, let's get right into it:
-
 You can pass a second value to the `var()` CSS function which acts as a fallback for when the property has not been set.
 
 ## Fallbacks
 
+<style>
+.demo {
+  width: 5rem;
+  height: 5rem;
+  border: 5px solid;
+}
+
+.one {
+  background-color: var(--not-set, #000);
+}
+
+
+.two {
+  background-color: var(--not-set, var(--also-not-set, #00F));
+}
+
+.three {
+  background-color: #F00;
+  background-color: blahaha;
+}
+
+.four {
+  background-color: #F00;
+  background-color: var(--not-set);
+}
+</style>
+
 ```css
-body {
+div {
   background-color: var(--not-set, #000);
 }
 
 /* Result: #000 background */
 ```
 
+<div class="demo one"></div>
+
 The fallback can also be a custom property (with its own fallback).
 
 ```css
-body {
+div {
   background-color: var(--not-set, var(--also-not-set, #00F));
 }
 /* Result: #00F background */
 ```
+
+<div class="demo two"></div>
 
 ## When Fallbacks fail
 
 If you're not working with custom properties and you set a valid value for a property followed by another declaration with an invalid value, the second declaration will be ignored.
 
 ```css
-body {
+div {
   background-color: #F00;
   background-color: blahaha;
 }
@@ -50,15 +79,17 @@ body {
 /* Result: #F00 background */
 ```
 
-When the second value is a custom property with an invalid value, the declaration is not ignored. Either the property’s inherited value or its initial value, depending on whether the property is inherited or not, will be used instead.
+<div class="demo three"></div>
+
+
+When the value in the second declaration is a custom property that doesn't exist, the declaration is not ignored. Either the property’s inherited value or its initial value, depending on whether the property is inherited or not, will be used instead.
 
 ```css
-body {
+div {
   background-color: #F00;
   background-color: var(--not-set);
 }
 
 /* Result: transparent background */
 ```
-
-
+<div class="demo four"></div>
