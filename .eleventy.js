@@ -31,7 +31,8 @@ module.exports = function (eleventyConfig) {
   eleventyConfig.addPlugin(pluginRss);
   eleventyConfig.addPlugin(syntaxHighlight);
   eleventyConfig.addPlugin(cssBrowserSupport, {
-    includePanelJS: false
+    includePanelJS: false,
+    browserList: ["chrome", "firefox", "safari", "safari_ios", "chrome_android"],
   });
 
   eleventyConfig.addPassthroughCopy('./src/static/img');
