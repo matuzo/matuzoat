@@ -51,7 +51,7 @@
 
     <main id="content" class="{{ page_class }}">
       
-      {{ content | safe }}
+      {{ content | cssSupportPanels | safe }}
     </main>
 
     {% include 'footer.njk' %}
