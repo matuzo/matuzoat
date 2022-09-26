@@ -571,11 +571,16 @@ figcaption {
 
 .prevnext {
   display: grid;
-  grid-template-columns: 1fr 1fr;
   padding: 0;
   margin: 0;
   list-style: none;
   gap: 1rem;
+}
+
+@media (min-width: 768px) {
+  .prevnext {
+    grid-template-columns: 1fr 1fr;
+  } 
 }
 
 .prevnext li {
