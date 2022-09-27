@@ -11,6 +11,9 @@ tags:
 codepen: https://codepen.io/matuzo/pen/zYWmemQ
 layout: "layouts/100days.njk"
 caniuse: "margin-inline-end"
+reading:
+  - title: "RTL Styling 101"
+    url: https://rtlstyling.com/
 ---
 Logical properties are a new way of working with directions and dimensions, one that allows you to control layout through logical, rather than physical mappings. This is especially useful, if you’re dealing with websites that are presented in different languages and writing modes, like right-to-left.
 
