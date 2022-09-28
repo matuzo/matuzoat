@@ -52,8 +52,8 @@ button {
 }
 </style>
 
-<button class="physical">Physical margin</button>
-<button dir="rtl" class="physical">Physical margin rtl</button>
+<button type="button" class="physical">Physical margin</button>
+<button type="button" dir="rtl" class="physical">Physical margin rtl</button>
 
 This might be desired, but it could also happen that you want `margin` to respect the reading direction. [Logical Properties](/blog/2022/100daysof-day2/) introduce 2 new shorthand properties, `margin-inline` and `margin-block`. These properties take 1 or 2 values.
 
@@ -85,5 +85,5 @@ RTL: 20px 100px 10px 40px
 */
 ```
 
-<button class="logical">Logical margin</button>
-<button dir="rtl" class="logical">Logical margin rtl</button>
+<button type="button" class="logical">Logical margin</button>
+<button type="button" dir="rtl" class="logical">Logical margin rtl</button>
