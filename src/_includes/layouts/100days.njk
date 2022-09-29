@@ -45,12 +45,12 @@ layout: layouts/base.njk
     </p>    
   {% endif %}
 
-{# {% if caniuse %}
+{% if caniuse %}
 <section aria-labelledby="bsheading" tabindex="0" class="table-wrapper">
   <h2 id="bsheading">Browser Support</h2>
   {% cssSupportTable caniuse %}
 </section>
-{% endif %} #}
+{% endif %}
 
   {% if reading %}
     <h2>Further reading</h2>
