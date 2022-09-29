@@ -5,6 +5,7 @@
     "element-permitted-content": "off",
     "no-raw-characters": "off",
     "no-inline-style": "off",
-    "svg-focusable": "off"
+    "svg-focusable": "off",
+    "wcag/h67": "off"
   }
 }
