@@ -530,10 +530,12 @@ figure img {
   border: 3px solid #efefef;
 }
 
-figcaption {
+.post figcaption {
   background: #efefef;
   padding: 0.2rem 0.4rem 0;
   display: block;
+  font-size: 1.1rem;
+  margin-top: 0.5rem;
 }
 
 .table-wrapper {
@@ -557,6 +559,16 @@ figcaption {
   color: #fff;
   letter-spacing: 1px;
   text-align: center;
+}
+
+.css-support-table .css-support-cell--flagged,
+.css-support-table .css-support-cell--na {
+  background-color: #c71b1b;
+}
+
+.css-support-table .css-support-cell--flagged::after {
+  content: "🧪";
+  margin-left: 0.5rem;
 }
 
 .css-support-table a:link,
