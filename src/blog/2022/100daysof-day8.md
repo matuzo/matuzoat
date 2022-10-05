@@ -53,10 +53,29 @@ div:has(p:has(strong)) {
 .div:has(p:has(strong)) {
   border: 4px solid green;
 }
+
+.div2:has(p strong) {
+  border: 4px solid green;
+}
 </style>
 
 <div class="div">
   <p>
     <strong>I have a red and blue border in <a href="https://caniuse.com/css-has">supporting browsers</a>.</strong>
+  </p>
+</div>
+
+Using a combined selector instead of nesting `:has()` is valid.
+
+```css
+/* valid */
+div:has(p strong) {
+  border: 4px solid green;
+}
+```
+
+<div class="div2">
+  <p>
+    <strong>I have a green border in <a href="https://caniuse.com/css-has">supporting browsers</a>.</strong>
   </p>
 </div>
