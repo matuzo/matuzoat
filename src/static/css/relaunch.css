@@ -626,3 +626,13 @@ figure img {
   font-size: 1.4rem;
   display: block;
 }
+
+
+.dayindex {
+  padding: 0;
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
