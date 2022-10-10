@@ -383,7 +383,7 @@ a:hover {
   margin-top: 4rem;
 }
 
-.post * {
+.post:not(dialog) {
   margin: 0;
 }
 
@@ -636,3 +636,8 @@ figure img {
   gap: 0.5rem;
 }
 
+dialog {
+  position: fixed;
+  inset: 0;
+  margin: auto !important;
+}
