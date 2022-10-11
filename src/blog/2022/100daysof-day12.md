@@ -51,7 +51,7 @@ We take the remaining space and divide it by 2. We have to divide it because we 
 max(0px, ((100% - 64rem) / 2));
 ````
 
-If 100% is less than 64rem, we would get a negative number, which is an invalid value for `margin` properties. The [max() function](/blog/2022/100daysof-day5/) ensures that the `margin` is always at least zero. It takes a comma separated list of expressions. The largest value in the list will be selected. If the value of our calculation is less than 0, `max()` takes 0 instead because it’s larger than the negative number.
+If 100% is less than 64rem, we would get a negative number, which would break the layout. The [max() function](/blog/2022/100daysof-day5/) ensures that the `margin` is always at least zero. It takes a comma separated list of expressions. The largest value in the list will be selected. If the value of our calculation is less than 0, `max()` takes 0 instead because it’s larger than the negative number.
 
 ```css
 margin-inline: max(0px, ((100% - 64rem) / 2));
