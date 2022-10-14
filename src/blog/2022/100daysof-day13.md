@@ -2,7 +2,8 @@
 title: 'Day 13: the :where() and :is() pseudo classes'
 date: 2022-10-12T09:38:54.969Z
 image: articles/sm_100days-day13.jpg
-teaser: "It’s time to get me up to speed with modern CSS. There’s so much new in CSS that I know too little about. To change that I’ve started [#100DaysOfMoreOrLessModernCSS](/blog/2022/100-days-of-more-or-less-modern-css/). Why more or less modern CSS? Because some topics will be about cutting-edge features, while other stuff has been around for quite a while already, but I just have little to no experience with it."
+intro: "It’s time to get me up to speed with modern CSS. There’s so much new in CSS that I know too little about. To change that I’ve started [#100DaysOfMoreOrLessModernCSS](/blog/2022/100-days-of-more-or-less-modern-css/). Why more or less modern CSS? Because some topics will be about cutting-edge features, while other stuff has been around for quite a while already, but I just have little to no experience with it."
+teaser: "The `:where()` and `:is()` pseudo-classes allow you to write large lists of selectors in a more compact form. You can combine selectors instead of writing repetitive lists."
 tags:
   - blog
   - posts
@@ -17,8 +18,6 @@ reading:
   - title: "MDN :is()"
     url: https://developer.mozilla.org/en-US/docs/Web/CSS/:is
 ---
-
-The `:where()` and `:is()` pseudo-classes allow you to write large lists of selectors in a more compact form. You can combine selectors instead of writing repetitive lists.
 
 <p class="code-label"><strong>Combining input types</strong></p>
 

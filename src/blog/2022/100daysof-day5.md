@@ -2,7 +2,8 @@
 title: 'Day 5: the max() function'
 date: 2022-09-30T09:38:54.969Z
 image: articles/sm_100days-day5.jpg
-teaser: "It’s time to get me up to speed with modern CSS. There’s so much new in CSS that I know too little about. To change that I’ve started [#100DaysOfMoreOrLessModernCSS](/blog/2022/100-days-of-more-or-less-modern-css/). Why more or less modern CSS? Because some topics will be about cutting-edge features, while other stuff has been around for quite a while already, but I just have little to no experience with it."
+intro: "It’s time to get me up to speed with modern CSS. There’s so much new in CSS that I know too little about. To change that I’ve started [#100DaysOfMoreOrLessModernCSS](/blog/2022/100-days-of-more-or-less-modern-css/). Why more or less modern CSS? Because some topics will be about cutting-edge features, while other stuff has been around for quite a while already, but I just have little to no experience with it."
+teaser: "The `max()` function takes a comma separated list of expressions. The largest value in the list will be selected."
 tags:
   - blog
   - posts
@@ -12,8 +13,6 @@ codepen: https://codepen.io/matuzo/pen/ZExNERv
 layout: "layouts/100days.njk"
 caniuse: "max()"
 ---
-The `max()` function takes a comma separated list of expressions. The largest value in the list will be selected.
-
 ```css
 div {
   width: max(400px, 200px, 300px);

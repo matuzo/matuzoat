@@ -2,7 +2,8 @@
 title: 'Day 3: logical property shorthands'
 date: 2022-09-28T09:38:54.969Z
 image: articles/sm_100days-day3.jpg
-teaser: "It’s time to get me up to speed with modern CSS. There’s so much new in CSS that I know too little about. To change that I’ve started [#100DaysOfMoreOrLessModernCSS](/blog/2022/100-days-of-more-or-less-modern-css/). Why more or less modern CSS? Because some topics will be about cutting-edge features, while other stuff has been around for quite a while already, but I just have little to no experience with it."
+intro: "It’s time to get me up to speed with modern CSS. There’s so much new in CSS that I know too little about. To change that I’ve started [#100DaysOfMoreOrLessModernCSS](/blog/2022/100-days-of-more-or-less-modern-css/). Why more or less modern CSS? Because some topics will be about cutting-edge features, while other stuff has been around for quite a while already, but I just have little to no experience with it."
+teaser: "If you use a shorthand property like `margin` with all 4 values, the properties will always be applied in the direction *top* - *right* - *bottom* - *left*, no matter the reading direction."
 tags:
   - blog
   - posts
@@ -15,8 +16,6 @@ reading:
     url: https://css-irl.info/logical-properties-for-useful-shorthands/?ref=sidebar
 caniuse: "margin-inline"
 ---
-If you use a shorthand property like `margin` with all 4 values, the properties will always be applied in the direction *top* - *right* - *bottom* - *left*, no matter the reading direction.
-
 ```html
 <button>Physical margin</button>
 <button dir="rtl">Physical margin rtl</button>

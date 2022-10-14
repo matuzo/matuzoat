@@ -2,7 +2,8 @@
 title: 'Day 12: max() trickery'
 date: 2022-10-11T09:38:54.969Z
 image: articles/sm_100days-day12.jpg
-teaser: "It’s time to get me up to speed with modern CSS. There’s so much new in CSS that I know too little about. To change that I’ve started [#100DaysOfMoreOrLessModernCSS](/blog/2022/100-days-of-more-or-less-modern-css/). Why more or less modern CSS? Because some topics will be about cutting-edge features, while other stuff has been around for quite a while already, but I just have little to no experience with it."
+intro: "It’s time to get me up to speed with modern CSS. There’s so much new in CSS that I know too little about. To change that I’ve started [#100DaysOfMoreOrLessModernCSS](/blog/2022/100-days-of-more-or-less-modern-css/). Why more or less modern CSS? Because some topics will be about cutting-edge features, while other stuff has been around for quite a while already, but I just have little to no experience with it."
+teaser: "I saw this interesting one-liner in a demo by [Temani Afif](https://twitter.com/ChallengesCss)."
 tags:
   - blog
   - posts
@@ -11,8 +12,6 @@ tags:
 codepen: https://codepen.io/matuzo/pen/xxjPzyE
 layout: "layouts/100days.njk"
 ---
-I saw this interesting one-liner in a demo by [Temani Afif](https://twitter.com/ChallengesCss).
-
 ```css
 .wrapper {
   margin-inline: max(0px, ((100% - 64rem) / 2)); 

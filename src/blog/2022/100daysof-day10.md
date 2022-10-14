@@ -2,7 +2,8 @@
 title: 'Day 10: global styles and web components'
 date: 2022-10-07T09:38:54.969Z
 image: articles/sm_100days-day10.jpg
-teaser: "It’s time to get me up to speed with modern CSS. There’s so much new in CSS that I know too little about. To change that I’ve started [#100DaysOfMoreOrLessModernCSS](/blog/2022/100-days-of-more-or-less-modern-css/). Why more or less modern CSS? Because some topics will be about cutting-edge features, while other stuff has been around for quite a while already, but I just have little to no experience with it."
+intro: "It’s time to get me up to speed with modern CSS. There’s so much new in CSS that I know too little about. To change that I’ve started [#100DaysOfMoreOrLessModernCSS](/blog/2022/100-days-of-more-or-less-modern-css/). Why more or less modern CSS? Because some topics will be about cutting-edge features, while other stuff has been around for quite a while already, but I just have little to no experience with it."
+teaser: "I was wondering what happens with HTML elements in web components when I add styles to the document. Under which circumstances do global styles defined in a style element or external stylesheet apply to these elements? "
 tags:
   - blog
   - posts
@@ -12,8 +13,6 @@ codepen: https://codepen.io/matuzo/pen/OJZOEWQ
 layout: "layouts/100days.njk"
 caniuse: "modal"
 ---
-I was wondering what happens with HTML elements in web components when I add styles to the document. Under which circumstances do global styles defined in a style element or external stylesheet apply to these elements? 
-
 As it turns out, it depends on how you create and use the components. In my test setup I have an HTML document, a stylesheet and three different components.
 
 <style>

@@ -2,7 +2,8 @@
 title: 'Day 6: the :has() pseudo-class'
 date: 2022-10-03T09:38:54.969Z
 image: articles/sm_100days-day6.jpg
-teaser: "It’s time to get me up to speed with modern CSS. There’s so much new in CSS that I know too little about. To change that I’ve started [#100DaysOfMoreOrLessModernCSS](/blog/2022/100-days-of-more-or-less-modern-css/). Why more or less modern CSS? Because some topics will be about cutting-edge features, while other stuff has been around for quite a while already, but I just have little to no experience with it."
+intro: "It’s time to get me up to speed with modern CSS. There’s so much new in CSS that I know too little about. To change that I’ve started [#100DaysOfMoreOrLessModernCSS](/blog/2022/100-days-of-more-or-less-modern-css/). Why more or less modern CSS? Because some topics will be about cutting-edge features, while other stuff has been around for quite a while already, but I just have little to no experience with it."
+teaser: "`:has()` allows you to check whether a parent element contains specific children."
 tags:
   - blog
   - posts
@@ -12,7 +13,7 @@ codepen: https://codepen.io/matuzo/pen/vYRwWNV
 layout: "layouts/100days.njk"
 caniuse: "has()"
 ---
-`:has()` allows you to check whether a parent element contains specific children.
+
 
 In the following example, each `.form-item` that contains/has a child with the `aria-invalid` attribute set to “true” displays text in red color. (currently only in [Chrome/Edge 105+ and Safari 15.4+](https://caniuse.com/css-has))
 
