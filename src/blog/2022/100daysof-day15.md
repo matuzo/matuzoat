@@ -1,7 +1,7 @@
 ---
 title: 'Day 15: the :modal pseudo-class'
 date: 2022-10-14T09:38:54.969Z
-image: articles/sm_100days-day15.jpg
+image: articles/sm_100days-day15s.jpg
 intro: "It’s time to get me up to speed with modern CSS. There’s so much new in CSS that I know too little about. To change that I’ve started [#100DaysOfMoreOrLessModernCSS](/blog/2022/100-days-of-more-or-less-modern-css/). Why more or less modern CSS? Because some topics will be about cutting-edge features, while other stuff has been around for quite a while already, but I just have little to no experience with it."
 teaser: "There are two methods you can use to open a `<dialog>` element, `show()` and `showModal()`. `show()` opens a dialog on top of the rest of the content, but you can still interact with content beneath. `showModal()` opens a modal dialog with a backdrop on top of the rest of the content, and you can’t interact with the rest of the page."
 tags:
