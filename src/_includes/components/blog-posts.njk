@@ -4,7 +4,8 @@
 
   {% if not post.data.draft %}
     <article class="teaser rich-text">
-      <{{level | default('h3') }} class="teaser-heading">
+      <header class="teaser-header">
+      <{{level | default('h3') }} class="h3">
         {% if "til" in post.data.tags %}
           TIL: 
         {% endif %}
@@ -26,11 +27,14 @@
         {{ publications[post.data.publication].name}}
       </a>
       {% endif %}
+      </header>
 
-      {% if post.data.overview_teaser or post.data.teaser %}
-        {% set teaser = post.data.overview_teaser or post.data.teaser %}
-        {{ teaser | md | safe }}
-      {% endif %}
+      <div class="teaser-text">
+        {% if post.data.overview_teaser or post.data.teaser %}
+          {% set teaser = post.data.overview_teaser or post.data.teaser %}
+          {{ teaser | md | safe }}
+        {% endif %}
+      </dov>
     </article>
   {% endif %}
 {% endfor %}
@@ -40,9 +44,9 @@
     <ol class="pagination">
       {% if pagination.previousPageHref %}
         <li>
-          <a href="{{ pagination.previousPageHref }}">
+          <a href="{{ pagination.previousPageHref }}" rel="prev">
             Previous
-            <span class="u-hidden">
+            <span class="u-vh">
               page
             </span>
           </a>
@@ -52,16 +56,16 @@
       {% for page in pagination.hrefs %}
         <li>
           <a href="{{ page }}" {% if pagination.pageNumber == loop.index0 %}aria-current="page"{% endif %}>
-            <span class="u-hidden">page </span> {{ loop.index }}
+            <span class="u-vh">page </span> {{ loop.index }}
           </a>
         </li>
       {% endfor %}
 
       {% if pagination.nextPageHref %}
         <li>
-          <a href="{{ pagination.nextPageHref }}">
+          <a href="{{ pagination.nextPageHref }}" rel="next">
             Next
-            <span class="u-hidden">
+            <span class="u-vh">
               page
             </span>
           </a>

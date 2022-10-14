@@ -7,17 +7,16 @@ tags:
 navtitle: Blog
 permalink: "blog/{% if pagination.pageNumber > 0 %}page-{{ pagination.pageNumber + 1 }}/{% endif %}index.html"
 date: 1987-01-05
-local_nav:
-  - title: "Web dev"
-    url: /blog
-  - title: "Misc"
-    url: /blog/misc
 pagination:
   data: collections.blog
-  size: 6
+  size: 10
   alias: blog_posts
   reverse: true
 ---
+
+<section>
+A blog about web development, HTML, CSS, JavaScript, and web accessibility.
+</section>
 
 {% set max = 1000 %}
 {% set level = 'h2' %}

@@ -8,13 +8,20 @@ navtitle: TIL
 permalink: /TIL/index.html
 date: 1987-01-01
 ---
+<section>
+  A collection of features and techniques in HTML, CSS, and JS I've learned recently.
+</section>
 
-<ol class="til" reversed>
+{# <ol class="til" reversed> #}
 {% for til in collections.til|reverse %}
-  <li>
+  <section>
     <h2>
-      {{ til.data.title }}
+      TIL #{{ loop.revindex }}
     </h2>
+    <p>
+      {{ til.data.title }}
+    </p>
+
     {% if til.data.image %}
       {% if til.data.link %}
         <a href="{{ til.data.link }}" rel="noopener">
@@ -36,6 +43,6 @@ date: 1987-01-01
         </a>
       </p>
     {% endif %}
-  </li>
+  </section>
 {% endfor %}
-</ol>
+{# </ol> #}

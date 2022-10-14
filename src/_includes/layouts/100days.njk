@@ -3,11 +3,13 @@ layout: layouts/base.njk
 ---
 
 <article class="post rich-text">
+  <header>
     <h1 class="post-heading">{{ title }}</h1>
 
     <p>
       posted on <time datetime="{{ date | machineDate }}">{{ date | readableDate }}</time>
     </p>
+  </header>
 
   {% if intro %}
     {{ intro | md | safe }}
@@ -21,11 +23,13 @@ layout: layouts/base.njk
     {{ intro3 | md | safe }}
   {% endif %}
 
+  <hr>
+
+
   {% if teaser %}
     {{ teaser | md | safe }}
   {% endif %}
 
-  <hr>
 
   {% if content %}
     {{ content | safe }}

@@ -24,7 +24,7 @@ li:nth-last-child(n+3) ~ li {
 What I mean is that now we can style the parent element and other children differently depending on the number of items present anywhere in the parent element.
 
 
-<div class="post" style="border: 10px dotted hotpink; padding: 1rem;">
+<div  style="border: 10px dotted hotpink; padding: 1rem;">
 
 <p>
   <strong>Note</strong>: <code>:has()</code> is only available in Safari 15.4+, Chrome 105+ or behind a flag in Firefox.
@@ -269,7 +269,7 @@ Pretty awesome, right? [Try it on CodePen.](https://codepen.io/matuzo/pen/YzaoRL
 
 I can image that this can be useful in content builders in CMS. You can use CSS to give users visual feedback depending on the number of items they have added to a block or component.
 
-<div class="post" style="border: 10px dotted hotpink; padding: 1rem;">
+<div style="border: 10px dotted hotpink; padding: 1rem;">
 
 <p style="margin-bottom: 1.5rem">
   <strong>Disclaimer:</strong> This is not tested and not production-ready. Only use this technique for progressive enhancement and only with proper testing. You shouldn’t use it to communicate important information, because changes may only be reflected visually and not semantically.

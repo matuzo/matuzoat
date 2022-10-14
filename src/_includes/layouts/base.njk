@@ -6,6 +6,7 @@
     
     <title>{% if title %}{{ title }} - {% endif %}{{ metadata.title }}</title>
 
+    <link rel="stylesheet" href="{{ '/assets/prism.css' | url | cacheBuster }}">
     <link rel="stylesheet" href="{{ '/assets/relaunch.css' | url | cacheBuster }}">
     {% for sheet in sheets %}
       {% set sheet_url = '/assets/' + sheet + '.css' %}
@@ -30,6 +31,7 @@
     <link rel="apple-touch-icon" href="/apple-touch-icon.png">
     <link rel="manifest" href="/site.webmanifest">
     <meta name="theme-color" content="#36b1bf">
+    <meta name="generator" content="{{ eleventy.generator }}">
 
     <link type="application/atom+xml" rel="alternate" href="{{ '/feed.xml' | cacheBuster }}" title="Articles - {{ metadata.title }}">
     <link type="application/atom+xml" rel="alternate" href="{{ '/feed_til.xml' | cacheBuster }}" title="Today I Learned - {{ metadata.title }}">
@@ -44,10 +46,10 @@
   <body class="body" id="body">
     {% include 'header.njk' %}
 
-    <section class="banner" aria-labelledby="banner_heading">
+    {# <section class="banner" aria-labelledby="banner_heading">
       <h2 id="banner_heading">This site is updating in the open</h2>
       <p>Things might look unstyled because they probably are.</p>
-    </section>
+    </section> #}
 
     <main id="content" class="{{ page_class }}">
       
