@@ -16,6 +16,10 @@ body {
   margin-right: auto;
 }
 
+html {
+  scrollbar-gutter: stable;
+}
+
 @media (min-width: 375px) {
   body {
     padding: 2rem 20px;
