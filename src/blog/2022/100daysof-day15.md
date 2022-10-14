@@ -35,11 +35,11 @@ You can use the `:modal` pseudo-class to style modal dialogs (dialogs opened via
 <dialog>
   yo!
   
-  <button class="close">Close</button>
+  <button class="closeButton">Close</button>
 </dialog>
 
-<button class="show">Show</button>
-<button class="showModal">Show modal</button>
+<button class="showButton">Show</button>
+<button class="showModalButton">Show modal</button>
 
 ```css
 dialog {
@@ -57,28 +57,28 @@ dialog {
 <dialog>
   yo!
   
-  <button class="close">Close</button>
+  <button class="closeButton">Close</button>
 </dialog>
 
-<button class="show">Show</button>
-<button class="showModal">Show modal</button>
+<button class="showButton">Show</button>
+<button class="showModalButton">Show modal</button>
 ```
 
 ```js
-const show = document.querySelector('.show')
-const showModal = document.querySelector('.showModal')
-const close = document.querySelector('.close')
+const showButton = document.querySelector('.showButton')
+const showModalButton = document.querySelector('.showModalButton')
+const closeButton = document.querySelector('.closeButton')
 const dialog = document.querySelector('dialog')
 
-show.addEventListener('click', e => {
+showButton.addEventListener('click', e => {
   dialog.show()
 })
 
-showModal.addEventListener('click', e => {
+showModalButton.addEventListener('click', e => {
   dialog.showModal()
 })
 
-close.addEventListener('click', e => {
+closeButton.addEventListener('click', e => {
   dialog.close()
 })
 ```
@@ -86,20 +86,20 @@ close.addEventListener('click', e => {
 
 
 <script>
-const show = document.querySelector('.show')
-const showModal = document.querySelector('.showModal')
-const close = document.querySelector('.close')
+const showButton = document.querySelector('.showButton')
+const showModalButton = document.querySelector('.showModalButton')
+const closeButton = document.querySelector('.closeButton')
 const dialog = document.querySelector('dialog')
 
-show.addEventListener('click', e => {
+showButton.addEventListener('click', e => {
   dialog.show()
 })
 
-showModal.addEventListener('click', e => {
+showModalButton.addEventListener('click', e => {
   dialog.showModal()
 })
 
-close.addEventListener('click', e => {
+closeButton.addEventListener('click', e => {
   dialog.close()
 })
 </script>
