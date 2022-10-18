@@ -1,0 +1,10 @@
+{
+    "search.exclude": {
+        "**/node_modules": true,
+        "src/blog/*": true,
+        "src/bookmarks/*": true,
+        "src/speaking/*": true,
+        "src/til/*": true,
+        "src/talks/*": true,
+    }
+}

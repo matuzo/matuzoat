@@ -18,7 +18,7 @@ reading:
   - title: "Filed issue in the browser-compat-data GitHub repository"
     url: https://github.com/mdn/browser-compat-data/issues/17972
 ---
-Clicking the following button puts the video in picture-in-picture mode in supporting browsers (Chrome, Edge, Safari, Opera).
+Clicking the following button puts the video in picture-in-picture mode in supporting browsers (Chrome, Edge, Safari, Opera). Firefox doesn't support the API, but you can right-click the video and select “Watch in Picture-in-Picture“.
 
 <button>Toggle PIP</button>
 
