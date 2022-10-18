@@ -87,7 +87,7 @@ layout: layouts/base.njk
   </li>
 {% endif %}
 
-{% if nextPost %}
+{% if nextPost and not nextPost.data.draft %}
   <li>
     <a href="{{ nextPost.url }}" class="next">Next post: <strong>{{ nextPost.data.title }}</strong></a>
   </li>
