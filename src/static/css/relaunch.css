@@ -362,7 +362,7 @@ footer ul {
 .prevnext {
   display: grid;
   padding: 0;
-  margin: 0;
+  margin: 0 0 2rem;
   list-style: none;
   gap: 1rem;
 }
