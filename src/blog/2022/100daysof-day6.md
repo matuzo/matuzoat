@@ -13,8 +13,6 @@ codepen: https://codepen.io/matuzo/pen/vYRwWNV
 layout: "layouts/100days.njk"
 caniuse: "has()"
 ---
-
-
 In the following example, each `.form-item` that contains/has a child with the `aria-invalid` attribute set to “true” displays text in red color. (currently only in [Chrome/Edge 105+ and Safari 15.4+](https://caniuse.com/css-has))
 
 <style>
