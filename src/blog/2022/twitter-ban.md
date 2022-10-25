@@ -38,27 +38,37 @@ So, what happened? I have absolutely no idea! Here's a rough outline of the even
 </style>
 
 <ol>
-<li><p><strong>21.10. Comment on Unas question</strong>  </p>
-  <p>On Friday Una asked on Twitter <a href="https://twitter.com/mmatuzo/status/1583522924299841537">What do you want to see on the web platform next year?”</a> and I responded “A native sr-only attribute.”. My reply got a bunch of likes and some retweets.<br>
-  So, nothing special happened here.</p></li>
-<li><p><strong>22.10. Hidden replies</strong>  </p>
-  <p>But then suddenly on Saturday people reported that <a href="https://twitter.com/openuicg/status/1583680688938631169">they did't see my reply anymore</a>.</p>
-<p>
-  <img src="/images/twitter_ban2.jpg" alt="Screenshot Twitter. Instead of my reply it says 'this tweet is unavailable'.">
-  </p>
+<li>
+  <p><strong>21.10. Comment on Unas question</strong></p>
 
-  <p><a href="https://twitter.com/bramus/status/1583822357201711105">Bramus assumed that this was a bug in the Twitter app</a>, but Šime pointed out that <a href="https://twitter.com/simevidas/status/1583913449716711425">I got shadowbanned</a>.
+  <p>On Friday Una asked on Twitter <a href="https://twitter.com/mmatuzo/status/1583522924299841537">What do you want to see on the web platform next year?”</a> and I responded “A native sr-only attribute.”. My reply got a bunch of likes and some retweets.<br>
+  So, nothing special happened here.</p>
 </li>
 
-<li><p><strong>23.10. Contacted Twitter support</strong>  </p>
+<li>
+  <p><strong>22.10. Hidden replies</strong></p>
+  <p>But then suddenly on Saturday people reported that <a href="https://twitter.com/openuicg/status/1583680688938631169">they did't see my reply anymore</a>.</p>
+  <p>
+    <img src="/images/twitter_ban2.jpg" alt="Screenshot Twitter. Instead of my reply it says 'this tweet is unavailable'.">
+  </p>
+
+  <p><a href="https://twitter.com/bramus/status/1583822357201711105">Bramus assumed that this was a bug in the Twitter app</a>, but Šime pointed out that <a href="https://twitter.com/simevidas/status/1583913449716711425">I got shadowbanned</a>.</p>
+</li>
+
+<li>
+  <p><strong>23.10. Contacted Twitter support</strong></p>
   <p>On Sunday I contacted Twitter support and reported the ban. I told them that I got shadowbanned for no reason and I asked them to look into the matter.   
-  Being shadowbanned means that I can still like, comment, and tweet, but people don't see my content. Also, people can't search for my content on Twitter. For me, everything looks fine, but in reality I'm not reaching anyone. This is usually a measure against spammers.</p></li>
+  Being shadowbanned means that I can still like, comment, and tweet, but people don't see my content. Also, people can't search for my content on Twitter. For me, everything looks fine, but in reality I'm not reaching anyone. This is usually a measure against spammers.</p>
+</li>
 
-<li><p><strong>24.10. Permanently suspeneded</strong>  </p>
-  <p>I woke up to the news that my account was permanently banned.</p></li>
+<li>
+  <p><strong>24.10. Permanently suspeneded</strong></p>
+  <p>I woke up to the news that my account was permanently banned.</p>
+</li>
 
-<li><p><strong>24.10. A reply from Twitter</strong>  </p>
-<p>  Later that day, I got a reply to my report:</p>
+<li>
+  <p><strong>24.10. A reply from Twitter</strong></p>
+  <p>Later that day, I got a reply to my report:</p>
 
   <div class="quote">
   <blockquote>Hello, 
@@ -77,18 +87,21 @@ So, what happened? I have absolutely no idea! Here's a rough outline of the even
   Twitter</blockquote></div>
 
   <p>In the linked post it says <q>We do not shadow ban. You are always able to see the tweets from accounts you follow.</q>.  
-  This is a lie. There's proof in the screenshot above.</p></li>
+  This is a lie. There's proof in the screenshot above.</p>
+</li>
 
-  <li><p><strong>24.10. Submitted an appeal</strong>  </p>
+  <li>
+  <p><strong>24.10. Submitted an appeal</strong>  </p>
 
   <p>I've submitted an appeal and asked them again to look into the matter and tell me what happened.</p>
 
   </li>
-<li><p><strong>25.10 you <3</strong>
+<li><p><strong>25.10 you ❤️</strong>
 
   <p>Today I had multiple mails in my inbox from people offering their help and asking if I was okay. You're amazing, thank you! ❤️ I'm fine, it's just annoying.</p>
 
-  <p>Thank you everyone for @-ing Twitter Support (<a href="https://twitter.com/spuz78/status/1584470084231516161">Bernhard</a> and <a href="https://twitter.com/m_ott/status/1584648614282133504">Matthias</a>) and especially thank you Bernahrd, Matthias, Michael, David, Jenn, Jens, and Sara for getting in touch via e-mail.</p></li>
+  <p>Thank you everyone for @-ing Twitter Support (<a href="https://twitter.com/spuz78/status/1584470084231516161">Bernhard</a> and <a href="https://twitter.com/m_ott/status/1584648614282133504">Matthias</a>) and especially thank you Bernahrd, Matthias, Michael, David, Jenn, Jens, and Sara for getting in touch via e-mail.</p>
+  </li>
 </ol>
 
 What's next? I don't know. I'll just wait for their reply. I'll keep you updated in this blog post.
