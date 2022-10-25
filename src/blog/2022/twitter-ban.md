@@ -75,13 +75,11 @@ So, what happened? I have absolutely no idea! Here's a rough outline of the even
 
   Thank you for contacting us. 
 
-  We do not block, limit, or remove content based on an individual’s views or opinions. In some situations, your Tweet may not be seen by everyone, as outlined in this Help Center article. You can find more information about shadow banning and our efforts to promote a healthy public conversation in our blog post ([blog.twitter.com/official/en_us/topics/company/2018/Setting-the-record-straight-on-shadow-banning.html](https://blog.twitter.com/official/en_us/topics/company/2018/Setting-the-record-straight-on-shadow-banning.html)).
+  We do not block, limit, or remove content based on an individual’s views or opinions. In some situations, your Tweet may not be seen by everyone, as outlined in this Help Center article. You can find more information about shadow banning and our efforts to promote a healthy public conversation in our [blog post](https://blog.twitter.com/official/en_us/topics/company/2018/Setting-the-record-straight-on-shadow-banning.html).
 
-  If you would also like more information on how to control your Twitter experience, see this help article:
-  https://support.twitter.com/articles/20170134.  
+  If you would also like more information on how to control your Twitter experience, see this [help article](https://support.twitter.com/articles/20170134).  
 
-  Please see the Help Center Article for more information: 
-  https://help.twitter.com/en/safety-and-security/tweet-visibility
+  Please see the [Help Center Article](https://help.twitter.com/en/safety-and-security/tweet-visibility) for more information:
 
   Best,
   Twitter</blockquote></div>
