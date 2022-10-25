@@ -437,16 +437,6 @@ blockquote {
   font-size: 0.9em;
 }
 
-blockquote::before {
-  content: open-quote;
-  display: inline;
-}
-
-blockquote::after {
-  content: close-quote;
-  display: inline;
-}
-
 .video-wrapper {
   height: 0;
   padding-bottom: 56.25%; 
