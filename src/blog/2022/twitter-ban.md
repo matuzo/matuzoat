@@ -49,7 +49,7 @@ So, what happened? I have absolutely no idea! Here's a rough outline of the even
   <p><strong>22.10. Hidden replies</strong></p>
   <p>But then suddenly on Saturday people reported that <a href="https://twitter.com/openuicg/status/1583680688938631169">they did't see my reply anymore</a>.</p>
   <p>
-    <img src="/images/twitter_ban2.jpg" alt="Screenshot Twitter. Instead of my reply it says 'this tweet is unavailable'.">
+    <img src="/images/twitter_ban2.jpg" alt="Screenshot Twitter. Instead of my reply it says 'this tweet is unavailable'." loading="lazy">
   </p>
 
   <p><a href="https://twitter.com/bramus/status/1583822357201711105">Bramus assumed that this was a bug in the Twitter app</a>, but Šime pointed out that <a href="https://twitter.com/simevidas/status/1583913449716711425">I got shadowbanned</a>.</p>
@@ -100,7 +100,7 @@ So, what happened? I have absolutely no idea! Here's a rough outline of the even
 
   <p>Today I had multiple mails in my inbox from people offering their help and asking if I was okay. You're amazing, thank you! ❤️ I'm fine, it's just annoying.</p>
 
-  <p>Thank you everyone for @-ing Twitter Support (<a href="https://twitter.com/spuz78/status/1584470084231516161">Bernhard</a> and <a href="https://twitter.com/m_ott/status/1584648614282133504">Matthias</a>) and especially thank you Bernahrd, Matthias, Michael, David, Jenn, Jens, and Sara for getting in touch via e-mail.</p>
+  <p>Thank you everyone for @-ing Twitter Support (<a href="https://twitter.com/spuz78/status/1584470084231516161">Bernhard</a> and <a href="https://twitter.com/m_ott/status/1584648614282133504">Matthias</a>) and retweeting, and especially thank you Bernhard, Matthias, Mike, David, Jenn, Jens, and Sara for getting in touch via e-mail.</p>
   </li>
 </ol>
 
