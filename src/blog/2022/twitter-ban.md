@@ -9,6 +9,7 @@ tags:
   - blog
   - posts
   - security
+intro: '[Update 26.10](#update_2610)'
 ---
 
 <img src="/images/twitter_ban.jpg" alt="Screenshot of parts of my Twitter profile that says: Your account is permanently banned. After careful review, we determined you account broke the Twitter Rules. Your account is permanently in read-only mode, which means you can't Tweet, Retweet, or Like content. You won't be able to create new accounts. If you think we got this wrong, you can submit an appeal.">
@@ -94,15 +95,39 @@ So, what happened? I have absolutely no idea! Here's a rough outline of the even
   <p>I've submitted an appeal and asked them again to look into the matter and tell me what happened.</p>
 
   </li>
-<li><p><strong>25.10 you ❤️</strong>
+<li><p><strong>25.10 You ❤️</strong>
 
   <p>Today I had multiple mails in my inbox from people offering their help and asking if I was okay. You're amazing, thank you! ❤️ I'm fine, it's just annoying.</p>
 
   <p>Thank you everyone for @-ing Twitter Support (<a href="https://twitter.com/spuz78/status/1584470084231516161">Bernhard</a> and <a href="https://twitter.com/m_ott/status/1584648614282133504">Matthias</a>) and retweeting, and especially thank you Bernhard, Matthias, Mike, David, Jenn, Jens, and Sara for getting in touch via e-mail.</p>
   </li>
+
+  <p>What's next? I don't know. I'll just wait for their reply. I'll keep you updated in this blog post.</p>
+
+
+<li id="update_2610">
+  <p><strong>26.10 Support and reply from Twitter Support</strong></p>
+  <p>
+    I'm blown away by the amount of support I've received. Literally 100s of tweets @-ing Twitter-Support. Thank you! Thank you!  Thank you!
+  </p>
+  <p>
+  <img src="/images/twitter_ban5.jpg" alt="Twitter search for 'Bring back @mmatuzo, @TwitterSupport' showing dozens of results by all kinds of people.">
+  </p>
+
+  <p>  Some of you even put the message in their Twitter name. 😁</p>
+
+  <img src="/images/twitter_ban3.jpg" alt="Zack Leathermans profil showing his portrait, bio and twitter name 'Zack Leatherman–bring back @mmatuzo'">
+
+  <p>And others created memes. 😁</p>
+
+  <img src="/images/twitter_ban4.jpg" alt="Bring back @mmatuzo paid for by the Manuel Hates Lobester Foundation written in Lobster font">
+
+  <img src="/images/twitter_ban6.jpg" alt="Crowd from the TV show Southpark protesting and holding up signs that say Freedom for @mmatuzo, free @mmatuzo or @mmatuzo didn't do it.">
+
+  <p>Other than that, nothing much happened except that I've filed another appeal and someone from Twitter Support replied to one of the tweets asking for a case number, which Max provided for me. Let's see what happens next.</p>
+</li>
 </ol>
 
-What's next? I don't know. I'll just wait for their reply. I'll keep you updated in this blog post.
 
 Yours truly,  
 Manuel

@@ -431,6 +431,7 @@ blockquote {
 .quote blockquote {
   font-size: 1.2em;
   margin-bottom: 0;
+  margin-left: 0;
 }
 
 .quote p {
@@ -638,4 +639,8 @@ cursor: none !important;
 .a11y-tests-no-animation * {
 transition: none !important;
 animation: none !important;
+}
+
+summary {
+  cursor: pointer;
 }
