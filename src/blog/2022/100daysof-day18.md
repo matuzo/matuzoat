@@ -45,8 +45,6 @@ class ShadowComponent extends HTMLElement {
 customElements.define('shadow-component', ShadowComponent);
 ```
 
-
-
 <script>
   class ShadowComponent extends HTMLElement {
   constructor() {
