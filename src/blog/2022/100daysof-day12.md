@@ -11,6 +11,9 @@ tags:
   - 100daysofmoreorlessmoderncss
 codepen: https://codepen.io/matuzo/pen/xxjPzyE
 layout: "layouts/100days.njk"
+reading:
+  - title: "Day 5: the max() function"
+    url: /blog/2022/100daysof-day5/
 ---
 ```css
 .wrapper {

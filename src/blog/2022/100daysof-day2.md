@@ -15,6 +15,8 @@ caniuse: "margin-inline-end"
 reading:
   - title: "RTL Styling 101"
     url: https://rtlstyling.com/
+  - title: "Day 3: logical property shorthands"
+    url: /blog/2022/100daysof-day3/
 ---
 ## **Physical properties**
 

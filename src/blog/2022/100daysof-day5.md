@@ -12,6 +12,9 @@ tags:
 codepen: https://codepen.io/matuzo/pen/ZExNERv
 layout: "layouts/100days.njk"
 caniuse: "max()"
+reading:
+  - title: "Day 12: max() trickery"
+    url: /blog/2022/100daysof-day12/
 ---
 ```css
 div {

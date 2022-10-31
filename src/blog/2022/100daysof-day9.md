@@ -12,6 +12,11 @@ tags:
 codepen: https://codepen.io/matuzo/pen/WNJeJdw
 layout: "layouts/100days.njk"
 caniuse: "inset"
+reading:
+  - title: "Day 2: logical properties"
+    url: /blog/2022/100daysof-day2/
+  - title: "Day 3: logical property shorthands"
+    url: /blog/2022/100daysof-day3/
 ---
 ```html
 <div class="parent">

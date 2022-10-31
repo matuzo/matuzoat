@@ -12,6 +12,13 @@ tags:
 codepen: https://codepen.io/matuzo/pen/NWYQxpR
 layout: "layouts/100days.njk"
 caniuse: "has()"
+reading:
+  - title: "Day 6: the :has() pseudo-class"
+    url: /blog/2022/100daysof-day6/
+  - title: "Day 16: the specificity of :has()"
+    url: /blog/2022/100daysof-day16/
+  - title: "Day 26: using combinators in :has()"
+    url: /blog/2022/100daysof-day26
 ---
 ```html
 <div>

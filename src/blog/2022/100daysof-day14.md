@@ -17,6 +17,8 @@ reading:
     url: https://developer.mozilla.org/en-US/docs/Web/CSS/:where
   - title: "MDN :is()"
     url: https://developer.mozilla.org/en-US/docs/Web/CSS/:is
+  - title: "Day 13: the :where() and :is() pseudo-classes"
+    url: /blog/2022/100daysof-day13/
 ---
 Let's take the following example. We have two buttons and we use `:where()` on the first button to apply a background color and `:is()` on the second button.
 

@@ -17,6 +17,8 @@ reading:
     url: https://www.bram.us/2021/07/23/prevent-unwanted-layout-shifts-caused-by-scrollbars-with-the-scrollbar-gutter-css-property/
   - title: "scrollbar-gutter on MDN"
     url: https://developer.mozilla.org/en-US/docs/Web/CSS/scrollbar-gutter
+  - title: "Day 25: scrollbar gutters in body and html"
+    url: /blog/2022/100daysof-day25/
 ---
 By default, if the content in an element is not overflowing, there's no gutter.
 <style>

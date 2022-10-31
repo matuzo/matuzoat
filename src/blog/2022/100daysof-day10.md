@@ -12,6 +12,9 @@ tags:
 codepen: https://codepen.io/matuzo/pen/OJZOEWQ
 layout: "layouts/100days.njk"
 caniuse: "modal"
+reading:
+  - title: "Day 18: inheritable styles and web components"
+    url: /blog/2022/100daysof-day18/
 ---
 As it turns out, it depends on how you create and use the components. In my test setup I have an HTML document, a stylesheet and three different components.
 

@@ -17,6 +17,8 @@ reading:
     url: https://developer.mozilla.org/en-US/docs/Web/CSS/:where
   - title: "MDN :is()"
     url: https://developer.mozilla.org/en-US/docs/Web/CSS/:is
+  - title: "Day 14: the difference between :is() and :where()"
+    url: /blog/2022/100daysof-day14/
 ---
 
 <p class="code-label"><strong>Combining input types</strong></p>

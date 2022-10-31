@@ -17,6 +17,8 @@ caniuse: "has()"
 reading:
   - title: "Styling: Styles Piercing Shadow DOM"
     url: https://open-wc.org/guides/knowledge/styling/styles-piercing-shadow-dom/
+  - title: "Day 10: global styles and web components"
+    url: /blog/2022/100daysof-day10/
 ---
 If you look at the following component, you’ll notice that it uses the same font as the rest of the page, even though I haven't applied any styles to the web component. If styles were completely encapsulated, I would expect the component to use a default font like *Times*, but the web component inherits styles from its parent elements.  
 

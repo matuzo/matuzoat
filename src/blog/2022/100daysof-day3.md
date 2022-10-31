@@ -14,6 +14,8 @@ layout: "layouts/100days.njk"
 reading:
   - title: "Logical Properties for Useful Shorthands "
     url: https://css-irl.info/logical-properties-for-useful-shorthands/?ref=sidebar
+  - title: "Day 2: logical properties"
+    url: /blog/2022/100daysof-day2/
 caniuse: "margin-inline"
 ---
 ```html

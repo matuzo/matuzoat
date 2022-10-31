@@ -15,6 +15,12 @@ caniuse: "has()"
 reading:
   - title: "Calculating a selector’s specificity"
     url: https://w3c.github.io/csswg-drafts/selectors-4/#specificity-rules
+  - title: "Day 6: the :has() pseudo-class"
+    url: /blog/2022/100daysof-day6/
+  - title: "Day 8: nesting :has()"
+    url: /blog/2022/100daysof-day8/
+  - title: "Day 26: using combinators in :has()"
+    url: /blog/2022/100daysof-day26
 ---
 ```html
 <div class="parent">

@@ -15,6 +15,8 @@ caniuse: "scrollbar-gutter"
 reading:
   - title: "4. Reserving space for the scrollbar: the scrollbar-gutter property"
     url: https://w3c.github.io/csswg-drafts/css-overflow/#scrollbar-gutter-property
+  - title: "Day 20: the scrollbar-gutter property"
+    url: /blog/2022/100daysof-day20/
 ---
 Here's a quick demo to illustrate the issue. 
 

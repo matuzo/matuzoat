@@ -12,6 +12,13 @@ tags:
 codepen: https://codepen.io/matuzo/pen/vYRwWNV
 layout: "layouts/100days.njk"
 caniuse: "has()"
+reading:
+  - title: "Day 8: nesting :has()"
+    url: /blog/2022/100daysof-day8/
+  - title: "Day 16: the specificity of :has()"
+    url: /blog/2022/100daysof-day16/
+  - title: "Day 26: using combinators in :has()"
+    url: /blog/2022/100daysof-day26
 ---
 In the following example, each `.form-item` that contains/has a child with the `aria-invalid` attribute set to “true” displays text in red color. (currently only in [Chrome/Edge 105+ and Safari 15.4+](https://caniuse.com/css-has))
 

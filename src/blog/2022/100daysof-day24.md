@@ -11,7 +11,7 @@ tags:
   - 100daysofmoreorlessmoderncss
 codepen: https://codepen.io/matuzo/pen/PoevBej
 layout: "layouts/100days.njk"
-caniuse: "lab()"
+caniuse: "backdrop-filter"
 reading:
   - title: "backdrop-filter on MDN"
     url: https://developer.mozilla.org/en-US/docs/Web/CSS/backdrop-filter
