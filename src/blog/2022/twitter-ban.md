@@ -9,7 +9,7 @@ tags:
   - blog
   - posts
   - security
-intro: '[Update 26.10](#update_2610)'
+intro: '[Update 26.10](#update_2610) [Update 31.10](#update_3110)'
 ---
 
 <img src="/images/twitter_ban.jpg" alt="Screenshot of parts of my Twitter profile that says: Your account is permanently banned. After careful review, we determined you account broke the Twitter Rules. Your account is permanently in read-only mode, which means you can't Tweet, Retweet, or Like content. You won't be able to create new accounts. If you think we got this wrong, you can submit an appeal.">
@@ -125,6 +125,10 @@ So, what happened? I have absolutely no idea! Here's a rough outline of the even
   <img src="/images/twitter_ban6.jpg" alt="Crowd from the TV show Southpark protesting and holding up signs that say Freedom for @mmatuzo, free @mmatuzo or @mmatuzo didn't do it.">
 
   <p>Other than that, nothing much happened except that I've filed another appeal and someone from Twitter Support replied to one of the tweets asking for a case number, which Max provided for me. Let's see what happens next.</p>
+</li>
+<li id="update_3110">
+  <p><strong>31.10 no news</strong></p>
+  <p>I'm still suspended and I still haven't heard a word from Twitter. You can find me on <a href="https://mastodon.social/@matuzo">Mastodon</a> now.</p>
 </li>
 </ol>
 
