@@ -65,7 +65,7 @@ Usually when people contact me with business inquiries I ask them how they found
 
 Being active on Twitter and sharing content played a pretty big role for me as a freelancer. If I’m not on Twitter anymore and if I don’t post elsewhere, will I get less jobs? Yes, probably, because I believe that – at least for me – having a healthy and active online persona is essential. Do I need Twitter for that? If you would’ve had asked me 3 years ago, I would’ve said “Yes”, but now I don’t believe that anymore. I'm convinced that putting all the effort I used to put into social media into my own site will work just as well or even better.
 
-## Responsibilites
+## Responsibilities
 
 Most people were convinced that this suspension must have been a mistake because my account was pretty harmless, but some people shared ideas with me about why I could’ve been banned. Some theories were related to what I said in the past and how I said it. It surprised me that people remembered things I said because they perceived them so negatively. I know that I’m not very well known in the web dev community, but I literally <s>have</s> had thousands of followers. This means that many people read my posts and they care about what I say.
 
