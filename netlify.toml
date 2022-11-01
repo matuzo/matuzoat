@@ -15,3 +15,7 @@ package = "netlify-plugin-cache-folder"
 [[redirects]]
   from = "/htmltest"
   to = "https://cdpn.io/pen/debug/zYqQeRw"
+
+[[redirects]]
+  from = "/blog/2022/twitter-ban2/"
+  to = "/blog/2022/your-account-is-permanently-suspended/"

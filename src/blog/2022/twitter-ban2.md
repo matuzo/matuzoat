@@ -6,13 +6,14 @@ metadescription: >-
 date: 2022-11-01T10:16:54.969Z
 image: articles/twitter_ban2.jpg
 teaser: "On October 23rd I got [shadowbanned on Twitter](/blog/2022/twitter-ban/), followed by a permanent suspension on October 25th. As someone who was very active on Twitter, I was surprised, shocked, and sad that this happened. Especially because I didn’t know why it happened."
+permalink: '/blog/2022/your-account-is-permanently-suspended/index.html'
 tags:
   - blog
   - posts
   - security
 ---
 
-<img src="/images/twitter_ban.jpg" alt="Screenshot of parts of my Twitter profile that says: Your account is permanently banned. After careful review, we determined you account broke the Twitter Rules. Your account is permanently in read-only mode, which means you can't Tweet, Retweet, or Like content. You won't be able to create new accounts. If you think we got this wrong, you can submit an appeal.">
+<img src="/images/twitter_ban.jpg" alt="Screenshot of parts of my Twitter profile that says: Your account is permanently banned. After careful review, we determined you account broke the Twitter Rules. Your account is permanently in read-only mode, which means you can't Tweet, Retweet, or Like content. You won't be able to create new accounts. If you think we got this wrong, you can submit an appeal." width="726" height="366">
 
 Some of you might think, *“Who cares, it’s just social media?!”*, and yeah, you’re right, it is just social media, but it was a pretty big deal. For me personally, I’ll go into detail about why later in this post, and generally because I got suspended without a clue why and with no notice. That’s something that shouldn’t happen on one of the biggest social media sites worldwide.  
 This whole incident got many people thinking, and it started some interesting discussions. Most people were in disbelief at how someone who mostly posts harmless web dev related content could get suspended out of nowhere. Many talked about the importance of owning your content and the [indie web](https://indieweb.org/). Some were concerned about their freedom of speech, and some believed that things will get better once Elon Musk takes over. Others talked about <abbr title="artificial intelligence">AI</abbr> and how dangerous algorithms can be.  
@@ -31,7 +32,7 @@ So, I mostly already got that right, but what I learned with this suspension is 
 
 That’s something that surprised me: I can still see my posts, but I don’t have access to my images anymore. Most photos are somewhere on my phone, but all the other images (screenshots, code snippets, etc.) are gone now.
 
-<a href="/images/twitter_ban7.jpg"><img src="/images/twitter_ban7.jpg" alt="Screenshot of my suspended Twitter profile. Two posts with images, but instead of the images you only see a placeholder."></a>
+<a href="/images/twitter_ban7.jpg"><img src="/images/twitter_ban7.jpg" alt="Screenshot of my suspended Twitter profile. Two posts with images, but instead of the images you only see a placeholder." loading="lazy" width="873" height="547"></a>
 
 ### Messages
 
