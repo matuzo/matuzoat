@@ -644,3 +644,43 @@ animation: none !important;
 summary {
   cursor: pointer;
 }
+
+del {
+  background: rgba(255, 0, 0, 0.3);
+  border: 1px solid rgba(255, 0, 0, 0.6);
+  padding: 0 0.2rem;
+}
+
+ins {
+  background: rgba(76, 181, 76, 0.3);
+  border: 1px solid rgba(76, 181, 76, 0.6);
+  padding: 0 0.2rem;
+  text-decoration: none;
+}
+
+del::before, del::after, 
+ins::before, ins::after {
+  clip-path: inset(100%);
+  clip: rect(1px, 1px, 1px, 1px);
+  height: 1px;
+  width: 1px;
+  overflow: hidden;
+  position: absolute;
+  white-space: nowrap;
+}
+
+del::before {
+  content: " [deletion start] ";
+}
+
+del::after {
+  content: " [deletion end] ";
+}
+
+ins::before {
+  content: " [insertion start] ";
+}
+
+ins::after {
+  content: " [insertion end] ";
+}

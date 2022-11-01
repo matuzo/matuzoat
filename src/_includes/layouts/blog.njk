@@ -3,11 +3,13 @@ layout: layouts/base.njk
 ---
 
 <article class="post rich-text">
-    <h1 class="post-heading">{{ title }}</h1>
+  {% set blog_title = page_title or title %}
+  
+  <h1 class="post-heading">{{ blog_title | safe }}</h1>
 
-    <p>
-      posted on <time datetime="{{ date | machineDate }}">{{ date | readableDate }}</time>
-    </p>
+  <p>
+    posted on <time datetime="{{ date | machineDate }}">{{ date | readableDate }}</time>
+  </p>
 
   {% if intro %}
     {{ intro | md | safe }}
