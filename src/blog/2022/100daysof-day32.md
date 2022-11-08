@@ -52,9 +52,10 @@ div {
   width: min(90%, 700px);
 }
 ```
+<div class="sample">
 
 <div class="div min">700px or less with no min-width</div>
-
+</div>
 We can use the `max()` function to define a minimum value for a property. It's the minimum value we define because in the list of provided parameters, `max()` will always pick the largest value. For example, `width: max(300px, 90%)` is always 300px or more, which means that the minimum width is 300px.
 
 ```css
@@ -62,9 +63,10 @@ div {
   width: max(300px, 90%);
 }
 ```
+<div class="sample">
 
 <div class="div max">300px or more with no explicit max-width</div>
-
+</div>
 If we want to define a default value and both a minimum and maximum value, we could do this:
 
 ```css
@@ -72,9 +74,10 @@ div {
   width: max(300px, min(90%, 700px));
 }
 ```
+<div class="sample">
 
 <div class="div minmax">90% with 300px min-width and 700px max-width</div>
-
+</div>
 The `max()` function picks the largest value, either `300px` or the result of the `min()` function if it's larger than `300px`. This defines the minimum width. The `min()` function picks the lowest value, either `700px` or `90%` if it's less than `700px`. This the defines the maximum width with `90%` as the default value.  
 Since nesting functions is super complicated and my brain still hurts from writing this paragraph, there's a handy alternative for this, `clamp()`.  
 `clamp()` takes three parameters, a minimum value, a preferred value, and a maximum value.
@@ -85,7 +88,10 @@ div {
 }
 ```
 
+<div class="sample">
+
 <div class="div clamp">90% with 300px min-width and 700px max-width</div>
+</div>
 
 The `width` of the `<div>` is 90% with a minimum width of 300px and maximum width of 700px. It's basically a shorter way of writing:
 
