@@ -10,7 +10,7 @@ tags:
   - css
 ---
 <ol class="dayindex">
-{% for page in collections.100daysofmoreorlessmoderncss %}
+{% for page in collections.100daysofmoreorlessmoderncss | reverse %}
   {% if not page.data.draft %}
     <li>
       <a href="{{ page.url }}">
