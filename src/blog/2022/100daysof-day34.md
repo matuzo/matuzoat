@@ -150,7 +150,7 @@ summary {
     border: 2px solid;
   }
 
-  .where [aria-invalid="true"]:placeholder-shown {
+  .where [aria-invalid="true"] {
     border-color: red;
   }
 </style>
