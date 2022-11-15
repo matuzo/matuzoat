@@ -3,7 +3,7 @@ title: 'Day 36: :has() and pseudo-elements'
 date: 2022-11-14T09:38:54.969Z
 image: articles/sm_100days-day36.jpg
 intro: "It’s time to get me up to speed with modern CSS. There’s so much new in CSS that I know too little about. To change that I’ve started [#100DaysOfMoreOrLessModernCSS](/blog/2022/100-days-of-more-or-less-modern-css/). Why more or less modern CSS? Because some topics will be about cutting-edge features, while other stuff has been around for quite a while already, but I just have little to no experience with it."
-teaser: "We already know that we can select an element based on the [presence of a certain child element](/blog/2022/100daysof-day6/) (in Chrome/Edge 105+ and Safari 15.4+)"
+teaser: "We already know that we can select an element based on the [presence of a certain child element](/blog/2022/100daysof-day6/) (in Chrome/Edge 105+ and Safari 15.4+), but there are limitations."
 tags:
   - blog
   - posts
