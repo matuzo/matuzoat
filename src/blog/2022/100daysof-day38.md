@@ -28,7 +28,7 @@ On mobile we have the small viewport and the large viewport. According to the sp
 
 The large viewport is <q>the viewport sized assuming any UA interfaces that are dynamically expanded and retracted to be retracted</q>.
 
-<img src="/images/100days-38-2.png" alt="a red border marking the visible area of the viewport, which fills almost the whole screen, no UA interface elements visible." width="300">
+<img src="/images/100days-38-2.png" alt="a red border marking the visible area of the viewport, which fills almost the whole screen, no UA interface elements visible." width="300" loading="lazy">
 
 The problem with `100vh` on mobile is that it doesn’t respect whether user interface elements are expanded or not. It usually always matches the large viewport. CSS introduces new viewport units to address that issue.
 
@@ -56,4 +56,4 @@ div {
 }
 ```
 
-<img src="/images/100days-38-3.jpg" alt="comparisson of vh, lvh, svh, and dvh on a small and large viewport" width="700">
+<img src="/images/100days-38-3.jpg" alt="comparisson of vh, lvh, svh, and dvh on a small and large viewport" width="700" loading="lazy">
