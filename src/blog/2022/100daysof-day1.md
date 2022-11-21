@@ -14,6 +14,10 @@ layout: "layouts/100days.njk"
 reading:
   - title: "CSS Custom Properties Fail Without Fallback"
     url: https://matthiasott.com/notes/css-custom-properties-fail-without-fallback
+  - title: "Day 29: !important custom properties"
+    url: /blog/2022/100daysof-day29
+  - title: "Day 41: custom properties and url()s"
+    url: /blog/2022/100daysof-day41
 ---
 ## Fallbacks
 
