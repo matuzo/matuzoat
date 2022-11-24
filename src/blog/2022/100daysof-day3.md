@@ -16,6 +16,10 @@ reading:
     url: https://css-irl.info/logical-properties-for-useful-shorthands/?ref=sidebar
   - title: "Day 2: logical properties"
     url: /blog/2022/100daysof-day2/
+  - title: "Day 31: logical border properties"
+    url: /blog/2022/100daysof-day31
+  - title: "Day 44: logical floating and clearing"
+    url: /blog/2022/100daysof-day44
 caniuse: "margin-inline"
 ---
 ```html

@@ -15,6 +15,12 @@ caniuse: "hwb()"
 reading:
   - title: "CSS Logical Properties and Values (MDN)"
     url: https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Logical_Properties
+  - title: "Day 2: logical properties"
+    url: /blog/2022/100daysof-day2/
+  - title: "Day 3: logical property shorthands"
+    url: /blog/2022/100daysof-day3/
+  - title: "Day 44: logical floating and clearing"
+    url: /blog/2022/100daysof-day44
 ---
 Originally there were 4 shorthand properties we could use for defining borders.
 

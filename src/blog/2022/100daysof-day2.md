@@ -17,6 +17,10 @@ reading:
     url: https://rtlstyling.com/
   - title: "Day 3: logical property shorthands"
     url: /blog/2022/100daysof-day3/
+  - title: "Day 31: logical border properties"
+    url: /blog/2022/100daysof-day31
+  - title: "Day 44: logical floating and clearing"
+    url: /blog/2022/100daysof-day44
 ---
 ## **Physical properties**
 
