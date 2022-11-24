@@ -691,6 +691,7 @@ ins::after {
   position: relative;
   padding-top: 2.5rem;
 }
+
 .sample::after {
   background-color: var(--color-blue);
   content: "demo";
@@ -700,4 +701,8 @@ ins::after {
   inset-inline-end: 0;
   padding: 0.3rem 0.5rem 0.5rem;
   line-height: 1;
+}
+
+[data-sample]::after {
+  content: attr(data-sample);
 }
