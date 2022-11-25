@@ -14,7 +14,11 @@ layout: "layouts/100days.njk"
 caniuse: "modal"
 reading:
   - title: "Day 18: inheritable styles and web components"
-    url: /blog/2022/100daysof-day18/
+    url: /blog/2022/100daysof-day18
+  - title: "Day 28: custom properties and web components"
+    url: /blog/2022/100daysof-day28
+  - title: "Day 45: the specificity of ::slotted() content"
+    url: /blog/2022/100daysof-day45
 ---
 As it turns out, it depends on how you create and use the components. In my test setup I have an HTML document, a stylesheet and three different components.
 
@@ -79,8 +83,9 @@ class BasicComponent extends HTMLElement {
 customElements.define('basic-component', BasicComponent);
 ```
 
-<p style="margin-bottom:0"><strong>Demo:</strong></p>
+<div class="sample">
 <basic-component></basic-component>
+</div>
 
 ### Web component with shadow DOM
 
@@ -100,8 +105,9 @@ class ShadowComponent extends HTMLElement {
 customElements.define('shadow-component', ShadowComponent);
 ```
 
-<p style="margin-bottom:0"><strong>Demo:</strong></p>
+<div class="sample">
 <shadow-component></shadow-component>
+</div>
 
 ### Web Component with slotted content
 
@@ -122,10 +128,11 @@ class SlotComponent extends HTMLElement {
 customElements.define('slot-component', SlotComponent);
 ```
 
-<p style="margin-bottom:0"><strong>Demo:</strong></p>
+<div class="sample">
 <slot-component>
   <div class="div">Bye World!</div>
 </slot-component>
+</div>
 
 
 <script>

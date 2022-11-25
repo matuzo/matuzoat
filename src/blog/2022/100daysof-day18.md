@@ -19,13 +19,19 @@ reading:
     url: https://open-wc.org/guides/knowledge/styling/styles-piercing-shadow-dom/
   - title: "Day 10: global styles and web components"
     url: /blog/2022/100daysof-day10/
+  - title: "Day 28: custom properties and web components"
+    url: /blog/2022/100daysof-day28
+  - title: "Day 45: the specificity of ::slotted() content"
+    url: /blog/2022/100daysof-day45
 ---
 If you look at the following component, you’ll notice that it uses the same font as the rest of the page, even though I haven't applied any styles to the web component. If styles were completely encapsulated, I would expect the component to use a default font like *Times*, but the web component inherits styles from its parent elements.  
 
-<p style="margin-bottom:0"><strong>Demo:</strong></p>
+<div class="sample">
+
 <p>
 <shadow-component></shadow-component>
 </p>
+</div>
 
 <p class="code-label"><strong>HTML:</strong></p>
 
@@ -80,7 +86,8 @@ If I wrap the component in a `<div>` and a set a `color` on the div, the color o
   }
 </style>
 
-<p style="margin-bottom:0"><strong>Demo:</strong></p>
+<div class="sample">
 <div class="parent">
   <shadow-component></shadow-component>
+</div>
 </div>

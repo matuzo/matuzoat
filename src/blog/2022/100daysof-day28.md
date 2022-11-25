@@ -12,6 +12,13 @@ tags:
 codepen: https://codepen.io/matuzo/pen/KKeKYqX
 layout: "layouts/100days.njk"
 caniuse: "font-variation-settings"
+reading:
+  - title: "Day 10: global styles and web components"
+    url: /blog/2022/100daysof-day10
+  - title: "Day 18: inheritable styles and web components"
+    url: /blog/2022/100daysof-day18
+  - title: "Day 45: the specificity of ::slotted() content"
+    url: /blog/2022/100daysof-day45
 ---
 Let's take this basic alert component.
 
@@ -41,9 +48,11 @@ Let's take this basic alert component.
 customElements.define('matuzo-alert', Alert);
 </script>
 
+<div class="sample">
 <matuzo-alert>
   Please confirm your e-mail address by clicking the link in the e-mail we just sent you.
 </matuzo-alert>
+</div>
 
 ```js
 class Alert extends HTMLElement {
@@ -137,9 +146,13 @@ What's happening here is that we set the `background-color`, `color`, and `paddi
 
 ## Default
 
+<div class="sample">
+
 <matuzo-alert>
   Please confirm your e-mail address by clicking the link in the e-mail we just sent you.
 </matuzo-alert>
+
+</div>
 
 ```html
 <matuzo-alert>
@@ -148,9 +161,11 @@ What's happening here is that we set the `background-color`, `color`, and `paddi
 ```
 
 ## Error
+<div class="sample">
 <matuzo-alert class="error">
   The amount must be a value between 1 and 16.
 </matuzo-alert>
+</div>
 
 ```css
 .error {
@@ -169,9 +184,11 @@ What's happening here is that we set the `background-color`, `color`, and `paddi
 
 ## Success
 
+<div class="sample">
 <matuzo-alert class="success">
   Settings saved successfully.
 </matuzo-alert>
+</div>
 
 ```css
 .success {
