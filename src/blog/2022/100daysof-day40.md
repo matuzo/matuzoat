@@ -15,6 +15,10 @@ caniuse: "hwb()"
 reading:
   - title: "Day 37: cascade layers"
     url: https://www.matuzo.at/blog/2022/100daysof-day37/
+  - title: "Day 43: grouping layers"
+    url: https://www.matuzo.at/blog/2022/100daysof-day43/
+  - title: "Day 46: ordering layers"
+    url: https://www.matuzo.at/blog/2022/100daysof-day46/
   - title: "A Complete Guide to CSS Cascade Layers"
     url: https://css-tricks.com/css-cascade-layers/
 ---

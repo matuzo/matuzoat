@@ -19,6 +19,10 @@ reading:
     url: https://www.matuzo.at/blog/2022/cascade-layers/
   - title: "Day 40: Unlayered styles"
     url: https://www.matuzo.at/blog/2022/100daysof-day40/
+  - title: "Day 43: grouping layers"
+    url: https://www.matuzo.at/blog/2022/100daysof-day43/
+  - title: "Day 46: ordering layers"
+    url: https://www.matuzo.at/blog/2022/100daysof-day46/
 ---
 
 Let’s say we’re using a combination of a tag and an attribute selector for styling e-mail input fields. This declaration is part of our base stylesheet and comes early in the stylesheet. Later in the document, we want to use a class to overwrite parts of the base styling:

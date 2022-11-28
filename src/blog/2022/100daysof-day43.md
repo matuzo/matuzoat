@@ -17,6 +17,10 @@ reading:
     url: https://www.matuzo.at/blog/2022/100daysof-day37/
   - title: "Day 40: unlayered styles"
     url: https://www.matuzo.at/blog/2022/100daysof-day40/
+  - title: "Day 46: ordering layers"
+    url: https://www.matuzo.at/blog/2022/100daysof-day46/
+  - title: "A Complete Guide to CSS Cascade Layers"
+    url: https://css-tricks.com/css-cascade-layers/
 ---
 If you work on a large style sheet, you might want to create cascade layers to group different types of declarations. In order to give your layers even more structure and control, you can also group declarations within layers.
 
