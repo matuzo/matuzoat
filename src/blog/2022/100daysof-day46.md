@@ -19,6 +19,8 @@ reading:
     url: https://www.matuzo.at/blog/2022/100daysof-day40/
   - title: "Day 43: grouping layers"
     url: https://www.matuzo.at/blog/2022/100daysof-day43/
+  - title: "Day 49: layering entire style sheets"
+    url: https://www.matuzo.at/blog/2022/100daysof-day49/
   - title: "A Complete Guide to CSS Cascade Layers"
     url: https://css-tricks.com/css-cascade-layers/
 ---

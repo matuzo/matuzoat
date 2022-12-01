@@ -23,6 +23,8 @@ reading:
     url: https://www.matuzo.at/blog/2022/100daysof-day43/
   - title: "Day 46: ordering layers"
     url: https://www.matuzo.at/blog/2022/100daysof-day46/
+  - title: "Day 49: layering entire style sheets"
+    url: https://www.matuzo.at/blog/2022/100daysof-day49/
 ---
 
 Let’s say we’re using a combination of a tag and an attribute selector for styling e-mail input fields. This declaration is part of our base stylesheet and comes early in the stylesheet. Later in the document, we want to use a class to overwrite parts of the base styling:
