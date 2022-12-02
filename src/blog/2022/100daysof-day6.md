@@ -19,6 +19,8 @@ reading:
     url: /blog/2022/100daysof-day16/
   - title: "Day 26: using combinators in :has()"
     url: /blog/2022/100daysof-day26
+  - title: "Day 50: :has(:not()) vs. :not(:has())"
+    url: /blog/2022/100daysof-day50/
 ---
 In the following example, each `.form-item` that contains/has a child with the `aria-invalid` attribute set to “true” displays text in red color. (currently only in [Chrome/Edge 105+ and Safari 15.4+](https://caniuse.com/css-has))
 

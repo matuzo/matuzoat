@@ -19,6 +19,8 @@ reading:
     url: /blog/2022/100daysof-day8/
   - title: "Day 16: the specificity of :has()"
     url: /blog/2022/100daysof-day16
+  - title: "Day 50: :has(:not()) vs. :not(:has())"
+    url: /blog/2022/100daysof-day50/
   - title: ":has(): the family selector"
     url: https://developer.chrome.com/blog/has-m105/#how-to-use-has
 ---

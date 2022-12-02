@@ -19,6 +19,8 @@ reading:
     url: /blog/2022/100daysof-day16/
   - title: "Day 26: using combinators in :has()"
     url: /blog/2022/100daysof-day26
+  - title: "Day 50: :has(:not()) vs. :not(:has())"
+    url: /blog/2022/100daysof-day50/
 ---
 ```html
 <div>
