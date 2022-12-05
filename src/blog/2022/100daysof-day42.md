@@ -15,6 +15,8 @@ caniuse: "hwb()"
 reading:
   - title: "Native Aspect Ratio Boxes in CSS thanks to aspect-ratio"
     url: https://www.bram.us/2020/11/30/native-aspect-ratio-boxes-in-css-thanks-to-aspect-ratio/
+  - title: "Day 51: aspect-ratio and replaced elements"
+    url: /blog/2022/100daysof-day51
 ---
 
 ## Defining ratios
