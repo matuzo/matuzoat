@@ -13,7 +13,11 @@
       <link rel="stylesheet" href="{{ sheet_url | url | cacheBuster }}">
     {% endfor %}
     
-    {% set postTeaser = teaser | md | striptags %}
+    {% set postTeaser = '' %}
+
+    {% if teaser %}
+      {% set postTeaser = teaser | md | striptags %}
+    {% endif %}
     <meta name="description" content="{{ description or metadescription or postTeaser  }}">
     <meta property="og:title" content="{{ title or metadata.title }}">
     <meta property="og:description" content="{{ description or metadescription or postTeaser }}">
