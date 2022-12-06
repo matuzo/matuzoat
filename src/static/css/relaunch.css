@@ -670,6 +670,7 @@ ins {
   text-decoration: none;
 }
 
+s::before, s::after, 
 del::before, del::after, 
 ins::before, ins::after {
   clip-path: inset(100%);
@@ -681,10 +682,12 @@ ins::before, ins::after {
   white-space: nowrap;
 }
 
+s::before,
 del::before {
   content: " [deletion start] ";
 }
 
+s::after,
 del::after {
   content: " [deletion end] ";
 }
