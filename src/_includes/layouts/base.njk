@@ -12,10 +12,11 @@
       {% set sheet_url = '/assets/' + sheet + '.css' %}
       <link rel="stylesheet" href="{{ sheet_url | url | cacheBuster }}">
     {% endfor %}
-
-    <meta name="description" content="{{ description or metadescription }}">
+    
+    {% set postTeaser = teaser | md | striptags %}
+    <meta name="description" content="{{ description or metadescription or postTeaser  }}">
     <meta property="og:title" content="{{ title or metadata.title }}">
-    <meta property="og:description" content="{{ description or metadescription }}">
+    <meta property="og:description" content="{{ description or metadescription or postTeaser }}">
     <meta property="og:image" content="{{ metadata.cloudinary }}/w_1200/{{ image or metadata.smimage }}">
     <meta property="og:locale" content="en_GB">
     <meta property="og:type" content="website">
@@ -45,6 +46,8 @@
 
   <body class="body" id="body">
     {% include 'header.njk' %}
+
+    {{ title }}<br>
 
     {# <section class="banner" aria-labelledby="banner_heading">
       <h2 id="banner_heading">This site is updating in the open</h2>
