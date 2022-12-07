@@ -15,6 +15,8 @@ caniuse: "hwb()"
 reading:
   - title: "overscroll-behavior on MDN"
     url: https://developer.mozilla.org/en-US/docs/Web/CSS/overscroll-behavior
+  - title: "Day 53: disabling pull-to-refresh"
+    url: /blog/2022/100daysof-day53/
 ---
 If you scroll the inner box in the following example to the end and you keep scrolling, the outer box starts scrolling, too, and finally the whole page.
 
