@@ -21,10 +21,12 @@ reading:
     url: https://www.matuzo.at/blog/2022/100daysof-day46/
   - title: "Day 49: layering entire style sheets"
     url: https://www.matuzo.at/blog/2022/100daysof-day49/
-  - title: "A Complete Guide to CSS Cascade Layers"
-    url: https://css-tricks.com/css-cascade-layers/
   - title: "Day 52: multiple layer lists"
     url: https://www.matuzo.at/blog/2022/100daysof-day52/
+  - title: "Day 55: anonymous layers"
+    url: https://www.matuzo.at/blog/2022/100daysof-day55/
+  - title: "A Complete Guide to CSS Cascade Layers"
+    url: https://css-tricks.com/css-cascade-layers/
 ---
 Let's start nice and simple with a single layer. The border of this quote is red.
 

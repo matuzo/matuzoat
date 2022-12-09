@@ -23,6 +23,8 @@ reading:
     url: https://www.matuzo.at/blog/2022/100daysof-day49/
   - title: "Day 52: multiple layer lists"
     url: https://www.matuzo.at/blog/2022/100daysof-day52/
+  - title: "Day 55: anonymous layers"
+    url: https://www.matuzo.at/blog/2022/100daysof-day55/
   - title: "A Complete Guide to CSS Cascade Layers"
     url: https://css-tricks.com/css-cascade-layers/
 ---

@@ -25,6 +25,8 @@ reading:
     url: https://www.matuzo.at/blog/2022/100daysof-day46/
   - title: "Day 49: layering entire style sheets"
     url: https://www.matuzo.at/blog/2022/100daysof-day49/
+  - title: "Day 55: anonymous layers"
+    url: https://www.matuzo.at/blog/2022/100daysof-day55/
   - title: "Day 52: multiple layer lists"
     url: https://www.matuzo.at/blog/2022/100daysof-day52/
 ---
