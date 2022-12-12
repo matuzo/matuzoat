@@ -723,3 +723,20 @@ ins::after {
 [data-sample]::after {
   content: attr(data-sample);
 }
+
+.taglist {
+  list-style: none; display: flex; gap: 0.3rem 0.5rem; flex-wrap: wrap; padding: 0;
+}
+
+.taglist li:not(:last-child)::after {
+  content:","
+}
+
+.highlight {
+  background: rgb(21 58 82 / 10%);
+  padding: 1rem;
+}
+
+.logolist {
+  display: flex; align-items: center; gap: 2rem; flex-wrap: wrap; justify-content: center
+}
