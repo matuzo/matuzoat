@@ -19,6 +19,8 @@ reading:
     url: /blog/2022/100daysof-day18
   - title: "Day 45: the specificity of ::slotted() content"
     url: /blog/2022/100daysof-day45
+  - title: "Day 60: the ::part() pseudo-element"
+    url: /blog/2022/100daysof-day60
 ---
 Let's take this basic alert component.
 

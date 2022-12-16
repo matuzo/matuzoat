@@ -19,6 +19,8 @@ reading:
     url: /blog/2022/100daysof-day28
   - title: "Day 45: the specificity of ::slotted() content"
     url: /blog/2022/100daysof-day45
+  - title: "Day 60: the ::part() pseudo-element"
+    url: /blog/2022/100daysof-day60
 ---
 As it turns out, it depends on how you create and use the components. In my test setup I have an HTML document, a stylesheet and three different components.
 

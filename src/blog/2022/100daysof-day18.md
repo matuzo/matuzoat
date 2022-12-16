@@ -23,6 +23,8 @@ reading:
     url: /blog/2022/100daysof-day28
   - title: "Day 45: the specificity of ::slotted() content"
     url: /blog/2022/100daysof-day45
+  - title: "Day 60: the ::part() pseudo-element"
+    url: /blog/2022/100daysof-day60
 ---
 If you look at the following component, you’ll notice that it uses the same font as the rest of the page, even though I haven't applied any styles to the web component. If styles were completely encapsulated, I would expect the component to use a default font like *Times*, but the web component inherits styles from its parent elements.  
 

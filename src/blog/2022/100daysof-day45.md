@@ -19,6 +19,8 @@ reading:
     url: /blog/2022/100daysof-day18
   - title: "Day 28: custom properties and web components"
     url: /blog/2022/100daysof-day28
+  - title: "Day 60: the ::part() pseudo-element"
+    url: /blog/2022/100daysof-day60
 ---
 Let's take the following component. There's a paragraph in the shadow DOM and another paragraph coming from the light DOM, passed through a `<slot>`, and there's a global style turning the background color of paragraphs aqua.
 
