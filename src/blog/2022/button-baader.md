@@ -60,7 +60,7 @@ It’s absolutely fine if you want to add an image or icon to the button. Just m
 
 <button type="button">
   <svg aria-hidden="true" width="28" height="28">
-    <use xlink:href="#twitter"></use>
+    <use href="#twitter"></use>
   </svg>
   Tweet!
 </button>
@@ -68,7 +68,7 @@ It’s absolutely fine if you want to add an image or icon to the button. Just m
 ```html
 <button type="button">
   <svg aria-hidden="true" width="28" height="28">
-    <use xlink:href="#twitter"></use>
+    <use href="#twitter"></use>
   </svg>
 
   Tweet!
@@ -85,7 +85,7 @@ You can put text inside the button and hide it visually using a custom class.
 
 <button type="button">
   <svg aria-hidden="true" width="28" height="28">
-    <use xlink:href="#twitter"></use>
+    <use href="#twitter"></use>
   </svg>
   <span class="u-vh">Tweet!</span>
 </button>
@@ -95,7 +95,7 @@ You can put text inside the button and hide it visually using a custom class.
   <span class="sr-only">Tweet!</span>
 
   <svg aria-hidden="true" width="28" height="28">
-    <use xlink:href="#twitter"></use>
+    <use href="#twitter"></use>
   </svg>
 </button>
 ```
@@ -124,14 +124,14 @@ You can add a text alternative for the icon using `aria-label` on the button.
 
 <button aria-label="Tweet!" type="button">
   <svg aria-hidden="true" width="28" height="28">
-    <use xlink:href="#twitter"></use>
+    <use href="#twitter"></use>
   </svg>
 </button>
 
 ```html
 <button aria-label="Tweet!" type="button">
   <svg aria-hidden="true" width="28" height="28">
-    <use xlink:href="#twitter"></use>
+    <use href="#twitter"></use>
   </svg>
 </button>
 ```
@@ -144,7 +144,7 @@ If the label you want to use already exists somewhere on the page, you can refer
 
 <button aria-labelledby="heading" type="button">
   <svg aria-hidden="true" width="28" height="28">
-    <use xlink:href="#twitter"></use>
+    <use href="#twitter"></use>
   </svg>
 </button>
 
@@ -153,7 +153,7 @@ If the label you want to use already exists somewhere on the page, you can refer
 
 <button aria-labelledby="heading" type="button">
   <svg aria-hidden="true" width="28" height="28">
-    <use xlink:href="#twitter"></use>
+    <use href="#twitter"></use>
   </svg>
 </button>
 ```
@@ -165,7 +165,7 @@ The `<title>` element inside the `<svg>` can serve as the accessible name for th
 <button type="button">
   <svg aria-labelledby="title_twitter_h72d" width="28" height="28">
     <title id="title_twitter_h72d">Tweet!</title>
-    <use xlink:href="#twitter"></use>
+    <use href="#twitter"></use>
   </svg>
 </button>
 
@@ -173,7 +173,7 @@ The `<title>` element inside the `<svg>` can serve as the accessible name for th
 <button type="button">
   <svg aria-labelledby="title_twitter_h72d" width="28" height="28">
     <title id="title_twitter_h72d">Tweet!</title>
-    <use xlink:href="#twitter"></use>
+    <use href="#twitter"></use>
   </svg>
 </button>
 ```
@@ -248,14 +248,14 @@ Don’t do this!
 
 <button type="button">
   <svg width="28" height="28">
-    <use xlink:href="#twitter"></use>
+    <use href="#twitter"></use>
   </svg>
 </button>
 
 ```html
 <button type="button">
   <svg width="28" height="28">
-    <use xlink:href="#twitter"></use>
+    <use href="#twitter"></use>
   </svg>
 </button>
 ```
