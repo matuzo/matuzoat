@@ -23,7 +23,7 @@ reading:
 If you create an HTML document, it comes with default styles that are more or less the same in most browsers. A serif font, transparent (white) background, black text color, etc. You could say that the default theme for any HTML document is a light theme because it uses a light background color. Now here comes the big revelation (at least to me) Sara writes about: There's also a dark theme.
 
 
-The thing is, if you change the color mode in your operating system from dark to light, the colors in the browser’s viewport stay the same (If you know of an OS/browser where that's different, please tell me). You have to instruct the browser first about what to do. You can do that by using the `color-scheme` property.
+The thing is, if you change the color mode in your operating system from dark to light, the colors in the browser’s viewport stay the same (If you know of an operating system (OS)/browser where that's different, please tell me). You have to instruct the browser first about what to do. You can do that by using the `color-scheme` property.
 
 ```css
 html {
@@ -47,7 +47,7 @@ html {
 }
 ```
 
-If the color mode in the OS is light, the color scheme of the document will be light. If the color mode is dark, the scheme will be dark. If you don't have a preference, `dark` might be used first because it comes first in the list, but I can't confirm that. On macOS at least, the document is always rendered in light mode when the color mode is “auto” in the OS, no matter the order of the values.
+If the color mode in the OS is light, the color scheme of the document will be light. If the color mode is dark, the scheme will be dark. If you don't have a preference, `dark` might be used first because it comes first in the list, but I can't confirm that. On macOS at least, the document is always rendered in light mode when the color mode is “auto” in the OS, no matter the order of the values. It only changes when the operating system changes the mode automatically, as well.
 
 You can try it yourself on this page by changing the value from “normal” to `light`, `dark`, `light dark`, or `dark light` in this editable style element and adjusting the preference in your OS or in your Dev Tools settings.
 <style class="editable-style" contenteditable>html {
