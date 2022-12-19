@@ -746,3 +746,10 @@ article footer {
   padding: 2rem 0;
   text-align: left;
 }
+
+.editable-style {
+  display: block;
+  white-space: pre;
+  border: 4px solid;
+  padding: 1rem;
+}
