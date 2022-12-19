@@ -38,4 +38,9 @@ layout: layouts/base.njk
       </a>.
     </p>
   {% endif %}
+
+  <footer>
+    {% set subject = "Comment on “" ~ title ~ "”" %}
+    <p>My blog doesn't support comments yet, but you can reply via <a href="mailto:blog@matuzo.at?subject={{ subject | urlencode }}">e-mail</a>.</p>
+  </footer>
 </article>

@@ -71,7 +71,6 @@ layout: layouts/base.njk
 
     
   {% endif %}
-</article>
 
 {% set previousPost = collections.100daysofmoreorlessmoderncss | getPreviousCollectionItem(page) %}
 {% set nextPost = collections.100daysofmoreorlessmoderncss | getNextCollectionItem(page) %}
@@ -101,3 +100,10 @@ layout: layouts/base.njk
 </p>
 </nav>  
 {% endif %}
+
+  <footer>
+    {% set subject = "Comment on “" ~ title ~ "”" %}
+    <p>My blog doesn't support comments yet, but you can reply via <a href="mailto:blog@matuzo.at?subject={{ subject | urlencode }}">e-mail</a>.</p>
+  </footer>
+
+</article>

@@ -740,3 +740,9 @@ ins::after {
 .logolist {
   display: flex; align-items: center; gap: 2rem; flex-wrap: wrap; justify-content: center
 }
+
+article footer {
+  border-top: 1px dashed;
+  padding: 2rem 0;
+  text-align: left;
+}
