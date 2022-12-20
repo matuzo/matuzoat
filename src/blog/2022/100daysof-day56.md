@@ -17,6 +17,10 @@ reading:
     url: https://www.oddbird.net/2022/08/18/cq-syntax/
   - title: "CSS Containment Module Level 3"
     url: https://www.w3.org/TR/css-contain-3/
+  - title: "Day 59: naming containers"
+    url: /blog/2022/100daysof-day59/
+  - title: "Day 62: the container shorthand"
+    url: /blog/2022/100daysof-day62/
 ---
 
 You can query all kinds of things, not just the width, height, or orientation, but for example custom properties, as well. There’s an important difference between size container features (`width`, `height`, `inline-size`, `block-size`, `aspect-ratio`, `orientation`) and style container features (computed values). If you want to query size container features, you have to define a size container explicitly. That’s because they require special size containment in order to function. 

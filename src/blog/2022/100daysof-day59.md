@@ -1,5 +1,5 @@
 ---
-title: 'Day 59: naming container'
+title: 'Day 59: naming containers'
 date: 2022-12-15T09:38:54.969Z
 image: articles/sm_100days-day59.jpg
 intro: "It’s time to get me up to speed with modern CSS. There’s so much new in CSS that I know too little about. To change that I’ve started [#100DaysOfMoreOrLessModernCSS](/blog/2022/100-days-of-more-or-less-modern-css/). Why more or less modern CSS? Because some topics will be about cutting-edge features, while other stuff has been around for quite a while already, but I just have little to no experience with it."
@@ -17,6 +17,10 @@ reading:
     url: https://www.oddbird.net/2022/08/18/cq-syntax/
   - title: "CSS Containment Module Level 3"
     url: https://www.w3.org/TR/css-contain-3/
+  - title: "Day 56: container queries"
+    url: /blog/2022/100daysof-day56/
+  - title: "Day 62: the container shorthand"
+    url: /blog/2022/100daysof-day62/
 ---
 Let's say, we have 2 size containers, `.wrapper`  and `<section>`.
 
