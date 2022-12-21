@@ -115,7 +115,7 @@ the viewport has a min-width of 500px */
   }
 </style>
 
-You grab and resize the `<section>` by clicking and dragging it in the bottom right corner. The background color of the `.card` changes as soon as the width of the parent section hits `500px`.
+You can grab and resize the `<section>` by clicking and dragging it in the bottom right corner. The background color of the `.card` changes as soon as the width of the parent section hits `500px`.
 
 <div data-sample="demo">
 <section>

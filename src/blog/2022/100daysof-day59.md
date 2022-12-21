@@ -119,7 +119,7 @@ section {
 }
 </style>
 
-By default, the container query watches the width of the closest size container, `<section>`. You grab and resize the `<section>` by clicking and dragging it in the bottom right corner. The background color of the `.card` changes as soon as the width of the parent section hits `500px`.
+By default, the container query watches the width of the closest size container, `<section>`. You can grab and resize the `<section>` by clicking and dragging it in the bottom right corner. The background color of the `.card` changes as soon as the width of the parent section hits `500px`.
 
 <div data-sample="demo">
 <div class="wrapper">
@@ -155,7 +155,7 @@ section {
 }
 ```
 
-You grab and resize the `.wrapper` by clicking and dragging it in the bottom right corner. The background color of the `.card` changes as soon as the width of the `.wrapper` is lower than `500px`.
+You can grab and resize the `.wrapper` by clicking and dragging it in the bottom right corner. The background color of the `.card` changes as soon as the width of the `.wrapper` is lower than `500px`.
 
 <div data-sample="demo" class="sample2">
 <div class="wrapper">
