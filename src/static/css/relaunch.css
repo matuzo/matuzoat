@@ -753,3 +753,21 @@ article footer {
   border: 4px solid;
   padding: 1rem;
 }
+
+th, td {
+  border: 1px solid;
+  padding: 0.3rem 0.6rem;
+  text-align: left;
+}
+
+th {
+  background: var(--color-blue-dark);
+  color: var(--color-white);
+}
+
+caption {
+  text-align: left;
+  font-weight: bold;
+  max-width: 100%;
+  width: max-content;
+}
