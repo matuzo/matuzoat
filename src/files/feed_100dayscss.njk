@@ -27,7 +27,6 @@ permalink: /feed_100dayscss.xml
         {% endif %}
 
         {{ post.templateContent | htmlToAbsoluteUrls(absolutePostUrl) }}
-                <hr>
         {% set subject = "Comment on “" ~ post.data.title ~ "”" %}
         <p>My blog doesn't support comments yet, but you can reply via <a href="mailto:blog@matuzo.at?subject={{ subject | urlencode}}">e-mail</a>.</p>    
         </content>

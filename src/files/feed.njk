@@ -23,7 +23,6 @@ permalink: /feed.xml
         <id>{{ absolutePostUrl }}</id>
         <content type="html">
         {{post.data.teaser | md }} {{ post.templateContent | htmlToAbsoluteUrls(absolutePostUrl) }}
-        {{ "<hr>" | escape }}
           {% set subject = "Comment on “" ~ post.data.title ~ "”" %}
           {% set reply = "<p>My blog doesn't support comments yet, but you can reply via <a href='mailto:blog@matuzo.at?subject=" ~ subject | urlencode ~ "'>e-mail</a>.</p>" %}
           {{ reply | escape }}   
