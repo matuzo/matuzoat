@@ -15,7 +15,7 @@ reading:
   - title: "Day 63: explicit defaulting with inherit, initial, unset, and revert"
     url: /blog/2022/100daysof-day63/
 ---
-You can use the `rever-layer` keyword to roll back the cascade to a value defined in a previous layer.
+You can use the `revert-layer` keyword to roll back the cascade to a value defined in a previous layer.
 
 In the following example, the `base` layer defines a black color for the border. The theme layer sets the border color to `fuchsia`. In a `print` media query within the `theme` layer we revert the style back to the color in the `base` layer.
 
