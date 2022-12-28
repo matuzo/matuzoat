@@ -21,6 +21,8 @@ reading:
 If you want to style an element based on the number of direct children it has, you can do that with just CSS.  
 Let's say you want to style a list in a certain way when it contains at least three items. You use the `:has()` pseudo-class with the condition that it _has_ a direct child item that is a third child.
 
+<p class="highlight">Note: Firefox <a href="https://caniuse.com/css-has">doesn't support</a> <code>:has()</code> yet.</p>
+
 ```css
 ul:has(>:nth-child(3)) {
   border: 10px solid red;
