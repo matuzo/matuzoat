@@ -23,12 +23,12 @@ permalink: /feed_100dayscss.xml
         <id>{{ absolutePostUrl }}</id>
         <content type="html">
         {% if post.data.teaser  %}
-          {{ post.data.teaser | md }}
+          {{ post.data.teaser | md }}
         {% endif %}
 
         {{ post.templateContent | htmlToAbsoluteUrls(absolutePostUrl) }}
         {% set subject = "Comment on “" ~ post.data.title ~ "”" %}
-        <p>My blog doesn't support comments yet, but you can reply via <a href="mailto:blog@matuzo.at?subject={{ subject | urlencode}}">e-mail</a>.</p>    
+        <p>My blog doesn't support comments yet, but you can reply via <a href="mailto:blog@matuzo.at?subject={{ subject | urlencode}}">e-mail</a> (<a href="mailto:blog@matuzo.at">blog@matuzo.at</a>).</p>    
         </content>
       </entry>
     {% endif %}
