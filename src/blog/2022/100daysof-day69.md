@@ -59,7 +59,7 @@ section {
 }
 ```
 
-The total width of the container (`<section>`) is 560px (500px `width` + 40px `padding` + 20px `border`). The container query fires when the `width` is at least 500px, not when the total width is 500px. 
+The total width of the container (`<section>`) is 560px (500px `width` + 40px `padding` + 20px `border`). The container query fires when the width without padding and border (`content-box`) is at least 500px, not when the total width is 500px. 
 
 <div class="highlight">
 
@@ -116,7 +116,7 @@ You can grab and resize the `<section>` by clicking and dragging it in the botto
 </section>
 </div>
 
-If you change `box-sizing: content-box;` to `box-sizing: border-box;`, the total width of the container is 500px (440px `width` + 40px `padding` + 20px `border`). The container query still only fires when the `width` is at least 500px.
+If you change `box-sizing: content-box;` to `box-sizing: border-box;`, the total width of the container is 500px (440px `width` + 40px `padding` + 20px `border`). The container query still only fires when the content-box is at least 500px.
 
 ```css
 section {
