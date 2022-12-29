@@ -76,11 +76,12 @@ You can grab and resize the `<section>` by clicking and dragging it in the botto
     resize: horizontal;
     overflow: auto;
     box-sizing: content-box;
+    max-width: calc(100% - 60px);
   }
 
   .sample2 section {
     box-sizing: border-box;
-
+    max-width: 100%;
   }
 
   [data-sample] .card {
@@ -150,8 +151,8 @@ section {
   const resizeObserver = new ResizeObserver((entries) => {
   for (const entry of entries) {
     entry.target.querySelector('h2').innerHTML = 
-      `total width: ${entry.target.getBoundingClientRect().width}px,<br>
-        content-box: ${entry.contentRect.width}px`
+      `total width: ${Math.round(entry.target.getBoundingClientRect().width)}px,<br>
+        content-box: ${Math.round(entry.contentRect.width)}px`
   }
 
   console.log('Size changed');
