@@ -804,3 +804,20 @@ caption {
     content: ' (' attr(href) ')';
   }
 }
+
+.image-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+.image-grid > * {
+  aspect-ratio: 16 / 9;
+  overflow: hidden;
+  display: block;
+}
+
+.image-grid img {
+  object-fit: cover;
+  height: 100%;
+  width: 100%;
+}
