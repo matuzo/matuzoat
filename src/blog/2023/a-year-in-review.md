@@ -1,6 +1,6 @@
 ---
 title: 'A year in review: 2022'
-permalink: /blog/s/index.html
+permalink: /blog/2023/a-year-in-review-2022/index.html
 teaser: 'I started my last year in review post with the words “2021 was wild!”. If 2021 was wild, then I don’t know what 2022 was because so much stuff was going on last year.'
 metadescription: ''
 overview_teaser: ''
