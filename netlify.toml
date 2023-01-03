@@ -19,3 +19,7 @@ package = "netlify-plugin-cache-folder"
 [[redirects]]
   from = "/blog/2022/twitter-ban2/"
   to = "/blog/2022/your-account-is-permanently-suspended/"
+
+[[redirects]]
+  from = "/blog/2022/100daysof-day71/"
+  to = "/blog/2023/100daysof-day71/"
