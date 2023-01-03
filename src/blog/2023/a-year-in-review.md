@@ -91,7 +91,7 @@ I've written 90 blog posts this year, which means on average 7.5 per month.
 
 If I had to pick 3 favorite articles, I'd go with:
 
-* [CSS Specificity Demo](blog/2022/specificity/) on my blog
+* [CSS Specificity Demo](/blog/2022/specificity/) on my blog
 * [Building the main navigation for a website](https://web.dev/website-navigation/) on web.dev
 * [How To Build A Progressively Enhanced, Accessible, Filterable And Paginated List](https://www.smashingmagazine.com/2022/04/accessible-filterable-paginated-list-11ty-alpinejs/) on Smashing Magazine
 
