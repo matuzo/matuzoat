@@ -65,7 +65,7 @@ Here's a recording of my talk:
 
 After 2 years without conferences, it felt so great to meet some of my friends again in person and other friends I made online for the first time.
 
-In Düsseldorf, I met Stephanie Eckles, Marc Thiele, Joschi Kuphal, Matthias Ott, Niels Binder, Marco Hengstenberg, Oliver Schöndorfer, Gunnar Bittersmann, Marc Hinse, Maik, Robert Weber, Daniel Wentsch, Thomas Semmler, Reinhard Steudel, Vasilis van Gemert, and many more. In Freiburg, I met Andy Bell, Michelle Barker, Charis and Jarijn, Vitaliy, Ari, Amanda, Iris, Samuel Snopko, Nathan Curtis, Harry Roberts, Barry Pollard, and many more. In Utrecht, I met Bramus van Damme, Schepp, Jewwy Qadri, Michael Hastrich, Niels Leenheer, Roudy Rabouw, Floor Drees, Erik Kroes, and many more. In Paris, I met Ahmad Shadeed, Gaël Poupard, Elie Sloïm, Cassie Evans, Luc Poupard, Nicolas Hoizey, and many more.
+In Düsseldorf, I met Stephanie Eckles, Marc Thiele, Joschi Kuphal, Matthias Ott, Niels Binder, Marco Hengstenberg, Oliver Schöndorfer, Gunnar Bittersmann, Marc Hinse, Maik, Robert Weber, Daniel Wentsch, Thomas Semmler, Reinhard Steudel, Vasilis van Gemert, and many more. In Freiburg, I met Andy Bell, Michelle Barker, Charis and Jarijn, Vitaly, Ari, Amanda, Iris, Samuel Snopko, Nathan Curtis, Harry Roberts, Barry Pollard, and many more. In Utrecht, I met Bramus van Damme, Schepp, Jewwy Qadri, Michael Hastrich, Niels Leenheer, Roudy Rabouw, Floor Drees, Erik Kroes, and many more. In Paris, I met Ahmad Shadeed, Gaël Poupard, Elie Sloïm, Cassie Evans, Luc Poupard, Nicolas Hoizey, and many more.
 
 I know that listing names is a stupid idea because I’m sure that I forgot someone, but it just makes me happy to visualize how many amazing people I’ve met.
 
