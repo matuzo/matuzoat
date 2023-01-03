@@ -40,7 +40,7 @@ The `<section>` is the container and the `.card` changes background color when t
 </section>
 ```
 
-The `<section>` has an explicit width, padding, and a border. It's `box-sizing` property is set to the default value `content-box`.
+The `<section>` has an explicit width, padding, and a border. Its `box-sizing` property is set to the default value `content-box`.
 
 ```css
 section {
