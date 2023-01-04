@@ -34,9 +34,11 @@ permalink: /feed_til.xml
         <a href="{{ post.data.link }}" rel="noopener">{{ post.data.link }}</a>
         {% endif %}
 {% endescape %}
-          {% set subject = "Comment on “" ~ post.data.title ~ "”" %}
-          {% set reply = "<p>My blog doesn't support comments yet, but you can reply via <a href='mailto:blog@matuzo.at?subject=" ~ subject | urlencode ~ "'>e-mail</a>.</p>" %}
-          {{ reply | escape }} 
+        {%- set subject = "Comment on “" ~ post.data.title ~ "”" -%}
+        {%- set message -%}
+        <p>My blog doesn't support comments yet, but you can reply via <a href="mailto:blog@matuzo.at?subject={{ subject | urlencode}}">blog@matuzo.at</a>.</p>    
+        {%- endset -%}
+        {{- message | e -}}
         </content>
       </entry>
   {%- endfor %}
