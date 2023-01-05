@@ -18,6 +18,8 @@ reading:
     url: /blog/2022/100daysof-day29
   - title: "Day 41: custom properties and url()s"
     url: /blog/2022/100daysof-day41
+  - title: "!important on MDN"
+    url: https://developer.mozilla.org/en-US/docs/Web/CSS/important
 ---
 ## Fallbacks
 

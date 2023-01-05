@@ -32,6 +32,8 @@ reading:
     url: /blog/2022/100daysof-day64/
   - title: "Day 68: cascade layers and browser support"
     url: /blog/2022/100daysof-day68/
+  - title: "!important on MDN"
+    url: https://developer.mozilla.org/en-US/docs/Web/CSS/important
 ---
 
 <style>
