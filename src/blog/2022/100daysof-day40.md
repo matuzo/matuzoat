@@ -14,19 +14,25 @@ layout: "layouts/100days.njk"
 caniuse: "hwb()"
 reading:
   - title: "Day 37: cascade layers"
-    url: https://www.matuzo.at/blog/2022/100daysof-day37/
+    url: /blog/2022/100daysof-day37/
   - title: "Day 43: grouping layers"
-    url: https://www.matuzo.at/blog/2022/100daysof-day43/
+    url: /blog/2022/100daysof-day43/
   - title: "Day 46: ordering layers"
-    url: https://www.matuzo.at/blog/2022/100daysof-day46/
+    url: /blog/2022/100daysof-day46/
   - title: "Day 49: layering entire style sheets"
-    url: https://www.matuzo.at/blog/2022/100daysof-day49/
+    url: /blog/2022/100daysof-day49/
   - title: "Day 52: multiple layer lists"
-    url: https://www.matuzo.at/blog/2022/100daysof-day52/
+    url: /blog/2022/100daysof-day52/
   - title: "Day 55: anonymous layers"
-    url: https://www.matuzo.at/blog/2022/100daysof-day55/
+    url: /blog/2022/100daysof-day55/
   - title: "Day 58: ordering nested layers"
-    url: https://www.matuzo.at/blog/2022/100daysof-day58/
+    url: /blog/2022/100daysof-day58/
+  - title: "Day 64: the revert-layer keyword"
+    url: /blog/2022/100daysof-day64/
+  - title: "Day 68: cascade layers and browser support"
+    url: /blog/2022/100daysof-day68/
+  - title: "Day 74: using !important in cascade layers"
+    url: /blog/2022/100daysof-day74
   - title: "A Complete Guide to CSS Cascade Layers"
     url: https://css-tricks.com/css-cascade-layers/
 ---
@@ -70,9 +76,12 @@ Let's start nice and simple with a single layer. The border of this quote is red
 }
 </style>
 
+<div data-sample="demo">
+
 <blockquote>
   There's only one Return, okay, and it ain't of the king...
 </blockquote>
+</div>
 
 If we add another layer, the border color turns green because a layer defined later in the document has precedence over a layer defined earlier.
 
@@ -91,10 +100,12 @@ If we add another layer, the border color turns green because a layer defined la
 }
 ```
 
+<div data-sample="demo">
+
 <blockquote class="two">
   There's only one Return, okay, and it ain't of the king...
 </blockquote>
-
+</div>
 
 <p>If we add unlayered styles after the second layer, the color turns hotpink. Not because the declaration comes later in the document, but because unlayered styles have the highest priority and always<span aria-describedby="not-always">*</span> overwrite layered styles.</p>
 
@@ -119,9 +130,12 @@ blockquote {
 }
 ```
 
+<div data-sample="demo">
+
 <blockquote class="three">
   There's only one Return, okay, and it ain't of the king...
 </blockquote>
+</div>
 
 This means that the color will be hotpink even if the unlayered styles come before the layered styles.
 
@@ -145,6 +159,9 @@ blockquote {
 }
 ```
 
+<div data-sample="demo">
+
 <blockquote class="four">
   There's only one Return, okay, and it ain't of the king...
 </blockquote>
+</div>

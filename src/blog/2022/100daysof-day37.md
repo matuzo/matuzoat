@@ -18,19 +18,25 @@ reading:
   - title: "Cascade Layers: First Contact"
     url: https://www.matuzo.at/blog/2022/cascade-layers/
   - title: "Day 40: Unlayered styles"
-    url: https://www.matuzo.at/blog/2022/100daysof-day40/
+    url: /blog/2022/100daysof-day40/
   - title: "Day 43: grouping layers"
-    url: https://www.matuzo.at/blog/2022/100daysof-day43/
+    url: /blog/2022/100daysof-day43/
   - title: "Day 46: ordering layers"
-    url: https://www.matuzo.at/blog/2022/100daysof-day46/
+    url: /blog/2022/100daysof-day46/
   - title: "Day 49: layering entire style sheets"
-    url: https://www.matuzo.at/blog/2022/100daysof-day49/
-  - title: "Day 55: anonymous layers"
-    url: https://www.matuzo.at/blog/2022/100daysof-day55/
-  - title: "Day 58: ordering nested layers"
-    url: https://www.matuzo.at/blog/2022/100daysof-day58/
+    url: /blog/2022/100daysof-day49/
   - title: "Day 52: multiple layer lists"
-    url: https://www.matuzo.at/blog/2022/100daysof-day52/
+    url: /blog/2022/100daysof-day52/
+  - title: "Day 55: anonymous layers"
+    url: /blog/2022/100daysof-day55/
+  - title: "Day 58: ordering nested layers"
+    url: /blog/2022/100daysof-day58/
+  - title: "Day 64: the revert-layer keyword"
+    url: /blog/2022/100daysof-day64/
+  - title: "Day 68: cascade layers and browser support"
+    url: /blog/2022/100daysof-day68/
+  - title: "Day 74: using !important in cascade layers"
+    url: /blog/2022/100daysof-day74
 ---
 
 Let’s say we’re using a combination of a tag and an attribute selector for styling e-mail input fields. This declaration is part of our base stylesheet and comes early in the stylesheet. Later in the document, we want to use a class to overwrite parts of the base styling:
@@ -80,9 +86,11 @@ input[type="email"] {
   }
 </style>
 
+<div data-sample="demo">
 <div class="demo default">
   <label for="email">E-mail</label>
   <input id="email" type="email" class="form-item">
+</div>
 </div>
 
 This won’t work because `input[type="email"]` is more specific than `.form-item `.  
@@ -164,10 +172,12 @@ Using `:where()` to decrease specificity is a nice solution, and it works great 
   }
 }
 ```
+<div data-sample="demo">
 
 <div class="demo cascade">
   <label for="email2">E-mail</label>
   <input id="email2" type="email" class="form-item">
+</div>
 </div>
 
 The specificity of `.form-item` is still lower than the specificity of `input[type="email"]`, but `.form-item` is in the component layer, which comes later in the document and thus overwrites styles in the base layer.

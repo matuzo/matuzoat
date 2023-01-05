@@ -14,11 +14,11 @@ layout: "layouts/100days.njk"
 caniuse: "hwb()"
 reading:
   - title: "Day 11: space-separated functional color notations"
-    url: https://www.matuzo.at/blog/2022/100daysof-day11/
+    url: /blog/2022/100daysof-day11/
   - title: "Day 23: the lab() color function"
-    url: https://www.matuzo.at/blog/2022/100daysof-day23/
+    url: /blog/2022/100daysof-day23/
   - title: "Day 30: the hwb() color function"
-    url: https://www.matuzo.at/blog/2022/100daysof-day30/
+    url: /blog/2022/100daysof-day30/
 ---
 ```css
 /* ✅ works */

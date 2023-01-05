@@ -12,8 +12,28 @@ tags:
 codepen: https://codepen.io/matuzo/pen/ExpaQzQ
 layout: "layouts/100days.njk"
 reading:
+  - title: "Day 37: cascade layers"
+    url: /blog/2022/100daysof-day37/
+  - title: "Day 40: unlayered styles"
+    url: /blog/2022/100daysof-day40/
+  - title: "Day 43: grouping layers"
+    url: /blog/2022/100daysof-day43/
+  - title: "Day 46: ordering layers"
+    url: /blog/2022/100daysof-day46/
+  - title: "Day 49: layering entire style sheets"
+    url: /blog/2022/100daysof-day49/
+  - title: "Day 52: multiple layer lists"
+    url: /blog/2022/100daysof-day52/
+  - title: "Day 55: anonymous layers"
+    url: /blog/2022/100daysof-day55/
+  - title: "Day 58: ordering nested layers"
+    url: /blog/2022/100daysof-day58/
   - title: "Day 63: explicit defaulting with inherit, initial, unset, and revert"
     url: /blog/2022/100daysof-day63/
+  - title: "Day 68: cascade layers and browser support"
+    url: /blog/2022/100daysof-day68/
+  - title: "Day 74: using !important in cascade layers"
+    url: /blog/2022/100daysof-day74
 ---
 You can use the `revert-layer` keyword to roll back the cascade to a value defined in a previous layer.
 

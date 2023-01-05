@@ -14,19 +14,19 @@ layout: "layouts/100days.njk"
 caniuse: "hwb()"
 reading:
   - title: "Day 37: cascade layers"
-    url: https://www.matuzo.at/blog/2022/100daysof-day37/
+    url: /blog/2022/100daysof-day37/
   - title: "Day 40: unlayered styles"
-    url: https://www.matuzo.at/blog/2022/100daysof-day40/
+    url: /blog/2022/100daysof-day40/
   - title: "Day 43: grouping layers"
-    url: https://www.matuzo.at/blog/2022/100daysof-day43/
+    url: /blog/2022/100daysof-day43/
   - title: "Day 46: ordering layers"
-    url: https://www.matuzo.at/blog/2022/100daysof-day46/
+    url: /blog/2022/100daysof-day46/
   - title: "Day 49: layering entire style sheets"
-    url: https://www.matuzo.at/blog/2022/100daysof-day49/
+    url: /blog/2022/100daysof-day49/
   - title: "Day 52: multiple layer lists"
-    url: https://www.matuzo.at/blog/2022/100daysof-day52/
+    url: /blog/2022/100daysof-day52/
   - title: "Day 58: ordering nested layers"
-    url: https://www.matuzo.at/blog/2022/100daysof-day58/
+    url: /blog/2022/100daysof-day58/
   - title: "A Complete Guide to CSS Cascade Layers"
     url: https://css-tricks.com/css-cascade-layers/
 ---
