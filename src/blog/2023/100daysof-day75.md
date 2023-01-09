@@ -20,6 +20,8 @@ reading:
     url: https://youtu.be/VpZSMq2ajDE
   - title: "Rocher Color - Harbor Type | Fonts made in Brazil"
     url: https://www.harbortype.com/fonts/rocher-color/
+  - title: "Day 76: ovverwriting colors in font palettes"
+    url: /blog/2022/100daysof-day76/
 ---
 <style>
 
