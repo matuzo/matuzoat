@@ -93,3 +93,30 @@ The big difference is that if they're inside a size container, container query u
     <h2>It's me, Mike D!</h2>
   </div>
 </div>
+
+<table class="data">
+    <caption>Container Units</caption>
+    <thead>
+     <tr>
+      <th>unit
+      </th><th>relative to 
+    </th></tr></thead><tbody>
+     <tr>
+      <td>cqw 
+      </td><td>1% of a query container’s width
+     </td></tr><tr>
+      <td>cqh 
+      </td><td>1% of a query container’s height
+     </td></tr><tr>
+      <td>cqi 
+      </td><td>	1% of a query container’s inline size
+     </td></tr><tr>
+      <td>cqb 
+      </td><td>	1% of a query container’s block size
+     </td></tr><tr>
+      <td>cqmin 
+      </td><td>The smaller value of cqi or cqb 
+     </td></tr><tr>
+      <td>cqmax 
+      </td><td>The larger value of cqi or cqb 
+   </td></tr></tbody></table>
