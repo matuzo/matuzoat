@@ -12,10 +12,18 @@ tags:
 codepen: https://codepen.io/matuzo/pen/xxJZydb
 layout: "layouts/100days.njk"
 reading:
+  - title: "Day 56: container queries"
+    url: /blog/2022/100daysof-day56/
   - title: "Day 59: naming containers"
     url: /blog/2022/100daysof-day59/
   - title: "Day 62: the container shorthand"
     url: /blog/2022/100daysof-day62/
+  - title: "Day 65: using the em unit in container queries"
+    url: /blog/2022/100daysof-day65/
+  - title: "Day 73: size container features"
+    url: /blog/2022/100daysof-day73/
+  - title: "Day 78: container query units"
+    url: /blog/2022/100daysof-day78/
 ---
 ```css
 /* Kicks in when the viewport has a minimum width of 500px */

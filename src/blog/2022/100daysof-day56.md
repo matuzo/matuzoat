@@ -21,6 +21,14 @@ reading:
     url: /blog/2022/100daysof-day59/
   - title: "Day 62: the container shorthand"
     url: /blog/2022/100daysof-day62/
+  - title: "Day 65: using the em unit in container queries"
+    url: /blog/2022/100daysof-day65/
+  - title: "Day 69: width in container queries"
+    url: /blog/2022/100daysof-day69/
+  - title: "Day 73: size container features"
+    url: /blog/2022/100daysof-day73/
+  - title: "Day 78: container query units"
+    url: /blog/2022/100daysof-day78/
 ---
 
 You can query all kinds of things, not just the width, height, or orientation, but for example custom properties, as well. There’s an important difference between size container features (`width`, `height`, `inline-size`, `block-size`, `aspect-ratio`, `orientation`) and style container features (computed values). If you want to query size container features, you have to define a size container explicitly. That’s because they require special size containment in order to function. 
@@ -79,10 +87,8 @@ the viewport has a min-width of 500px */
 
 <style>
   [data-sample] section {
-    width: 50%;
     container-type: inline-size;
     outline: 10px solid;
-    resize: horizontal;
     overflow: auto;
   }
 
@@ -91,27 +97,7 @@ the viewport has a min-width of 500px */
     border: 5px solid;
     padding: 1rem;
     margin: 1rem;
-  }
-
-  [data-sample] h2 {
-     margin: 1rem;
-  }
-
-  [data-sample] .card h2 {
-    background: none;
-  }
-
-
-  @container (min-width: 500px) {
-    [data-sample] .card {
-      background-color: hotpink;
-    }
-  }
-
-  @media (min-width: 500px) {
-    [data-sample] .card {
-      border-style: dotted;
-    }
+    inline-size: 80cqi;
   }
 </style>
 
@@ -119,8 +105,6 @@ You can grab and resize the `<section>` by clicking and dragging it in the botto
 
 <div data-sample="demo">
 <section>
-<h2>Latest news</h2>
-
 <div class="card">
 <h2>Hey, I'm a card!</h2>
 </div>
