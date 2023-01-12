@@ -1,6 +1,7 @@
 ---
 title: 'CSS color functions and custom properties'
 date: 2023-01-12T09:38:54.969Z
+image: articles/sm_color-custom.jpg
 teaser: "I know I’m really late to the party, but I finally understood why people find color functions like `hsl()`, `hwb()`, or `lab()` so appealing."
 tags:
   - blog
