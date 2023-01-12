@@ -165,7 +165,7 @@ What’s great about that is that creating variations of this component in diffe
   </div>
 </div>
 
-You don’t even need the classes.
+Theoretically, you don’t even need the classes.
 
 ```html
 <div role="status" style="--h: 40deg;">
@@ -177,7 +177,7 @@ You don’t even need the classes.
 </div>
 ```
 
-Theoretically, here's the final CSS code.
+Here's the final CSS code.
 
 ```css
 [role="status"] {
