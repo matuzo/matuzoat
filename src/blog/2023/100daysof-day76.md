@@ -17,7 +17,7 @@ reading:
   - title: "Wakamai Fondue, the tool that answers the question “what can my font do?”"
     url: https://wakamaifondue.com/
   - title: "Day 75: font palettes"
-    url: /blog/2022/100daysof-day75/
+    url: /blog/2023/100daysof-day75/
 ---
 
 Color fonts come with one or more predefined color palettes. You can select them by using the `font-palette` property. You can also define your own color palettes or change specific colors in a palette using the `override-colors` property.

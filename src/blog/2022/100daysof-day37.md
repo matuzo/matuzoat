@@ -36,7 +36,7 @@ reading:
   - title: "Day 68: cascade layers and browser support"
     url: /blog/2022/100daysof-day68/
   - title: "Day 74: using !important in cascade layers"
-    url: /blog/2022/100daysof-day74
+    url: /blog/2023/100daysof-day74
 ---
 
 Let’s say we’re using a combination of a tag and an attribute selector for styling e-mail input fields. This declaration is part of our base stylesheet and comes early in the stylesheet. Later in the document, we want to use a class to overwrite parts of the base styling:

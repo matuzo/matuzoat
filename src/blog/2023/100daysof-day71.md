@@ -18,7 +18,7 @@ If you want to create a masonry layout, all you have to do is turn one of the gr
 ```html
 <ol>
   <li>
-    <a href="/blog/2022/100daysof-day70/">
+    <a href="/blog/2023/100daysof-day70/">
       Day 70: the defined pseudo-class
     </a>
   </li>

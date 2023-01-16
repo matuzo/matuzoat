@@ -26,9 +26,9 @@ reading:
   - title: "Day 69: width in container queries"
     url: /blog/2022/100daysof-day69/
   - title: "Day 73: size container features"
-    url: /blog/2022/100daysof-day73/
+    url: /blog/2023/100daysof-day73/
   - title: "Day 78: container query units"
-    url: /blog/2022/100daysof-day78/
+    url: /blog/2023/100daysof-day78/
 ---
 
 You can query all kinds of things, not just the width, height, or orientation, but for example custom properties, as well. There’s an important difference between size container features (`width`, `height`, `inline-size`, `block-size`, `aspect-ratio`, `orientation`) and style container features (computed values). If you want to query size container features, you have to define a size container explicitly. That’s because they require special size containment in order to function. 

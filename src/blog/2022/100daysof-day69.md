@@ -21,9 +21,9 @@ reading:
   - title: "Day 65: using the em unit in container queries"
     url: /blog/2022/100daysof-day65/
   - title: "Day 73: size container features"
-    url: /blog/2022/100daysof-day73/
+    url: /blog/2023/100daysof-day73/
   - title: "Day 78: container query units"
-    url: /blog/2022/100daysof-day78/
+    url: /blog/2023/100daysof-day78/
 ---
 ```css
 /* Kicks in when the viewport has a minimum width of 500px */

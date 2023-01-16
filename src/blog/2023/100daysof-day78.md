@@ -29,7 +29,7 @@ reading:
   - title: "Day 69: width in container queries"
     url: /blog/2022/100daysof-day69/
   - title: "Day 73: size container features"
-    url: /blog/2022/100daysof-day73/
+    url: /blog/2023/100daysof-day73/
 ---
 
 

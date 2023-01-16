@@ -23,7 +23,7 @@ reading:
   - title: "Day 69: width in container queries"
     url: /blog/2022/100daysof-day69/
   - title: "Day 78: container query units"
-    url: /blog/2022/100daysof-day78/
+    url: /blog/2023/100daysof-day78/
 ---
 
 `container-type: inline-size` establishes size containment only on the inline axis. There is no `block-size` option because it wasn’t possible for browsers to implement, but there is a `size` option, which establishes size containment on both dimensions of the container. According to Miriam Suzanne, you should be careful using this option because I may cause side effects, but it allows you to query more than just the width/inline-size.

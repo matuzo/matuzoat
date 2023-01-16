@@ -31,7 +31,7 @@ reading:
   - title: "Day 64: the revert-layer keyword"
     url: /blog/2022/100daysof-day64/
   - title: "Day 74: using !important in cascade layers"
-    url: /blog/2022/100daysof-day74
+    url: /blog/2023/100daysof-day74
 ---
 If you’re as excited about using cascade layers as I am, you have to consider browser support before you get started.
 

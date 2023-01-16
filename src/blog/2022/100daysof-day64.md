@@ -33,7 +33,7 @@ reading:
   - title: "Day 68: cascade layers and browser support"
     url: /blog/2022/100daysof-day68/
   - title: "Day 74: using !important in cascade layers"
-    url: /blog/2022/100daysof-day74
+    url: /blog/2023/100daysof-day74
 ---
 You can use the `revert-layer` keyword to roll back the cascade to a value defined in a previous layer.
 

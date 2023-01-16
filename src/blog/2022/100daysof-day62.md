@@ -25,9 +25,9 @@ reading:
   - title: "Day 69: width in container queries"
     url: /blog/2022/100daysof-day69/
   - title: "Day 73: size container features"
-    url: /blog/2022/100daysof-day73/
+    url: /blog/2023/100daysof-day73/
   - title: "Day 78: container query units"
-    url: /blog/2022/100daysof-day78/
+    url: /blog/2023/100daysof-day78/
 ---
 The `container` shorthand allows you to define both properties in a single property, `[name]` / `[type]`.
 
