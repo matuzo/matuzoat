@@ -16,6 +16,8 @@ reading:
     url: https://dev.to/afif/what-no-one-told-you-about-css-variables-553o#1-be-careful-with-raw-important-endraw-
   - title: "Day 1: custom properties and fallbacks"
     url: /blog/2022/100daysof-day1
+  - title: "Day 28: custom properties and web components"
+    url: /blog/2022/100daysof-day28
   - title: "Day 41: custom properties and url()s"
     url: /blog/2022/100daysof-day41
 ---

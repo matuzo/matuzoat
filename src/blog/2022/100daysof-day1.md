@@ -14,6 +14,8 @@ layout: "layouts/100days.njk"
 reading:
   - title: "CSS Custom Properties Fail Without Fallback"
     url: https://matthiasott.com/notes/css-custom-properties-fail-without-fallback
+  - title: "Day 28: custom properties and web components"
+    url: /blog/2022/100daysof-day28
   - title: "Day 29: !important custom properties"
     url: /blog/2022/100daysof-day29
   - title: "Day 41: custom properties and url()s"
@@ -58,7 +60,9 @@ div {
 /* Result: #000 background */
 ```
 
+<div data-sample="demo">
 <div class="demo one"></div>
+</div>
 
 The fallback can also be a custom property (with its own fallback).
 
@@ -69,7 +73,9 @@ div {
 /* Result: #00F background */
 ```
 
+<div data-sample="demo">
 <div class="demo two"></div>
+</div>
 
 ## When Fallbacks fail
 
@@ -84,7 +90,9 @@ div {
 /* Result: #F00 background */
 ```
 
+<div data-sample="demo">
 <div class="demo three"></div>
+</div>
 
 
 When the value in the second declaration is a custom property that doesn't exist, the declaration is not ignored. Either the property’s inherited value or its initial value, depending on whether the property is inherited or not, will be used instead.
@@ -97,4 +105,6 @@ div {
 
 /* Result: transparent background */
 ```
+<div data-sample="demo">
 <div class="demo four"></div>
+</div>

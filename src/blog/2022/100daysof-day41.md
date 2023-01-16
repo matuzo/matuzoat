@@ -17,6 +17,8 @@ reading:
     url: https://www.stefanjudis.com/today-i-learned/custom-properties-dont-work-with-the-url-css-function/
   - title: "Day 1: custom properties and fallbacks"
     url: /blog/2022/100daysof-day1
+  - title: "Day 28: custom properties and web components"
+    url: /blog/2022/100daysof-day28
   - title: "Day 29: !important custom properties"
     url: /blog/2022/100daysof-day29
 ---
