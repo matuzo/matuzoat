@@ -1,7 +1,7 @@
 ---
-title: 'Day 84: value processing'
-date: 2023-01-19T09:38:54.969Z
-image: articles/sm_100days-day84.jpg
+title: 'Day 82: value processing'
+date: 2023-01-17T09:38:54.969Z
+image: articles/sm_100days-day82.jpg
 intro: "It’s time to get me up to speed with modern CSS. There’s so much new in CSS that I know too little about. To change that I’ve started [#100DaysOfMoreOrLessModernCSS](/blog/2022/100-days-of-more-or-less-modern-css/). Why more or less modern CSS? Because some topics will be about cutting-edge features, while other stuff has been around for quite a while already, but I just have little to no experience with it."
 teaser: "This post differs from most of the other posts because it’s not about modern CSS, but about CSS fundamentals. When I was writing about [custom properties](/blog/2022/100daysof-day1/) and especially about [container style queries](/blog/2022/100daysof-day80/), I realized that I had to understand some of the basics of the language first before I could comprehend how certain properties and rules worked."
 tags:
@@ -26,10 +26,9 @@ reading:
     url: https://w3c.github.io/csswg-drafts/css-backgrounds/#propdef-border-bottom-style
   - title: "Day 63: explicit defaulting with inherit, initial, unset, and revert"
     url: /blog/2022/100daysof-day63/
-draft: true
 ---
 
-The final value of a property in CSS is the result of a multi-step calculation. In this process, the actual value of a property can come from different sources and undergo adjustments.
+The final value of a property in CSS is the result of a multi-step calculation. In this process, the actual value of a property can come from different sources, take on different forms, and undergo adjustments.
 
 ## Declared Values
 
@@ -54,7 +53,7 @@ The `color` property has 3 declared values. The cascade takes theses values and 
 
 ## Cascaded Value
 
-The cascaded value represents the result of the cascade. It’s the declared value with the highest specificity.
+The cascaded value represents the result of the cascade. It’s the declared value with the highest precedence.
 
 ```css
 #heading {
@@ -64,7 +63,7 @@ The cascaded value represents the result of the cascade. It’s the declared val
 
 ## Specified Value
 
-Most times, the specified value equals the cascaded value. If the cascade doesn’t result in a value, the property must take their value from somewhere else. Inherited properties draw their value from their parent element. All other properties use their initial value.
+If the cascade results in a value, the specified value equals the cascaded value. If not, the property must take their value from somewhere else. Inherited properties draw their value from their parent element. All other properties use their initial value.
 
 If we take the `<h1>` as an example, we get the following values and origins for the `border-bottom-color`, `border-bottom-style`, `color`, `font-family`, and `width` properties. (These properties are just examples).
 
@@ -158,7 +157,7 @@ The computed value results from resolving value dependencies, which generally me
 
 In the previous chapter, I said that computing values _generally_ means absolutizing relative values. For example, `font-size: 1rem;` becomes `font-size: 16px;`, but that’s not true for every property. 
 
-`width: 80%;` stays `width: 80%`. Per definition, the computed value of the width property is _“as specified”_. That’s because `width: 80%;` can’t be resolved into a length without knowing the layout of the element’s ancestors.
+`width: 80%;` stays `width: 80%`. Per definition, the computed value of the `width` property is _“as specified”_. That’s because `width: 80%;` can’t be resolved into a length without knowing the layout of the element’s ancestors.
 
 The used value takes the computed value and completes any remaining calculations to make it the absolute theoretical value used in the formatting of the document. For example, `width: 80%;` becomes `width: 420px`.
 
