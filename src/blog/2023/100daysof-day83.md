@@ -40,7 +40,7 @@ Let’s start nice and easy. We have a `.card` and the value of the `--bg` prope
 
 Result: the `<h1>` gets a beautiful dotted border.
 
-If we put the color value in its on property and query the assignment of the `var()` function to the `--bg` property, the styles will be applied, as well.
+If we put the color value in its own property and query the assignment of the `var()` function to the `--bg` property, the styles will be applied, as well.
 
 ```css
 html {
@@ -94,12 +94,14 @@ html {
 }
 ```
 
-The _simple_ explanation is that style queries compare the equality of computed values and not assignments. The computed value results from resolving value dependencies, which generally means absolutizing relative values. Both sides of the query are evaluated and resolved before the comparison.
+The _“simple”_ explanation is that style queries compare the equality of [computed values](http://localhost:8080/blog/2023/100daysof-day82/#computed-value) and not assignments. The computed value results from resolving value dependencies, which generally means absolutizing relative values. Both sides of the query are evaluated and resolved before the comparison.
 
 So, in each example the actual comparison is something like:  
 
 ```css
-@container style(red: red) {
+/* Note: this is not valid syntax, it's just an
+illustration of the underlying comparison. */
+@container style("red": "red") {
   h1 {
     border: 10px dotted aqua;
   }
