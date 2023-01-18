@@ -15,8 +15,7 @@ reading:
   - title: "4. Value Processing"
     url: https://www.w3.org/TR/css-cascade-4/#value-stages
   - title: "Day 82: value processing"
-    url: /blog/2022/100daysof-day82/
-draft: true
+    url: /blog/2023/100daysof-day82/
 ---
 Let’s start nice and easy. We have a `.card` and the value of the `--bg` property is `red`. In a style query, we check if that’s actually the case and apply conditional style to the `<h1>` nested in the card.
 
