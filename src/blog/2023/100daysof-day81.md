@@ -1,6 +1,6 @@
 ---
 title: 'Day 81: the order of individual transform properties'
-date: 2023-01-13T09:38:54.969Z
+date: 2023-01-16T09:38:54.969Z
 image: articles/sm_100days-day80.jpg
 intro: "It’s time to get me up to speed with modern CSS. There’s so much new in CSS that I know too little about. To change that I’ve started [#100DaysOfMoreOrLessModernCSS](/blog/2022/100-days-of-more-or-less-modern-css/). Why more or less modern CSS? Because some topics will be about cutting-edge features, while other stuff has been around for quite a while already, but I just have little to no experience with it."
 teaser: "[On day 66](/blog/2023/100daysof-day76/), I’ve introduced you to individual transform properties. An interesting detail about these properties is the order in which transforms are applied compared to the `transform` property."
