@@ -29,6 +29,8 @@ reading:
     url: /blog/2023/100daysof-day73/
   - title: "Day 78: container query units"
     url: /blog/2023/100daysof-day78/
+  - title: "Day 90: scoped styles in container queries"
+    url: /blog/2023/100daysof-day90/
 ---
 Let's say, we have 2 size containers, `.wrapper`  and `<section>`.
 

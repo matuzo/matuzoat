@@ -30,6 +30,8 @@ reading:
     url: /blog/2022/100daysof-day69/
   - title: "Day 73: size container features"
     url: /blog/2023/100daysof-day73/
+  - title: "Day 90: scoped styles in container queries"
+    url: /blog/2023/100daysof-day90/
 ---
 
 

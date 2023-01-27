@@ -28,6 +28,8 @@ reading:
     url: /blog/2023/100daysof-day73/
   - title: "Day 78: container query units"
     url: /blog/2023/100daysof-day78/
+  - title: "Day 90: scoped styles in container queries"
+    url: /blog/2023/100daysof-day90/
 ---
 If you use `em` in a media query, the font-size of the `<body>`, `<html>`, or any other element on the page doesn't matter. That's because relative length units in media queries are based on the _initial value_, which means that units are never based on results of declarations. `em` in a media query is relative to the font-size, defined by the user agent or the user’s preferences.
 

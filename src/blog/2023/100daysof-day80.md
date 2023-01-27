@@ -14,6 +14,8 @@ layout: "layouts/100days.njk"
 reading:
   - title: "CSS Style Queries"
     url: https://ishadeed.com/article/css-container-style-queries/#introducing-style-queries
+  - title: "Day 90: scoped styles in container queries"
+    url: /blog/2023/100daysof-day90/
 ---
 No browser supports it yet, but we should be able to do something like this:
 
