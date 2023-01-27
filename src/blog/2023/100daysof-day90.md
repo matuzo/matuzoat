@@ -3,7 +3,7 @@ title: 'Day 90: scoped styles in container queries'
 date: 2023-01-27T09:38:54.969Z
 image: articles/sm_100days-day90.jpg
 intro: "It’s time to get me up to speed with modern CSS. There’s so much new in CSS that I know too little about. To change that I’ve started [#100DaysOfMoreOrLessModernCSS](/blog/2022/100-days-of-more-or-less-modern-css/). Why more or less modern CSS? Because some topics will be about cutting-edge features, while other stuff has been around for quite a while already, but I just have little to no experience with it."
-teaser: "Rules within a container query only apply to descendents of that container."
+teaser: "Rules within a container query only apply to descendants of that container."
 tags:
   - blog
   - posts
@@ -104,7 +104,7 @@ If you write a media query and you put rules in the media block, the rules apply
  */
 </style>
 
-If you write a container query and you put rules in the container block, the rules only apply to descendents of the container.
+If you write a container query and you put rules in the container block, the rules only apply to descendants of the container.
 
 
 ```html
