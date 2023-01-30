@@ -21,6 +21,8 @@ reading:
     url: /blog/2022/100daysof-day16
   - title: "Day 50: :has(:not()) vs. :not(:has())"
     url: /blog/2022/100daysof-day50/
+  - title: "Day 91: a previous sibling selector with :has()"
+    url: /blog/2023/100daysof-day91/
   - title: ":has(): the family selector"
     url: https://developer.chrome.com/blog/has-m105/#how-to-use-has
 ---
@@ -56,6 +58,7 @@ fieldset:not(:has(> legend)) {
 </fieldset>
 ```
 
+<div data-sample="demo">
 <fieldset>  
   <div>
     <legend>Letters</legend>
@@ -67,6 +70,7 @@ fieldset:not(:has(> legend)) {
   <label for="b">b</label>
   </div>
 </fieldset>
+</div>
 
 ## Next-sibling combinators
 
@@ -95,14 +99,17 @@ The `<h2>` has a block end margin of `0.7em` by default, but when its next sibli
   }
 </style>
 
+<div data-sample="demo - h2 followed by p">
 <article>
   <h2 class="demo">Heading</h2>
   <p>Teaser text</p>
 </article>
+</div>
 
+<div data-sample="demo - h2 followed by time">
 <article>
   <h2 class="demo">Heading</h2>
   <time>31.10.2022</time>
   <p>Teaser text</p>
 </article>
-  
+</div>
