@@ -9,7 +9,7 @@ tags:
   - posts
   - css
   - 100daysofmoreorlessmoderncss
-codepen: https://codepen.io/matuzo/pen/OJwwmpw
+codepen: https://codepen.io/matuzo/pen/JjBmGaz
 layout: "layouts/100days.njk"
 reading:
   - title: "Relative Color Syntax"
