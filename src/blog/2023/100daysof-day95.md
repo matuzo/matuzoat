@@ -73,3 +73,9 @@ body {
 <img src="/images/100days-95-2.png" width="250" alt="The same colors, just a little lighter." >
 
 You can learn more about the function in Adam Argyle's fantastic article “[CSS color-mix()](https://developer.chrome.com/blog/css-color-mix/)”.
+
+<div class="highlight">
+
+`color-mix()` is currently only supported behind a flag in Safari, but it will be supported in Chrome starting with version 111.
+
+</div>
