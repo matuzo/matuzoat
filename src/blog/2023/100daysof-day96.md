@@ -1,6 +1,6 @@
 ---
 title: 'Day 96: the margin-trim property'
-date: 2023-02-03T09:38:54.969Z
+date: 2023-02-06T09:38:54.969Z
 image: articles/sm_100days-day96.jpg
 intro: "It’s time to get me up to speed with modern CSS. There’s so much new in CSS that I know too little about. To change that I’ve started [#100DaysOfMoreOrLessModernCSS](/blog/2022/100-days-of-more-or-less-modern-css/). Why more or less modern CSS? Because some topics will be about cutting-edge features, while other stuff has been around for quite a while already, but I just have little to no experience with it."
 teaser: "The `margin-trim` property allows a container element to trim the margins of its children where they adjoin the container’s edges."
@@ -104,6 +104,6 @@ li {
 
 <div class="highlight">
 
-**Note:** Safari Technology Preview is currently the online browser that supports `margin-trim`.
+**Note:** Safari Technology Preview is currently the only browser that supports `margin-trim`.
 
 </div>
