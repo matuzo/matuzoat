@@ -1,7 +1,7 @@
 ---
 title: "Why I'm not the biggest fan of Single Page Applications"
 date: 2023-02-09T09:38:54.969Z
-image: articles/sm_color-custom.jpg
+image: articles/sm_spa.jpg
 teaser: "Sometimes it seems like accessibility experts and other web professionals who focus on users and user experience hate JavaScript. This might be true for some, but most understand that JavaScript can be useful for improving UX and even accessibility. JavaScript solutions are often more accessible than their [pure HTML](https://daverupert.com/2020/02/html-the-inaccessible-parts/) or [CSS counterparts](https://www.smashingmagazine.com/2021/06/css-javascript-requirements-accessible-components/)."
 tags:
   - blog
@@ -20,11 +20,17 @@ There has been a lot of criticism about SPAs and especially React recently. In t
 
 When you create 3 HTML documents, let’s call them home.html, about.html, and dashboard.html, and you link them, clicking a link the following happens: The browser navigates to the new page, the page loads, the title of the page changes in the browser’s tab, focus is on the body, and, if you’re using a screen reader, the software announces the title of the page. Of course, a lot more happens. This is a simplified and incomplete depiction of the process, but the important bit is that no matter how you’re accessing and activating the link (mouse, screen reader, touch, switch device, etc.), you know what happened, that something happened, and where you are. The loading process and the transition from one page to another tell you that you’ve navigated to a new page. Focus is at the beginning of the DOM, where you would expect it, and your screen reader announces the title of the page automatically.
 
---> Video
+<figure>
+<video src="/images/routing_default.mov" controls></video>
+<figcaption>When I click a link, NVDA, the screen reader I'm using, announces the title of the page, for example “Dashboard - My Website”.</figcaption>
+</figure>
 
 In a Single Page Application, you create only one HTML document and you replace the main content of the page when the user clicks a link. To achieve that, you may have to use a routing library like React Router. Compared to the process of native routing I’ve described earlier, the following happens: DOM content changes, focus is still on the link, the title in the browser tab doesn’t change, and a screen reader announces nothing. If you’re lucky, you know what happened, that something happened, and where you are. If you’re a blind screen reader user, you’ll most likely get no feedback at all.
 
---> Video
+<figure>
+<video src="/images/routing_spa.mov" controls></video>
+<figcaption>When I click a link, NVDA announces nothing.</figcaption>
+</figure>
 
 While not intentionally, single page applications, at least in terms of page navigation, are inaccessible by design. The creators of reach router did their best to make routing accessible by managing focus, but since data loading and focus management on route transitions are coupled, it was [too complicated to do it correctly](https://github.com/remix-run/react-router/discussions/9555?sort=new). Despite all their efforts, routing became completely inaccessible again, when [reach router and react router](https://reactrouter.com/en/main/upgrading/reach) merged and they stopped <q>doing not-good-enough focus management by default</q>.
 

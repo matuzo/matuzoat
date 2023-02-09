@@ -286,11 +286,13 @@ figure {
   margin: 0;
 }
 
+figure video,
 figure img {
   display: block;
   width: 100%;
 }
 
+.post video,
 .post img {
   border: 3px solid #efefef;
 }
