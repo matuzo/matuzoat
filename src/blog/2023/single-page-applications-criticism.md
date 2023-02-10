@@ -45,6 +45,7 @@ The `<title>` of the page is one of the most important elements in a HTML docume
 
 To mitigate inaccessible routing and the missing feedback after clicking a link, screen reader users help themselves by pressing shortcuts that announce the title of the page. The page title tells them on which page they are. So even if there’s no feedback, they know they’re on a new page when the title has changed. If the title has changed! In a SPA, you usually have to implement title management manually. Again, this is something that just works in native routing. 
 
+<div class="table-wrapper">
 <table>
   <caption>Screen reader shortcuts for announcing the page title</caption>
   <thead>
@@ -77,6 +78,7 @@ To mitigate inaccessible routing and the missing feedback after clicking a link,
     </tr>
   </tbody>
 </table>
+</div>
 
 There are more reasons you'd want to change the page title. It serves as the label for bookmarked pages/favorites, and search engines use the title in their search results pages. Social media sites, chat or mail applications, and similar software use the title in link previews when no other title is specified.
 
@@ -115,7 +117,7 @@ Before we choose to work with any language that is not native HTML, but compiles
 In SPAs, you create components. A component might be part of another component, and another component until it finally ends up in the wrapper `<div>` of your index.html. If you look at the final document of most SPAs, the page doesn’t look like a coherent entity, but more like a dump for components that happen to form a page visually. As already mentioned, HTML is a cornerstone of any accessible website and the page structure (a sound heading outline, landmarks, DOM order, semantic HTML in general) plays an important role. 
 
 Don’t get me wrong, I also build components that are part of a system, but I also spend a good amount of time crafting pages that work well. The fact that the HTML document is something that you barely touch, because everything you need in there will be injected via JavaScript, puts the document and the page structure out of focus.  
-I don’t suggest that a component-based approach is wrong, not even one that is written in a JavaScript environment, quite the opposite, but just because it’s more convenient and efficient to work with a JS Framework, doesn’t mean that we have to serve all that JavaScript to the client. The traditional way of serving websites entirely on the client is outdated, but I also don’t believe that concepts like hydration are much better.  
+I don’t suggest that a component-based approach is wrong, not even one that is written in a JavaScript environment, quite the opposite, but just because it’s more convenient and efficient to work with a JS framework, doesn’t mean that we have to serve all that JavaScript to the client. The traditional way of serving websites entirely on the client is outdated, but I also don’t believe that concepts like hydration are much better.  
 It’s worth exploring approaches that separate concerns and try to minimize the amount of JS shipped. Some notable projects are [Lit](https://lit.dev/), [Astro](https://astro.build/), [Svelte](https://svelte.dev/), or [WebC](https://github.com/11ty/webc).
 
 ## Performance
