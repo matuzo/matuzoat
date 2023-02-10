@@ -1,20 +1,20 @@
 ---
 title: "Why I'm not the biggest fan of Single Page Applications"
-date: 2023-02-09T09:38:54.969Z
+date: 2023-02-10T09:38:54.969Z
 image: articles/sm_spa.jpg
 teaser: "Sometimes it seems like accessibility experts and other web professionals hate JavaScript. This might be true for some, but most understand that JavaScript can be useful for improving UX and even accessibility. JavaScript solutions are often more accessible than their [pure HTML](https://daverupert.com/2020/02/html-the-inaccessible-parts/) or [CSS counterparts](https://www.smashingmagazine.com/2021/06/css-javascript-requirements-accessible-components/)."
 tags:
   - blog
   - posts
   - a11y
-draft: false
+draft: true
 ---
 
 We know [JavaScript is not an enemy](https://www.marcozehe.de/javascript-not-enemy-accessibility/), but, admittedly, there is a certain reluctance towards building client-side rendered websites by some developers. These people are often dismissed as the “old guard” because of their seemingly irrational aversion towards modern web development. If you don’t understand where this is coming from, it might seem incomprehensible why someone would not want to build single page applications (SPA), but go for the standard way of building websites, sometimes referred to as multi page applications (MPA), instead. 
 
 There has been a lot of criticism about SPAs and especially React recently. On a personal level, I can absolutely understand that. I don’t like Meta and their business model; I don’t like how React thought leaders [sold their library as something that it’s not](https://infrequently.org/2023/02/the-market-for-lemons/#what-did-they-know-and-when-did-they-know-it%3F), and I don’t like the bro culture that sparked from this whole thing. On a professional level, I understand that there are people for whom React is nothing more than a tool or a .js file. People who, you know,…just build websites for a living. Although I’m not happy about it, I also understand that JS libraries and frameworks are often the entry point to web development for new web developers. Nevertheless, there is also valid and serious professional criticism. With this post I’m not trying to convince anyone to build their websites differently, I just want to share my view and my experiences as someone who has been building websites for over 20 years, and I try to summarize reasons why some developers, including me, are wary of building SPAs.  
 
-A lot of the scepticism comes from the fact that some critical features of a website work fundamentally different in single page applications (Evil tongues may claim that “work fundamentally different” is a euphemism for “don’t work at all and have to be reinvented”.)
+A lot of the scepticism comes from the fact that some critical features of a website work fundamentally different in single page applications.
 
 ## Routing
 
@@ -115,7 +115,8 @@ Before we choose to work with any language that is not native HTML, but compiles
 In SPAs, you create components. A component might be part of another component, and another component until it finally ends up in the wrapper `<div>` of your index.html. If you look at the final document of most SPAs, the page doesn’t look like a coherent entity, but more like a dump for components that happen to form a page visually. As already mentioned, HTML is a cornerstone of any accessible website and the page structure (a sound heading outline, landmarks, DOM order, semantic HTML in general) plays an important role. 
 
 Don’t get me wrong, I also build components that are part of a system, but I also spend a good amount of time crafting pages that work well. The fact that the HTML document is something that you barely touch, because everything you need in there will be injected via JavaScript, puts the document and the page structure out of focus.  
-I don’t suggest that a component-based approach is wrong, not even one that is written in a JavaScript environment, quite the opposite, but just because it’s more convenient and efficient to work with a JS Framework, doesn’t mean that we have to serve all that JavaScript to the client. The traditional way of serving websites entirely on the client is outdated, but I also don’t believe that concepts like hydration are much better. It’s worth exploring approaches that try to minimize the amount of JS shipped. Some notable project are [Lit](https://lit.dev/), [Astro](https://astro.build/), [Svelte](https://svelte.dev/), or [WebC](https://github.com/11ty/webc).
+I don’t suggest that a component-based approach is wrong, not even one that is written in a JavaScript environment, quite the opposite, but just because it’s more convenient and efficient to work with a JS Framework, doesn’t mean that we have to serve all that JavaScript to the client. The traditional way of serving websites entirely on the client is outdated, but I also don’t believe that concepts like hydration are much better.  
+It’s worth exploring approaches that separate concerns and try to minimize the amount of JS shipped. Some notable projects are [Lit](https://lit.dev/), [Astro](https://astro.build/), [Svelte](https://svelte.dev/), or [WebC](https://github.com/11ty/webc).
 
 ## Performance
 
@@ -136,4 +137,4 @@ I guess the biggest criticism here is that it feels like people who believe in t
 
 # Conclusion
 
-I hope this didn’t come off as a rant, it’s not. I’m just trying to explain why SPAs are not the first choice or no choice at all for some people. I’ve worked with several JS libraries and frameworks, because [C.R.E.A.M.](https://www.youtube.com/watch?v=PBwAxmrE194), but I’ve never built one myself and I’ve never consulted a client to do so, and I probably never will.
+I hope this didn’t come off as a rant, it’s not. I’m just trying to explain why SPAs are not the first choice or no choice at all for some people. I’m glad that this diverse landscape of tools exists because we can learn from innovation and use this knowledge to create better experiences. I’ve worked with several JS libraries and frameworks, because it pays the bills, but I’ve never built one myself and I’ve never consulted a client to do so, and I probably never will. The simple explanation for that is that I build websites most of the time, and not complex applications. There is a place and time for JS frameworks and client side rendering, but it’s usually not the right choice for the typical website.
