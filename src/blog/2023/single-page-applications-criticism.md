@@ -1,13 +1,12 @@
 ---
 title: "Why I'm not the biggest fan of Single Page Applications"
-date: 2023-02-10T09:38:54.969Z
+date: 2023-02-10T08:46:54.969Z
 image: articles/sm_spa.jpg
 teaser: "Sometimes it seems like accessibility experts and other web professionals hate JavaScript. This might be true for some, but most understand that JavaScript can be useful for improving UX and even accessibility. JavaScript solutions are often more accessible than their [pure HTML](https://daverupert.com/2020/02/html-the-inaccessible-parts/) or [CSS counterparts](https://www.smashingmagazine.com/2021/06/css-javascript-requirements-accessible-components/)."
 tags:
   - blog
   - posts
   - a11y
-draft: false
 ---
 
 We know [JavaScript is not an enemy](https://www.marcozehe.de/javascript-not-enemy-accessibility/), but, admittedly, there is a certain reluctance towards building client-side rendered websites by some developers. These people are often dismissed as the “old guard” because of their seemingly irrational aversion towards modern web development. If you don’t understand where this is coming from, it might seem incomprehensible why someone would not want to build single page applications (SPA), but go for the standard way of building websites, sometimes referred to as multi page applications (MPA), instead. 
