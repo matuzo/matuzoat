@@ -1,5 +1,5 @@
 ---
-title: TIL that you can use the :scope pseudo class to select direct children of an element with .querySelectorAll().
+title: "You can use the :scope pseudo class to select direct children of an element with `.querySelectorAll()`."
 link: https://codepen.io/pen/?editors=1001
 date: 2022-08-23T17:45:34.386Z
 ---
