@@ -14,7 +14,7 @@ permalink: /feed.xml
     <email>{{ metadata.author.email }}</email>
   </author>
   {%- for post in collections.blog %}
-    {% if not post.data.draft %}
+    {% if not post.data.draft and not post.data.noindex %}
       {% set absolutePostUrl %}{{ post.url | url | absoluteUrl(metadata.url) }}{% endset %}
       <entry>
         <title>{{ post.data.title }}</title>
