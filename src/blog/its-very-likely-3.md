@@ -1,7 +1,7 @@
 ---
 title: "click event on a"
-date: 2023-04-18T09:46:54.969Z
-image: articles/sm_empty-links.jpg
+date: 2023-04-17T10:46:54.969Z
+image: articles/sm_likely.jpg
 teaser: ""
 tags:
   - blog

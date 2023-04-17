@@ -1,7 +1,7 @@
 ---
 title: "btn class on a div"
 date: 2023-04-17T09:46:54.969Z
-image: articles/sm_empty-links.jpg
+image: articles/sm_likely.jpg
 teaser: ""
 tags:
   - blog

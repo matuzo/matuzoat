@@ -1,7 +1,7 @@
 ---
 title: "button when cursor:pointer"
-date: 2023-04-21T09:46:54.969Z
-image: articles/sm_empty-links.jpg
+date: 2023-04-17T13:46:54.969Z
+image: articles/sm_likely.jpg
 teaser: ""
 tags:
   - blog

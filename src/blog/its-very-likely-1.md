@@ -1,6 +1,6 @@
 ---
 title: "It's very likely that…"
-date: 2023-04-16T08:46:54.969Z
+date: 2023-04-17T08:46:54.969Z
 image: articles/sm_likely.jpg
 teaser: "I repeatedly see certain bad practices in HTML that ironically contain clues for implementing them properly in their class names or in the way they're built. In this evergreen post, I collect them."
 tags:

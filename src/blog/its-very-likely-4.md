@@ -1,7 +1,7 @@
 ---
 title: "label element"
-date: 2023-04-19T09:46:54.969Z
-image: articles/sm_empty-links.jpg
+date: 2023-04-17T11:46:54.969Z
+image: articles/sm_likely.jpg
 teaser: ""
 tags:
   - blog

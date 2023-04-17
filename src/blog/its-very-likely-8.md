@@ -1,7 +1,7 @@
 ---
 title: "heading + heading"
-date: 2023-04-23T09:46:54.969Z
-image: articles/sm_empty-links.jpg
+date: 2023-04-17T15:46:54.969Z
+image: articles/sm_likely.jpg
 teaser: ""
 tags:
   - blog
