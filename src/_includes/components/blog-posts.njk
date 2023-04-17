@@ -2,7 +2,7 @@
 
   {% set url = post.data.url or post.url %}
 
-  {% if not post.data.draft %}
+  {% if not post.data.draft and not post.data.noindex %}
     <article class="teaser rich-text">
       <header class="teaser-header">
       <{{level | default('h3') }} class="h3">

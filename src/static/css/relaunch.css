@@ -391,6 +391,10 @@ footer ul {
   border: 3px solid var(--color-blue);
 }
 
+.prevnext li:only-child:has(.next) {
+  grid-column-end: -1;
+}
+
 .prevnext a {
   padding: 0.5rem;
   display: block;

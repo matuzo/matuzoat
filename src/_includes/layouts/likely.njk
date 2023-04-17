@@ -1,0 +1,51 @@
+---
+layout: layouts/base.njk
+noindex: true
+---
+
+<article class="post rich-text">
+  <header>
+    <h1 class="post-heading">It's very likely that…</h1>
+
+    <p>
+      posted on <time datetime="{{ date | machineDate }}">{{ date | readableDate }}</time>
+    </p>
+  </header>
+
+  {{ content | safe }}
+
+{% set previousPost = collections.itsveylikely | getPreviousCollectionItem(page) %}
+{% set nextPost = collections.itsveylikely | getNextCollectionItem(page) %}
+
+{% if previousPost or nextPost %}
+<nav aria-labelledby="more">
+<h2 id="more">More examples?</h2>
+
+  <ol class="prevnext">
+{% if previousPost %}
+<li>
+    <a href="{{ previousPost.url }}">Previous post: <strong>{{ previousPost.data.title }}</strong></a>
+  </li>
+{% endif %}
+
+{% if nextPost and not nextPost.data.draft %}
+  <li>
+    <a href="{{ nextPost.url }}" class="next">Next post: <strong>{{ nextPost.data.title }}</strong></a>
+  </li>
+{% endif %}
+
+  </ol>
+<p>
+  Overview: <a href="/blog/2022/100-days-of-more-or-less-modern-css/">
+    100 Days Of More Or Less Modern CSS
+    </a>
+</p>
+</nav>  
+{% endif %}
+
+  <footer>
+    {% set subject = "Comment on “" ~ title ~ "”" %}
+    <p>My blog doesn't support comments yet, but you can reply via <a href="mailto:blog@matuzo.at?subject={{ subject | urlencode }}">e-mail</a>.</p>
+  </footer>
+
+</article>
