@@ -26,4 +26,4 @@ More accessible alternative:
 
 ## Explanation
 
-Headings communicate the organization of the content on the page, and they introduce new topics or sub-topics. Just because something looks like a heading or is visually close to another heading doesn't mean it should also be a heading. There are exceptions, like when a <h2> introduces a large section of the page and a subsection immediately follows it.
+Headings communicate the organization of the content on the page, and they introduce new topics or sub-topics. Just because something looks like a heading or is visually close to another heading doesn't mean it should also be a heading. There are exceptions, like when a `<h2>` introduces a large section of the page and a subsection immediately follows it.
