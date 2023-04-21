@@ -80,6 +80,14 @@ I don't know, probably test with users?! I'll just quote Scott here:
 
 <h3>default</h3>
 
+```html
+<details>
+  <summary>Show More</summary>
+  
+  <p>Here’s Johnny!</p>
+</details>
+```
+
 <details>
   <summary>Show More</summary>
   
