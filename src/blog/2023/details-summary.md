@@ -14,7 +14,7 @@ To better understand the extent of these oddities and inconsistencies, I did [my
 
 
 <ul>
-  <li>Announcements are very different across different screen readers/browsers. It goes from little information (“show more” in VoiceOver on iOS) to too much information (“Right pointing triangle, Show more, collapsed, summary, group” in Firefox on macOs)</.i>
+  <li>Announcements are very different across different screen readers/browsers. It goes from little information (“show more” in VoiceOver on iOS) to too much information (“Right pointing triangle, Show more, collapsed, summary, group” in Firefox on macOs)</li>
 <li>Removing or changing the triangle doesn’t seem to affect any screen reader/browser pairing except Firefox with all tested screen readers.</li>
 <li>Voice Over macOS Chrome/Edge/Arc, Voice Over macOS Safari, and Talkback Android Chrome provide the most consistent experience.</li>
 <li>Voice Over iOS Safari is also very consistent but in a bad way. It doesn’t announce any role or state.</li>
@@ -76,8 +76,20 @@ I don't know, probably test with users?! I'll just quote Scott here:
   }
 </style>
 
+<h2>OS/browsers/software</h2>
 
-<h2>default</h2>
+<ul>
+  <li>macOS 13.0.1 / Windows 11 / Android 13 / iOS 15.7.5</li>
+  <li>Chrome 112</li>
+  <li>Firefox 112</li>
+  <li>Safari 16.1 (macOS)</li>
+  <li>JAWS 2023.2212.13</li>
+  <li>NVDA 2023.1</li>
+</ul>
+
+<h2>Results</h2>
+
+<h3>default</h3>
 
 <details>
   <summary>Show More</summary>
@@ -88,6 +100,7 @@ I don't know, probably test with users?! I'll just quote Scott here:
 
 <div class="table-wrapper">
 <table>
+  <caption>Screen reader testing with default element</caption>
   <thead>
     <tr>
       <td></td>
@@ -148,7 +161,7 @@ I don't know, probably test with users?! I'll just quote Scott here:
 </table>
 </div>
 
-<h2>custom marker: <code>list-style-type: square</code></h2>
+<h3>custom marker: <code>list-style-type: square</code></h3>
 
 ```css
 summary {
@@ -164,6 +177,7 @@ summary {
 
 <div class="table-wrapper">
 <table>
+  <caption>Screen reader testing with custom marker</caption>
   <thead>
     <tr>
       <td></td>
@@ -224,7 +238,7 @@ summary {
 </table>
 </div>
 
-<h2>custom marker: <code>::marker</code></h2>
+<h3>custom marker: <code>::marker</code></h3>
 
 ```css
 summary::marker {
@@ -241,6 +255,7 @@ summary::marker {
 <div class="table-wrapper">
   
 <table>
+  <caption>Screen reader testing with custom marker</caption>
   <thead>
     <tr>
       <td></td>
@@ -301,7 +316,7 @@ summary::marker {
 </table>
 </div>
 
-<h2>no marker: <code>list-style-type: none;</code></h2>
+<h3>no marker: <code>list-style-type: none;</code></h3>
 
 ```css
 summary {
@@ -317,6 +332,7 @@ summary {
 
 <div class="table-wrapper">
   <table>
+  <caption>Screen reader testing with no marker</caption>
   <thead>
     <tr>
       <td></td>
@@ -375,7 +391,7 @@ summary {
 </table>
 </div>
 
-<h2>no marker: <code>::marker content:""</code></h2>
+<h3>no marker: <code>::marker content:""</code></h3>
 
 ```css
 summary::marker {
@@ -392,6 +408,7 @@ summary::marker {
 
 <div class="table-wrapper">
   <table>
+  <caption>Screen reader testing with no marker</caption>
   <thead>
     <tr>
       <td></td>
@@ -450,7 +467,7 @@ summary::marker {
 </table>
 </div>
 
-<h2>Remove triangle in all browsers</h2>
+<h3>Remove triangle in all browsers</h3>
 
 ```css
 summary::-webkit-details-marker {
