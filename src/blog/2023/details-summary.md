@@ -20,17 +20,6 @@ To better understand the extent of these oddities and inconsistencies, I did [my
 <li>Voice Over iOS Safari is also very consistent but in a bad way. It doesn’t announce any role or state.</li>
 <li>Details only expands in Chrome, Arc, Edge when you search with <kbd>CMD</kbd>/<kbd>Ctrl</kbd> + <kbd>F</kbd> (find-in-page).</li>
 <li>To remove the triangle in Safari, you must set <code>::-webkit-details-marker</code> to <code>display: none</code>. <br><code>::marker</code> or <code>list-style: none;</code> don't work.
-
-```css
-summary::-webkit-details-marker {
-  display: none;
-}
-
-summary {
-  list-style: none;
-}
-```
-
 </li>
 </ul>
 
