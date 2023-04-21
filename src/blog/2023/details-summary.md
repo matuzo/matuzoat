@@ -142,7 +142,7 @@ I don't know, probably test with users?! I'll just quote Scott here:
         expanded
       </td>
       <td>
-        expanded, filled down pointing small triangle, show more<
+        expanded, filled down pointing small triangle, show more
       </td>
       <td>expanded</td>
     </tr>
