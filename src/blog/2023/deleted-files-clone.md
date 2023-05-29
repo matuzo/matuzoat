@@ -38,3 +38,7 @@ I couldn't reproduce the issue on my Mac, but I had the same problem on my Windo
 I reviewed the files and found an image named _30-bullet-"list".png_. I have a node script that automatically creates the social media preview images for blog posts and uses the title as the file name. I forgot to take care of special characters.
 
 I tweaked the script and renamed the file, and – voilà – cloning now works as expected on Windows.
+
+Edit: [Tane added on social media](https://front-end.social/@tanepiper@tane.codes/110450742495407620) that he had an issue raised once on one of his repos because he was using an emoji in a filename and it broke on OSX.
+
+Conclusion: Don't use special characters, spaces, or emojis in your file names.
