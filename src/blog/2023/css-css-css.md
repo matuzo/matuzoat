@@ -1,6 +1,6 @@
 ---
 title: "CSS! CSS! CSS!"
-metadescription: 'Forbidden characters in file names mess with git repos on Windows.'
+metadescription: 'A couple of thoughts I had to write down after attending CSS Day.'
 teaser: 'I just came home after three beautiful days in Amsterdam, where I gave a talk at the CSS Day conference. I’ve watched many inspirational and engaging presentations and had many interesting conversations. My biggest takeaway: **The CSS community needs you!**'
 date: 2023-06-11T19:38:54.969Z
 tags:
@@ -21,7 +21,7 @@ We also agreed that we need more people to push CSS to its limits and explore wh
 That’s where I ask you a favour: **Please write more about CSS.** Show us what you’ve built and how you build it. The CSS community needs more voices, ideas, and solutions.
 
 
-![Screenshot of Unas Talk. Her on the left on the right a slide that says "organize a css meetup/event"](/images/csscsscss.jpg)
+<img src="/images/csscsscss.jpg" loading="lazy" width="873" height="491" alt="Screenshot of Unas Talk. Her on the left on the right a slide that says 'organize a css meetup/event'">
 
 That's not the only favour I have to ask you. 
 
