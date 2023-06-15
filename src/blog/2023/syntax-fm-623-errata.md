@@ -1,7 +1,7 @@
 ---
 title: "Syntax podcast episode 623: “Nothing in CSS” errata"
 metadescription: 'My comments on their podcast episode about 0, no, none, hidden, etc. in CSS and HTML.'
-teaser: 'I just listened to the Syntax podcast for the first time because they were discussing topics near and dear to my heart, HTML and CSS. The episode is called “Nothing in CSS - 0 vs 0px, no, none, hidden, initial and unset”, and they’re talking about all the things that can be none or 0 in CSS and HTML. Super interesting stuff, but unfortunately, they got some things wrong. The don‘t have a commment section, so I’m commenting on the episode here in case someone else gets confused by their misinformation.'
+teaser: 'I just listened to the Syntax podcast for the first time because they were discussing topics near and dear to my heart, HTML and CSS. The episode is called “Nothing in CSS - 0 vs 0px, no, none, hidden, initial and unset”, and they’re talking about all the things that can be 0, none, or hidden in CSS and HTML. Super interesting stuff, but unfortunately, they got some things wrong. The don‘t have a comment section, so I’m commenting on the episode here in case someone else gets confused by their misinformation.'
 date: 2023-06-12T11:28:54.969Z
 tags:
   - blog
