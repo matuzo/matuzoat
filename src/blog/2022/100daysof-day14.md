@@ -9,7 +9,7 @@ tags:
   - posts
   - css
   - 100daysofmoreorlessmoderncss
-codepen: https://codepen.io/matuzo/pen/abGVjop
+codepen: https://codepen.io/matuzo/pen/wvjmPXY
 layout: "layouts/100days.njk"
 caniuse: 'where(), is()'
 reading:
