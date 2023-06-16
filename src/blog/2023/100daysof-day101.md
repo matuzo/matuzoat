@@ -44,7 +44,7 @@ _More targeted matching_ sounds great. We can use the `@scope` rule to scope sty
 }
 ```
 
-Okay, cool, but we could to that already, right? By combining selectors, we can scope a child to a parent.
+Okay, cool, but we could do that already, right? By combining selectors, we can scope a child to a parent.
 
 ```css
 .card .content {
