@@ -1,6 +1,6 @@
 ---
 title: "Cascade Layers are useless*"
-metadescription: 'sss'
+metadescription: '* if you don‘t understand the problems they solve'
 teaser: '\*if you don‘t understand the problems they solve and use them in combination with other solutions that tackle the same challenges albeit less elegantly and with the downside of limiting you in taking full advantage of selectors, one of the coolest features in CSS, and if you ignore the fact that they can help you organise and manage your own and third-party code.'
 date: 2023-06-21T10:55:54.969Z
 tags:
