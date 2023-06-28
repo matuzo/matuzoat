@@ -339,4 +339,4 @@ image: articles/sm_formsearchlandmarks.jpg
 </search>
 ```
 
-<span id="sidenote">(but accessible via landmark navigation)</span>
+\* <span id="sidenote">(but accessible via landmark navigation)</span>
