@@ -37,7 +37,7 @@ image: articles/sm_formsearchlandmarks.jpg
   }
 </style>
 
-<h2>Software/OS/briwser</h2>
+<h2>Software/OS/browser</h2>
 
 <ul>
   <li>NVDA 2023.1 with Firefox 114</li>
