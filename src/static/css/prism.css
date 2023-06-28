@@ -33,6 +33,10 @@
    overflow: auto;
    padding: 2rem;
  }
+
+ h3 + pre[class*="language-"] {
+  margin-top: 0;
+ }
  
  h4 + pre[class*='language-'] {
    margin-top: 1rem;
