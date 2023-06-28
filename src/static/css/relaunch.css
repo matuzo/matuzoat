@@ -30,7 +30,6 @@ body {
   font-family: -apple-system, BlinkMacSystemFont, avenir next, avenir, segoe ui, helvetica neue, helvetica, Cantarell, Ubuntu, roboto, noto, arial, sans-serif; 
   font-size: 1.3rem;
   line-height: 1.7;
-  max-width: 70ch;
   margin-block: 0;
   margin-inline: auto;
 }
@@ -92,10 +91,43 @@ nav ul {
 }
 
 main {
+  --main-columns: var(--site-padding-inline) 1fr 1fr minmax(auto, 57rem) 1fr 1fr var(--site-padding-inline);
   padding-block: var(--site-padding-block);
-  padding-inline: var(--site-padding-inline);
   /* background: rgba(255, 255, 255, 0.7); */
-  display: block;
+  display: grid;
+  grid-template-columns: var(--main-columns);
+  justify-content: center;
+}
+
+
+@media (min-width: 90em) {
+  main {
+  --main-columns: var(--site-padding-inline) 1fr minmax(auto, 14rem) minmax(auto, 60rem) minmax(auto, 14rem) 1fr var(--site-padding-inline);
+  }
+}
+
+main > * {
+  grid-column: 4 / -4;
+  min-width: 0;
+}
+
+@supports (grid-template-columns: subgrid) {
+  .post {
+    grid-template-columns: subgrid;
+    display: grid;
+    grid-column: 2 / -2;
+  }
+
+  .post > * {
+    grid-column: 4 / -4;
+    min-width: 0;
+  }
+
+  .table-wrapper {
+    grid-column: 2 / -2;
+    justify-self: center;
+    max-inline-size: 100%;
+  }
 }
 
 section:not(:last-child) {
