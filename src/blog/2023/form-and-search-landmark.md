@@ -46,9 +46,16 @@ image: articles/sm_formsearchlandmarks.jpg
   <li>JAWS 2023.2212.13 with Edge 114</li>
   <li>Narrator Windows 10 with Edge 114</li>
   <li>VoiceOver iOS 15.7.7 with Safari</li>
-
-
 </ul>
+
+I tested using the following shorcuts, commands and gestures.
+
+* <kbd>D</kbd> key + Elements list in NVDA
+* Rotor in VO iOS
+* Rotor + single key quick nav in VO macOS
+* Swiping + landmark navigation in Talkback
+* <kbd>R</kbd> key + landmarks list (<kbd>Insert</kbd> + <kbd>Ctrl</kbd> + <kbd>R</kbd> in JAWS
+* <kbd>D</kbd> key + Landmarks List in Narrator
 
 <h2>form role</h2>
 
@@ -73,7 +80,7 @@ image: articles/sm_formsearchlandmarks.jpg
         <th><a href="#form1">no role and no label</a></th>
         <td class="no">no landmark</td>
         <td class="no">no landmark</td>
-        <td class="no" aria-describedby="sidenote">no landmark*</td>
+        <td class="no" aria-describedby="sidenote">no landmark *</td>
         <td class="no">no landmark</td>
         <td class="no">no landmark</td>
         <td class="no">no landmark</td>
@@ -82,7 +89,7 @@ image: articles/sm_formsearchlandmarks.jpg
         <th><a href="#form2">no role, labelled by heading</a></th>
         <td>form (labelled)</td>
         <td class="no">no landmark</td>
-        <td class="no" aria-describedby="sidenote">no landmark*</td>
+        <td class="no" aria-describedby="sidenote">no landmark *</td>
         <td>form (labelled)</td>
         <td>form landmark (labelled)</td>
         <td class="no">no landmark</td>
@@ -91,7 +98,7 @@ image: articles/sm_formsearchlandmarks.jpg
         <th><a href="#form3">role but no label</a></th>
         <td>form (unlabelled)</td>
         <td class="no">no landmark</td>
-        <td class="no" aria-describedby="sidenote">no landmark*</td>
+        <td class="no" aria-describedby="sidenote">no landmark *</td>
         <td class="no">no landmark</td>
         <td>form landmark (unlabelled)</td>
         <td class="no">no landmark</td>
@@ -100,7 +107,7 @@ image: articles/sm_formsearchlandmarks.jpg
         <th><a href="#form4">role, labelled by heading</a></th>
         <td>form (labelled)</td>
         <td class="no">no landmark</td>
-        <td class="no" aria-describedby="sidenote">no landmark*</td>
+        <td class="no" aria-describedby="sidenote">no landmark *</td>
         <td>form (labelled)</td>
         <td>form landmark (labelled)</td>
         <td class="no">no landmark</td>
@@ -109,8 +116,8 @@ image: articles/sm_formsearchlandmarks.jpg
         <th><a href="#form5">no role, labelled by legend</a></th>
         <td>form (labelled)</td>
         <td class="no">no landmark</td>
-        <td class="no" aria-describedby="sidenote">no landmark*</td>
-        <td>group (labelled)</td>
+        <td class="no" aria-describedby="sidenote">no landmark *</td>
+        <td aria-describedby="sidenote2">group (labelled)  **</td>
         <td>form landmark (labelled)</td>
         <td class="no">no landmark</td>
     </tr>
@@ -118,8 +125,8 @@ image: articles/sm_formsearchlandmarks.jpg
         <th><a href="#form6">role, labelled by legend</a></th>
         <td>form (labelled)</td>
         <td class="no">no landmark</td>
-        <td class="no" aria-describedby="sidenote">no landmark*</td>
-        <td>group (labelled)</td>
+        <td class="no" aria-describedby="sidenote">no landmark *</td>
+        <td aria-describedby="sidenote2">group (labelled) **</td>
         <td>form landmark (labelled)</td>
         <td class="no">no landmark</td>
     </tr>
@@ -127,6 +134,9 @@ image: articles/sm_formsearchlandmarks.jpg
 
 </table>
 </div>
+
+\* <span id="sidenote">not announced as a “form” landmark, but it's accessible via landmark navigation</span>  
+\*\* <span id="sidenote">listed as “form” landmark in the landmarks list</span>
 
 <h3 id="form1">form with no role and no label</h3>
 
@@ -247,7 +257,7 @@ image: articles/sm_formsearchlandmarks.jpg
         <th><a href="#search3">search element with no label</a></th>
         <td class="no">no landmark</td>
         <td class="no">no landmark</td>
-        <td class="no" aria-describedby="sidenote">no landmark*</td>
+        <td class="no" aria-describedby="sidenote">no landmark *</td>
         <td class="no">no landmark</td>
         <td class="no">no landmark</td>
         <td class="no">no landmark</td>
@@ -338,5 +348,3 @@ image: articles/sm_formsearchlandmarks.jpg
   </form>
 </search>
 ```
-
-\* <span id="sidenote">(but accessible via landmark navigation)</span>
