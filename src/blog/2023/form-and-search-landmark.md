@@ -35,6 +35,10 @@ image: articles/sm_formsearchlandmarks.jpg
   th a:is(:link, :visited) {
     color: #fff;
   }
+
+  th a:focus-visible {
+    outline-color: currentColor;
+  }
 </style>
 
 <h2>Software/OS/browser</h2>
@@ -61,9 +65,9 @@ I tested using the following shorcuts, commands and gestures.
 
 **Summary:** You can use it, but forms won't be exposed as landmarks on VoiceOver and Talkback. To get the best results label the form.
 
-<div class="table-wrapper">
+<div class="table-wrapper" aria-labelledby="form1" tabindex="0" role="region">
 <table>
-  <caption>form role test results</caption>
+  <caption id="form1">form role test results</caption>
   <thead>
     <tr>
         <td></td>
@@ -220,9 +224,9 @@ I tested using the following shorcuts, commands and gestures.
 
 **Summary:** Great overall support for the `search` role. The `<search>` element has no support yet. You can use the search element in combination with the `role` attribute.
 
-<div class="table-wrapper">
+<div class="table-wrapper" aria-labelledby="form2" tabindex="0" role="region">
 <table>
-  <caption>search role test results</caption>
+  <caption id="form2">search role test results</caption>
   <thead>
     <tr>
         <td></td>

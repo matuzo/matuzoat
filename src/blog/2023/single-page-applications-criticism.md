@@ -45,9 +45,9 @@ The `<title>` of the page is one of the most important elements in a HTML docume
 
 To mitigate inaccessible routing and the missing feedback after clicking a link, screen reader users help themselves by pressing shortcuts that announce the title of the page. The page title tells them on which page they are. So even if there’s no feedback, they know they’re on a new page when the title has changed. If the title has changed! In a SPA, you usually have to implement title management manually. Again, this is something that just works in native routing. 
 
-<div class="table-wrapper">
+<div class="table-wrapper" aria-labelledby="form1" tabindex="0" role="region">
 <table>
-  <caption>Screen reader shortcuts for announcing the page title</caption>
+  <caption id="form1">Screen reader shortcuts for announcing the page title</caption>
   <thead>
     <tr>
       <th>Screen Reader</th>

@@ -95,9 +95,9 @@ I don't know, probably test with users?! I'll just quote Scott here:
 </details>
 
 
-<div class="table-wrapper">
+<div class="table-wrapper" aria-labelledby="form1" tabindex="0" role="region">
 <table>
-  <caption>Screen reader testing with default element</caption>
+  <caption id="form1">Screen reader testing with default element</caption>
   <thead>
     <tr>
       <td></td>
@@ -172,9 +172,9 @@ summary {
   Here’s Johnny!
 </details>
 
-<div class="table-wrapper">
+<div class="table-wrapper" aria-labelledby="form2" tabindex="0" role="region">
 <table>
-  <caption>Screen reader testing with custom marker</caption>
+  <caption id="form2">Screen reader testing with custom marker</caption>
   <thead>
     <tr>
       <td></td>
@@ -249,10 +249,9 @@ summary::marker {
   Here’s Johnny!
 </details>
 
-<div class="table-wrapper">
-  
+<div class="table-wrapper" aria-labelledby="form3" tabindex="0" role="region">
 <table>
-  <caption>Screen reader testing with custom marker</caption>
+  <caption id="form3">Screen reader testing with custom marker</caption>
   <thead>
     <tr>
       <td></td>
@@ -327,8 +326,8 @@ summary {
   Here’s Johnny!
 </details>
 
-<div class="table-wrapper">
-  <table>
+<div class="table-wrapper" aria-labelledby="form4" tabindex="0" role="region">
+  <table id="form4">
   <caption>Screen reader testing with no marker</caption>
   <thead>
     <tr>
@@ -403,8 +402,8 @@ summary::marker {
 </details>
 
 
-<div class="table-wrapper">
-  <table>
+<div class="table-wrapper" aria-labelledby="form5" tabindex="0" role="region">
+  <table id="form5">
   <caption>Screen reader testing with no marker</caption>
   <thead>
     <tr>
