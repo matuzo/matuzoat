@@ -744,6 +744,8 @@ ins::after {
   padding: 0.5rem;
   position: relative;
   padding-top: 2.5rem;
+  overflow: hidden;
+  resize: horizontal
 }
 
 [data-sample]::after,
