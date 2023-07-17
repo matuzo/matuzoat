@@ -199,7 +199,7 @@ Safari: **dialog**
   <h1>Demo 9</h2>
 
   <button>First focusable element</button>
-  <a href="#" autofocus>Last focusable element</a>
+  <a href="#">Last focusable element</a>
 </dialog>
 ```
 
