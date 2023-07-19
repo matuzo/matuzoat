@@ -9,7 +9,7 @@ tags:
   - html
 image: articles/sm_dialogfocus.jpg
 ---
-Can you imagine a job interviewer caring about accessibility and HTML? Me neither, but the question is interesting nevertheless. I didn't know the answer, so I tested it.
+Don't know the answer? Neither did I, so I tested it.
 
 <h2>OS/Browsers</h2>
 
@@ -168,7 +168,7 @@ Okay, so far, so inconsistent. The specs says “The `tabindex` attribute must n
 
 <div class="quote">
 <blockquote>
-  Fuck you, I won't do what you tell me.
+  I won't do what you tell me.
 </blockquote>
 <p>– Rage Against the Machine</p>
 </div>
