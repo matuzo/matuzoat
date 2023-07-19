@@ -1,6 +1,6 @@
 ---
 title: "O dialog focus, where art thou?"
-metadescription: 'Quick screen reader and browser support tests for the article element.'
+metadescription: 'Quick keyboard tests for the dialog element.'
 teaser: 'Here’s a job interview question for you: When you click a button and call the `showModal()` method to open a modal `<dialog>`, where does the focus go by default, and how can you move it elsewhere?'
 date: 2023-07-17T09:09:54.969Z
 tags:
