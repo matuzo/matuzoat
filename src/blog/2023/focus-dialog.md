@@ -20,7 +20,7 @@ Safari 16.5.1
 
 Here’s a [Codepen with all demos](https://codepen.io/matuzo/pen/PoxOMYg?editors=1010) so you can follow along.
 
-<h2>Dialog with no interactive element</h2>
+<h2>Demo 1: Dialog with no interactive element</h2>
 
 ```html
 <button>demo 1</button>
@@ -44,7 +44,7 @@ Chrome: **dialog**
 Firefox: **body**  
 Safari: **body**  
 
-<h2>Dialog with interactive elements</h2>
+<h2>Demo 2: Dialog with interactive elements</h2>
 
 ```html
 <button>demo 2</button>
@@ -63,7 +63,7 @@ Chrome: **first focusable element**
 Firefox: **first focusable element**  
 Safari: **first focusable element**  
 
-<h2>Dialog with interactive elements and close button first</h2>
+<h2>Demo 3: Dialog with interactive elements and close button first</h2>
 
 ```html
 
@@ -87,7 +87,7 @@ Chrome: **close button**
 Firefox: **close button**  
 Safari: **first focusable element after close button**
 
-<h2>Dialog with interactive elements and close button last</h2>
+<h2>Demo 4: Dialog with interactive elements and close button last</h2>
 
 ```html
 <button>demo 4</button>
@@ -110,7 +110,7 @@ Chrome: **first focusable element**
 Firefox: **first focusable element**  
 Safari: **first focusable element** 
 
-<h2>Dialog without interactive elements and autofocus on dialog</h2>
+<h2>Demo 5: Dialog without interactive elements and autofocus on dialog</h2>
 
 ```html
 <button>demo 5</button>
@@ -126,7 +126,7 @@ Chrome: **dialog**
 Firefox: **body**  
 Safari: **body** 
 
-<h2>Dialog with interactive elements and autofocus on dialog</h2>
+<h2>Demo 6: Dialog with interactive elements and autofocus on dialog</h2>
 
 ```html
 <button>demo 6</button>
@@ -141,11 +141,11 @@ Safari: **body**
 
 Focus is on:
 
-Chrome: **dialog**  
+Chrome: **first focusable element**  
 Firefox: **first focusable element**  
 Safari: **first focusable element** 
 
-<h2>Dialog with autofocus on last interactive element</h2>
+<h2>Demo 7: Dialog with autofocus on last interactive element</h2>
 
 ```html
 <button>demo 7</button>
@@ -173,7 +173,7 @@ Okay, so far, so inconsistent. The specs says “The `tabindex` attribute must n
 <p>– Rage Against the Machine</p>
 </div>
 
-<h2>Dialog with tabindex and no interactive element</h2>
+<h2>Demo 8: Dialog with tabindex and no interactive element</h2>
 
 ```html
 <button>demo 8</button>
@@ -190,7 +190,7 @@ Firefox: **dialog**
 Safari: **dialog**  
 
 
-<h2>Dialog with tabindex and interactive elements</h2>
+<h2>Demo 9: Dialog with tabindex and interactive elements</h2>
 
 ```html
 <button>demo 9</button>
@@ -209,7 +209,7 @@ Chrome: **first focusable element**
 Firefox: **first focusable element**  
 Safari: **first focusable element**  
 
-<h2>Dialog with tabindex, autofocus, and interactive elements</h2>
+<h2>Demo 10: Dialog with tabindex, autofocus, and interactive elements</h2>
 
 ```html
 <button>demo 10</button>
@@ -222,11 +222,11 @@ Safari: **first focusable element**
 </dialog>
 ```
 
-Chrome: **dialog**  
+Chrome: **first focusable element**  
 Firefox: **first focusable element**  
 Safari: **first focusable element** 
 
-<h2>Dialog with tabindex, <code>focus()</code>, and interactive elements</h2>
+<h2>Demo 11: Dialog with tabindex, <code>focus()</code>, and interactive elements</h2>
 
 ```html
 <button>demo 11</button>
@@ -260,7 +260,7 @@ The answer is: It depends. It depends on several factors:
 * The presence of the `autofocus` attribute.
 * The presence of the `tabindex` attribute.
 
-There was [a lot of discussion](https://www.scottohara.me/blog/2023/01/26/use-the-dialog-element.html) on how browsers should handle focus in modal dialogs. They finally concluded and summarized the rules in [the spec](https://html.spec.whatwg.org/#dialog-focusing-steps) earlier this year. If I read it right, Chrome is the only browser that follows the rules correctly at this point. Other browsers will likely follow soon.
+There was [a lot of discussion](https://www.scottohara.me/blog/2023/01/26/use-the-dialog-element.html) on how browsers should handle focus in modal dialogs. They finally concluded and summarized the rules in [the spec](https://html.spec.whatwg.org/#dialog-focusing-steps) earlier this year. If I read it right, Chrome is the only browser that follows most rules correctly at this point. Other browsers will likely follow soon.
 
 Right now you get the most consistent behaviour when:
 
@@ -268,3 +268,6 @@ Right now you get the most consistent behaviour when:
 * you put the `autofocus` attribute on one of the interactive elements
 * you put `tabindex=-1` on the dialog (and `focus()` it).
 
+<h2>Updates</h2>
+
+<time datetime="2023-07-20">20.7.2023</time>: Changed *body* to *first focusable element* for Chrome in demo 6 and demo 10. I had experimental web platform features enabled, which changed the current default behaviour.
