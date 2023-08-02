@@ -97,8 +97,28 @@ the viewport has a min-width of 500px */
     border: 5px solid;
     padding: 1rem;
     margin: 1rem;
-    inline-size: 80cqi;
   }
+
+    [data-sample] h2 {
+      margin: 1rem;
+    }
+
+    [data-sample] .card h2 {
+      background: none;
+    }
+
+
+    @container (min-width: 500px) {
+      [data-sample] .card {
+        background-color: hotpink;
+      }
+    }
+
+    @media (min-width: 500px) {
+      [data-sample] .card {
+        border-style: dotted;
+      }
+    }
 </style>
 
 You can grab and resize the `<section>` by clicking and dragging it in the bottom right corner. The background color of the `.card` changes as soon as the width of the parent section hits `500px`.
