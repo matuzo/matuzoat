@@ -7,7 +7,7 @@ tags:
   - blog
   - posts
   - html
-image: articles/sm_haspopupsr.jpg.jpg
+image: articles/sm_haspopupsr.jpg
 ---
 
 <style>
