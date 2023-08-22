@@ -102,7 +102,7 @@ main {
 
 @media (min-width: 90em) {
   main {
-  --main-columns: var(--site-padding-inline) 1fr minmax(auto, 14rem) minmax(auto, 60rem) minmax(auto, 14rem) 1fr var(--site-padding-inline);
+  --main-columns: var(--site-padding-inline) 1fr minmax(auto, 14rem) minmax(auto, 54rem) minmax(auto, 14rem) 1fr var(--site-padding-inline);
   }
 }
 
