@@ -869,8 +869,8 @@ For example, in the following form, only the input field in light DOM is associa
 <div data-sample="demo" class="demo9">
 <form>
   <p>
-    <label for="name">Name</label>
-    <input type="text" name="name" id="name" value="johanna">
+    <label for="name1">Name</label>
+    <input type="text" name="name" id="name1" value="johanna">
   </p>
   
   <cus-tom11></cus-tom11>
