@@ -870,7 +870,7 @@ For example, in the following form, only the input field in light DOM is associa
 <form>
   <p>
     <label for="name">Name</label>
-    <input type="text" name="name" id="Name" value="johanna">
+    <input type="text" name="name" id="name" value="johanna">
   </p>
   
   <cus-tom11></cus-tom11>
@@ -883,7 +883,7 @@ For example, in the following form, only the input field in light DOM is associa
 <form>
   <p>
     <label for="name">Name</label>
-    <input type="text" name="name" id="Name" value="johanna">
+    <input type="text" name="name" id="name" value="johanna">
   </p>
   
   <cus-tom11></cus-tom11>
