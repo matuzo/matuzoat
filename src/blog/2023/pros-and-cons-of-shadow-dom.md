@@ -7,7 +7,7 @@ tags:
   - blog
   - posts
   - html
-image: articles/sm_haspopupsr.jpg
+image: articles/sm_shadowdom.jpg
 draft: true
 ---
 
@@ -55,9 +55,11 @@ Styling and some accessibility stuff is so much easier without…
 <blockquote>
 </div>
 
-To my surprise, many people replied that they agreed, default to light DOM, and only opt-in when it makes sense. I'm glad because it confirmed my feeling and encouraged me to rethink and restructure some of the components I built.
+To my surprise, many people replied that they agreed, default to light DOM, and only opt-in when it makes sense. I'm glad because it confirmed my feeling and encouraged me to rethink and restructure some of the components I built. Shadow DOM has its justification but does not always have to be the first choice.
 
 To help you make similar decisions, I summarized my pros and cons of Shadow DOM and style encapsulation. Please note that I'm writing this from the perspective of someone who, first and foremost, cares about accessibility and well-structured, semantic HTML. For me, JavaScript is an optional add-on and not the foundation of my code. That implies that I might not have to solve the same problems as others who primarily work with JS-heavy websites. That might also explain why my list of cons is longer than the list of pros.
+
+Here's a collection on CodePen with [all the demos in this post](https://codepen.io/collection/zxJjoj).
 
 <h2>Overview</h2>
 
@@ -90,7 +92,7 @@ To help you make similar decisions, I summarized my pros and cons of Shadow DOM 
     <a href="#con-javascript-dependency"><span class="con">Con:</span> JavaScript dependency</a>
   </li>
   <li>
-    <a href="#con-fouwc"><span class="con">Con:</span> FOUWC (Flash of unstyled web components)</a>
+    <a href="#con-fouce"><span class="con">Con:</span> FOUCE (Flash of unstyled custom element)</a>
   </li>
   <li>
     <a href="#con-forms-behave-differently"><span class="con">Con:</span> Forms behave differently</a>
@@ -105,7 +107,6 @@ To help you make similar decisions, I summarized my pros and cons of Shadow DOM 
     <a href="#con-debugging-a11y2"><span class="con">Con:</span> Debugging with DevTools</a>
   </li>
 </ol>
-
 
 <h2 id="pro-style-encapsulation"><span class="pro">Pro:</span> Style encapsulation</h2>
 
@@ -122,7 +123,7 @@ I almost can’t work without them when creating a library of components, and I 
 <blockquote>
 </div>
 
-In cases like that style encapsulation makes a lot of sense.
+In cases like that, when you work on a design system and don't know who's using your components, combined with which external stylesheets, and in which environment, style encapsulation makes a lot of sense.
 
 Here's an example: a paragraph in light DOM and one in shadow DOM of a web component. 
 
@@ -295,6 +296,8 @@ document.addEventListener('click', e => {
   }
 })
 ```
+
+It's worth noting that nodes are scoped to your component even without Shadow DOM. For example, `this.querySelectorAll('button')` only returns all the buttons inside your component.
 
 <h2 id="pro-slots"><span class="pro">Pro:</span> Slots</h2>
 
@@ -838,11 +841,13 @@ class Custom10 extends HTMLElement {
 customElements.define('cus-tom10', Custom10);
 </script>
 
+[Cross-root ARIA](https://github.com/leobalter/cross-root-aria-delegation/blob/main/explainer.md) might fix some of these issues in the future.
+
 <h2 id="con-javascript-dependency"><span class="con">Con:</span> JavaScript dependency</h2>
 
 Firefox doesn't support [declarative Shadow DOM](https://developer.chrome.com/en/articles/declarative-shadow-dom/) (yet), and if you don't use it and don't work with light DOM, it means that JavaScript is a dependency for rendering anything on the screen. That might not be a concern for every one, but it's not an option for me.
 
-<h2 id="con-fouwc"><span class="con">Con:</span> FOUWC (Flash of unstyled web components)</h2>
+<h2 id="con-fouce"><span class="con">Con:</span> FOUCE (Flash of unstyled custom element)</h2>
 
 JavaScript being a dependency means that your components must wait until JavaScript is loaded before they can be rendered. That <s>may</s> will result in flash of unstyled content (FOUC) and/or layout shifts.
 
@@ -940,6 +945,14 @@ form.addEventListener('submit', e => {
 })
 </script>
 
+You can work around that issue using the [ElementInternals API](https://developer.mozilla.org/en-US/docs/Web/API/ElementInternals) as described in the blog post [A Complete Introduction to Web Components in 2023](https://kinsta.com/blog/web-components/#ignored-inputs) by Craig Buckler. I'm not sure, though, if it's worth the effort. Let me quote [Simon Mcdonald](https://begin.com/blog/posts/2023-08-18-shadow-dom-not-by-default#why-not-just-use-the-shadow-dom-from-the-start%3F):
+
+
+<div class="quote">
+<blockquote>
+There is a spec called Form Associated Custom Elements (FACE) that gives you the APIs to build web components that participate in forms. However, fixing a problem created by JavaScript by writing more JavaScript is like handing a drowning man a glass of water, IMHO.
+</blockquote>
+</div>
 
 <h2 id="con-missing-global-styles"><span class="con">Con:</span> Missing global styles</h2>
 
@@ -1093,6 +1106,7 @@ That's okay, but you get an annoying error when focusing an element without a sh
 
 I understand that most of the cons described in this post are not critical issues, and there are ways to work around them. The thing is, it's just a lot of stuff we have to consider, and we could avoid that by simply not using Shadow DOM. Sounds easier than it is. I don't know; time will tell. I will keep you posted! :)
 
+A big thank you to Egor, Dave, and Simon for their feedback!
 
 <h2>Further reading</h2>
 
@@ -1100,3 +1114,6 @@ I understand that most of the cons described in this post are not critical issue
 * [Shadow DOM: Not by Default](https://begin.com/blog/posts/2023-08-18-shadow-dom-not-by-default) by Simon MacDonald
 * [The CSS Cascade, a deep dive](https://youtu.be/zEPXyqj7pEA) by Bramus Van Damme 
 * [How Shadow DOM and accessibility are in conflict](https://alice.pages.igalia.com/blog/how-shadow-dom-and-accessibility-are-in-conflict/) by Alice Boxhall
+* [Shadow Themes](https://dutchcelt.nl/posts/shadow-themes/) by Egor Kloos
+* [A Complete Introduction to Web Components in 2023](https://kinsta.com/blog/web-components/#ignored-inputs) by Craig Buckler
+* [Shadow DOM and accessibility: the trouble with ARIA](https://nolanlawson.com/2022/11/28/shadow-dom-and-accessibility-the-trouble-with-aria/) by Nolan Lawson
