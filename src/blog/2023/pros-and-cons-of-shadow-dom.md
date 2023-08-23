@@ -8,7 +8,6 @@ tags:
   - posts
   - html
 image: articles/sm_shadowdom.jpg
-draft: true
 ---
 
 <style>
