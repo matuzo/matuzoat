@@ -194,3 +194,5 @@ The second difference is that `:scope` only matches the scoping root itself. `&`
 ```
 
 Essentially, that means that `:scope` can only match a scoping root and `&` can match an element in the selector list, regardless of whether it's considered a scoping root in that context. At least, that's how I interpret it. The spec is still pretty fucking hard to read.
+
+To try out `@scope` you have to download [Chrome Canary](https://www.google.com/chrome/canary/) and enable the `Experimental Web Platform features` flag in chrome://flags/.
