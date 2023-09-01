@@ -56,9 +56,8 @@ layout: layouts/base.njk
 </section>
 {% endif %} #}
 
-  {% if reading %}
+  {% if reading or tag %}
     <h2>Further reading</h2>
-
     <ul>
     {% for link in reading %}
       <li>
@@ -67,9 +66,20 @@ layout: layouts/base.njk
         </a>
       </li>
     {% endfor %}
-    </ul>
 
-    
+    {% if tag %}
+      {% set related = collections['100days-' ~ tag] %}
+      {% for link in related %}
+        {% if page.url != link.url %}
+          <li>
+            <a href="{{ link.url }}">
+              {{ link.data.title }}
+            </a>
+          </li>
+        {% endif %}
+      {% endfor %}
+    {% endif %}
+    </ul>
   {% endif %}
 
 {% set previousPost = collections.100daysofmoreorlessmoderncss | getPreviousCollectionItem(page) %}
