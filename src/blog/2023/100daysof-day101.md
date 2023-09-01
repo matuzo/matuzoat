@@ -9,6 +9,7 @@ tags:
   - posts
   - css
   - 100daysofmoreorlessmoderncss
+  - 100days-scoping
 layout: "layouts/100days.njk"
 codepen: https://codepen.io/matuzo/pen/abQNozb
 reading:
@@ -18,6 +19,7 @@ reading:
     url: https://keithjgrant.com/posts/2023/04/scoped-css-is-back/
   - title: "An introduction to @scope in CSS"
     url: https://fullystacked.net/posts/scope-in-css/
+tag: scoping
 ---
 
 Let's start nice and easy by reading the [spec](https://drafts.csswg.org/css-cascade-6/#scoped-styles).
