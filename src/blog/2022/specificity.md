@@ -12,6 +12,13 @@ tags:
 pageclass: step0
 ---
 
+<style>
+main {
+  background: rgb(250 250 250 /0.6) !important;
+}
+</style>
+
+
 Press the “Add selector” and “Remove selector” buttons to add or remove a selector in the list of declarations and see how the background color changes accordingly. Each selector will be added to the top of the list to prove that it has a higher specificity than the previous selector.
 
 <div role="alert" class="u-vh"></div>
