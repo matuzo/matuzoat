@@ -56,9 +56,9 @@ I noticed some interesting details:
 * Talkback with Chrome doesn't support _grid_, _listbox_, and _tree_.
 * Jaws adds specific instructions for `true` and `menu`: “Press Space to activate the menu. Then navigate with arrow keys”, and for `listbox`, `tree`, and `grid`: _“To activate press Enter”_.
 * Jaws doesn't announce the `aria-expanded` attribute initially in all three browsers, but it does announce it on activation.
-* NVDA doesn't support _dialogue_, _grid_, _listbox_, and _tree_.
+* <s>NVDA doesn't support _dialogue_, _grid_, _listbox_, and _tree_</s>. (NVDA added support with in version 2023.2)
 * NVDA with Firefox announces `aria-haspopup="true"` differently than `aria-haspopup="menu"`: _Settings, menu button, subMenu_ for `true` and _Settings, button, subMenu_ for `menu`.
-* NVDA with Chrome/Edge announces `aria-haspopup="dialog"` differently than `aria-haspopup="grid|tree|listbox"`: _Settings, button, subMenu_ (dialog) and _Settings, menu button, subMenu_ (grid|tree|listbox).
+* NVDA with Chrome/Edge announces `aria-haspopup="dialog"` differently than `aria-haspopup="grid|tree|listbox"`: _Settings, button, opens dialog_ and _Settings, menu button, opens grid|tree|listbox_.
 * Narrator announces “collapsed” on `aria-haspopup="true|menu"` even when `aria-expanded` isn't present.
 * Narrator with Firefox doesn't supprt the attribute.
 * Narrator with Chrome announces “menu item” instead of “menu button“, except for `aria-haspopup="dialog"` where it's just “button”.
@@ -75,8 +75,8 @@ I tested using the <kbd>Tab</kbd> key only and I've used this [CodePen](https://
   <li>VoiceOver macOS 13.4.1 with Firefox 116</li>
   <li>VoiceOver macOS 13.4.1 with Chrome 116</li>
   <li>JAWS 2023.2307.37 with Edge 116, Chrome 116, and Firefox 116</li>
-  <li>NVDA 2023.1 with Firefox 116</li>
-  <li>NVDA 2023.1 with Chrome 116 and Edge 116</li>
+  <li>NVDA 2023.2 with Firefox 116</li>
+  <li>NVDA 2023.2 with Chrome 116 and Edge 116</li>
   <li>Narrator Windows 10 with Firefox, Chrome, and Edge 116</li>
 </ul>
 
@@ -153,8 +153,8 @@ I tested using the <kbd>Tab</kbd> key only and I've used this [CodePen](https://
         <td>Settings, dialogue pop-up, button</td>
         <td>Settings, dialogue pop-up, button</td>
         <td>Settings, button has pop-up dialogue</td>
-        <td class="kinda">Settings, button, subMenu</td>
-        <td class="kinda">Settings, button, subMenu</td>
+        <td>Settings, button, opens dialog</td>
+        <td>Settings, button, opens dialog</td>
         <td class="kinda">Settings, button, has pop-up</td>
         <td class="no">Settings, button</td>
         <td class="no">Settings, button</td>
@@ -167,8 +167,8 @@ I tested using the <kbd>Tab</kbd> key only and I've used this [CodePen](https://
         <td>Settings, grid pop-up, button</td>
         <td>Settings, grid pop-up, button</td>
         <td>Settings, button has pop-up grid</td>
-        <td class="kinda">Settings, button, subMenu</td>
-        <td class="kinda">Settings, menu button, subMenu</td>
+        <td>Settings, button, opens grid</td>
+        <td>Settings, menu button, opens grid</td>
         <td class="kinda">Settings, button, has pop-up</td>
         <td class="no">Settings, button</td>
         <td class="kinda">Settings, menu item</td>
@@ -181,8 +181,8 @@ I tested using the <kbd>Tab</kbd> key only and I've used this [CodePen](https://
         <td>Settings, list box pop-up, button</td>
         <td>Settings, list box pop-up, button</td>
         <td>Settings, button has pop-up list box</td>
-        <td class="kinda">Settings, button, subMenu</td>
-        <td class="kinda">Settings, menu button, subMenu</td>
+        <td>Settings, button, opens list</td>
+        <td>Settings, menu button, opens list</td>
         <td class="kinda">Settings, button, has pop-up</td>
         <td class="no">Settings, button</td>
         <td class="kinda">Settings, menu item</td>
@@ -195,8 +195,8 @@ I tested using the <kbd>Tab</kbd> key only and I've used this [CodePen](https://
         <td>Settings, tree pop-up, button</td>
         <td>Settings, tree pop-up, button</td>
         <td>Settings, button has pop-up tree</td>
-        <td class="kinda">Settings, button, subMenu</td>
-        <td class="kinda">Settings, menu button, subMenu</td>
+        <td>Settings, button, opens tree</td>
+        <td>Settings, menu button, opens tree</td>
         <td class="kinda">Settings, button, has pop-up</td>
         <td class="no">Settings, button</td>
         <td class="kinda">Settings, menu item</td>
@@ -261,3 +261,7 @@ I tested using the <kbd>Tab</kbd> key only and I've used this [CodePen](https://
     Settings
 </button>
 ```
+
+## Update 4.9.2023
+
+NVDA supports the `dialog`, `grid`, `list`, and `tree` keywords starting with [NVDA 2023.2](https://www.nvaccess.org/post/nvda-2023-2/). In prior versions it only announced _Settings, button, subMenu_.
