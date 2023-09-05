@@ -88,7 +88,7 @@ You can use `:scope` instead of `.wrapper`. That works because it doesn't match 
 /* That's like writing .wrapper .content {} */
 ```
 
-Instead of `.scope`, you can also use `&`.
+Instead of `:scope`, you can also use `&`.
 
 ```css
 @scope (.wrapper) {
