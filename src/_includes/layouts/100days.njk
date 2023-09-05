@@ -82,12 +82,28 @@ layout: layouts/base.njk
     </ul>
   {% endif %}
 
+<h2 id="more">Do you want to learn even more awesome CSS?</h2>
+
+<p>
+  I'm running a workshop with my friends at <a href="https://smashingconf.com/online-workshops/workshops/modern-css-manuel-matuzovic/#main-content">Smashing Magazine</a> in which I introduce you to the most useful <strong>modern features in CSS</strong> and show how you can implement them today in your code base to improve scalability, maintainability, and productivity.
+</p>
+
+<div class="content__video-wrapper"><div class="video-wrapper">
+<iframe title="Introduction to the course" src="https://player.vimeo.com/video/856902125?h=36cc1eeb9c" width="640" height="360" frameborder="0"  allowfullscreen></iframe>
+</div></div>
+
+<p style="text-align: center; margin: 2em;">
+<a class="cta" href="/blog/2023/css-masterclass-workshop/">
+Learn more about the workshop!
+</a>
+</p>
+
 {% set previousPost = collections.100daysofmoreorlessmoderncss | getPreviousCollectionItem(page) %}
 {% set nextPost = collections.100daysofmoreorlessmoderncss | getNextCollectionItem(page) %}
 
 {% if previousPost or nextPost %}
 <nav aria-labelledby="more">
-<h2 id="more">Want more?</h2>
+<h2 id="more">Check out other posts</h2>
 
   <ol class="prevnext">
 {% if previousPost %}
