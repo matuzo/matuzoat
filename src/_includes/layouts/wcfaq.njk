@@ -1,0 +1,83 @@
+---
+layout: layouts/base.njk
+noindex: true
+intro: '[Back to overview](/blog/2023/web-components-accessibility-faq/)'
+---
+
+<article class="post rich-text">
+  {% set blog_title = page_title or title %}
+  
+  <h1 class="post-heading">{{ blog_title | safe }}</h1>
+
+  <p>
+    posted on <time datetime="{{ date | machineDate }}">{{ date | readableDate }}</time>
+  </p>
+
+  {% if intro %}
+    {{ intro | md | safe }}
+  {% endif %}
+
+  {% if intro2 %}
+    {{ intro2 | safe }}
+  {% endif %}
+
+  {% if intro3 %}
+    {{ intro3 | md | safe }}
+  {% endif %}
+
+  {% if teaser %}
+    {{ teaser | md | safe }}
+  {% endif %}
+
+  {% if content %}
+    {{ content | safe }}
+
+
+<p>
+  <a href="/blog/2023/web-components-accessibility-faq/">
+    Back to overview
+  </a>
+</p>
+
+{% set previousPost = collections.wcfaq | getPreviousCollectionItem(page) %}
+{% set nextPost = collections.wcfaq | getNextCollectionItem(page) %}
+
+{% if previousPost or nextPost %}
+<nav aria-labelledby="more">
+<h2 id="more">More Questions?</h2>
+
+  <ol class="prevnext">
+{% if previousPost %}
+<li>
+    <a href="{{ previousPost.url }}">Previous post: <strong>{{ previousPost.data.title }}</strong></a>
+  </li>
+{% endif %}
+
+{% if nextPost and not nextPost.data.draft %}
+  <li>
+    <a href="{{ nextPost.url }}" class="next">Next post: <strong>{{ nextPost.data.title }}</strong></a>
+  </li>
+{% endif %}
+
+  </ol>
+</nav>  
+{% endif %}
+
+  {% else %}
+    <p>
+      Read the full article on  
+
+      <a href="{{ url }}" rel="noopener">
+        {{ publication}} 
+      </a>.
+    </p>
+  {% endif %}
+
+  <footer>
+    {% set subject = "Comment on “" ~ title ~ "”" %}
+    <p>My blog doesn't support comments yet, but you can reply via <a href="mailto:blog@matuzo.at?subject={{ subject | urlencode }}">e-mail</a>.</p>
+  </footer>
+</article>
+
+
+  
