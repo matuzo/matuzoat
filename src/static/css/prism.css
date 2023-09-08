@@ -34,6 +34,14 @@
    padding: 2rem;
  }
 
+ figure pre[class*='language-'] {
+  margin-bottom: 0;
+ }
+
+ figure pre[class*='language-'] + figcaption {
+  margin-top: 0;
+ }
+
  h3 + pre[class*="language-"] {
   margin-top: 0;
  }
