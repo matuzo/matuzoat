@@ -30,8 +30,6 @@ Please note: This blog post is a **work in progress**. I've decided to publish i
     </a>
   </li>
 {% endfor %}
-<li>Can I tab to elements in shadow DOM?</li>
-<li>Can I focus elements in shadow DOM?</li>
 <li>Can I point a skip link to an element in shadow DOM?</li>
 <li>Can I connect a label in one component to an input in another component?</li>
 <li>Can I create an ARIA reference to an element in shadow DOM?</li>
