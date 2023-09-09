@@ -10,6 +10,7 @@ tags:
   - wcfaq
 image: articles/sm_wca11y_shadow_focus.jpg
 layout: "layouts/wcfaq.njk"
+order: 7
 ---
 The answer to this question is _yes_, but there are two different ways of doing it, and how you can do it depends on the type of component you're working with. 
 

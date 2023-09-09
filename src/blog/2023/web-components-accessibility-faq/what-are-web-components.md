@@ -13,6 +13,7 @@ tags:
   - wcfaq
 image: articles/sm_wca11y_what.jpg
 layout: "layouts/wcfaq.njk"
+order: 1
 ---
 
 They’re based on four core concepts:

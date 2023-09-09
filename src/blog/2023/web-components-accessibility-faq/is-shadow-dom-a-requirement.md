@@ -10,6 +10,7 @@ tags:
   - wcfaq
 image: articles/sm_wca11y_shadow.jpg
 layout: "layouts/wcfaq.njk"
+order: 5
 ---
 That’s really important because many will tell you that shadow DOM is a must. After a year of working with web components, I came to the conclusion that shadow DOM can be useful, but it doesn’t necessarily have to be the default. Some things, also regarding accessibility, are easier without shadow DOM. We’ll get into that later.
 

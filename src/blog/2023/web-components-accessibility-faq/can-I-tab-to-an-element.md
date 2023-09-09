@@ -10,6 +10,7 @@ tags:
   - wcfaq
 image: articles/sm_wca11y_shadow_tab.jpg
 layout: "layouts/wcfaq.njk"
+order: 6
 ---
 Attaching an interactive element to the shadow root of a component doesn't affect it in terms of its interactivity. You can hover it, click it, or focus it using the keyboard.
 

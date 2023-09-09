@@ -10,6 +10,7 @@ tags:
   - wcfaq
 image: articles/sm_wca11y_skip.jpg
 layout: "layouts/wcfaq.njk"
+order: 8
 ---
 Element IDs are scoped within a shadow root. A link in light DOM can't find a target in shadow DOM, but of course, you can put an `id` on the custom element itself.
 

@@ -72,4 +72,10 @@ module.exports = {
       return item.inputPath.match(/^\.\/src\/publications\//) !== null;
     });
   },
+
+  wcfaqSorted: (collection) => {
+    return collection.getFilteredByTag("wcfaq").sort(function(a, b) {
+      return a.data.order - b.data.order; // sort by date - descending
+    });
+  },
 };

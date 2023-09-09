@@ -10,6 +10,7 @@ tags:
   - wcfaq
 image: articles/sm_wca11y_js.jpg
 layout: "layouts/wcfaq.njk"
+order: 2
 ---
 
 Let’s say you have a message component that has a different styling based on its type (info, warning, or alert). If you pass the body of the message through an attribute to the component, similar to what we did with the [Star Wars component](/blog/2023/web-components-accessibility-faq/what-are-web-components/) earlier, and you use JavaScript to render the message, then JavaScript is a dependency.
@@ -182,11 +183,15 @@ class TheMessage3 extends HTMLElement {
 customElements.define("the-message3", TheMessage3);
 </script>
 
+<div data-sample="demo">
+
 <the-message3 type="warning">
 <template shadowrootmode="open">
 <style>:host { --_border: blue; display: block; border: 4px solid var(--_border); padding: 0.5em; } :host([type="warning"]) {--_border: orange;}
 </style><slot></slot></template><p>That's a warning</p>
 </the-message3>
+
+</div>
 
 That's pretty cool, right? So, what's the catch? [Firefox doesn't support Declarative Shadow DOM](https://caniuse.com/declarative-shadow-dom).
 

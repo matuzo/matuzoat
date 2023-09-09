@@ -39,8 +39,8 @@ intro: '[Back to overview](/blog/2023/web-components-accessibility-faq/)'
   </a>
 </p>
 
-{% set previousPost = collections.wcfaq | getPreviousCollectionItem(page) %}
-{% set nextPost = collections.wcfaq | getNextCollectionItem(page) %}
+{% set previousPost = collections.wcfaqSorted | getPreviousCollectionItem(page) %}
+{% set nextPost = collections.wcfaqSorted | getNextCollectionItem(page) %}
 
 {% if previousPost or nextPost %}
 <nav aria-labelledby="more">

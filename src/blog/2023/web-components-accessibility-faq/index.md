@@ -22,7 +22,7 @@ Please note: This blog post is a **work in progress**. I've decided to publish i
 ## Questions
 
 <ol>
-{% for post in collections.wcfaq %}
+{% for post in collections.wcfaqSorted %}
 
   <li>
     <a href="{{post.url}}">
