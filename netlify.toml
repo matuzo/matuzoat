@@ -23,3 +23,7 @@ package = "netlify-plugin-cache-folder"
 [[redirects]]
   from = "/blog/2022/100daysof-day71/"
   to = "/blog/2023/100daysof-day71/"
+
+[[redirects]]
+  from = "/blog/2023/web-components-accessibility-faq/declarative-shadowdom-poylfill/"
+  to = "/blog/2023/web-components-accessibility-faq/declarative-shadowdom-polyfill/"
