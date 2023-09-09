@@ -25,9 +25,7 @@ Labelling works if you pass the element to the component via light DOM.
 </the-input>
 ```
 
-### Declarative shadow DOM: yes
-
-Labelling works if you use declarative shadow DOM.
+Declarative Shadow DOM variation:
 
 ```html
 <label for="email">E-Mail</label>
@@ -35,6 +33,7 @@ Labelling works if you use declarative shadow DOM.
   <template shadowrootmode="open">
     <slot></slot>
   </template>
+
   <input type="email" id="email" />
 </the-input>
 ```
@@ -60,6 +59,21 @@ class TheInput extends HTMLElement {
 
 customElements.define("the-input", TheInput);
 ```
+
+### Declarative Shadow DOM explicit labelling : no
+
+Although with Declarative Shadow DOM, it looks like the HTML is in light DOM because you're not writing the HTML in JavaScript, the elements are still in a shadow root and thus not referenceable from the outside.
+
+```html
+<label for="email">E-Mail</label>
+<the-input>
+  <template shadowrootmode="open">
+    <input type="email" id="email" />
+  </template>
+</the-input>
+```
+
+In case you were wondering: Yes, that's still true if you turn off JavaScript.
 
 ### Shadow DOM implicit labelling: no
 
