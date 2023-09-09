@@ -30,7 +30,6 @@ Please note: This blog post is a **work in progress**. I've decided to publish i
     </a>
   </li>
 {% endfor %}
-<li>Can I connect a label in one component to an input in another component?</li>
 <li>Can I create an ARIA reference to an element in shadow DOM?</li>
 <li>Can I write to a live region in light DOM from a component?</li>
 <li>Can I change the role of a custom element?</li>
