@@ -30,8 +30,7 @@ Please note: This blog post is a **work in progress**. I've decided to publish i
     </a>
   </li>
 {% endfor %}
-<li>Can I create an ARIA reference to an element in shadow DOM?</li>
-<li>Can I write to a live region in light DOM from a component?</li>
+
 <li>Can I change the role of a custom element?</li>
 <li>Can I create a custom element that inherits behaviour from a native element?</li>
 <li>Can web components help improve accessibility?</li>
