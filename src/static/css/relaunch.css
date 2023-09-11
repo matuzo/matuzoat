@@ -191,6 +191,11 @@ p code {
   word-break: break-word;
 }
 
+figcaption code {
+  background: rgb(215 215 215);
+  color: #000;
+}
+
 q {
   font-style: italic;
 }
