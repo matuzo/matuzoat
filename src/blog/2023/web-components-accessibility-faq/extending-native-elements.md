@@ -2,7 +2,7 @@
 title: "Can I create a custom element based on a native element?"
 metadescription: 'The most important questions regarding web component accessibility'
 teaser: 'Yes, but it’s implemented in all major browsers except Safari, which [has no plan to support it](https://github.com/WebKit/standards-positions/issues/97).'
-date: 2023-09-07T13:00:54.969Z
+date: 2023-09-11T10:30:54.969Z
 tags:
   - blog
   - posts

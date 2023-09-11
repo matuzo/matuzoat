@@ -2,7 +2,7 @@
 title: "Can I create an ARIA reference to an element in shadow DOM?"
 metadescription: 'The most important questions regarding web component accessibility'
 teaser: 'No.'
-date: 2023-09-07T13:30:54.969Z
+date: 2023-09-11T09:30:54.969Z
 tags:
   - blog
   - posts

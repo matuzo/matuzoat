@@ -2,7 +2,7 @@
 title: "Can I change the role of a custom element?"
 metadescription: 'The most important questions regarding web component accessibility'
 teaser: 'Yes.'
-date: 2023-09-07T13:00:54.969Z
+date: 2023-09-11T10:30:54.969Z
 tags:
   - blog
   - posts
