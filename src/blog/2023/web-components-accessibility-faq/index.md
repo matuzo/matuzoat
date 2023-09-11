@@ -13,12 +13,6 @@ tags:
 image: articles/sm_wca11y.jpg
 ---
 
-<div class="highlight">
-
-Please note: This blog post is a **work in progress**. I've decided to publish it unfinished and add content as I find time. I'm doing this to get early feedback that I can then incorporate constantly.
-
-</div>
-
 ## Questions
 
 <ol>
