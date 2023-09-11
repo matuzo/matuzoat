@@ -118,3 +118,7 @@ customElements.define("the-input", TheInput);
 
 
 **Conclusion:** Put the label and the form field in light DOM or both in shadow DOM, but don't mix contexts.
+
+## Resources 
+
+* [Shadow DOM and accessibility: the trouble with ARIA](https://nolanlawson.com/2022/11/28/shadow-dom-and-accessibility-the-trouble-with-aria/) by Nolan Lawson
