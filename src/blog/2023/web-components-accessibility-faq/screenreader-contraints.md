@@ -2,7 +2,7 @@
 title: "Are there any constraints regarding screen reader accessibility?"
 metadescription: 'The most important questions regarding web component accessibility'
 teaser: 'Yes.'
-date: 2023-09-07T13:40:54.969Z
+date: 2023-09-11T13:40:54.969Z
 tags:
   - blog
   - posts
