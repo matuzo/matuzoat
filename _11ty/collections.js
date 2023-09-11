@@ -1,4 +1,16 @@
 module.exports = {
+  postsFiltered: (collection) => {
+    return collection.getFilteredByTag("posts").filter(function (item) {
+      console.log()
+      return !item.data.noindex
+    });
+  },
+  blogFiltered: (collection) => {
+    return collection.getFilteredByTag("blog").filter(function (item) {
+      console.log()
+      return !item.data.noindex
+    });
+  },
   tagList: (collection) => {
     let tagSet = new Set();
     collection.getAllSorted().forEach(function (item) {

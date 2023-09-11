@@ -8,7 +8,7 @@ navtitle: Blog
 permalink: "blog/{% if pagination.pageNumber > 0 %}page-{{ pagination.pageNumber + 1 }}/{% endif %}index.html"
 date: 1987-01-05
 pagination:
-  data: collections.blog
+  data: collections.blogFiltered
   size: 10
   alias: blog_posts
   reverse: true

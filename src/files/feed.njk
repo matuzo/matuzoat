@@ -7,13 +7,13 @@ permalink: /feed.xml
   <subtitle>{{ metadata.feed.subtitle }}</subtitle>
   <link href="{{ metadata.feed.url }}" rel="self"/>
   <link href="{{ metadata.url }}"/>
-  <updated>{{ collections.blog | rssLastUpdatedDate }}</updated>
+  <updated>{{ collections.blogFiltered | rssLastUpdatedDate }}</updated>
   <id>{{ metadata.feed.id }}</id>
   <author>
     <name>{{ metadata.author.name }}</name>
     <email>{{ metadata.author.email }}</email>
   </author>
-  {%- for post in collections.blog %}
+  {%- for post in collections.blogFiltered %}
     {% if not post.data.draft and not post.data.noindex %}
       {% set absolutePostUrl %}{{ post.url | url | absoluteUrl(metadata.url) }}{% endset %}
       <entry>

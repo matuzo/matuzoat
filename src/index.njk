@@ -21,7 +21,7 @@ navtitle: Home
   </h2>
 
   {% set max = 10 %}
-  {% set posts = collections.posts | reverse %}
+  {% set posts = collections.postsFiltered | reverse %}
   {% include 'components/blog-posts.njk' %}
 
   <a href="/blog">
