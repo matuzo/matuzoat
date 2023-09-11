@@ -31,11 +31,9 @@ Please note: This blog post is a **work in progress**. I've decided to publish i
   </li>
 {% endfor %}
 
-<li>Can I change the role of a custom element?</li>
-<li>Can I create a custom element that inherits behaviour from a native element?</li>
 <li>Can web components help improve accessibility?</li>
-<li>Are there any other constraints in terms of keyboard accessibility?</li>
-<li>Are there any other constraints in terms of screen reader accessibility?</li>
-<li>Are there any other constraints in terms of accessibility testing?</li>
+<li>Are there any constraints regarding keyboard accessibility?</li>
+<li>Are there any constraints regarding screen reader accessibility?</li>
+<li>Are there any constraints regarding accessibility testing?</li>
 <li><a href="mailto:manuel@matuzo.at">Send me your questions!</a></li>
 </ol>
