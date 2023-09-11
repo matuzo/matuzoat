@@ -30,10 +30,5 @@ Please note: This blog post is a **work in progress**. I've decided to publish i
     </a>
   </li>
 {% endfor %}
-
-<li>Can web components help improve accessibility?</li>
-<li>Are there any constraints regarding keyboard accessibility?</li>
-<li>Are there any constraints regarding screen reader accessibility?</li>
-<li>Are there any constraints regarding accessibility testing?</li>
 <li><a href="mailto:manuel@matuzo.at">Send me your questions!</a></li>
 </ol>
