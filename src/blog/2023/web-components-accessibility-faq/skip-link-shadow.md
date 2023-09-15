@@ -33,7 +33,7 @@ class TheComponent extends HTMLElement {
 
     const paragraph = document.createElement("p");
     paragraph.textContent = "Target in shadow";
-    paragraph.setAttribute('id', shadow)
+    paragraph.setAttribute('id', 'shadow')
 
     this.shadowRoot.append(paragraph);
   }
