@@ -16,8 +16,8 @@ Element IDs are scoped within a shadow root. A link in light DOM can't find a ta
 
 ```html
   <ol>
-    <a href="#light">Bring me to the light</a>
-    <a href="#shadow">Bring me to the shadow</a>
+    <li><a href="#light">Bring me to the light</a></li>
+    <li><a href="#shadow">Bring me to the shadow</a></li>
     <li><a href="#parent">Bring me to the shadow's parent</a></li>
   </ol>
 
