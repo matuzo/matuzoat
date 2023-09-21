@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en" class="">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>webcomponents</title>
+
+
+
+  <link rel="stylesheet" href="/assets/css/prism.css">
+  <link rel="stylesheet" href="/assets/css/style.css">
+  
+  <link rel="stylesheet" href="/assets/css/matuzo.css">
+  
+  
+  <link rel="stylesheet" href="/assets/css/print.css" media="print">
+
+  
+    <link rel="prefetch" href="/slidedecks/webcomponents/117/">
+  
+
+  <meta name="robots" content="noindex, nofollow">
+</head>
+<body class="page page--code">
+  <main class="presentation">
+  <nav class="controls" aria-label="Pagination">
+    <a href="/slidedecks/webcomponents/115/" class="control" rel="prev">
+      <span>
+        Previous
+      </span>
+    </a>
+
+    
+      <a href="/slidedecks/webcomponents/117/" class="control" rel="next">
+        <span>
+          Next
+        </span>
+      </a>
+    
+  </nav>
+
+  
+    <div class="slide-count">
+      <span class="u-vh">Folie</span> 117 of 122
+    </div>
+  
+
+  
+  
+    
+  
+
+  
+
+  
+     
+    
+    
+      
+      
+      
+      
+      
+      
+    
+ 
+     
+  
+
+  
+
+  <div class="presentation__slide presentation__slide--code">
+  
+    
+      <h1 class="u-vh">
+        bugs code
+      </h1>
+    
+  
+
+  
+    
+      <div class="sld"><pre class="language-js"><code class="language-js"><span class="token keyword">class</span> <span class="token class-name">SomeBugs</span> <span class="token keyword">extends</span> <span class="token class-name">HTMLElement</span> <span class="token punctuation">{</span><br>  <span class="token function">constructor</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span><br>    <span class="token keyword">super</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span><br>    <span class="token keyword">this</span><span class="token punctuation">.</span><span class="token function">attachShadow</span><span class="token punctuation">(</span><span class="token punctuation">{</span>mode<span class="token operator">:</span> <span class="token string">'open'</span><span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span><br>    <br>    <span class="token keyword">this</span><span class="token punctuation">.</span>shadowRoot<span class="token punctuation">.</span>innerHTML <span class="token operator">=</span> <span class="token template-string"><span class="token template-punctuation string">`</span><span class="token string">   <br>    &lt;img src="#test"><br>    <br>    &lt;button>&lt;/button><br>    &lt;button aria-hidden="true">Click&lt;/button><br>      </span><span class="token template-punctuation string">`</span></span><br>  <span class="token punctuation">}</span><br><span class="token punctuation">}</span><br><br>customElements<span class="token punctuation">.</span><span class="token function">define</span><span class="token punctuation">(</span><span class="token string">'some-bugs'</span><span class="token punctuation">,</span> SomeBugs<span class="token punctuation">)</span><span class="token punctuation">;</span></code></pre>
+</div>
+    
+  
+</div>
+
+</main>
+
+
+  <script src="/assets/js/presentation.js" crossorigin="anonymous" ></script>
+</body>
+</html>

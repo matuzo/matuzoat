@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en" class="">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>webcomponents</title>
+
+
+
+  <link rel="stylesheet" href="/assets/css/prism.css">
+  <link rel="stylesheet" href="/assets/css/style.css">
+  
+  <link rel="stylesheet" href="/assets/css/matuzo.css">
+  
+  
+  <link rel="stylesheet" href="/assets/css/print.css" media="print">
+
+  
+    <link rel="prefetch" href="/slidedecks/webcomponents/41/">
+  
+
+  <meta name="robots" content="noindex, nofollow">
+</head>
+<body class="page page--code">
+  <main class="presentation">
+  <nav class="controls" aria-label="Pagination">
+    <a href="/slidedecks/webcomponents/39/" class="control" rel="prev">
+      <span>
+        Previous
+      </span>
+    </a>
+
+    
+      <a href="/slidedecks/webcomponents/41/" class="control" rel="next">
+        <span>
+          Next
+        </span>
+      </a>
+    
+  </nav>
+
+  
+    <div class="slide-count">
+      <span class="u-vh">Folie</span> 41 of 112
+    </div>
+  
+
+  
+  
+    
+  
+
+  
+
+  
+     
+    
+    
+      
+      
+      
+      
+      
+      
+    
+ 
+     
+  
+
+  
+
+  <div class="presentation__slide presentation__slide--code">
+  
+    
+      <h1 class="u-vh">
+        dsd polyfill code
+      </h1>
+    
+  
+
+  
+    
+      <div class="sld">
+<pre class="language-js"><code class="language-js"><span class="token punctuation">(</span><span class="token keyword">function</span> <span class="token function">attachShadowRoots</span><span class="token punctuation">(</span><span class="token parameter">root</span><span class="token punctuation">)</span> <span class="token punctuation">{</span><br>  <span class="token comment">// find all templates with a shadowrootmode attribute</span><br>  root<span class="token punctuation">.</span><span class="token function">querySelectorAll</span><span class="token punctuation">(</span><span class="token string">"template[shadowrootmode]"</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">forEach</span><span class="token punctuation">(</span><span class="token parameter">template</span> <span class="token operator">=></span> <span class="token punctuation">{</span><br>    <span class="token comment">// get the mode: open or closed</span><br>    <span class="token keyword">const</span> mode <span class="token operator">=</span> template<span class="token punctuation">.</span><span class="token function">getAttribute</span><span class="token punctuation">(</span><span class="token string">"shadowrootmode"</span><span class="token punctuation">)</span><span class="token punctuation">;</span><br>    <span class="token comment">// attach a shadow to the component</span><br>    <span class="token keyword">const</span> shadowRoot <span class="token operator">=</span> template<span class="token punctuation">.</span>parentNode<span class="token punctuation">.</span><span class="token function">attachShadow</span><span class="token punctuation">(</span><span class="token punctuation">{</span> mode <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span><br>    <span class="token comment">// append the content in the template</span><br>    shadowRoot<span class="token punctuation">.</span><span class="token function">appendChild</span><span class="token punctuation">(</span>template<span class="token punctuation">.</span>content<span class="token punctuation">)</span><span class="token punctuation">;</span><br>    <span class="token comment">// remove the template</span><br>    template<span class="token punctuation">.</span><span class="token function">remove</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span><br>    <span class="token function">attachShadowRoots</span><span class="token punctuation">(</span>shadowRoot<span class="token punctuation">)</span><span class="token punctuation">;</span><br>  <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span><br><span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">(</span>document<span class="token punctuation">)</span><span class="token punctuation">;</span></code></pre>
+</div>
+    
+  
+</div>
+
+</main>
+
+
+  <script src="/assets/js/presentation.js" crossorigin="anonymous" ></script>
+</body>
+</html>

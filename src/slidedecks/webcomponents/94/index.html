@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en" class="">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>webcomponents</title>
+
+
+
+  <link rel="stylesheet" href="/assets/css/prism.css">
+  <link rel="stylesheet" href="/assets/css/style.css">
+  
+  <link rel="stylesheet" href="/assets/css/matuzo.css">
+  
+  
+  <link rel="stylesheet" href="/assets/css/print.css" media="print">
+
+  
+    <link rel="prefetch" href="/slidedecks/webcomponents/95/">
+  
+
+  <meta name="robots" content="noindex, nofollow">
+</head>
+<body class="page page--webcomponents">
+  <main class="presentation">
+  <nav class="controls" aria-label="Pagination">
+    <a href="/slidedecks/webcomponents/93/" class="control" rel="prev">
+      <span>
+        Previous
+      </span>
+    </a>
+
+    
+      <a href="/slidedecks/webcomponents/95/" class="control" rel="next">
+        <span>
+          Next
+        </span>
+      </a>
+    
+  </nav>
+
+  
+    <div class="slide-count">
+      <span class="u-vh">Folie</span> 95 of 112
+    </div>
+  
+
+  
+  
+    
+  
+
+  
+
+  
+     
+    
+    
+      
+      
+      
+      
+      
+      
+    
+ 
+     
+  
+
+  
+
+  <div class="presentation__slide presentation__slide--webcomponents">
+  
+    
+      <h1 class="u-vh">
+        card done
+      </h1>
+    
+  
+
+  
+    
+      <div class="sld"><style>
+  img {
+    height: auto;
+  }
+
+  the-card {
+    font-size: 1.8rem;
+  }
+
+  the-card {
+    max-width: 42rem;
+    display: grid;
+    border: 1px solid;
+    grid-template-columns: 1.6rem 1fr 1.6rem;
+  }
+
+  the-card [slot="media"] {
+    grid-column: 1 / -1;
+    order: -1;
+  }
+
+  the-card :is([slot="heading"],[slot="content"]) {
+    grid-column: 2 / -2;
+}
+</style>
+
+<the-card>
+  <img slot="media" 
+       src="http://matuzo.at/images/year2022/IMG_20220728_155617_thumb.jpg" width="436" height="245" loading="lazy" 
+       alt="First selfie of me, my fiance and our daughter in our new home">
+       
+  <h2 slot="heading">Goodbye 2022</h2>
+
+  <div slot="content">
+    <p>
+      In early 2022, we were looking for a house or flat in Graz, the second largest city 
+      in Austria. In June we found a nice place, said “Yes” with no hesitation, and moved 
+      in in August. Everything went so quick and now we’re already 5 months here. I like 
+      it here. It’s much smaller and calmer than Vienna, but nice.
+    </p>
+
+    <a href="#">Read A year in review: 2022</a>
+  </div>
+</the-card>
+
+<script>
+class TheCard extends HTMLElement {
+  constructor() {
+    super();
+    this.shadow = this.attachShadow({ mode: "open" });
+
+
+    this.shadow.innerHTML=`
+      <slot name="heading"></slot>
+      <slot name="media"></slot>
+      <slot name="content"></slot>
+    `;
+  }
+}
+
+customElements.define("the-card", TheCard);
+</script>
+</div>
+    
+  
+</div>
+
+</main>
+
+
+  <script src="/assets/js/presentation.js" crossorigin="anonymous" ></script>
+</body>
+</html>

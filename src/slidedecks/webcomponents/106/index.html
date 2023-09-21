@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en" class="">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>webcomponents</title>
+
+
+
+  <link rel="stylesheet" href="/assets/css/prism.css">
+  <link rel="stylesheet" href="/assets/css/style.css">
+  
+  <link rel="stylesheet" href="/assets/css/matuzo.css">
+  
+  
+  <link rel="stylesheet" href="/assets/css/print.css" media="print">
+
+  
+    <link rel="prefetch" href="/slidedecks/webcomponents/107/">
+  
+
+  <meta name="robots" content="noindex, nofollow">
+</head>
+<body class="page page--webcomponents">
+  <main class="presentation">
+  <nav class="controls" aria-label="Pagination">
+    <a href="/slidedecks/webcomponents/105/" class="control" rel="prev">
+      <span>
+        Previous
+      </span>
+    </a>
+
+    
+      <a href="/slidedecks/webcomponents/107/" class="control" rel="next">
+        <span>
+          Next
+        </span>
+      </a>
+    
+  </nav>
+
+  
+    <div class="slide-count">
+      <span class="u-vh">Folie</span> 107 of 112
+    </div>
+  
+
+  
+  
+    
+  
+
+  
+
+  
+     
+    
+    
+      
+      
+      
+      
+      
+      
+    
+ 
+     
+  
+
+  
+
+  <div class="presentation__slide presentation__slide--webcomponents">
+  
+    
+      <h1 class="u-vh">
+        bugs
+      </h1>
+    
+  
+
+  
+    
+      <div class="sld"><some-bugs></some-bugs>
+<script>
+class SomeBugs extends HTMLElement {
+  constructor() {
+    super();
+    this.attachShadow({mode: 'open'});
+    
+    this.shadowRoot.innerHTML = `   
+    <img src="#test">
+    
+    <button></button>
+    <button aria-hidden="true">Click</button>
+      `
+  }
+}
+
+customElements.define('some-bugs', SomeBugs);
+</script></div>
+    
+  
+</div>
+
+</main>
+
+
+  <script src="/assets/js/presentation.js" crossorigin="anonymous" ></script>
+</body>
+</html>

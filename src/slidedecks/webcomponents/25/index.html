@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en" class="">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>webcomponents</title>
+
+
+
+  <link rel="stylesheet" href="/assets/css/prism.css">
+  <link rel="stylesheet" href="/assets/css/style.css">
+  
+  <link rel="stylesheet" href="/assets/css/matuzo.css">
+  
+  
+  <link rel="stylesheet" href="/assets/css/print.css" media="print">
+
+  
+    <link rel="prefetch" href="/slidedecks/webcomponents/26/">
+  
+
+  <meta name="robots" content="noindex, nofollow">
+</head>
+<body class="page page--webcomponents">
+  <main class="presentation">
+  <nav class="controls" aria-label="Pagination">
+    <a href="/slidedecks/webcomponents/24/" class="control" rel="prev">
+      <span>
+        Previous
+      </span>
+    </a>
+
+    
+      <a href="/slidedecks/webcomponents/26/" class="control" rel="next">
+        <span>
+          Next
+        </span>
+      </a>
+    
+  </nav>
+
+  
+    <div class="slide-count">
+      <span class="u-vh">Folie</span> 26 of 112
+    </div>
+  
+
+  
+  
+    
+  
+
+  
+
+  
+     
+    
+    
+      
+      
+      
+      
+      
+      
+    
+ 
+     
+  
+
+  
+
+  <div class="presentation__slide presentation__slide--webcomponents">
+  
+    
+      <h1 class="u-vh">
+        HTML templates
+      </h1>
+    
+  
+
+  
+    
+      <div class="sld">
+<the-component></the-component>
+
+<template id="content">
+  <ul>
+    <li>
+      <a href="#">Link</a>
+    </li>
+  </ul>
+</template>
+
+<script>
+
+class TheTemplate extends HTMLElement {
+  constructor() {
+    super();
+    this.attachShadow({ mode: "open" });
+
+    let template = document.getElementById("content");
+    let templateContent = template.content;
+    this.shadowRoot.appendChild(templateContent.cloneNode(true));
+  }
+}
+
+customElements.define("the-component", TheTemplate);
+</script>
+</div>
+    
+  
+</div>
+
+</main>
+
+
+  <script src="/assets/js/presentation.js" crossorigin="anonymous" ></script>
+</body>
+</html>

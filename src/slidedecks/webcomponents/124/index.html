@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en" class="">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>webcomponents</title>
+
+
+
+  <link rel="stylesheet" href="/assets/css/prism.css">
+  <link rel="stylesheet" href="/assets/css/style.css">
+  
+  <link rel="stylesheet" href="/assets/css/matuzo.css">
+  
+  
+  <link rel="stylesheet" href="/assets/css/print.css" media="print">
+
+  
+    <link rel="prefetch" href="/slidedecks/webcomponents/125/">
+  
+
+  <meta name="robots" content="noindex, nofollow">
+</head>
+<body class="page page--webcomponents">
+  <main class="presentation">
+  <nav class="controls" aria-label="Pagination">
+    <a href="/slidedecks/webcomponents/123/" class="control" rel="prev">
+      <span>
+        Previous
+      </span>
+    </a>
+
+    
+      <a href="/slidedecks/webcomponents/125/" class="control" rel="next">
+        <span>
+          Next
+        </span>
+      </a>
+    
+  </nav>
+
+  
+    <div class="slide-count">
+      <span class="u-vh">Folie</span> 125 of 128
+    </div>
+  
+
+  
+  
+    
+  
+
+  
+
+  
+     
+    
+    
+      
+      
+      
+      
+      
+      
+    
+ 
+     
+  
+
+  
+
+  <div class="presentation__slide presentation__slide--webcomponents">
+  
+    
+      <h1 class="u-vh">
+        keybord
+      </h1>
+    
+  
+
+  
+    
+      <div class="sld"><style>
+:root {
+  --site-focus-outline: 2px solid;
+  --site-focus-offset: 2px;
+}
+
+:focus-visible {
+  outline: var(--site-focus-outline);
+  outline-offset: var(--site-focus-offset);
+}
+</style>
+
+<button class="btn1">Click me</button>
+<a class="link" href="#">Click me</a>
+<button class="btn2">Click me</button>
+<the-button></the-button>
+
+<script>
+class CustomButton extends HTMLElement {
+  constructor() {
+    super();
+    this.attachShadow({ mode: "open" });
+
+    this.shadowRoot.innerHTML = `   
+    <style>
+      :focus-visible {
+        outline: var(--site-focus-outline);
+        outline-offset: var(--site-focus-offset);
+      }
+    </style>
+    
+    <button>Click Me</button>
+      `
+  }
+}
+
+customElements.define("the-button", CustomButton);
+</script></div>
+    
+  
+</div>
+
+</main>
+
+
+  <script src="/assets/js/presentation.js" crossorigin="anonymous" ></script>
+</body>
+</html>

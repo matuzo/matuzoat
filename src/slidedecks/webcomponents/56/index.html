@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en" class="">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>webcomponents</title>
+
+
+
+  <link rel="stylesheet" href="/assets/css/prism.css">
+  <link rel="stylesheet" href="/assets/css/style.css">
+  
+  <link rel="stylesheet" href="/assets/css/matuzo.css">
+  
+  
+  <link rel="stylesheet" href="/assets/css/print.css" media="print">
+
+  
+    <link rel="prefetch" href="/slidedecks/webcomponents/57/">
+  
+
+  <meta name="robots" content="noindex, nofollow">
+</head>
+<body class="page page--webcomponents">
+  <main class="presentation">
+  <nav class="controls" aria-label="Pagination">
+    <a href="/slidedecks/webcomponents/55/" class="control" rel="prev">
+      <span>
+        Previous
+      </span>
+    </a>
+
+    
+      <a href="/slidedecks/webcomponents/57/" class="control" rel="next">
+        <span>
+          Next
+        </span>
+      </a>
+    
+  </nav>
+
+  
+    <div class="slide-count">
+      <span class="u-vh">Folie</span> 57 of 112
+    </div>
+  
+
+  
+  
+    
+  
+
+  
+
+  
+     
+    
+    
+      
+      
+      
+      
+      
+      
+    
+ 
+     
+  
+
+  
+
+  <div class="presentation__slide presentation__slide--webcomponents">
+  
+    
+      <h1 class="u-vh">
+        skip links
+      </h1>
+    
+  
+
+  
+    
+      <div class="sld"><style>
+  :target {
+      background: aqua;
+  }
+
+  the-component {
+    display: block;
+  }
+</style>
+    
+<a href="#light">Bring me to the light</a><br>
+<a href="#shadow">Bring me to the shadow</a>
+
+  <p id="light">Target in light</p>
+  <the-component></the-component>
+
+<script>
+class TheComponent extends HTMLElement {
+  constructor() {
+    super();
+    this.attachShadow({ mode: "open" });
+
+    const paragraph = document.createElement("p");
+    paragraph.textContent = "Target in shadow";
+    paragraph.setAttribute('id', 'shadow')
+
+    this.shadowRoot.append(paragraph);
+  }
+}
+
+customElements.define("the-component", TheComponent);
+</script>
+</div>
+    
+  
+</div>
+
+</main>
+
+
+  <script src="/assets/js/presentation.js" crossorigin="anonymous" ></script>
+</body>
+</html>

@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en" class="">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>webcomponents</title>
+
+
+
+  <link rel="stylesheet" href="/assets/css/prism.css">
+  <link rel="stylesheet" href="/assets/css/style.css">
+  
+  <link rel="stylesheet" href="/assets/css/matuzo.css">
+  
+  
+  <link rel="stylesheet" href="/assets/css/print.css" media="print">
+
+  
+    <link rel="prefetch" href="/slidedecks/webcomponents/32/">
+  
+
+  <meta name="robots" content="noindex, nofollow">
+</head>
+<body class="page page--webcomponents">
+  <main class="presentation">
+  <nav class="controls" aria-label="Pagination">
+    <a href="/slidedecks/webcomponents/30/" class="control" rel="prev">
+      <span>
+        Previous
+      </span>
+    </a>
+
+    
+      <a href="/slidedecks/webcomponents/32/" class="control" rel="next">
+        <span>
+          Next
+        </span>
+      </a>
+    
+  </nav>
+
+  
+    <div class="slide-count">
+      <span class="u-vh">Folie</span> 32 of 112
+    </div>
+  
+
+  
+  
+    
+  
+
+  
+
+  
+     
+    
+    
+      
+      
+      
+      
+      
+      
+    
+ 
+     
+  
+
+  
+
+  <div class="presentation__slide presentation__slide--webcomponents">
+  
+    
+      <h1 >
+        Content in Shadow DOM
+      </h1>
+    
+  
+
+  
+    
+      <div class="sld"><the-message type="warning" text="That's a warning"></the-message>
+
+<script>
+  class TheMessage extends HTMLElement {
+	static observedAttributes = ["type", "text"];
+
+	constructor() {
+		super();
+		this.attachShadow({ mode: "open" });
+		this._attachStyles();
+	}
+
+	_attachStyles() {
+		const style = document.createElement("style");
+		style.textContent = `
+			:host {
+				--_border: blue;
+
+				display: block;
+				border: 4px solid var(--_border);
+				padding: 0.5em;
+			}
+
+			:host([type="warning"]) {
+				--_border: orange;
+			}
+		`;
+
+		this.shadowRoot.appendChild(style);
+	}
+
+	attributeChangedCallback(name, oldValue, newValue) {
+		if (name === "text") {
+			this.shadowRoot.append(newValue);
+		}
+	}
+}
+
+customElements.define("the-message", TheMessage);
+</script></div>
+    
+  
+</div>
+
+</main>
+
+
+  <script src="/assets/js/presentation.js" crossorigin="anonymous" ></script>
+</body>
+</html>

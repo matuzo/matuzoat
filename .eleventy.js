@@ -38,6 +38,7 @@ module.exports = function (eleventyConfig) {
   eleventyConfig.addPassthroughCopy('./src/static/img');
   eleventyConfig.addPassthroughCopy('./src/static/min');
   eleventyConfig.addPassthroughCopy('./src/images');
+  eleventyConfig.addPassthroughCopy('./src/slidedecks');
   eleventyConfig.addPassthroughCopy('admin');
   eleventyConfig.addPassthroughCopy('_redirects');
   eleventyConfig.addPassthroughCopy({

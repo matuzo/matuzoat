@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en" class="">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>webcomponents</title>
+
+
+
+  <link rel="stylesheet" href="/assets/css/prism.css">
+  <link rel="stylesheet" href="/assets/css/style.css">
+  
+  <link rel="stylesheet" href="/assets/css/matuzo.css">
+  
+  
+  <link rel="stylesheet" href="/assets/css/print.css" media="print">
+
+  
+    <link rel="prefetch" href="/slidedecks/webcomponents/11/">
+  
+
+  <meta name="robots" content="noindex, nofollow">
+</head>
+<body class="page page--webcomponents">
+  <main class="presentation">
+  <nav class="controls" aria-label="Pagination">
+    <a href="/slidedecks/webcomponents/9/" class="control" rel="prev">
+      <span>
+        Previous
+      </span>
+    </a>
+
+    
+      <a href="/slidedecks/webcomponents/11/" class="control" rel="next">
+        <span>
+          Next
+        </span>
+      </a>
+    
+  </nav>
+
+  
+    <div class="slide-count">
+      <span class="u-vh">Folie</span> 11 of 112
+    </div>
+  
+
+  
+  
+    
+  
+
+  
+
+  
+     
+    
+    
+      
+      
+      
+      
+      
+      
+    
+ 
+     
+  
+
+  
+
+  <div class="presentation__slide presentation__slide--webcomponents">
+  
+    
+      <h1 >
+        A defined custom element
+      </h1>
+    
+  
+
+  
+    
+      <div class="sld"><style>
+  dl {
+    display: grid;
+    grid-template-columns: max-content 1fr;
+  }
+
+  dt {
+    font-weight: bold;
+  }
+</style>
+
+
+<star-wars character="Luke"></star-wars>
+
+<script>
+  class StarWars extends HTMLElement {
+  static observedAttributes = ["character"];
+
+  constructor() {
+    super();
+    this._character = null;
+  }
+
+  connectedCallback() {
+    console.log("connected");
+  }
+
+  disconnectedCallback() {
+    console.log("disconnected");
+  }
+
+  attributeChangedCallback(name, oldValue, newValue) {
+    console.log(`${name} changed from ${oldValue} to ${newValue}`)
+
+    this._character = newValue;
+    this._getCharacter();
+  }
+
+  async _getCharacter() {
+    console.log(`New Character: ${this._character}`);
+    const response = await fetch(
+      `https://swapi.dev/api/people/?search=${this._character}`
+    );
+    const characters = await response.json();
+    const character = characters.results[0];
+    this.innerHTML = `<dl>
+        <dt>Name</dt> 
+        <dd>${character.name}</dd>
+        <dt>Hair color</dt>
+        <dd>${character.hair_color}</dd>
+        <dt>Eye color</dt>
+        <dd>${character.eye_color}</dd>
+      </dl>
+      `;
+  }
+}
+
+customElements.define("star-wars", StarWars);
+</script></div>
+    
+  
+</div>
+
+</main>
+
+
+  <script src="/assets/js/presentation.js" crossorigin="anonymous" ></script>
+</body>
+</html>
