@@ -40,7 +40,7 @@ This workshop is split over five days. The workshop sessions will run on the fol
 
 <p style="text-align: center; margin: 2em;">
 <a class="cta" href="https://smashingconf.com/online-workshops/workshops/modern-css-manuel-matuzovic/#time-schedule">
-Get your early bird ticket here!
+Get your ticket here!
 </a>
 </p>
 
